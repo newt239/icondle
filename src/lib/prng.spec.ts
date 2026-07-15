@@ -20,7 +20,7 @@ describe("mulberry32", () => {
   });
 
   test("0 以上 1 未満の値を返す", () => {
-    const rng = mulberry32(hash("iconoclast"));
+    const rng = mulberry32(hash("guess-icon"));
     for (let i = 0; i < 1000; i++) {
       const value = rng();
       expect(value).toBeGreaterThanOrEqual(0);

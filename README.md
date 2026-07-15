@@ -1,8 +1,8 @@
-# Iconoclast
+# Guess Icon
 
 > UI アイコンライブラリの識別クイズ Web アプリ — このアイコン、どのセットのやつ？
 
-設計の詳細は [docs/iconoclast-design.md](./docs/iconoclast-design.md) を参照してください。
+設計の詳細は [docs/guess-icon-design.md](./docs/guess-icon-design.md) を参照してください。
 
 ## 技術スタック
 
