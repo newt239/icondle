@@ -1,14 +1,19 @@
-# Next.js Template
+# Iconoclast
 
-- TypeScript
-- Next.js App Router
+> UI アイコンライブラリの識別クイズ Web アプリ — このアイコン、どのセットのやつ？
+
+設計の詳細は [docs/iconoclast-design.md](./docs/iconoclast-design.md) を参照してください。
+
+## 技術スタック
+
+- TypeScript / React 19
+- [TanStack Start](https://tanstack.com/start)（file-based routing / full-document SSR + server functions）
 - Tailwind CSS v4
-- [Intent UI](https://intentui.com/)
-- Oxlint
-- Oxfmt
-- Vercel
-- Turso DB (SQLite)
-- Drizzle
+- [HeroUI v3](https://www.heroui.com/)
+- Vite 8
+- Cloudflare Workers（wrangler / @cloudflare/vite-plugin）
+- Oxlint / Oxfmt
+- Vitest / Playwright
 
 ## Development
 
@@ -18,32 +23,35 @@
 pnpm install
 ```
 
-### 2. DBマイグレーション
-
-```bash
-pnpm run db:generate
-```
-
-```bash
-pnpm run db:push
-```
-
-### 3. 開発サーバーの起動
+### 2. 開発サーバーの起動
 
 ```bash
 pnpm run dev
 ```
 
-## 環境変数
+http://localhost:3000 で起動します。
 
-`.env.example` を基に `.env` などの環境ファイルを作成し、以下の値を設定してください。
+## デプロイ
 
-- `TURSO_CONNECTION_URL`: Turso もしくは libsql の接続 URL。
-- `TURSO_AUTH_TOKEN`: 認証が必要な場合のみ設定するアクセストークン。
+Cloudflare Workers にデプロイします。
 
-## Drizzle
+```bash
+pnpm run deploy
+```
 
-- スキーマは `src/db/schema.ts` を編集して管理します。
-- スキーマ変更を SQL として生成: `pnpm run db:generate`
-- スキーマをデータベースへ適用: `pnpm run db:push`
-- スキーマをブラウザで確認: `pnpm run db:studio`
+- `pnpm run build` - 本番ビルド（`dist/` に出力）
+- `pnpm run preview` - 本番ビルドのローカルプレビュー
+- `pnpm run cf-typegen` - Cloudflare バインディングの型を生成
+
+## テスト
+
+- `pnpm run test` - Vitest によるユニットテスト
+- `pnpm run test:e2e` - Playwright による E2E テスト
+
+## コード品質
+
+```bash
+pnpm run codecheck
+```
+
+typecheck / oxlint / oxfmt / ls-lint / knip を一括実行します。

@@ -2,9 +2,10 @@
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "ignorePatterns": [
     "node_modules/",
-    ".next/",
-    "out/",
+    "dist/",
     "build/",
+    "docs/",
+    "src/routeTree.gen.ts",
     "utils/fetch/api.d.ts",
     "utils/fetch/bundle.gen.yml"
   ],
@@ -22,7 +23,7 @@
     "customGroups": [
       {
         "groupName": "react",
-        "elementNamePattern": ["react", "react-dom", "next"]
+        "elementNamePattern": ["react", "react-dom"]
       }
     ],
     "internalPattern": ["#/"],

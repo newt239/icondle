@@ -22,12 +22,14 @@
 # Playwright MCP のスナップショット・スクリーンショット
 /.playwright-mcp
 
-# next.js
-/.next/
-/out/
-
-# production
+# build
+/dist
 /build
+/.tanstack
+
+# cloudflare
+/.wrangler
+worker-configuration.d.ts
 
 # misc
 .DS_Store
@@ -43,12 +45,8 @@ yarn-error.log*
 .env*
 !.env.example
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 # CSS Modules Kit
 generated

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "build/"],
+  "ignorePatterns": ["node_modules/", "dist/", "build/", "src/routeTree.gen.ts"],
   "env": {
     "browser": true,
     "node": true
@@ -19,7 +19,6 @@
     "unicorn",
     "react",
     "react-perf",
-    "nextjs",
     "oxc",
     "import",
     "jsx-a11y"
@@ -86,23 +85,7 @@
   },
   "overrides": [
     {
-      "files": ["src/components/ui/**"],
-      "rules": {
-        "eqeqeq": "off",
-        "no-shadow": "off",
-        "no-use-before-define": "off",
-        "react/jsx-no-constructed-context-values": "off",
-        "react/no-multi-comp": "off",
-        "react/only-export-components": "off",
-        "typescript/no-deprecated": "off",
-        "typescript/no-unnecessary-condition": "off",
-        "typescript/no-useless-default-assignment": "off",
-        "typescript/prefer-nullish-coalescing": "off",
-        "typescript/unbound-method": "off"
-      }
-    },
-    {
-      "files": ["src/app/**/layout.tsx"],
+      "files": ["src/routes/**"],
       "rules": {
         "react/only-export-components": "off"
       }

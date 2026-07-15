@@ -8,9 +8,6 @@ concurrency:
   cancel-in-progress: false
 jobs:
   test:
-    env:
-      TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
-      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
@@ -44,17 +41,8 @@ jobs:
         with:
           path: ~/.cache/ms-playwright
           key: playwright-chromium-${{ steps.version-checker.outputs.playwright-version }}
-      - name: ビルドキャッシュを復元
-        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
-        with:
-          path: .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-
       - name: ビルド
         run: pnpm run build
-        env:
-          NEXT_TELEMETRY_DISABLED: 1
       - name: Playwrightのテストを実行
         run: pnpm exec playwright test --workers=2
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
