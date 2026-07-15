@@ -11,7 +11,7 @@
 
 > **Guess Icon** — このアイコン、どのセットのやつ？
 
-Lucide / Heroicons / Tabler / Phosphor / Bootstrap Icons / Feather のアイコンを提示し、どのセット由来かを 4 択で当てる。フロントエンド開発者・デザイナー向け。
+主要 UI アイコンセット（フィルタ後アイコン数の上位 12 セット、→ §4.1）からアイコンを提示し、どのセット由来かを 4 択で当てる。フロントエンド開発者・デザイナー向け。
 
 **差別化は「解説」に置く。** 誤答時に、なぜそのセットなのかの根拠（グリッド、stroke-width、fill/stroke、セットの由来）を必ず提示する。既存のタイポグラフィ識別ゲーム（Typewar、I Shot the Serif）の最大の弱点がフィードバックの貧しさであり、解説が実務の目を養う価値そのものになる。
 
@@ -46,9 +46,9 @@ AGENTS.md にも記載済み。実装全体を貫く制約。
 
 1. loader は「正規化済み SVG マークアップ + 選択肢ラベル」だけを返す。**正解（answerIndex / セット名）は返さない**
 2. 判定は `createServerFn({ method: 'POST' })` 経由でのみ行う。seed と n から出題をサーバー側で再導出して照合する
-3. `deck.ts` / `deal.server.ts` はサーバー専用。クライアントから import しない（副次効果として deck の gzip 78.5 KB がクライアントバンドルに入らない）
+3. `deck.ts` / `deal.server.ts` はサーバー専用。クライアントから import しない（副次効果として deck がクライアントバンドルに入らない）
 4. 出題 SVG は必ず `normalize()` を通す。**元の viewBox はセットを一意に特定する**（`256` なら ph、`16` なら bi）
-5. 選択肢に body 衝突ペア（feather × lucide 等）を同居させない（→ §4.4）
+5. 選択肢に body 衝突ペアを同居させない。フォーク・派生関係のセット間で発生する（→ §4.4）
 6. server function はエラーをスローせず結果オブジェクトで返す（TanStack Start Issue #6381 対策）
 
 ---
@@ -57,52 +57,70 @@ AGENTS.md にも記載済み。実装全体を貫く制約。
 
 ### 4.1 パッケージ選定
 
-セット別の `@iconify-json/*` を使う（全部入りの `@iconify/json` は 437 MB のため不採用）。合計 ~9 MB、すべて `devDependencies`。ビルド後は不要。
+手動キュレーションはしない。Iconify のコレクション情報（`https://api.iconify.design/collections`）から機械的に選定する。セット別の `@iconify-json/*` を `devDependencies` に置く（全部入りの `@iconify/json` は 437 MB のため不採用）。
 
-| パッケージ | アイコン数 | サイズ | ライセンス (SPDX) |
+**候補条件**（すべて満たすもの）:
+
+- カテゴリが UI 系（`UI 24px` / `UI 16px / 32px` / `UI Other / Mixed Grid` / `Material`）かつ `palette: false`。Logos / Emoji / Flags / Thematic / Archive は除外
+- ライセンスが帰属表示不要（MIT / ISC / Apache-2.0 / CC0-1.0）。CC-BY 系（Font Awesome / Solar / IconaMoon 等）は初期スコープ外
+- 同一ファミリーの重複は最大の 1 つに代表させる（`material-symbols-light` / `ic` は `material-symbols` に代表）
+
+**採用ルール**: 各候補にスタイルフィルタ（→ §4.2）を適用し、**適用後の使用可能アイコン数の多い順に 12 セット（最低 10）を採用**する。確定は `scripts/build-deck.ts` の実測で行い、採用セットと生成時のパッケージバージョンを deck.ts に記録する。
+
+候補上位（raw アイコン数は 2026-07-16 の Iconify API 実測。スタイル・サイズ違いを含むため、順位はフィルタ後に入れ替わる）:
+
+| パッケージ | raw | ライセンス | 備考 |
 |---|---|---|---|
-| `@iconify-json/lucide` | 1807 | 570 KB | ISC |
-| `@iconify-json/heroicons` | 1288 | 630 KB | MIT |
-| `@iconify-json/feather` | 286 | 75 KB | MIT |
-| `@iconify-json/tabler` | 6194 | 2.1 MB | MIT |
-| `@iconify-json/ph` | 9161 | 4.6 MB | MIT |
-| `@iconify-json/bi` | 2084 | 1.1 MB | MIT |
+| `@iconify-json/fluent` | 19603 | MIT | サイズ × スタイルの直積 → 24px regular に絞る |
+| `@iconify-json/material-symbols` | 15462 | Apache-2.0 | outline のみ残す |
+| `@iconify-json/ph` | 9072 | MIT | regular のみ |
+| `@iconify-json/mdi` | 7447 | Apache-2.0 | Pictogrammers。fill 系代表 |
+| `@iconify-json/tabler` | 6146 | MIT | `-filled` 除外 |
+| `@iconify-json/hugeicons` | 5065 | MIT | 単一スタイル |
+| `@iconify-json/boxicons` | 3768 | MIT | solid / logo 系除外 |
+| `@iconify-json/glyphs` | 3452 | MIT | |
+| `@iconify-json/mingcute` | 3324 | Apache-2.0 | `-fill` 除外 |
+| `@iconify-json/ri` | 3188 | Apache-2.0 | `-fill` 除外 |
+| `@iconify-json/icon-park-outline` | 2658 | Apache-2.0 | 全 outline |
+| `@iconify-json/mynaui` | 2616 | MIT | |
+| `@iconify-json/carbon` | 2571 | Apache-2.0 | |
+| `@iconify-json/tdesign` | 2352 | MIT | `-filled` 除外 |
+| `@iconify-json/bi` | 2078 | MIT | `-fill` 除外 |
+| `@iconify-json/lucide` | 1747 | ISC | aliases 込みで約 2000 |
+| `@iconify-json/iconoir` | 1671 | MIT | |
+| `@iconify-json/heroicons` | 1288 | MIT | フィルタ後 327。圏外の可能性大 |
 
-ライセンス情報は各パッケージの `info.json` に SPDX 付きで入っているため、帰属表示は自動生成できる。
-
-> Font Awesome Free は CC-BY-4.0（帰属表示必須）のため初期スコープ外。Simple Icons はブランドロゴ集合であり採用しない。
+- feather（286）は圏外となり、lucide × feather の body 衝突問題は自然に消える。ただし衝突検出（→ §4.4）はフォーク関係一般への防御として維持する
+- ライセンス情報は各パッケージの `info.json` に SPDX 付きで入っているため、帰属表示は採用セットぶんを自動生成する
 
 ### 4.2 スタイルフィルタ
 
-同一セット内のスタイル混在を排除し、regular / outline のみに絞る。
+同一セット内のスタイル・サイズ混在を排除し、**1 セット = 代表 1 スタイル**に正規化する。outline / regular があればそれを、なければ fill を代表とする（mdi / bi など）。この分類がそのまま難易度定義（→ §4.5）の stroke 系 / fill 系になる。
+
+フィルタは候補セットごとの除外正規表現として `scripts/build-deck.ts` に保守する。例:
 
 ```ts
 const EXCLUDE: Record<SetId, RegExp> = {
-  lucide:    /$^/,                             // 全て outline
-  feather:   /$^/,                             // 全て outline
-  heroicons: /(-solid|-16-solid|-20-solid)$/,  // 24 outline のみ残す
+  lucide:    /$^/,                               // 全て outline
+  heroicons: /(-solid|-16-solid|-20-solid)$/,    // 24 outline のみ残す
   tabler:    /-filled$/,
   ph:        /-(bold|duotone|fill|light|thin)$/, // regular のみ
   bi:        /-fill$/,
+  mingcute:  /-fill$/,
+  ri:        /-fill$/,
 };
 ```
 
-適用後の使用可能アイコン数: lucide 2023（aliases 含む）/ heroicons 327 / feather 286 / tabler 5289 / ph 1533 / bi 1419
+fluent（サイズ × スタイルの直積）や material-symbols（rounded / sharp / fill 派生）のような大規模セットは包含側の正規表現（`/-24-regular$/` にマッチするものだけ残す等）で定義する。適用後の使用可能アイコン数は build-deck 実行時に実測し、採用順位の根拠としてログに出力する。
 
 ### 4.3 概念の自動抽出
 
 手書きの概念テーブルは不要。Iconify の `aliases` を展開したうえで名前の交差を取ると、機械的に出題プールが得られる。
 
-```
-6セットが共有:  42 概念
-5セットが共有:  79 概念
-4セットが共有: 116 概念
-──────────────────────
-出題可能(4セット以上): 237 概念 / 1111 アイコン
-```
+旧 6 セット構成での実測は「4 セット以上が共有する概念 = 237 概念 / 1111 アイコン」。12 セット化により母集団が数倍になるため、概念数・アイコン数は build-deck で再計測する（大幅に増える見込み）。
 
-- 4 択なので全 6 セットに存在する必要はないが、**4 セット以上が絶対条件**（選択肢の 4 セットすべてがその概念を持つこと）。4 セット未満を使うと「この概念は tabler にしかない」というメタ推理で消去法が成立してしまう
-- `aliases` の解決は全 1111 件成功（lucide の `home` → `house` のようなリネームも自動追従）
+- 4 択なので全セットに存在する必要はないが、**4 セット以上が絶対条件**（選択肢の 4 セットすべてがその概念を持つこと）。4 セット未満を使うと「この概念はこのセットにしかない」というメタ推理で消去法が成立してしまう
+- `aliases` の解決は旧構成で全 1111 件成功（lucide の `home` → `house` のようなリネームも自動追従）
 
 ```ts
 const resolve = (j: IconifyJSON, name: string) => {
@@ -116,7 +134,7 @@ const resolve = (j: IconifyJSON, name: string) => {
 
 ### 4.4 body 衝突の排除（必須）
 
-**feather の 286 件中 72 件（25%）は lucide と SVG body が完全一致する**（lucide は feather のフォーク）。`arrow-right` を見せて「feather か lucide か」と聞くのは正解不能な問題であり、ビルド時に検出して排除する。
+フォーク・派生関係のセット間では SVG body が完全一致することがある（旧構成の実測では feather の 25% が lucide と一致）。同一 body のアイコンを見せて「どちらのセットか」と聞くのは正解不能な問題であり、ビルド時に検出して排除する。採用セットが機械選定で入れ替わっても成立する一般則として維持する。
 
 ```ts
 // scripts/build-deck.ts
@@ -136,10 +154,11 @@ for (const concept of concepts) {
 
 ### 4.5 セット特性（解説・難易度の根拠データ）
 
+機械的に導出できる特性（グリッド = `info.json` の `height`、stroke 系 / fill 系 = body の判定、stroke-width）は build-deck で採用セットぶんを自動抽出する。解説パネル用の由来・設計思想テキストのみ、採用が確定したセットに対して手で書く。検証済みの例:
+
 | セット | グリッド | stroke-width | cap | 塗り | 難度 |
 |---|---|---|---|---|---|
 | **lucide** | 24 | 2 | round | stroke | ★★★★★ |
-| **feather** | 24 | 2 | round | stroke | ★★★★★ |
 | **tabler** | 24 | 2 | round | stroke | ★★★★★ |
 | **heroicons** | 24 | 1.5 | round | stroke | ★★★ |
 | **ph** | **256** | — | — | **fill** | ★★ |
@@ -147,13 +166,13 @@ for (const concept of concepts) {
 
 重要な帰結が 2 つある。
 
-1. **lucide / feather / tabler はメタ属性が完全に同一。** 判別できるのは造形だけであり、解説パネルで「stroke-width が違います」とは言えない。この 3 つの解説には由来と設計思想のテキストが要る（feather は 286 アイコンの原典、lucide はそのフォークで 1807 まで拡張、tabler は独自系統で 5289）
+1. **24px グリッド・stroke-width 2 のセット群（lucide / tabler / hugeicons 等）はメタ属性がほぼ同一。** 判別できるのは造形だけであり、解説パネルで「stroke-width が違います」とは言えない。この群の解説には由来と設計思想のテキストが要る
 2. **viewBox はセットを一意に特定する。** サーバー側で viewBox を隠蔽しなければクイズが成立しない（→ §5.3）
 
-難易度定義:
+難易度定義（分類は §4.2 の代表スタイルから自動導出）:
 
-- **Easy** — fill 系（ph / bi）を 1 つ以上混ぜる。一目瞭然
-- **Hard** — outline 系のみ（lucide / feather / tabler / heroicons）。造形のみで判別
+- **Easy** — fill 系（ph / bi / mdi 等）を 1 つ以上混ぜる。一目瞭然
+- **Hard** — stroke 系のみ。造形のみで判別
 
 ### 4.6 成果物
 
@@ -161,10 +180,21 @@ for (const concept of concepts) {
 scripts/build-deck.ts     # 事前実行、成果物をコミット
   ↓
 src/data/deck.ts          # export const deck = [...] as const
-                          # 237 概念 / 1111 アイコン / 371 KB (gzip 78.5 KB)
+                          # 採用セット一覧 + 生成時のパッケージバージョンも記録
 ```
 
-サーバー専用モジュールからのみ import する。TS リテラルで持って型で守る。
+サーバー専用モジュールからのみ import する。TS リテラルで持って型で守る。旧 6 セット構成の実測は 371 KB（gzip 78.5 KB）。12 セット化でサイズは増えるが、サーバー専用（§3-3）のためクライアントには影響しない。Workers のバンドル上限（無料 3 MB gzip）に対しては十分な余裕を確認する。
+
+### 4.7 デッキ再生成の運用
+
+デッキ生成は重い処理なので、**デプロイやビルドのたびには実行しない**。deck.ts はコミット済みの成果物であり、`pnpm run dev` / `build` / `deploy` はそれを読むだけ。
+
+再生成のトリガは 2 つのみ:
+
+1. **`@iconify-json/*` の更新時（自動）** — Dependabot の週次 PR（`.github/dependabot.yml`）が `pnpm-lock.yaml` を更新したら、CI の deck-regen workflow が `@iconify-json` の差分を検知して `pnpm run build-deck` を実行し、再生成した deck.ts を同じ PR にコミットする。deck とパッケージのバージョンが常に同期した状態でマージされる
+2. **手動** — DENY リストや採用条件を変えたときにローカルで `pnpm run build-deck`。CI 側にも `workflow_dispatch` を用意する
+
+deck.ts に記録した生成時バージョン（→ §4.6）が、再生成の要否判定と帰属表示の情報源になる。
 
 ---
 
@@ -329,8 +359,9 @@ export const gradeAnswer = createServerFn({ method: "POST" })
 ## 8. 今後のタスク（実装順）
 
 1. **本番への初回デプロイ** — `wrangler login` 後に `pnpm run deploy`。空アプリの時点で本番パイプラインを確立する
-2. **`scripts/build-deck.ts` → `src/data/deck.ts`** — `@iconify-json/*` 6 パッケージを devDependencies に追加。スタイルフィルタ・概念抽出・body 衝突検出・`DENY` リスト適用・ライセンス情報の抽出（→ §4、付録）
-3. **`deal.server.ts` + Vitest** — 全部純関数なので `vi.fn()` 不要。守る不変条件:
+2. **`scripts/build-deck.ts` → `src/data/deck.ts`** — 候補の `@iconify-json/*` を devDependencies に追加し、スタイルフィルタ適用後のアイコン数を実測して上位 12 セットを確定。概念抽出・body 衝突検出・`DENY` リスト適用・ライセンス情報とバージョンの記録（→ §4、付録）
+3. **deck-regen workflow** — Dependabot PR の `@iconify-json` 差分にフックして deck.ts を再生成・コミットする GitHub Actions（→ §4.7）。`workflow_dispatch` 付き
+4. **`deal.server.ts` + Vitest** — 全部純関数なので `vi.fn()` 不要。守る不変条件:
    - 同一 seed は同一出題を返す
    - 選択肢に重複がない
    - 正解が必ず選択肢に含まれる
@@ -338,11 +369,11 @@ export const gradeAnswer = createServerFn({ method: "POST" })
    - **選択肢に body 衝突ペアが同居しない（最重要）**
    - `normalize()` の出力に元の viewBox が残っていない
    - Easy は fill 系を 1 つ以上含む / Hard は outline 系のみ
-4. **`/play/$seed/$n` の SSR + `gradeAnswer`** — ルート群・searchSchema・解説パネル（→ §5）。zod を dependencies へ追加
-5. **HeroUI v3 適用** — 選択肢・進捗・kbd・解説パネルのスタイリング（→ §6）
-6. **`/daily/$date`** — JST 固定の日替わり seed
-7. **結果画面 + 共有** — クリップボードコピーは自前実装
-8. **概念の目視レビュー** — 237 概念から `DENY` リストで削る。矢印 8 種は初期除外
+5. **`/play/$seed/$n` の SSR + `gradeAnswer`** — ルート群・searchSchema・解説パネル（→ §5）。zod を dependencies へ追加
+6. **HeroUI v3 適用** — 選択肢・進捗・kbd・解説パネルのスタイリング（→ §6）
+7. **`/daily/$date`** — JST 固定の日替わり seed
+8. **結果画面 + 共有** — クリップボードコピーは自前実装
+9. **概念の目視レビュー** — 出題概念を `DENY` リストで削る。矢印 8 種は初期除外
 
 ---
 
@@ -350,33 +381,30 @@ export const gradeAnswer = createServerFn({ method: "POST" })
 
 | リスク | 度合い | 対応 |
 |---|---|---|
-| 概念 237 のうち、名前は同じでも意味が違うものが混ざる | 中 | 目視レビュー + `DENY` リスト |
-| lucide / feather / tabler が難しすぎて理不尽に感じる | 中 | Hard 限定にする。Easy は fill 系を必ず混ぜる。解説で由来を説明する |
+| 出題概念のうち、名前は同じでも意味が違うものが混ざる | 中 | 目視レビュー + `DENY` リスト |
+| 24px stroke 2px 系（lucide / tabler / hugeicons 等）が難しすぎて理不尽に感じる | 中 | Hard 限定にする。Easy は fill 系を必ず混ぜる。解説で由来を説明する |
+| 機械選定により知名度の低いセット（glyphs / mynaui 等）が採用される | 中 | 解説パネルで紹介する価値に転化する。ゲーム性を損なう場合は除外条件（ALLOW / DENY）をセット単位で追加 |
 | body 完全一致以外の「ほぼ同一」（1 パス違いなど）の存在 | 低 | ハッシュでは拾えない。プレイして気づいたら `DENY` へ |
 | TanStack Start の server function エラー処理（#6381） | 低 | 結果オブジェクト返しで回避（§3-6） |
 | HeroUI v3 のコンポーネント不足（Snippet 等） | 低 | `rac` サブパスから React Aria Components を直接使う |
 
 ---
 
-## 付録: 検証済みビルドスクリプト（骨格）
+## 付録: ビルドスクリプト（骨格）
+
+概念抽出・alias 解決のロジックは旧 6 セット構成で検証済み（概念 237 / アイコン 1111 / 解決失敗 0 / raw 371.3 KB / gzip 78.5 KB）。12 セット化ではセット選定ステップが先頭に加わる。
 
 ```ts
 // scripts/build-deck.ts
-import lucide from "@iconify-json/lucide/icons.json" with { type: "json" };
-import heroicons from "@iconify-json/heroicons/icons.json" with { type: "json" };
-import feather from "@iconify-json/feather/icons.json" with { type: "json" };
-import tabler from "@iconify-json/tabler/icons.json" with { type: "json" };
-import ph from "@iconify-json/ph/icons.json" with { type: "json" };
-import bi from "@iconify-json/bi/icons.json" with { type: "json" };
+const CANDIDATES = [
+  { id: "fluent", filter: /* 24px regular のみ残す包含条件 */ },
+  { id: "material-symbols", filter: /* outline のみ */ },
+  { id: "ph", exclude: /-(bold|duotone|fill|light|thin)$/ },
+  // ... §4.1 の候補表のセットを列挙
+];
 
-const sets = { lucide, heroicons, feather, tabler, ph, bi };
-const EXCLUDE = {
-  lucide: /$^/, feather: /$^/,
-  heroicons: /(-solid|-16-solid|-20-solid)$/,
-  tabler: /-filled$/,
-  ph: /-(bold|duotone|fill|light|thin)$/,
-  bi: /-fill$/,
-};
+const load = (id) =>
+  import(`@iconify-json/${id}/icons.json`, { with: { type: "json" } });
 
 const resolve = (j, name) => {
   let n = name, guard = 0;
@@ -384,27 +412,14 @@ const resolve = (j, name) => {
   return j.icons[n] ? { ...j.icons[n], resolved: n } : null;
 };
 
-// 1. スタイルフィルタ適用後の名前空間
-const names = {};
-for (const [id, j] of Object.entries(sets))
-  names[id] = new Set(
-    [...Object.keys(j.icons), ...Object.keys(j.aliases ?? {})]
-      .filter((n) => !EXCLUDE[id].test(n)),
-  );
-
-// 2. 4セット以上が共有する概念のみ採用 → 237 概念
+// 0. 候補ごとにスタイルフィルタ適用後のアイコン数を実測し、上位 12 セットを採用
+// 1. 採用セットのフィルタ適用後の名前空間を構築（icons + aliases）
+// 2. 4 セット以上が共有する概念のみ採用
 const count = new Map();
-for (const id of Object.keys(sets))
+for (const id of adopted)
   for (const n of names[id]) count.set(n, (count.get(n) ?? []).concat(id));
 const concepts = [...count].filter(([, owners]) => owners.length >= 4);
 
-// 3. body 解決 + 衝突検出 + DENY 適用 → deck.ts へ出力
-```
-
-実行結果（実測）:
-
-```
-概念=237  アイコン総数=1111  解決失敗=0
-raw=371.3KB  gzip=78.5KB
-1アイコン平均 body=342B
+// 3. body 解決 + 衝突検出 + DENY 適用 + セット特性・ライセンス・バージョン記録
+//    → deck.ts へ出力
 ```

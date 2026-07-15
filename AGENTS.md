@@ -74,7 +74,7 @@ src/
 ├── router.tsx              # ルーターの生成（getRouter）
 ├── routeTree.gen.ts        # 自動生成（編集禁止）
 ├── styles.css              # Tailwind + HeroUI のエントリ CSS
-├── data/                   # ビルド時生成データ（deck.ts。サーバー専用）
+├── data/                   # 事前生成・コミット済みデータ（deck.ts。サーバー専用）
 ├── features/               # 機能ベースのディレクトリ構成
 │   └── {feature-name}/
 │       ├── components/     # 機能固有のコンポーネント
@@ -113,7 +113,8 @@ src/
 - 判定は createServerFn 経由でのみ行う
 - deck.ts / deal.server.ts をクライアントから import しない
 - 出題 SVG は必ず normalize() を通す。元の viewBox はセットを一意に特定する
-- 選択肢に body 衝突ペア（feather × lucide 等）を同居させない
+- 選択肢に body 衝突ペア（フォーク・派生関係のセットで発生）を同居させない
+- deck.ts はデプロイやビルドでは再生成しない。再生成は @iconify-json 更新時と手動実行のみ
 
 ## API 規約
 
