@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm run:*)",
+      "Bash(grep:*)",
+      "Bash(gh pr create:*)"
+    ],
+    "deny": ["Bash(git reset:*)", "Bash(git merge:*)", "Bash(git rebase:*)", "Bash(git reset:*)"],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["deepwiki", "playwright", "context7"],
+  "enabledPlugins": {
+    "github@claude-plugins-official": true
+  }
+}

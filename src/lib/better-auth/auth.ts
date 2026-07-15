@@ -1,0 +1,45 @@
+import { betterAuth } from "better-auth";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+
+import { DBClient } from "#/lib/drizzle/client";
+import { account, session, user, verification } from "#/lib/drizzle/schema";
+import { env } from "#/lib/env";
+
+export const auth = betterAuth({
+  appName: "next-template",
+  basePath: "/api/auth",
+  baseURL: env.NEXT_PUBLIC_VERCEL_BRANCH_URL
+    ? `https://${env.NEXT_PUBLIC_VERCEL_BRANCH_URL}`
+    : "http://localhost:3000",
+  database: drizzleAdapter(DBClient, {
+    provider: "sqlite",
+    schema: {
+      account,
+      session,
+      user,
+      verification,
+    },
+  }),
+  emailAndPassword: {
+    // テスト環境のみ有効化
+    enabled: env.NODE_ENV !== "production",
+    requireEmailVerification: false, // テスト用のため検証不要
+  },
+  session: {
+    expiresIn: 60 * 60 * 24 * 7, // 7 days
+    updateAge: 60 * 60 * 24, // 1 day
+  },
+  trustedOrigins: [
+    env.NEXT_PUBLIC_VERCEL_BRANCH_URL
+      ? `https://${env.NEXT_PUBLIC_VERCEL_BRANCH_URL}`
+      : "http://localhost:3000",
+  ],
+});
+
+export type Session = typeof auth.$Infer.Session;
+export type User = typeof auth.$Infer.Session.user;
+
+export type AuthType = {
+  user: User | null;
+  session: Session | null;
+};

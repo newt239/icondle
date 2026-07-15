@@ -1,0 +1,65 @@
+name: Playwright Tests
+on:
+  pull_request:
+    branches: ["main", "develop"]
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  test:
+    env:
+      TURSO_CONNECTION_URL: ${{ secrets.TURSO_CONNECTION_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: pnpm/action-setup@903f9c1a6ebcba6cf41d87230be49611ac97822e # v6.0.3
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version-file: ".node-version"
+          cache: "pnpm"
+      - name: 依存関係をインストール
+        run: pnpm install
+      - name: Playwrightのバージョンを取得し、ブラウザのキャッシュキーを生成
+        id: version-checker
+        run: |
+          echo "playwright-version=$(npx playwright --version | sed 's/ //g')" >> "$GITHUB_OUTPUT"
+        shell: bash
+      - name: ブラウザのキャッシュを復元
+        id: restore-chromium
+        uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ steps.version-checker.outputs.playwright-version }}
+          restore-keys: |
+            playwright-chromium-
+      - name: もしブラウザのキャッシュがなければインストール
+        run: pnpm exec playwright install --with-deps chromium
+        if: ${{ steps.restore-chromium.outputs.cache-hit != 'true' }}
+      - name: ブラウザのキャッシュを保存
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        if: ${{ steps.restore-chromium.outputs.cache-hit != 'true' }}
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ steps.version-checker.outputs.playwright-version }}
+      - name: ビルドキャッシュを復元
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-
+      - name: ビルド
+        run: pnpm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+      - name: Playwrightのテストを実行
+        run: pnpm exec playwright test --workers=2
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
