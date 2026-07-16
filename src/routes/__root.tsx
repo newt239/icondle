@@ -10,7 +10,11 @@ const RootDocument = ({ children }: { children: ReactNode }) => (
       <HeadContent />
     </head>
     <body className="text-foreground antialiased">
-      <div aria-hidden="true" className="bg-grid-pattern pointer-events-none fixed inset-0 -z-10" />
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+        <div className="bg-grid-pattern absolute inset-0" />
+        <div className="bg-icon-cells absolute inset-0" />
+        <div className="bg-glow absolute inset-0" />
+      </div>
       <div className="px-1.5 sm:px-3 lg:px-6">
         <div className="border-border bg-background mx-auto flex min-h-dvh w-full max-w-2xl flex-col border-x">
           {children}

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build-bg-icons": "node scripts/build-bg-icons.ts",
     "build-deck": "node scripts/build-deck.ts",
     "cf-typegen": "wrangler types",
     "codecheck": "pnpm run typecheck && pnpm run lint && pnpm run format && pnpm run ls-lint && pnpm run knip",
