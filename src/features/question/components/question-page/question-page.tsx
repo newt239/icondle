@@ -14,26 +14,16 @@ import type { ClientQuestion, GradeResult } from "#/lib/quiz-types";
 
 type QuestionPageProps = {
   answers: string;
-  gradeSeed: string;
-  mode: "play" | "daily";
   n: number;
   question: ClientQuestion;
-  slug: string;
+  seed: string;
   total: number;
 };
 
 const nextLinkClassName =
   "self-end rounded-full bg-neutral-900 px-6 py-2 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900";
 
-export const QuestionPage = ({
-  answers,
-  gradeSeed,
-  mode,
-  n,
-  question,
-  slug,
-  total,
-}: QuestionPageProps) => {
+export const QuestionPage = ({ answers, n, question, seed, total }: QuestionPageProps) => {
   const [picked, setPicked] = useState<number | null>(null);
   const [result, setResult] = useState<GradeResult | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -45,7 +35,7 @@ export const QuestionPage = ({
     }
     setPicked(index);
     startTransition(async () => {
-      const graded = await gradeAnswer({ data: { answer: index, n, seed: gradeSeed } });
+      const graded = await gradeAnswer({ data: { answer: index, n, seed } });
       setResult(graded);
       requestAnimationFrame(() => headingRef.current?.focus());
     });
@@ -56,8 +46,7 @@ export const QuestionPage = ({
   const answered = result?.success === true ? result : null;
   const isLast = n >= total;
   const nextAnswers = picked === null ? answers : `${answers}${picked}`;
-  const basePath = mode === "play" ? `/play/${slug}` : `/daily/${slug}`;
-  const nextFormAction = isLast ? `${basePath}/result` : `${basePath}/${n + 1}`;
+  const nextFormAction = isLast ? `/play/${seed}/result` : `/play/${seed}/${n + 1}`;
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-6 px-4 py-8">
@@ -94,46 +83,25 @@ export const QuestionPage = ({
             headingRef={headingRef}
             meta={answered.meta}
           />
-          {isLast &&
-            (mode === "play" ? (
-              <Link
-                className={nextLinkClassName}
-                params={{ seed: slug }}
-                search={{ a: nextAnswers }}
-                to="/play/$seed/result"
-              >
-                結果を見る
-              </Link>
-            ) : (
-              <Link
-                className={nextLinkClassName}
-                params={{ date: slug }}
-                search={{ a: nextAnswers }}
-                to="/daily/$date/result"
-              >
-                結果を見る
-              </Link>
-            ))}
-          {!isLast &&
-            (mode === "play" ? (
-              <Link
-                className={nextLinkClassName}
-                params={{ n: String(n + 1), seed: slug }}
-                search={{ a: nextAnswers }}
-                to="/play/$seed/$n"
-              >
-                次の問題へ
-              </Link>
-            ) : (
-              <Link
-                className={nextLinkClassName}
-                params={{ date: slug, n: String(n + 1) }}
-                search={{ a: nextAnswers }}
-                to="/daily/$date/$n"
-              >
-                次の問題へ
-              </Link>
-            ))}
+          {isLast ? (
+            <Link
+              className={nextLinkClassName}
+              params={{ seed }}
+              search={{ a: nextAnswers }}
+              to="/play/$seed/result"
+            >
+              結果を見る
+            </Link>
+          ) : (
+            <Link
+              className={nextLinkClassName}
+              params={{ n: String(n + 1), seed }}
+              search={{ a: nextAnswers }}
+              to="/play/$seed/$n"
+            >
+              次の問題へ
+            </Link>
+          )}
         </>
       )}
     </main>

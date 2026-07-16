@@ -2,15 +2,18 @@ import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 import { z } from "zod";
 
-import { PLAY_QUESTION_COUNT } from "./quiz-config";
+import { isDateSeed, jstToday, PLAY_QUESTION_COUNT, questionCountFor } from "./quiz-config";
 
 import type { GradeResult, RunResult } from "./quiz-types";
 
-const gradeInputSchema = z.object({
-  answer: z.number().int().min(0).max(3),
-  n: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
-  seed: z.string().min(1).max(100),
-});
+const gradeInputSchema = z
+  .object({
+    answer: z.number().int().min(0).max(3),
+    n: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
+    seed: z.string().min(1).max(100),
+  })
+  .refine((data) => data.n <= questionCountFor(data.seed))
+  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
 export const gradeAnswer = createServerFn({ method: "POST" })
   .validator(gradeInputSchema)
@@ -30,20 +33,22 @@ export const gradeAnswer = createServerFn({ method: "POST" })
     }
   });
 
-const runResultInputSchema = z.object({
-  answers: z
-    .string()
-    .regex(/^[0-3]*$/)
-    .max(PLAY_QUESTION_COUNT),
-  seed: z.string().min(1).max(100),
-  total: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
-});
+const runResultInputSchema = z
+  .object({
+    answers: z
+      .string()
+      .regex(/^[0-3]*$/)
+      .max(PLAY_QUESTION_COUNT),
+    seed: z.string().min(1).max(100),
+  })
+  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
 export const getRunResult = createServerFn({ method: "GET" })
   .validator(runResultInputSchema)
   .handler(async ({ data }): Promise<RunResult> => {
     setResponseHeader("cache-control", "private, no-store");
-    if (data.answers.length !== data.total) {
+    const total = questionCountFor(data.seed);
+    if (data.answers.length !== total) {
       return { error: "まだすべての問題に回答していません。", success: false };
     }
     try {
@@ -63,7 +68,7 @@ export const getRunResult = createServerFn({ method: "GET" })
         items,
         score: items.filter((item) => item.correct).length,
         success: true,
-        total: data.total,
+        total,
       };
     } catch (error) {
       console.error(error);

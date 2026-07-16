@@ -1,12 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { z } from "zod";
 
 import { QuestionPage } from "#/features/question/components/question-page";
 import { getQuestion } from "#/lib/question";
-import { PLAY_QUESTION_COUNT } from "#/lib/quiz-config";
+import { isDateSeed, jstToday, questionCountFor } from "#/lib/quiz-config";
 import { quizSearchSchema } from "#/lib/search-schemas";
-
-const nSchema = z.coerce.number().int().min(1).max(PLAY_QUESTION_COUNT);
 
 const PlayQuestion = () => {
   const { seed, n } = Route.useParams();
@@ -15,13 +13,11 @@ const PlayQuestion = () => {
   return (
     <QuestionPage
       answers={a ?? ""}
-      gradeSeed={seed}
       key={`${seed}:${n}`}
-      mode="play"
       n={Number(n)}
       question={question}
-      slug={seed}
-      total={PLAY_QUESTION_COUNT}
+      seed={seed}
+      total={questionCountFor(seed)}
     />
   );
 };
@@ -29,6 +25,17 @@ const PlayQuestion = () => {
 export const Route = createFileRoute("/play/$seed/$n")({
   component: PlayQuestion,
   headers: () => ({ "cache-control": "private, no-store" }),
-  loader: ({ params }) => getQuestion({ data: { n: nSchema.parse(params.n), seed: params.seed } }),
+  loader: ({ params }) => {
+    const parsed = z.coerce
+      .number()
+      .int()
+      .min(1)
+      .max(questionCountFor(params.seed))
+      .safeParse(params.n);
+    if (!parsed.success || (isDateSeed(params.seed) && params.seed > jstToday())) {
+      throw notFound();
+    }
+    return getQuestion({ data: { n: parsed.data, seed: params.seed } });
+  },
   validateSearch: quizSearchSchema,
 });
