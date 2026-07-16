@@ -17,6 +17,7 @@ const PlayQuestion = () => {
       answers={a ?? ""}
       gradeSeed={seed}
       key={`${seed}:${n}`}
+      mode="play"
       n={Number(n)}
       question={question}
       slug={seed}

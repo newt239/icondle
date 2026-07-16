@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlayIndexRouteImport } from './routes/play.index'
+import { Route as DailyIndexRouteImport } from './routes/daily.index'
 import { Route as PlaySeedResultRouteImport } from './routes/play.$seed.result'
 import { Route as PlaySeedNRouteImport } from './routes/play.$seed.$n'
+import { Route as DailyDateResultRouteImport } from './routes/daily.$date.result'
+import { Route as DailyDateNRouteImport } from './routes/daily.$date.$n'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const PlayIndexRoute = PlayIndexRouteImport.update({
   id: '/play/',
   path: '/play/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DailyIndexRoute = DailyIndexRouteImport.update({
+  id: '/daily/',
+  path: '/daily/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlaySeedResultRoute = PlaySeedResultRouteImport.update({
@@ -34,37 +42,81 @@ const PlaySeedNRoute = PlaySeedNRouteImport.update({
   path: '/play/$seed/$n',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DailyDateResultRoute = DailyDateResultRouteImport.update({
+  id: '/daily/$date/result',
+  path: '/daily/$date/result',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DailyDateNRoute = DailyDateNRouteImport.update({
+  id: '/daily/$date/$n',
+  path: '/daily/$date/$n',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/daily/': typeof DailyIndexRoute
   '/play/': typeof PlayIndexRoute
+  '/daily/$date/$n': typeof DailyDateNRoute
+  '/daily/$date/result': typeof DailyDateResultRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/daily': typeof DailyIndexRoute
   '/play': typeof PlayIndexRoute
+  '/daily/$date/$n': typeof DailyDateNRoute
+  '/daily/$date/result': typeof DailyDateResultRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/daily/': typeof DailyIndexRoute
   '/play/': typeof PlayIndexRoute
+  '/daily/$date/$n': typeof DailyDateNRoute
+  '/daily/$date/result': typeof DailyDateResultRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
+  fullPaths:
+    | '/'
+    | '/daily/'
+    | '/play/'
+    | '/daily/$date/$n'
+    | '/daily/$date/result'
+    | '/play/$seed/$n'
+    | '/play/$seed/result'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/play' | '/play/$seed/$n' | '/play/$seed/result'
-  id: '__root__' | '/' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
+  to:
+    | '/'
+    | '/daily'
+    | '/play'
+    | '/daily/$date/$n'
+    | '/daily/$date/result'
+    | '/play/$seed/$n'
+    | '/play/$seed/result'
+  id:
+    | '__root__'
+    | '/'
+    | '/daily/'
+    | '/play/'
+    | '/daily/$date/$n'
+    | '/daily/$date/result'
+    | '/play/$seed/$n'
+    | '/play/$seed/result'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DailyIndexRoute: typeof DailyIndexRoute
   PlayIndexRoute: typeof PlayIndexRoute
+  DailyDateNRoute: typeof DailyDateNRoute
+  DailyDateResultRoute: typeof DailyDateResultRoute
   PlaySeedNRoute: typeof PlaySeedNRoute
   PlaySeedResultRoute: typeof PlaySeedResultRoute
 }
@@ -85,6 +137,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/daily/': {
+      id: '/daily/'
+      path: '/daily'
+      fullPath: '/daily/'
+      preLoaderRoute: typeof DailyIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play/$seed/result': {
       id: '/play/$seed/result'
       path: '/play/$seed/result'
@@ -99,12 +158,29 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlaySeedNRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/daily/$date/result': {
+      id: '/daily/$date/result'
+      path: '/daily/$date/result'
+      fullPath: '/daily/$date/result'
+      preLoaderRoute: typeof DailyDateResultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/daily/$date/$n': {
+      id: '/daily/$date/$n'
+      path: '/daily/$date/$n'
+      fullPath: '/daily/$date/$n'
+      preLoaderRoute: typeof DailyDateNRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DailyIndexRoute: DailyIndexRoute,
   PlayIndexRoute: PlayIndexRoute,
+  DailyDateNRoute: DailyDateNRoute,
+  DailyDateResultRoute: DailyDateResultRoute,
   PlaySeedNRoute: PlaySeedNRoute,
   PlaySeedResultRoute: PlaySeedResultRoute,
 }

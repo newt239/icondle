@@ -15,6 +15,7 @@ import type { ClientQuestion, GradeResult } from "#/lib/quiz-types";
 type QuestionPageProps = {
   answers: string;
   gradeSeed: string;
+  mode: "play" | "daily";
   n: number;
   question: ClientQuestion;
   slug: string;
@@ -27,6 +28,7 @@ const nextLinkClassName =
 export const QuestionPage = ({
   answers,
   gradeSeed,
+  mode,
   n,
   question,
   slug,
@@ -54,7 +56,8 @@ export const QuestionPage = ({
   const answered = result?.success === true ? result : null;
   const isLast = n >= total;
   const nextAnswers = picked === null ? answers : `${answers}${picked}`;
-  const nextFormAction = isLast ? `/play/${slug}/result` : `/play/${slug}/${n + 1}`;
+  const basePath = mode === "play" ? `/play/${slug}` : `/daily/${slug}`;
+  const nextFormAction = isLast ? `${basePath}/result` : `${basePath}/${n + 1}`;
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-6 px-4 py-8">
@@ -91,25 +94,46 @@ export const QuestionPage = ({
             headingRef={headingRef}
             meta={answered.meta}
           />
-          {isLast ? (
-            <Link
-              className={nextLinkClassName}
-              params={{ seed: slug }}
-              search={{ a: nextAnswers }}
-              to="/play/$seed/result"
-            >
-              結果を見る
-            </Link>
-          ) : (
-            <Link
-              className={nextLinkClassName}
-              params={{ n: String(n + 1), seed: slug }}
-              search={{ a: nextAnswers }}
-              to="/play/$seed/$n"
-            >
-              次の問題へ
-            </Link>
-          )}
+          {isLast &&
+            (mode === "play" ? (
+              <Link
+                className={nextLinkClassName}
+                params={{ seed: slug }}
+                search={{ a: nextAnswers }}
+                to="/play/$seed/result"
+              >
+                結果を見る
+              </Link>
+            ) : (
+              <Link
+                className={nextLinkClassName}
+                params={{ date: slug }}
+                search={{ a: nextAnswers }}
+                to="/daily/$date/result"
+              >
+                結果を見る
+              </Link>
+            ))}
+          {!isLast &&
+            (mode === "play" ? (
+              <Link
+                className={nextLinkClassName}
+                params={{ n: String(n + 1), seed: slug }}
+                search={{ a: nextAnswers }}
+                to="/play/$seed/$n"
+              >
+                次の問題へ
+              </Link>
+            ) : (
+              <Link
+                className={nextLinkClassName}
+                params={{ date: slug, n: String(n + 1) }}
+                search={{ a: nextAnswers }}
+                to="/daily/$date/$n"
+              >
+                次の問題へ
+              </Link>
+            ))}
         </>
       )}
     </main>
