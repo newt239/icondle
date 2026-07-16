@@ -7,7 +7,7 @@ type QuestionCardProps = {
 
 export const QuestionCard = ({ svgs, answeredLabels }: QuestionCardProps) => (
   <Card className="items-center py-8">
-    <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4">
+    <div className="grid grid-cols-2 gap-6">
       {svgs.map((svg, index) => {
         const label = answeredLabels?.[index];
         const html =
