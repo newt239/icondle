@@ -23,11 +23,11 @@ const loaderDeps = ({ search }: { search: { a?: string } }) => ({ a: search.a ??
 export const Route = createFileRoute("/play/hard/$seed/result")({
   component: PlayHardResult,
   headers: () => ({ "cache-control": "private, no-store" }),
-  loader: ({ deps, params }) => {
+  loader: async ({ deps, params }) => {
     if (isDateSeed(params.seed)) {
       throw notFound();
     }
-    return getRunResult({ data: { answers: deps.a, mode: "hard", seed: params.seed } });
+    return await getRunResult({ data: { answers: deps.a, mode: "hard", seed: params.seed } });
   },
   loaderDeps,
   validateSearch: quizSearchSchema,

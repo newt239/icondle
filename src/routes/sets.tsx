@@ -10,5 +10,5 @@ const Sets = () => {
 
 export const Route = createFileRoute("/sets")({
   component: Sets,
-  loader: () => getSetsOverview(),
+  loader: async () => await getSetsOverview(),
 });

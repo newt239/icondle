@@ -2,8 +2,9 @@ import { useRef, useState, useTransition } from "react";
 
 import { Link } from "@tanstack/react-router";
 
-import { useChoiceShortcuts } from "../hooks/use-choice-shortcuts";
-import { gradeAnswer } from "../lib/grade";
+import { useChoiceShortcuts } from "#/features/question/hooks/use-choice-shortcuts";
+import { gradeAnswer } from "#/features/question/lib/grade";
+
 import { ChoiceList } from "./choice-list";
 import { ExplanationPanel } from "./explanation-panel";
 import { QuestionCard } from "./question-card";

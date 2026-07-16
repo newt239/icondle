@@ -1,7 +1,6 @@
 import "@tanstack/react-start/server-only";
-import { deck } from "#/data/deck";
+import { deck, type SetId } from "#/data/deck";
 
-import type { SetId } from "#/data/deck";
 import type { SetOverview } from "#/lib/quiz-types";
 
 const SAMPLE_COUNT = 6;

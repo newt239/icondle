@@ -38,6 +38,7 @@
     "max-statements": "off",
     "no-alert": "off",
     "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-continue": "off",
     "no-empty-function": "off",
     "no-inline-comments": "off",
     "no-magic-numbers": "off",
@@ -45,6 +46,7 @@
     "no-plusplus": "off",
     "no-ternary": "off",
     "no-undefined": "off",
+    "no-void": ["warn", { "allowAsStatement": true }],
     "require-unicode-regexp": "off",
     "sort-imports": "off",
     "sort-keys": "warn",
@@ -63,6 +65,7 @@
     "oxc/no-optional-chaining": "off",
     "oxc/no-rest-spread-properties": "off",
     "react/forbid-component-props": "off",
+    "react/no-danger": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "react/jsx-max-depth": "off",
     "react/jsx-no-literals": "off",
@@ -81,6 +84,7 @@
     "typescript/no-non-null-assertion": "off",
     "typescript/no-unsafe-type-assertion": "off",
     "typescript/prefer-readonly-parameter-types": "off",
+    "typescript/return-await": ["warn", "always"],
     "typescript/strict-boolean-expressions": "off",
     "unicorn/no-nested-ternary": "off",
     "unicorn/no-null": "off",
@@ -93,7 +97,15 @@
     {
       "files": ["src/routes/**"],
       "rules": {
-        "react/only-export-components": "off"
+        "no-use-before-define": "off",
+        "react/only-export-components": "off",
+        "typescript/only-throw-error": "off"
+      }
+    },
+    {
+      "files": ["scripts/**"],
+      "rules": {
+        "import/no-nodejs-modules": "off"
       }
     }
   ]

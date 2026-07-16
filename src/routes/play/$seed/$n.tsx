@@ -26,7 +26,7 @@ const PlayQuestion = () => {
 export const Route = createFileRoute("/play/$seed/$n")({
   component: PlayQuestion,
   headers: () => ({ "cache-control": "private, no-store" }),
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const parsed = z.coerce
       .number()
       .int()
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/play/$seed/$n")({
     if (!parsed.success || (isDateSeed(params.seed) && params.seed > jstToday())) {
       throw notFound();
     }
-    return getQuestion({ data: { mode: "easy", n: parsed.data, seed: params.seed } });
+    return await getQuestion({ data: { mode: "easy", n: parsed.data, seed: params.seed } });
   },
   validateSearch: quizSearchSchema,
 });

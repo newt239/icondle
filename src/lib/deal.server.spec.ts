@@ -1,12 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { deck } from "#/data/deck";
+import { deck, type SetId } from "#/data/deck";
 
 import { dealAnswer, dealQuestion } from "./deal.server";
 
 import type { QuizMode } from "./quiz-config";
-
-import type { SetId } from "#/data/deck";
 
 const SEED_COUNT = 30;
 const QUESTION_COUNT = 10;

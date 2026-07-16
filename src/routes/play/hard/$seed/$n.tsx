@@ -26,12 +26,12 @@ const PlayHardQuestion = () => {
 export const Route = createFileRoute("/play/hard/$seed/$n")({
   component: PlayHardQuestion,
   headers: () => ({ "cache-control": "private, no-store" }),
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const parsed = z.coerce.number().int().min(1).max(PLAY_QUESTION_COUNT).safeParse(params.n);
     if (!parsed.success || isDateSeed(params.seed)) {
       throw notFound();
     }
-    return getQuestion({ data: { mode: "hard", n: parsed.data, seed: params.seed } });
+    return await getQuestion({ data: { mode: "hard", n: parsed.data, seed: params.seed } });
   },
   validateSearch: quizSearchSchema,
 });

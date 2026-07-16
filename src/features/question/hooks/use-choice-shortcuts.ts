@@ -13,6 +13,8 @@ export const useChoiceShortcuts = (onChoose: (index: number) => void): void => {
       }
     };
     window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
+    return () => {
+      window.removeEventListener("keydown", handler);
+    };
   }, [onChoose]);
 };

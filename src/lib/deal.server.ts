@@ -1,13 +1,11 @@
 import "@tanstack/react-start/server-only";
-import { deck } from "#/data/deck";
+import { deck, type Concept, type SetId } from "#/data/deck";
 
 import { hash, mulberry32 } from "./prng";
 import { normalize } from "./render-icon.server";
 
 import type { QuizMode } from "./quiz-config";
 import type { AnswerMeta, ClientQuestion } from "./quiz-types";
-
-import type { Concept, SetId } from "#/data/deck";
 
 const CHOICE_COUNT = 4;
 
@@ -37,7 +35,7 @@ const shuffle = <T>(rng: () => number, items: readonly T[]): T[] => {
 };
 
 const ownersFor = (mode: QuizMode, concept: Concept): SetId[] => {
-  const owners = Object.keys(concept.variants).filter(isSetId);
+  const owners = Object.keys(concept.variants).filter((value): value is SetId => isSetId(value));
   return mode === "easy" ? owners.filter((setId) => EASY_SET_IDS.has(setId)) : owners;
 };
 

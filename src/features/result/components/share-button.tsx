@@ -11,9 +11,9 @@ export const ShareButton = ({ text, path }: ShareButtonProps) => {
   const [copied, setCopied] = useState(false);
 
   const copy = () => {
-    void navigator.clipboard
-      .writeText(`${text}\n${window.location.origin}${path}`)
-      .then(() => setCopied(true));
+    void navigator.clipboard.writeText(`${text}\n${window.location.origin}${path}`).then(() => {
+      setCopied(true);
+    });
   };
 
   return (

@@ -16,17 +16,17 @@ const CANDIDATES: Candidate[] = [
   { id: "fa6-solid" },
   { id: "fluent", include: /-24-regular$/, strip: /-24-regular$/ },
   { id: "material-symbols", include: /-outline$/, strip: /-outline$/ },
-  { exclude: /-(bold|duotone|fill|light|thin)$/, id: "ph" },
+  { exclude: /-(?:bold|duotone|fill|light|thin)$/, id: "ph" },
   { exclude: /-outline$/, id: "mdi" },
   { exclude: /-filled$/, id: "tabler" },
   { id: "hugeicons", strip: /-0\d$/ },
   { exclude: /-filled$/, id: "boxicons" },
-  { exclude: /-(bold|duo|outline)$/, id: "glyphs" },
+  { exclude: /-(?:bold|duo|outline)$/, id: "glyphs" },
   { id: "mingcute", include: /-line$/, strip: /-line$/ },
   { exclude: /-fill$/, id: "ri", strip: /-line$/ },
   { id: "icon-park-outline" },
   { exclude: /-solid$/, id: "mynaui" },
-  { exclude: /-(filled|solid)$/, id: "carbon" },
+  { exclude: /-(?:filled|solid)$/, id: "carbon" },
   { exclude: /-filled$/, id: "tdesign" },
   { exclude: /-fill$/, id: "bi" },
   { id: "lucide" },
@@ -93,8 +93,10 @@ type ResolvedIcon = {
   isAlias: boolean;
 };
 
-const readJson = (specifier: string): unknown =>
-  JSON.parse(readFileSync(fileURLToPath(import.meta.resolve(specifier)), "utf8"));
+const readJson = (specifier: string): unknown => {
+  const filePath = fileURLToPath(import.meta.resolve(specifier));
+  return JSON.parse(readFileSync(filePath, "utf8"));
+};
 
 // 外部パッケージの JSON を @iconify/types の公開型として扱うための境界アサーション
 const loadIcons = (id: string) => readJson(`@iconify-json/${id}/icons.json`) as IconifyJSON;
@@ -330,12 +332,12 @@ for (const { candidate, info, namespace, version } of adopted) {
   const strokeCount = bodies.filter((body) => body.includes("stroke=")).length;
   const style: SetMetaOut["style"] = strokeCount / bodies.length > 0.5 ? "stroke" : "fill";
   const strokeWidths = bodies.flatMap((body) => {
-    const match = body.match(/stroke-width="([\d.]+)"/);
-    return match?.[1] === undefined ? [] : [Number(match[1])];
+    const width = /stroke-width="(?<width>[\d.]+)"/.exec(body)?.groups?.width;
+    return width === undefined ? [] : [Number(width)];
   });
   const caps = bodies.flatMap((body) => {
-    const match = body.match(/stroke-linecap="([a-z]+)"/);
-    return match?.[1] === undefined ? [] : [match[1]];
+    const cap = /stroke-linecap="(?<cap>[a-z]+)"/.exec(body)?.groups?.cap;
+    return cap === undefined ? [] : [cap];
   });
   const gridMode = mode(heights);
   const strokeWidthMode = style === "stroke" ? mode(strokeWidths) : null;

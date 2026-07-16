@@ -34,7 +34,7 @@ export const getRunResult = createServerFn({ method: "GET" })
     }
     try {
       const { dealAnswer } = await import("#/lib/deal.server");
-      const items = [...data.answers].map((picked, index) => {
+      const items = Array.from(data.answers, (picked, index) => {
         const n = index + 1;
         const { answerIndex, meta } = dealAnswer(data.mode, data.seed, n);
         return {

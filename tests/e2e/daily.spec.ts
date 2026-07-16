@@ -1,8 +1,8 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 
-import type { Page } from "@playwright/test";
-
-const waitForHydration = (page: Page) => page.waitForFunction(() => !("$_TSR" in window));
+const waitForHydration = async (page: Page) => {
+  await page.waitForFunction(() => !("$_TSR" in window));
+};
 
 const jstToday = (): string =>
   new Intl.DateTimeFormat("en-CA", {
