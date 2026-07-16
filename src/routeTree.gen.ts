@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PlayIndexRouteImport } from './routes/play.index'
+import { Route as PlaySeedResultRouteImport } from './routes/play.$seed.result'
+import { Route as PlaySeedNRouteImport } from './routes/play.$seed.$n'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlayIndexRoute = PlayIndexRouteImport.update({
+  id: '/play/',
+  path: '/play/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlaySeedResultRoute = PlaySeedResultRouteImport.update({
+  id: '/play/$seed/result',
+  path: '/play/$seed/result',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlaySeedNRoute = PlaySeedNRouteImport.update({
+  id: '/play/$seed/$n',
+  path: '/play/$seed/$n',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/play/': typeof PlayIndexRoute
+  '/play/$seed/$n': typeof PlaySeedNRoute
+  '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/play': typeof PlayIndexRoute
+  '/play/$seed/$n': typeof PlaySeedNRoute
+  '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/play/': typeof PlayIndexRoute
+  '/play/$seed/$n': typeof PlaySeedNRoute
+  '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/play' | '/play/$seed/$n' | '/play/$seed/result'
+  id: '__root__' | '/' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PlayIndexRoute: typeof PlayIndexRoute
+  PlaySeedNRoute: typeof PlaySeedNRoute
+  PlaySeedResultRoute: typeof PlaySeedResultRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/play/': {
+      id: '/play/'
+      path: '/play'
+      fullPath: '/play/'
+      preLoaderRoute: typeof PlayIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/$seed/result': {
+      id: '/play/$seed/result'
+      path: '/play/$seed/result'
+      fullPath: '/play/$seed/result'
+      preLoaderRoute: typeof PlaySeedResultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/$seed/$n': {
+      id: '/play/$seed/$n'
+      path: '/play/$seed/$n'
+      fullPath: '/play/$seed/$n'
+      preLoaderRoute: typeof PlaySeedNRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PlayIndexRoute: PlayIndexRoute,
+  PlaySeedNRoute: PlaySeedNRoute,
+  PlaySeedResultRoute: PlaySeedResultRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

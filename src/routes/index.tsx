@@ -1,11 +1,15 @@
-import { Button } from "@heroui/react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 const Home = () => (
   <main className="flex min-h-dvh flex-col items-center justify-center gap-4">
     <h1 className="text-4xl font-bold">Guess Icon</h1>
     <p className="text-neutral-500">このアイコン、どのセットのやつ？</p>
-    <Button isDisabled>近日公開</Button>
+    <Link
+      className="rounded-full bg-neutral-900 px-8 py-3 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900"
+      to="/play"
+    >
+      プレイする
+    </Link>
   </main>
 );
 
