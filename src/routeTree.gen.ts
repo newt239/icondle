@@ -12,8 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SetsRouteImport } from './routes/sets'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlayIndexRouteImport } from './routes/play.index'
+import { Route as PlayHardIndexRouteImport } from './routes/play.hard.index'
 import { Route as PlaySeedResultRouteImport } from './routes/play.$seed.result'
 import { Route as PlaySeedNRouteImport } from './routes/play.$seed.$n'
+import { Route as PlayHardSeedResultRouteImport } from './routes/play.hard.$seed.result'
+import { Route as PlayHardSeedNRouteImport } from './routes/play.hard.$seed.$n'
 
 const SetsRoute = SetsRouteImport.update({
   id: '/sets',
@@ -30,6 +33,11 @@ const PlayIndexRoute = PlayIndexRouteImport.update({
   path: '/play/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlayHardIndexRoute = PlayHardIndexRouteImport.update({
+  id: '/play/hard/',
+  path: '/play/hard/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlaySeedResultRoute = PlaySeedResultRouteImport.update({
   id: '/play/$seed/result',
   path: '/play/$seed/result',
@@ -40,6 +48,16 @@ const PlaySeedNRoute = PlaySeedNRouteImport.update({
   path: '/play/$seed/$n',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlayHardSeedResultRoute = PlayHardSeedResultRouteImport.update({
+  id: '/play/hard/$seed/result',
+  path: '/play/hard/$seed/result',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayHardSeedNRoute = PlayHardSeedNRouteImport.update({
+  id: '/play/hard/$seed/$n',
+  path: '/play/hard/$seed/$n',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +65,9 @@ export interface FileRoutesByFullPath {
   '/play/': typeof PlayIndexRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
+  '/play/hard/': typeof PlayHardIndexRoute
+  '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
+  '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +75,9 @@ export interface FileRoutesByTo {
   '/play': typeof PlayIndexRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
+  '/play/hard': typeof PlayHardIndexRoute
+  '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
+  '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,12 +86,31 @@ export interface FileRoutesById {
   '/play/': typeof PlayIndexRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
+  '/play/hard/': typeof PlayHardIndexRoute
+  '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
+  '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sets' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
+  fullPaths:
+    | '/'
+    | '/sets'
+    | '/play/'
+    | '/play/$seed/$n'
+    | '/play/$seed/result'
+    | '/play/hard/'
+    | '/play/hard/$seed/$n'
+    | '/play/hard/$seed/result'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sets' | '/play' | '/play/$seed/$n' | '/play/$seed/result'
+  to:
+    | '/'
+    | '/sets'
+    | '/play'
+    | '/play/$seed/$n'
+    | '/play/$seed/result'
+    | '/play/hard'
+    | '/play/hard/$seed/$n'
+    | '/play/hard/$seed/result'
   id:
     | '__root__'
     | '/'
@@ -75,6 +118,9 @@ export interface FileRouteTypes {
     | '/play/'
     | '/play/$seed/$n'
     | '/play/$seed/result'
+    | '/play/hard/'
+    | '/play/hard/$seed/$n'
+    | '/play/hard/$seed/result'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -83,6 +129,9 @@ export interface RootRouteChildren {
   PlayIndexRoute: typeof PlayIndexRoute
   PlaySeedNRoute: typeof PlaySeedNRoute
   PlaySeedResultRoute: typeof PlaySeedResultRoute
+  PlayHardIndexRoute: typeof PlayHardIndexRoute
+  PlayHardSeedNRoute: typeof PlayHardSeedNRoute
+  PlayHardSeedResultRoute: typeof PlayHardSeedResultRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -108,6 +157,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/play/hard/': {
+      id: '/play/hard/'
+      path: '/play/hard'
+      fullPath: '/play/hard/'
+      preLoaderRoute: typeof PlayHardIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play/$seed/result': {
       id: '/play/$seed/result'
       path: '/play/$seed/result'
@@ -122,6 +178,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlaySeedNRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/play/hard/$seed/result': {
+      id: '/play/hard/$seed/result'
+      path: '/play/hard/$seed/result'
+      fullPath: '/play/hard/$seed/result'
+      preLoaderRoute: typeof PlayHardSeedResultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/hard/$seed/$n': {
+      id: '/play/hard/$seed/$n'
+      path: '/play/hard/$seed/$n'
+      fullPath: '/play/hard/$seed/$n'
+      preLoaderRoute: typeof PlayHardSeedNRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -131,6 +201,9 @@ const rootRouteChildren: RootRouteChildren = {
   PlayIndexRoute: PlayIndexRoute,
   PlaySeedNRoute: PlaySeedNRoute,
   PlaySeedResultRoute: PlaySeedResultRoute,
+  PlayHardIndexRoute: PlayHardIndexRoute,
+  PlayHardSeedNRoute: PlayHardSeedNRoute,
+  PlayHardSeedResultRoute: PlayHardSeedResultRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

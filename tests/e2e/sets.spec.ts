@@ -13,10 +13,10 @@ test.describe("収録アイコンセット", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText("収録アイコンセット");
   });
 
-  test("12 セットぶんのカードとサンプルアイコンが表示される", async ({ page }) => {
+  test("14 セットぶんのカードとサンプルアイコンが表示される", async ({ page }) => {
     await page.goto("/sets");
-    await expect(page.getByRole("heading", { level: 2 })).toHaveCount(12);
-    expect(await page.locator("main svg").count()).toBeGreaterThanOrEqual(12);
+    await expect(page.getByRole("heading", { level: 2 })).toHaveCount(14);
+    expect(await page.locator("main svg").count()).toBeGreaterThanOrEqual(14);
     await expect(page.getByRole("link", { name: "Tabler Icons" })).toHaveAttribute(
       "href",
       "https://icon-sets.iconify.design/tabler/",

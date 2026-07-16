@@ -13,6 +13,7 @@ type Candidate = {
 };
 
 const CANDIDATES: Candidate[] = [
+  { id: "fa6-solid" },
   { id: "fluent", include: /-24-regular$/, strip: /-24-regular$/ },
   { id: "material-symbols", include: /-outline$/, strip: /-outline$/ },
   { exclude: /-(bold|duotone|fill|light|thin)$/, id: "ph" },
@@ -33,9 +34,13 @@ const CANDIDATES: Candidate[] = [
   { exclude: /-solid$/, id: "heroicons" },
 ];
 
-const ADOPT_COUNT = 12;
-const MIN_ADOPT_COUNT = 10;
+const ADOPT_COUNT = 14;
+const MIN_ADOPT_COUNT = 12;
 const MIN_SHARED_SETS = 4;
+const CHOICE_COUNT = 4;
+const MIN_EASY_POOL = 50;
+
+const EASY_IDS = ["fluent", "material-symbols", "tabler", "lucide", "heroicons", "fa6-solid"];
 
 const DENY = new Set([
   "arrow-up",
@@ -53,6 +58,8 @@ const SET_ORIGIN: Record<string, string> = {
   boxicons: "Web UI 向けに設計されたシンプルなセット。角の丸い素直な造形でクセが少ない。",
   carbon:
     "IBM の Carbon Design System 付属セット。32 グリッドで設計され、直線的で硬質な造形が特徴。",
+  "fa6-solid":
+    "Font Awesome 6 の Solid スタイル。Web アイコンフォントの草分け的存在で、塗りつぶし主体の力強い造形が特徴。",
   fluent:
     "Microsoft の Fluent UI System Icons。Windows や Office の UI 言語を反映し、サイズ別に最適化された派生を持つ。",
   glyphs: "Glyphs.fyi によるセット。outline と塗りの中間的な、やや装飾的な造形を持つ。",
@@ -212,7 +219,15 @@ for (const { candidate, namespace } of loaded) {
   console.warn(`  ${candidate.id.padEnd(20)} ${String(namespace.size).padStart(6)}`);
 }
 
-const adopted = loaded.slice(0, ADOPT_COUNT);
+const forced = loaded.filter(({ candidate }) => EASY_IDS.includes(candidate.id));
+if (forced.length !== EASY_IDS.length) {
+  const missing = EASY_IDS.filter((id) => !forced.some(({ candidate }) => candidate.id === id));
+  throw new Error(`easy セットが候補に揃っていません: ${missing.join(", ")}`);
+}
+const rest = loaded
+  .filter(({ candidate }) => !EASY_IDS.includes(candidate.id))
+  .slice(0, ADOPT_COUNT - forced.length);
+const adopted = [...forced, ...rest].toSorted((a, b) => b.namespace.size - a.namespace.size);
 if (adopted.length < MIN_ADOPT_COUNT) {
   throw new Error(`採用セットが ${MIN_ADOPT_COUNT} 未満です: ${adopted.length}`);
 }
@@ -263,6 +278,30 @@ const concepts: ConceptOut[] = sharedConcepts.map((concept) => {
 
 const collisionCount = concepts.filter((concept) => concept.collisions.length > 0).length;
 console.warn(`body 衝突を含む概念数: ${collisionCount}`);
+
+const distinctOwnerCount = (owners: string[], collisions: string[][]): number => {
+  const grouped = new Set<string>();
+  let distinct = 0;
+  for (const group of collisions) {
+    const members = group.filter((id) => owners.includes(id));
+    for (const member of members) {
+      grouped.add(member);
+    }
+    if (members.length > 0) {
+      distinct += 1;
+    }
+  }
+  return distinct + owners.filter((id) => !grouped.has(id)).length;
+};
+
+const easyPoolCount = concepts.filter((concept) => {
+  const owners = EASY_IDS.filter((id) => concept.variants[id]);
+  return distinctOwnerCount(owners, concept.collisions) >= CHOICE_COUNT;
+}).length;
+console.warn(`easy モードで出題可能な概念数: ${easyPoolCount}`);
+if (easyPoolCount < MIN_EASY_POOL) {
+  throw new Error(`easy モードの出題可能概念数が ${MIN_EASY_POOL} 未満です: ${easyPoolCount}`);
+}
 
 type SetMetaOut = {
   id: string;

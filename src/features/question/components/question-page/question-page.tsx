@@ -10,10 +10,12 @@ import { ExplanationPanel } from "../explanation-panel";
 import { QuestionCard } from "../question-card";
 import { QuestionProgress } from "../question-progress";
 
+import type { QuizMode } from "#/lib/quiz-config";
 import type { ClientQuestion, GradeResult } from "#/lib/quiz-types";
 
 type QuestionPageProps = {
   answers: string;
+  mode: QuizMode;
   n: number;
   question: ClientQuestion;
   seed: string;
@@ -23,7 +25,7 @@ type QuestionPageProps = {
 const nextLinkClassName =
   "self-end rounded-full bg-neutral-900 px-6 py-2 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900";
 
-export const QuestionPage = ({ answers, n, question, seed, total }: QuestionPageProps) => {
+export const QuestionPage = ({ answers, mode, n, question, seed, total }: QuestionPageProps) => {
   const [picked, setPicked] = useState<number | null>(null);
   const [result, setResult] = useState<GradeResult | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -35,7 +37,7 @@ export const QuestionPage = ({ answers, n, question, seed, total }: QuestionPage
     }
     setPicked(index);
     startTransition(async () => {
-      const graded = await gradeAnswer({ data: { answer: index, n, seed } });
+      const graded = await gradeAnswer({ data: { answer: index, mode, n, seed } });
       setResult(graded);
       requestAnimationFrame(() => headingRef.current?.focus());
     });
@@ -46,7 +48,8 @@ export const QuestionPage = ({ answers, n, question, seed, total }: QuestionPage
   const answered = result?.success === true ? result : null;
   const isLast = n >= total;
   const nextAnswers = picked === null ? answers : `${answers}${picked}`;
-  const nextFormAction = isLast ? `/play/${seed}/result` : `/play/${seed}/${n + 1}`;
+  const playBase = mode === "hard" ? `/play/hard/${seed}` : `/play/${seed}`;
+  const nextFormAction = isLast ? `${playBase}/result` : `${playBase}/${n + 1}`;
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-6 px-4 py-8">
@@ -88,7 +91,7 @@ export const QuestionPage = ({ answers, n, question, seed, total }: QuestionPage
               className={nextLinkClassName}
               params={{ seed }}
               search={{ a: nextAnswers }}
-              to="/play/$seed/result"
+              to={mode === "hard" ? "/play/hard/$seed/result" : "/play/$seed/result"}
             >
               結果を見る
             </Link>
@@ -97,7 +100,7 @@ export const QuestionPage = ({ answers, n, question, seed, total }: QuestionPage
               className={nextLinkClassName}
               params={{ n: String(n + 1), seed }}
               search={{ a: nextAnswers }}
-              to="/play/$seed/$n"
+              to={mode === "hard" ? "/play/hard/$seed/$n" : "/play/$seed/$n"}
             >
               次の問題へ
             </Link>

@@ -2,16 +2,24 @@ import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 import { z } from "zod";
 
-import { isDateSeed, jstToday, PLAY_QUESTION_COUNT, questionCountFor } from "./quiz-config";
+import {
+  isDateSeed,
+  isModeSeedAllowed,
+  jstToday,
+  PLAY_QUESTION_COUNT,
+  questionCountFor,
+} from "./quiz-config";
 
 import type { GradeResult, RunResult } from "./quiz-types";
 
-const gradeInputSchema = z
+export const gradeInputSchema = z
   .object({
     answer: z.number().int().min(0).max(3),
+    mode: z.enum(["easy", "hard"]),
     n: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
     seed: z.string().min(1).max(100),
   })
+  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
   .refine((data) => data.n <= questionCountFor(data.seed))
   .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
@@ -20,7 +28,7 @@ export const gradeAnswer = createServerFn({ method: "POST" })
   .handler(async ({ data }): Promise<GradeResult> => {
     try {
       const { dealAnswer } = await import("./deal.server");
-      const { answerIndex, meta } = dealAnswer(data.seed, data.n);
+      const { answerIndex, meta } = dealAnswer(data.mode, data.seed, data.n);
       return {
         answerIndex,
         correct: answerIndex === data.answer,
@@ -33,14 +41,16 @@ export const gradeAnswer = createServerFn({ method: "POST" })
     }
   });
 
-const runResultInputSchema = z
+export const runResultInputSchema = z
   .object({
     answers: z
       .string()
       .regex(/^[0-3]*$/)
       .max(PLAY_QUESTION_COUNT),
+    mode: z.enum(["easy", "hard"]),
     seed: z.string().min(1).max(100),
   })
+  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
   .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
 export const getRunResult = createServerFn({ method: "GET" })
@@ -55,7 +65,7 @@ export const getRunResult = createServerFn({ method: "GET" })
       const { dealAnswer } = await import("./deal.server");
       const items = [...data.answers].map((picked, index) => {
         const n = index + 1;
-        const { answerIndex, meta } = dealAnswer(data.seed, n);
+        const { answerIndex, meta } = dealAnswer(data.mode, data.seed, n);
         return {
           answerIndex,
           correct: Number(picked) === answerIndex,

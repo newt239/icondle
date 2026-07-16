@@ -23,9 +23,14 @@ const Home = () => {
           今日のデイリー
         </Link>
       </div>
-      <Link className="text-sm text-neutral-500 underline underline-offset-2" to="/sets">
-        収録アイコンセット
-      </Link>
+      <div className="flex gap-4">
+        <Link className="text-sm text-neutral-500 underline underline-offset-2" to="/play/hard">
+          難しいモードでプレイ
+        </Link>
+        <Link className="text-sm text-neutral-500 underline underline-offset-2" to="/sets">
+          収録アイコンセット
+        </Link>
+      </div>
     </main>
   );
 };

@@ -11,7 +11,7 @@
 
 > **Guess Icon** — このアイコン、どのセットのやつ？
 
-主要 UI アイコンセット（フィルタ後アイコン数の上位 12 セット、→ §4.1）からアイコンを提示し、どのセット由来かを 4 択で当てる。フロントエンド開発者・デザイナー向け。
+主要 UI アイコンセット（easy 6 セット + フィルタ後アイコン数の上位で計 14 セット、→ §4.1）からアイコンを提示し、どのセット由来かを 4 択で当てる。フロントエンド開発者・デザイナー向け。
 
 回答直後のフィードバックは**正解のセット名とアイコン名のみ**に絞り、テンポを優先する（当初計画にあった詳細解説の chips・由来テキストはユーザー決定で廃止）。セットごとの由来・特性の紹介は `/sets`（収録アイコンセット一覧）に集約し、結果ページの各問から Iconify の該当アイコンページへリンクして深掘りできるようにする。
 
@@ -21,11 +21,12 @@
 
 | モード | 内容 | 状態 |
 |---|---|---|
-| **A. Set Guess** | アイコン 1 つ → 4 択でセット名。10 問 | ✅ 実装済み |
-| **D. Daily** | 日替わり 5 問 + 共有。専用ルートは持たず `/play` の日付シード（YYYY-MM-DD）で実現 | ✅ 実装済み |
+| **A. Set Guess（easy）** | アイコン 1 つ → 4 択でセット名。10 問。有名 6 セット（fluent / material-symbols / tabler / lucide / heroicons / fa6-solid）のみから出題。`/play` のデフォルト | ✅ 実装済み |
+| **A'. Set Guess（hard）** | 全 14 セットから出題する高難度版。`/play/hard` から開始 | ✅ 実装済み |
+| **D. Daily** | 日替わり 5 問 + 共有。専用ルートは持たず `/play` の日付シード（YYYY-MM-DD）で実現。**easy で出題**（hard × 日付シードは validator・loader の双方で拒否） | ✅ 実装済み |
 | B. Odd One Out / C. Name Guess | — | ❌ スコープ外 |
 
-難易度（easy / hard）の区分は実装しない（ユーザー決定）。
+当初「難易度（easy / hard）の区分は実装しない」としていたが、全セット出題では難しすぎるというフィードバックによりユーザー決定を転換し、easy をデフォルトとする 2 難易度制にした。
 
 ---
 
@@ -33,8 +34,9 @@
 
 TanStack Start + HeroUI v3 + Tailwind CSS v4 + Vite 8 + Cloudflare Workers（wrangler / @cloudflare/vite-plugin）。§4〜§7 の設計は実装済みで、ビルド・codecheck・ユニットテスト・E2E テストが通る。
 
-- `src/data/deck.ts` — 機械選定 12 セット / 1116 概念（raw 3.2 MB / gzip 721 KB）。deck-regen workflow で Dependabot に追従（→ §4.7）
-- `/play/$seed/$n` + `/play/$seed/result` — 出題・判定・結果・共有。デイリーは日付シードで同居（→ §5.1）
+- `src/data/deck.ts` — easy 6 セット強制採用 + 機械選定で計 14 セット / 1191 概念（raw 3.6 MB / gzip 840 KB）。easy モードで出題可能な概念は 182。deck-regen workflow で Dependabot に追従（→ §4.7）
+- `/play/$seed/$n` + `/play/$seed/result` — easy の出題・判定・結果・共有。デイリーは日付シードで同居（→ §5.1）
+- `/play/hard/$seed/$n` + `/play/hard/$seed/result` — hard（全セット出題）。日付シードは 404
 - `/sets` — 収録アイコンセット一覧（由来・ライセンス・ランダムなサンプルアイコン・Iconify へのリンク）
 - DB なし。状態は URL の search params に持つ（→ §5.1）
 - **本番への初回デプロイは未実施**（`pnpm run deploy`）
@@ -65,10 +67,10 @@ AGENTS.md にも記載済み。実装全体を貫く制約。
 **候補条件**（すべて満たすもの）:
 
 - カテゴリが UI 系（`UI 24px` / `UI 16px / 32px` / `UI Other / Mixed Grid` / `Material`）かつ `palette: false`。Logos / Emoji / Flags / Thematic / Archive は除外
-- ライセンスが帰属表示不要（MIT / ISC / Apache-2.0 / CC0-1.0）。CC-BY 系（Font Awesome / Solar / IconaMoon 等）は初期スコープ外
+- ライセンスが帰属表示不要（MIT / ISC / Apache-2.0 / CC0-1.0）。CC-BY 系（Solar / IconaMoon 等）は原則スコープ外。**例外は fa6-solid（CC BY 4.0）**: easy モードの知名度要件からユーザー決定で採用し、帰属表示は `/sets` のライセンス表記が担う
 - 同一ファミリーの重複は最大の 1 つに代表させる（`material-symbols-light` / `ic` は `material-symbols` に代表）
 
-**採用ルール**: 各候補にスタイルフィルタ（→ §4.2）を適用し、**適用後の使用可能アイコン数の多い順に 12 セット（最低 10）を採用**する。確定は `scripts/build-deck.ts` の実測で行い、採用セットと生成時のパッケージバージョンを deck.ts に記録する。
+**採用ルール**: 各候補にスタイルフィルタ（→ §4.2）を適用し、**easy 6 セット（fluent / material-symbols / tabler / lucide / heroicons / fa6-solid）を強制採用したうえで、残りを適用後の使用可能アイコン数の多い順に埋めて計 14 セット（最低 12）を採用**する。easy モードで出題可能な概念数（easy セットの保有者を衝突等価クラスで数えて 4 以上）も実測し、50 未満なら失敗させる。確定は `scripts/build-deck.ts` の実測で行い、採用セットと生成時のパッケージバージョンを deck.ts に記録する。
 
 候補上位（raw アイコン数は 2026-07-16 の Iconify API 実測。スタイル・サイズ違いを含むため、順位はフィルタ後に入れ替わる）:
 
@@ -199,7 +201,9 @@ deck.ts に記録した生成時バージョン（→ §4.6）が、再生成の
 /play/a7f3c2/2?a=2
 /play/a7f3c2/3?a=21
 /play/a7f3c2/result?a=2143012310
-/play/2026-07-16/1            ← デイリー（日付シード）
+/play/2026-07-16/1            ← デイリー（日付シード、easy）
+/play/hard/a7f3c2/1           ← 難しいモード（全セット出題）
+/play/hard/a7f3c2/result?a=2143012310
 ```
 
 ```ts
@@ -214,13 +218,15 @@ export const Route = createFileRoute("/play/$seed/$n")({
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: ({ params }) => {
     // n の検証（1..questionCountFor(seed)）と未来日付シードの notFound はここで行う
-    return getQuestion({ data: { n, seed: params.seed } });
+    return getQuestion({ data: { mode: "easy", n, seed: params.seed } });
   },
   component: PlayQuestion,
 });
 ```
 
 **デイリーは専用ルートを持たない。** seed が `YYYY-MM-DD` 形式なら 5 問モードとして扱い（`isDateSeed` / `questionCountFor`）、未来日付は 404 を返す（loader の `notFound()` に加え、server function の validator でも拒否して直接呼び出しによる先読みを防ぐ）。トップページが `jstToday()`（`Intl.DateTimeFormat` + `Asia/Tokyo`）で今日の日付を計算して `/play/{date}/1` へリンクする。
+
+**難易度はルートセグメントで表現する。** easy がデフォルト（`/play/...`）で、hard は `/play/hard/...`。server function（getQuestion / gradeAnswer / getRunResult）はすべて `mode: "easy" | "hard"` を受け取り、hard × 日付シードは `isModeSeedAllowed` により validator と loader の双方で拒否する（デイリーは easy のみ）。静的セグメントが動的パラメータより優先されるため `/play/hard/...` が `$seed` に食われることはない。
 
 TanStack Router の既定の search serializer は文字列値を JSON 引用符付き（`?a=%223%22`）にするため、`src/router.tsx` で URLSearchParams ベースの `parseSearch` / `stringifySearch` に差し替えている。
 
@@ -230,11 +236,14 @@ TanStack Router の既定の search serializer は文字列値を JSON 引用符
 
 ```
 src/routes/
-├── index.tsx                 /                    ← 今日のデイリーへのリンクを含む
-├── sets.tsx                  /sets                ← 収録アイコンセット一覧
-├── play.index.tsx            /play                → seed 生成して 302
-├── play.$seed.$n.tsx         /play/:seed/:n       ← seed が日付なら 5 問デイリー
-└── play.$seed.result.tsx     /play/:seed/result
+├── index.tsx                    /                         ← 今日のデイリー・難しいモードへのリンクを含む
+├── sets.tsx                     /sets                     ← 収録アイコンセット一覧
+├── play.index.tsx               /play                     → seed 生成して 302（easy）
+├── play.$seed.$n.tsx            /play/:seed/:n            ← easy。seed が日付なら 5 問デイリー
+├── play.$seed.result.tsx        /play/:seed/result
+├── play.hard.index.tsx          /play/hard                → seed 生成して 302（hard）
+├── play.hard.$seed.$n.tsx       /play/hard/:seed/:n       ← hard。日付シードは 404
+└── play.hard.$seed.result.tsx   /play/hard/:seed/result
 ```
 
 ### 5.2 出題（サーバー専用）
@@ -244,19 +253,24 @@ src/routes/
 import { deck } from "#/data/deck";
 import { hash, mulberry32 } from "#/lib/prng";
 
-export const dealQuestion = (seed: string, n: number): ClientQuestion => {
-  const rng = mulberry32(hash(`${seed}:${n}`));
-  const { concept, sets, answerSet } = deal(rng);      // 衝突ペアを除外済み
+export const dealQuestion = (mode: QuizMode, seed: string, n: number): ClientQuestion => {
+  const pool = poolFor(mode);                          // モード別の出題可能概念（メモ化）
+  const order = shuffle(mulberry32(hash(seed)), ...);  // 概念順は seed のみ由来の順列
+  const concept = pool[order[n - 1]];                  // → 同一プレイ内で概念が重複しない
+  const rng = mulberry32(hash(`${seed}:${n}`));        // 選択肢と正解位置は問番号由来
+  const { sets, answerSet } = pickSets(rng, ownersFor(mode, concept), concept);
   return {
     svg: normalize(concept.variants[answerSet]),       // viewBox を隠蔽
     choices: sets.map((id) => deck.sets[id].label),
   };                                                    // ← answerIndex は返さない
 };
 
-export const dealAnswer = (seed: string, n: number) => {
+export const dealAnswer = (mode: QuizMode, seed: string, n: number) => {
   // 同じ入力から同じ出題を再導出する。だから何も保存しなくていい
 };
 ```
+
+easy モードは `ownersFor` が選択肢候補を easy 6 セットに絞る。「出題可能」の判定は衝突等価クラスの distinct 数 >= 4 という rng 不要の決定論条件で行い、モード別プールとしてモジュールレベルにメモ化する。
 
 loader は isomorphic（クライアント遷移時はクライアントで実行される）なので、deal.server を loader から直接呼ばず、`createServerFn({ method: "GET" })` の `getQuestion` でラップして呼ぶ。
 
@@ -355,7 +369,8 @@ export const gradeAnswer = createServerFn({ method: "POST" })
 | リスク | 度合い | 対応 |
 |---|---|---|
 | 出題概念のうち、名前は同じでも意味が違うものが混ざる | 中 | 目視レビュー + `DENY` リスト |
-| 24px stroke 2px 系（lucide / tabler / hugeicons 等）の出題が難しい | 中 | 難易度区分は設けず仕様として受け入れる。由来の紹介は `/sets` が担う |
+| 24px stroke 2px 系（lucide / tabler / hugeicons 等）の出題が難しい | 中 | 全セット出題は hard モードに分離し、有名 6 セット限定の easy をデフォルトにした。由来の紹介は `/sets` が担う |
+| easy モードの出題プールが小さい（182 概念） | 低 | 出題順を seed 由来の順列にして同一プレイ内の重複をゼロに。build-deck に最低数ガード（50）あり |
 | 機械選定により知名度の低いセットが採用される | 中 | `/sets` で紹介する価値に転化する。ゲーム性を損なう場合は除外条件（ALLOW / DENY）をセット単位で追加 |
 | body 完全一致以外の「ほぼ同一」（1 パス違いなど）の存在 | 低 | ハッシュでは拾えない。プレイして気づいたら `DENY` へ |
 | TanStack Start の server function エラー処理（#6381） | 低 | 結果オブジェクト返しで回避（§3-6） |
@@ -386,7 +401,7 @@ const resolve = (j, name) => {
   return j.icons[n] ? { ...j.icons[n], resolved: n } : null;
 };
 
-// 0. 候補ごとにスタイルフィルタ適用後のアイコン数を実測し、上位 12 セットを採用
+// 0. 候補ごとにスタイルフィルタ適用後のアイコン数を実測し、easy 6 セット + 上位で計 14 セットを採用
 // 1. 採用セットのフィルタ適用後の名前空間を構築（icons + aliases）
 // 2. 4 セット以上が共有する概念のみ採用
 const count = new Map();
