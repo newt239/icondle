@@ -1,6 +1,12 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": ["node_modules/", "dist/", "build/", "src/routeTree.gen.ts"],
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    "build/",
+    "src/routeTree.gen.ts",
+    "src/data/deck.ts"
+  ],
   "env": {
     "browser": true,
     "node": true

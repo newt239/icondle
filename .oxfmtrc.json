@@ -6,6 +6,7 @@
     "build/",
     "docs/",
     "src/routeTree.gen.ts",
+    "src/data/deck.ts",
     "utils/fetch/api.d.ts",
     "utils/fetch/bundle.gen.yml"
   ],
