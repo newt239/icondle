@@ -7,7 +7,7 @@ const Home = () => {
   const { today } = Route.useLoaderData();
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-8 px-4 py-8">
-      <h1 className="text-4xl font-bold">Guess Icon</h1>
+      <h1 className="text-4xl font-bold">Icondle</h1>
       <Link
         className={buttonVariants({ size: "lg", variant: "primary" })}
         params={{ n: "1", seed: today }}

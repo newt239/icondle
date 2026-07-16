@@ -8,7 +8,7 @@ import { quizSearchSchema } from "#/lib/search-schemas";
 const PickResult = () => {
   const { seed } = Route.useParams();
   const result = Route.useLoaderData();
-  const shareLabel = isDateSeed(seed) ? `Guess Icon Daily ${seed}` : "Guess Icon Pick";
+  const shareLabel = isDateSeed(seed) ? `Icondle Daily ${seed}` : "Icondle Pick";
   return (
     <ResultPage
       replayTo="/pick"

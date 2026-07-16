@@ -11,7 +11,7 @@ export const SetsPage = ({ sets }: SetsPageProps) => (
   <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-8">
     <header className="flex items-center justify-between gap-4">
       <Link className="text-xl font-bold" to="/">
-        Guess Icon
+        Icondle
       </Link>
     </header>
     <h1 className="text-2xl font-bold">収録アイコンセット</h1>

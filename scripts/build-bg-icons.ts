@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 import type { IconifyJSON } from "@iconify/types";
 
-const SEED = "guess-icon-bg-v1";
+const SEED = "icondle-bg-v1";
 const CELL = 40;
 const COLS = 12;
 const ROWS = 12;

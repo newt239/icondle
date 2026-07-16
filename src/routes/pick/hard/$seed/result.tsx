@@ -12,7 +12,7 @@ const PickHardResult = () => {
     <ResultPage
       replayTo="/pick/hard"
       result={result}
-      shareLabel="Guess Icon Pick Hard"
+      shareLabel="Icondle Pick Hard"
       sharePath={`/pick/hard/${seed}/1`}
     />
   );

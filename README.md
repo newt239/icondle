@@ -1,8 +1,8 @@
-# Guess Icon
+# Icondle
 
-> UI アイコンライブラリの識別クイズ Web アプリ — このアイコン、どのセットのやつ？
+> UI アイコンライブラリの識別クイズ Web アプリ
 
-設計の詳細は [docs/guess-icon-design.md](./docs/guess-icon-design.md) を参照してください。
+設計の詳細は [docs/icondle-design.md](./docs/icondle-design.md) を参照してください。
 
 ## 技術スタック
 

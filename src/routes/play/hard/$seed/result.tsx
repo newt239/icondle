@@ -12,7 +12,7 @@ const PlayHardResult = () => {
     <ResultPage
       replayTo="/play/hard"
       result={result}
-      shareLabel="Guess Icon Hard"
+      shareLabel="Icondle Hard"
       sharePath={`/play/hard/${seed}/1`}
     />
   );
