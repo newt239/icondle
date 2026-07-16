@@ -1,25 +1,33 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
-import { isDateSeed, PLAY_QUESTION_COUNT } from "#/lib/quiz-config";
+import {
+  isDateSeed,
+  isModeSeedAllowed,
+  jstToday,
+  PLAY_QUESTION_COUNT,
+  questionCountFor,
+} from "#/lib/quiz-config";
 
 import type { GradeResult } from "#/lib/quiz-types";
 
-export const gradeInputSchema = z
+export const pickGradeInputSchema = z
   .object({
     answer: z.number().int().min(0).max(3),
     mode: z.enum(["easy", "hard"]),
     n: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
     seed: z.string().min(1).max(100),
   })
-  .refine((data) => !isDateSeed(data.seed));
+  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
+  .refine((data) => data.n <= questionCountFor(data.seed))
+  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
-export const gradeAnswer = createServerFn({ method: "POST" })
-  .validator(gradeInputSchema)
+export const gradePickAnswer = createServerFn({ method: "POST" })
+  .validator(pickGradeInputSchema)
   .handler(async ({ data }): Promise<GradeResult> => {
     try {
-      const { dealAnswer } = await import("#/lib/deal.server");
-      const { answerIndex, meta } = dealAnswer(data.mode, data.seed, data.n);
+      const { dealPickAnswer } = await import("#/lib/deal.server");
+      const { answerIndex, meta } = dealPickAnswer(data.mode, data.seed, data.n);
       return {
         answerIndex,
         correct: answerIndex === data.answer,

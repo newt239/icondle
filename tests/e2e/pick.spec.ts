@@ -12,15 +12,16 @@ const jstToday = () =>
     year: "numeric",
   }).format(new Date());
 
-test.describe("プレイモード", () => {
-  test("/play からシード付きの第1問へリダイレクトされる", async ({ page }) => {
-    await page.goto("/play");
-    await expect(page).toHaveURL(/\/play\/[0-9a-f]{6}\/1$/);
+test.describe("ピックモード", () => {
+  test("/pick からシード付きの第1問へリダイレクトされる", async ({ page }) => {
+    await page.goto("/pick");
+    await expect(page).toHaveURL(/\/pick\/[0-9a-f]{6}\/1$/);
   });
 
   test("回答すると解説が表示され次の問題へ進める", async ({ page }) => {
-    await page.goto("/play/e2etest/1");
+    await page.goto("/pick/e2etest/1");
     await waitForHydration(page);
+    await expect(page.getByText("のアイコンはどれ？")).toBeVisible();
     const buttons = page.getByRole("group", { name: "選択肢" }).getByRole("button");
     await expect(buttons).toHaveCount(4);
     await buttons.first().click();
@@ -28,11 +29,11 @@ test.describe("プレイモード", () => {
     await expect(status).toBeVisible();
     await expect(status.getByRole("heading", { level: 2 })).toContainText(/正解/);
     await page.getByRole("link", { name: "次の問題へ" }).click();
-    await expect(page).toHaveURL(/\/play\/e2etest\/2\?a=[0-3]$/);
+    await expect(page).toHaveURL(/\/pick\/e2etest\/2\?a=[0-3]$/);
   });
 
   test("キーボードの数字キーで回答できる", async ({ page }) => {
-    await page.goto("/play/e2etest/1");
+    await page.goto("/pick/e2etest/1");
     await waitForHydration(page);
     await expect(page.getByRole("group", { name: "選択肢" }).getByRole("button")).toHaveCount(4);
     await expect(async () => {
@@ -42,7 +43,7 @@ test.describe("プレイモード", () => {
   });
 
   test("初期 HTML に正解情報とセット固有の viewBox が漏れない", async ({ page }) => {
-    const response = await page.goto("/play/e2etest/1");
+    const response = await page.goto("/pick/e2etest/1");
     const html = (await response?.text()) ?? "";
     expect(html.length).toBeGreaterThan(0);
     expect(html).not.toContain("answerIndex");
@@ -54,24 +55,52 @@ test.describe("プレイモード", () => {
   });
 
   test("全問回答済みの結果ページが表示される", async ({ page }) => {
-    await page.goto("/play/e2etest/result?a=0000000000");
+    await page.goto("/pick/e2etest/result?a=0000000000");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
     await expect(page.getByRole("button", { name: "結果をコピーして共有" })).toBeVisible();
     await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(10);
+    await expect(page.getByRole("link", { name: "もう一度遊ぶ" })).toHaveAttribute("href", "/pick");
   });
 
   test("回答が揃っていない結果ページは空状態を表示する", async ({ page }) => {
-    await page.goto("/play/e2etest/result?a=01");
+    await page.goto("/pick/e2etest/result?a=01");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("結果を表示できません");
+  });
+});
+
+test.describe("ピックモード（難しい）", () => {
+  test("/pick/hard からシード付きの第1問へリダイレクトされる", async ({ page }) => {
+    await page.goto("/pick/hard");
+    await expect(page).toHaveURL(/\/pick\/hard\/[0-9a-f]{6}\/1$/);
+  });
+
+  test("回答すると解説が表示され次の問題へ進める", async ({ page }) => {
+    await page.goto("/pick/hard/e2etest/1");
+    await waitForHydration(page);
+    const buttons = page.getByRole("group", { name: "選択肢" }).getByRole("button");
+    await expect(buttons).toHaveCount(4);
+    await buttons.first().click();
+    await expect(page.getByRole("status")).toBeVisible();
+    await page.getByRole("link", { name: "次の問題へ" }).click();
+    await expect(page).toHaveURL(/\/pick\/hard\/e2etest\/2\?a=[0-3]$/);
+  });
+
+  test("全問回答済みの結果ページが表示される", async ({ page }) => {
+    await page.goto("/pick/hard/e2etest/result?a=0000000000");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
+    await expect(page.getByRole("link", { name: "もう一度遊ぶ" })).toHaveAttribute(
+      "href",
+      "/pick/hard",
+    );
   });
 
   test("日付シードの出題ページは 404 になる", async ({ page }) => {
-    const response = await page.goto(`/play/${jstToday()}/1`);
+    const response = await page.goto(`/pick/hard/${jstToday()}/1`);
     expect(response?.status()).toBe(404);
   });
 
   test("日付シードの結果ページは 404 になる", async ({ page }) => {
-    const response = await page.goto(`/play/${jstToday()}/result?a=00000`);
+    const response = await page.goto(`/pick/hard/${jstToday()}/result?a=00000`);
     expect(response?.status()).toBe(404);
   });
 });

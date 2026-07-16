@@ -3,6 +3,11 @@ export type ClientQuestion = {
   choices: [string, string, string, string];
 };
 
+export type PickClientQuestion = {
+  setLabel: string;
+  svgs: [string, string, string, string];
+};
+
 export type GradeResult =
   | { success: true; correct: boolean; answerIndex: number; meta: AnswerMeta }
   | { success: false; error: string };

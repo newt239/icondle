@@ -2,13 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 import { z } from "zod";
 
-import {
-  isDateSeed,
-  isModeSeedAllowed,
-  jstToday,
-  PLAY_QUESTION_COUNT,
-  questionCountFor,
-} from "#/lib/quiz-config";
+import { isDateSeed, PLAY_QUESTION_COUNT } from "#/lib/quiz-config";
 
 import type { ClientQuestion } from "#/lib/quiz-types";
 
@@ -18,9 +12,7 @@ export const questionInputSchema = z
     n: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
     seed: z.string().min(1).max(100),
   })
-  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
-  .refine((data) => data.n <= questionCountFor(data.seed))
-  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
+  .refine((data) => !isDateSeed(data.seed));
 
 export const getQuestion = createServerFn({ method: "GET" })
   .validator(questionInputSchema)

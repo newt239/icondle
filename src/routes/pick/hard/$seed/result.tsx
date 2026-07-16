@@ -5,30 +5,30 @@ import { getRunResult } from "#/features/result/lib/run-result";
 import { isDateSeed } from "#/lib/quiz-config";
 import { quizSearchSchema } from "#/lib/search-schemas";
 
-const PlayHardResult = () => {
+const PickHardResult = () => {
   const { seed } = Route.useParams();
   const result = Route.useLoaderData();
   return (
     <ResultPage
-      replayTo="/play/hard"
+      replayTo="/pick/hard"
       result={result}
-      shareLabel="Guess Icon Hard"
-      sharePath={`/play/hard/${seed}/1`}
+      shareLabel="Guess Icon Pick Hard"
+      sharePath={`/pick/hard/${seed}/1`}
     />
   );
 };
 
 const loaderDeps = ({ search }: { search: { a?: string } }) => ({ a: search.a ?? "" });
 
-export const Route = createFileRoute("/play/hard/$seed/result")({
-  component: PlayHardResult,
+export const Route = createFileRoute("/pick/hard/$seed/result")({
+  component: PickHardResult,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ deps, params }) => {
     if (isDateSeed(params.seed)) {
       throw notFound();
     }
     return await getRunResult({
-      data: { answers: deps.a, game: "play", mode: "hard", seed: params.seed },
+      data: { answers: deps.a, game: "pick", mode: "hard", seed: params.seed },
     });
   },
   loaderDeps,

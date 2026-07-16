@@ -2,15 +2,19 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ResultPage } from "#/features/result/components/result-page";
 import { getRunResult } from "#/features/result/lib/run-result";
-import { isDateSeed, jstToday } from "#/lib/quiz-config";
+import { isDateSeed } from "#/lib/quiz-config";
 import { quizSearchSchema } from "#/lib/search-schemas";
 
 const PlayResult = () => {
   const { seed } = Route.useParams();
   const result = Route.useLoaderData();
-  const shareLabel = isDateSeed(seed) ? `Guess Icon Daily ${seed}` : "Guess Icon";
   return (
-    <ResultPage mode="easy" result={result} shareLabel={shareLabel} sharePath={`/play/${seed}/1`} />
+    <ResultPage
+      replayTo="/play"
+      result={result}
+      shareLabel="Guess Icon"
+      sharePath={`/play/${seed}/1`}
+    />
   );
 };
 
@@ -20,10 +24,12 @@ export const Route = createFileRoute("/play/$seed/result")({
   component: PlayResult,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ deps, params }) => {
-    if (isDateSeed(params.seed) && params.seed > jstToday()) {
+    if (isDateSeed(params.seed)) {
       throw notFound();
     }
-    return await getRunResult({ data: { answers: deps.a, mode: "easy", seed: params.seed } });
+    return await getRunResult({
+      data: { answers: deps.a, game: "play", mode: "easy", seed: params.seed },
+    });
   },
   loaderDeps,
   validateSearch: quizSearchSchema,

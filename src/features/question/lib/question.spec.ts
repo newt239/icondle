@@ -5,20 +5,17 @@ import { jstToday } from "#/lib/quiz-config";
 import { questionInputSchema } from "./question";
 
 describe("questionInputSchema", () => {
-  it("easy はランダムシードと日付シードの両方を受理する", () => {
+  it("ランダムシードを受理する", () => {
     expect(questionInputSchema.safeParse({ mode: "easy", n: 1, seed: "a7f3c2" }).success).toBe(
       true,
     );
-    expect(questionInputSchema.safeParse({ mode: "easy", n: 5, seed: "2020-01-01" }).success).toBe(
+    expect(questionInputSchema.safeParse({ mode: "hard", n: 1, seed: "a7f3c2" }).success).toBe(
       true,
     );
   });
 
-  it("hard は日付シードを拒否する", () => {
-    expect(questionInputSchema.safeParse({ mode: "hard", n: 1, seed: "a7f3c2" }).success).toBe(
-      true,
-    );
-    expect(questionInputSchema.safeParse({ mode: "hard", n: 1, seed: "2020-01-01" }).success).toBe(
+  it("日付シードをモードによらず拒否する", () => {
+    expect(questionInputSchema.safeParse({ mode: "easy", n: 1, seed: "2020-01-01" }).success).toBe(
       false,
     );
     expect(questionInputSchema.safeParse({ mode: "hard", n: 1, seed: jstToday() }).success).toBe(
@@ -30,11 +27,11 @@ describe("questionInputSchema", () => {
     expect(questionInputSchema.safeParse({ n: 1, seed: "a7f3c2" }).success).toBe(false);
   });
 
-  it("日付シードは 5 問まで、未来日付は拒否する", () => {
-    expect(questionInputSchema.safeParse({ mode: "easy", n: 6, seed: "2020-01-01" }).success).toBe(
-      false,
+  it("n は 10 問まで受理する", () => {
+    expect(questionInputSchema.safeParse({ mode: "easy", n: 10, seed: "a7f3c2" }).success).toBe(
+      true,
     );
-    expect(questionInputSchema.safeParse({ mode: "easy", n: 1, seed: "2999-01-01" }).success).toBe(
+    expect(questionInputSchema.safeParse({ mode: "easy", n: 11, seed: "a7f3c2" }).success).toBe(
       false,
     );
   });

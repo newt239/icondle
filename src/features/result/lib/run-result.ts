@@ -18,10 +18,13 @@ export const runResultInputSchema = z
       .string()
       .regex(/^[0-3]*$/)
       .max(PLAY_QUESTION_COUNT),
+    game: z.enum(["play", "pick"]),
     mode: z.enum(["easy", "hard"]),
     seed: z.string().min(1).max(100),
   })
-  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
+  .refine((data) =>
+    data.game === "play" ? !isDateSeed(data.seed) : isModeSeedAllowed(data.mode, data.seed),
+  )
   .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
 export const getRunResult = createServerFn({ method: "GET" })
@@ -33,10 +36,11 @@ export const getRunResult = createServerFn({ method: "GET" })
       return { error: "まだすべての問題に回答していません。", success: false };
     }
     try {
-      const { dealAnswer } = await import("#/lib/deal.server");
+      const { dealAnswer, dealPickAnswer } = await import("#/lib/deal.server");
+      const dealAnswerFor = data.game === "pick" ? dealPickAnswer : dealAnswer;
       const items = Array.from(data.answers, (picked, index) => {
         const n = index + 1;
-        const { answerIndex, meta } = dealAnswer(data.mode, data.seed, n);
+        const { answerIndex, meta } = dealAnswerFor(data.mode, data.seed, n);
         return {
           answerIndex,
           correct: Number(picked) === answerIndex,

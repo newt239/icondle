@@ -12,11 +12,17 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SetsRouteImport } from './routes/sets'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlayIndexRouteImport } from './routes/play/index'
+import { Route as PickIndexRouteImport } from './routes/pick/index'
 import { Route as PlayHardIndexRouteImport } from './routes/play/hard/index'
+import { Route as PickHardIndexRouteImport } from './routes/pick/hard/index'
 import { Route as PlaySeedResultRouteImport } from './routes/play/$seed/result'
 import { Route as PlaySeedNRouteImport } from './routes/play/$seed/$n'
+import { Route as PickSeedResultRouteImport } from './routes/pick/$seed/result'
+import { Route as PickSeedNRouteImport } from './routes/pick/$seed/$n'
 import { Route as PlayHardSeedResultRouteImport } from './routes/play/hard/$seed/result'
 import { Route as PlayHardSeedNRouteImport } from './routes/play/hard/$seed/$n'
+import { Route as PickHardSeedResultRouteImport } from './routes/pick/hard/$seed/result'
+import { Route as PickHardSeedNRouteImport } from './routes/pick/hard/$seed/$n'
 
 const SetsRoute = SetsRouteImport.update({
   id: '/sets',
@@ -33,9 +39,19 @@ const PlayIndexRoute = PlayIndexRouteImport.update({
   path: '/play/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PickIndexRoute = PickIndexRouteImport.update({
+  id: '/pick/',
+  path: '/pick/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlayHardIndexRoute = PlayHardIndexRouteImport.update({
   id: '/play/hard/',
   path: '/play/hard/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PickHardIndexRoute = PickHardIndexRouteImport.update({
+  id: '/pick/hard/',
+  path: '/pick/hard/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlaySeedResultRoute = PlaySeedResultRouteImport.update({
@@ -48,6 +64,16 @@ const PlaySeedNRoute = PlaySeedNRouteImport.update({
   path: '/play/$seed/$n',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PickSeedResultRoute = PickSeedResultRouteImport.update({
+  id: '/pick/$seed/result',
+  path: '/pick/$seed/result',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PickSeedNRoute = PickSeedNRouteImport.update({
+  id: '/pick/$seed/$n',
+  path: '/pick/$seed/$n',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlayHardSeedResultRoute = PlayHardSeedResultRouteImport.update({
   id: '/play/hard/$seed/result',
   path: '/play/hard/$seed/result',
@@ -58,24 +84,46 @@ const PlayHardSeedNRoute = PlayHardSeedNRouteImport.update({
   path: '/play/hard/$seed/$n',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PickHardSeedResultRoute = PickHardSeedResultRouteImport.update({
+  id: '/pick/hard/$seed/result',
+  path: '/pick/hard/$seed/result',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PickHardSeedNRoute = PickHardSeedNRouteImport.update({
+  id: '/pick/hard/$seed/$n',
+  path: '/pick/hard/$seed/$n',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/sets': typeof SetsRoute
+  '/pick/': typeof PickIndexRoute
   '/play/': typeof PlayIndexRoute
+  '/pick/$seed/$n': typeof PickSeedNRoute
+  '/pick/$seed/result': typeof PickSeedResultRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
+  '/pick/hard/': typeof PickHardIndexRoute
   '/play/hard/': typeof PlayHardIndexRoute
+  '/pick/hard/$seed/$n': typeof PickHardSeedNRoute
+  '/pick/hard/$seed/result': typeof PickHardSeedResultRoute
   '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
   '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sets': typeof SetsRoute
+  '/pick': typeof PickIndexRoute
   '/play': typeof PlayIndexRoute
+  '/pick/$seed/$n': typeof PickSeedNRoute
+  '/pick/$seed/result': typeof PickSeedResultRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
+  '/pick/hard': typeof PickHardIndexRoute
   '/play/hard': typeof PlayHardIndexRoute
+  '/pick/hard/$seed/$n': typeof PickHardSeedNRoute
+  '/pick/hard/$seed/result': typeof PickHardSeedResultRoute
   '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
   '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
 }
@@ -83,10 +131,16 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/sets': typeof SetsRoute
+  '/pick/': typeof PickIndexRoute
   '/play/': typeof PlayIndexRoute
+  '/pick/$seed/$n': typeof PickSeedNRoute
+  '/pick/$seed/result': typeof PickSeedResultRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
+  '/pick/hard/': typeof PickHardIndexRoute
   '/play/hard/': typeof PlayHardIndexRoute
+  '/pick/hard/$seed/$n': typeof PickHardSeedNRoute
+  '/pick/hard/$seed/result': typeof PickHardSeedResultRoute
   '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
   '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
 }
@@ -95,30 +149,48 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/sets'
+    | '/pick/'
     | '/play/'
+    | '/pick/$seed/$n'
+    | '/pick/$seed/result'
     | '/play/$seed/$n'
     | '/play/$seed/result'
+    | '/pick/hard/'
     | '/play/hard/'
+    | '/pick/hard/$seed/$n'
+    | '/pick/hard/$seed/result'
     | '/play/hard/$seed/$n'
     | '/play/hard/$seed/result'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/sets'
+    | '/pick'
     | '/play'
+    | '/pick/$seed/$n'
+    | '/pick/$seed/result'
     | '/play/$seed/$n'
     | '/play/$seed/result'
+    | '/pick/hard'
     | '/play/hard'
+    | '/pick/hard/$seed/$n'
+    | '/pick/hard/$seed/result'
     | '/play/hard/$seed/$n'
     | '/play/hard/$seed/result'
   id:
     | '__root__'
     | '/'
     | '/sets'
+    | '/pick/'
     | '/play/'
+    | '/pick/$seed/$n'
+    | '/pick/$seed/result'
     | '/play/$seed/$n'
     | '/play/$seed/result'
+    | '/pick/hard/'
     | '/play/hard/'
+    | '/pick/hard/$seed/$n'
+    | '/pick/hard/$seed/result'
     | '/play/hard/$seed/$n'
     | '/play/hard/$seed/result'
   fileRoutesById: FileRoutesById
@@ -126,10 +198,16 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SetsRoute: typeof SetsRoute
+  PickIndexRoute: typeof PickIndexRoute
   PlayIndexRoute: typeof PlayIndexRoute
+  PickSeedNRoute: typeof PickSeedNRoute
+  PickSeedResultRoute: typeof PickSeedResultRoute
   PlaySeedNRoute: typeof PlaySeedNRoute
   PlaySeedResultRoute: typeof PlaySeedResultRoute
+  PickHardIndexRoute: typeof PickHardIndexRoute
   PlayHardIndexRoute: typeof PlayHardIndexRoute
+  PickHardSeedNRoute: typeof PickHardSeedNRoute
+  PickHardSeedResultRoute: typeof PickHardSeedResultRoute
   PlayHardSeedNRoute: typeof PlayHardSeedNRoute
   PlayHardSeedResultRoute: typeof PlayHardSeedResultRoute
 }
@@ -157,11 +235,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pick/': {
+      id: '/pick/'
+      path: '/pick'
+      fullPath: '/pick/'
+      preLoaderRoute: typeof PickIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play/hard/': {
       id: '/play/hard/'
       path: '/play/hard'
       fullPath: '/play/hard/'
       preLoaderRoute: typeof PlayHardIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pick/hard/': {
+      id: '/pick/hard/'
+      path: '/pick/hard'
+      fullPath: '/pick/hard/'
+      preLoaderRoute: typeof PickHardIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/play/$seed/result': {
@@ -178,6 +270,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlaySeedNRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pick/$seed/result': {
+      id: '/pick/$seed/result'
+      path: '/pick/$seed/result'
+      fullPath: '/pick/$seed/result'
+      preLoaderRoute: typeof PickSeedResultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pick/$seed/$n': {
+      id: '/pick/$seed/$n'
+      path: '/pick/$seed/$n'
+      fullPath: '/pick/$seed/$n'
+      preLoaderRoute: typeof PickSeedNRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play/hard/$seed/result': {
       id: '/play/hard/$seed/result'
       path: '/play/hard/$seed/result'
@@ -192,16 +298,36 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlayHardSeedNRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pick/hard/$seed/result': {
+      id: '/pick/hard/$seed/result'
+      path: '/pick/hard/$seed/result'
+      fullPath: '/pick/hard/$seed/result'
+      preLoaderRoute: typeof PickHardSeedResultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pick/hard/$seed/$n': {
+      id: '/pick/hard/$seed/$n'
+      path: '/pick/hard/$seed/$n'
+      fullPath: '/pick/hard/$seed/$n'
+      preLoaderRoute: typeof PickHardSeedNRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SetsRoute: SetsRoute,
+  PickIndexRoute: PickIndexRoute,
   PlayIndexRoute: PlayIndexRoute,
+  PickSeedNRoute: PickSeedNRoute,
+  PickSeedResultRoute: PickSeedResultRoute,
   PlaySeedNRoute: PlaySeedNRoute,
   PlaySeedResultRoute: PlaySeedResultRoute,
+  PickHardIndexRoute: PickHardIndexRoute,
   PlayHardIndexRoute: PlayHardIndexRoute,
+  PickHardSeedNRoute: PickHardSeedNRoute,
+  PickHardSeedResultRoute: PickHardSeedResultRoute,
   PlayHardSeedNRoute: PlayHardSeedNRoute,
   PlayHardSeedResultRoute: PlayHardSeedResultRoute,
 }

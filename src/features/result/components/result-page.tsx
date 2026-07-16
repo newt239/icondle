@@ -3,11 +3,10 @@ import { Link } from "@tanstack/react-router";
 
 import { ShareButton } from "./share-button";
 
-import type { QuizMode } from "#/lib/quiz-config";
 import type { RunResult } from "#/lib/quiz-types";
 
 type ResultPageProps = {
-  mode: QuizMode;
+  replayTo: "/play" | "/play/hard" | "/pick" | "/pick/hard";
   result: RunResult;
   shareLabel: string;
   sharePath: string;
@@ -16,15 +15,14 @@ type ResultPageProps = {
 const linkClassName =
   "rounded-full bg-neutral-900 px-6 py-2 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900";
 
-export const ResultPage = ({ mode, result, shareLabel, sharePath }: ResultPageProps) => {
-  const playTo = mode === "hard" ? "/play/hard" : "/play";
+export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPageProps) => {
   if (!result.success) {
     return (
       <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col items-center justify-center gap-6 px-4 py-8">
         <EmptyState className="gap-4">
           <h1 className="text-xl font-bold">結果を表示できません</h1>
           <p className="text-neutral-500">{result.error}</p>
-          <Link className={linkClassName} to={playTo}>
+          <Link className={linkClassName} to={replayTo}>
             最初から遊ぶ
           </Link>
         </EmptyState>
@@ -71,7 +69,7 @@ export const ResultPage = ({ mode, result, shareLabel, sharePath }: ResultPagePr
         text={`${shareLabel} ${result.score}/${result.total}\n${emojiRow}`}
       />
       <div className="flex gap-4">
-        <Link className={linkClassName} to={playTo}>
+        <Link className={linkClassName} to={replayTo}>
           もう一度遊ぶ
         </Link>
       </div>

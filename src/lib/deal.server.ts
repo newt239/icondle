@@ -5,7 +5,7 @@ import { hash, mulberry32 } from "./prng";
 import { normalize } from "./render-icon.server";
 
 import type { QuizMode } from "./quiz-config";
-import type { AnswerMeta, ClientQuestion } from "./quiz-types";
+import type { AnswerMeta, ClientQuestion, PickClientQuestion } from "./quiz-types";
 
 const CHOICE_COUNT = 4;
 
@@ -132,12 +132,7 @@ export const dealQuestion = (mode: QuizMode, seed: string, n: number): ClientQue
   };
 };
 
-export const dealAnswer = (
-  mode: QuizMode,
-  seed: string,
-  n: number,
-): { answerIndex: number; meta: AnswerMeta } => {
-  const dealt = deal(mode, seed, n);
+const answerFor = (dealt: Dealt): { answerIndex: number; meta: AnswerMeta } => {
   const variant = dealt.concept.variants[dealt.answerSet];
   if (!variant) {
     throw new Error(`正解セットの variant がありません: ${dealt.concept.name}`);
@@ -153,3 +148,33 @@ export const dealAnswer = (
     },
   };
 };
+
+export const dealAnswer = (
+  mode: QuizMode,
+  seed: string,
+  n: number,
+): { answerIndex: number; meta: AnswerMeta } => answerFor(deal(mode, seed, n));
+
+export const dealPickQuestion = (mode: QuizMode, seed: string, n: number): PickClientQuestion => {
+  const dealt = deal(mode, `pick:${seed}`, n);
+  const [first, second, third, fourth] = dealt.sets.map((setId, index) => {
+    const variant = dealt.concept.variants[setId];
+    if (!variant) {
+      throw new Error(`選択肢セットの variant がありません: ${dealt.concept.name}:${setId}`);
+    }
+    return normalize(variant, `選択肢${index + 1}のアイコン`);
+  });
+  if (first === undefined || second === undefined || third === undefined || fourth === undefined) {
+    throw new Error(`選択肢が ${CHOICE_COUNT} 件になりません: ${dealt.concept.name}`);
+  }
+  return {
+    setLabel: deck.sets[dealt.answerSet].label,
+    svgs: [first, second, third, fourth],
+  };
+};
+
+export const dealPickAnswer = (
+  mode: QuizMode,
+  seed: string,
+  n: number,
+): { answerIndex: number; meta: AnswerMeta } => answerFor(deal(mode, `pick:${seed}`, n));
