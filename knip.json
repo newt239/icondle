@@ -1,5 +1,10 @@
 {
   "$schema": "./node_modules/knip/schema.json",
-  "entry": ["src/router.tsx", "src/routes/**/*.tsx", "src/**/*.spec.{ts,tsx}"],
+  "entry": [
+    "src/router.tsx",
+    "src/routes/**/*.tsx",
+    "src/**/*.spec.{ts,tsx}",
+    "tests/e2e/warmup.setup.ts"
+  ],
   "ignoreDependencies": ["@iconify-json/.+"]
 }

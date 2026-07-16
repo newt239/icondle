@@ -5,7 +5,13 @@ export default defineConfig({
   fullyParallel: false,
   projects: [
     {
+      name: "setup",
+      testMatch: /warmup\.setup\.ts/,
+    },
+    {
+      dependencies: ["setup"],
       name: "chromium",
+      testIgnore: /warmup\.setup\.ts/,
       use: {
         ...devices["Desktop Chrome"],
       },
