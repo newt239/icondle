@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { deck, type SetId } from "#/data/deck";
+import { deck, type Concept, type SetId } from "#/data/deck";
 
 import { dealAnswer, dealPickAnswer, dealPickQuestion, dealQuestion } from "./deal.server";
 
@@ -39,12 +39,23 @@ const chosenSetIds = (choices: string[]): SetId[] =>
     return setId === undefined ? [] : [setId];
   });
 
+const conceptByName = (name: string): Concept | undefined =>
+  deck.concepts.find((entry) => entry.name === name);
+
+const stripLabel = (svg: string): string => svg.replace(/aria-label="[^"]*"/, "");
+
 describe("deck", () => {
   it("14 セットを収録し easy セットをすべて含む", () => {
     const setIds = Object.keys(deck.sets);
     expect(setIds).toHaveLength(14);
     for (const setId of EASY_SET_IDS) {
       expect(setIds).toContain(setId);
+    }
+  });
+
+  it("矢印の概念が収録されている", () => {
+    for (const name of ["arrow-up", "arrow-down", "arrow-left", "arrow-right"]) {
+      expect(conceptByName(name)).toBeDefined();
     }
   });
 });
@@ -64,6 +75,14 @@ describe("dealQuestion", () => {
     for (const [mode, seed, n] of cases) {
       const { choices } = dealQuestion(mode, seed, n);
       expect(new Set(choices).size).toBe(choices.length);
+    }
+  });
+
+  it("出題 SVG が 4 件ですべて相異なる", () => {
+    for (const [mode, seed, n] of cases) {
+      const { svgs } = dealQuestion(mode, seed, n);
+      expect(svgs).toHaveLength(4);
+      expect(new Set(svgs.map((svg) => stripLabel(svg))).size).toBe(svgs.length);
     }
   });
 
@@ -87,16 +106,18 @@ describe("dealQuestion", () => {
     }
   });
 
-  it("選択肢の全セットがその概念を持ち消去法が成立しない", () => {
+  it("選択肢の全セットが出題中の全概念を持ち消去法が成立しない", () => {
     for (const [mode, seed, n] of cases) {
       const { choices } = dealQuestion(mode, seed, n);
       const { meta } = dealAnswer(mode, seed, n);
-      const concept = deck.concepts.find((entry) => entry.name === meta.concept);
-      expect(concept).toBeDefined();
       const setIds = chosenSetIds(choices);
       expect(setIds).toHaveLength(choices.length);
-      for (const setId of setIds) {
-        expect(concept?.variants[setId]).toBeDefined();
+      for (const answerIcon of meta.icons) {
+        const concept = conceptByName(answerIcon.concept);
+        expect(concept).toBeDefined();
+        for (const setId of setIds) {
+          expect(concept?.variants[setId]).toBeDefined();
+        }
       }
     }
   });
@@ -105,20 +126,34 @@ describe("dealQuestion", () => {
     for (const [mode, seed, n] of cases) {
       const { choices } = dealQuestion(mode, seed, n);
       const { meta } = dealAnswer(mode, seed, n);
-      const concept = deck.concepts.find((entry) => entry.name === meta.concept);
       const setIds = chosenSetIds(choices);
-      for (const group of concept?.collisions ?? []) {
-        const overlap = setIds.filter((setId) => group.includes(setId));
-        expect(overlap.length).toBeLessThan(2);
+      for (const answerIcon of meta.icons) {
+        const concept = conceptByName(answerIcon.concept);
+        for (const group of concept?.collisions ?? []) {
+          const overlap = setIds.filter((setId) => group.includes(setId));
+          expect(overlap.length).toBeLessThan(2);
+        }
       }
     }
   });
 
   it("出題 SVG の viewBox が正規化されセット固有の viewBox が残らない", () => {
     for (const [mode, seed, n] of cases) {
-      const { svg } = dealQuestion(mode, seed, n);
-      expect(svg.match(/viewBox/g)).toHaveLength(1);
-      expect(svg).toContain('viewBox="0 0 100 100"');
+      const { svgs } = dealQuestion(mode, seed, n);
+      for (const svg of svgs) {
+        expect(svg.match(/viewBox/g)).toHaveLength(1);
+        expect(svg).toContain('viewBox="0 0 100 100"');
+      }
+    }
+  });
+
+  it("出題 SVG の aria-label がセット名やアイコン名を漏らさない", () => {
+    for (const [mode, seed, n] of cases) {
+      const { svgs } = dealQuestion(mode, seed, n);
+      for (const [index, svg] of svgs.entries()) {
+        const label = /aria-label="(?<label>[^"]*)"/.exec(svg);
+        expect(label?.groups?.label).toBe(`出題中のアイコン${index + 1}`);
+      }
     }
   });
 });
@@ -130,14 +165,29 @@ describe("dealAnswer", () => {
     }
   });
 
+  it("1 問内で概念が重複しない", () => {
+    for (const [mode, seed, n] of cases) {
+      const { meta } = dealAnswer(mode, seed, n);
+      const concepts = meta.icons.map((icon) => icon.concept);
+      expect(new Set(concepts).size).toBe(concepts.length);
+    }
+  });
+
   it("同一プレイ内で概念が重複しない", () => {
     for (const mode of MODES) {
       for (let s = 0; s < SEED_COUNT; s += 1) {
-        const concepts = Array.from(
-          { length: QUESTION_COUNT },
-          (_, index) => dealAnswer(mode, `seed-${s}`, index + 1).meta.concept,
-        );
-        expect(new Set(concepts).size).toBe(QUESTION_COUNT);
+        const concepts = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+          dealAnswer(mode, `seed-${s}`, index + 1).meta.icons.map((icon) => icon.concept),
+        ).flat();
+        expect(new Set(concepts).size).toBe(QUESTION_COUNT * 4);
+      }
+    }
+  });
+
+  it("多数の seed で最終問まで出題を形成できる", () => {
+    for (const mode of MODES) {
+      for (let s = 0; s < 100; s += 1) {
+        expect(() => dealAnswer(mode, `form-${s}`, QUESTION_COUNT)).not.toThrow();
       }
     }
   });
@@ -145,25 +195,34 @@ describe("dealAnswer", () => {
   it("meta が解説とリンク生成に必要な情報を持つ", () => {
     const { meta } = dealAnswer("easy", "seed-meta", 1);
     expect(meta.set.length).toBeGreaterThan(0);
-    expect(meta.icon.length).toBeGreaterThan(0);
+    expect(meta.icons).toHaveLength(4);
+    for (const icon of meta.icons) {
+      expect(icon.icon.length).toBeGreaterThan(0);
+      expect(icon.concept.length).toBeGreaterThan(0);
+    }
     expect(Object.keys(deck.sets)).toContain(meta.setId);
   });
 });
 
 const pickCandidatesFor = (mode: QuizMode, seed: string, n: number): SetId[][] => {
-  const { svgs } = dealPickQuestion(mode, seed, n);
+  const { choices } = dealPickQuestion(mode, seed, n);
   const { meta } = dealPickAnswer(mode, seed, n);
-  const concept = deck.concepts.find((entry) => entry.name === meta.concept);
-  expect(concept).toBeDefined();
-  const deckSetIds = new Set(Object.keys(deck.sets));
-  const owners = Object.keys(concept?.variants ?? {}).filter((value): value is SetId =>
-    deckSetIds.has(value),
-  );
-  return svgs.map((svg) =>
-    owners.filter((setId) => {
-      const variant = concept?.variants[setId];
-      return variant !== undefined && svg.slice(svg.indexOf("><g ")).includes(variant.body);
-    }),
+  const concepts = meta.icons.map((icon) => conceptByName(icon.concept));
+  for (const concept of concepts) {
+    expect(concept).toBeDefined();
+  }
+  const allSetIds = Object.keys(deck.sets).filter((value): value is SetId => value in deck.sets);
+  return choices.map((svgs) =>
+    allSetIds.filter((setId) =>
+      concepts.every((concept, index) => {
+        const variant = concept?.variants[setId];
+        const svg = svgs[index];
+        if (variant === undefined || svg === undefined) {
+          return false;
+        }
+        return svg.slice(svg.indexOf("><g ")).includes(variant.body);
+      }),
+    ),
   );
 };
 
@@ -174,41 +233,59 @@ describe("dealPickQuestion", () => {
     }
   });
 
-  it("選択肢の SVG が 4 件ですべて相異なる", () => {
+  it("選択肢が 4 件で各選択肢が 4 つの SVG を持ち全 16 描画が相異なる", () => {
     for (const [mode, seed, n] of cases) {
-      const { svgs } = dealPickQuestion(mode, seed, n);
-      expect(svgs).toHaveLength(4);
-      expect(new Set(svgs).size).toBe(svgs.length);
+      const { choices } = dealPickQuestion(mode, seed, n);
+      expect(choices).toHaveLength(4);
+      for (const svgs of choices) {
+        expect(svgs).toHaveLength(4);
+      }
+      const all = choices.flat().map((svg) => stripLabel(svg));
+      expect(new Set(all).size).toBe(all.length);
+    }
+  });
+
+  it("同一概念の SVG が選択肢間ですべて相異なる", () => {
+    for (const [mode, seed, n] of cases) {
+      const { choices } = dealPickQuestion(mode, seed, n);
+      for (let iconIndex = 0; iconIndex < 4; iconIndex += 1) {
+        const row = choices.map((svgs) => stripLabel(svgs[iconIndex] ?? ""));
+        expect(new Set(row).size).toBe(choices.length);
+      }
     }
   });
 
   it("すべての SVG の viewBox が正規化されセット固有の viewBox が残らない", () => {
     for (const [mode, seed, n] of cases) {
-      const { svgs } = dealPickQuestion(mode, seed, n);
-      for (const svg of svgs) {
-        expect(svg.match(/viewBox/g)).toHaveLength(1);
-        expect(svg).toContain('viewBox="0 0 100 100"');
+      const { choices } = dealPickQuestion(mode, seed, n);
+      for (const svgs of choices) {
+        for (const svg of svgs) {
+          expect(svg.match(/viewBox/g)).toHaveLength(1);
+          expect(svg).toContain('viewBox="0 0 100 100"');
+        }
       }
     }
   });
 
   it("aria-label が選択肢番号のみでセット名やアイコン名を漏らさない", () => {
     for (const [mode, seed, n] of cases) {
-      const { svgs } = dealPickQuestion(mode, seed, n);
-      for (const [index, svg] of svgs.entries()) {
-        const label = /aria-label="(?<label>[^"]*)"/.exec(svg);
-        expect(label?.groups?.label).toBe(`選択肢${index + 1}のアイコン`);
+      const { choices } = dealPickQuestion(mode, seed, n);
+      for (const [choiceIndex, svgs] of choices.entries()) {
+        for (const [iconIndex, svg] of svgs.entries()) {
+          const label = /aria-label="(?<label>[^"]*)"/.exec(svg);
+          expect(label?.groups?.label).toBe(`選択肢${choiceIndex + 1}のアイコン${iconIndex + 1}`);
+        }
       }
     }
   });
 
-  it("setLabel が正解セットのラベルで answerIndex の SVG が正解セットの variant を含む", () => {
+  it("setLabel が正解セットのラベルで answerIndex の選択肢が正解セットの variant を含む", () => {
     for (const [mode, seed, n] of cases) {
-      const { setLabel, svgs } = dealPickQuestion(mode, seed, n);
+      const { setLabel, choices } = dealPickQuestion(mode, seed, n);
       const { answerIndex, meta } = dealPickAnswer(mode, seed, n);
       expect(setLabel).toBe(meta.set);
       const candidates = pickCandidatesFor(mode, seed, n);
-      expect(candidates).toHaveLength(svgs.length);
+      expect(candidates).toHaveLength(choices.length);
       expect(candidates[answerIndex]).toContain(meta.setId);
     }
   });
@@ -227,13 +304,15 @@ describe("dealPickQuestion", () => {
   it("選択肢に body 衝突ペアが同居しない", () => {
     for (const [mode, seed, n] of cases) {
       const { meta } = dealPickAnswer(mode, seed, n);
-      const concept = deck.concepts.find((entry) => entry.name === meta.concept);
       const candidates = pickCandidatesFor(mode, seed, n);
-      for (const group of concept?.collisions ?? []) {
-        const overlap = candidates.filter((setIds) =>
-          setIds.some((setId) => group.includes(setId)),
-        );
-        expect(overlap.length).toBeLessThan(2);
+      for (const answerIcon of meta.icons) {
+        const concept = conceptByName(answerIcon.concept);
+        for (const group of concept?.collisions ?? []) {
+          const overlap = candidates.filter((setIds) =>
+            setIds.some((setId) => group.includes(setId)),
+          );
+          expect(overlap.length).toBeLessThan(2);
+        }
       }
     }
   });
@@ -249,11 +328,10 @@ describe("dealPickAnswer", () => {
   it("同一プレイ内で概念が重複しない", () => {
     for (const mode of MODES) {
       for (let s = 0; s < SEED_COUNT; s += 1) {
-        const concepts = Array.from(
-          { length: QUESTION_COUNT },
-          (_, index) => dealPickAnswer(mode, `seed-${s}`, index + 1).meta.concept,
-        );
-        expect(new Set(concepts).size).toBe(QUESTION_COUNT);
+        const concepts = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+          dealPickAnswer(mode, `seed-${s}`, index + 1).meta.icons.map((icon) => icon.concept),
+        ).flat();
+        expect(new Set(concepts).size).toBe(QUESTION_COUNT * 4);
       }
     }
   });
@@ -261,14 +339,12 @@ describe("dealPickAnswer", () => {
   it("同一シードでも play とは異なる概念列を出題する", () => {
     for (const mode of MODES) {
       for (let s = 0; s < SEED_COUNT; s += 1) {
-        const playConcepts = Array.from(
-          { length: QUESTION_COUNT },
-          (_, index) => dealAnswer(mode, `seed-${s}`, index + 1).meta.concept,
-        );
-        const pickConcepts = Array.from(
-          { length: QUESTION_COUNT },
-          (_, index) => dealPickAnswer(mode, `seed-${s}`, index + 1).meta.concept,
-        );
+        const playConcepts = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+          dealAnswer(mode, `seed-${s}`, index + 1).meta.icons.map((icon) => icon.concept),
+        ).flat();
+        const pickConcepts = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+          dealPickAnswer(mode, `seed-${s}`, index + 1).meta.icons.map((icon) => icon.concept),
+        ).flat();
         expect(pickConcepts).not.toEqual(playConcepts);
       }
     }

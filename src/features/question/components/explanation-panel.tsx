@@ -16,7 +16,14 @@ export const ExplanationPanel = ({ correct, meta, headingRef }: ExplanationPanel
       {correct ? "⭕ 正解！" : "❌ 不正解…"}
     </h2>
     <p>
-      これは <strong>{meta.set}</strong> の <strong>{meta.icon}</strong> アイコンです。
+      これらは <strong>{meta.set}</strong> の{" "}
+      {meta.icons.map((icon, index) => (
+        <span key={icon.concept}>
+          {index > 0 && "・"}
+          <strong>{icon.icon}</strong>
+        </span>
+      ))}{" "}
+      アイコンです。
     </p>
   </Card>
 );

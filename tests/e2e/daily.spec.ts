@@ -13,10 +13,12 @@ const jstToday = (): string =>
   }).format(new Date());
 
 test.describe("デイリーモード", () => {
-  test("トップの「今日のデイリー」から JST 日付シードのピック第1問へ遷移する", async ({ page }) => {
+  test("トップの「今日の問題に挑戦」から JST 日付シードのピック第1問へ遷移する", async ({
+    page,
+  }) => {
     await page.goto("/");
     await waitForHydration(page);
-    await page.getByRole("link", { name: "今日のデイリー" }).click();
+    await page.getByRole("link", { name: "今日の問題に挑戦" }).click();
     await expect(page).toHaveURL(new RegExp(`/pick/${jstToday()}/1$`));
   });
 

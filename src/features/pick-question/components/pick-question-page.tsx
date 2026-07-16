@@ -72,16 +72,23 @@ export const PickQuestionPage = ({
         この中で <strong className="text-foreground">{question.setLabel}</strong> のアイコンはどれ？
       </p>
       <PickChoiceList
-        answeredLabel={
-          answered === null ? null : `${answered.meta.set} の ${answered.meta.icon} アイコン`
+        answeredLabels={
+          answered === null
+            ? null
+            : [
+                `${answered.meta.set} の ${answered.meta.icons[0].icon} アイコン`,
+                `${answered.meta.set} の ${answered.meta.icons[1].icon} アイコン`,
+                `${answered.meta.set} の ${answered.meta.icons[2].icon} アイコン`,
+                `${answered.meta.set} の ${answered.meta.icons[3].icon} アイコン`,
+              ]
         }
         answerIndex={answered?.answerIndex ?? null}
         answers={answers}
+        choices={question.choices}
         disabled={picked !== null || isPending}
         nextFormAction={nextFormAction}
         onChoose={choose}
         picked={picked}
-        svgs={question.svgs}
       />
       {result?.success === false && <p role="status">{result.error}</p>}
       {answered !== null && (

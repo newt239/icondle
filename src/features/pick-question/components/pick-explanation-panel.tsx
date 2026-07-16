@@ -22,8 +22,14 @@ export const PickExplanationPanel = ({
       {correct ? "⭕ 正解！" : "❌ 不正解…"}
     </h2>
     <p>
-      正解は選択肢 {answerIndex + 1}。これは <strong>{meta.set}</strong> の{" "}
-      <strong>{meta.icon}</strong> アイコンです。
+      正解は選択肢 {answerIndex + 1}。これらは <strong>{meta.set}</strong> の{" "}
+      {meta.icons.map((icon, index) => (
+        <span key={icon.concept}>
+          {index > 0 && "・"}
+          <strong>{icon.icon}</strong>
+        </span>
+      ))}{" "}
+      アイコンです。
     </p>
   </Card>
 );

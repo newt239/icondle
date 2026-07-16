@@ -5,11 +5,9 @@ export type SetMeta = {
   id: SetId;
   label: string;
   grid: number;
-  style: "stroke" | "fill";
   strokeWidth: number | null;
   cap: string | null;
   license: { spdx: string; title: string; url: string };
-  origin: string;
   version: string;
   iconCount: number;
 };
@@ -1670,6 +1668,90 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "arrow-down",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M11 4h2v12l5.5-5.5l1.42 1.42L12 19.84l-7.92-7.92L5.5 10.5L11 16z\"/>",
+     "height": 24,
+     "name": "arrow-down",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 5v14m6-6l-6 6m-6-6l6 6\"/>",
+     "height": 24,
+     "name": "arrow-down",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18 9s-4.419 6-6 6s-6-6-6-6\"/>",
+     "height": 24,
+     "name": "arrow-down-01",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 42V6m12 24L24 42L12 30\"/>",
+     "height": 48,
+     "name": "arrow-down",
+     "width": 48
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M19.79 13.267a.75.75 0 0 0-1.086-1.034l-5.954 6.251V3.75a.75.75 0 1 0-1.5 0v14.734l-5.955-6.251a.75.75 0 1 0-1.086 1.034l7.067 7.42c.16.168.366.268.58.3a.8.8 0 0 0 .29-.001a1 1 0 0 0 .578-.3z\"/>",
+     "height": 24,
+     "name": "arrow-down-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M24.59 16.59L17 24.17V4h-2v20.17l-7.59-7.58L6 18l10 10l10-10z\"/>",
+     "height": 32,
+     "name": "arrow-down",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 5v14m7-7l-7 7l-7-7\"/>",
+     "height": 24,
+     "name": "arrow-down",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M13 12V6h-2v6H7l5 6l5-6z\"/>",
+     "height": 24,
+     "name": "arrow-down",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 3v18m0 0l8.5-8.5M12 21l-8.5-8.5\"/>",
+     "height": 24,
+     "name": "arrow-down",
+     "width": 24
+    },
+    "ri": {
+     "body": "<path fill=\"currentColor\" d=\"m13 16.172l5.364-5.364l1.414 1.414L12 20l-7.778-7.778l1.414-1.414L11 16.172V4h2z\"/>",
+     "height": 24,
+     "name": "arrow-down-line",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\"><path d=\"M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"m11 17.243l-3.95-3.95a1 1 0 1 0-1.414 1.414l5.657 5.657a1 1 0 0 0 1.414 0l5.657-5.657a1 1 0 0 0-1.414-1.414L13 17.243V4a1 1 0 1 0-2 0z\"/></g>",
+     "height": 24,
+     "name": "arrow-down-line",
+     "width": 24
+    },
+    "fa6-solid": {
+     "body": "<path fill=\"currentColor\" d=\"M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z\"/>",
+     "height": 512,
+     "name": "arrow-down",
+     "width": 384
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3\"/>",
+     "height": 24,
+     "name": "arrow-down",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "arrow-down-a-z",
    "variants": {
     "hugeicons": {
@@ -1754,6 +1836,126 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "arrow-down-left",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M20 4v2h-6.5C11 6 9 8 9 10.5v5.67l3.09-3.08l1.41 1.41L8 20l-5.5-5.5l1.41-1.42L7 16.17V10.5A6.5 6.5 0 0 1 13.5 4z\"/>",
+     "height": 24,
+     "name": "arrow-down-left",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 7L7 17m9 0H7V8\"/>",
+     "height": 24,
+     "name": "arrow-down-left",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15 17.35s-6.938.542-7.915-.435S6.65 9 6.65 9m.85 7.5l10-10\"/>",
+     "height": 24,
+     "name": "arrow-down-left-01",
+     "width": 24
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M13.246 21.005a.75.75 0 1 0 0-1.5H5.577l15.2-15.2a.765.765 0 0 0-1.082-1.081l-15.199 15.2v-7.67a.75.75 0 0 0-1.5 0v9.5c0 .415.336.75.75.75z\"/>",
+     "height": 24,
+     "name": "arrow-down-left-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M22 26v-2H9.41L26 7.41L24.59 6L8 22.59V10H6v16z\"/>",
+     "height": 32,
+     "name": "arrow-down-left",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 7L7 17m10 0H7V7\"/>",
+     "height": 24,
+     "name": "arrow-down-left",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"m12.21 13.21l4.5-4.5l-1.42-1.42l-4.5 4.5L7 8v9h9z\"/>",
+     "height": 24,
+     "name": "arrow-down-left",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19 6L6 19m0 0V6.52M6 19h12.48\"/>",
+     "height": 24,
+     "name": "arrow-down-left",
+     "width": 24
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25\"/>",
+     "height": 24,
+     "name": "arrow-down-left",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "arrow-down-right",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M21.5 14.5L16 20l-5.5-5.5l1.41-1.41L15 16.17V10.5C15 8 13 6 10.5 6H4V4h6.5a6.5 6.5 0 0 1 6.5 6.5v5.67l3.09-3.09z\"/>",
+     "height": 24,
+     "name": "arrow-down-right",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 7l10 10m0-9v9H8\"/>",
+     "height": 24,
+     "name": "arrow-down-right",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.35s6.938.542 7.915-.435S17.35 9 17.35 9m-.85 7.5l-10-10\"/>",
+     "height": 24,
+     "name": "arrow-down-right-01",
+     "width": 24
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M10.75 21.005a.75.75 0 1 1 0-1.5h7.67l-15.2-15.2a.765.765 0 1 1 1.081-1.081l15.2 15.2v-7.67a.75.75 0 0 1 1.5 0v9.5a.75.75 0 0 1-.75.75z\"/>",
+     "height": 24,
+     "name": "arrow-down-right-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M10 26v-2h12.59L6 7.41L7.41 6L24 22.59V10h2v16z\"/>",
+     "height": 32,
+     "name": "arrow-down-right",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 7l10 10m0-10v10H7\"/>",
+     "height": 24,
+     "name": "arrow-down-right",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M8.71 7.29L7.29 8.71l4.5 4.5L8 17h9V8l-3.79 3.79z\"/>",
+     "height": 24,
+     "name": "arrow-down-right",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m6 6l13 13m0 0V6.52M19 19H6.52\"/>",
+     "height": 24,
+     "name": "arrow-down-right",
+     "width": 24
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m4.5 4.5l15 15m0 0V8.25m0 11.25H8.25\"/>",
+     "height": 24,
+     "name": "arrow-down-right",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "arrow-down-square",
    "variants": {
     "tabler": {
@@ -1778,6 +1980,90 @@ export const deck: Deck = {
      "body": "<path fill=\"currentColor\" d=\"M13 8h-2v4H8l4 4l4-4h-3z\"/><path fill=\"currentColor\" d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M5 19V5h14v14z\"/>",
      "height": 24,
      "name": "arrow-down-square",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "arrow-left",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M20 11v2H8l5.5 5.5l-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5L8 11z\"/>",
+     "height": 24,
+     "name": "arrow-left",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 12h14M5 12l6 6m-6-6l6-6\"/>",
+     "height": 24,
+     "name": "arrow-left",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15 6s-6 4.419-6 6s6 6 6 6\"/>",
+     "height": 24,
+     "name": "arrow-left-01",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M5.799 24h36m-24 12l-12-12l12-12\"/>",
+     "height": 48,
+     "name": "arrow-left",
+     "width": 48
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M10.733 19.79a.75.75 0 0 0 1.034-1.086L5.516 12.75H20.25a.75.75 0 0 0 0-1.5H5.516l6.251-5.955a.75.75 0 0 0-1.034-1.086l-7.42 7.067a1 1 0 0 0-.3.58a.8.8 0 0 0 .001.289a1 1 0 0 0 .3.579z\"/>",
+     "height": 24,
+     "name": "arrow-left-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"m14 26l1.41-1.41L7.83 17H28v-2H7.83l7.58-7.59L14 6L4 16z\"/>",
+     "height": 32,
+     "name": "arrow-left",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m12 19l-7-7l7-7m7 7H5\"/>",
+     "height": 24,
+     "name": "arrow-left",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"m6 12l6 5v-4h6v-2h-6V7z\"/>",
+     "height": 24,
+     "name": "arrow-left",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12H3m0 0l8.5-8.5M3 12l8.5 8.5\"/>",
+     "height": 24,
+     "name": "arrow-left",
+     "width": 24
+    },
+    "ri": {
+     "body": "<path fill=\"currentColor\" d=\"M7.828 11H20v2H7.828l5.364 5.364l-1.414 1.414L4 12l7.778-7.778l1.414 1.414z\"/>",
+     "height": 24,
+     "name": "arrow-left-line",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\"><path d=\"M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M3.636 11.293a1 1 0 0 0 0 1.414l5.657 5.657a1 1 0 0 0 1.414-1.414L6.757 13H20a1 1 0 1 0 0-2H6.757l3.95-3.95a1 1 0 0 0-1.414-1.414z\"/></g>",
+     "height": 24,
+     "name": "arrow-left-line",
+     "width": 24
+    },
+    "fa6-solid": {
+     "body": "<path fill=\"currentColor\" d=\"M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.3l105.3-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z\"/>",
+     "height": 512,
+     "name": "arrow-left",
+     "width": 448
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18\"/>",
+     "height": 24,
+     "name": "arrow-left",
      "width": 24
     }
    }
@@ -1880,6 +2166,90 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "arrow-right",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z\"/>",
+     "height": 24,
+     "name": "arrow-right",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 12h14m-6 6l6-6m-6-6l6 6\"/>",
+     "height": 24,
+     "name": "arrow-right",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 6s6 4.419 6 6s-6 6-6 6\"/>",
+     "height": 24,
+     "name": "arrow-right-01",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M42 24H6m24-12l12 12l-12 12\"/>",
+     "height": 48,
+     "name": "arrow-right",
+     "width": 48
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M13.267 4.209a.75.75 0 0 0-1.034 1.086l6.251 5.955H3.75a.75.75 0 0 0 0 1.5h14.734l-6.251 5.954a.75.75 0 0 0 1.034 1.087l7.42-7.067a1 1 0 0 0 .3-.58a.8.8 0 0 0-.001-.29a1 1 0 0 0-.3-.578z\"/>",
+     "height": 24,
+     "name": "arrow-right-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z\"/>",
+     "height": 32,
+     "name": "arrow-right",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 12h14m-7-7l7 7l-7 7\"/>",
+     "height": 24,
+     "name": "arrow-right",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M6 13h6v4l6-5l-6-5v4H6z\"/>",
+     "height": 24,
+     "name": "arrow-right",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5\"/>",
+     "height": 24,
+     "name": "arrow-right",
+     "width": 24
+    },
+    "ri": {
+     "body": "<path fill=\"currentColor\" d=\"m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z\"/>",
+     "height": 24,
+     "name": "arrow-right-line",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\"><path d=\"M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414\"/></g>",
+     "height": 24,
+     "name": "arrow-right-line",
+     "width": 24
+    },
+    "fa6-solid": {
+     "body": "<path fill=\"currentColor\" d=\"M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z\"/>",
+     "height": 512,
+     "name": "arrow-right",
+     "width": 448
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3\"/>",
+     "height": 24,
+     "name": "arrow-right",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "arrow-right-circle",
    "variants": {
     "mdi": {
@@ -1928,6 +2298,90 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0\"/>",
      "height": 24,
      "name": "arrow-right-circle",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "arrow-up",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8z\"/>",
+     "height": 24,
+     "name": "arrow-up",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 5v14m6-8l-6-6m-6 6l6-6\"/>",
+     "height": 24,
+     "name": "arrow-up",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18 15s-4.42-6-6-6s-6 6-6 6\"/>",
+     "height": 24,
+     "name": "arrow-up-01",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 6v36M12 18L24 6l12 12\"/>",
+     "height": 48,
+     "name": "arrow-up",
+     "width": 48
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M4.209 10.733a.75.75 0 0 0 1.086 1.034l5.954-6.251V20.25a.75.75 0 0 0 1.5 0V5.516l5.955 6.251a.75.75 0 0 0 1.087-1.034l-7.067-7.42a1 1 0 0 0-.58-.3a.8.8 0 0 0-.29.001a1 1 0 0 0-.578.3z\"/>",
+     "height": 24,
+     "name": "arrow-up-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M16 4L6 14l1.41 1.41L15 7.83V28h2V7.83l7.59 7.58L26 14z\"/>",
+     "height": 32,
+     "name": "arrow-up",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m5 12l7-7l7 7m-7 7V5\"/>",
+     "height": 24,
+     "name": "arrow-up",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M13 18v-6h4l-5-6l-5 6h4v6z\"/>",
+     "height": 24,
+     "name": "arrow-up",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 21V3m0 0l8.5 8.5M12 3l-8.5 8.5\"/>",
+     "height": 24,
+     "name": "arrow-up",
+     "width": 24
+    },
+    "ri": {
+     "body": "<path fill=\"currentColor\" d=\"M13 7.828V20h-2V7.828l-5.364 5.364l-1.414-1.414L12 4l7.778 7.778l-1.414 1.414z\"/>",
+     "height": 24,
+     "name": "arrow-up-line",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\"><path d=\"M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M12.707 3.636a1 1 0 0 0-1.414 0L5.636 9.293a1 1 0 1 0 1.414 1.414L11 6.757V20a1 1 0 1 0 2 0V6.757l3.95 3.95a1 1 0 0 0 1.414-1.414z\"/></g>",
+     "height": 24,
+     "name": "arrow-up-line",
+     "width": 24
+    },
+    "fa6-solid": {
+     "body": "<path fill=\"currentColor\" d=\"M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z\"/>",
+     "height": 512,
+     "name": "arrow-up",
+     "width": 384
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18\"/>",
+     "height": 24,
+     "name": "arrow-up",
      "width": 24
     }
    }
@@ -2024,6 +2478,66 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "arrow-up-left",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"M20 18v2h-6.5A6.5 6.5 0 0 1 7 13.5V7.83l-3.09 3.09L2.5 9.5L8 4l5.5 5.5l-1.41 1.41L9 7.83v5.67C9 16 11 18 13.5 18z\"/>",
+     "height": 24,
+     "name": "arrow-up-left",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 7l10 10M16 7H7v9\"/>",
+     "height": 24,
+     "name": "arrow-up-left",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15 6.65s-6.938-.542-7.915.435S6.65 15 6.65 15m.85-7.5l10 10\"/>",
+     "height": 24,
+     "name": "arrow-up-left-01",
+     "width": 24
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M13.246 3a.75.75 0 0 1 0 1.5H5.577l15.2 15.2a.765.765 0 0 1-1.082 1.081L4.496 5.581v7.669a.75.75 0 0 1-1.5 0v-9.5a.75.75 0 0 1 .75-.75z\"/>",
+     "height": 24,
+     "name": "arrow-up-left-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M22 6v2H9.41L26 24.59L24.59 26L8 9.41V22H6V6z\"/>",
+     "height": 32,
+     "name": "arrow-up-left",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 17V7h10m0 10L7 7\"/>",
+     "height": 24,
+     "name": "arrow-up-left",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"m15.29 16.71l1.42-1.42l-4.5-4.5L16 7H7v9l3.79-3.79z\"/>",
+     "height": 24,
+     "name": "arrow-up-left",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19 19L6 6m0 0v12.48M6 6h12.48\"/>",
+     "height": 24,
+     "name": "arrow-up-left",
+     "width": 24
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m19.5 19.5l-15-15m0 0v11.25m0-11.25h11.25\"/>",
+     "height": 24,
+     "name": "arrow-up-left",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "arrow-up-left-circle",
    "variants": {
     "tabler": {
@@ -2048,6 +2562,66 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14.828 14.828L9.172 9.172m0 0h4.95m-4.95 0v4.95M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10\"/>",
      "height": 24,
      "name": "arrow-up-left-circle",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "arrow-up-right",
+   "variants": {
+    "mdi": {
+     "body": "<path fill=\"currentColor\" d=\"m21.5 9.5l-1.41 1.42L17 7.83v5.67a6.5 6.5 0 0 1-6.5 6.5H4v-2h6.5c2.5 0 4.5-2 4.5-4.5V7.83l-3.09 3.08L10.5 9.5L16 4z\"/>",
+     "height": 24,
+     "name": "arrow-up-right",
+     "width": 24
+    },
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 7L7 17M8 7h9v9\"/>",
+     "height": 24,
+     "name": "arrow-up-right",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 6.65s6.938-.542 7.915.435S17.35 15 17.35 15m-.85-7.5l-10 10\"/>",
+     "height": 24,
+     "name": "arrow-up-right-01",
+     "width": 24
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M10.75 3a.75.75 0 0 0 0 1.5h7.67L3.22 19.7a.764.764 0 1 0 1.081 1.081l15.2-15.2v7.669a.75.75 0 0 0 1.5 0v-9.5a.75.75 0 0 0-.75-.75z\"/>",
+     "height": 24,
+     "name": "arrow-up-right-24-regular",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z\"/>",
+     "height": 32,
+     "name": "arrow-up-right",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 7h10v10M7 17L17 7\"/>",
+     "height": 24,
+     "name": "arrow-up-right",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"m11.79 10.79l-4.5 4.5l1.42 1.42l4.5-4.5L17 16V7H8z\"/>",
+     "height": 24,
+     "name": "arrow-up-right",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M6 19L19 6m0 0v12.48M19 6H6.52\"/>",
+     "height": 24,
+     "name": "arrow-up-right",
+     "width": 24
+    },
+    "heroicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m4.5 19.5l15-15m0 0H8.25m11.25 0v11.25\"/>",
+     "height": 24,
+     "name": "arrow-up-right",
      "width": 24
     }
    }
@@ -49762,7 +50336,7 @@ export const deck: Deck = {
    }
   }
  ],
- "generatedAt": "2026-07-16T08:33:29.020Z",
+ "generatedAt": "2026-07-16T10:51:22.760Z",
  "packages": {
   "mdi": "1.2.3",
   "tabler": "1.2.35",
@@ -49791,9 +50365,7 @@ export const deck: Deck = {
     "title": "Apache 2.0",
     "url": "https://github.com/Templarian/MaterialDesign/blob/master/LICENSE"
    },
-   "origin": "Material Design Icons。Pictogrammers による老舗コミュニティセットで、塗りつぶし主体。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.3"
   },
   "tabler": {
@@ -49807,9 +50379,7 @@ export const deck: Deck = {
     "title": "MIT",
     "url": "https://github.com/tabler/tabler-icons/blob/master/LICENSE"
    },
-   "origin": "Tabler Icons。ダッシュボード UI 向けに 24px グリッド・stroke 2px で統一された大型セット。",
    "strokeWidth": 2,
-   "style": "stroke",
    "version": "1.2.35"
   },
   "hugeicons": {
@@ -49823,9 +50393,7 @@ export const deck: Deck = {
     "title": "MIT",
     "url": ""
    },
-   "origin": "数千規模のフリーセット。同一概念に -01 / -02 のような複数の造形バリエーションを持つのが特徴。",
    "strokeWidth": 1.5,
-   "style": "stroke",
    "version": "1.2.30"
   },
   "icon-park-outline": {
@@ -49839,9 +50407,7 @@ export const deck: Deck = {
     "title": "Apache 2.0",
     "url": "https://github.com/bytedance/IconPark/blob/master/LICENSE"
    },
-   "origin": "ByteDance の IconPark。単一ソースから多スタイルを機械生成する仕組みで知られ、造形はやや装飾的。",
    "strokeWidth": 4,
-   "style": "stroke",
    "version": "1.2.4"
   },
   "material-symbols": {
@@ -49855,9 +50421,7 @@ export const deck: Deck = {
     "title": "Apache 2.0",
     "url": "https://github.com/google/material-design-icons/blob/master/LICENSE"
    },
-   "origin": "Google の Material Symbols。Material Design 3 の公式セットで、weight や fill の可変軸を持つ。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.84"
   },
   "fluent": {
@@ -49871,9 +50435,7 @@ export const deck: Deck = {
     "title": "MIT",
     "url": "https://github.com/microsoft/fluentui-system-icons/blob/main/LICENSE"
    },
-   "origin": "Microsoft の Fluent UI System Icons。Windows や Office の UI 言語を反映し、サイズ別に最適化された派生を持つ。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.53"
   },
   "carbon": {
@@ -49887,9 +50449,7 @@ export const deck: Deck = {
     "title": "Apache 2.0",
     "url": ""
    },
-   "origin": "IBM の Carbon Design System 付属セット。32 グリッドで設計され、直線的で硬質な造形が特徴。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.24"
   },
   "lucide": {
@@ -49903,9 +50463,7 @@ export const deck: Deck = {
     "title": "ISC",
     "url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE"
    },
-   "origin": "Feather Icons のコミュニティフォーク。24px グリッド・stroke 2px・round cap のミニマル路線の代表格。",
    "strokeWidth": 2,
-   "style": "stroke",
    "version": "1.2.117"
   },
   "boxicons": {
@@ -49919,9 +50477,7 @@ export const deck: Deck = {
     "title": "MIT",
     "url": "https://github.com/box-icons/boxicons-core/blob/main/LICENSE"
    },
-   "origin": "Web UI 向けに設計されたシンプルなセット。角の丸い素直な造形でクセが少ない。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.0"
   },
   "iconoir": {
@@ -49935,9 +50491,7 @@ export const deck: Deck = {
     "title": "MIT",
     "url": "https://github.com/iconoir-icons/iconoir/blob/main/LICENSE"
    },
-   "origin": "手作業で描かれる大規模オープンソースセット。stroke 1.5px で細部の遊びが多い。",
    "strokeWidth": 1.5,
-   "style": "stroke",
    "version": "1.2.11"
   },
   "ri": {
@@ -49951,9 +50505,7 @@ export const deck: Deck = {
     "title": "Apache 2.0",
     "url": "https://github.com/cyberalien/RemixIcon/blob/master/License"
    },
-   "origin": "Remix Icon。ニュートラルで実務的な造形の中国発セット。line と fill の 2 スタイル構成。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.10"
   },
   "mingcute": {
@@ -49967,9 +50519,7 @@ export const deck: Deck = {
     "title": "Apache 2.0",
     "url": "https://github.com/Richard9394/MingCute/blob/main/LICENSE"
    },
-   "origin": "MingCute Icon。丸みの強いかわいらしい造形が特徴の中国発セット。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.7"
   },
   "fa6-solid": {
@@ -49983,9 +50533,7 @@ export const deck: Deck = {
     "title": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"
    },
-   "origin": "Font Awesome 6 の Solid スタイル。Web アイコンフォントの草分け的存在で、塗りつぶし主体の力強い造形が特徴。",
    "strokeWidth": null,
-   "style": "fill",
    "version": "1.2.4"
   },
   "heroicons": {
@@ -49999,9 +50547,7 @@ export const deck: Deck = {
     "title": "MIT",
     "url": "https://github.com/tailwindlabs/heroicons/blob/master/LICENSE"
    },
-   "origin": "Tailwind CSS チーム製。24px outline は stroke 1.5px で、他の stroke 2px 系より線が細く柔らかい印象。",
    "strokeWidth": 1.5,
-   "style": "stroke",
    "version": "1.2.3"
   }
  }

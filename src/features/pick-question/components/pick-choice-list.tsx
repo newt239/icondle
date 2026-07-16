@@ -1,13 +1,15 @@
 import { buttonVariants, Kbd } from "@heroui/react";
 
+import type { PickChoiceSvgs } from "#/lib/quiz-types";
+
 type PickChoiceListProps = {
-  svgs: [string, string, string, string];
+  choices: [PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs];
   answers: string;
   nextFormAction: string;
   disabled: boolean;
   picked: number | null;
   answerIndex: number | null;
-  answeredLabel: string | null;
+  answeredLabels: [string, string, string, string] | null;
   onChoose: (index: number) => void;
 };
 
@@ -29,55 +31,61 @@ const stateClassName = (
 };
 
 export const PickChoiceList = ({
-  svgs,
+  choices,
   answers,
   nextFormAction,
   disabled,
   picked,
   answerIndex,
-  answeredLabel,
+  answeredLabels,
   onChoose,
 }: PickChoiceListProps) => (
   <div aria-label="選択肢" className="grid grid-cols-2 gap-3" role="group">
-    {svgs.map((svg, index) => {
-      const html =
-        answeredLabel !== null && index === answerIndex
-          ? svg.replace(
-              `aria-label="選択肢${index + 1}のアイコン"`,
-              `aria-label="${answeredLabel}"`,
-            )
-          : svg;
-      return (
-        <form
-          action={nextFormAction}
-          key={`choice-${String(index)}`}
-          method="get"
-          onSubmit={(event) => {
-            event.preventDefault();
-            onChoose(index);
-          }}
+    {choices.map((svgs, index) => (
+      <form
+        action={nextFormAction}
+        key={`choice-${String(index)}`}
+        method="get"
+        onSubmit={(event) => {
+          event.preventDefault();
+          onChoose(index);
+        }}
+      >
+        <input name="a" type="hidden" value={`${answers}${index}`} />
+        <button
+          aria-keyshortcuts={String(index + 1)}
+          className={`${buttonVariants({ fullWidth: true, variant: "secondary" })} h-auto flex-col gap-2 py-4 ${stateClassName(index, picked, answerIndex)}`}
+          disabled={disabled}
+          type="submit"
         >
-          <input name="a" type="hidden" value={`${answers}${index}`} />
-          <button
-            aria-keyshortcuts={String(index + 1)}
-            className={`${buttonVariants({ fullWidth: true, variant: "secondary" })} h-auto flex-col gap-2 py-4 ${stateClassName(index, picked, answerIndex)}`}
-            disabled={disabled}
-            type="submit"
-          >
-            <span className="flex items-center gap-2">
-              <Kbd>{String(index + 1)}</Kbd>
-              {answerIndex !== null && index === answerIndex && <span aria-hidden="true">⭕</span>}
-              {answerIndex !== null && index === picked && index !== answerIndex && (
-                <span aria-hidden="true">❌</span>
-              )}
-            </span>
-            <span
-              className="block size-16 sm:size-20 [&>svg]:size-full"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </button>
-        </form>
-      );
-    })}
+          <span className="flex items-center gap-2">
+            <Kbd>{String(index + 1)}</Kbd>
+            {answerIndex !== null && index === answerIndex && <span aria-hidden="true">⭕</span>}
+            {answerIndex !== null && index === picked && index !== answerIndex && (
+              <span aria-hidden="true">❌</span>
+            )}
+          </span>
+          <span className="grid grid-cols-2 gap-2">
+            {svgs.map((svg, iconIndex) => {
+              const label = index === answerIndex ? answeredLabels?.[iconIndex] : undefined;
+              const html =
+                label === undefined
+                  ? svg
+                  : svg.replace(
+                      `aria-label="選択肢${index + 1}のアイコン${iconIndex + 1}"`,
+                      `aria-label="${label}"`,
+                    );
+              return (
+                <span
+                  className="block size-10 sm:size-12 [&>svg]:size-full"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                  key={`icon-${String(iconIndex)}`}
+                />
+              );
+            })}
+          </span>
+        </button>
+      </form>
+    ))}
   </div>
 );

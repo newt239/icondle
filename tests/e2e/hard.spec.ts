@@ -35,7 +35,7 @@ test.describe("難しいモード", () => {
     await page.goto("/play/hard/e2etest/result?a=0000000000");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
     await expect(page.getByRole("button", { name: "結果をコピーして共有" })).toBeVisible();
-    await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(10);
+    await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(40);
     await expect(page.getByRole("link", { name: "もう一度遊ぶ" })).toHaveAttribute(
       "href",
       "/play/hard",

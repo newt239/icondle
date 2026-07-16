@@ -42,17 +42,6 @@ const MIN_EASY_POOL = 50;
 
 const EASY_IDS = ["fluent", "material-symbols", "tabler", "lucide", "heroicons", "fa6-solid"];
 
-const DENY = new Set([
-  "arrow-up",
-  "arrow-down",
-  "arrow-left",
-  "arrow-right",
-  "arrow-up-left",
-  "arrow-up-right",
-  "arrow-down-left",
-  "arrow-down-right",
-]);
-
 type ResolvedIcon = {
   raw: string;
   concept: string;
@@ -214,7 +203,7 @@ for (const { candidate, namespace } of adopted) {
 }
 
 const sharedConcepts = [...conceptOwners.entries()]
-  .filter(([concept, owners]) => owners.length >= MIN_SHARED_SETS && !DENY.has(concept))
+  .filter(([, owners]) => owners.length >= MIN_SHARED_SETS)
   .map(([concept]) => concept)
   .toSorted();
 

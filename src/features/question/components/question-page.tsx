@@ -63,10 +63,17 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
       </header>
       <QuestionProgress n={n} total={total} />
       <QuestionCard
-        answeredLabel={
-          answered === null ? null : `${answered.meta.set} の ${answered.meta.icon} アイコン`
+        answeredLabels={
+          answered === null
+            ? null
+            : [
+                `${answered.meta.set} の ${answered.meta.icons[0].icon} アイコン`,
+                `${answered.meta.set} の ${answered.meta.icons[1].icon} アイコン`,
+                `${answered.meta.set} の ${answered.meta.icons[2].icon} アイコン`,
+                `${answered.meta.set} の ${answered.meta.icons[3].icon} アイコン`,
+              ]
         }
-        svg={question.svg}
+        svgs={question.svgs}
       />
       <ChoiceList
         answerIndex={answered?.answerIndex ?? null}

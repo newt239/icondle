@@ -1,21 +1,27 @@
 import { Card } from "@heroui/react";
 
 type QuestionCardProps = {
-  svg: string;
-  answeredLabel: string | null;
+  svgs: [string, string, string, string];
+  answeredLabels: [string, string, string, string] | null;
 };
 
-export const QuestionCard = ({ svg, answeredLabel }: QuestionCardProps) => {
-  const html =
-    answeredLabel === null
-      ? svg
-      : svg.replace('aria-label="出題中のアイコン"', `aria-label="${answeredLabel}"`);
-  return (
-    <Card className="items-center py-10">
-      <div
-        className="size-32 sm:size-40 [&>svg]:size-full"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </Card>
-  );
-};
+export const QuestionCard = ({ svgs, answeredLabels }: QuestionCardProps) => (
+  <Card className="items-center py-8">
+    <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4">
+      {svgs.map((svg, index) => {
+        const label = answeredLabels?.[index];
+        const html =
+          label === undefined
+            ? svg
+            : svg.replace(`aria-label="出題中のアイコン${index + 1}"`, `aria-label="${label}"`);
+        return (
+          <div
+            className="size-20 sm:size-24 [&>svg]:size-full"
+            dangerouslySetInnerHTML={{ __html: html }}
+            key={`icon-${String(index)}`}
+          />
+        );
+      })}
+    </div>
+  </Card>
+);

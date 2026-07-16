@@ -51,14 +51,22 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
               <span aria-hidden="true">{item.correct ? "⭕" : "❌"}</span>
               <span className="sr-only">{item.correct ? "正解" : "不正解"}</span>
               <span className="font-medium">第{item.n}問</span>
-              <a
-                className="text-muted truncate underline underline-offset-2"
-                href={`https://icon-sets.iconify.design/${item.meta.setId}/${item.meta.icon}/`}
-                rel="noreferrer"
-                target="_blank"
-              >
-                {item.meta.set} の {item.meta.icon}
-              </a>
+              <span className="text-muted min-w-0 flex-1">
+                {item.meta.set} の{" "}
+                {item.meta.icons.map((icon, index) => (
+                  <span key={icon.concept}>
+                    {index > 0 && "・"}
+                    <a
+                      className="underline underline-offset-2"
+                      href={`https://icon-sets.iconify.design/${item.meta.setId}/${icon.icon}/`}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {icon.icon}
+                    </a>
+                  </span>
+                ))}
+              </span>
             </Card>
           </li>
         ))}

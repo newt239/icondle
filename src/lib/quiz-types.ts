@@ -1,11 +1,13 @@
 export type ClientQuestion = {
-  svg: string;
+  svgs: [string, string, string, string];
   choices: [string, string, string, string];
 };
 
+export type PickChoiceSvgs = [string, string, string, string];
+
 export type PickClientQuestion = {
   setLabel: string;
-  svgs: [string, string, string, string];
+  choices: [PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs];
 };
 
 export type GradeResult =
@@ -24,11 +26,15 @@ export type RunResult =
   | { success: true; total: number; score: number; items: RunResultItem[] }
   | { success: false; error: string };
 
+export type AnswerIcon = {
+  concept: string;
+  icon: string;
+};
+
 export type AnswerMeta = {
   set: string;
   setId: string;
-  icon: string;
-  concept: string;
+  icons: [AnswerIcon, AnswerIcon, AnswerIcon, AnswerIcon];
 };
 
 export type SetOverview = {
