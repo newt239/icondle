@@ -1,5 +1,6 @@
 import { createRouter } from "@tanstack/react-router";
 
+import { NotFoundPage } from "./components/not-found-page";
 import { routeTree } from "./routeTree.gen";
 
 const parseSearch = (searchStr: string): Record<string, string> =>
@@ -18,6 +19,7 @@ const stringifySearch = (search: Record<string, unknown>): string => {
 
 export const getRouter = () =>
   createRouter({
+    defaultNotFoundComponent: NotFoundPage,
     parseSearch,
     routeTree,
     scrollRestoration: true,
