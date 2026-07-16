@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+@utility bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 1.5rem 1.5rem;
+}
+
 @layer base {
   [data-theme="sky"] {
     --background: oklch(97.02% 0.015 230.34);

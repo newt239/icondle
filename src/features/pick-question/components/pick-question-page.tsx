@@ -58,7 +58,7 @@ export const PickQuestionPage = ({
   const nextFormAction = isLast ? `${pickBase}/result` : `${pickBase}/${n + 1}`;
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-6 px-4 py-8">
+    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Guess Icon

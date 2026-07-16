@@ -52,7 +52,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
   const nextFormAction = isLast ? `${playBase}/result` : `${playBase}/${n + 1}`;
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-6 px-4 py-8">
+    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Guess Icon
@@ -68,7 +68,6 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
         }
         svg={question.svg}
       />
-      <p className="text-muted text-center">このアイコン、どのセットのやつ？</p>
       <ChoiceList
         answerIndex={answered?.answerIndex ?? null}
         answers={answers}

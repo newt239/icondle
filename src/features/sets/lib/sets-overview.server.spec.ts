@@ -5,12 +5,11 @@ import { deck } from "#/data/deck";
 import { buildSetsOverview } from "./sets-overview.server";
 
 describe("buildSetsOverview", () => {
-  it("採用セット全件を返し説明文とアイコン数を持つ", () => {
+  it("採用セット全件を返しアイコン数を持つ", () => {
     const overviews = buildSetsOverview();
     expect(overviews).toHaveLength(Object.keys(deck.sets).length);
     for (const overview of overviews) {
       expect(Object.keys(deck.sets)).toContain(overview.id);
-      expect(overview.origin.length).toBeGreaterThan(0);
       expect(overview.iconCount).toBeGreaterThan(0);
     }
   });

@@ -53,37 +53,6 @@ const DENY = new Set([
   "arrow-down-right",
 ]);
 
-const SET_ORIGIN: Record<string, string> = {
-  bi: "Bootstrap 公式のアイコンセット。16 グリッドで設計されており、小さなサイズでも潰れない太めの塗りが特徴。",
-  boxicons: "Web UI 向けに設計されたシンプルなセット。角の丸い素直な造形でクセが少ない。",
-  carbon:
-    "IBM の Carbon Design System 付属セット。32 グリッドで設計され、直線的で硬質な造形が特徴。",
-  "fa6-solid":
-    "Font Awesome 6 の Solid スタイル。Web アイコンフォントの草分け的存在で、塗りつぶし主体の力強い造形が特徴。",
-  fluent:
-    "Microsoft の Fluent UI System Icons。Windows や Office の UI 言語を反映し、サイズ別に最適化された派生を持つ。",
-  glyphs: "Glyphs.fyi によるセット。outline と塗りの中間的な、やや装飾的な造形を持つ。",
-  heroicons:
-    "Tailwind CSS チーム製。24px outline は stroke 1.5px で、他の stroke 2px 系より線が細く柔らかい印象。",
-  hugeicons:
-    "数千規模のフリーセット。同一概念に -01 / -02 のような複数の造形バリエーションを持つのが特徴。",
-  "icon-park-outline":
-    "ByteDance の IconPark。単一ソースから多スタイルを機械生成する仕組みで知られ、造形はやや装飾的。",
-  iconoir: "手作業で描かれる大規模オープンソースセット。stroke 1.5px で細部の遊びが多い。",
-  lucide:
-    "Feather Icons のコミュニティフォーク。24px グリッド・stroke 2px・round cap のミニマル路線の代表格。",
-  "material-symbols":
-    "Google の Material Symbols。Material Design 3 の公式セットで、weight や fill の可変軸を持つ。",
-  mdi: "Material Design Icons。Pictogrammers による老舗コミュニティセットで、塗りつぶし主体。",
-  mingcute: "MingCute Icon。丸みの強いかわいらしい造形が特徴の中国発セット。",
-  mynaui: "MynaUI 付属のアイコンセット。Tailwind 系 UI キット由来で、lucide に近いミニマル造形。",
-  ph: "Phosphor Icons。256 グリッドで設計され、6 スタイル展開を持つ柔軟性が売りのセット。",
-  ri: "Remix Icon。ニュートラルで実務的な造形の中国発セット。line と fill の 2 スタイル構成。",
-  tabler:
-    "Tabler Icons。ダッシュボード UI 向けに 24px グリッド・stroke 2px で統一された大型セット。",
-  tdesign: "Tencent の TDesign 付属セット。エンタープライズ UI 向けの端正な造形。",
-};
-
 type ResolvedIcon = {
   raw: string;
   concept: string;
@@ -309,11 +278,9 @@ type SetMetaOut = {
   id: string;
   label: string;
   grid: number;
-  style: "stroke" | "fill";
   strokeWidth: number | null;
   cap: string | null;
   license: { spdx: string; title: string; url: string };
-  origin: string;
   version: string;
   iconCount: number;
 };
@@ -330,7 +297,7 @@ for (const { candidate, info, namespace, version } of adopted) {
     }
   }
   const strokeCount = bodies.filter((body) => body.includes("stroke=")).length;
-  const style: SetMetaOut["style"] = strokeCount / bodies.length > 0.5 ? "stroke" : "fill";
+  const style = strokeCount / bodies.length > 0.5 ? "stroke" : "fill";
   const strokeWidths = bodies.flatMap((body) => {
     const width = /stroke-width="(?<width>[\d.]+)"/.exec(body)?.groups?.width;
     return width === undefined ? [] : [Number(width)];
@@ -353,9 +320,7 @@ for (const { candidate, info, namespace, version } of adopted) {
       title: info.license.title,
       url: info.license.url ?? "",
     },
-    origin: SET_ORIGIN[candidate.id] ?? "",
     strokeWidth: typeof strokeWidthMode === "number" ? strokeWidthMode : null,
-    style,
     version,
   };
 }
@@ -381,11 +346,9 @@ export type SetMeta = {
   id: SetId;
   label: string;
   grid: number;
-  style: "stroke" | "fill";
   strokeWidth: number | null;
   cap: string | null;
   license: { spdx: string; title: string; url: string };
-  origin: string;
   version: string;
   iconCount: number;
 };

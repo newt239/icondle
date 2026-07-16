@@ -34,9 +34,7 @@ export type AnswerMeta = {
 export type SetOverview = {
   id: string;
   label: string;
-  origin: string;
   grid: number;
-  style: "stroke" | "fill";
   iconCount: number;
   license: { spdx: string; title: string; url: string };
   samples: { name: string; svg: string }[];

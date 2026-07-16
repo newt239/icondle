@@ -17,7 +17,7 @@ const linkClassName = buttonVariants({ variant: "primary" });
 export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPageProps) => {
   if (!result.success) {
     return (
-      <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col items-center justify-center gap-6 px-4 py-8">
+      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 py-8">
         <EmptyState className="gap-4">
           <h1 className="text-xl font-bold">結果を表示できません</h1>
           <p className="text-muted">{result.error}</p>
@@ -32,7 +32,7 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
   const emojiRow = result.items.map((item) => (item.correct ? "🟩" : "❌")).join("");
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col gap-6 px-4 py-8">
+    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Guess Icon

@@ -32,7 +32,5 @@ export const buildSetsOverview = (): SetOverview[] =>
       id: set.id,
       label: set.label,
       license: set.license,
-      origin: set.origin,
       samples: sampleVariants(set.id),
-      style: set.style,
     }));

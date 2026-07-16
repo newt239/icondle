@@ -8,17 +8,13 @@ type SetsPageProps = {
 };
 
 export const SetsPage = ({ sets }: SetsPageProps) => (
-  <main className="mx-auto flex min-h-dvh w-full max-w-2xl flex-col gap-6 px-4 py-8">
+  <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-8">
     <header className="flex items-center justify-between gap-4">
       <Link className="text-xl font-bold" to="/">
         Guess Icon
       </Link>
     </header>
     <h1 className="text-2xl font-bold">収録アイコンセット</h1>
-    <p className="text-muted">
-      出題に使用している 12 セットの一覧です。セット名を選ぶと Iconify
-      のセットページが開きます。サンプルのアイコンは表示のたびにランダムに変わります。
-    </p>
     <ul className="flex flex-col gap-4">
       {sets.map((set) => (
         <li key={set.id}>
@@ -33,10 +29,8 @@ export const SetsPage = ({ sets }: SetsPageProps) => (
                 {set.label}
               </a>
             </h2>
-            <p className="text-sm">{set.origin}</p>
             <p className="text-muted text-sm">
-              {set.grid}px グリッド・{set.style === "stroke" ? "線画" : "塗り"}・
-              {set.iconCount.toLocaleString("ja-JP")} アイコン・
+              {set.grid}px グリッド・{set.iconCount.toLocaleString("ja-JP")} アイコン・
               {set.license.url === "" ? (
                 set.license.title
               ) : (
