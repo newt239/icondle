@@ -19,10 +19,10 @@ const stateClassName = (
     return "";
   }
   if (index === answerIndex) {
-    return "outline-2 outline-offset-2 outline-green-600";
+    return "outline-2 outline-offset-2 outline-solid outline-success";
   }
   if (index === picked) {
-    return "outline-2 outline-offset-2 outline-red-600";
+    return "outline-2 outline-offset-2 outline-solid outline-danger";
   }
   return "";
 };

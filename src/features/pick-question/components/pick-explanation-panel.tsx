@@ -17,7 +17,7 @@ export const PickExplanationPanel = ({
   meta,
   headingRef,
 }: PickExplanationPanelProps) => (
-  <Card className="gap-3 p-6" role="status">
+  <Card className={`gap-3 p-6 ${correct ? "bg-success-soft" : "bg-danger-soft"}`} role="status">
     <h2 className="text-lg font-bold" ref={headingRef} tabIndex={-1}>
       {correct ? "⭕ 正解！" : "❌ 不正解…"}
     </h2>

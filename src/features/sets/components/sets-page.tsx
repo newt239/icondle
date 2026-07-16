@@ -15,7 +15,7 @@ export const SetsPage = ({ sets }: SetsPageProps) => (
       </Link>
     </header>
     <h1 className="text-2xl font-bold">収録アイコンセット</h1>
-    <p className="text-neutral-500">
+    <p className="text-muted">
       出題に使用している 12 セットの一覧です。セット名を選ぶと Iconify
       のセットページが開きます。サンプルのアイコンは表示のたびにランダムに変わります。
     </p>
@@ -34,7 +34,7 @@ export const SetsPage = ({ sets }: SetsPageProps) => (
               </a>
             </h2>
             <p className="text-sm">{set.origin}</p>
-            <p className="text-sm text-neutral-500">
+            <p className="text-muted text-sm">
               {set.grid}px グリッド・{set.style === "stroke" ? "線画" : "塗り"}・
               {set.iconCount.toLocaleString("ja-JP")} アイコン・
               {set.license.url === "" ? (
@@ -50,7 +50,7 @@ export const SetsPage = ({ sets }: SetsPageProps) => (
                 </a>
               )}
             </p>
-            <ul className="flex flex-wrap gap-3 text-neutral-900 dark:text-neutral-100">
+            <ul className="flex flex-wrap gap-3">
               {set.samples.map((sample) => (
                 <li
                   className="size-8 [&>svg]:size-full"

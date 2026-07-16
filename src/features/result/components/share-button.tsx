@@ -21,7 +21,7 @@ export const ShareButton = ({ text, path }: ShareButtonProps) => {
       <Button onPress={copy} variant="primary">
         結果をコピーして共有
       </Button>
-      <span aria-live="polite" className="text-sm text-neutral-500">
+      <span aria-live="polite" className="text-muted text-sm">
         {copied ? "コピーしました" : ""}
       </span>
     </div>

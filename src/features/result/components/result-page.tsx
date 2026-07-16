@@ -1,4 +1,4 @@
-import { Card, EmptyState } from "@heroui/react";
+import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
 import { ShareButton } from "./share-button";
@@ -12,8 +12,7 @@ type ResultPageProps = {
   sharePath: string;
 };
 
-const linkClassName =
-  "rounded-full bg-neutral-900 px-6 py-2 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900";
+const linkClassName = buttonVariants({ variant: "primary" });
 
 export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPageProps) => {
   if (!result.success) {
@@ -21,7 +20,7 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
       <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col items-center justify-center gap-6 px-4 py-8">
         <EmptyState className="gap-4">
           <h1 className="text-xl font-bold">結果を表示できません</h1>
-          <p className="text-neutral-500">{result.error}</p>
+          <p className="text-muted">{result.error}</p>
           <Link className={linkClassName} to={replayTo}>
             最初から遊ぶ
           </Link>
@@ -53,7 +52,7 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
               <span className="sr-only">{item.correct ? "正解" : "不正解"}</span>
               <span className="font-medium">第{item.n}問</span>
               <a
-                className="truncate text-neutral-500 underline underline-offset-2"
+                className="text-muted truncate underline underline-offset-2"
                 href={`https://icon-sets.iconify.design/${item.meta.setId}/${item.meta.icon}/`}
                 rel="noreferrer"
                 target="_blank"

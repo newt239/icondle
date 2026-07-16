@@ -1,2 +1,91 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+
+@layer base {
+  [data-theme="sky"] {
+    --background: oklch(97.02% 0.015 230.34);
+    --border: oklch(90% 0.015 230.34);
+    --default: oklch(94% 0.015 230.34);
+    --default-foreground: oklch(21.03% 0.0059 230.34);
+    --field-background: oklch(100% 0.0075 230.34);
+    --field-border: oklch(90% 0.015 230.34);
+    --field-foreground: oklch(21.03% 0.015 230.34);
+    --field-placeholder: oklch(55.17% 0.03 230.34);
+    --foreground: oklch(21.03% 0.015 230.34);
+    --link: oklch(21.03% 0.015 230.34);
+    --muted: oklch(55.17% 0.03 230.34);
+    --overlay: oklch(100% 0.0045 230.34);
+    --overlay-foreground: oklch(21.03% 0.015 230.34);
+    --scrollbar: oklch(87.1% 0.015 230.34);
+    --segment: oklch(100% 0.015 230.34);
+    --segment-foreground: oklch(21.03% 0.015 230.34);
+    --separator: oklch(92% 0.015 230.34);
+    --surface: oklch(100% 0.0075 230.34);
+    --surface-foreground: oklch(21.03% 0.015 230.34);
+    --surface-secondary: oklch(95.24% 0.0225 230.34);
+    --surface-secondary-foreground: oklch(21.03% 0.015 230.34);
+    --surface-tertiary: oklch(93.73% 0.0225 230.34);
+    --surface-tertiary-foreground: oklch(21.03% 0.015 230.34);
+    --accent: oklch(82.76% 0.1013 230.34);
+    --accent-foreground: oklch(15% 0.0203 230.34);
+    --focus: oklch(82.76% 0.1013 230.34);
+    --success: oklch(73.29% 0.1992 148.02);
+    --success-foreground: oklch(21.03% 0.0059 148.02);
+    --warning: oklch(78.19% 0.1631 69.51);
+    --warning-foreground: oklch(21.03% 0.0059 69.51);
+    --danger: oklch(65.32% 0.2398 22.91);
+    --danger-foreground: oklch(99.11% 0 0);
+    --chart-1: oklch(from var(--accent) calc(l - 0.24) c h);
+    --chart-2: oklch(from var(--accent) calc(l - 0.12) c h);
+    --chart-3: var(--accent);
+    --chart-4: oklch(from var(--accent) calc(l + 0.12) c h);
+    --chart-5: oklch(from var(--accent) calc(l + 0.24) c h);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-theme="sky"] {
+      color-scheme: dark;
+      --background: oklch(12% 0.015 230.34);
+      --border: oklch(28% 0.015 230.34);
+      --default: oklch(27.4% 0.015 230.34);
+      --default-foreground: oklch(99.11% 0 0);
+      --field-background: oklch(21.03% 0.03 230.34);
+      --field-border: oklch(28% 0.015 230.34);
+      --field-foreground: oklch(99.11% 0.015 230.34);
+      --field-placeholder: oklch(70.5% 0.03 230.34);
+      --foreground: oklch(99.11% 0.015 230.34);
+      --link: oklch(99.11% 0.015 230.34);
+      --muted: oklch(70.5% 0.03 230.34);
+      --overlay: oklch(21.03% 0.03 230.34);
+      --overlay-foreground: oklch(99.11% 0.015 230.34);
+      --scrollbar: oklch(70.5% 0.015 230.34);
+      --segment: oklch(39.64% 0.015 230.34);
+      --segment-foreground: oklch(99.11% 0.015 230.34);
+      --separator: oklch(25% 0.015 230.34);
+      --surface: oklch(21.03% 0.03 230.34);
+      --surface-foreground: oklch(99.11% 0.015 230.34);
+      --surface-secondary: oklch(25.7% 0.0225 230.34);
+      --surface-secondary-foreground: oklch(99.11% 0.015 230.34);
+      --surface-tertiary: oklch(27.21% 0.0225 230.34);
+      --surface-tertiary-foreground: oklch(99.11% 0.015 230.34);
+      --accent: oklch(82.76% 0.1013 230.34);
+      --accent-foreground: oklch(15% 0.0203 230.34);
+      --focus: oklch(82.76% 0.1013 230.34);
+      --success: oklch(73.29% 0.1992 148.02);
+      --success-foreground: oklch(21.03% 0.0059 148.02);
+      --warning: oklch(78.19% 0.1631 69.51);
+      --warning-foreground: oklch(21.03% 0.0059 69.51);
+      --danger: oklch(65.32% 0.2398 22.91);
+      --danger-foreground: oklch(99.11% 0 0);
+      --chart-1: oklch(from var(--accent) calc(l - 0.24) c h);
+      --chart-2: oklch(from var(--accent) calc(l - 0.12) c h);
+      --chart-3: var(--accent);
+      --chart-4: oklch(from var(--accent) calc(l + 0.12) c h);
+      --chart-5: oklch(from var(--accent) calc(l + 0.24) c h);
+      --backdrop: rgba(0, 0, 0, 0.6);
+      --surface-shadow: 0 0 0 0 transparent inset;
+      --overlay-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+      --field-shadow: 0 0 0 0 transparent inset;
+    }
+  }
+}

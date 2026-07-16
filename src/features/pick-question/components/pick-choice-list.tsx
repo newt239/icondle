@@ -20,10 +20,10 @@ const stateClassName = (
     return "";
   }
   if (index === answerIndex) {
-    return "outline-2 outline-offset-2 outline-green-600";
+    return "outline-2 outline-offset-2 outline-solid outline-success";
   }
   if (index === picked) {
-    return "outline-2 outline-offset-2 outline-red-600";
+    return "outline-2 outline-offset-2 outline-solid outline-danger";
   }
   return "";
 };
@@ -72,7 +72,7 @@ export const PickChoiceList = ({
               )}
             </span>
             <span
-              className="block size-16 text-neutral-900 sm:size-20 dark:text-neutral-100 [&>svg]:size-full"
+              className="block size-16 sm:size-20 [&>svg]:size-full"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </button>

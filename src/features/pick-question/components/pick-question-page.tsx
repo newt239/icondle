@@ -1,5 +1,6 @@
 import { useRef, useState, useTransition } from "react";
 
+import { buttonVariants } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
 import { QuestionProgress } from "#/components/question-progress";
@@ -21,8 +22,7 @@ type PickQuestionPageProps = {
   total: number;
 };
 
-const nextLinkClassName =
-  "self-end rounded-full bg-neutral-900 px-6 py-2 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900";
+const nextLinkClassName = `${buttonVariants({ variant: "primary" })} self-end`;
 
 export const PickQuestionPage = ({
   answers,
@@ -63,15 +63,13 @@ export const PickQuestionPage = ({
         <Link className="text-xl font-bold" to="/">
           Guess Icon
         </Link>
-        <p className="text-sm text-neutral-500">
+        <p className="text-muted text-sm">
           {n} / {total} 問
         </p>
       </header>
       <QuestionProgress n={n} total={total} />
-      <p className="text-center text-neutral-500">
-        この中で{" "}
-        <strong className="text-neutral-900 dark:text-neutral-100">{question.setLabel}</strong>{" "}
-        のアイコンはどれ？
+      <p className="text-muted text-center">
+        この中で <strong className="text-foreground">{question.setLabel}</strong> のアイコンはどれ？
       </p>
       <PickChoiceList
         answeredLabel={

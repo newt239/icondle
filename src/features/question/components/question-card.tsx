@@ -13,7 +13,7 @@ export const QuestionCard = ({ svg, answeredLabel }: QuestionCardProps) => {
   return (
     <Card className="items-center py-10">
       <div
-        className="size-32 text-neutral-900 sm:size-40 dark:text-neutral-100 [&>svg]:size-full"
+        className="size-32 sm:size-40 [&>svg]:size-full"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Card>

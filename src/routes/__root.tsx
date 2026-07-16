@@ -5,11 +5,19 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import appCss from "#/styles.css?url";
 
 const RootDocument = ({ children }: { children: ReactNode }) => (
-  <html lang="ja">
+  <html className="bg-background" data-theme="sky" lang="ja">
     <head>
       <HeadContent />
     </head>
-    <body>
+    <body className="text-foreground antialiased">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 hidden overflow-hidden lg:block"
+      >
+        <div className="bg-accent/25 absolute -top-40 -left-40 size-[32rem] rounded-full blur-3xl" />
+        <div className="bg-accent/15 absolute top-1/3 -right-48 size-[28rem] rounded-full blur-3xl" />
+        <div className="bg-accent/10 absolute -bottom-48 left-1/4 size-[26rem] rounded-full blur-3xl" />
+      </div>
       {children}
       <Scripts />
     </body>
