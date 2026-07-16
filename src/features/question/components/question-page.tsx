@@ -2,13 +2,12 @@ import { useRef, useState, useTransition } from "react";
 
 import { Link } from "@tanstack/react-router";
 
-import { gradeAnswer } from "#/lib/grade";
-
-import { useChoiceShortcuts } from "../../hooks/use-choice-shortcuts";
-import { ChoiceList } from "../choice-list";
-import { ExplanationPanel } from "../explanation-panel";
-import { QuestionCard } from "../question-card";
-import { QuestionProgress } from "../question-progress";
+import { useChoiceShortcuts } from "../hooks/use-choice-shortcuts";
+import { gradeAnswer } from "../lib/grade";
+import { ChoiceList } from "./choice-list";
+import { ExplanationPanel } from "./explanation-panel";
+import { QuestionCard } from "./question-card";
+import { QuestionProgress } from "./question-progress";
 
 import type { QuizMode } from "#/lib/quiz-config";
 import type { ClientQuestion, GradeResult } from "#/lib/quiz-types";

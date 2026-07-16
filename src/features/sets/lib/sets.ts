@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 
-import type { SetOverview } from "./quiz-types";
+import type { SetOverview } from "#/lib/quiz-types";
 
 export const getSetsOverview = createServerFn({ method: "GET" }).handler(
   async (): Promise<SetOverview[]> => {

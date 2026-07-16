@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { SetsPage } from "#/features/sets/components/sets-page";
-import { getSetsOverview } from "#/lib/sets";
+import { getSetsOverview } from "#/features/sets/lib/sets";
 
 const Sets = () => {
   const sets = Route.useLoaderData();

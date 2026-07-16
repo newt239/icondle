@@ -78,10 +78,10 @@ src/
 ├── features/               # 機能ベースのディレクトリ構成
 │   └── {feature-name}/
 │       ├── components/     # 機能固有のコンポーネント
-│       │   └── {component-name}/
-│       │       ├── {component-name}.tsx
-│       │       ├── {component-name}.spec.tsx
-│       │       └── index.ts
+│       │   ├── {component-name}.tsx
+│       │   └── {component-name}.spec.tsx
+│       ├── lib/            # 機能固有のロジック・server functions
+│       ├── hooks/          # 機能固有のカスタムフック
 │       ├── schemas/        # Zod スキーマ（バリデーション用）
 │       └── types/          # 機能固有の型定義
 ├── components/             # 汎用的に使用するコンポーネント
@@ -92,14 +92,14 @@ src/
 └── hooks/                  # グローバルカスタムフック（必要に応じて追加）
 ```
 
-- コンポーネントの名前はPascalCaseで命名し、ディレクトリ名はkebab-caseで命名してください。
-- 一つのディレクトリに複数のコンポーネントを配置してはなりません。コンポーネントごとに `{component-name}/` ディレクトリを作成し、`index.ts` からエクスポートしてください。
-- `src/routes/` のファイル名は TanStack Router の規約（`play.$seed.$n.tsx` など）に従います。
+- コンポーネントの名前はPascalCaseで命名し、ファイル名・ディレクトリ名はkebab-caseで命名してください。
+- コンポーネントは `{component-name}.tsx` として `components/` 直下にフラットに配置してください。コンポーネントごとのディレクトリやバレル `index.ts` は作成しないでください。
+- `src/routes/` は TanStack Router のディレクトリベース規約（`play/$seed/$n.tsx` など）に従います。
 
 ### Feature 内モジュールの参照制限
 
-- 各 feature 内の **lib**・**hooks**（feature 内に配置した場合）は、**その feature の外から呼び出してはなりません**。
-- 共通化したい処理は、`src/lib/` や `src/hooks/` などグローバルな層に配置し、必要な feature や app から参照してください。
+- 各 feature 内の **lib**・**hooks** は、**他の feature から呼び出してはなりません**。`src/routes/` はアプリ層のため、feature 内モジュール（components / lib）を参照して構いません。
+- 複数の feature で共通化したい処理は、`src/lib/` や `src/hooks/` などグローバルな層に配置し、必要な feature や app から参照してください。
 
 ### インポートとパスエイリアス
 

@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ResultPage } from "#/features/result/components/result-page";
-import { getRunResult } from "#/lib/grade";
+import { getRunResult } from "#/features/result/lib/run-result";
 import { isDateSeed } from "#/lib/quiz-config";
 import { quizSearchSchema } from "#/lib/search-schemas";
 

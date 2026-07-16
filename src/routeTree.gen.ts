@@ -11,12 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SetsRouteImport } from './routes/sets'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PlayIndexRouteImport } from './routes/play.index'
-import { Route as PlayHardIndexRouteImport } from './routes/play.hard.index'
-import { Route as PlaySeedResultRouteImport } from './routes/play.$seed.result'
-import { Route as PlaySeedNRouteImport } from './routes/play.$seed.$n'
-import { Route as PlayHardSeedResultRouteImport } from './routes/play.hard.$seed.result'
-import { Route as PlayHardSeedNRouteImport } from './routes/play.hard.$seed.$n'
+import { Route as PlayIndexRouteImport } from './routes/play/index'
+import { Route as PlayHardIndexRouteImport } from './routes/play/hard/index'
+import { Route as PlaySeedResultRouteImport } from './routes/play/$seed/result'
+import { Route as PlaySeedNRouteImport } from './routes/play/$seed/$n'
+import { Route as PlayHardSeedResultRouteImport } from './routes/play/hard/$seed/result'
+import { Route as PlayHardSeedNRouteImport } from './routes/play/hard/$seed/$n'
 
 const SetsRoute = SetsRouteImport.update({
   id: '/sets',

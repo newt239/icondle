@@ -23,6 +23,7 @@ ls:
     .stories.tsx: kebab-case
 
     routes:
+      .dir: regex:^[a-z0-9$_.-]+$
       .tsx: regex:^[a-z0-9$_.-]+$
 
   tests:

@@ -8,9 +8,9 @@ import {
   jstToday,
   PLAY_QUESTION_COUNT,
   questionCountFor,
-} from "./quiz-config";
+} from "#/lib/quiz-config";
 
-import type { ClientQuestion } from "./quiz-types";
+import type { ClientQuestion } from "#/lib/quiz-types";
 
 export const questionInputSchema = z
   .object({
@@ -26,6 +26,6 @@ export const getQuestion = createServerFn({ method: "GET" })
   .validator(questionInputSchema)
   .handler(async ({ data }): Promise<ClientQuestion> => {
     setResponseHeader("cache-control", "private, no-store");
-    const { dealQuestion } = await import("./deal.server");
+    const { dealQuestion } = await import("#/lib/deal.server");
     return dealQuestion(data.mode, data.seed, data.n);
   });

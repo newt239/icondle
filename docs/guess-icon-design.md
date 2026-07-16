@@ -212,7 +212,7 @@ export const quizSearchSchema = z.object({
   a: z.string().regex(/^[0-3]*$/).optional(),   // 回答履歴。.default("") は 307 リダイレクトを誘発する
 });
 
-// src/routes/play.$seed.$n.tsx
+// src/routes/play/$seed/$n.tsx
 export const Route = createFileRoute("/play/$seed/$n")({
   validateSearch: quizSearchSchema,
   headers: () => ({ "cache-control": "private, no-store" }),
@@ -238,12 +238,16 @@ TanStack Router の既定の search serializer は文字列値を JSON 引用符
 src/routes/
 ├── index.tsx                    /                         ← 今日のデイリー・難しいモードへのリンクを含む
 ├── sets.tsx                     /sets                     ← 収録アイコンセット一覧
-├── play.index.tsx               /play                     → seed 生成して 302（easy）
-├── play.$seed.$n.tsx            /play/:seed/:n            ← easy。seed が日付なら 5 問デイリー
-├── play.$seed.result.tsx        /play/:seed/result
-├── play.hard.index.tsx          /play/hard                → seed 生成して 302（hard）
-├── play.hard.$seed.$n.tsx       /play/hard/:seed/:n       ← hard。日付シードは 404
-└── play.hard.$seed.result.tsx   /play/hard/:seed/result
+└── play/
+    ├── index.tsx                /play                     → seed 生成して 302（easy）
+    ├── $seed/
+    │   ├── $n.tsx               /play/:seed/:n            ← easy。seed が日付なら 5 問デイリー
+    │   └── result.tsx           /play/:seed/result
+    └── hard/
+        ├── index.tsx            /play/hard                → seed 生成して 302（hard）
+        └── $seed/
+            ├── $n.tsx           /play/hard/:seed/:n       ← hard。日付シードは 404
+            └── result.tsx       /play/hard/:seed/result
 ```
 
 ### 5.2 出題（サーバー専用）
@@ -294,7 +298,7 @@ export function normalize(icon: { body: string; w: number; h: number }) {
 ### 5.4 判定
 
 ```ts
-// src/lib/grade.ts
+// src/features/question/lib/grade.ts（結果取得の getRunResult は src/features/result/lib/run-result.ts）
 export const gradeAnswer = createServerFn({ method: "POST" })
   .validator(gradeInputSchema)  // n <= questionCountFor(seed)、未来日付シード拒否を含む
   .handler(async ({ data }) => {

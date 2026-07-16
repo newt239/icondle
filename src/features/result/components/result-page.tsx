@@ -1,7 +1,7 @@
 import { Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
-import { ShareButton } from "../share-button";
+import { ShareButton } from "./share-button";
 
 import type { QuizMode } from "#/lib/quiz-config";
 import type { RunResult } from "#/lib/quiz-types";
