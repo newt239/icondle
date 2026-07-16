@@ -36,6 +36,18 @@ export const Route = createRootRoute({
       { content: "width=device-width, initial-scale=1", name: "viewport" },
       { title: "Icondle" },
     ],
+    scripts: [
+      {
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=G-210FRX6S6M",
+      },
+      {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-210FRX6S6M');`,
+      },
+    ],
   }),
   shellComponent: RootDocument,
 });

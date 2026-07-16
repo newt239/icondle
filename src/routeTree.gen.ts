@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SetsRouteImport } from './routes/sets'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlayIndexRouteImport } from './routes/play/index'
 import { Route as PickIndexRouteImport } from './routes/pick/index'
@@ -19,14 +20,27 @@ import { Route as PlaySeedResultRouteImport } from './routes/play/$seed/result'
 import { Route as PlaySeedNRouteImport } from './routes/play/$seed/$n'
 import { Route as PickSeedResultRouteImport } from './routes/pick/$seed/result'
 import { Route as PickSeedNRouteImport } from './routes/pick/$seed/$n'
+import { Route as PlaySeedShareIndexRouteImport } from './routes/play/$seed/share/index'
+import { Route as PickSeedShareIndexRouteImport } from './routes/pick/$seed/share/index'
 import { Route as PlayHardSeedResultRouteImport } from './routes/play/hard/$seed/result'
 import { Route as PlayHardSeedNRouteImport } from './routes/play/hard/$seed/$n'
+import { Route as PlaySeedShareOgRouteImport } from './routes/play/$seed/share/og'
 import { Route as PickHardSeedResultRouteImport } from './routes/pick/hard/$seed/result'
 import { Route as PickHardSeedNRouteImport } from './routes/pick/hard/$seed/$n'
+import { Route as PickSeedShareOgRouteImport } from './routes/pick/$seed/share/og'
+import { Route as PlayHardSeedShareIndexRouteImport } from './routes/play/hard/$seed/share/index'
+import { Route as PickHardSeedShareIndexRouteImport } from './routes/pick/hard/$seed/share/index'
+import { Route as PlayHardSeedShareOgRouteImport } from './routes/play/hard/$seed/share/og'
+import { Route as PickHardSeedShareOgRouteImport } from './routes/pick/hard/$seed/share/og'
 
 const SetsRoute = SetsRouteImport.update({
   id: '/sets',
   path: '/sets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -74,6 +88,16 @@ const PickSeedNRoute = PickSeedNRouteImport.update({
   path: '/pick/$seed/$n',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlaySeedShareIndexRoute = PlaySeedShareIndexRouteImport.update({
+  id: '/play/$seed/share/',
+  path: '/play/$seed/share/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PickSeedShareIndexRoute = PickSeedShareIndexRouteImport.update({
+  id: '/pick/$seed/share/',
+  path: '/pick/$seed/share/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlayHardSeedResultRoute = PlayHardSeedResultRouteImport.update({
   id: '/play/hard/$seed/result',
   path: '/play/hard/$seed/result',
@@ -82,6 +106,11 @@ const PlayHardSeedResultRoute = PlayHardSeedResultRouteImport.update({
 const PlayHardSeedNRoute = PlayHardSeedNRouteImport.update({
   id: '/play/hard/$seed/$n',
   path: '/play/hard/$seed/$n',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlaySeedShareOgRoute = PlaySeedShareOgRouteImport.update({
+  id: '/play/$seed/share/og',
+  path: '/play/$seed/share/og',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PickHardSeedResultRoute = PickHardSeedResultRouteImport.update({
@@ -94,9 +123,35 @@ const PickHardSeedNRoute = PickHardSeedNRouteImport.update({
   path: '/pick/hard/$seed/$n',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PickSeedShareOgRoute = PickSeedShareOgRouteImport.update({
+  id: '/pick/$seed/share/og',
+  path: '/pick/$seed/share/og',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayHardSeedShareIndexRoute = PlayHardSeedShareIndexRouteImport.update({
+  id: '/play/hard/$seed/share/',
+  path: '/play/hard/$seed/share/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PickHardSeedShareIndexRoute = PickHardSeedShareIndexRouteImport.update({
+  id: '/pick/hard/$seed/share/',
+  path: '/pick/hard/$seed/share/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayHardSeedShareOgRoute = PlayHardSeedShareOgRouteImport.update({
+  id: '/play/hard/$seed/share/og',
+  path: '/play/hard/$seed/share/og',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PickHardSeedShareOgRoute = PickHardSeedShareOgRouteImport.update({
+  id: '/pick/hard/$seed/share/og',
+  path: '/pick/hard/$seed/share/og',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/privacy': typeof PrivacyRoute
   '/sets': typeof SetsRoute
   '/pick/': typeof PickIndexRoute
   '/play/': typeof PlayIndexRoute
@@ -106,13 +161,22 @@ export interface FileRoutesByFullPath {
   '/play/$seed/result': typeof PlaySeedResultRoute
   '/pick/hard/': typeof PickHardIndexRoute
   '/play/hard/': typeof PlayHardIndexRoute
+  '/pick/$seed/share/og': typeof PickSeedShareOgRoute
   '/pick/hard/$seed/$n': typeof PickHardSeedNRoute
   '/pick/hard/$seed/result': typeof PickHardSeedResultRoute
+  '/play/$seed/share/og': typeof PlaySeedShareOgRoute
   '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
   '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
+  '/pick/$seed/share/': typeof PickSeedShareIndexRoute
+  '/play/$seed/share/': typeof PlaySeedShareIndexRoute
+  '/pick/hard/$seed/share/og': typeof PickHardSeedShareOgRoute
+  '/play/hard/$seed/share/og': typeof PlayHardSeedShareOgRoute
+  '/pick/hard/$seed/share/': typeof PickHardSeedShareIndexRoute
+  '/play/hard/$seed/share/': typeof PlayHardSeedShareIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/privacy': typeof PrivacyRoute
   '/sets': typeof SetsRoute
   '/pick': typeof PickIndexRoute
   '/play': typeof PlayIndexRoute
@@ -122,14 +186,23 @@ export interface FileRoutesByTo {
   '/play/$seed/result': typeof PlaySeedResultRoute
   '/pick/hard': typeof PickHardIndexRoute
   '/play/hard': typeof PlayHardIndexRoute
+  '/pick/$seed/share/og': typeof PickSeedShareOgRoute
   '/pick/hard/$seed/$n': typeof PickHardSeedNRoute
   '/pick/hard/$seed/result': typeof PickHardSeedResultRoute
+  '/play/$seed/share/og': typeof PlaySeedShareOgRoute
   '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
   '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
+  '/pick/$seed/share': typeof PickSeedShareIndexRoute
+  '/play/$seed/share': typeof PlaySeedShareIndexRoute
+  '/pick/hard/$seed/share/og': typeof PickHardSeedShareOgRoute
+  '/play/hard/$seed/share/og': typeof PlayHardSeedShareOgRoute
+  '/pick/hard/$seed/share': typeof PickHardSeedShareIndexRoute
+  '/play/hard/$seed/share': typeof PlayHardSeedShareIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/privacy': typeof PrivacyRoute
   '/sets': typeof SetsRoute
   '/pick/': typeof PickIndexRoute
   '/play/': typeof PlayIndexRoute
@@ -139,15 +212,24 @@ export interface FileRoutesById {
   '/play/$seed/result': typeof PlaySeedResultRoute
   '/pick/hard/': typeof PickHardIndexRoute
   '/play/hard/': typeof PlayHardIndexRoute
+  '/pick/$seed/share/og': typeof PickSeedShareOgRoute
   '/pick/hard/$seed/$n': typeof PickHardSeedNRoute
   '/pick/hard/$seed/result': typeof PickHardSeedResultRoute
+  '/play/$seed/share/og': typeof PlaySeedShareOgRoute
   '/play/hard/$seed/$n': typeof PlayHardSeedNRoute
   '/play/hard/$seed/result': typeof PlayHardSeedResultRoute
+  '/pick/$seed/share/': typeof PickSeedShareIndexRoute
+  '/play/$seed/share/': typeof PlaySeedShareIndexRoute
+  '/pick/hard/$seed/share/og': typeof PickHardSeedShareOgRoute
+  '/play/hard/$seed/share/og': typeof PlayHardSeedShareOgRoute
+  '/pick/hard/$seed/share/': typeof PickHardSeedShareIndexRoute
+  '/play/hard/$seed/share/': typeof PlayHardSeedShareIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/privacy'
     | '/sets'
     | '/pick/'
     | '/play/'
@@ -157,13 +239,22 @@ export interface FileRouteTypes {
     | '/play/$seed/result'
     | '/pick/hard/'
     | '/play/hard/'
+    | '/pick/$seed/share/og'
     | '/pick/hard/$seed/$n'
     | '/pick/hard/$seed/result'
+    | '/play/$seed/share/og'
     | '/play/hard/$seed/$n'
     | '/play/hard/$seed/result'
+    | '/pick/$seed/share/'
+    | '/play/$seed/share/'
+    | '/pick/hard/$seed/share/og'
+    | '/play/hard/$seed/share/og'
+    | '/pick/hard/$seed/share/'
+    | '/play/hard/$seed/share/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/privacy'
     | '/sets'
     | '/pick'
     | '/play'
@@ -173,13 +264,22 @@ export interface FileRouteTypes {
     | '/play/$seed/result'
     | '/pick/hard'
     | '/play/hard'
+    | '/pick/$seed/share/og'
     | '/pick/hard/$seed/$n'
     | '/pick/hard/$seed/result'
+    | '/play/$seed/share/og'
     | '/play/hard/$seed/$n'
     | '/play/hard/$seed/result'
+    | '/pick/$seed/share'
+    | '/play/$seed/share'
+    | '/pick/hard/$seed/share/og'
+    | '/play/hard/$seed/share/og'
+    | '/pick/hard/$seed/share'
+    | '/play/hard/$seed/share'
   id:
     | '__root__'
     | '/'
+    | '/privacy'
     | '/sets'
     | '/pick/'
     | '/play/'
@@ -189,14 +289,23 @@ export interface FileRouteTypes {
     | '/play/$seed/result'
     | '/pick/hard/'
     | '/play/hard/'
+    | '/pick/$seed/share/og'
     | '/pick/hard/$seed/$n'
     | '/pick/hard/$seed/result'
+    | '/play/$seed/share/og'
     | '/play/hard/$seed/$n'
     | '/play/hard/$seed/result'
+    | '/pick/$seed/share/'
+    | '/play/$seed/share/'
+    | '/pick/hard/$seed/share/og'
+    | '/play/hard/$seed/share/og'
+    | '/pick/hard/$seed/share/'
+    | '/play/hard/$seed/share/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PrivacyRoute: typeof PrivacyRoute
   SetsRoute: typeof SetsRoute
   PickIndexRoute: typeof PickIndexRoute
   PlayIndexRoute: typeof PlayIndexRoute
@@ -206,10 +315,18 @@ export interface RootRouteChildren {
   PlaySeedResultRoute: typeof PlaySeedResultRoute
   PickHardIndexRoute: typeof PickHardIndexRoute
   PlayHardIndexRoute: typeof PlayHardIndexRoute
+  PickSeedShareOgRoute: typeof PickSeedShareOgRoute
   PickHardSeedNRoute: typeof PickHardSeedNRoute
   PickHardSeedResultRoute: typeof PickHardSeedResultRoute
+  PlaySeedShareOgRoute: typeof PlaySeedShareOgRoute
   PlayHardSeedNRoute: typeof PlayHardSeedNRoute
   PlayHardSeedResultRoute: typeof PlayHardSeedResultRoute
+  PickSeedShareIndexRoute: typeof PickSeedShareIndexRoute
+  PlaySeedShareIndexRoute: typeof PlaySeedShareIndexRoute
+  PickHardSeedShareOgRoute: typeof PickHardSeedShareOgRoute
+  PlayHardSeedShareOgRoute: typeof PlayHardSeedShareOgRoute
+  PickHardSeedShareIndexRoute: typeof PickHardSeedShareIndexRoute
+  PlayHardSeedShareIndexRoute: typeof PlayHardSeedShareIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -219,6 +336,13 @@ declare module '@tanstack/react-router' {
       path: '/sets'
       fullPath: '/sets'
       preLoaderRoute: typeof SetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -284,6 +408,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PickSeedNRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/play/$seed/share/': {
+      id: '/play/$seed/share/'
+      path: '/play/$seed/share'
+      fullPath: '/play/$seed/share/'
+      preLoaderRoute: typeof PlaySeedShareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pick/$seed/share/': {
+      id: '/pick/$seed/share/'
+      path: '/pick/$seed/share'
+      fullPath: '/pick/$seed/share/'
+      preLoaderRoute: typeof PickSeedShareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play/hard/$seed/result': {
       id: '/play/hard/$seed/result'
       path: '/play/hard/$seed/result'
@@ -296,6 +434,13 @@ declare module '@tanstack/react-router' {
       path: '/play/hard/$seed/$n'
       fullPath: '/play/hard/$seed/$n'
       preLoaderRoute: typeof PlayHardSeedNRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/$seed/share/og': {
+      id: '/play/$seed/share/og'
+      path: '/play/$seed/share/og'
+      fullPath: '/play/$seed/share/og'
+      preLoaderRoute: typeof PlaySeedShareOgRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pick/hard/$seed/result': {
@@ -312,11 +457,47 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PickHardSeedNRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pick/$seed/share/og': {
+      id: '/pick/$seed/share/og'
+      path: '/pick/$seed/share/og'
+      fullPath: '/pick/$seed/share/og'
+      preLoaderRoute: typeof PickSeedShareOgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/hard/$seed/share/': {
+      id: '/play/hard/$seed/share/'
+      path: '/play/hard/$seed/share'
+      fullPath: '/play/hard/$seed/share/'
+      preLoaderRoute: typeof PlayHardSeedShareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pick/hard/$seed/share/': {
+      id: '/pick/hard/$seed/share/'
+      path: '/pick/hard/$seed/share'
+      fullPath: '/pick/hard/$seed/share/'
+      preLoaderRoute: typeof PickHardSeedShareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/hard/$seed/share/og': {
+      id: '/play/hard/$seed/share/og'
+      path: '/play/hard/$seed/share/og'
+      fullPath: '/play/hard/$seed/share/og'
+      preLoaderRoute: typeof PlayHardSeedShareOgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pick/hard/$seed/share/og': {
+      id: '/pick/hard/$seed/share/og'
+      path: '/pick/hard/$seed/share/og'
+      fullPath: '/pick/hard/$seed/share/og'
+      preLoaderRoute: typeof PickHardSeedShareOgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PrivacyRoute: PrivacyRoute,
   SetsRoute: SetsRoute,
   PickIndexRoute: PickIndexRoute,
   PlayIndexRoute: PlayIndexRoute,
@@ -326,10 +507,18 @@ const rootRouteChildren: RootRouteChildren = {
   PlaySeedResultRoute: PlaySeedResultRoute,
   PickHardIndexRoute: PickHardIndexRoute,
   PlayHardIndexRoute: PlayHardIndexRoute,
+  PickSeedShareOgRoute: PickSeedShareOgRoute,
   PickHardSeedNRoute: PickHardSeedNRoute,
   PickHardSeedResultRoute: PickHardSeedResultRoute,
+  PlaySeedShareOgRoute: PlaySeedShareOgRoute,
   PlayHardSeedNRoute: PlayHardSeedNRoute,
   PlayHardSeedResultRoute: PlayHardSeedResultRoute,
+  PickSeedShareIndexRoute: PickSeedShareIndexRoute,
+  PlaySeedShareIndexRoute: PlaySeedShareIndexRoute,
+  PickHardSeedShareOgRoute: PickHardSeedShareOgRoute,
+  PlayHardSeedShareOgRoute: PlayHardSeedShareOgRoute,
+  PickHardSeedShareIndexRoute: PickHardSeedShareIndexRoute,
+  PlayHardSeedShareIndexRoute: PlayHardSeedShareIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

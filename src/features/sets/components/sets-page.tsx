@@ -58,5 +58,8 @@ export const SetsPage = ({ sets }: SetsPageProps) => (
         </li>
       ))}
     </ul>
+    <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
+      ← トップに戻る
+    </Link>
   </main>
 );

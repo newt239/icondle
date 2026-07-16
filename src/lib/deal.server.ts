@@ -285,10 +285,14 @@ export const dealQuestion = (mode: QuizMode, seed: string, n: number): ClientQue
 };
 
 const answerFor = (dealt: Dealt): { answerIndex: number; meta: AnswerMeta } => {
-  const icons: AnswerIcon[] = dealt.concepts.map((concept) => ({
-    concept: concept.name,
-    icon: variantFor(concept, dealt.answerSet).name,
-  }));
+  const icons: AnswerIcon[] = dealt.concepts.map((concept, index) => {
+    const variant = variantFor(concept, dealt.answerSet);
+    return {
+      concept: concept.name,
+      icon: variant.name,
+      svg: normalize(variant, `正解アイコン${index + 1}`),
+    };
+  });
   const set = deck.sets[dealt.answerSet];
   return {
     answerIndex: dealt.answerIndex,

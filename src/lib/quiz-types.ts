@@ -29,6 +29,7 @@ export type RunResult =
 export type AnswerIcon = {
   concept: string;
   icon: string;
+  svg: string;
 };
 
 export type AnswerMeta = {
