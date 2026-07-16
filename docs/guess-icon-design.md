@@ -13,7 +13,7 @@
 
 主要 UI アイコンセット（フィルタ後アイコン数の上位 12 セット、→ §4.1）からアイコンを提示し、どのセット由来かを 4 択で当てる。フロントエンド開発者・デザイナー向け。
 
-**差別化は「解説」に置く。** 誤答時に、なぜそのセットなのかの根拠（グリッド、stroke-width、fill/stroke、セットの由来）を必ず提示する。既存のタイポグラフィ識別ゲーム（Typewar、I Shot the Serif）の最大の弱点がフィードバックの貧しさであり、解説が実務の目を養う価値そのものになる。
+回答直後のフィードバックは**正解のセット名とアイコン名のみ**に絞り、テンポを優先する（当初計画にあった詳細解説の chips・由来テキストはユーザー決定で廃止）。セットごとの由来・特性の紹介は `/sets`（収録アイコンセット一覧）に集約し、結果ページの各問から Iconify の該当アイコンページへリンクして深掘りできるようにする。
 
 バイラルの型は Wordle 派生から借りる: デイリー 1 セット、seed 共有、統計。
 
@@ -21,18 +21,21 @@
 
 | モード | 内容 | 状態 |
 |---|---|---|
-| **A. Set Guess** | アイコン 1 つ → 4 択でセット名。10 問 | ✅ 実装する |
-| **D. Daily** | 日替わり seed の 5 問 + 共有 | ✅ 実装する |
+| **A. Set Guess** | アイコン 1 つ → 4 択でセット名。10 問 | ✅ 実装済み |
+| **D. Daily** | 日替わり 5 問 + 共有。専用ルートは持たず `/play` の日付シード（YYYY-MM-DD）で実現 | ✅ 実装済み |
 | B. Odd One Out / C. Name Guess | — | ❌ スコープ外 |
+
+難易度（easy / hard）の区分は実装しない（ユーザー決定）。
 
 ---
 
 ## 2. 現在の実装状態
 
-TanStack Start + HeroUI v3 + Tailwind CSS v4 + Vite 8 + Cloudflare Workers（wrangler / @cloudflare/vite-plugin）の最小構成が構築済み。トップページのみ存在し、ビルド・codecheck・ユニットテスト・E2E テストが通る。
+TanStack Start + HeroUI v3 + Tailwind CSS v4 + Vite 8 + Cloudflare Workers（wrangler / @cloudflare/vite-plugin）。§4〜§7 の設計は実装済みで、ビルド・codecheck・ユニットテスト・E2E テストが通る。
 
-- `src/routes/` — `__root.tsx`（HTML シェル）と `index.tsx`（トップページ）のみ
-- `src/lib/prng.ts` — mulberry32 / hash 実装・テスト済み
+- `src/data/deck.ts` — 機械選定 12 セット / 1116 概念（raw 3.2 MB / gzip 721 KB）。deck-regen workflow で Dependabot に追従（→ §4.7）
+- `/play/$seed/$n` + `/play/$seed/result` — 出題・判定・結果・共有。デイリーは日付シードで同居（→ §5.1）
+- `/sets` — 収録アイコンセット一覧（由来・ライセンス・ランダムなサンプルアイコン・Iconify へのリンク）
 - DB なし。状態は URL の search params に持つ（→ §5.1）
 - **本番への初回デプロイは未実施**（`pnpm run deploy`）
 
@@ -53,7 +56,7 @@ AGENTS.md にも記載済み。実装全体を貫く制約。
 
 ---
 
-## 4. データ層設計（未実装）
+## 4. データ層設計
 
 ### 4.1 パッケージ選定
 
@@ -95,7 +98,7 @@ AGENTS.md にも記載済み。実装全体を貫く制約。
 
 ### 4.2 スタイルフィルタ
 
-同一セット内のスタイル・サイズ混在を排除し、**1 セット = 代表 1 スタイル**に正規化する。outline / regular があればそれを、なければ fill を代表とする（mdi / bi など）。この分類がそのまま難易度定義（→ §4.5）の stroke 系 / fill 系になる。
+同一セット内のスタイル・サイズ混在を排除し、**1 セット = 代表 1 スタイル**に正規化する。outline / regular があればそれを、なければ fill を代表とする（mdi / bi など）。この分類はセット特性（→ §4.5）として `/sets` の表示に使う。
 
 フィルタは候補セットごとの除外正規表現として `scripts/build-deck.ts` に保守する。例:
 
@@ -150,40 +153,27 @@ for (const concept of concepts) {
 }
 ```
 
-出題時の制約: 選択肢は互いに衝突しないセットからのみ選ぶ。衝突ペアを除いて 4 セット確保できない概念は、その難易度では出題しない。
+出題時の制約: 選択肢は互いに衝突しないセットからのみ選ぶ。衝突ペアを除いて 4 セット確保できない概念は出題しない。
 
-### 4.5 セット特性（解説・難易度の根拠データ）
+### 4.5 セット特性（`/sets` の根拠データ）
 
-機械的に導出できる特性（グリッド = `info.json` の `height`、stroke 系 / fill 系 = body の判定、stroke-width）は build-deck で採用セットぶんを自動抽出する。解説パネル用の由来・設計思想テキストのみ、採用が確定したセットに対して手で書く。検証済みの例:
-
-| セット | グリッド | stroke-width | cap | 塗り | 難度 |
-|---|---|---|---|---|---|
-| **lucide** | 24 | 2 | round | stroke | ★★★★★ |
-| **tabler** | 24 | 2 | round | stroke | ★★★★★ |
-| **heroicons** | 24 | 1.5 | round | stroke | ★★★ |
-| **ph** | **256** | — | — | **fill** | ★★ |
-| **bi** | **16** | — | — | **fill** | ★ |
+機械的に導出できる特性（グリッド = `info.json` の `height`、stroke 系 / fill 系 = body の判定、stroke-width、cap）は build-deck で採用セットぶんを自動抽出する。由来・設計思想テキスト（`SET_ORIGIN`）のみ、採用が確定したセットに対して手で書く。これらは `/sets`（収録アイコンセット一覧）で表示する。
 
 重要な帰結が 2 つある。
 
-1. **24px グリッド・stroke-width 2 のセット群（lucide / tabler / hugeicons 等）はメタ属性がほぼ同一。** 判別できるのは造形だけであり、解説パネルで「stroke-width が違います」とは言えない。この群の解説には由来と設計思想のテキストが要る
+1. **24px グリッド・stroke-width 2 のセット群（lucide / tabler / hugeicons 等）はメタ属性がほぼ同一。** 判別できるのは造形だけ。由来と設計思想のテキストが紹介価値を担う
 2. **viewBox はセットを一意に特定する。** サーバー側で viewBox を隠蔽しなければクイズが成立しない（→ §5.3）
-
-難易度定義（分類は §4.2 の代表スタイルから自動導出）:
-
-- **Easy** — fill 系（ph / bi / mdi 等）を 1 つ以上混ぜる。一目瞭然
-- **Hard** — stroke 系のみ。造形のみで判別
 
 ### 4.6 成果物
 
 ```
 scripts/build-deck.ts     # 事前実行、成果物をコミット
   ↓
-src/data/deck.ts          # export const deck = [...] as const
+src/data/deck.ts          # export const deck: Deck = {...}
                           # 採用セット一覧 + 生成時のパッケージバージョンも記録
 ```
 
-サーバー専用モジュールからのみ import する。TS リテラルで持って型で守る。旧 6 セット構成の実測は 371 KB（gzip 78.5 KB）。12 セット化でサイズは増えるが、サーバー専用（§3-3）のためクライアントには影響しない。Workers のバンドル上限（無料 3 MB gzip）に対しては十分な余裕を確認する。
+サーバー専用モジュールからのみ import する。巨大リテラルの `as const` は typecheck が破綻するため、明示型注釈で持つ。実測は raw 3.2 MB / gzip 721 KB。サーバー専用（§3-3）のためクライアントには影響せず、Workers のバンドル上限（無料 3 MB gzip）に対しても余裕がある（サーバーバンドル合計 gzip 約 886 KB）。
 
 ### 4.7 デッキ再生成の運用
 
@@ -198,7 +188,7 @@ deck.ts に記録した生成時バージョン（→ §4.6）が、再生成の
 
 ---
 
-## 5. アーキテクチャ設計（未実装）
+## 5. アーキテクチャ設計
 
 ### 5.1 URL 設計 — 状態は search params に持つ
 
@@ -209,26 +199,30 @@ deck.ts に記録した生成時バージョン（→ §4.6）が、再生成の
 /play/a7f3c2/2?a=2
 /play/a7f3c2/3?a=21
 /play/a7f3c2/result?a=2143012310
+/play/2026-07-16/1            ← デイリー（日付シード）
 ```
 
 ```ts
-// src/routes/play.$seed.$n.tsx
-const searchSchema = z.object({
-  a: z.string().regex(/^[0-3]*$/).default(""),   // 回答履歴
-  d: z.enum(["easy", "hard"]).default("easy"),
+// src/lib/search-schemas.ts（zod は Standard Schema としてそのまま渡す）
+export const quizSearchSchema = z.object({
+  a: z.string().regex(/^[0-3]*$/).optional(),   // 回答履歴。.default("") は 307 リダイレクトを誘発する
 });
 
+// src/routes/play.$seed.$n.tsx
 export const Route = createFileRoute("/play/$seed/$n")({
-  validateSearch: zodValidator(searchSchema),
-  params: {
-    parse: (p) => ({ seed: p.seed, n: z.coerce.number().min(1).max(10).parse(p.n) }),
-    stringify: (p) => ({ seed: p.seed, n: String(p.n) }),
+  validateSearch: quizSearchSchema,
+  headers: () => ({ "cache-control": "private, no-store" }),
+  loader: ({ params }) => {
+    // n の検証（1..questionCountFor(seed)）と未来日付シードの notFound はここで行う
+    return getQuestion({ data: { n, seed: params.seed } });
   },
-  loaderDeps: ({ search }) => ({ d: search.d }),
-  loader: ({ params, deps }) => dealQuestion(params.seed, params.n, deps.d),
-  component: QuestionPage,
+  component: PlayQuestion,
 });
 ```
+
+**デイリーは専用ルートを持たない。** seed が `YYYY-MM-DD` 形式なら 5 問モードとして扱い（`isDateSeed` / `questionCountFor`）、未来日付は 404 を返す（loader の `notFound()` に加え、server function の validator でも拒否して直接呼び出しによる先読みを防ぐ）。トップページが `jstToday()`（`Intl.DateTimeFormat` + `Asia/Tokyo`）で今日の日付を計算して `/play/{date}/1` へリンクする。
+
+TanStack Router の既定の search serializer は文字列値を JSON 引用符付き（`?a=%223%22`）にするため、`src/router.tsx` で URLSearchParams ベースの `parseSearch` / `stringifySearch` に差し替えている。
 
 利点: サーバー完全ステートレス・Cookie ゼロ、ブラウザバックが正しく動く、URL 共有で途中経過ごと渡せる。改竄可能だがランキングがないので実害ゼロ。
 
@@ -236,13 +230,11 @@ export const Route = createFileRoute("/play/$seed/$n")({
 
 ```
 src/routes/
-├── index.tsx                 /                    ← prerender
-├── play.tsx                  /play                → seed 生成して 302
-├── play.$seed.$n.tsx         /play/:seed/:n
-├── play.$seed.result.tsx     /play/:seed/result
-├── daily.tsx                 /daily               → /daily/:date へ 302 (JST)
-├── daily.$date.$n.tsx
-└── daily.$date.result.tsx
+├── index.tsx                 /                    ← 今日のデイリーへのリンクを含む
+├── sets.tsx                  /sets                ← 収録アイコンセット一覧
+├── play.index.tsx            /play                → seed 生成して 302
+├── play.$seed.$n.tsx         /play/:seed/:n       ← seed が日付なら 5 問デイリー
+└── play.$seed.result.tsx     /play/:seed/result
 ```
 
 ### 5.2 出題（サーバー専用）
@@ -252,20 +244,21 @@ src/routes/
 import { deck } from "#/data/deck";
 import { hash, mulberry32 } from "#/lib/prng";
 
-export function dealQuestion(seed: string, n: number, d: Difficulty): ClientQuestion {
-  const rng = mulberry32(hash(`${seed}:${n}:${d}`));
-  const { concept, sets } = pickConcept(rng, d);      // 衝突ペアを除外済み
-  const answer = sets[Math.floor(rng() * sets.length)];
+export const dealQuestion = (seed: string, n: number): ClientQuestion => {
+  const rng = mulberry32(hash(`${seed}:${n}`));
+  const { concept, sets, answerSet } = deal(rng);      // 衝突ペアを除外済み
   return {
-    svg: normalize(concept.variants[answer]),         // viewBox を隠蔽
-    choices: shuffle(rng, sets).map(SET_LABEL),
-  };                                                   // ← answerIndex は返さない
-}
+    svg: normalize(concept.variants[answerSet]),       // viewBox を隠蔽
+    choices: sets.map((id) => deck.sets[id].label),
+  };                                                    // ← answerIndex は返さない
+};
 
-export function dealAnswer(seed: string, n: number, d: Difficulty) {
+export const dealAnswer = (seed: string, n: number) => {
   // 同じ入力から同じ出題を再導出する。だから何も保存しなくていい
-}
+};
 ```
+
+loader は isomorphic（クライアント遷移時はクライアントで実行される）なので、deal.server を loader から直接呼ばず、`createServerFn({ method: "GET" })` の `getQuestion` でラップして呼ぶ。
 
 ### 5.3 SVG 正規化
 
@@ -289,27 +282,26 @@ export function normalize(icon: { body: string; w: number; h: number }) {
 ```ts
 // src/lib/grade.ts
 export const gradeAnswer = createServerFn({ method: "POST" })
-  .validator(z.object({
-    seed: z.string(), n: z.number(), d: difficultySchema, answer: z.number(),
-  }))
+  .validator(gradeInputSchema)  // n <= questionCountFor(seed)、未来日付シード拒否を含む
   .handler(async ({ data }) => {
-    const { answerIndex, meta } = dealAnswer(data.seed, data.n, data.d);
+    const { answerIndex, meta } = dealAnswer(data.seed, data.n);
     return {
       correct: answerIndex === data.answer,
       answerIndex,
-      meta,  // { set, icon, grid, strokeWidth, cap, filled, license, origin }
+      meta,  // { set, setId, icon, concept } のみ
+      success: true,
     };
   });
 ```
 
-`meta` がそのまま解説パネルの中身になる。エラーはスローせず結果オブジェクトで返す（§3-6）。
+解説パネルは `meta` のセット名とアイコン名のみを表示する。結果ページは `setId` と `icon` から Iconify のアイコンページ URL を組み立てる。エラーはスローせず結果オブジェクトで返す（§3-6）。
 
 ### 5.5 キャッシュと prerender
 
 - `/play/:seed/:n` は seed が同じなら永久に同じ問題（クイズ大会で全員に同じ seed を配る運用が成立する）
 - ただし `?a=` が付くとキャッシュキーが割れるため、**プレイ中の SSR HTML はキャッシュしない**（`private, no-store`）
-- **prerender は `/` のみ**。ビルド時データとリクエスト時データの境界を明示的に引く
-- **デイリーの日付は JST 固定**。Workers の TZ は UTC なので `Intl.DateTimeFormat` で `Asia/Tokyo` を明示する
+- **prerender は使わない**（ユーザー決定）
+- **デイリーの日付は JST 固定**。Workers の TZ は UTC なので `Intl.DateTimeFormat` で `Asia/Tokyo` を明示する（`src/lib/quiz-config.ts` の `jstToday`）
 
 ---
 
@@ -319,16 +311,11 @@ export const gradeAnswer = createServerFn({ method: "POST" })
 
 | 用途 | v3 コンポーネント | 備考 |
 |---|---|---|
-| 選択肢 | `button` または `toggle-button-group` | |
+| 選択肢 | ネイティブ `<button>` + `buttonVariants()` | React Aria の `Button` は `aria-keyshortcuts` を落とすため。no-JS フォールバックの `<form method="get">` とも相性が良い |
 | ショートカット表示 | `kbd` | `1`〜`4` |
-| 出題カード | `card` / `surface` | |
-| 進捗 | `progress-bar` | `aria-label` 必須 |
-| セット名・ライセンス | `chip` / `tag` | |
-| 難易度切替 | `tabs` | |
-| ヘルプ | `modal` | |
+| 出題カード・解説・一覧カード | `card` | |
+| 進捗 | `progress-bar` | `aria-label` 必須。`Track` + `Fill` を子に組む |
 | 結果なし状態 | `empty-state` | |
-| 見出し・本文 | `typography` / `header` | |
-| 解説の補足文 | `description` | |
 
 注意:
 
@@ -352,28 +339,14 @@ export const gradeAnswer = createServerFn({ method: "POST" })
 | **フォーカス管理** | 解答 → 解説見出しへ `tabindex="-1"` + `.focus()` |
 | **JS なし** | hydration 前のクリックを取りこぼさないよう `<form>` として成立させる |
 | **キーボード** | `1`〜`4` キー。`aria-keyshortcuts` で告知 |
-| **ライセンス表示** | 各セットのライセンスを解説パネルと footer に。`info.json` から自動生成 |
+| **ライセンス表示** | 各セットのライセンスは `/sets` に集約。`info.json` 由来のデータから表示 |
 
 ---
 
-## 8. 今後のタスク（実装順）
+## 8. 今後のタスク
 
-1. **本番への初回デプロイ** — `wrangler login` 後に `pnpm run deploy`。空アプリの時点で本番パイプラインを確立する
-2. **`scripts/build-deck.ts` → `src/data/deck.ts`** — 候補の `@iconify-json/*` を devDependencies に追加し、スタイルフィルタ適用後のアイコン数を実測して上位 12 セットを確定。概念抽出・body 衝突検出・`DENY` リスト適用・ライセンス情報とバージョンの記録（→ §4、付録）
-3. **deck-regen workflow** — Dependabot PR の `@iconify-json` 差分にフックして deck.ts を再生成・コミットする GitHub Actions（→ §4.7）。`workflow_dispatch` 付き
-4. **`deal.server.ts` + Vitest** — 全部純関数なので `vi.fn()` 不要。守る不変条件:
-   - 同一 seed は同一出題を返す
-   - 選択肢に重複がない
-   - 正解が必ず選択肢に含まれる
-   - 選択肢の全セットがその概念を持つ（消去法が成立しない）
-   - **選択肢に body 衝突ペアが同居しない（最重要）**
-   - `normalize()` の出力に元の viewBox が残っていない
-   - Easy は fill 系を 1 つ以上含む / Hard は outline 系のみ
-5. **`/play/$seed/$n` の SSR + `gradeAnswer`** — ルート群・searchSchema・解説パネル（→ §5）。zod を dependencies へ追加
-6. **HeroUI v3 適用** — 選択肢・進捗・kbd・解説パネルのスタイリング（→ §6）
-7. **`/daily/$date`** — JST 固定の日替わり seed
-8. **結果画面 + 共有** — クリップボードコピーは自前実装
-9. **概念の目視レビュー** — 出題概念を `DENY` リストで削る。矢印 8 種は初期除外
+1. **本番への初回デプロイ** — `wrangler login` 後に `pnpm run deploy`
+2. **概念の目視レビュー** — 出題概念を `DENY` リストで削る。矢印 8 種は除外済み。ブランドアイコン（例: linkedin）が残っているため拡充が必要
 
 ---
 
@@ -382,11 +355,12 @@ export const gradeAnswer = createServerFn({ method: "POST" })
 | リスク | 度合い | 対応 |
 |---|---|---|
 | 出題概念のうち、名前は同じでも意味が違うものが混ざる | 中 | 目視レビュー + `DENY` リスト |
-| 24px stroke 2px 系（lucide / tabler / hugeicons 等）が難しすぎて理不尽に感じる | 中 | Hard 限定にする。Easy は fill 系を必ず混ぜる。解説で由来を説明する |
-| 機械選定により知名度の低いセット（glyphs / mynaui 等）が採用される | 中 | 解説パネルで紹介する価値に転化する。ゲーム性を損なう場合は除外条件（ALLOW / DENY）をセット単位で追加 |
+| 24px stroke 2px 系（lucide / tabler / hugeicons 等）の出題が難しい | 中 | 難易度区分は設けず仕様として受け入れる。由来の紹介は `/sets` が担う |
+| 機械選定により知名度の低いセットが採用される | 中 | `/sets` で紹介する価値に転化する。ゲーム性を損なう場合は除外条件（ALLOW / DENY）をセット単位で追加 |
 | body 完全一致以外の「ほぼ同一」（1 パス違いなど）の存在 | 低 | ハッシュでは拾えない。プレイして気づいたら `DENY` へ |
 | TanStack Start の server function エラー処理（#6381） | 低 | 結果オブジェクト返しで回避（§3-6） |
 | HeroUI v3 のコンポーネント不足（Snippet 等） | 低 | `rac` サブパスから React Aria Components を直接使う |
+| **dev サーバーで、ルートの初回 SSR が notFound だと以降そのルートの SSR がハングする** | 低（dev のみ。本番ビルドでは発生しない） | E2E は `tests/e2e/warmup.setup.ts` で play ルートを正常系で先に SSR させてから実行する |
 
 ---
 
