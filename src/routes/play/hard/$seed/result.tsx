@@ -7,13 +7,16 @@ import { quizSearchSchema } from "#/lib/search-schemas";
 
 const PlayHardResult = () => {
   const { seed } = Route.useParams();
+  const { a } = Route.useSearch();
   const result = Route.useLoaderData();
   return (
     <ResultPage
+      answers={a ?? ""}
+      game="play"
+      mode="hard"
       replayTo="/play/hard"
       result={result}
-      shareLabel="Icondle Hard"
-      sharePath={`/play/hard/${seed}/1`}
+      seed={seed}
     />
   );
 };

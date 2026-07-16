@@ -1,6 +1,28 @@
+export type QuizGame = "play" | "pick";
+
 export type QuizMode = "easy" | "hard";
 
 export const isDateSeed = (seed: string): boolean => /^\d{4}-\d{2}-\d{2}$/.test(seed);
+
+export const quizBasePath = (
+  game: QuizGame,
+  mode: QuizMode,
+): "/play" | "/play/hard" | "/pick" | "/pick/hard" => {
+  if (game === "play") {
+    return mode === "hard" ? "/play/hard" : "/play";
+  }
+  return mode === "hard" ? "/pick/hard" : "/pick";
+};
+
+export const shareLabelFor = (game: QuizGame, mode: QuizMode, seed: string): string => {
+  if (game === "play") {
+    return mode === "hard" ? "Icondle Hard" : "Icondle";
+  }
+  if (mode === "hard") {
+    return "Icondle Pick Hard";
+  }
+  return isDateSeed(seed) ? `Icondle Daily ${seed}` : "Icondle Pick";
+};
 
 export const questionCountFor = (mode: QuizMode): number => (mode === "hard" ? 10 : 5);
 

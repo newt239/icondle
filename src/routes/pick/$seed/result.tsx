@@ -7,14 +7,16 @@ import { quizSearchSchema } from "#/lib/search-schemas";
 
 const PickResult = () => {
   const { seed } = Route.useParams();
+  const { a } = Route.useSearch();
   const result = Route.useLoaderData();
-  const shareLabel = isDateSeed(seed) ? `Icondle Daily ${seed}` : "Icondle Pick";
   return (
     <ResultPage
+      answers={a ?? ""}
+      game="pick"
+      mode="easy"
       replayTo="/pick"
       result={result}
-      shareLabel={shareLabel}
-      sharePath={`/pick/${seed}/1`}
+      seed={seed}
     />
   );
 };

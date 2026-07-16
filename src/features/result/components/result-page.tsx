@@ -1,20 +1,25 @@
 import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
+import { quizBasePath, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz-config";
+
 import { ShareButton } from "./share-button";
+import { TweetButton } from "./tweet-button";
 
 import type { RunResult } from "#/lib/quiz-types";
 
 type ResultPageProps = {
+  answers: string;
+  game: QuizGame;
+  mode: QuizMode;
   replayTo: "/play" | "/play/hard" | "/pick" | "/pick/hard";
   result: RunResult;
-  shareLabel: string;
-  sharePath: string;
+  seed: string;
 };
 
 const linkClassName = buttonVariants({ variant: "primary" });
 
-export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPageProps) => {
+export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: ResultPageProps) => {
   if (!result.success) {
     return (
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 py-8">
@@ -25,11 +30,17 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
             最初から遊ぶ
           </Link>
         </EmptyState>
+        <Link className="text-muted text-sm underline underline-offset-2" to="/">
+          ← トップに戻る
+        </Link>
       </main>
     );
   }
 
   const emojiRow = result.items.map((item) => (item.correct ? "🟩" : "❌")).join("");
+  const shareLabel = shareLabelFor(game, mode, seed);
+  const sharePath = `${quizBasePath(game, mode)}/${seed}/share?a=${encodeURIComponent(answers)}`;
+  const shareText = `${shareLabel} ${result.score}/${result.total}\n${emojiRow}`;
 
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
@@ -57,11 +68,16 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
                   <span key={icon.concept}>
                     {index > 0 && "・"}
                     <a
-                      className="underline underline-offset-2"
+                      className="inline-flex items-center gap-1 underline underline-offset-2"
                       href={`https://icon-sets.iconify.design/${item.meta.setId}/${icon.icon}/`}
                       rel="noreferrer"
                       target="_blank"
                     >
+                      <span
+                        aria-hidden="true"
+                        className="inline-block size-5 shrink-0 [&>svg]:size-full"
+                        dangerouslySetInnerHTML={{ __html: icon.svg }}
+                      />
                       {icon.icon}
                     </a>
                   </span>
@@ -71,15 +87,18 @@ export const ResultPage = ({ replayTo, result, shareLabel, sharePath }: ResultPa
           </li>
         ))}
       </ul>
-      <ShareButton
-        path={sharePath}
-        text={`${shareLabel} ${result.score}/${result.total}\n${emojiRow}`}
-      />
+      <div className="flex flex-wrap items-center gap-3">
+        <ShareButton path={sharePath} text={shareText} />
+        <TweetButton path={sharePath} text={shareText} />
+      </div>
       <div className="flex gap-4">
         <Link className={linkClassName} to={replayTo}>
           もう一度遊ぶ
         </Link>
       </div>
+      <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
+        ← トップに戻る
+      </Link>
     </main>
   );
 };
