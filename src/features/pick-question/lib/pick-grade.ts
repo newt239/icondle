@@ -1,13 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
-import {
-  isDateSeed,
-  isModeSeedAllowed,
-  jstToday,
-  PLAY_QUESTION_COUNT,
-  questionCountFor,
-} from "#/lib/quiz-config";
+import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/quiz-config";
 
 import type { GradeResult } from "#/lib/quiz-types";
 
@@ -15,11 +9,11 @@ export const pickGradeInputSchema = z
   .object({
     answer: z.number().int().min(0).max(3),
     mode: z.enum(["easy", "hard"]),
-    n: z.number().int().min(1).max(PLAY_QUESTION_COUNT),
+    n: z.number().int().min(1),
     seed: z.string().min(1).max(100),
   })
   .refine((data) => isModeSeedAllowed(data.mode, data.seed))
-  .refine((data) => data.n <= questionCountFor(data.seed))
+  .refine((data) => data.n <= questionCountFor(data.mode))
   .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
 export const gradePickAnswer = createServerFn({ method: "POST" })

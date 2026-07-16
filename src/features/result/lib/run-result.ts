@@ -2,22 +2,13 @@ import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 import { z } from "zod";
 
-import {
-  isDateSeed,
-  isModeSeedAllowed,
-  jstToday,
-  PLAY_QUESTION_COUNT,
-  questionCountFor,
-} from "#/lib/quiz-config";
+import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/quiz-config";
 
 import type { RunResult } from "#/lib/quiz-types";
 
 export const runResultInputSchema = z
   .object({
-    answers: z
-      .string()
-      .regex(/^[0-3]*$/)
-      .max(PLAY_QUESTION_COUNT),
+    answers: z.string().regex(/^[0-3]*$/),
     game: z.enum(["play", "pick"]),
     mode: z.enum(["easy", "hard"]),
     seed: z.string().min(1).max(100),
@@ -25,13 +16,14 @@ export const runResultInputSchema = z
   .refine((data) =>
     data.game === "play" ? !isDateSeed(data.seed) : isModeSeedAllowed(data.mode, data.seed),
   )
-  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
+  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday())
+  .refine((data) => data.answers.length <= questionCountFor(data.mode));
 
 export const getRunResult = createServerFn({ method: "GET" })
   .validator(runResultInputSchema)
   .handler(async ({ data }): Promise<RunResult> => {
     setResponseHeader("cache-control", "private, no-store");
-    const total = questionCountFor(data.seed);
+    const total = questionCountFor(data.mode);
     if (data.answers.length !== total) {
       return { error: "まだすべての問題に回答していません。", success: false };
     }

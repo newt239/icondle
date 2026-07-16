@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { generateSeed, isModeSeedAllowed } from "./quiz-config";
+import { generateSeed, isModeSeedAllowed, questionCountFor } from "./quiz-config";
+
+describe("questionCountFor", () => {
+  it("easy は 5 問、hard は 10 問を返す", () => {
+    expect(questionCountFor("easy")).toBe(5);
+    expect(questionCountFor("hard")).toBe(10);
+  });
+});
 
 describe("isModeSeedAllowed", () => {
   it("easy は任意のシードを許可する", () => {

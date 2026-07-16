@@ -18,7 +18,7 @@ const PickQuestion = () => {
       n={Number(n)}
       question={question}
       seed={seed}
-      total={questionCountFor(seed)}
+      total={questionCountFor("easy")}
     />
   );
 };
@@ -27,12 +27,7 @@ export const Route = createFileRoute("/pick/$seed/$n")({
   component: PickQuestion,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ params }) => {
-    const parsed = z.coerce
-      .number()
-      .int()
-      .min(1)
-      .max(questionCountFor(params.seed))
-      .safeParse(params.n);
+    const parsed = z.coerce.number().int().min(1).max(questionCountFor("easy")).safeParse(params.n);
     if (!parsed.success || (isDateSeed(params.seed) && params.seed > jstToday())) {
       throw notFound();
     }

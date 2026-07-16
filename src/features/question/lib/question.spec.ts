@@ -27,11 +27,17 @@ describe("questionInputSchema", () => {
     expect(questionInputSchema.safeParse({ n: 1, seed: "a7f3c2" }).success).toBe(false);
   });
 
-  it("n は 10 問まで受理する", () => {
-    expect(questionInputSchema.safeParse({ mode: "easy", n: 10, seed: "a7f3c2" }).success).toBe(
+  it("easy は 5 問、hard は 10 問まで受理する", () => {
+    expect(questionInputSchema.safeParse({ mode: "easy", n: 5, seed: "a7f3c2" }).success).toBe(
       true,
     );
-    expect(questionInputSchema.safeParse({ mode: "easy", n: 11, seed: "a7f3c2" }).success).toBe(
+    expect(questionInputSchema.safeParse({ mode: "easy", n: 6, seed: "a7f3c2" }).success).toBe(
+      false,
+    );
+    expect(questionInputSchema.safeParse({ mode: "hard", n: 10, seed: "a7f3c2" }).success).toBe(
+      true,
+    );
+    expect(questionInputSchema.safeParse({ mode: "hard", n: 11, seed: "a7f3c2" }).success).toBe(
       false,
     );
   });

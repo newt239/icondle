@@ -6,7 +6,7 @@ describe("runResultInputSchema", () => {
   it("play はランダムシードのみ受理し日付シードを拒否する", () => {
     expect(
       runResultInputSchema.safeParse({
-        answers: "0000000000",
+        answers: "00000",
         game: "play",
         mode: "easy",
         seed: "a7f3c2",
@@ -25,7 +25,7 @@ describe("runResultInputSchema", () => {
   it("pick の easy はランダムシードと日付シードの両方を受理する", () => {
     expect(
       runResultInputSchema.safeParse({
-        answers: "0000000000",
+        answers: "00000",
         game: "pick",
         mode: "easy",
         seed: "a7f3c2",
@@ -56,6 +56,25 @@ describe("runResultInputSchema", () => {
         game: "pick",
         mode: "hard",
         seed: "2020-01-01",
+      }).success,
+    ).toBe(false);
+  });
+
+  it("answers はモードの問題数を超えると拒否する", () => {
+    expect(
+      runResultInputSchema.safeParse({
+        answers: "0000000000",
+        game: "play",
+        mode: "easy",
+        seed: "a7f3c2",
+      }).success,
+    ).toBe(false);
+    expect(
+      runResultInputSchema.safeParse({
+        answers: "00000000000",
+        game: "play",
+        mode: "hard",
+        seed: "a7f3c2",
       }).success,
     ).toBe(false);
   });

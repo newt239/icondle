@@ -1,13 +1,8 @@
 export type QuizMode = "easy" | "hard";
 
-export const PLAY_QUESTION_COUNT = 10;
-
-const DAILY_QUESTION_COUNT = 5;
-
 export const isDateSeed = (seed: string): boolean => /^\d{4}-\d{2}-\d{2}$/.test(seed);
 
-export const questionCountFor = (seed: string): number =>
-  isDateSeed(seed) ? DAILY_QUESTION_COUNT : PLAY_QUESTION_COUNT;
+export const questionCountFor = (mode: QuizMode): number => (mode === "hard" ? 10 : 5);
 
 export const isModeSeedAllowed = (mode: QuizMode, seed: string): boolean =>
   mode === "easy" || !isDateSeed(seed);
