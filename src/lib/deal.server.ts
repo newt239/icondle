@@ -101,16 +101,10 @@ export const dealAnswer = (seed: string, n: number): { answerIndex: number; meta
   return {
     answerIndex: dealt.answerIndex,
     meta: {
-      cap: set.cap,
       concept: dealt.concept.name,
-      grid: set.grid,
       icon: variant.name,
-      license: set.license,
-      origin: set.origin,
       set: set.label,
       setId: set.id,
-      strokeWidth: set.strokeWidth,
-      style: set.style,
     },
   };
 };

@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
 
-import { Card, Chip } from "@heroui/react";
+import { Card } from "@heroui/react";
 
 import type { AnswerMeta } from "#/lib/quiz-types";
 
@@ -18,27 +18,5 @@ export const ExplanationPanel = ({ correct, meta, headingRef }: ExplanationPanel
     <p>
       これは <strong>{meta.set}</strong> の <strong>{meta.icon}</strong> アイコンです。
     </p>
-    <div className="flex flex-wrap gap-2">
-      <Chip color="default" variant="soft">
-        {meta.grid}px グリッド
-      </Chip>
-      <Chip color="default" variant="soft">
-        {meta.style === "stroke" ? "線画" : "塗り"}
-      </Chip>
-      {meta.strokeWidth !== null && (
-        <Chip color="default" variant="soft">
-          stroke-width {meta.strokeWidth}
-        </Chip>
-      )}
-      {meta.cap !== null && (
-        <Chip color="default" variant="soft">
-          cap {meta.cap}
-        </Chip>
-      )}
-      <Chip color="accent" variant="soft">
-        {meta.license.spdx === "" ? meta.license.title : meta.license.spdx}
-      </Chip>
-    </div>
-    {meta.origin !== "" && <p className="text-sm text-neutral-500">{meta.origin}</p>}
   </Card>
 );

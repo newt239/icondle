@@ -96,11 +96,10 @@ describe("dealAnswer", () => {
     }
   });
 
-  it("meta が解説パネルに必要な情報を持つ", () => {
+  it("meta が解説とリンク生成に必要な情報を持つ", () => {
     const { meta } = dealAnswer("seed-meta", 1);
     expect(meta.set.length).toBeGreaterThan(0);
     expect(meta.icon.length).toBeGreaterThan(0);
-    expect(meta.license.title.length).toBeGreaterThan(0);
-    expect(meta.grid).toBeGreaterThan(0);
+    expect(Object.keys(deck.sets)).toContain(meta.setId);
   });
 });

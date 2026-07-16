@@ -1,4 +1,4 @@
-import { Card, Chip, EmptyState } from "@heroui/react";
+import { Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
 import { ShareButton } from "../share-button";
@@ -51,12 +51,14 @@ export const ResultPage = ({ result, shareLabel, sharePath }: ResultPageProps) =
               <span aria-hidden="true">{item.correct ? "⭕" : "❌"}</span>
               <span className="sr-only">{item.correct ? "正解" : "不正解"}</span>
               <span className="font-medium">第{item.n}問</span>
-              <span className="truncate text-neutral-500">
+              <a
+                className="truncate text-neutral-500 underline underline-offset-2"
+                href={`https://icon-sets.iconify.design/${item.meta.setId}/${item.meta.icon}/`}
+                rel="noreferrer"
+                target="_blank"
+              >
                 {item.meta.set} の {item.meta.icon}
-              </span>
-              <Chip className="ml-auto" color="default" variant="soft">
-                {item.meta.style === "stroke" ? "線画" : "塗り"}
-              </Chip>
+              </a>
             </Card>
           </li>
         ))}

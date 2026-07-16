@@ -49,6 +49,7 @@ test.describe("プレイモード", () => {
     await page.goto("/play/e2etest/result?a=0000000000");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
     await expect(page.getByRole("button", { name: "結果をコピーして共有" })).toBeVisible();
+    await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(10);
   });
 
   test("回答が揃っていない結果ページは空状態を表示する", async ({ page }) => {

@@ -24,10 +24,4 @@ export type AnswerMeta = {
   setId: string;
   icon: string;
   concept: string;
-  grid: number;
-  style: "stroke" | "fill";
-  strokeWidth: number | null;
-  cap: string | null;
-  license: { spdx: string; title: string; url: string };
-  origin: string;
 };
