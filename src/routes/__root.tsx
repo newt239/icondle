@@ -5,13 +5,14 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import appCss from "#/styles.css?url";
 
 const RootDocument = ({ children }: { children: ReactNode }) => (
-  <html className="bg-background bg-grid-pattern" data-theme="sky" lang="ja">
+  <html className="bg-background" data-theme="sky" lang="ja">
     <head>
       <HeadContent />
     </head>
     <body className="text-foreground antialiased">
-      <div className="min-h-dvh p-1.5 sm:p-3 lg:p-6">
-        <div className="border-border bg-background mx-auto flex min-h-[calc(100dvh-0.75rem)] w-full max-w-2xl flex-col rounded-2xl border sm:min-h-[calc(100dvh-1.5rem)] lg:min-h-[calc(100dvh-3rem)]">
+      <div aria-hidden="true" className="bg-grid-pattern pointer-events-none fixed inset-0 -z-10" />
+      <div className="px-1.5 sm:px-3 lg:px-6">
+        <div className="border-border bg-background mx-auto flex min-h-dvh w-full max-w-2xl flex-col border-x">
           {children}
         </div>
       </div>
