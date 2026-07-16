@@ -23,6 +23,9 @@ const Home = () => {
           今日のデイリー
         </Link>
       </div>
+      <Link className="text-sm text-neutral-500 underline underline-offset-2" to="/sets">
+        収録アイコンセット
+      </Link>
     </main>
   );
 };

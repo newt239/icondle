@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SetsRouteImport } from './routes/sets'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlayIndexRouteImport } from './routes/play.index'
 import { Route as PlaySeedResultRouteImport } from './routes/play.$seed.result'
 import { Route as PlaySeedNRouteImport } from './routes/play.$seed.$n'
 
+const SetsRoute = SetsRouteImport.update({
+  id: '/sets',
+  path: '/sets',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const PlaySeedNRoute = PlaySeedNRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/sets': typeof SetsRoute
   '/play/': typeof PlayIndexRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sets': typeof SetsRoute
   '/play': typeof PlayIndexRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
@@ -50,20 +58,28 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/sets': typeof SetsRoute
   '/play/': typeof PlayIndexRoute
   '/play/$seed/$n': typeof PlaySeedNRoute
   '/play/$seed/result': typeof PlaySeedResultRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
+  fullPaths: '/' | '/sets' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/play' | '/play/$seed/$n' | '/play/$seed/result'
-  id: '__root__' | '/' | '/play/' | '/play/$seed/$n' | '/play/$seed/result'
+  to: '/' | '/sets' | '/play' | '/play/$seed/$n' | '/play/$seed/result'
+  id:
+    | '__root__'
+    | '/'
+    | '/sets'
+    | '/play/'
+    | '/play/$seed/$n'
+    | '/play/$seed/result'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SetsRoute: typeof SetsRoute
   PlayIndexRoute: typeof PlayIndexRoute
   PlaySeedNRoute: typeof PlaySeedNRoute
   PlaySeedResultRoute: typeof PlaySeedResultRoute
@@ -71,6 +87,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sets': {
+      id: '/sets'
+      path: '/sets'
+      fullPath: '/sets'
+      preLoaderRoute: typeof SetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +127,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SetsRoute: SetsRoute,
   PlayIndexRoute: PlayIndexRoute,
   PlaySeedNRoute: PlaySeedNRoute,
   PlaySeedResultRoute: PlaySeedResultRoute,
