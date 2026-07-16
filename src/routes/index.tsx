@@ -16,29 +16,37 @@ const Home = () => {
         今日の問題に挑戦
       </Link>
       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
-        <Card className="items-start gap-3 p-6">
+        <Card<"a">
+          className="group focus-visible:outline-focus gap-3 p-6 transition-shadow outline-none hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
+          render={(props) => <Link {...props} to="/play" />}
+        >
           <h2 className="font-bold">セット名を当てる</h2>
           <p className="text-muted text-sm">表示されたアイコンのセット名を 4 択から選ぶ</p>
-          <div className="flex w-full flex-wrap justify-end gap-2">
-            <Link className={buttonVariants({ size: "sm", variant: "ghost" })} to="/play/hard">
-              むずかしい
-            </Link>
-            <Link className={buttonVariants({ size: "sm", variant: "primary" })} to="/play">
-              プレイする
-            </Link>
-          </div>
+          <span className="mt-auto self-end text-sm font-medium">
+            プレイする{" "}
+            <span
+              aria-hidden="true"
+              className="inline-block transition-transform group-hover:translate-x-0.5"
+            >
+              →
+            </span>
+          </span>
         </Card>
-        <Card className="items-start gap-3 p-6">
+        <Card<"a">
+          className="group focus-visible:outline-focus gap-3 p-6 transition-shadow outline-none hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
+          render={(props) => <Link {...props} to="/pick" />}
+        >
           <h2 className="font-bold">アイコンを当てる</h2>
           <p className="text-muted text-sm">セット名に合うアイコンを 4 つから選ぶ</p>
-          <div className="flex w-full flex-wrap justify-end gap-2">
-            <Link className={buttonVariants({ size: "sm", variant: "ghost" })} to="/pick/hard">
-              むずかしい
-            </Link>
-            <Link className={buttonVariants({ size: "sm", variant: "primary" })} to="/pick">
-              プレイする
-            </Link>
-          </div>
+          <span className="mt-auto self-end text-sm font-medium">
+            プレイする{" "}
+            <span
+              aria-hidden="true"
+              className="inline-block transition-transform group-hover:translate-x-0.5"
+            >
+              →
+            </span>
+          </span>
         </Card>
       </div>
       <Link className="text-muted text-sm underline underline-offset-2" to="/sets">
