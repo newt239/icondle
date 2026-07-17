@@ -130,6 +130,9 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
           もっとプレイする
         </Link>
       </div>
+      <Link className="text-muted text-center text-sm underline underline-offset-2" to="/sets">
+        収録アイコンセットを確認する
+      </Link>
     </main>
   );
 };

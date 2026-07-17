@@ -1,5 +1,7 @@
-import { Card } from "@heroui/react";
+import { Disclosure } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
+
+import { SetCard } from "./set-card";
 
 import type { SetOverview } from "#/lib/quiz-types";
 
@@ -7,59 +9,45 @@ type SetsPageProps = {
   sets: SetOverview[];
 };
 
-export const SetsPage = ({ sets }: SetsPageProps) => (
-  <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-8">
-    <header className="flex items-center justify-between gap-4">
-      <Link className="text-xl font-bold" to="/">
-        Icondle
+export const SetsPage = ({ sets }: SetsPageProps) => {
+  const easySets = sets.filter((set) => set.difficulty === "easy");
+  const hardOnlySets = sets.filter((set) => set.difficulty === "hard");
+
+  return (
+    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-8">
+      <header className="flex items-center justify-between gap-4">
+        <Link className="text-xl font-bold" to="/">
+          Icondle
+        </Link>
+      </header>
+      <h1 className="text-2xl font-bold">収録アイコンセット</h1>
+      <ul className="flex flex-col gap-4">
+        {easySets.map((set) => (
+          <li key={set.id}>
+            <SetCard set={set} />
+          </li>
+        ))}
+      </ul>
+      <Disclosure>
+        <Disclosure.Heading className="flex justify-center">
+          <Disclosure.Trigger className="bg-surface-secondary text-surface-secondary-foreground flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium">
+            Hardモード
+            <Disclosure.Indicator />
+          </Disclosure.Trigger>
+        </Disclosure.Heading>
+        <Disclosure.Content className="pt-6">
+          <ul className="flex flex-col gap-4">
+            {hardOnlySets.map((set) => (
+              <li key={set.id}>
+                <SetCard set={set} />
+              </li>
+            ))}
+          </ul>
+        </Disclosure.Content>
+      </Disclosure>
+      <Link className="text-muted mt-4 text-center text-sm underline underline-offset-2" to="/">
+        ← トップに戻る
       </Link>
-    </header>
-    <h1 className="text-2xl font-bold">収録アイコンセット</h1>
-    <ul className="flex flex-col gap-4">
-      {sets.map((set) => (
-        <li key={set.id}>
-          <Card className="gap-3 p-6">
-            <h2 className="text-lg font-bold">
-              <a
-                className="underline underline-offset-2"
-                href={`https://icon-sets.iconify.design/${set.id}/`}
-                rel="noreferrer"
-                target="_blank"
-              >
-                {set.label}
-              </a>
-            </h2>
-            <p className="text-muted text-sm">
-              {set.grid}px グリッド・{set.iconCount.toLocaleString("ja-JP")} アイコン・
-              {set.license.url === "" ? (
-                set.license.title
-              ) : (
-                <a
-                  className="underline underline-offset-2"
-                  href={set.license.url}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  {set.license.title}
-                </a>
-              )}
-            </p>
-            <ul className="flex flex-wrap gap-3">
-              {set.samples.map((sample) => (
-                <li
-                  className="size-8 [&>svg]:size-full"
-                  dangerouslySetInnerHTML={{ __html: sample.svg }}
-                  key={sample.name}
-                  title={sample.name}
-                />
-              ))}
-            </ul>
-          </Card>
-        </li>
-      ))}
-    </ul>
-    <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
-      ← トップに戻る
-    </Link>
-  </main>
-);
+    </main>
+  );
+};
