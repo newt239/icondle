@@ -10,14 +10,7 @@ const SEED_COUNT = 30;
 const QUESTION_COUNT = 10;
 const MODES: QuizMode[] = ["easy", "hard"];
 
-const EASY_SET_IDS: SetId[] = [
-  "fluent",
-  "material-symbols",
-  "tabler",
-  "lucide",
-  "carbon",
-  "fa6-regular",
-];
+const EASY_SET_IDS: SetId[] = ["fluent", "material-symbols", "tabler", "lucide", "carbon", "bi"];
 
 const cases: [QuizMode, string, number][] = [];
 for (const mode of MODES) {
@@ -45,9 +38,9 @@ const conceptByName = (name: string): Concept | undefined =>
 const stripLabel = (svg: string): string => svg.replace(/aria-label="[^"]*"/, "");
 
 describe("deck", () => {
-  it("14 セットを収録し easy セットをすべて含む", () => {
+  it("15 セットを収録し easy セットをすべて含む", () => {
     const setIds = Object.keys(deck.sets);
-    expect(setIds).toHaveLength(14);
+    expect(setIds).toHaveLength(15);
     for (const setId of EASY_SET_IDS) {
       expect(setIds).toContain(setId);
     }

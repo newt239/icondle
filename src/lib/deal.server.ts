@@ -22,7 +22,7 @@ export const EASY_SET_IDS: ReadonlySet<SetId> = new Set([
   "tabler",
   "lucide",
   "carbon",
-  "fa6-regular",
+  "bi",
 ]);
 
 const isSetId = (value: string): value is SetId => value in deck.sets;

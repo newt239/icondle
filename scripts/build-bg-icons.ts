@@ -15,7 +15,6 @@ const SET_IDS = [
   "bi",
   "boxicons",
   "carbon",
-  "fa6-regular",
   "fluent",
   "heroicons",
   "hugeicons",
@@ -24,8 +23,10 @@ const SET_IDS = [
   "lucide",
   "material-symbols",
   "mingcute",
+  "ph",
   "ri",
   "tabler",
+  "uil",
 ] as const;
 
 const readJson = (specifier: string): unknown => {
