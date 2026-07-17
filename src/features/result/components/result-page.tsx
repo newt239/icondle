@@ -4,6 +4,7 @@ import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
 import { BackToTopLink } from "#/components/back-to-top-link";
+import { calculateDailyStreak } from "#/features/result/lib/daily-streak";
 import {
   isDateSeed,
   jstToday,
@@ -13,7 +14,6 @@ import {
 } from "#/lib/quiz-config";
 import { savePlayHistoryEntry } from "#/lib/quiz-history";
 
-import { calculateDailyStreak } from "../lib/daily-streak";
 import { DailyStreakDialog } from "./daily-streak-dialog";
 import { TweetButton } from "./tweet-button";
 
