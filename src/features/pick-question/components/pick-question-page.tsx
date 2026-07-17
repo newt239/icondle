@@ -53,7 +53,7 @@ export const PickQuestionPage = ({
 
   const answered = result?.success === true ? result : null;
   const isLast = n >= total;
-  const nextAnswers = picked === null ? answers : `${answers}${picked}`;
+  const nextAnswers = answered === null ? answers : `${answers}${answered.encodedAnswer}`;
   const pickBase = mode === "hard" ? `/pick/hard/${seed}` : `/pick/${seed}`;
   const nextFormAction = isLast ? `${pickBase}/result` : `${pickBase}/${n + 1}`;
 

@@ -29,16 +29,23 @@ export const getRunResult = createServerFn({ method: "GET" })
     }
     try {
       const { dealAnswer, dealPickAnswer } = await import("#/lib/deal.server");
+      const { decodeAnswer } = await import("#/lib/answer-cipher.server");
       const dealAnswerFor = data.game === "pick" ? dealPickAnswer : dealAnswer;
-      const items = Array.from(data.answers, (picked, index) => {
+      const secretKey = process.env.ANSWER_CIPHER_SECRET ?? "";
+      const items = Array.from(data.answers, (encodedChar, index) => {
         const n = index + 1;
         const { answerIndex, meta } = dealAnswerFor(data.mode, data.seed, n);
+        const picked = decodeAnswer(
+          secretKey,
+          { game: data.game, mode: data.mode, n, seed: data.seed },
+          Number(encodedChar),
+        );
         return {
           answerIndex,
-          correct: Number(picked) === answerIndex,
+          correct: picked === answerIndex,
           meta,
           n,
-          picked: Number(picked),
+          picked,
         };
       });
       return {

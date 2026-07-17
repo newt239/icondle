@@ -13,7 +13,13 @@ export type PickClientQuestion = {
 };
 
 export type GradeResult =
-  | { success: true; correct: boolean; answerIndex: number; meta: AnswerMeta }
+  | {
+      success: true;
+      correct: boolean;
+      answerIndex: number;
+      encodedAnswer: number;
+      meta: AnswerMeta;
+    }
   | { success: false; error: string };
 
 export type PickGradeResult =
@@ -21,6 +27,7 @@ export type PickGradeResult =
       success: true;
       correct: boolean;
       answerIndex: number;
+      encodedAnswer: number;
       meta: AnswerMeta;
       choiceLabels: [string, string, string, string];
     }

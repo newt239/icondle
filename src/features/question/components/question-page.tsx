@@ -47,7 +47,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
 
   const answered = result?.success === true ? result : null;
   const isLast = n >= total;
-  const nextAnswers = picked === null ? answers : `${answers}${picked}`;
+  const nextAnswers = answered === null ? answers : `${answers}${answered.encodedAnswer}`;
   const playBase = mode === "hard" ? `/play/hard/${seed}` : `/play/${seed}`;
   const nextFormAction = isLast ? `${playBase}/result` : `${playBase}/${n + 1}`;
 
