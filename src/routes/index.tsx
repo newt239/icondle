@@ -8,16 +8,18 @@ const Home = () => {
   const { today } = Route.useLoaderData();
   return (
     <>
-      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-8 px-4 py-8">
-        <h1 className="text-4xl font-bold">Icondle</h1>
+      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center gap-6 px-4 pb-8">
+        <div className="flex h-[40svh] w-full items-center justify-center">
+          <h1 className="text-4xl font-bold">Icondle</h1>
+        </div>
         <Link
           className={buttonVariants({ size: "lg", variant: "primary" })}
           params={{ n: "1", seed: today }}
           to="/pick/$seed/$n"
         >
-          今日の問題に挑戦
+          今日の問題に挑戦する
         </Link>
-        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
           <Card<"a">
             className="group focus-visible:outline-focus gap-3 p-6 transition-shadow outline-none hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2"
             render={(props) => <Link {...props} to="/play" />}

@@ -69,7 +69,7 @@ export const PickQuestionPage = ({
       </header>
       <QuestionProgress n={n} total={total} />
       <p className="text-muted text-center">
-        この中で <strong className="text-foreground">{question.setLabel}</strong> のアイコンはどれ？
+        <strong className="text-foreground">{question.setLabel}</strong> のアイコンは？
       </p>
       <PickChoiceList
         answeredLabels={
