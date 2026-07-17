@@ -177,6 +177,19 @@ describe("dealAnswer", () => {
     }
   });
 
+  it("n を逆順に取得しても昇順取得と同一の判定情報を返す", () => {
+    for (const mode of MODES) {
+      const seed = "reverse-access";
+      const descending = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+        dealAnswer(mode, seed, QUESTION_COUNT - index),
+      ).toReversed();
+      const ascending = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+        dealAnswer(mode, seed, index + 1),
+      );
+      expect(descending).toEqual(ascending);
+    }
+  });
+
   it("多数の seed で最終問まで出題を形成できる", () => {
     for (const mode of MODES) {
       for (let s = 0; s < 100; s += 1) {

@@ -209,25 +209,56 @@ const formGroup = ({ mode, pool, order, used }: GroupInput): Group | null => {
   }
 };
 
+type GroupCacheEntry = {
+  groups: Group[];
+  order: number[];
+  used: Set<number>;
+};
+
+const GROUP_CACHE_LIMIT = 100;
+const groupCache = new Map<string, GroupCacheEntry>();
+
+const groupCacheEntryFor = (mode: QuizMode, seed: string): GroupCacheEntry => {
+  const key = `${mode}:${seed}`;
+  const cached = groupCache.get(key);
+  if (cached) {
+    groupCache.delete(key);
+    groupCache.set(key, cached);
+    return cached;
+  }
+  const pool = poolFor(mode);
+  const entry: GroupCacheEntry = {
+    groups: [],
+    order: shuffle(
+      mulberry32(hash(seed)),
+      pool.map((_, index) => index),
+    ),
+    used: new Set<number>(),
+  };
+  groupCache.set(key, entry);
+  if (groupCache.size > GROUP_CACHE_LIMIT) {
+    const oldestKey = groupCache.keys().next().value;
+    if (oldestKey !== undefined) {
+      groupCache.delete(oldestKey);
+    }
+  }
+  return entry;
+};
+
 const buildGroups = (mode: QuizMode, seed: string, count: number): Group[] => {
   const pool = poolFor(mode);
-  const order = shuffle(
-    mulberry32(hash(seed)),
-    pool.map((_, index) => index),
-  );
-  const used = new Set<number>();
-  const groups: Group[] = [];
-  for (let q = 1; q <= count; q += 1) {
-    const group = formGroup({ mode, order, pool, used });
+  const entry = groupCacheEntryFor(mode, seed);
+  while (entry.groups.length < count) {
+    const group = formGroup({ mode, order: entry.order, pool, used: entry.used });
     if (!group) {
-      throw new Error(`出題グループを形成できません: ${mode}:${seed}:${q}`);
+      throw new Error(`出題グループを形成できません: ${mode}:${seed}:${entry.groups.length + 1}`);
     }
     for (const index of group.indices) {
-      used.add(index);
+      entry.used.add(index);
     }
-    groups.push(group);
+    entry.groups.push(group);
   }
-  return groups;
+  return entry.groups;
 };
 
 type Dealt = {
