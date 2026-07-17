@@ -1,3 +1,5 @@
+import type { QuizMode } from "./quiz-config";
+
 export type ClientQuestion = {
   svgs: [string, string, string, string];
   choices: [string, string, string, string];
@@ -53,6 +55,7 @@ export type SetOverview = {
   label: string;
   grid: number;
   iconCount: number;
+  difficulty: QuizMode;
   license: { spdx: string; title: string; url: string };
   samples: { name: string; svg: string }[];
 };

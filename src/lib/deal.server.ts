@@ -16,13 +16,13 @@ import type {
 const CHOICE_COUNT = 4;
 const GROUP_SIZE = 4;
 
-const EASY_SET_IDS: ReadonlySet<SetId> = new Set([
+export const EASY_SET_IDS: ReadonlySet<SetId> = new Set([
   "fluent",
   "material-symbols",
   "tabler",
   "lucide",
-  "heroicons",
-  "fa6-solid",
+  "carbon",
+  "fa6-regular",
 ]);
 
 const isSetId = (value: string): value is SetId => value in deck.sets;

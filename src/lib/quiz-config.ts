@@ -14,14 +14,18 @@ export const quizBasePath = (
   return mode === "hard" ? "/pick/hard" : "/pick";
 };
 
-export const shareLabelFor = (game: QuizGame, mode: QuizMode, seed: string): string => {
+export const modeLabelFor = (game: QuizGame, mode: QuizMode): string => {
   if (game === "play") {
     return mode === "hard" ? "Icondle Hard" : "Icondle";
   }
-  if (mode === "hard") {
-    return "Icondle Pick Hard";
+  return mode === "hard" ? "Icondle Pick Hard" : "Icondle Pick";
+};
+
+export const shareLabelFor = (game: QuizGame, mode: QuizMode, seed: string): string => {
+  if (game === "pick" && mode === "easy" && isDateSeed(seed)) {
+    return `Icondle Daily ${seed}`;
   }
-  return isDateSeed(seed) ? `Icondle Daily ${seed}` : "Icondle Pick";
+  return modeLabelFor(game, mode);
 };
 
 export const questionCountFor = (mode: QuizMode): number => (mode === "hard" ? 10 : 5);

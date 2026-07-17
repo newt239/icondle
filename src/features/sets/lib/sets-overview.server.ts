@@ -1,5 +1,6 @@
 import "@tanstack/react-start/server-only";
 import { deck, type SetId } from "#/data/deck";
+import { EASY_SET_IDS } from "#/lib/deal.server";
 
 import type { SetOverview } from "#/lib/quiz-types";
 
@@ -27,6 +28,7 @@ export const buildSetsOverview = (): SetOverview[] =>
   Object.values(deck.sets)
     .toSorted((a, b) => b.iconCount - a.iconCount)
     .map((set) => ({
+      difficulty: EASY_SET_IDS.has(set.id) ? "easy" : "hard",
       grid: set.grid,
       iconCount: set.iconCount,
       id: set.id,

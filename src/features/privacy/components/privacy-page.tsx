@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
+import { BackToTopLink } from "#/components/back-to-top-link";
+
 export const PrivacyPage = () => (
   <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-8">
     <header className="flex items-center justify-between gap-4">
@@ -69,8 +71,6 @@ export const PrivacyPage = () => (
       </p>
     </section>
     <p className="text-muted text-xs">制定日: 2026年7月17日</p>
-    <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
-      ← トップに戻る
-    </Link>
+    <BackToTopLink />
   </main>
 );

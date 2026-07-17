@@ -72,6 +72,7 @@
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-object-type-as-default-prop": "off",
+    "react/react-compiler": "off",
     "react/react-in-jsx-scope": "off",
     "react-perf/jsx-no-jsx-as-prop": "off",
     "react-perf/jsx-no-new-array-as-prop": "off",

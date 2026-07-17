@@ -1,8 +1,13 @@
 import "@tanstack/react-start/server-only";
+import type { ReactNode } from "react";
+
 import { initWasm, Resvg } from "@resvg/resvg-wasm";
 import wasmModule from "@resvg/resvg-wasm/index_bg.wasm";
 import satori, { init as initSatoriYoga } from "satori/standalone";
 import satoriYogaWasm from "satori/yoga.wasm";
+
+import ogFontDataUri from "#/assets/fonts/inter-bold.ttf?inline";
+import { SITE_URL } from "#/lib/site-config";
 
 // トップページ背景と同じ public/bg-icons.svg を OGP 画像でも再利用するための例外的な相対 import
 // oxlint-disable-next-line import/no-relative-parent-imports
@@ -10,9 +15,18 @@ import bgIconsSvgRaw from "../../public/bg-icons.svg?raw";
 
 const OG_WIDTH = 1200;
 const OG_HEIGHT = 630;
-const FONT_FAMILY = "Noto Sans JP";
+const CARD_WIDTH = 900;
+const CARD_HEIGHT = 360;
+const FONT_FAMILY = "Inter";
 const FONT_WEIGHT = 700;
 const ICON_GRID_COLOR = "#334155";
+const BACKGROUND_COLOR = "#0b1220";
+const CARD_BACKGROUND_COLOR = "#131f35";
+const CARD_BORDER_COLOR = "rgba(248, 250, 252, 0.08)";
+const TEXT_COLOR = "#f8fafc";
+const CORRECT_COLOR = "#34d399";
+const INCORRECT_COLOR = "#475569";
+const SITE_URL_DISPLAY = SITE_URL.replace(/^https?:\/\//, "");
 
 const buildIconGridDataUri = (): string => {
   const withoutComment = bgIconsSvgRaw.replace(/<!--[\s\S]*?-->/, "");
@@ -22,8 +36,17 @@ const buildIconGridDataUri = (): string => {
 
 const ICON_GRID_DATA_URI = buildIconGridDataUri();
 
-const OLD_CHROME_USER_AGENT =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
+const decodeBase64FontDataUri = (dataUri: string): ArrayBuffer => {
+  const base64 = dataUri.slice(dataUri.indexOf(",") + 1);
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let index = 0; index < binary.length; index += 1) {
+    bytes[index] = binary.codePointAt(index) ?? 0;
+  }
+  return bytes.buffer;
+};
+
+const FONT_DATA = decodeBase64FontDataUri(ogFontDataUri);
 
 let resvgWasmReady: Promise<void> | null = null;
 let satoriYogaReady: Promise<void> | null = null;
@@ -40,52 +63,13 @@ const ensureSatoriReady = async (): Promise<void> => {
   await satoriYogaReady;
 };
 
-const extractFontUrl = (css: string): string | null => {
-  const match = /src:\s*url\((?<url>[^)]+)\)/.exec(css);
-  return match?.groups?.url?.replaceAll(/["']/g, "") ?? null;
-};
-
-const fetchFont = async (text: string): Promise<ArrayBuffer> => {
-  const cssUrl = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(FONT_FAMILY)}:wght@${FONT_WEIGHT}&text=${encodeURIComponent(text)}`;
-  const cache = caches.default;
-  const cacheKey = new Request(cssUrl);
-  const cached = await cache.match(cacheKey);
-  if (cached) {
-    return await cached.arrayBuffer();
-  }
-  const cssResponse = await fetch(cssUrl, { headers: { "user-agent": OLD_CHROME_USER_AGENT } });
-  const css = await cssResponse.text();
-  const fontUrl = extractFontUrl(css);
-  if (!fontUrl) {
-    throw new Error("OGP画像用フォントの取得に失敗しました。");
-  }
-  const fontResponse = await fetch(fontUrl);
-  const fontBuffer = await fontResponse.arrayBuffer();
-  await cache.put(
-    cacheKey,
-    new Response(fontBuffer, { headers: { "cache-control": "public, max-age=604800" } }),
-  );
-  return fontBuffer;
-};
-
-export type ShareOgImageInput = {
-  label: string;
-  score: number;
-  total: number;
-  correctFlags: boolean[];
-};
-
-export const renderShareOgImage = async (input: ShareOgImageInput): Promise<ArrayBuffer> => {
-  const scoreText = `${input.score} / ${input.total}`;
-  const caption = "問正解";
-  const text = `${input.label}${scoreText}${caption}Icondle`;
-
-  const [fontData] = await Promise.all([fetchFont(text), ensureResvgReady(), ensureSatoriReady()]);
+const renderOgImage = async (content: ReactNode): Promise<ArrayBuffer> => {
+  await Promise.all([ensureResvgReady(), ensureSatoriReady()]);
 
   const svg = await satori(
     <div
       style={{
-        backgroundColor: "#0b1220",
+        backgroundColor: BACKGROUND_COLOR,
         display: "flex",
         height: "100%",
         position: "relative",
@@ -109,52 +93,22 @@ export const renderShareOgImage = async (input: ShareOgImageInput): Promise<Arra
         style={{
           alignItems: "center",
           bottom: 0,
-          color: "#f8fafc",
+          color: TEXT_COLOR,
           display: "flex",
           flexDirection: "column",
           fontFamily: FONT_FAMILY,
-          justifyContent: "space-between",
+          justifyContent: "center",
           left: 0,
-          padding: 64,
           position: "absolute",
           right: 0,
           top: 0,
         }}
       >
-        <div
-          style={{
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <span style={{ fontSize: 32, fontWeight: FONT_WEIGHT, opacity: 0.85 }}>Icondle</span>
-          <span style={{ fontSize: 28, opacity: 0.6 }}>{input.label}</span>
-        </div>
-        <div style={{ alignItems: "center", display: "flex", flexDirection: "column" }}>
-          <span style={{ fontSize: 160, fontWeight: FONT_WEIGHT, lineHeight: 1 }}>{scoreText}</span>
-          <span style={{ fontSize: 36, marginTop: 16, opacity: 0.75 }}>{caption}</span>
-        </div>
-        <div style={{ display: "flex", gap: 16 }}>
-          {input.correctFlags.map((correct, index) => (
-            <div
-              // 実データを diff/reconcile しない satori の静的レンダリングのため key は形式的なもので良い
-              // oxlint-disable-next-line react/no-array-index-key
-              key={index}
-              style={{
-                backgroundColor: correct ? "#34d399" : "#475569",
-                borderRadius: 10,
-                height: 40,
-                width: 40,
-              }}
-            />
-          ))}
-        </div>
+        {content}
       </div>
     </div>,
     {
-      fonts: [{ data: fontData, name: FONT_FAMILY, style: "normal", weight: FONT_WEIGHT }],
+      fonts: [{ data: FONT_DATA, name: FONT_FAMILY, style: "normal", weight: FONT_WEIGHT }],
       height: OG_HEIGHT,
       width: OG_WIDTH,
     },
@@ -167,3 +121,83 @@ export const renderShareOgImage = async (input: ShareOgImageInput): Promise<Arra
   new Uint8Array(buffer).set(png);
   return buffer;
 };
+
+export type ShareOgImageInput = {
+  correctFlags: boolean[];
+  modeLabel: string;
+  score: number;
+  seedLabel: string;
+};
+
+export const renderShareOgImage = async (input: ShareOgImageInput): Promise<ArrayBuffer> =>
+  await renderOgImage(
+    <div style={{ alignItems: "center", display: "flex", flexDirection: "column", gap: 36 }}>
+      <div
+        style={{
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "space-between",
+          width: CARD_WIDTH,
+        }}
+      >
+        <span style={{ fontSize: 34, fontWeight: FONT_WEIGHT, opacity: 0.85 }}>
+          {input.modeLabel}
+        </span>
+        <span style={{ fontSize: 34, fontWeight: FONT_WEIGHT, opacity: 0.55 }}>
+          {input.seedLabel}
+        </span>
+      </div>
+      <div
+        style={{
+          alignItems: "center",
+          backgroundColor: CARD_BACKGROUND_COLOR,
+          border: `1px solid ${CARD_BORDER_COLOR}`,
+          borderRadius: 32,
+          display: "flex",
+          flexDirection: "column",
+          gap: 28,
+          height: CARD_HEIGHT,
+          justifyContent: "center",
+          width: CARD_WIDTH,
+        }}
+      >
+        <div style={{ alignItems: "flex-end", display: "flex", gap: 10 }}>
+          <span style={{ fontSize: 200, fontWeight: FONT_WEIGHT, lineHeight: 1 }}>
+            {input.score}
+          </span>
+          <span style={{ fontSize: 56, fontWeight: FONT_WEIGHT, marginBottom: 12, opacity: 0.55 }}>
+            pt
+          </span>
+        </div>
+        <div style={{ display: "flex", gap: 18 }}>
+          {input.correctFlags.map((correct, index) => (
+            <div
+              // 実データを diff/reconcile しない satori の静的レンダリングのため key は形式的なもので良い
+              // oxlint-disable-next-line react/no-array-index-key
+              key={index}
+              style={{
+                backgroundColor: correct ? CORRECT_COLOR : INCORRECT_COLOR,
+                borderRadius: 14,
+                height: 64,
+                width: 64,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+      <span style={{ fontSize: 26, fontWeight: FONT_WEIGHT, opacity: 0.55 }}>
+        {SITE_URL_DISPLAY}
+      </span>
+    </div>,
+  );
+
+/** @public public/og-default.png 再生成用。wasm 初期化の都合上 dev サーバー越しにのみ呼び出せる */
+export const renderDefaultOgImage = async (): Promise<ArrayBuffer> =>
+  await renderOgImage(
+    <div style={{ alignItems: "center", display: "flex", flexDirection: "column", gap: 20 }}>
+      <span style={{ fontSize: 160, fontWeight: FONT_WEIGHT }}>Icondle</span>
+      <span style={{ fontSize: 40, fontWeight: FONT_WEIGHT, opacity: 0.6 }}>
+        {SITE_URL_DISPLAY}
+      </span>
+    </div>,
+  );

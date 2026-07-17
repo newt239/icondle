@@ -1,11 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
-import { isDateSeed, quizBasePath, type QuizGame, type QuizMode } from "#/lib/quiz-config";
+import { BackToTopLink } from "#/components/back-to-top-link";
+import { calculateDailyStreak } from "#/features/result/lib/daily-streak";
+import {
+  isDateSeed,
+  jstToday,
+  quizBasePath,
+  type QuizGame,
+  type QuizMode,
+} from "#/lib/quiz-config";
 import { savePlayHistoryEntry } from "#/lib/quiz-history";
 
+import { DailyStreakDialog } from "./daily-streak-dialog";
 import { TweetButton } from "./tweet-button";
 
 import type { RunResult } from "#/lib/quiz-types";
@@ -22,12 +31,14 @@ type ResultPageProps = {
 const linkClassName = buttonVariants({ variant: "primary" });
 
 export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: ResultPageProps) => {
+  const [streakDays, setStreakDays] = useState<number | null>(null);
+
   useEffect(() => {
-    // 結果を localStorage のプレイ履歴に保存するブラウザ API 副作用のため useEffect が必要
+    // 結果を localStorage のプレイ履歴に保存し、デイリー連続記録を判定するブラウザ API 副作用のため useEffect が必要
     if (!result.success) {
       return;
     }
-    savePlayHistoryEntry({
+    const history = savePlayHistoryEntry({
       answers,
       game,
       mode,
@@ -36,6 +47,12 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
       seed,
       total: result.total,
     });
+    if (game === "pick" && mode === "easy" && seed === jstToday()) {
+      const streak = calculateDailyStreak(history, seed);
+      if (streak >= 2) {
+        setStreakDays(streak);
+      }
+    }
   }, [answers, game, mode, seed, result]);
 
   if (!result.success) {
@@ -48,9 +65,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
             最初から遊ぶ
           </Link>
         </EmptyState>
-        <Link className="text-muted text-sm underline underline-offset-2" to="/">
-          ← トップに戻る
-        </Link>
+        <BackToTopLink />
       </main>
     );
   }
@@ -123,13 +138,24 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
         ))}
       </ul>
       <div className="flex items-center justify-between gap-4">
-        <Link className="text-muted text-sm underline underline-offset-2" to="/">
-          ← トップに戻る
-        </Link>
+        <BackToTopLink />
         <Link className={linkClassName} to={replayTo}>
           もっとプレイする
         </Link>
       </div>
+      <Link className="text-muted text-center text-sm underline underline-offset-2" to="/sets">
+        収録アイコンセットを確認する
+      </Link>
+      {streakDays !== null && (
+        <DailyStreakDialog
+          onOpenChange={(isOpen) => {
+            if (!isOpen) {
+              setStreakDays(null);
+            }
+          }}
+          streakDays={streakDays}
+        />
+      )}
     </main>
   );
 };

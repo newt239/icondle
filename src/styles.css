@@ -27,32 +27,9 @@
   }
 }
 
-@utility bg-glow {
-  background-image:
-    radial-gradient(
-      ellipse 45% 30% at 18% 8%,
-      color-mix(in oklab, var(--accent) 16%, transparent),
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 40% 28% at 84% 30%,
-      color-mix(in oklab, var(--accent) 11%, transparent),
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 42% 30% at 10% 64%,
-      color-mix(in oklab, var(--accent) 10%, transparent),
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 50% 32% at 72% 92%,
-      color-mix(in oklab, var(--accent) 14%, transparent),
-      transparent 70%
-    );
-
-  @media (prefers-contrast: more) {
-    display: none;
-  }
+:where(:any-link) {
+  text-decoration-color: color-mix(in srgb, currentcolor, transparent 40%);
+  text-underline-offset: 0.25em;
 }
 
 @layer base {
