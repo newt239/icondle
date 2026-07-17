@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Footer } from "#/components/footer";
 import { jstToday } from "#/lib/quiz-config";
+import { SITE_URL } from "#/lib/site-config";
 
 const Home = () => {
   const { today } = Route.useLoaderData();
@@ -61,5 +62,6 @@ const Home = () => {
 
 export const Route = createFileRoute("/")({
   component: Home,
+  head: () => ({ links: [{ href: SITE_URL, rel: "canonical" }] }),
   loader: () => ({ today: jstToday() }),
 });

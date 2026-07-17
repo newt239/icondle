@@ -1,7 +1,13 @@
 import { createServerOnlyFn } from "@tanstack/react-start";
 import { getRequestUrl, setResponseHeader } from "@tanstack/react-start/server";
 
-import { quizBasePath, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz-config";
+import {
+  modeLabelFor,
+  quizBasePath,
+  shareLabelFor,
+  type QuizGame,
+  type QuizMode,
+} from "#/lib/quiz-config";
 
 import { getRunResult } from "./run-result";
 
@@ -52,9 +58,9 @@ export const buildShareOgResponse = createServerOnlyFn(
     const { renderShareOgImage } = await import("#/lib/og-image.server");
     const png = await renderShareOgImage({
       correctFlags: result.items.map((item) => item.correct),
-      label: shareLabelFor(game, mode, seed),
+      modeLabel: modeLabelFor(game, mode),
       score: result.score,
-      total: result.total,
+      seedLabel: seed,
     });
     // 呼び出し先の getRunResult が private, no-store を設定するため、画像レスポンス用に上書きする
     setResponseHeader("cache-control", "public, max-age=31536000, immutable");
@@ -70,6 +76,7 @@ export const buildShareHead = ({ loaderData }: { loaderData?: ShareLoaderData })
   const title = `${label} ${result.score}/${result.total}`;
   const description = `Icondleでのプレイ結果: ${result.score}/${result.total}問正解`;
   return {
+    links: [{ href: pageUrl, rel: "canonical" }],
     meta: [
       { title },
       { content: description, name: "description" },

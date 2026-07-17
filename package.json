@@ -7,6 +7,7 @@
     "build": "vite build",
     "build-bg-icons": "node scripts/build-bg-icons.ts",
     "build-deck": "node scripts/build-deck.ts",
+    "build-favicon": "node scripts/build-favicon.ts",
     "cf-typegen": "wrangler types",
     "codecheck": "pnpm run typecheck && pnpm run lint && pnpm run format && pnpm run ls-lint && pnpm run knip",
     "deploy": "pnpm run build && wrangler deploy",
