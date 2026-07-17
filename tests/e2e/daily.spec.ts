@@ -47,11 +47,11 @@ test.describe("デイリーモード", () => {
     expect(resultResponse?.status()).toBe(404);
   });
 
-  test("デイリーの結果ページに日付入りの共有ボタンが表示される", async ({ page }) => {
+  test("デイリーの結果ページに共有ボタンが表示される", async ({ page }) => {
     const date = jstToday();
     await page.goto(`/pick/${date}/result?a=00000`);
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
-    await expect(page.getByRole("button", { name: "結果をコピーして共有" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
+    await expect(page.getByRole("button", { name: "Xでポストする" })).toBeVisible();
   });
 
   test("初回プレイでは連続記録ダイアログを表示しない", async ({ page }) => {
