@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
-import { quizBasePath, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz-config";
+import { isDateSeed, quizBasePath, type QuizGame, type QuizMode } from "#/lib/quiz-config";
 import { savePlayHistoryEntry } from "#/lib/quiz-history";
 
 import { TweetButton } from "./tweet-button";
@@ -56,9 +56,12 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
   }
 
   const emojiRow = result.items.map((item) => (item.correct ? "🟩" : "❌")).join("");
-  const shareLabel = shareLabelFor(game, mode, seed);
   const sharePath = `${quizBasePath(game, mode)}/${seed}/share?a=${encodeURIComponent(answers)}`;
-  const shareText = `${shareLabel} ${result.score}/${result.total}\n${emojiRow}`;
+  const modeLabel =
+    game === "play" ? (mode === "hard" ? "Hard" : "") : mode === "hard" ? "Pick Hard" : "Pick";
+  const seedLabel = isDateSeed(seed) ? seed.slice(5).replace("-", "/") : seed;
+  const shareTitle = `#Icondle${modeLabel ? ` ${modeLabel}` : ""} [${seedLabel}]`;
+  const shareText = `${shareTitle}\n\n${emojiRow}`;
 
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
@@ -68,12 +71,11 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
         </Link>
       </header>
       <div className="flex flex-col items-center gap-1 text-center">
-        <p className="flex items-baseline justify-center gap-2">
-          <span className="text-4xl font-extrabold">
+        <p className="flex items-baseline justify-center">
+          <span className="text-5xl font-extrabold">
             {result.score}
-            <span className="text-2xl">pt</span>
+            <span className="text-3xl">pt</span>
           </span>
-          <span className="text-muted text-xl font-normal">/{result.total}pt</span>
         </p>
         <p aria-hidden="true" className="text-2xl tracking-widest">
           {emojiRow}
