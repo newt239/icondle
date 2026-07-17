@@ -27,6 +27,11 @@
   }
 }
 
+:where(:any-link) {
+  text-decoration-color: color-mix(in srgb, currentcolor, transparent 40%);
+  text-underline-offset: 0.25em;
+}
+
 @layer base {
   [data-theme="sky"] {
     --background: oklch(97.02% 0.015 230.34);
