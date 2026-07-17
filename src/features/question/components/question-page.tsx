@@ -62,6 +62,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
         </p>
       </header>
       <QuestionProgress n={n} total={total} />
+      <p className="text-muted text-center">このアイコンのセット名は？</p>
       <QuestionCard
         answeredLabels={
           answered === null
