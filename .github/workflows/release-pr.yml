@@ -26,7 +26,11 @@ jobs:
       - name: バージョン変更を検知
         id: version
         run: |
-          OLD_VERSION=$(git show "${{ github.event.before }}":package.json | node -p "JSON.parse(require('fs').readFileSync(0,'utf8')).version" 2>/dev/null || echo "")
+          BEFORE_SHA="${{ github.event.before }}"
+          if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE_SHA="HEAD^"
+          fi
+          OLD_VERSION=$(git show "$BEFORE_SHA":package.json | node -p "JSON.parse(require('fs').readFileSync(0,'utf8')).version" 2>/dev/null || echo "")
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "new=$NEW_VERSION" >> "$GITHUB_OUTPUT"
           if [ "$OLD_VERSION" != "$NEW_VERSION" ]; then
