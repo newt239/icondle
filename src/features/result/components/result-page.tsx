@@ -1,7 +1,10 @@
+import { useEffect } from "react";
+
 import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
 import { quizBasePath, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz-config";
+import { savePlayHistoryEntry } from "#/lib/quiz-history";
 
 import { ShareButton } from "./share-button";
 import { TweetButton } from "./tweet-button";
@@ -20,6 +23,22 @@ type ResultPageProps = {
 const linkClassName = buttonVariants({ variant: "primary" });
 
 export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: ResultPageProps) => {
+  useEffect(() => {
+    // 結果を localStorage のプレイ履歴に保存するブラウザ API 副作用のため useEffect が必要
+    if (!result.success) {
+      return;
+    }
+    savePlayHistoryEntry({
+      answers,
+      game,
+      mode,
+      playedAt: Date.now(),
+      score: result.score,
+      seed,
+      total: result.total,
+    });
+  }, [answers, game, mode, seed, result]);
+
   if (!result.success) {
     return (
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 py-8">

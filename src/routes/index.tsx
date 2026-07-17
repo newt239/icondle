@@ -2,6 +2,7 @@ import { buttonVariants, Card } from "@heroui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Footer } from "#/components/footer";
+import { PlayHistorySummary } from "#/features/history/components/play-history-summary";
 import { jstToday } from "#/lib/quiz-config";
 
 const Home = () => {
@@ -54,6 +55,7 @@ const Home = () => {
         <Link className="text-muted text-sm underline underline-offset-2" to="/sets">
           収録アイコンセット
         </Link>
+        <PlayHistorySummary />
       </main>
       <Footer />
     </>
