@@ -18,8 +18,8 @@ const Home = () => {
           params={{ n: "1", seed: today }}
           to="/pick/$seed/$n"
         >
-          今日の問題に挑戦する
-          <IconChevronRight aria-hidden="true" />
+          <span className="font-bold">今日の問題に挑戦する</span>
+          <IconChevronRight aria-hidden="true" stroke="currentColor" strokeWidth={1} />
         </Link>
         <div className="mt-6 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
           <Card<"a">
