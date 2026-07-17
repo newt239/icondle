@@ -5,6 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 import { BackToTopLink } from "#/components/back-to-top-link";
 import { calculateDailyStreak } from "#/features/result/lib/daily-streak";
+import { trackQuizComplete } from "#/lib/analytics";
 import {
   isDateSeed,
   jstToday,
@@ -12,7 +13,7 @@ import {
   type QuizGame,
   type QuizMode,
 } from "#/lib/quiz-config";
-import { savePlayHistoryEntry } from "#/lib/quiz-history";
+import { readPlayHistory, savePlayHistoryEntry } from "#/lib/quiz-history";
 
 import { DailyStreakDialog } from "./daily-streak-dialog";
 import { TweetButton } from "./tweet-button";
@@ -34,9 +35,19 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
   const [streakDays, setStreakDays] = useState<number | null>(null);
 
   useEffect(() => {
-    // 結果を localStorage のプレイ履歴に保存し、デイリー連続記録を判定するブラウザ API 副作用のため useEffect が必要
+    // 結果を localStorage のプレイ履歴に保存し、デイリー連続記録の判定と GA 計測イベントの送信を行うブラウザ API 副作用のため useEffect が必要
     if (!result.success) {
       return;
+    }
+    const isReplay = readPlayHistory().some(
+      (entry) =>
+        entry.game === game &&
+        entry.mode === mode &&
+        entry.seed === seed &&
+        entry.answers === answers,
+    );
+    if (!isReplay) {
+      trackQuizComplete({ game, mode, score: result.score, seed, total: result.total });
     }
     const history = savePlayHistoryEntry({
       answers,
