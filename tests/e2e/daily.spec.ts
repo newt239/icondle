@@ -12,6 +12,12 @@ const jstToday = (): string =>
     year: "numeric",
   }).format(new Date());
 
+const shiftDate = (dateSeed: string, days: number): string => {
+  const date = new Date(dateSeed);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+};
+
 test.describe("デイリーモード", () => {
   test("トップの「今日の問題に挑戦」から JST 日付シードのピック第1問へ遷移する", async ({
     page,
@@ -46,5 +52,48 @@ test.describe("デイリーモード", () => {
     await page.goto(`/pick/${date}/result?a=00000`);
     await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
     await expect(page.getByRole("button", { name: "結果をコピーして共有" })).toBeVisible();
+  });
+
+  test("初回プレイでは連続記録ダイアログを表示しない", async ({ page }) => {
+    const date = jstToday();
+    await page.goto(`/pick/${date}/result?a=00000`);
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+  });
+
+  test("前日・前々日の記録があると連続記録ダイアログを表示する", async ({ page }) => {
+    const date = jstToday();
+    const yesterday = shiftDate(date, -1);
+    const dayBeforeYesterday = shiftDate(date, -2);
+    await page.addInitScript(
+      (entries) => {
+        window.localStorage.setItem("icondle:play-history", JSON.stringify(entries));
+      },
+      [
+        {
+          answers: "00000",
+          game: "pick",
+          mode: "easy",
+          playedAt: 1,
+          score: 3,
+          seed: yesterday,
+          total: 5,
+        },
+        {
+          answers: "00000",
+          game: "pick",
+          mode: "easy",
+          playedAt: 2,
+          score: 3,
+          seed: dayBeforeYesterday,
+          total: 5,
+        },
+      ],
+    );
+    await page.goto(`/pick/${date}/result?a=00000`);
+    const dialog = page.getByRole("dialog");
+    await expect(dialog).toBeVisible();
+    await expect(dialog).toContainText("3日連続");
+    await dialog.getByRole("button", { name: "閉じる" }).click();
+    await expect(dialog).toBeHidden();
   });
 });
