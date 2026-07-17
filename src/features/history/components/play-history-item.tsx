@@ -1,7 +1,7 @@
 import { Card } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
-import { quizBasePath, shareLabelFor } from "#/lib/quiz-config";
+import { quizBasePath } from "#/lib/quiz-config";
 
 import type { PlayHistoryEntry } from "#/lib/quiz-history";
 
@@ -11,8 +11,10 @@ type PlayHistoryItemProps = {
 
 const formatPlayedAt = (playedAt: number): string =>
   new Intl.DateTimeFormat("ja-JP", {
-    dateStyle: "medium",
-    timeStyle: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    month: "2-digit",
     timeZone: "Asia/Tokyo",
   }).format(new Date(playedAt));
 
@@ -29,7 +31,7 @@ export const PlayHistoryItem = ({ entry }: PlayHistoryItemProps) => (
     )}
   >
     <div className="flex min-w-0 flex-1 flex-col gap-1">
-      <span className="font-medium">{shareLabelFor(entry.game, entry.mode, entry.seed)}</span>
+      <span className="font-medium">{entry.seed}</span>
       <span className="text-muted text-xs">{formatPlayedAt(entry.playedAt)}</span>
     </div>
     <span className="font-bold">
