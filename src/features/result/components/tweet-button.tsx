@@ -14,7 +14,7 @@ export const TweetButton = ({ text, path }: TweetButtonProps) => {
 
   return (
     <Button onPress={openTweet} variant="secondary">
-      Xでポスト
+      Xでポストする
     </Button>
   );
 };

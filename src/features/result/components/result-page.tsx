@@ -96,7 +96,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
                 <p className="text-lg font-semibold">第{item.n}問</p>
                 <p className="text-muted text-sm">{item.meta.set}</p>
               </div>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {item.meta.icons.map((icon) => (
                   <a
                     className="flex w-12 flex-col items-center gap-1 sm:w-14"
@@ -120,14 +120,14 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
           </li>
         ))}
       </ul>
-      <div className="flex gap-4">
+      <div className="flex items-center justify-between gap-4">
+        <Link className="text-muted text-sm underline underline-offset-2" to="/">
+          ← トップに戻る
+        </Link>
         <Link className={linkClassName} to={replayTo}>
-          もう一度遊ぶ
+          もっとプレイする
         </Link>
       </div>
-      <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
-        ← トップに戻る
-      </Link>
     </main>
   );
 };
