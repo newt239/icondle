@@ -22,6 +22,9 @@ export const Footer = () => (
       <Link className="underline underline-offset-2" to="/history">
         プレイ履歴
       </Link>
+      <Link className="underline underline-offset-2" to="/changelog">
+        更新履歴
+      </Link>
       <Link className="underline underline-offset-2" to="/privacy">
         プライバシーポリシー
       </Link>

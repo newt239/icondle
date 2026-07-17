@@ -1,0 +1,13 @@
+export type ChangelogEntry = {
+  version: string;
+  date: string;
+  items: string[];
+};
+
+export const changelog: ChangelogEntry[] = [
+  {
+    date: "2026-07-17",
+    items: ["Icondle を公開しました。"],
+    version: "1.0.0",
+  },
+];
