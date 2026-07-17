@@ -10,6 +10,7 @@ type PickChoiceListProps = {
   picked: number | null;
   answerIndex: number | null;
   answeredLabels: [string, string, string, string] | null;
+  choiceLabels: [string, string, string, string] | null;
   onChoose: (index: number) => void;
 };
 
@@ -38,6 +39,7 @@ export const PickChoiceList = ({
   picked,
   answerIndex,
   answeredLabels,
+  choiceLabels,
   onChoose,
 }: PickChoiceListProps) => (
   <div aria-label="選択肢" className="grid grid-cols-2 gap-3" role="group">
@@ -83,6 +85,9 @@ export const PickChoiceList = ({
                 />
               );
             })}
+          </span>
+          <span className="block h-4 w-full truncate text-center text-xs">
+            {choiceLabels?.[index]}
           </span>
         </button>
       </form>

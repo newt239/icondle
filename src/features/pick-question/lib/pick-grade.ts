@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/quiz-config";
 
-import type { GradeResult } from "#/lib/quiz-types";
+import type { PickGradeResult } from "#/lib/quiz-types";
 
 export const pickGradeInputSchema = z
   .object({
@@ -18,12 +18,13 @@ export const pickGradeInputSchema = z
 
 export const gradePickAnswer = createServerFn({ method: "POST" })
   .validator(pickGradeInputSchema)
-  .handler(async ({ data }): Promise<GradeResult> => {
+  .handler(async ({ data }): Promise<PickGradeResult> => {
     try {
       const { dealPickAnswer } = await import("#/lib/deal.server");
-      const { answerIndex, meta } = dealPickAnswer(data.mode, data.seed, data.n);
+      const { answerIndex, choiceLabels, meta } = dealPickAnswer(data.mode, data.seed, data.n);
       return {
         answerIndex,
+        choiceLabels,
         correct: answerIndex === data.answer,
         meta,
         success: true,

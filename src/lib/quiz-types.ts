@@ -14,6 +14,16 @@ export type GradeResult =
   | { success: true; correct: boolean; answerIndex: number; meta: AnswerMeta }
   | { success: false; error: string };
 
+export type PickGradeResult =
+  | {
+      success: true;
+      correct: boolean;
+      answerIndex: number;
+      meta: AnswerMeta;
+      choiceLabels: [string, string, string, string];
+    }
+  | { success: false; error: string };
+
 type RunResultItem = {
   n: number;
   picked: number;

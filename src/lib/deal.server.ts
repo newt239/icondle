@@ -328,4 +328,12 @@ export const dealPickAnswer = (
   mode: QuizMode,
   seed: string,
   n: number,
-): { answerIndex: number; meta: AnswerMeta } => answerFor(deal(mode, `pick:${seed}`, n));
+): { answerIndex: number; meta: AnswerMeta; choiceLabels: [string, string, string, string] } => {
+  const dealt = deal(mode, `pick:${seed}`, n);
+  const { answerIndex, meta } = answerFor(dealt);
+  const choiceLabels = tuple4(
+    dealt.sets.map((setId) => deck.sets[setId].label),
+    `選択肢ラベルが ${CHOICE_COUNT} 件になりません: ${mode}:${seed}:${n}`,
+  );
+  return { answerIndex, choiceLabels, meta };
+};

@@ -11,7 +11,7 @@ import { PickChoiceList } from "./pick-choice-list";
 import { PickExplanationPanel } from "./pick-explanation-panel";
 
 import type { QuizMode } from "#/lib/quiz-config";
-import type { GradeResult, PickClientQuestion } from "#/lib/quiz-types";
+import type { PickClientQuestion, PickGradeResult } from "#/lib/quiz-types";
 
 type PickQuestionPageProps = {
   answers: string;
@@ -33,7 +33,7 @@ export const PickQuestionPage = ({
   total,
 }: PickQuestionPageProps) => {
   const [picked, setPicked] = useState<number | null>(null);
-  const [result, setResult] = useState<GradeResult | null>(null);
+  const [result, setResult] = useState<PickGradeResult | null>(null);
   const [isPending, startTransition] = useTransition();
   const headingRef = useRef<HTMLHeadingElement>(null);
 
@@ -84,6 +84,7 @@ export const PickQuestionPage = ({
         }
         answerIndex={answered?.answerIndex ?? null}
         answers={answers}
+        choiceLabels={answered?.choiceLabels ?? null}
         choices={question.choices}
         disabled={picked !== null || isPending}
         nextFormAction={nextFormAction}
