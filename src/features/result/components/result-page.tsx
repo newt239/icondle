@@ -6,7 +6,6 @@ import { Link } from "@tanstack/react-router";
 import { quizBasePath, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz-config";
 import { savePlayHistoryEntry } from "#/lib/quiz-history";
 
-import { ShareButton } from "./share-button";
 import { TweetButton } from "./tweet-button";
 
 import type { RunResult } from "#/lib/quiz-types";
@@ -68,48 +67,59 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
           Icondle
         </Link>
       </header>
-      <h1 className="text-2xl font-bold">
-        結果: {result.score} / {result.total} 問正解
-      </h1>
-      <p aria-hidden="true" className="text-2xl tracking-widest">
-        {emojiRow}
-      </p>
+      <div className="flex flex-col items-center gap-1 text-center">
+        <p className="flex items-baseline justify-center gap-2">
+          <span className="text-4xl font-extrabold">
+            {result.score}
+            <span className="text-2xl">pt</span>
+          </span>
+          <span className="text-muted text-xl font-normal">/{result.total}pt</span>
+        </p>
+        <p aria-hidden="true" className="text-2xl tracking-widest">
+          {emojiRow}
+        </p>
+      </div>
+      <div className="flex justify-center">
+        <TweetButton path={sharePath} text={shareText} />
+      </div>
       <ul className="flex flex-col gap-3">
         {result.items.map((item) => (
           <li key={item.n}>
-            <Card className="flex-row items-center gap-3 p-4">
-              <span aria-hidden="true">{item.correct ? "⭕" : "❌"}</span>
-              <span className="sr-only">{item.correct ? "正解" : "不正解"}</span>
-              <span className="font-medium">第{item.n}問</span>
-              <span className="text-muted min-w-0 flex-1">
-                {item.meta.set} の{" "}
-                {item.meta.icons.map((icon, index) => (
-                  <span key={icon.concept}>
-                    {index > 0 && "・"}
-                    <a
-                      className="inline-flex items-center gap-1 underline underline-offset-2"
-                      href={`https://icon-sets.iconify.design/${item.meta.setId}/${icon.icon}/`}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="inline-block size-5 shrink-0 [&>svg]:size-full"
-                        dangerouslySetInnerHTML={{ __html: icon.svg }}
-                      />
+            <Card
+              className={`grid grid-cols-[1fr_auto] items-center gap-4 p-4 ${item.correct ? "bg-success-soft" : "bg-danger-soft"}`}
+            >
+              <div className="min-w-0">
+                <span aria-hidden="true" className="text-3xl">
+                  {item.correct ? "⭕" : "❌"}
+                </span>
+                <span className="sr-only">{item.correct ? "正解" : "不正解"}</span>
+                <p className="text-lg font-semibold">第{item.n}問</p>
+                <p className="text-muted text-sm">{item.meta.set}</p>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {item.meta.icons.map((icon) => (
+                  <a
+                    className="flex w-12 flex-col items-center gap-1 sm:w-14"
+                    href={`https://icon-sets.iconify.design/${item.meta.setId}/${icon.icon}/`}
+                    key={icon.concept}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="size-12 sm:size-14 [&>svg]:size-full"
+                      dangerouslySetInnerHTML={{ __html: icon.svg }}
+                    />
+                    <span className="text-muted w-full truncate text-center text-xs underline underline-offset-2">
                       {icon.icon}
-                    </a>
-                  </span>
+                    </span>
+                  </a>
                 ))}
-              </span>
+              </div>
             </Card>
           </li>
         ))}
       </ul>
-      <div className="flex flex-wrap items-center gap-3">
-        <ShareButton path={sharePath} text={shareText} />
-        <TweetButton path={sharePath} text={shareText} />
-      </div>
       <div className="flex gap-4">
         <Link className={linkClassName} to={replayTo}>
           もう一度遊ぶ
