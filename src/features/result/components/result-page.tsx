@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { buttonVariants, Card, EmptyState } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
+import { BackToTopLink } from "#/components/back-to-top-link";
 import { isDateSeed, quizBasePath, type QuizGame, type QuizMode } from "#/lib/quiz-config";
 import { savePlayHistoryEntry } from "#/lib/quiz-history";
 
@@ -48,9 +49,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
             最初から遊ぶ
           </Link>
         </EmptyState>
-        <Link className="text-muted text-sm underline underline-offset-2" to="/">
-          ← トップに戻る
-        </Link>
+        <BackToTopLink />
       </main>
     );
   }
@@ -123,9 +122,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
         ))}
       </ul>
       <div className="flex items-center justify-between gap-4">
-        <Link className="text-muted text-sm underline underline-offset-2" to="/">
-          ← トップに戻る
-        </Link>
+        <BackToTopLink />
         <Link className={linkClassName} to={replayTo}>
           もっとプレイする
         </Link>

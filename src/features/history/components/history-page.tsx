@@ -1,6 +1,7 @@
 import { Button } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
+import { BackToTopLink } from "#/components/back-to-top-link";
 import { clearPlayHistory } from "#/lib/quiz-history";
 
 import { PlayHistoryList } from "./play-history-list";
@@ -27,8 +28,6 @@ export const HistoryPage = () => (
     </div>
     <PlayHistoryStatsPanel />
     <PlayHistoryList />
-    <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
-      ← トップに戻る
-    </Link>
+    <BackToTopLink />
   </main>
 );

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
+import { BackToTopLink } from "#/components/back-to-top-link";
 import { changelog } from "#/data/changelog";
 
 export const ChangelogPage = () => (
@@ -25,8 +26,6 @@ export const ChangelogPage = () => (
         </section>
       ))}
     </div>
-    <Link className="text-muted text-center text-sm underline underline-offset-2" to="/">
-      ← トップに戻る
-    </Link>
+    <BackToTopLink />
   </main>
 );

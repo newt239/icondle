@@ -1,6 +1,8 @@
 import { Disclosure } from "@heroui/react";
 import { Link } from "@tanstack/react-router";
 
+import { BackToTopLink } from "#/components/back-to-top-link";
+
 import { SetCard } from "./set-card";
 
 import type { SetOverview } from "#/lib/quiz-types";
@@ -45,9 +47,7 @@ export const SetsPage = ({ sets }: SetsPageProps) => {
           </ul>
         </Disclosure.Content>
       </Disclosure>
-      <Link className="text-muted mt-4 text-center text-sm underline underline-offset-2" to="/">
-        ← トップに戻る
-      </Link>
+      <BackToTopLink className="mt-4" />
     </main>
   );
 };

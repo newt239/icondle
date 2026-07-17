@@ -1,4 +1,4 @@
-import { buttonVariants, Card } from "@heroui/react";
+import { buttonVariants, Card, IconChevronRight } from "@heroui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Footer } from "#/components/footer";
@@ -18,6 +18,7 @@ const Home = () => {
           to="/pick/$seed/$n"
         >
           今日の問題に挑戦する
+          <IconChevronRight aria-hidden="true" />
         </Link>
         <div className="mt-6 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
           <Card<"a">
@@ -26,14 +27,12 @@ const Home = () => {
           >
             <h2 className="font-bold">セット名を当てる</h2>
             <p className="text-muted text-sm">表示されたアイコンのセット名を 4 択から選ぶ</p>
-            <span className="mt-auto self-end text-sm font-medium">
-              プレイする{" "}
-              <span
+            <span className="mt-auto inline-flex items-center gap-0.5 self-end text-sm font-medium">
+              プレイする
+              <IconChevronRight
                 aria-hidden="true"
-                className="inline-block transition-transform group-hover:translate-x-0.5"
-              >
-                →
-              </span>
+                className="transition-transform group-hover:translate-x-0.5"
+              />
             </span>
           </Card>
           <Card<"a">
@@ -42,14 +41,12 @@ const Home = () => {
           >
             <h2 className="font-bold">アイコンを当てる</h2>
             <p className="text-muted text-sm">セット名に合うアイコンを 4 つから選ぶ</p>
-            <span className="mt-auto self-end text-sm font-medium">
-              プレイする{" "}
-              <span
+            <span className="mt-auto inline-flex items-center gap-0.5 self-end text-sm font-medium">
+              プレイする
+              <IconChevronRight
                 aria-hidden="true"
-                className="inline-block transition-transform group-hover:translate-x-0.5"
-              >
-                →
-              </span>
+                className="transition-transform group-hover:translate-x-0.5"
+              />
             </span>
           </Card>
         </div>
