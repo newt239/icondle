@@ -21,8 +21,8 @@ export const EASY_SET_IDS: ReadonlySet<SetId> = new Set([
   "material-symbols",
   "tabler",
   "lucide",
-  "heroicons",
-  "fa6-solid",
+  "carbon",
+  "fa6-regular",
 ]);
 
 const isSetId = (value: string): value is SetId => value in deck.sets;

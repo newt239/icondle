@@ -15,8 +15,8 @@ const EASY_SET_IDS: SetId[] = [
   "material-symbols",
   "tabler",
   "lucide",
-  "heroicons",
-  "fa6-solid",
+  "carbon",
+  "fa6-regular",
 ];
 
 const cases: [QuizMode, string, number][] = [];

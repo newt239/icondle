@@ -13,34 +13,27 @@ type Candidate = {
 };
 
 const CANDIDATES: Candidate[] = [
-  { id: "fa6-solid" },
+  { id: "fa6-regular" },
   { id: "fluent", include: /-24-regular$/, strip: /-24-regular$/ },
   { id: "material-symbols", include: /-outline$/, strip: /-outline$/ },
-  { exclude: /-(?:bold|duotone|fill|light|thin)$/, id: "ph" },
-  { exclude: /-outline$/, id: "mdi" },
   { exclude: /-filled$/, id: "tabler" },
   { id: "hugeicons", strip: /-0\d$/ },
   { exclude: /-filled$/, id: "boxicons" },
-  { exclude: /-(?:bold|duo|outline)$/, id: "glyphs" },
-  { id: "mingcute", include: /-line$/, strip: /-line$/ },
-  { exclude: /-fill$/, id: "ri", strip: /-line$/ },
   { id: "icon-park-outline" },
-  { exclude: /-solid$/, id: "mynaui" },
   { exclude: /-(?:filled|solid)$/, id: "carbon" },
-  { exclude: /-filled$/, id: "tdesign" },
   { exclude: /-fill$/, id: "bi" },
   { id: "lucide" },
   { exclude: /-solid$/, id: "iconoir" },
   { exclude: /-solid$/, id: "heroicons" },
+  { exclude: /-fill$/, id: "ri", strip: /-line$/ },
+  { id: "mingcute", include: /-line$/, strip: /-line$/ },
 ];
 
-const ADOPT_COUNT = 14;
-const MIN_ADOPT_COUNT = 12;
 const MIN_SHARED_SETS = 4;
 const CHOICE_COUNT = 4;
 const MIN_EASY_POOL = 50;
 
-const EASY_IDS = ["fluent", "material-symbols", "tabler", "lucide", "heroicons", "fa6-solid"];
+const EASY_IDS = ["fluent", "material-symbols", "tabler", "lucide", "carbon", "fa6-regular"];
 
 type ResolvedIcon = {
   raw: string;
@@ -179,18 +172,13 @@ for (const { candidate, namespace } of loaded) {
   console.warn(`  ${candidate.id.padEnd(20)} ${String(namespace.size).padStart(6)}`);
 }
 
-const forced = loaded.filter(({ candidate }) => EASY_IDS.includes(candidate.id));
-if (forced.length !== EASY_IDS.length) {
-  const missing = EASY_IDS.filter((id) => !forced.some(({ candidate }) => candidate.id === id));
-  throw new Error(`easy セットが候補に揃っていません: ${missing.join(", ")}`);
+const missingEasyIds = EASY_IDS.filter(
+  (id) => !loaded.some(({ candidate }) => candidate.id === id),
+);
+if (missingEasyIds.length > 0) {
+  throw new Error(`easy セットが候補に揃っていません: ${missingEasyIds.join(", ")}`);
 }
-const rest = loaded
-  .filter(({ candidate }) => !EASY_IDS.includes(candidate.id))
-  .slice(0, ADOPT_COUNT - forced.length);
-const adopted = [...forced, ...rest].toSorted((a, b) => b.namespace.size - a.namespace.size);
-if (adopted.length < MIN_ADOPT_COUNT) {
-  throw new Error(`採用セットが ${MIN_ADOPT_COUNT} 未満です: ${adopted.length}`);
-}
+const adopted = loaded;
 console.warn(`採用: ${adopted.map(({ candidate }) => candidate.id).join(", ")}`);
 
 const conceptOwners = new Map<string, string[]>();
