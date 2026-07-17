@@ -29,9 +29,10 @@ export const getRunResult = createServerFn({ method: "GET" })
     }
     try {
       const { dealAnswer, dealPickAnswer } = await import("#/lib/deal.server");
-      const { decodeAnswer } = await import("#/lib/answer-cipher.server");
+      const { decodeAnswer, requireAnswerCipherSecret } =
+        await import("#/lib/answer-cipher.server");
       const dealAnswerFor = data.game === "pick" ? dealPickAnswer : dealAnswer;
-      const secretKey = process.env.ANSWER_CIPHER_SECRET ?? "";
+      const secretKey = requireAnswerCipherSecret();
       const items = Array.from(data.answers, (encodedChar, index) => {
         const n = index + 1;
         const { answerIndex, meta } = dealAnswerFor(data.mode, data.seed, n);

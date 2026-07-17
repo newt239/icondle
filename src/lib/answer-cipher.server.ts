@@ -12,6 +12,14 @@ export type AnswerCipherContext = {
   n: number;
 };
 
+export const requireAnswerCipherSecret = (): string => {
+  const secret = process.env.ANSWER_CIPHER_SECRET;
+  if (secret === undefined || secret === "") {
+    throw new Error("ANSWER_CIPHER_SECRET が設定されていません");
+  }
+  return secret;
+};
+
 const shiftFor = (secretKey: string, ctx: AnswerCipherContext): number =>
   hash(`${secretKey}:${ctx.game}:${ctx.mode}:${ctx.seed}:${ctx.n}`) % CHOICE_COUNT;
 

@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
-import { decodeAnswer, encodeAnswer } from "./answer-cipher.server";
+import { decodeAnswer, encodeAnswer, requireAnswerCipherSecret } from "./answer-cipher.server";
 
 const ctx = { game: "play" as const, mode: "easy" as const, n: 1, seed: "a7f3c2" };
 
@@ -24,5 +24,32 @@ describe("answer-cipher", () => {
       expect(encoded).toBeGreaterThanOrEqual(0);
       expect(encoded).toBeLessThanOrEqual(3);
     }
+  });
+});
+
+describe("requireAnswerCipherSecret", () => {
+  const original = process.env.ANSWER_CIPHER_SECRET;
+
+  afterEach(() => {
+    if (original === undefined) {
+      delete process.env.ANSWER_CIPHER_SECRET;
+    } else {
+      process.env.ANSWER_CIPHER_SECRET = original;
+    }
+  });
+
+  it("設定済みならその値を返す", () => {
+    process.env.ANSWER_CIPHER_SECRET = "secret";
+    expect(requireAnswerCipherSecret()).toBe("secret");
+  });
+
+  it("未設定ならエラーを投げる", () => {
+    delete process.env.ANSWER_CIPHER_SECRET;
+    expect(() => requireAnswerCipherSecret()).toThrow();
+  });
+
+  it("空文字ならエラーを投げる", () => {
+    process.env.ANSWER_CIPHER_SECRET = "";
+    expect(() => requireAnswerCipherSecret()).toThrow();
   });
 });
