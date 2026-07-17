@@ -86,12 +86,12 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
         </Link>
       </header>
       <div className="flex flex-col items-center gap-1 text-center">
-        <p className="flex items-baseline justify-center">
+        <h1 className="flex items-baseline justify-center">
           <span className="text-5xl font-extrabold">
             {result.score}
             <span className="text-3xl">pt</span>
           </span>
-        </p>
+        </h1>
         <p aria-hidden="true" className="text-2xl tracking-widest">
           {emojiRow}
         </p>

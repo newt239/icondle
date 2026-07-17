@@ -68,9 +68,9 @@ export const PickQuestionPage = ({
         </p>
       </header>
       <QuestionProgress n={n} total={total} />
-      <p className="text-muted text-center">
+      <h1 className="text-muted text-center">
         <strong className="text-foreground">{question.setLabel}</strong> のアイコンは？
-      </p>
+      </h1>
       <PickChoiceList
         answeredLabels={
           answered === null

@@ -1,6 +1,7 @@
 import "@tanstack/react-start/server-only";
 import { deck, type SetId } from "#/data/deck";
 import { EASY_SET_IDS } from "#/lib/deal.server";
+import { escapeSvgAttribute } from "#/lib/render-icon.server";
 
 import type { SetOverview } from "#/lib/quiz-types";
 
@@ -17,7 +18,7 @@ const sampleVariants = (setId: SetId): { name: string; svg: string }[] => {
     if (variant !== undefined && !picked.has(variant.name)) {
       picked.set(variant.name, {
         name: variant.name,
-        svg: `<svg viewBox="0 0 ${variant.width} ${variant.height}" role="img" aria-label="${variant.name}">${variant.body}</svg>`,
+        svg: `<svg viewBox="0 0 ${variant.width} ${variant.height}" role="img" aria-label="${escapeSvgAttribute(variant.name)}">${variant.body}</svg>`,
       });
     }
   }
