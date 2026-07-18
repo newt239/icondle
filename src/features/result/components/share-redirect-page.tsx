@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-
 import { buttonVariants, EmptyState } from "@heroui/react";
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, Navigate } from "@tanstack/react-router";
 
 import type { QuizGame, QuizMode } from "#/lib/quiz";
 import type { RunResult } from "#/types";
@@ -14,8 +12,6 @@ type ShareRedirectPageProps = {
 };
 
 export const ShareRedirectPage = ({ game, mode, result, seed }: ShareRedirectPageProps) => {
-  const navigate = useNavigate();
-
   const targetTo =
     game === "play"
       ? mode === "hard"
@@ -24,12 +20,6 @@ export const ShareRedirectPage = ({ game, mode, result, seed }: ShareRedirectPag
       : mode === "hard"
         ? "/pick/hard/$seed/$n"
         : "/pick/$seed/$n";
-  useEffect(() => {
-    // OGPクローラーには初期HTMLのメタタグのみを見せ、実際にアクセスしたブラウザだけを同じ問題へ即時遷移させるためのブラウザナビゲーション
-    if (result.success) {
-      navigate({ params: { n: "1", seed }, replace: true, to: targetTo });
-    }
-  }, [navigate, result.success, targetTo, seed]);
 
   if (!result.success) {
     return (
@@ -47,6 +37,7 @@ export const ShareRedirectPage = ({ game, mode, result, seed }: ShareRedirectPag
 
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-4 px-4 py-8">
+      <Navigate params={{ n: "1", seed }} replace to={targetTo} />
       <p className="text-muted">問題にリダイレクトしています…</p>
       <Link
         className={buttonVariants({ variant: "primary" })}
