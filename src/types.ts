@@ -12,6 +12,10 @@ export type PickClientQuestion = {
   choices: [PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs];
 };
 
+export type QuizQuestion =
+  | ({ game: "play" } & ClientQuestion)
+  | ({ game: "pick" } & PickClientQuestion);
+
 export type GradeResult =
   | {
       success: true;
@@ -19,17 +23,7 @@ export type GradeResult =
       answerIndex: number;
       encodedAnswer: number;
       meta: AnswerMeta;
-    }
-  | { success: false; error: string };
-
-export type PickGradeResult =
-  | {
-      success: true;
-      correct: boolean;
-      answerIndex: number;
-      encodedAnswer: number;
-      meta: AnswerMeta;
-      choiceLabels: [string, string, string, string];
+      choiceLabels: [string, string, string, string] | null;
     }
   | { success: false; error: string };
 

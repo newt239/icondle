@@ -1,16 +1,26 @@
 import { describe, expect, it } from "vitest";
 
-import { generateSeed, isModeSeedAllowed } from "./quiz";
+import { generateSeed, isSeedPlayable } from "./quiz";
 
-describe("isModeSeedAllowed", () => {
-  it("easy は任意のシードを許可する", () => {
-    expect(isModeSeedAllowed("easy", "a7f3c2")).toBe(true);
-    expect(isModeSeedAllowed("easy", "2020-01-01")).toBe(true);
+describe("isSeedPlayable", () => {
+  it("ランダムシードはどのゲーム・モードでも許可する", () => {
+    expect(isSeedPlayable("play", "hard", "a7f3c2")).toBe(true);
   });
 
-  it("hard は日付シードのみ拒否する", () => {
-    expect(isModeSeedAllowed("hard", "a7f3c2")).toBe(true);
-    expect(isModeSeedAllowed("hard", "2020-01-01")).toBe(false);
+  it("play は日付シードを拒否する", () => {
+    expect(isSeedPlayable("play", "easy", "2020-01-01")).toBe(false);
+  });
+
+  it("pick の easy は過去の日付シードを許可する", () => {
+    expect(isSeedPlayable("pick", "easy", "2020-01-01")).toBe(true);
+  });
+
+  it("pick の easy は未来の日付シードを拒否する", () => {
+    expect(isSeedPlayable("pick", "easy", "2999-01-01")).toBe(false);
+  });
+
+  it("pick の hard は日付シードを拒否する", () => {
+    expect(isSeedPlayable("pick", "hard", "2020-01-01")).toBe(false);
   });
 });
 

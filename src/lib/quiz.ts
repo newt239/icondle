@@ -1,3 +1,5 @@
+import { jstToday } from "./date";
+
 export type QuizGame = "play" | "pick";
 
 export type QuizMode = "easy" | "hard";
@@ -37,8 +39,8 @@ export const shareLabelFor = (game: QuizGame, mode: QuizMode, seed: string): str
   return quizConfig[mode].games[game].label;
 };
 
-export const isModeSeedAllowed = (mode: QuizMode, seed: string): boolean =>
-  mode === "easy" || !isDateSeed(seed);
+export const isSeedPlayable = (game: QuizGame, mode: QuizMode, seed: string): boolean =>
+  !isDateSeed(seed) || (game === "pick" && mode === "easy" && seed <= jstToday());
 
 export const generateSeed = (): string => {
   const bytes = new Uint8Array(3);

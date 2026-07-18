@@ -1,11 +1,11 @@
 import { Card } from "@heroui/react";
 
-type QuestionCardProps = {
+type PlayQuestionCardProps = {
   svgs: [string, string, string, string];
   answeredLabels: [string, string, string, string] | null;
 };
 
-export const QuestionCard = ({ svgs, answeredLabels }: QuestionCardProps) => (
+export const PlayQuestionCard = ({ svgs, answeredLabels }: PlayQuestionCardProps) => (
   <Card className="items-center py-8">
     <div className="grid grid-cols-2 gap-6">
       {svgs.map((svg, index) => {

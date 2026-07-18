@@ -1,6 +1,6 @@
 import { buttonVariants, Kbd } from "@heroui/react";
 
-type ChoiceListProps = {
+type PlayChoiceListProps = {
   choices: [string, string, string, string];
   answers: string;
   nextFormAction: string;
@@ -10,7 +10,7 @@ type ChoiceListProps = {
   onChoose: (index: number) => void;
 };
 
-export const ChoiceList = ({
+export const PlayChoiceList = ({
   choices,
   answers,
   nextFormAction,
@@ -18,7 +18,7 @@ export const ChoiceList = ({
   picked,
   answerIndex,
   onChoose,
-}: ChoiceListProps) => (
+}: PlayChoiceListProps) => (
   <div aria-label="選択肢" className="grid grid-cols-1 gap-3 sm:grid-cols-2" role="group">
     {choices.map((choice, index) => (
       <form
