@@ -1,47 +1,12 @@
 import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
-import "@tanstack/react-start/server-only";
-
-import { deck, type SetId } from "#/data/deck";
-import { EASY_SET_IDS } from "#/lib/deal.server";
-import { escapeSvgAttribute } from "#/lib/icon.server";
 
 import type { SetOverview } from "#/types";
 
-const SAMPLE_COUNT = 6;
-
-const sampleVariants = (setId: SetId): { name: string; svg: string }[] => {
-  const owned = deck.concepts.flatMap((concept) => {
-    const variant = concept.variants[setId];
-    return variant === undefined ? [] : [variant];
-  });
-  const picked = new Map<string, { name: string; svg: string }>();
-  while (picked.size < SAMPLE_COUNT && picked.size < owned.length) {
-    const variant = owned[Math.floor(Math.random() * owned.length)];
-    if (variant !== undefined && !picked.has(variant.name)) {
-      picked.set(variant.name, {
-        name: variant.name,
-        svg: `<svg viewBox="0 0 ${variant.width} ${variant.height}" role="img" aria-label="${escapeSvgAttribute(variant.name)}">${variant.body}</svg>`,
-      });
-    }
-  }
-  return [...picked.values()];
-};
-
-export const createSetsOverview = (): SetOverview[] =>
-  Object.values(deck.sets)
-    .toSorted((a, b) => b.iconCount - a.iconCount)
-    .map((set) => ({
-      difficulty: EASY_SET_IDS.has(set.id) ? "easy" : "hard",
-      grid: set.grid,
-      iconCount: set.iconCount,
-      id: set.id,
-      label: set.label,
-      license: set.license,
-      samples: sampleVariants(set.id),
-    }));
-
-export const getSetsOverview = createServerFn({ method: "GET" }).handler((): SetOverview[] => {
-  setResponseHeader("cache-control", "no-store");
-  return createSetsOverview();
-});
+export const getSetsOverview = createServerFn({ method: "GET" }).handler(
+  async (): Promise<SetOverview[]> => {
+    setResponseHeader("cache-control", "no-store");
+    const { createSetsOverview } = await import("./sets.server");
+    return createSetsOverview();
+  },
+);

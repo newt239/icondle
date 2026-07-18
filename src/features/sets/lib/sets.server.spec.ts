@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { deck } from "#/data/deck";
 
-import { createSetsOverview } from "./sets";
+import { createSetsOverview } from "./sets.server";
 
 describe("createSetsOverview", () => {
   it("採用セット全件を返しアイコン数を持つ", () => {
