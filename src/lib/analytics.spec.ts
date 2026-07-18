@@ -16,7 +16,7 @@ describe("trackQuizComplete", () => {
   });
 
   it("gtag が定義されていれば quiz_complete イベントを送信する", () => {
-    const gtagMock = vi.fn();
+    const gtagMock = vi.fn<NonNullable<typeof globalThis.gtag>>();
     globalThis.gtag = gtagMock;
     trackQuizComplete(params);
     expect(gtagMock).toHaveBeenCalledExactlyOnceWith("event", "quiz_complete", {
@@ -30,6 +30,8 @@ describe("trackQuizComplete", () => {
 
   it("gtag が未定義でもエラーにならない", () => {
     globalThis.gtag = undefined;
-    expect(() => trackQuizComplete(params)).not.toThrow();
+    expect(() => {
+      trackQuizComplete(params);
+    }).not.toThrow();
   });
 });
