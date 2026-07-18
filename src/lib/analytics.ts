@@ -1,4 +1,4 @@
-import type { QuizGame, QuizMode } from "./config";
+import type { QuizGame, QuizMode } from "./quiz";
 
 declare global {
   var gtag:

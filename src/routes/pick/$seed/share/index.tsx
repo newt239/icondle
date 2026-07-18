@@ -2,7 +2,8 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ShareRedirectPage } from "#/features/result/components/share-redirect-page";
 import { createShareHead, loadShareResult } from "#/features/result/lib/share-result";
-import { isDateSeed, jstToday } from "#/lib/config";
+import { jstToday } from "#/lib/date";
+import { isDateSeed } from "#/lib/quiz";
 import { quizSearchSchema } from "#/schemas";
 
 const PickShare = () => {

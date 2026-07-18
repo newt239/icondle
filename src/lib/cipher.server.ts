@@ -1,7 +1,7 @@
 import "@tanstack/react-start/server-only";
 import { hash } from "./prng";
 
-import type { QuizGame, QuizMode } from "./config";
+import type { QuizGame, QuizMode } from "./quiz";
 
 const CHOICE_COUNT = 4;
 

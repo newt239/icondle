@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { QuestionPage } from "#/features/question/components/question-page";
 import { getQuestion } from "#/features/question/lib/question";
-import { isDateSeed, questionCountFor } from "#/lib/config";
+import { isDateSeed, quizConfig } from "#/lib/quiz";
 import { quizSearchSchema } from "#/schemas";
 
 const PlayQuestion = () => {
@@ -18,7 +18,7 @@ const PlayQuestion = () => {
       n={Number(n)}
       question={question}
       seed={seed}
-      total={questionCountFor("easy")}
+      total={quizConfig.easy.questionCount}
     />
   );
 };
@@ -27,7 +27,12 @@ export const Route = createFileRoute("/play/$seed/$n")({
   component: PlayQuestion,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ params }) => {
-    const parsed = z.coerce.number().int().min(1).max(questionCountFor("easy")).safeParse(params.n);
+    const parsed = z.coerce
+      .number()
+      .int()
+      .min(1)
+      .max(quizConfig.easy.questionCount)
+      .safeParse(params.n);
     if (!parsed.success || isDateSeed(params.seed)) {
       throw notFound();
     }

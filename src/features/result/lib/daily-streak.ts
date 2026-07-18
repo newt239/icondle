@@ -1,4 +1,4 @@
-import { isDateSeed } from "#/lib/config";
+import { isDateSeed } from "#/lib/quiz";
 
 import type { PlayHistoryEntry } from "#/lib/history";
 

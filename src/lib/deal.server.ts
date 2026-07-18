@@ -4,7 +4,7 @@ import { deck, type Concept, type SetId } from "#/data/deck";
 import { normalize } from "./icon.server";
 import { hash, mulberry32 } from "./prng";
 
-import type { QuizMode } from "./config";
+import type { QuizMode } from "./quiz";
 
 import type {
   AnswerIcon,

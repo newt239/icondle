@@ -4,7 +4,7 @@ import { deck, type Concept, type SetId } from "#/data/deck";
 
 import { dealAnswer, dealPickAnswer, dealPickQuestion, dealQuestion } from "./deal.server";
 
-import type { QuizMode } from "./config";
+import type { QuizMode } from "./quiz";
 
 const SEED_COUNT = 30;
 const QUESTION_COUNT = 10;

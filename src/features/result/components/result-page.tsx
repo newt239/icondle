@@ -6,8 +6,9 @@ import { Link } from "@tanstack/react-router";
 import { BackToTopLink } from "#/components/back-to-top-link";
 import { calculateDailyStreak } from "#/features/result/lib/daily-streak";
 import { trackQuizComplete } from "#/lib/analytics";
-import { isDateSeed, jstToday, quizBasePath, type QuizGame, type QuizMode } from "#/lib/config";
+import { jstToday } from "#/lib/date";
 import { readPlayHistory, savePlayHistoryEntry } from "#/lib/history";
+import { isDateSeed, quizConfig, type QuizGame, type QuizMode } from "#/lib/quiz";
 
 import { DailyStreakDialog } from "./daily-streak-dialog";
 import { TweetButton } from "./tweet-button";
@@ -76,7 +77,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
   }
 
   const emojiRow = result.items.map((item) => (item.correct ? "🟩" : "❌")).join("");
-  const sharePath = `${quizBasePath(game, mode)}/${seed}/share?a=${encodeURIComponent(answers)}`;
+  const sharePath = `${quizConfig[mode].games[game].basePath}/${seed}/share?a=${encodeURIComponent(answers)}`;
   const modeLabel =
     game === "play" ? (mode === "hard" ? "Hard" : "") : mode === "hard" ? "Pick Hard" : "Pick";
   const seedLabel = isDateSeed(seed) ? seed.slice(5).replace("-", "/") : seed;

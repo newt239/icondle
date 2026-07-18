@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { isDateSeed, questionCountFor } from "#/lib/config";
+import { isDateSeed, quizConfig } from "#/lib/quiz";
 
 export const questionInputSchema = z
   .object({
@@ -9,7 +9,7 @@ export const questionInputSchema = z
     seed: z.string().min(1).max(100),
   })
   .refine((data) => !isDateSeed(data.seed))
-  .refine((data) => data.n <= questionCountFor(data.mode));
+  .refine((data) => data.n <= quizConfig[data.mode].questionCount);
 
 export const gradeInputSchema = z
   .object({
@@ -19,4 +19,4 @@ export const gradeInputSchema = z
     seed: z.string().min(1).max(100),
   })
   .refine((data) => !isDateSeed(data.seed))
-  .refine((data) => data.n <= questionCountFor(data.mode));
+  .refine((data) => data.n <= quizConfig[data.mode].questionCount);

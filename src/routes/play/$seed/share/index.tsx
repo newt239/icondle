@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ShareRedirectPage } from "#/features/result/components/share-redirect-page";
 import { createShareHead, loadShareResult } from "#/features/result/lib/share-result";
-import { isDateSeed } from "#/lib/config";
+import { isDateSeed } from "#/lib/quiz";
 import { quizSearchSchema } from "#/schemas";
 
 const PlayShare = () => {

@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
 
-import { generateSeed, isModeSeedAllowed, questionCountFor } from "./config";
+import { generateSeed, isModeSeedAllowed, quizConfig } from "./quiz";
 
-describe("questionCountFor", () => {
-  it("easy は 5 問、hard は 10 問を返す", () => {
-    expect(questionCountFor("easy")).toBe(5);
-    expect(questionCountFor("hard")).toBe(10);
+describe("quizConfig", () => {
+  it("easy は 5 問、hard は 10 問である", () => {
+    expect(quizConfig.easy.questionCount).toBe(5);
+    expect(quizConfig.hard.questionCount).toBe(10);
   });
 });
 

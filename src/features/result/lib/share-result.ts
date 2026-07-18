@@ -1,13 +1,7 @@
 import { createServerOnlyFn } from "@tanstack/react-start";
 import { getRequestUrl, setResponseHeader } from "@tanstack/react-start/server";
 
-import {
-  modeLabelFor,
-  quizBasePath,
-  shareLabelFor,
-  type QuizGame,
-  type QuizMode,
-} from "#/lib/config";
+import { quizConfig, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz";
 
 import { getRunResult } from "./run-result";
 
@@ -27,7 +21,7 @@ export const loadShareResult = createServerOnlyFn(
     setResponseHeader("cache-control", "public, max-age=31536000, immutable");
     const { href, origin } = getRequestUrl();
     const label = shareLabelFor(game, mode, seed);
-    const imageUrl = `${origin}${quizBasePath(game, mode)}/${encodeURIComponent(seed)}/share/og?a=${encodeURIComponent(answers)}`;
+    const imageUrl = `${origin}${quizConfig[mode].games[game].basePath}/${encodeURIComponent(seed)}/share/og?a=${encodeURIComponent(answers)}`;
     return { game, imageUrl, label, mode, pageUrl: href, result, seed };
   },
 );
@@ -48,7 +42,7 @@ export const createShareOgImageResponse = createServerOnlyFn(
     const { renderShareOgImage } = await import("#/lib/og.server");
     const png = await renderShareOgImage({
       correctFlags: result.items.map((item) => item.correct),
-      modeLabel: modeLabelFor(game, mode),
+      modeLabel: quizConfig[mode].games[game].label,
       score: result.score,
       seedLabel: seed,
     });

@@ -1,4 +1,4 @@
-import type { QuizGame, QuizMode } from "#/lib/config";
+import type { QuizGame, QuizMode } from "#/lib/quiz";
 import type { RunResult } from "#/types";
 
 export type ShareLoaderData = {

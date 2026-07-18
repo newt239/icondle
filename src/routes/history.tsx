@@ -18,18 +18,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackToTopLink } from "#/components/back-to-top-link";
 import { IconTrash } from "#/components/icon-trash";
 import { usePlayHistory } from "#/hooks/use-play-history";
-import { quizBasePath } from "#/lib/config";
+import { formatPlayedAt } from "#/lib/date";
 import { clearPlayHistory } from "#/lib/history";
 import { createPageHeadObject } from "#/lib/meta";
-
-const formatPlayedAt = (playedAt: number): string =>
-  new Intl.DateTimeFormat("ja-JP", {
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    month: "2-digit",
-    timeZone: "Asia/Tokyo",
-  }).format(new Date(playedAt));
+import { quizConfig } from "#/lib/quiz";
 
 const History = () => {
   const history = usePlayHistory();
@@ -88,7 +80,7 @@ const History = () => {
                     {...props}
                     params={{ seed: entry.seed }}
                     search={{ a: entry.answers }}
-                    to={`${quizBasePath(entry.game, entry.mode)}/$seed/result`}
+                    to={`${quizConfig[entry.mode].games[entry.game].basePath}/$seed/result`}
                   />
                 )}
               >

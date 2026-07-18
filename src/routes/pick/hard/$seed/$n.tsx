@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { PickQuestionPage } from "#/features/pick-question/components/pick-question-page";
 import { getPickQuestion } from "#/features/pick-question/lib/pick-question";
-import { isDateSeed, questionCountFor } from "#/lib/config";
+import { isDateSeed, quizConfig } from "#/lib/quiz";
 import { quizSearchSchema } from "#/schemas";
 
 const PickHardQuestion = () => {
@@ -18,7 +18,7 @@ const PickHardQuestion = () => {
       n={Number(n)}
       question={question}
       seed={seed}
-      total={questionCountFor("hard")}
+      total={quizConfig.hard.questionCount}
     />
   );
 };
@@ -27,7 +27,12 @@ export const Route = createFileRoute("/pick/hard/$seed/$n")({
   component: PickHardQuestion,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ params }) => {
-    const parsed = z.coerce.number().int().min(1).max(questionCountFor("hard")).safeParse(params.n);
+    const parsed = z.coerce
+      .number()
+      .int()
+      .min(1)
+      .max(quizConfig.hard.questionCount)
+      .safeParse(params.n);
     if (!parsed.success || isDateSeed(params.seed)) {
       throw notFound();
     }

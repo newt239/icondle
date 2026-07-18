@@ -1,6 +1,7 @@
 import { z } from "zod";
 
-import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/config";
+import { jstToday } from "#/lib/date";
+import { isDateSeed, isModeSeedAllowed, quizConfig } from "#/lib/quiz";
 
 export const pickQuestionInputSchema = z
   .object({
@@ -9,7 +10,7 @@ export const pickQuestionInputSchema = z
     seed: z.string().min(1).max(100),
   })
   .refine((data) => isModeSeedAllowed(data.mode, data.seed))
-  .refine((data) => data.n <= questionCountFor(data.mode))
+  .refine((data) => data.n <= quizConfig[data.mode].questionCount)
   .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
 
 export const pickGradeInputSchema = z
@@ -20,5 +21,5 @@ export const pickGradeInputSchema = z
     seed: z.string().min(1).max(100),
   })
   .refine((data) => isModeSeedAllowed(data.mode, data.seed))
-  .refine((data) => data.n <= questionCountFor(data.mode))
+  .refine((data) => data.n <= quizConfig[data.mode].questionCount)
   .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());

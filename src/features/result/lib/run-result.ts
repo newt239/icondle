@@ -2,7 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 
 import { runResultInputSchema } from "#/features/result/schemas";
-import { questionCountFor } from "#/lib/config";
+import { quizConfig } from "#/lib/quiz";
 
 import type { RunResult } from "#/types";
 
@@ -10,7 +10,7 @@ export const getRunResult = createServerFn({ method: "GET" })
   .validator(runResultInputSchema)
   .handler(async ({ data }): Promise<RunResult> => {
     setResponseHeader("cache-control", "private, no-store");
-    const total = questionCountFor(data.mode);
+    const total = quizConfig[data.mode].questionCount;
     if (data.answers.length !== total) {
       return { error: "まだすべての問題に回答していません。", success: false };
     }
