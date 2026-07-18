@@ -77,7 +77,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
         ];
 
   return (
-    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
+    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 pt-8 pb-[10lvh]">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Icondle
@@ -130,7 +130,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
           />
           {isLast ? (
             <Link
-              className={`${buttonVariants({ variant: "primary" })} self-end`}
+              className={`${buttonVariants({ variant: "primary" })} self-end font-bold`}
               params={{ seed }}
               search={{ a: nextAnswers }}
               to={resultTo}
@@ -139,7 +139,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
             </Link>
           ) : (
             <Link
-              className={`${buttonVariants({ variant: "primary" })} self-end`}
+              className={`${buttonVariants({ variant: "primary" })} self-end font-bold`}
               params={{ n: String(n + 1), seed }}
               search={{ a: nextAnswers }}
               to={nextTo}
