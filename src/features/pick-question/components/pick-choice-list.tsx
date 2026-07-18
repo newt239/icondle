@@ -1,6 +1,6 @@
 import { buttonVariants, Kbd } from "@heroui/react";
 
-import type { PickChoiceSvgs } from "#/lib/quiz-types";
+import type { PickChoiceSvgs } from "#/types";
 
 type PickChoiceListProps = {
   choices: [PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs, PickChoiceSvgs];

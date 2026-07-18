@@ -3,8 +3,8 @@ import { z } from "zod";
 
 import { QuestionPage } from "#/features/question/components/question-page";
 import { getQuestion } from "#/features/question/lib/question";
-import { isDateSeed, questionCountFor } from "#/lib/quiz-config";
-import { quizSearchSchema } from "#/lib/search-schemas";
+import { isDateSeed, questionCountFor } from "#/lib/config";
+import { quizSearchSchema } from "#/schemas";
 
 const PlayHardQuestion = () => {
   const { seed, n } = Route.useParams();

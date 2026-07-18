@@ -1,23 +1,10 @@
 import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
-import { z } from "zod";
 
-import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/quiz-config";
+import { runResultInputSchema } from "#/features/result/schemas";
+import { questionCountFor } from "#/lib/config";
 
-import type { RunResult } from "#/lib/quiz-types";
-
-export const runResultInputSchema = z
-  .object({
-    answers: z.string().regex(/^[0-3]*$/),
-    game: z.enum(["play", "pick"]),
-    mode: z.enum(["easy", "hard"]),
-    seed: z.string().min(1).max(100),
-  })
-  .refine((data) =>
-    data.game === "play" ? !isDateSeed(data.seed) : isModeSeedAllowed(data.mode, data.seed),
-  )
-  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday())
-  .refine((data) => data.answers.length <= questionCountFor(data.mode));
+import type { RunResult } from "#/types";
 
 export const getRunResult = createServerFn({ method: "GET" })
   .validator(runResultInputSchema)
@@ -29,8 +16,7 @@ export const getRunResult = createServerFn({ method: "GET" })
     }
     try {
       const { dealAnswer, dealPickAnswer } = await import("#/lib/deal.server");
-      const { decodeAnswer, requireAnswerCipherSecret } =
-        await import("#/lib/answer-cipher.server");
+      const { decodeAnswer, requireAnswerCipherSecret } = await import("#/lib/cipher.server");
       const dealAnswerFor = data.game === "pick" ? dealPickAnswer : dealAnswer;
       const secretKey = requireAnswerCipherSecret();
       const items = Array.from(data.answers, (encodedChar, index) => {

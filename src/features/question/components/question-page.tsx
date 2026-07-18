@@ -11,8 +11,8 @@ import { ChoiceList } from "./choice-list";
 import { ExplanationPanel } from "./explanation-panel";
 import { QuestionCard } from "./question-card";
 
-import type { QuizMode } from "#/lib/quiz-config";
-import type { ClientQuestion, GradeResult } from "#/lib/quiz-types";
+import type { QuizMode } from "#/lib/config";
+import type { ClientQuestion, GradeResult } from "#/types";
 
 type QuestionPageProps = {
   answers: string;

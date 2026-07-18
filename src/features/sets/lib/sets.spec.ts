@@ -2,11 +2,11 @@ import { describe, expect, it } from "vitest";
 
 import { deck } from "#/data/deck";
 
-import { buildSetsOverview } from "./sets-overview.server";
+import { createSetsOverview } from "./sets";
 
-describe("buildSetsOverview", () => {
+describe("createSetsOverview", () => {
   it("採用セット全件を返しアイコン数を持つ", () => {
-    const overviews = buildSetsOverview();
+    const overviews = createSetsOverview();
     expect(overviews).toHaveLength(Object.keys(deck.sets).length);
     for (const overview of overviews) {
       expect(Object.keys(deck.sets)).toContain(overview.id);
@@ -15,7 +15,7 @@ describe("buildSetsOverview", () => {
   });
 
   it("各セットのサンプル SVG がアイコン名のラベルを持ち重複しない", () => {
-    for (const overview of buildSetsOverview()) {
+    for (const overview of createSetsOverview()) {
       expect(overview.samples.length).toBeGreaterThan(0);
       const names = overview.samples.map((sample) => sample.name);
       expect(new Set(names).size).toBe(names.length);

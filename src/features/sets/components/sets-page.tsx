@@ -5,7 +5,7 @@ import { BackToTopLink } from "#/components/back-to-top-link";
 
 import { SetCard } from "./set-card";
 
-import type { SetOverview } from "#/lib/quiz-types";
+import type { SetOverview } from "#/types";
 
 type SetsPageProps = {
   sets: SetOverview[];

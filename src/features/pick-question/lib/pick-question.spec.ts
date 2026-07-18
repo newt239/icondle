@@ -1,8 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { jstToday } from "#/lib/quiz-config";
-
-import { pickQuestionInputSchema } from "./pick-question";
+import { pickQuestionInputSchema } from "#/features/pick-question/schemas";
+import { jstToday } from "#/lib/config";
 
 describe("pickQuestionInputSchema", () => {
   it("easy はランダムシードと日付シードの両方を受理する", () => {

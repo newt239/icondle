@@ -7,7 +7,7 @@ import satori, { init as initSatoriYoga } from "satori/standalone";
 import satoriYogaWasm from "satori/yoga.wasm";
 
 import ogFontDataUri from "#/assets/fonts/inter-bold.ttf?inline";
-import { SITE_URL } from "#/lib/site-config";
+import { SITE_URL } from "#/lib/meta";
 
 // トップページ背景と同じ public/bg-icons.svg を OGP 画像でも再利用するための例外的な相対 import
 // oxlint-disable-next-line import/no-relative-parent-imports
@@ -28,13 +28,13 @@ const CORRECT_COLOR = "#34d399";
 const INCORRECT_COLOR = "#475569";
 const SITE_URL_DISPLAY = SITE_URL.replace(/^https?:\/\//, "");
 
-const buildIconGridDataUri = (): string => {
+const createIconGridDataUri = (): string => {
   const withoutComment = bgIconsSvgRaw.replace(/<!--[\s\S]*?-->/, "");
   const colored = withoutComment.replaceAll("currentColor", ICON_GRID_COLOR);
   return `data:image/svg+xml;base64,${btoa(colored)}`;
 };
 
-const ICON_GRID_DATA_URI = buildIconGridDataUri();
+const ICON_GRID_DATA_URI = createIconGridDataUri();
 
 const decodeBase64FontDataUri = (dataUri: string): ArrayBuffer => {
   const base64 = dataUri.slice(dataUri.indexOf(",") + 1);

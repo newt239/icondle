@@ -1,20 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
-import { z } from "zod";
 
-import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/quiz-config";
+import { pickQuestionInputSchema } from "#/features/pick-question/schemas";
 
-import type { PickClientQuestion } from "#/lib/quiz-types";
-
-export const pickQuestionInputSchema = z
-  .object({
-    mode: z.enum(["easy", "hard"]),
-    n: z.number().int().min(1),
-    seed: z.string().min(1).max(100),
-  })
-  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
-  .refine((data) => data.n <= questionCountFor(data.mode))
-  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
+import type { PickClientQuestion } from "#/types";
 
 export const getPickQuestion = createServerFn({ method: "GET" })
   .validator(pickQuestionInputSchema)

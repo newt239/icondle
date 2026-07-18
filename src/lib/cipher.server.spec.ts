@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from "vitest";
 
-import { decodeAnswer, encodeAnswer, requireAnswerCipherSecret } from "./answer-cipher.server";
+import { decodeAnswer, encodeAnswer, requireAnswerCipherSecret } from "./cipher.server";
 
 const ctx = { game: "play" as const, mode: "easy" as const, n: 1, seed: "a7f3c2" };
 

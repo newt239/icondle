@@ -1,28 +1,15 @@
 import { createServerFn } from "@tanstack/react-start";
-import { z } from "zod";
 
-import { isDateSeed, isModeSeedAllowed, jstToday, questionCountFor } from "#/lib/quiz-config";
+import { pickGradeInputSchema } from "#/features/pick-question/schemas";
 
-import type { PickGradeResult } from "#/lib/quiz-types";
-
-export const pickGradeInputSchema = z
-  .object({
-    answer: z.number().int().min(0).max(3),
-    mode: z.enum(["easy", "hard"]),
-    n: z.number().int().min(1),
-    seed: z.string().min(1).max(100),
-  })
-  .refine((data) => isModeSeedAllowed(data.mode, data.seed))
-  .refine((data) => data.n <= questionCountFor(data.mode))
-  .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday());
+import type { PickGradeResult } from "#/types";
 
 export const gradePickAnswer = createServerFn({ method: "POST" })
   .validator(pickGradeInputSchema)
   .handler(async ({ data }): Promise<PickGradeResult> => {
     try {
       const { dealPickAnswer } = await import("#/lib/deal.server");
-      const { encodeAnswer, requireAnswerCipherSecret } =
-        await import("#/lib/answer-cipher.server");
+      const { encodeAnswer, requireAnswerCipherSecret } = await import("#/lib/cipher.server");
       const { answerIndex, choiceLabels, meta } = dealPickAnswer(data.mode, data.seed, data.n);
       const encodedAnswer = encodeAnswer(
         requireAnswerCipherSecret(),

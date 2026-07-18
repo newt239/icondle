@@ -7,21 +7,11 @@ import {
   shareLabelFor,
   type QuizGame,
   type QuizMode,
-} from "#/lib/quiz-config";
+} from "#/lib/config";
 
 import { getRunResult } from "./run-result";
 
-import type { RunResult } from "#/lib/quiz-types";
-
-export type ShareLoaderData = {
-  game: QuizGame;
-  imageUrl: string;
-  label: string;
-  mode: QuizMode;
-  pageUrl: string;
-  result: RunResult;
-  seed: string;
-};
+import type { ShareLoaderData } from "#/features/result/types";
 
 type LoadShareResultInput = {
   answers: string;
@@ -42,20 +32,20 @@ export const loadShareResult = createServerOnlyFn(
   },
 );
 
-type BuildShareOgResponseInput = {
+type CreateShareOgImageResponseInput = {
   answers: string;
   game: QuizGame;
   mode: QuizMode;
   seed: string;
 };
 
-export const buildShareOgResponse = createServerOnlyFn(
-  async ({ answers, game, mode, seed }: BuildShareOgResponseInput): Promise<Response> => {
+export const createShareOgImageResponse = createServerOnlyFn(
+  async ({ answers, game, mode, seed }: CreateShareOgImageResponseInput): Promise<Response> => {
     const result = await getRunResult({ data: { answers, game, mode, seed } });
     if (!result.success) {
       return new Response("Not Found", { status: 404 });
     }
-    const { renderShareOgImage } = await import("#/lib/og-image.server");
+    const { renderShareOgImage } = await import("#/lib/og.server");
     const png = await renderShareOgImage({
       correctFlags: result.items.map((item) => item.correct),
       modeLabel: modeLabelFor(game, mode),
@@ -68,7 +58,7 @@ export const buildShareOgResponse = createServerOnlyFn(
   },
 );
 
-export const buildShareHead = ({ loaderData }: { loaderData?: ShareLoaderData }) => {
+export const createShareHead = ({ loaderData }: { loaderData?: ShareLoaderData }) => {
   if (!loaderData || !loaderData.result.success) {
     return { meta: [{ title: "結果が見つかりません - Icondle" }] };
   }

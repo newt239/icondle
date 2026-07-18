@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { calculateDailyStreak } from "./daily-streak";
 
-import type { PlayHistoryEntry } from "#/lib/quiz-history";
+import type { PlayHistoryEntry } from "#/lib/history";
 
 const createEntry = (overrides: Partial<PlayHistoryEntry> = {}): PlayHistoryEntry => ({
   answers: "00000",

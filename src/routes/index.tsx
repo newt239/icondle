@@ -2,8 +2,8 @@ import { buttonVariants, Card, IconChevronRight } from "@heroui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Footer } from "#/components/footer";
-import { jstToday } from "#/lib/quiz-config";
-import { SITE_URL } from "#/lib/site-config";
+import { jstToday } from "#/lib/config";
+import { SITE_URL } from "#/lib/meta";
 
 const Home = () => {
   const { today } = Route.useLoaderData();

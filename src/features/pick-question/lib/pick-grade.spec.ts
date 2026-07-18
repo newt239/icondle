@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { pickGradeInputSchema } from "./pick-grade";
+import { pickGradeInputSchema } from "#/features/pick-question/schemas";
 
 describe("pickGradeInputSchema", () => {
   it("easy はランダムシードと日付シードの両方を受理する", () => {

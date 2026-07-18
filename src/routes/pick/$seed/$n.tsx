@@ -3,8 +3,8 @@ import { z } from "zod";
 
 import { PickQuestionPage } from "#/features/pick-question/components/pick-question-page";
 import { getPickQuestion } from "#/features/pick-question/lib/pick-question";
-import { isDateSeed, jstToday, questionCountFor } from "#/lib/quiz-config";
-import { quizSearchSchema } from "#/lib/search-schemas";
+import { isDateSeed, jstToday, questionCountFor } from "#/lib/config";
+import { quizSearchSchema } from "#/schemas";
 
 const PickQuestion = () => {
   const { seed, n } = Route.useParams();

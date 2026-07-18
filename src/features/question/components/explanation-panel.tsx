@@ -2,7 +2,7 @@ import type { RefObject } from "react";
 
 import { Card } from "@heroui/react";
 
-import type { AnswerMeta } from "#/lib/quiz-types";
+import type { AnswerMeta } from "#/types";
 
 type ExplanationPanelProps = {
   correct: boolean;

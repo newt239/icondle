@@ -1,17 +1,18 @@
 import "@tanstack/react-start/server-only";
 import { deck, type Concept, type SetId } from "#/data/deck";
 
+import { normalize } from "./icon.server";
 import { hash, mulberry32 } from "./prng";
-import { normalize } from "./render-icon.server";
 
-import type { QuizMode } from "./quiz-config";
+import type { QuizMode } from "./config";
+
 import type {
   AnswerIcon,
   AnswerMeta,
   ClientQuestion,
   PickChoiceSvgs,
   PickClientQuestion,
-} from "./quiz-types";
+} from "#/types";
 
 const CHOICE_COUNT = 4;
 const GROUP_SIZE = 4;
@@ -245,7 +246,7 @@ const groupCacheEntryFor = (mode: QuizMode, seed: string): GroupCacheEntry => {
   return entry;
 };
 
-const buildGroups = (mode: QuizMode, seed: string, count: number): Group[] => {
+const getOrGrowGroups = (mode: QuizMode, seed: string, count: number): Group[] => {
   const pool = poolFor(mode);
   const entry = groupCacheEntryFor(mode, seed);
   while (entry.groups.length < count) {
@@ -269,7 +270,7 @@ type Dealt = {
 };
 
 const deal = (mode: QuizMode, seed: string, n: number): Dealt => {
-  const group = buildGroups(mode, seed, n)[n - 1];
+  const group = getOrGrowGroups(mode, seed, n)[n - 1];
   if (!group) {
     throw new Error(`出題可能な概念が見つかりません: ${mode}:${seed}:${n}`);
   }

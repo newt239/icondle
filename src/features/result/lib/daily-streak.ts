@@ -1,6 +1,6 @@
-import { isDateSeed } from "#/lib/quiz-config";
+import { isDateSeed } from "#/lib/config";
 
-import type { PlayHistoryEntry } from "#/lib/quiz-history";
+import type { PlayHistoryEntry } from "#/lib/history";
 
 const previousDateSeed = (dateSeed: string): string => {
   const date = new Date(dateSeed);

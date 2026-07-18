@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { gradeInputSchema } from "./grade";
+import { gradeInputSchema } from "#/features/question/schemas";
 
 describe("gradeInputSchema", () => {
   it("ランダムシードを受理する", () => {

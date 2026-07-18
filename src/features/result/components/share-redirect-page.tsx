@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import { buttonVariants, EmptyState } from "@heroui/react";
 import { Link, useNavigate } from "@tanstack/react-router";
 
-import type { QuizGame, QuizMode } from "#/lib/quiz-config";
-import type { RunResult } from "#/lib/quiz-types";
+import type { QuizGame, QuizMode } from "#/lib/config";
+import type { RunResult } from "#/types";
 
 type ShareRedirectPageProps = {
   game: QuizGame;

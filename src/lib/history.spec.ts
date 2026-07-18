@@ -6,7 +6,7 @@ import {
   readPlayHistory,
   savePlayHistoryEntry,
   type PlayHistoryEntry,
-} from "./quiz-history";
+} from "./history";
 
 const createEntry = (overrides: Partial<PlayHistoryEntry> = {}): PlayHistoryEntry => ({
   answers: "0000",

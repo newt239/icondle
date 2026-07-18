@@ -2,8 +2,8 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ResultPage } from "#/features/result/components/result-page";
 import { getRunResult } from "#/features/result/lib/run-result";
-import { isDateSeed, jstToday } from "#/lib/quiz-config";
-import { quizSearchSchema } from "#/lib/search-schemas";
+import { isDateSeed, jstToday } from "#/lib/config";
+import { quizSearchSchema } from "#/schemas";
 
 const PickResult = () => {
   const { seed } = Route.useParams();

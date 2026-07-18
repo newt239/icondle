@@ -10,8 +10,8 @@ import { useChoiceShortcuts } from "#/hooks/use-choice-shortcuts";
 import { PickChoiceList } from "./pick-choice-list";
 import { PickExplanationPanel } from "./pick-explanation-panel";
 
-import type { QuizMode } from "#/lib/quiz-config";
-import type { PickClientQuestion, PickGradeResult } from "#/lib/quiz-types";
+import type { QuizMode } from "#/lib/config";
+import type { PickClientQuestion, PickGradeResult } from "#/types";
 
 type PickQuestionPageProps = {
   answers: string;

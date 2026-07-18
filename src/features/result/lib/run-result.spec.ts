@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { runResultInputSchema } from "./run-result";
+import { runResultInputSchema } from "#/features/result/schemas";
 
 describe("runResultInputSchema", () => {
   it("play はランダムシードのみ受理し日付シードを拒否する", () => {

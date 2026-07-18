@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
-import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from "#/lib/site-config";
+import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from "#/lib/meta";
 import appCss from "#/styles.css?url";
 
 const RootDocument = ({ children }: { children: ReactNode }) => (

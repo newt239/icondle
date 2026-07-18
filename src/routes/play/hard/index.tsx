@@ -1,6 +1,6 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
 
-import { generateSeed } from "#/lib/quiz-config";
+import { generateSeed } from "#/lib/config";
 
 export const Route = createFileRoute("/play/hard/")({
   beforeLoad: () => {

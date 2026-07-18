@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { normalize } from "./render-icon.server";
+import { normalize } from "./icon.server";
 
 describe("normalize", () => {
   it("viewBox を 0 0 100 100 に包み直す", () => {

@@ -6,19 +6,13 @@ import { Link } from "@tanstack/react-router";
 import { BackToTopLink } from "#/components/back-to-top-link";
 import { calculateDailyStreak } from "#/features/result/lib/daily-streak";
 import { trackQuizComplete } from "#/lib/analytics";
-import {
-  isDateSeed,
-  jstToday,
-  quizBasePath,
-  type QuizGame,
-  type QuizMode,
-} from "#/lib/quiz-config";
-import { readPlayHistory, savePlayHistoryEntry } from "#/lib/quiz-history";
+import { isDateSeed, jstToday, quizBasePath, type QuizGame, type QuizMode } from "#/lib/config";
+import { readPlayHistory, savePlayHistoryEntry } from "#/lib/history";
 
 import { DailyStreakDialog } from "./daily-streak-dialog";
 import { TweetButton } from "./tweet-button";
 
-import type { RunResult } from "#/lib/quiz-types";
+import type { RunResult } from "#/types";
 
 type ResultPageProps = {
   answers: string;

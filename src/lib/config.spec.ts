@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { generateSeed, isModeSeedAllowed, questionCountFor } from "./quiz-config";
+import { generateSeed, isModeSeedAllowed, questionCountFor } from "./config";
 
 describe("questionCountFor", () => {
   it("easy は 5 問、hard は 10 問を返す", () => {

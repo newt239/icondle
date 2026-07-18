@@ -1,4 +1,4 @@
-import type { QuizMode } from "./quiz-config";
+import type { QuizMode } from "#/lib/config";
 
 export type ClientQuestion = {
   svgs: [string, string, string, string];

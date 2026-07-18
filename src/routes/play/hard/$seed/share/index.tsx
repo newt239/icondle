@@ -1,9 +1,9 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ShareRedirectPage } from "#/features/result/components/share-redirect-page";
-import { buildShareHead, loadShareResult } from "#/features/result/lib/share-result";
-import { isDateSeed } from "#/lib/quiz-config";
-import { quizSearchSchema } from "#/lib/search-schemas";
+import { createShareHead, loadShareResult } from "#/features/result/lib/share-result";
+import { isDateSeed } from "#/lib/config";
+import { quizSearchSchema } from "#/schemas";
 
 const PlayHardShare = () => {
   const { result, seed } = Route.useLoaderData();
@@ -14,7 +14,7 @@ const loaderDeps = ({ search }: { search: { a?: string } }) => ({ a: search.a ??
 
 export const Route = createFileRoute("/play/hard/$seed/share/")({
   component: PlayHardShare,
-  head: buildShareHead,
+  head: createShareHead,
   loader: async ({ deps, params }) => {
     if (isDateSeed(params.seed)) {
       throw notFound();
