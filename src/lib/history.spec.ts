@@ -19,17 +19,13 @@ const createEntry = (overrides: Partial<PlayHistoryEntry> = {}): PlayHistoryEntr
   ...overrides,
 });
 
-const createLocalStorageStub = () => {
+beforeEach(() => {
   const store = new Map<string, string>();
-  return {
+  vi.stubGlobal("localStorage", {
     getItem: (key: string) => store.get(key) ?? null,
     removeItem: (key: string) => store.delete(key),
     setItem: (key: string, value: string) => store.set(key, value),
-  };
-};
-
-beforeEach(() => {
-  vi.stubGlobal("localStorage", createLocalStorageStub());
+  });
   vi.stubGlobal("window", { dispatchEvent: vi.fn() });
 });
 
@@ -38,12 +34,9 @@ describe("readPlayHistory", () => {
     expect(readPlayHistory()).toEqual([]);
   });
 
-  it("壊れた JSON が保存されている場合は空配列を返す", () => {
+  it("壊れたデータが保存されている場合は空配列を返す", () => {
     localStorage.setItem(PLAY_HISTORY_STORAGE_KEY, "{invalid");
     expect(readPlayHistory()).toEqual([]);
-  });
-
-  it("スキーマに合わないデータが保存されている場合は空配列を返す", () => {
     localStorage.setItem(PLAY_HISTORY_STORAGE_KEY, JSON.stringify([{ foo: "bar" }]));
     expect(readPlayHistory()).toEqual([]);
   });

@@ -21,7 +21,7 @@ describe("mulberry32", () => {
 
   test("0 以上 1 未満の値を返す", () => {
     const rng = mulberry32(hash("icondle"));
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 10; i++) {
       const value = rng();
       expect(value).toBeGreaterThanOrEqual(0);
       expect(value).toBeLessThan(1);

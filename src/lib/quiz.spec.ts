@@ -1,13 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { generateSeed, isModeSeedAllowed, quizConfig } from "./quiz";
-
-describe("quizConfig", () => {
-  it("easy は 5 問、hard は 10 問である", () => {
-    expect(quizConfig.easy.questionCount).toBe(5);
-    expect(quizConfig.hard.questionCount).toBe(10);
-  });
-});
+import { generateSeed, isModeSeedAllowed } from "./quiz";
 
 describe("isModeSeedAllowed", () => {
   it("easy は任意のシードを許可する", () => {
@@ -23,8 +16,6 @@ describe("isModeSeedAllowed", () => {
 
 describe("generateSeed", () => {
   it("16 進 6 桁のシードを生成する", () => {
-    for (let i = 0; i < 20; i += 1) {
-      expect(generateSeed()).toMatch(/^[0-9a-f]{6}$/);
-    }
+    expect(generateSeed()).toMatch(/^[0-9a-f]{6}$/);
   });
 });

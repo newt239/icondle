@@ -10,23 +10,6 @@ type ChoiceListProps = {
   onChoose: (index: number) => void;
 };
 
-const stateClassName = (
-  index: number,
-  picked: number | null,
-  answerIndex: number | null,
-): string => {
-  if (answerIndex === null) {
-    return "";
-  }
-  if (index === answerIndex) {
-    return "outline-2 outline-offset-2 outline-solid outline-success";
-  }
-  if (index === picked) {
-    return "outline-2 outline-offset-2 outline-solid outline-danger";
-  }
-  return "";
-};
-
 export const ChoiceList = ({
   choices,
   answers,
@@ -50,7 +33,7 @@ export const ChoiceList = ({
         <input name="a" type="hidden" value={`${answers}${index}`} />
         <button
           aria-keyshortcuts={String(index + 1)}
-          className={`${buttonVariants({ fullWidth: true, variant: "secondary" })} justify-start gap-3 ${stateClassName(index, picked, answerIndex)}`}
+          className={`${buttonVariants({ fullWidth: true, variant: "secondary" })} justify-start gap-3 ${answerIndex === null ? "" : index === answerIndex ? "outline-success outline-2 outline-offset-2 outline-solid" : index === picked ? "outline-danger outline-2 outline-offset-2 outline-solid" : ""}`}
           disabled={disabled}
           type="submit"
         >

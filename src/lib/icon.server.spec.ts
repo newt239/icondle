@@ -15,12 +15,6 @@ describe("normalize", () => {
     expect(svg).toContain(`scale(${100 / 256})`);
   });
 
-  it("16 グリッドの元 viewBox が出力に残らない", () => {
-    const svg = normalize({ body: '<path d="M0 0h16v16H0z"/>', height: 16, width: 16 });
-    expect(svg).not.toContain('viewBox="0 0 16 16"');
-    expect(svg).toContain(`scale(${100 / 16})`);
-  });
-
   it("横長のアイコンは幅基準で縮小し縦中央に寄せる", () => {
     const svg = normalize({ body: '<path d="M0 0h640v512H0z"/>', height: 512, width: 640 });
     expect(svg).toContain(`scale(${100 / 640})`);

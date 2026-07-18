@@ -51,7 +51,7 @@ test.describe("デイリーモード", () => {
     const date = jstToday();
     await page.goto(`/pick/${date}/result?a=00000`);
     await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
-    await expect(page.getByRole("button", { name: "Xでポストする" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Xでポストする" })).toBeVisible();
   });
 
   test("初回プレイでは連続記録ダイアログを表示しない", async ({ page }) => {

@@ -1,11 +1,24 @@
 import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
 
-import { pickGradeInputSchema } from "#/features/pick-question/schemas";
+import { jstToday } from "#/lib/date";
+import { isDateSeed, isModeSeedAllowed, quizConfig } from "#/lib/quiz";
 
 import type { PickGradeResult } from "#/types";
 
 export const gradePickAnswer = createServerFn({ method: "POST" })
-  .validator(pickGradeInputSchema)
+  .validator(
+    z
+      .object({
+        answer: z.number().int().min(0).max(3),
+        mode: z.enum(["easy", "hard"]),
+        n: z.number().int().min(1),
+        seed: z.string().min(1).max(100),
+      })
+      .refine((data) => isModeSeedAllowed(data.mode, data.seed))
+      .refine((data) => data.n <= quizConfig[data.mode].questionCount)
+      .refine((data) => !isDateSeed(data.seed) || data.seed <= jstToday()),
+  )
   .handler(async ({ data }): Promise<PickGradeResult> => {
     try {
       const { dealPickAnswer } = await import("#/lib/deal.server");

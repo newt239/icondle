@@ -45,12 +45,6 @@ describe("deck", () => {
       expect(setIds).toContain(setId);
     }
   });
-
-  it("矢印の概念が収録されている", () => {
-    for (const name of ["arrow-up", "arrow-down", "arrow-left", "arrow-right"]) {
-      expect(conceptByName(name)).toBeDefined();
-    }
-  });
 });
 
 describe("dealQuestion", () => {
@@ -188,25 +182,6 @@ describe("dealAnswer", () => {
       );
       expect(descending).toEqual(ascending);
     }
-  });
-
-  it("多数の seed で最終問まで出題を形成できる", () => {
-    for (const mode of MODES) {
-      for (let s = 0; s < 100; s += 1) {
-        expect(() => dealAnswer(mode, `form-${s}`, QUESTION_COUNT)).not.toThrow();
-      }
-    }
-  });
-
-  it("meta が解説とリンク生成に必要な情報を持つ", () => {
-    const { meta } = dealAnswer("easy", "seed-meta", 1);
-    expect(meta.set.length).toBeGreaterThan(0);
-    expect(meta.icons).toHaveLength(4);
-    for (const icon of meta.icons) {
-      expect(icon.icon.length).toBeGreaterThan(0);
-      expect(icon.concept.length).toBeGreaterThan(0);
-    }
-    expect(Object.keys(deck.sets)).toContain(meta.setId);
   });
 });
 

@@ -56,7 +56,7 @@ test.describe("プレイモード", () => {
   test("全問回答済みの結果ページが表示される", async ({ page }) => {
     await page.goto("/play/e2etest/result?a=00000");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
-    await expect(page.getByRole("button", { name: "Xでポストする" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Xでポストする" })).toBeVisible();
     await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(20);
   });
 

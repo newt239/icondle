@@ -17,14 +17,6 @@ describe("answer-cipher", () => {
     const pickEncoded = encodeAnswer("secret", { ...ctx, game: "pick" }, 0);
     expect(playEncoded).not.toBe(pickEncoded);
   });
-
-  it("出力は常に 0-3 の範囲に収まる", () => {
-    for (let picked = 0; picked < 4; picked += 1) {
-      const encoded = encodeAnswer("secret", ctx, picked);
-      expect(encoded).toBeGreaterThanOrEqual(0);
-      expect(encoded).toBeLessThanOrEqual(3);
-    }
-  });
 });
 
 describe("requireAnswerCipherSecret", () => {

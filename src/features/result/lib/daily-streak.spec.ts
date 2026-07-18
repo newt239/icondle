@@ -16,10 +16,6 @@ const createEntry = (overrides: Partial<PlayHistoryEntry> = {}): PlayHistoryEntr
 });
 
 describe("calculateDailyStreak", () => {
-  it("履歴が空なら0を返す", () => {
-    expect(calculateDailyStreak([], "2026-07-17")).toBe(0);
-  });
-
   it("今日のデイリー記録がなければ0を返す", () => {
     const history = [createEntry({ seed: "2026-07-16" })];
     expect(calculateDailyStreak(history, "2026-07-17")).toBe(0);
@@ -43,24 +39,13 @@ describe("calculateDailyStreak", () => {
     expect(calculateDailyStreak(history, "2026-07-17")).toBe(2);
   });
 
-  it("game が pick 以外のエントリは対象外とする", () => {
+  it("pick の easy の日付シード以外のエントリは対象外とする", () => {
     const history = [
       createEntry({ seed: "2026-07-17" }),
       createEntry({ game: "play", seed: "2026-07-16" }),
-    ];
-    expect(calculateDailyStreak(history, "2026-07-17")).toBe(1);
-  });
-
-  it("mode が hard のエントリは対象外とする", () => {
-    const history = [
-      createEntry({ seed: "2026-07-17" }),
       createEntry({ mode: "hard", seed: "2026-07-16" }),
+      createEntry({ seed: "a7f3c2" }),
     ];
-    expect(calculateDailyStreak(history, "2026-07-17")).toBe(1);
-  });
-
-  it("日付シードでないエントリは対象外とする", () => {
-    const history = [createEntry({ seed: "2026-07-17" }), createEntry({ seed: "a7f3c2" })];
     expect(calculateDailyStreak(history, "2026-07-17")).toBe(1);
   });
 

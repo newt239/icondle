@@ -27,7 +27,7 @@ export const ShareRedirectPage = ({ game, mode, result, seed }: ShareRedirectPag
   useEffect(() => {
     // OGPクローラーには初期HTMLのメタタグのみを見せ、実際にアクセスしたブラウザだけを同じ問題へ即時遷移させるためのブラウザナビゲーション
     if (result.success) {
-      void navigate({ params: { n: "1", seed }, replace: true, to: targetTo });
+      navigate({ params: { n: "1", seed }, replace: true, to: targetTo });
     }
   }, [navigate, result.success, targetTo, seed]);
 

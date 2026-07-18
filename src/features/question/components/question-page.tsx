@@ -23,8 +23,6 @@ type QuestionPageProps = {
   total: number;
 };
 
-const nextLinkClassName = `${buttonVariants({ variant: "primary" })} self-end`;
-
 export const QuestionPage = ({ answers, mode, n, question, seed, total }: QuestionPageProps) => {
   const [picked, setPicked] = useState<number | null>(null);
   const [result, setResult] = useState<GradeResult | null>(null);
@@ -95,7 +93,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
           />
           {isLast ? (
             <Link
-              className={nextLinkClassName}
+              className={`${buttonVariants({ variant: "primary" })} self-end`}
               params={{ seed }}
               search={{ a: nextAnswers }}
               to={mode === "hard" ? "/play/hard/$seed/result" : "/play/$seed/result"}
@@ -104,7 +102,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
             </Link>
           ) : (
             <Link
-              className={nextLinkClassName}
+              className={`${buttonVariants({ variant: "primary" })} self-end`}
               params={{ n: String(n + 1), seed }}
               search={{ a: nextAnswers }}
               to={mode === "hard" ? "/play/hard/$seed/$n" : "/play/$seed/$n"}

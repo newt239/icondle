@@ -22,8 +22,6 @@ type PickQuestionPageProps = {
   total: number;
 };
 
-const nextLinkClassName = `${buttonVariants({ variant: "primary" })} self-end`;
-
 export const PickQuestionPage = ({
   answers,
   mode,
@@ -102,7 +100,7 @@ export const PickQuestionPage = ({
           />
           {isLast ? (
             <Link
-              className={nextLinkClassName}
+              className={`${buttonVariants({ variant: "primary" })} self-end`}
               params={{ seed }}
               search={{ a: nextAnswers }}
               to={mode === "hard" ? "/pick/hard/$seed/result" : "/pick/$seed/result"}
@@ -111,7 +109,7 @@ export const PickQuestionPage = ({
             </Link>
           ) : (
             <Link
-              className={nextLinkClassName}
+              className={`${buttonVariants({ variant: "primary" })} self-end`}
               params={{ n: String(n + 1), seed }}
               search={{ a: nextAnswers }}
               to={mode === "hard" ? "/pick/hard/$seed/$n" : "/pick/$seed/$n"}

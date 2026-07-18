@@ -1,11 +1,22 @@
 import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
 
-import { gradeInputSchema } from "#/features/question/schemas";
+import { isDateSeed, quizConfig } from "#/lib/quiz";
 
 import type { GradeResult } from "#/types";
 
 export const gradeAnswer = createServerFn({ method: "POST" })
-  .validator(gradeInputSchema)
+  .validator(
+    z
+      .object({
+        answer: z.number().int().min(0).max(3),
+        mode: z.enum(["easy", "hard"]),
+        n: z.number().int().min(1),
+        seed: z.string().min(1).max(100),
+      })
+      .refine((data) => !isDateSeed(data.seed))
+      .refine((data) => data.n <= quizConfig[data.mode].questionCount),
+  )
   .handler(async ({ data }): Promise<GradeResult> => {
     try {
       const { dealAnswer } = await import("#/lib/deal.server");

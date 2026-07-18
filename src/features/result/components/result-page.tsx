@@ -24,8 +24,6 @@ type ResultPageProps = {
   seed: string;
 };
 
-const linkClassName = buttonVariants({ variant: "primary" });
-
 export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: ResultPageProps) => {
   const [streakDays, setStreakDays] = useState<number | null>(null);
 
@@ -67,7 +65,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
         <EmptyState className="gap-4">
           <h1 className="text-xl font-bold">結果を表示できません</h1>
           <p className="text-muted">{result.error}</p>
-          <Link className={linkClassName} to={replayTo}>
+          <Link className={buttonVariants({ variant: "primary" })} to={replayTo}>
             最初から遊ぶ
           </Link>
         </EmptyState>
@@ -145,7 +143,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
       </ul>
       <div className="flex items-center justify-between gap-4">
         <BackToTopLink />
-        <Link className={linkClassName} to={replayTo}>
+        <Link className={buttonVariants({ variant: "primary" })} to={replayTo}>
           もっとプレイする
         </Link>
       </div>
