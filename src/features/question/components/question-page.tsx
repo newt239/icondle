@@ -77,7 +77,7 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
         ];
 
   return (
-    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 pt-8 pb-[10lvh]">
+    <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-1 flex-col gap-6 px-4 pt-8 pb-6">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Icondle

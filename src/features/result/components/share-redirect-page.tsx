@@ -1,6 +1,8 @@
 import { buttonVariants, EmptyState } from "@heroui/react";
 import { Link, Navigate } from "@tanstack/react-router";
 
+import { Footer } from "#/components/footer";
+
 import type { QuizGame, QuizMode } from "#/lib/quiz";
 import type { RunResult } from "#/types";
 
@@ -23,29 +25,35 @@ export const ShareRedirectPage = ({ game, mode, result, seed }: ShareRedirectPag
 
   if (!result.success) {
     return (
-      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 pt-8 pb-[10lvh]">
-        <EmptyState className="gap-4">
-          <h1 className="text-xl font-bold">結果を表示できません</h1>
-          <p className="text-muted">{result.error}</p>
-          <Link className={`${buttonVariants({ variant: "primary" })} font-bold`} to="/">
-            トップに戻る
-          </Link>
-        </EmptyState>
-      </main>
+      <>
+        <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 pt-8 pb-6">
+          <EmptyState className="gap-4">
+            <h1 className="text-xl font-bold">結果を表示できません</h1>
+            <p className="text-muted">{result.error}</p>
+            <Link className={`${buttonVariants({ variant: "primary" })} font-bold`} to="/">
+              トップに戻る
+            </Link>
+          </EmptyState>
+        </main>
+        <Footer />
+      </>
     );
   }
 
   return (
-    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-4 px-4 pt-8 pb-[10lvh]">
-      <Navigate params={{ n: "1", seed }} replace to={targetTo} />
-      <p className="text-muted">問題にリダイレクトしています…</p>
-      <Link
-        className={`${buttonVariants({ variant: "primary" })} font-bold`}
-        params={{ n: "1", seed }}
-        to={targetTo}
-      >
-        手動で移動する
-      </Link>
-    </main>
+    <>
+      <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-1 flex-col items-center justify-center gap-4 px-4 pt-8 pb-6">
+        <Navigate params={{ n: "1", seed }} replace to={targetTo} />
+        <p className="text-muted">問題にリダイレクトしています…</p>
+        <Link
+          className={`${buttonVariants({ variant: "primary" })} font-bold`}
+          params={{ n: "1", seed }}
+          to={targetTo}
+        >
+          手動で移動する
+        </Link>
+      </main>
+      <Footer />
+    </>
   );
 };
