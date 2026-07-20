@@ -1,6 +1,6 @@
 {
   "name": "icondle",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -42,7 +42,6 @@
     "@iconify-json/bi": "1.2.7",
     "@iconify-json/boxicons": "1.2.0",
     "@iconify-json/carbon": "1.2.24",
-    "@iconify-json/fa6-regular": "1.2.4",
     "@iconify-json/fluent": "1.2.53",
     "@iconify-json/heroicons": "1.2.3",
     "@iconify-json/hugeicons": "1.2.30",
@@ -51,8 +50,10 @@
     "@iconify-json/lucide": "1.2.117",
     "@iconify-json/material-symbols": "1.2.84",
     "@iconify-json/mingcute": "1.2.7",
+    "@iconify-json/ph": "1.2.2",
     "@iconify-json/ri": "1.2.10",
     "@iconify-json/tabler": "1.2.35",
+    "@iconify-json/uil": "1.2.3",
     "@iconify/types": "2.0.0",
     "@ls-lint/ls-lint": "2.3.1",
     "@playwright/test": "1.61.1",
@@ -73,5 +74,5 @@
     "vitest": "4.1.10",
     "wrangler": "4.110.0"
   },
-  "packageManager": "pnpm@11.11.0"
+  "packageManager": "pnpm@11.14.0+sha512.66c1ac4c7d4762d6d7dde44c7f3e5a73591ed0a0806e751d4ed32d4f004f25b2285a906b1fd8a9e3e621df3b4e2858bf88e50e0cf626bedbe977fe434a5caf85"
 }

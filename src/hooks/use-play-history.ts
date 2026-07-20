@@ -1,10 +1,6 @@
 import { useSyncExternalStore } from "react";
 
-import {
-  PLAY_HISTORY_CHANGE_EVENT,
-  readPlayHistory,
-  type PlayHistoryEntry,
-} from "#/lib/quiz-history";
+import { PLAY_HISTORY_CHANGE_EVENT, readPlayHistory, type PlayHistoryEntry } from "#/lib/history";
 
 const EMPTY_HISTORY: PlayHistoryEntry[] = [];
 

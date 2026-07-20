@@ -15,6 +15,28 @@
 - Oxlint / Oxfmt
 - Vitest / Playwright
 
+## 収録アイコンセットとライセンス
+
+出題データ（`src/data/deck.ts`）は [Iconify](https://iconify.design/)（`@iconify-json/*`）から生成しており、各アイコンは表示用に正規化（viewBox の統一など）を加えて収録しています。収録セットとライセンスは以下のとおりです。
+
+| セット                 | ライセンス                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------- |
+| Tabler Icons           | [MIT](https://github.com/tabler/tabler-icons/blob/master/LICENSE)                 |
+| Huge Icons             | MIT                                                                               |
+| IconPark Outline       | [Apache 2.0](https://github.com/bytedance/IconPark/blob/master/LICENSE)           |
+| Material Symbols       | [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) |
+| Fluent UI System Icons | [MIT](https://github.com/microsoft/fluentui-system-icons/blob/main/LICENSE)       |
+| Carbon                 | Apache 2.0                                                                        |
+| Lucide                 | [ISC](https://github.com/lucide-icons/lucide/blob/main/LICENSE)                   |
+| Boxicons               | [MIT](https://github.com/box-icons/boxicons-core/blob/main/LICENSE)               |
+| Iconoir                | [MIT](https://github.com/iconoir-icons/iconoir/blob/main/LICENSE)                 |
+| Remix Icon             | [Apache 2.0](https://github.com/cyberalien/RemixIcon/blob/master/License)         |
+| MingCute Icon          | [Apache 2.0](https://github.com/Richard9394/MingCute/blob/main/LICENSE)           |
+| Phosphor               | [MIT](https://github.com/phosphor-icons/core/blob/main/LICENSE)                   |
+| Bootstrap Icons        | [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)                         |
+| Unicons                | [Apache 2.0](https://github.com/Iconscout/unicons/blob/master/LICENSE)            |
+| HeroIcons              | [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE)              |
+
 ## Development
 
 ### 1. 依存関係のインストール

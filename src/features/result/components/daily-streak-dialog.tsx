@@ -27,7 +27,7 @@ export const DailyStreakDialog = ({ onOpenChange, streakDays }: DailyStreakDialo
             <p>Icondle Dailyに{streakDays}日連続でチャレンジしています🎉 ありがとうございます！</p>
           </ModalBody>
           <ModalFooter>
-            <Button slot="close" variant="primary">
+            <Button className="font-bold" slot="close" variant="primary">
               閉じる
             </Button>
           </ModalFooter>

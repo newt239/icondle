@@ -21,7 +21,7 @@ test.describe("ピックモード", () => {
   test("回答すると解説が表示され次の問題へ進める", async ({ page }) => {
     await page.goto("/pick/e2etest/1");
     await waitForHydration(page);
-    await expect(page.getByText("のアイコンはどれ？")).toBeVisible();
+    await expect(page.getByText("のアイコンは？")).toBeVisible();
     const buttons = page.getByRole("group", { name: "選択肢" }).getByRole("button");
     await expect(buttons).toHaveCount(4);
     await buttons.first().click();
@@ -56,10 +56,13 @@ test.describe("ピックモード", () => {
 
   test("全問回答済みの結果ページが表示される", async ({ page }) => {
     await page.goto("/pick/e2etest/result?a=00000");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
-    await expect(page.getByRole("button", { name: "結果をコピーして共有" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
+    await expect(page.getByRole("link", { name: "Xでポストする" })).toBeVisible();
     await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(20);
-    await expect(page.getByRole("link", { name: "もう一度遊ぶ" })).toHaveAttribute("href", "/pick");
+    await expect(page.getByRole("link", { name: "もっとプレイする" })).toHaveAttribute(
+      "href",
+      "/pick",
+    );
   });
 
   test("回答が揃っていない結果ページは空状態を表示する", async ({ page }) => {
@@ -87,8 +90,8 @@ test.describe("ピックモード（難しい）", () => {
 
   test("全問回答済みの結果ページが表示される", async ({ page }) => {
     await page.goto("/pick/hard/e2etest/result?a=0000000000");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("問正解");
-    await expect(page.getByRole("link", { name: "もう一度遊ぶ" })).toHaveAttribute(
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
+    await expect(page.getByRole("link", { name: "もっとプレイする" })).toHaveAttribute(
       "href",
       "/pick/hard",
     );

@@ -1,27 +1,11 @@
 import { createServerOnlyFn } from "@tanstack/react-start";
 import { getRequestUrl, setResponseHeader } from "@tanstack/react-start/server";
 
-import {
-  modeLabelFor,
-  quizBasePath,
-  shareLabelFor,
-  type QuizGame,
-  type QuizMode,
-} from "#/lib/quiz-config";
+import { quizConfig, shareLabelFor, type QuizGame, type QuizMode } from "#/lib/quiz";
 
 import { getRunResult } from "./run-result";
 
-import type { RunResult } from "#/lib/quiz-types";
-
-export type ShareLoaderData = {
-  game: QuizGame;
-  imageUrl: string;
-  label: string;
-  mode: QuizMode;
-  pageUrl: string;
-  result: RunResult;
-  seed: string;
-};
+import type { ShareLoaderData } from "#/features/result/types";
 
 type LoadShareResultInput = {
   answers: string;
@@ -37,28 +21,28 @@ export const loadShareResult = createServerOnlyFn(
     setResponseHeader("cache-control", "public, max-age=31536000, immutable");
     const { href, origin } = getRequestUrl();
     const label = shareLabelFor(game, mode, seed);
-    const imageUrl = `${origin}${quizBasePath(game, mode)}/${encodeURIComponent(seed)}/share/og?a=${encodeURIComponent(answers)}`;
+    const imageUrl = `${origin}${quizConfig[mode].games[game].basePath}/${encodeURIComponent(seed)}/share/og?a=${encodeURIComponent(answers)}`;
     return { game, imageUrl, label, mode, pageUrl: href, result, seed };
   },
 );
 
-type BuildShareOgResponseInput = {
+type CreateShareOgImageResponseInput = {
   answers: string;
   game: QuizGame;
   mode: QuizMode;
   seed: string;
 };
 
-export const buildShareOgResponse = createServerOnlyFn(
-  async ({ answers, game, mode, seed }: BuildShareOgResponseInput): Promise<Response> => {
+export const createShareOgImageResponse = createServerOnlyFn(
+  async ({ answers, game, mode, seed }: CreateShareOgImageResponseInput): Promise<Response> => {
     const result = await getRunResult({ data: { answers, game, mode, seed } });
     if (!result.success) {
       return new Response("Not Found", { status: 404 });
     }
-    const { renderShareOgImage } = await import("#/lib/og-image.server");
+    const { renderShareOgImage } = await import("#/lib/og.server");
     const png = await renderShareOgImage({
       correctFlags: result.items.map((item) => item.correct),
-      modeLabel: modeLabelFor(game, mode),
+      modeLabel: quizConfig[mode].games[game].label,
       score: result.score,
       seedLabel: seed,
     });
@@ -68,7 +52,7 @@ export const buildShareOgResponse = createServerOnlyFn(
   },
 );
 
-export const buildShareHead = ({ loaderData }: { loaderData?: ShareLoaderData }) => {
+export const createShareHead = ({ loaderData }: { loaderData?: ShareLoaderData }) => {
   if (!loaderData || !loaderData.result.success) {
     return { meta: [{ title: "結果が見つかりません - Icondle" }] };
   }

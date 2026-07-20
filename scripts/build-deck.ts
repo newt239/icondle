@@ -13,7 +13,6 @@ type Candidate = {
 };
 
 const CANDIDATES: Candidate[] = [
-  { id: "fa6-regular" },
   { id: "fluent", include: /-24-regular$/, strip: /-24-regular$/ },
   { id: "material-symbols", include: /-outline$/, strip: /-outline$/ },
   { exclude: /-filled$/, id: "tabler" },
@@ -27,13 +26,15 @@ const CANDIDATES: Candidate[] = [
   { exclude: /-solid$/, id: "heroicons" },
   { exclude: /-fill$/, id: "ri", strip: /-line$/ },
   { id: "mingcute", include: /-line$/, strip: /-line$/ },
+  { id: "uil" },
+  { exclude: /-(?:bold|duotone|fill|light|thin)$/, id: "ph" },
 ];
 
 const MIN_SHARED_SETS = 4;
 const CHOICE_COUNT = 4;
 const MIN_EASY_POOL = 50;
 
-const EASY_IDS = ["fluent", "material-symbols", "tabler", "lucide", "carbon", "fa6-regular"];
+const EASY_IDS = ["fluent", "material-symbols", "tabler", "lucide", "carbon", "bi"];
 
 type ResolvedIcon = {
   raw: string;

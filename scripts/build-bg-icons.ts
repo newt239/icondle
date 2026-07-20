@@ -9,44 +9,106 @@ const CELL = 40;
 const COLS = 12;
 const ROWS = 12;
 const ICON_SIZE = 21;
+const TOTAL = COLS * ROWS;
+
+const SET_IDS = [
+  "bi",
+  "boxicons",
+  "carbon",
+  "fluent",
+  "heroicons",
+  "hugeicons",
+  "icon-park-outline",
+  "iconoir",
+  "lucide",
+  "material-symbols",
+  "mingcute",
+  "ph",
+  "ri",
+  "tabler",
+  "uil",
+] as const;
 
 const readJson = (specifier: string): unknown => {
   const filePath = fileURLToPath(import.meta.resolve(specifier));
   return JSON.parse(readFileSync(filePath, "utf8"));
 };
 
-// 外部パッケージの JSON を @iconify/types の公開型として扱うための境界アサーション
-const lucide = readJson("@iconify-json/lucide/icons.json") as IconifyJSON;
+const rank = (input: string) => createHash("sha256").update(input).digest("hex");
 
-const rank = (name: string) => createHash("sha256").update(`${SEED}:${name}`).digest("hex");
+type Candidate = {
+  setId: string;
+  name: string;
+  body: string;
+  width: number;
+  height: number;
+};
 
-const picked = Object.entries(lucide.icons)
-  .filter(
-    ([, icon]) =>
-      icon.hidden === undefined &&
-      icon.width === undefined &&
-      icon.height === undefined &&
-      icon.left === undefined &&
-      icon.top === undefined &&
-      icon.rotate === undefined &&
-      icon.hFlip === undefined &&
-      icon.vFlip === undefined,
-  )
-  .map(([name, icon]) => ({ body: icon.body, rank: rank(name) }))
-  .toSorted((a, b) => (a.rank < b.rank ? -1 : 1))
-  .slice(0, COLS * ROWS);
+const queues = new Map<string, Candidate[]>();
 
-if (picked.length < COLS * ROWS) {
-  throw new Error(`アイコンが不足しています: ${picked.length}/${COLS * ROWS}`);
+for (const setId of SET_IDS) {
+  // 外部パッケージの JSON を @iconify/types の公開型として扱うための境界アサーション
+  const data = readJson(`@iconify-json/${setId}/icons.json`) as IconifyJSON;
+  const rootWidth = data.width ?? 16;
+  const rootHeight = data.height ?? 16;
+  const queue = Object.entries(data.icons)
+    .filter(
+      ([, icon]) =>
+        icon.hidden === undefined &&
+        icon.left === undefined &&
+        icon.top === undefined &&
+        icon.rotate === undefined &&
+        icon.hFlip === undefined &&
+        icon.vFlip === undefined,
+    )
+    .map(([name, icon]) => ({
+      body: icon.body,
+      height: icon.height ?? rootHeight,
+      name,
+      setId,
+      width: icon.width ?? rootWidth,
+    }))
+    .toSorted((a, b) => {
+      const rankA = rank(`${SEED}:${a.setId}:${a.name}`);
+      const rankB = rank(`${SEED}:${b.setId}:${b.name}`);
+      return rankA < rankB ? -1 : 1;
+    });
+  queues.set(setId, queue);
 }
 
-const scale = ICON_SIZE / 24;
-const pad = (CELL - ICON_SIZE) / 2;
+const cursors = new Map(SET_IDS.map((setId) => [setId, 0]));
+const picked: Candidate[] = [];
 
-const cells = picked.map(({ body }, i) => {
-  const x = (i % COLS) * CELL + pad;
-  const y = Math.floor(i / COLS) * CELL + pad;
-  return `<g transform="translate(${x} ${y}) scale(${scale})">${body}</g>`;
+while (picked.length < TOTAL) {
+  for (const setId of SET_IDS) {
+    if (picked.length >= TOTAL) {
+      break;
+    }
+    const cursor = cursors.get(setId) ?? 0;
+    const candidate = queues.get(setId)?.[cursor];
+    if (candidate === undefined) {
+      throw new Error(`アイコンが不足しています: ${setId}`);
+    }
+    picked.push(candidate);
+    cursors.set(setId, cursor + 1);
+  }
+}
+
+const shuffled = picked
+  .map((candidate) => ({
+    candidate,
+    shuffleRank: rank(`${SEED}:cell:${candidate.setId}:${candidate.name}`),
+  }))
+  .toSorted((a, b) => (a.shuffleRank < b.shuffleRank ? -1 : 1))
+  .map(({ candidate }) => candidate);
+
+const cellPad = (CELL - ICON_SIZE) / 2;
+
+const cells = shuffled.map((candidate, i) => {
+  const scale = ICON_SIZE / Math.max(candidate.width, candidate.height);
+  const x = (i % COLS) * CELL + cellPad + (ICON_SIZE - candidate.width * scale) / 2;
+  const y = Math.floor(i / COLS) * CELL + cellPad + (ICON_SIZE - candidate.height * scale) / 2;
+  return `<g transform="translate(${x} ${y}) scale(${scale})">${candidate.body}</g>`;
 });
 
 const size = { height: ROWS * CELL, width: COLS * CELL };
@@ -56,5 +118,5 @@ const svg = `<!-- 自動生成ファイル。編集禁止。再生成は pnpm ru
 
 writeFileSync(fileURLToPath(new URL("../public/bg-icons.svg", import.meta.url)), svg);
 console.warn(
-  `public/bg-icons.svg を生成しました（${picked.length} アイコン、${size.width}x${size.height}）`,
+  `public/bg-icons.svg を生成しました（${shuffled.length} アイコン、${SET_IDS.length} セット、${size.width}x${size.height}）`,
 );

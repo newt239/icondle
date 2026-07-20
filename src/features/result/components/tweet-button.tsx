@@ -1,4 +1,6 @@
-import { Button } from "@heroui/react";
+import { buttonVariants } from "@heroui/react";
+
+import { SITE_URL } from "#/lib/meta";
 
 type TweetButtonProps = {
   text: string;
@@ -6,16 +8,15 @@ type TweetButtonProps = {
 };
 
 export const TweetButton = ({ text, path }: TweetButtonProps) => {
-  const openTweet = () => {
-    const url = `${window.location.origin}${path}`;
-    const fullText = `${text}\n\n${url}`;
-    const intent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(fullText)}`;
-    window.open(intent, "_blank", "noopener,noreferrer");
-  };
-
+  const fullText = `${text}\n\n${SITE_URL}${path}`;
   return (
-    <Button onPress={openTweet} variant="secondary">
+    <a
+      className={buttonVariants({ variant: "secondary" })}
+      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(fullText)}`}
+      rel="noreferrer"
+      target="_blank"
+    >
       Xでポストする
-    </Button>
+    </a>
   );
 };

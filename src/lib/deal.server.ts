@@ -1,17 +1,18 @@
 import "@tanstack/react-start/server-only";
 import { deck, type Concept, type SetId } from "#/data/deck";
 
+import { normalize } from "./icon.server";
 import { hash, mulberry32 } from "./prng";
-import { normalize } from "./render-icon.server";
 
-import type { QuizMode } from "./quiz-config";
+import type { QuizMode } from "./quiz";
+
 import type {
   AnswerIcon,
   AnswerMeta,
   ClientQuestion,
   PickChoiceSvgs,
   PickClientQuestion,
-} from "./quiz-types";
+} from "#/types";
 
 const CHOICE_COUNT = 4;
 const GROUP_SIZE = 4;
@@ -22,7 +23,7 @@ export const EASY_SET_IDS: ReadonlySet<SetId> = new Set([
   "tabler",
   "lucide",
   "carbon",
-  "fa6-regular",
+  "bi",
 ]);
 
 const isSetId = (value: string): value is SetId => value in deck.sets;
@@ -209,25 +210,56 @@ const formGroup = ({ mode, pool, order, used }: GroupInput): Group | null => {
   }
 };
 
-const buildGroups = (mode: QuizMode, seed: string, count: number): Group[] => {
+type GroupCacheEntry = {
+  groups: Group[];
+  order: number[];
+  used: Set<number>;
+};
+
+const GROUP_CACHE_LIMIT = 100;
+const groupCache = new Map<string, GroupCacheEntry>();
+
+const groupCacheEntryFor = (mode: QuizMode, seed: string): GroupCacheEntry => {
+  const key = `${mode}:${seed}`;
+  const cached = groupCache.get(key);
+  if (cached) {
+    groupCache.delete(key);
+    groupCache.set(key, cached);
+    return cached;
+  }
   const pool = poolFor(mode);
-  const order = shuffle(
-    mulberry32(hash(seed)),
-    pool.map((_, index) => index),
-  );
-  const used = new Set<number>();
-  const groups: Group[] = [];
-  for (let q = 1; q <= count; q += 1) {
-    const group = formGroup({ mode, order, pool, used });
+  const entry: GroupCacheEntry = {
+    groups: [],
+    order: shuffle(
+      mulberry32(hash(seed)),
+      pool.map((_, index) => index),
+    ),
+    used: new Set<number>(),
+  };
+  groupCache.set(key, entry);
+  if (groupCache.size > GROUP_CACHE_LIMIT) {
+    const oldestKey = groupCache.keys().next().value;
+    if (oldestKey !== undefined) {
+      groupCache.delete(oldestKey);
+    }
+  }
+  return entry;
+};
+
+const getOrGrowGroups = (mode: QuizMode, seed: string, count: number): Group[] => {
+  const pool = poolFor(mode);
+  const entry = groupCacheEntryFor(mode, seed);
+  while (entry.groups.length < count) {
+    const group = formGroup({ mode, order: entry.order, pool, used: entry.used });
     if (!group) {
-      throw new Error(`出題グループを形成できません: ${mode}:${seed}:${q}`);
+      throw new Error(`出題グループを形成できません: ${mode}:${seed}:${entry.groups.length + 1}`);
     }
     for (const index of group.indices) {
-      used.add(index);
+      entry.used.add(index);
     }
-    groups.push(group);
+    entry.groups.push(group);
   }
-  return groups;
+  return entry.groups;
 };
 
 type Dealt = {
@@ -238,7 +270,7 @@ type Dealt = {
 };
 
 const deal = (mode: QuizMode, seed: string, n: number): Dealt => {
-  const group = buildGroups(mode, seed, n)[n - 1];
+  const group = getOrGrowGroups(mode, seed, n)[n - 1];
   if (!group) {
     throw new Error(`出題可能な概念が見つかりません: ${mode}:${seed}:${n}`);
   }

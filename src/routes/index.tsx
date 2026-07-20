@@ -2,14 +2,14 @@ import { buttonVariants, Card, IconChevronRight } from "@heroui/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Footer } from "#/components/footer";
-import { jstToday } from "#/lib/quiz-config";
-import { SITE_URL } from "#/lib/site-config";
+import { jstToday } from "#/lib/date";
+import { SITE_URL } from "#/lib/meta";
 
 const Home = () => {
   const { today } = Route.useLoaderData();
   return (
     <>
-      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center gap-6 px-4 pb-8">
+      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center gap-6 px-4 pb-[10lvh]">
         <div className="flex h-[40svh] w-full items-center justify-center">
           <h1 className="text-4xl font-bold">Icondle</h1>
         </div>
@@ -32,7 +32,7 @@ const Home = () => {
               プレイする
               <IconChevronRight
                 aria-hidden="true"
-                className="transition-transform group-hover:translate-x-0.5"
+                className="transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none"
               />
             </span>
           </Card>
@@ -46,7 +46,7 @@ const Home = () => {
               プレイする
               <IconChevronRight
                 aria-hidden="true"
-                className="transition-transform group-hover:translate-x-0.5"
+                className="transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none"
               />
             </span>
           </Card>

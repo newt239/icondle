@@ -1,6 +1,6 @@
 import { Card } from "@heroui/react";
 
-import type { SetOverview } from "#/lib/quiz-types";
+import type { SetOverview } from "#/types";
 
 type SetCardProps = {
   set: SetOverview;

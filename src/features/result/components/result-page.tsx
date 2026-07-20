@@ -5,19 +5,15 @@ import { Link } from "@tanstack/react-router";
 
 import { BackToTopLink } from "#/components/back-to-top-link";
 import { calculateDailyStreak } from "#/features/result/lib/daily-streak";
-import {
-  isDateSeed,
-  jstToday,
-  quizBasePath,
-  type QuizGame,
-  type QuizMode,
-} from "#/lib/quiz-config";
-import { savePlayHistoryEntry } from "#/lib/quiz-history";
+import { trackQuizComplete } from "#/lib/analytics";
+import { jstToday } from "#/lib/date";
+import { readPlayHistory, savePlayHistoryEntry } from "#/lib/history";
+import { isDateSeed, quizConfig, type QuizGame, type QuizMode } from "#/lib/quiz";
 
 import { DailyStreakDialog } from "./daily-streak-dialog";
 import { TweetButton } from "./tweet-button";
 
-import type { RunResult } from "#/lib/quiz-types";
+import type { RunResult } from "#/types";
 
 type ResultPageProps = {
   answers: string;
@@ -28,15 +24,23 @@ type ResultPageProps = {
   seed: string;
 };
 
-const linkClassName = buttonVariants({ variant: "primary" });
-
 export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: ResultPageProps) => {
   const [streakDays, setStreakDays] = useState<number | null>(null);
 
   useEffect(() => {
-    // 結果を localStorage のプレイ履歴に保存し、デイリー連続記録を判定するブラウザ API 副作用のため useEffect が必要
+    // 結果を localStorage のプレイ履歴に保存し、デイリー連続記録の判定と GA 計測イベントの送信を行うブラウザ API 副作用のため useEffect が必要
     if (!result.success) {
       return;
+    }
+    const isReplay = readPlayHistory().some(
+      (entry) =>
+        entry.game === game &&
+        entry.mode === mode &&
+        entry.seed === seed &&
+        entry.answers === answers,
+    );
+    if (!isReplay) {
+      trackQuizComplete({ game, mode, score: result.score, seed, total: result.total });
     }
     const history = savePlayHistoryEntry({
       answers,
@@ -57,11 +61,11 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
 
   if (!result.success) {
     return (
-      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 py-8">
+      <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-6 px-4 pt-8 pb-[10lvh]">
         <EmptyState className="gap-4">
           <h1 className="text-xl font-bold">結果を表示できません</h1>
           <p className="text-muted">{result.error}</p>
-          <Link className={linkClassName} to={replayTo}>
+          <Link className={`${buttonVariants({ variant: "primary" })} font-bold`} to={replayTo}>
             最初から遊ぶ
           </Link>
         </EmptyState>
@@ -71,7 +75,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
   }
 
   const emojiRow = result.items.map((item) => (item.correct ? "🟩" : "❌")).join("");
-  const sharePath = `${quizBasePath(game, mode)}/${seed}/share?a=${encodeURIComponent(answers)}`;
+  const sharePath = `${quizConfig[mode].games[game].basePath}/${seed}/share?a=${encodeURIComponent(answers)}`;
   const modeLabel =
     game === "play" ? (mode === "hard" ? "Hard" : "") : mode === "hard" ? "Pick Hard" : "Pick";
   const seedLabel = isDateSeed(seed) ? seed.slice(5).replace("-", "/") : seed;
@@ -79,19 +83,19 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
   const shareText = `${shareTitle}\n\n${emojiRow}`;
 
   return (
-    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 py-8">
+    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col gap-6 px-4 pt-8 pb-[10lvh]">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Icondle
         </Link>
       </header>
       <div className="flex flex-col items-center gap-1 text-center">
-        <p className="flex items-baseline justify-center">
+        <h1 className="flex items-baseline justify-center">
           <span className="text-5xl font-extrabold">
             {result.score}
             <span className="text-3xl">pt</span>
           </span>
-        </p>
+        </h1>
         <p aria-hidden="true" className="text-2xl tracking-widest">
           {emojiRow}
         </p>
@@ -139,7 +143,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
       </ul>
       <div className="flex items-center justify-between gap-4">
         <BackToTopLink />
-        <Link className={linkClassName} to={replayTo}>
+        <Link className={`${buttonVariants({ variant: "primary" })} font-bold`} to={replayTo}>
           もっとプレイする
         </Link>
       </div>

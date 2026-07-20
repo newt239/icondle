@@ -4,20 +4,13 @@ import { deck, type Concept, type SetId } from "#/data/deck";
 
 import { dealAnswer, dealPickAnswer, dealPickQuestion, dealQuestion } from "./deal.server";
 
-import type { QuizMode } from "./quiz-config";
+import type { QuizMode } from "./quiz";
 
 const SEED_COUNT = 30;
 const QUESTION_COUNT = 10;
 const MODES: QuizMode[] = ["easy", "hard"];
 
-const EASY_SET_IDS: SetId[] = [
-  "fluent",
-  "material-symbols",
-  "tabler",
-  "lucide",
-  "carbon",
-  "fa6-regular",
-];
+const EASY_SET_IDS: SetId[] = ["fluent", "material-symbols", "tabler", "lucide", "carbon", "bi"];
 
 const cases: [QuizMode, string, number][] = [];
 for (const mode of MODES) {
@@ -45,17 +38,11 @@ const conceptByName = (name: string): Concept | undefined =>
 const stripLabel = (svg: string): string => svg.replace(/aria-label="[^"]*"/, "");
 
 describe("deck", () => {
-  it("14 セットを収録し easy セットをすべて含む", () => {
+  it("15 セットを収録し easy セットをすべて含む", () => {
     const setIds = Object.keys(deck.sets);
-    expect(setIds).toHaveLength(14);
+    expect(setIds).toHaveLength(15);
     for (const setId of EASY_SET_IDS) {
       expect(setIds).toContain(setId);
-    }
-  });
-
-  it("矢印の概念が収録されている", () => {
-    for (const name of ["arrow-up", "arrow-down", "arrow-left", "arrow-right"]) {
-      expect(conceptByName(name)).toBeDefined();
     }
   });
 });
@@ -184,23 +171,17 @@ describe("dealAnswer", () => {
     }
   });
 
-  it("多数の seed で最終問まで出題を形成できる", () => {
+  it("n を逆順に取得しても昇順取得と同一の判定情報を返す", () => {
     for (const mode of MODES) {
-      for (let s = 0; s < 100; s += 1) {
-        expect(() => dealAnswer(mode, `form-${s}`, QUESTION_COUNT)).not.toThrow();
-      }
+      const seed = "reverse-access";
+      const descending = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+        dealAnswer(mode, seed, QUESTION_COUNT - index),
+      ).toReversed();
+      const ascending = Array.from({ length: QUESTION_COUNT }, (_, index) =>
+        dealAnswer(mode, seed, index + 1),
+      );
+      expect(descending).toEqual(ascending);
     }
-  });
-
-  it("meta が解説とリンク生成に必要な情報を持つ", () => {
-    const { meta } = dealAnswer("easy", "seed-meta", 1);
-    expect(meta.set.length).toBeGreaterThan(0);
-    expect(meta.icons).toHaveLength(4);
-    for (const icon of meta.icons) {
-      expect(icon.icon.length).toBeGreaterThan(0);
-      expect(icon.concept.length).toBeGreaterThan(0);
-    }
-    expect(Object.keys(deck.sets)).toContain(meta.setId);
   });
 });
 

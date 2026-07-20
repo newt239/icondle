@@ -5,7 +5,7 @@ import { BackToTopLink } from "#/components/back-to-top-link";
 
 import { SetCard } from "./set-card";
 
-import type { SetOverview } from "#/lib/quiz-types";
+import type { SetOverview } from "#/types";
 
 type SetsPageProps = {
   sets: SetOverview[];
@@ -16,7 +16,7 @@ export const SetsPage = ({ sets }: SetsPageProps) => {
   const hardOnlySets = sets.filter((set) => set.difficulty === "hard");
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 py-8">
+    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-4 pt-8 pb-[10lvh]">
       <header className="flex items-center justify-between gap-4">
         <Link className="text-xl font-bold" to="/">
           Icondle

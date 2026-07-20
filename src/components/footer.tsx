@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export const Footer = () => (
   <footer className="border-border text-muted flex flex-col items-center gap-2 border-t px-4 py-6 text-sm">
-    <div className="flex gap-4">
+    <div className="flex flex-wrap justify-center gap-4">
       <a
         className="underline underline-offset-2"
         href="https://github.com/newt239/icondle"
@@ -19,6 +19,9 @@ export const Footer = () => (
       >
         開発者
       </a>
+      <Link className="underline underline-offset-2" to="/sets">
+        収録アイコンセット
+      </Link>
       <Link className="underline underline-offset-2" to="/history">
         プレイ履歴
       </Link>
