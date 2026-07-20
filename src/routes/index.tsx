@@ -6,12 +6,21 @@ import { jstToday } from "#/lib/date";
 import { SITE_URL } from "#/lib/meta";
 
 const Home = () => {
-  const { today } = Route.useLoaderData();
+  const { heroIconPosition, today } = Route.useLoaderData();
   return (
     <>
       <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-1 flex-col items-center gap-6 px-4 pb-6">
         <div className="flex h-[40svh] w-full items-center justify-center">
-          <h1 className="text-4xl font-bold">Icondle</h1>
+          <div className="relative z-0 h-[200px] w-[280px]">
+            <div
+              aria-hidden="true"
+              className="bg-hero-icons absolute inset-0"
+              style={{ maskPosition: `${heroIconPosition.x}px ${heroIconPosition.y}px` }}
+            />
+            <div className="bg-background absolute inset-10 flex items-center justify-center">
+              <h1 className="text-4xl font-bold">Icondle</h1>
+            </div>
+          </div>
         </div>
         <Link
           className={buttonVariants({ size: "lg", variant: "primary" })}
@@ -60,8 +69,17 @@ const Home = () => {
   );
 };
 
+const GRID_CELLS = 12;
+const CELL_SIZE = 40;
+
 export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({ links: [{ href: SITE_URL, rel: "canonical" }] }),
-  loader: () => ({ today: jstToday() }),
+  loader: () => ({
+    heroIconPosition: {
+      x: -(Math.floor(Math.random() * GRID_CELLS) * CELL_SIZE),
+      y: -(Math.floor(Math.random() * GRID_CELLS) * CELL_SIZE),
+    },
+    today: jstToday(),
+  }),
 });
