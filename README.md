@@ -2,7 +2,7 @@
 
 > UI アイコンライブラリの識別クイズ Web アプリ
 
-設計の詳細は [docs/icondle-design.md](./docs/icondle-design.md) を参照してください。
+https://icondle.newt239.dev/
 
 ## 技術スタック
 
@@ -17,7 +17,7 @@
 
 ## 収録アイコンセットとライセンス
 
-出題データ（`src/data/deck.ts`）は [Iconify](https://iconify.design/)（`@iconify-json/*`）から生成しており、各アイコンは表示用に正規化（viewBox の統一など）を加えて収録しています。収録セットとライセンスは以下のとおりです。
+出題データ（`src/data/deck.ts`）は [Iconify](https://iconify.design/) から生成しており、各アイコンは表示用に正規化を加えて収録しています。収録セットとライセンスは以下のとおりです。
 
 | セット                 | ライセンス                                                                        |
 | ---------------------- | --------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ pnpm install
 pnpm run dev
 ```
 
-http://localhost:3000 で起動します。
+http://localhost:3000/ で起動します。
 
 ## デプロイ
 
