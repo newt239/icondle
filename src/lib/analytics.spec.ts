@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { trackQuizComplete } from "./analytics";
+import { isProductionHostname, trackQuizComplete } from "./analytics";
 
 const params = {
   game: "play",
@@ -33,5 +33,15 @@ describe("trackQuizComplete", () => {
     expect(() => {
       trackQuizComplete(params);
     }).not.toThrow();
+  });
+});
+
+describe("isProductionHostname", () => {
+  it("本番ホスト名なら true を返す", () => {
+    expect(isProductionHostname("icondle.newt239.dev")).toBe(true);
+  });
+
+  it("本番以外のホスト名なら false を返す", () => {
+    expect(isProductionHostname("localhost")).toBe(false);
   });
 });
