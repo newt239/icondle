@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-1 flex-col items-center gap-6 px-4 pb-6">
         <div className="flex h-[40svh] w-full items-center justify-center">
-          <div className="relative z-0 h-[200px] w-[280px]">
+          <div className="relative z-0 h-50 w-70">
             <div
               aria-hidden="true"
               className="bg-hero-icons absolute inset-0"
