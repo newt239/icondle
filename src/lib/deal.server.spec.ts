@@ -2,15 +2,19 @@ import { describe, expect, it } from "vitest";
 
 import { deck, type Concept, type SetId } from "#/data/deck";
 
-import { dealAnswer, dealPickAnswer, dealPickQuestion, dealQuestion } from "./deal.server";
+import {
+  dealAnswer,
+  dealPickAnswer,
+  dealPickQuestion,
+  dealQuestion,
+  EASY_SET_IDS,
+} from "./deal.server";
 
 import type { QuizMode } from "./quiz";
 
 const SEED_COUNT = 30;
 const QUESTION_COUNT = 10;
 const MODES: QuizMode[] = ["easy", "hard"];
-
-const EASY_SET_IDS: SetId[] = ["fluent", "material-symbols", "tabler", "lucide", "carbon", "bi"];
 
 const cases: [QuizMode, string, number][] = [];
 for (const mode of MODES) {
@@ -88,7 +92,7 @@ describe("dealQuestion", () => {
       }
       const { choices } = dealQuestion(mode, seed, n);
       for (const setId of chosenSetIds(choices)) {
-        expect(EASY_SET_IDS).toContain(setId);
+        expect(EASY_SET_IDS.has(setId)).toBe(true);
       }
     }
   });
@@ -277,7 +281,7 @@ describe("dealPickQuestion", () => {
         continue;
       }
       for (const candidates of pickCandidatesFor(mode, seed, n)) {
-        expect(candidates.some((setId) => EASY_SET_IDS.includes(setId))).toBe(true);
+        expect(candidates.some((setId) => EASY_SET_IDS.has(setId))).toBe(true);
       }
     }
   });
