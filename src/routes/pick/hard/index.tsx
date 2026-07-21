@@ -1,5 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
-import { buildQuizStartRoute } from "#/routes/-question-route";
+import { generateSeed } from "#/lib/quiz";
 
-export const Route = createFileRoute("/pick/hard/")(buildQuizStartRoute("/pick/hard/$seed/$n"));
+export const Route = createFileRoute("/pick/hard/")({
+  beforeLoad: () => {
+    throw redirect({
+      params: { n: "1", seed: generateSeed() },
+      statusCode: 302,
+      to: "/pick/hard/$seed/$n",
+    });
+  },
+});

@@ -1,5 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { buildShareOgRoute } from "#/routes/-share-route";
+import { createShareOgImageResponse } from "#/features/result/lib/share-result";
 
-export const Route = createFileRoute("/play/$seed/share/og")(buildShareOgRoute("play", "easy"));
+export const Route = createFileRoute("/play/$seed/share/og")({
+  server: {
+    handlers: {
+      GET: async ({ params, request }) => {
+        const answers = new URL(request.url).searchParams.get("a") ?? "";
+        return await createShareOgImageResponse({
+          answers,
+          game: "play",
+          mode: "easy",
+          seed: params.seed,
+        });
+      },
+    },
+  },
+});
