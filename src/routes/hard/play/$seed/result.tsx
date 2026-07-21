@@ -14,14 +14,14 @@ const RouteComponent = () => {
       answers={a ?? ""}
       game="play"
       mode="hard"
-      replayTo="/play/hard"
+      replayTo="/hard/play"
       result={result}
       seed={seed}
     />
   );
 };
 
-export const Route = createFileRoute("/play/hard/$seed/result")({
+export const Route = createFileRoute("/hard/play/$seed/result")({
   component: RouteComponent,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ deps, params }) => {

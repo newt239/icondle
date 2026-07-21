@@ -53,18 +53,18 @@ export const QuestionPage = ({ answers, mode, n, question, seed, total }: Questi
   const nextTo =
     game === "play"
       ? mode === "hard"
-        ? "/play/hard/$seed/$n"
+        ? "/hard/play/$seed/$n"
         : "/play/$seed/$n"
       : mode === "hard"
-        ? "/pick/hard/$seed/$n"
+        ? "/hard/pick/$seed/$n"
         : "/pick/$seed/$n";
   const resultTo =
     game === "play"
       ? mode === "hard"
-        ? "/play/hard/$seed/result"
+        ? "/hard/play/$seed/result"
         : "/play/$seed/result"
       : mode === "hard"
-        ? "/pick/hard/$seed/result"
+        ? "/hard/pick/$seed/result"
         : "/pick/$seed/result";
   const answeredLabels: [string, string, string, string] | null =
     answered === null

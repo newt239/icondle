@@ -20,7 +20,7 @@ type ResultPageProps = {
   answers: string;
   game: QuizGame;
   mode: QuizMode;
-  replayTo: "/play" | "/play/hard" | "/pick" | "/pick/hard";
+  replayTo: "/hard/pick" | "/hard/play" | "/pick" | "/play";
   result: RunResult;
   seed: string;
 };
@@ -71,7 +71,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
               最初から遊ぶ
             </Link>
           </EmptyState>
-          <BackToTopLink />
+          <BackToTopLink to={mode === "hard" ? "/hard" : "/"} />
         </main>
         <Footer />
       </>
@@ -147,7 +147,7 @@ export const ResultPage = ({ answers, game, mode, replayTo, result, seed }: Resu
           ))}
         </ul>
         <div className="flex items-center justify-between gap-4">
-          <BackToTopLink />
+          <BackToTopLink to={mode === "hard" ? "/hard" : "/"} />
           <Link className={`${buttonVariants({ variant: "primary" })} font-bold`} to={replayTo}>
             もっとプレイする
           </Link>

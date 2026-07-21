@@ -3,6 +3,9 @@ import { Link } from "@tanstack/react-router";
 export const Footer = () => (
   <footer className="border-border text-muted grid grid-cols-1 gap-6 border-t px-4 py-6 text-sm sm:grid-cols-3 sm:gap-8">
     <nav className="flex flex-col items-start gap-2">
+      <Link className="underline underline-offset-2" to="/hard">
+        Hardモード
+      </Link>
       <Link className="underline underline-offset-2" to="/sets">
         収録アイコンセット
       </Link>

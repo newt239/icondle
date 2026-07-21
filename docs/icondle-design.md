@@ -11,8 +11,8 @@
 
 | ゲーム | 内容 | ルート |
 |---|---|---|
-| **Play（セット名を当てる）** | アイコン 1 つを表示し、セット名を 4 択から選ぶ | `/play`（easy）/ `/play/hard` |
-| **Pick（アイコンを当てる）** | セット名を提示し、合致するアイコンを 4 つから選ぶ | `/pick`（easy）/ `/pick/hard` |
+| **Play（セット名を当てる）** | アイコン 1 つを表示し、セット名を 4 択から選ぶ | `/play`（easy）/ `/hard/play` |
+| **Pick（アイコンを当てる）** | セット名を提示し、合致するアイコンを 4 つから選ぶ | `/pick`（easy）/ `/hard/pick` |
 
 - **難易度**: easy は 5 問・有名 6 セット（fluent / material-symbols / tabler / lucide / carbon / bi）から出題。hard は 10 問・全 15 セット
 - **デイリー**: 専用ルートを持たず、`/pick/{YYYY-MM-DD}` の日付シードで実現（easy 固定）。日付は JST（`jstToday`）、未来日付は 404。play と hard は日付シードを拒否する
@@ -33,7 +33,7 @@ TanStack Start（full-document SSR + server functions。RSC はない）+ HeroUI
 /pick/a7f3c2/1                ← 出題（回答履歴は ?a= に持つ）
 /pick/a7f3c2/result?a=2143
 /pick/2026-07-16/1            ← デイリー（日付シード）
-/pick/hard/a7f3c2/1           ← hard
+/hard/pick/a7f3c2/1           ← hard
 /play/...                     ← Play 側も同構造
 ```
 

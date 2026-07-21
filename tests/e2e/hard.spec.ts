@@ -13,13 +13,13 @@ const jstToday = () =>
   }).format(new Date());
 
 test.describe("難しいモード", () => {
-  test("/play/hard からシード付きの第1問へリダイレクトされる", async ({ page }) => {
-    await page.goto("/play/hard");
-    await expect(page).toHaveURL(/\/play\/hard\/[0-9a-f]{6}\/1$/);
+  test("/hard/play からシード付きの第1問へリダイレクトされる", async ({ page }) => {
+    await page.goto("/hard/play");
+    await expect(page).toHaveURL(/\/hard\/play\/[0-9a-f]{6}\/1$/);
   });
 
   test("回答すると解説が表示され次の問題へ進める", async ({ page }) => {
-    await page.goto("/play/hard/e2etest/1");
+    await page.goto("/hard/play/e2etest/1");
     await waitForHydration(page);
     const buttons = page.getByRole("group", { name: "選択肢" }).getByRole("button");
     await expect(buttons).toHaveCount(4);
@@ -28,27 +28,27 @@ test.describe("難しいモード", () => {
     await expect(status).toBeVisible();
     await expect(status.getByRole("heading", { level: 2 })).toContainText(/正解/);
     await page.getByRole("link", { name: "次の問題へ" }).click();
-    await expect(page).toHaveURL(/\/play\/hard\/e2etest\/2\?a=[0-3]$/);
+    await expect(page).toHaveURL(/\/hard\/play\/e2etest\/2\?a=[0-3]$/);
   });
 
   test("全問回答済みの結果ページが表示される", async ({ page }) => {
-    await page.goto("/play/hard/e2etest/result?a=0000000000");
+    await page.goto("/hard/play/e2etest/result?a=0000000000");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
     await expect(page.getByRole("link", { name: "Xでポストする" })).toBeVisible();
     await expect(page.locator('a[href^="https://icon-sets.iconify.design/"]')).toHaveCount(40);
     await expect(page.getByRole("link", { name: "もっとプレイする" })).toHaveAttribute(
       "href",
-      "/play/hard",
+      "/hard/play",
     );
   });
 
   test("日付シードの出題ページは 404 になる", async ({ page }) => {
-    const response = await page.goto(`/play/hard/${jstToday()}/1`);
+    const response = await page.goto(`/hard/play/${jstToday()}/1`);
     expect(response?.status()).toBe(404);
   });
 
   test("日付シードの結果ページは 404 になる", async ({ page }) => {
-    const response = await page.goto(`/play/hard/${jstToday()}/result?a=00000`);
+    const response = await page.goto(`/hard/play/${jstToday()}/result?a=00000`);
     expect(response?.status()).toBe(404);
   });
 });

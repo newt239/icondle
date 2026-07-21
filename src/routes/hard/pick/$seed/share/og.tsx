@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { createShareOgImageResponse } from "#/features/result/lib/share-result";
 
-export const Route = createFileRoute("/pick/hard/$seed/share/og")({
+export const Route = createFileRoute("/hard/pick/$seed/share/og")({
   server: {
     handlers: {
       GET: async ({ params, request }) => {

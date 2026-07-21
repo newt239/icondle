@@ -5,11 +5,11 @@ setup(
   async ({ request }) => {
     await request.get("/play/warmup/1");
     await request.get("/play/warmup/result?a=");
-    await request.get("/play/hard/warmup/1");
-    await request.get("/play/hard/warmup/result?a=");
+    await request.get("/hard/play/warmup/1");
+    await request.get("/hard/play/warmup/result?a=");
     await request.get("/pick/warmup/1");
     await request.get("/pick/warmup/result?a=");
-    await request.get("/pick/hard/warmup/1");
-    await request.get("/pick/hard/warmup/result?a=");
+    await request.get("/hard/pick/warmup/1");
+    await request.get("/hard/pick/warmup/result?a=");
   },
 );

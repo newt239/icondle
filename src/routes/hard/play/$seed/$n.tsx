@@ -13,7 +13,7 @@ const RouteComponent = () => {
   return (
     <QuestionPage
       answers={a ?? ""}
-      key={`pick:hard:${seed}:${n}`}
+      key={`play:hard:${seed}:${n}`}
       mode="hard"
       n={Number(n)}
       question={question}
@@ -23,7 +23,7 @@ const RouteComponent = () => {
   );
 };
 
-export const Route = createFileRoute("/pick/hard/$seed/$n")({
+export const Route = createFileRoute("/hard/play/$seed/$n")({
   component: RouteComponent,
   headers: () => ({ "cache-control": "private, no-store" }),
   loader: async ({ params }) => {
@@ -33,11 +33,11 @@ export const Route = createFileRoute("/pick/hard/$seed/$n")({
       .min(1)
       .max(quizConfig.hard.questionCount)
       .safeParse(params.n);
-    if (!parsed.success || !isSeedPlayable("pick", "hard", params.seed)) {
+    if (!parsed.success || !isSeedPlayable("play", "hard", params.seed)) {
       throw notFound();
     }
     return await getQuestion({
-      data: { game: "pick", mode: "hard", n: parsed.data, seed: params.seed },
+      data: { game: "play", mode: "hard", n: parsed.data, seed: params.seed },
     });
   },
   validateSearch: quizSearchSchema,

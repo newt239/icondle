@@ -7,19 +7,19 @@ import { quizSearchSchema } from "#/schemas";
 
 const RouteComponent = () => {
   const { result, seed } = Route.useLoaderData();
-  return <ShareRedirectPage game="play" mode="hard" result={result} seed={seed} />;
+  return <ShareRedirectPage game="pick" mode="hard" result={result} seed={seed} />;
 };
 
-export const Route = createFileRoute("/play/hard/$seed/share/")({
+export const Route = createFileRoute("/hard/pick/$seed/share/")({
   component: RouteComponent,
   head: createShareHead,
   loader: async ({ deps, params }) => {
-    if (!isSeedPlayable("play", "hard", params.seed)) {
+    if (!isSeedPlayable("pick", "hard", params.seed)) {
       throw notFound();
     }
     return await loadShareResult({
       answers: deps.a,
-      game: "play",
+      game: "pick",
       mode: "hard",
       seed: params.seed,
     });

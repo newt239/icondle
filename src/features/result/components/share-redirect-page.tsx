@@ -17,10 +17,10 @@ export const ShareRedirectPage = ({ game, mode, result, seed }: ShareRedirectPag
   const targetTo =
     game === "play"
       ? mode === "hard"
-        ? "/play/hard/$seed/$n"
+        ? "/hard/play/$seed/$n"
         : "/play/$seed/$n"
       : mode === "hard"
-        ? "/pick/hard/$seed/$n"
+        ? "/hard/pick/$seed/$n"
         : "/pick/$seed/$n";
 
   if (!result.success) {
