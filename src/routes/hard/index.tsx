@@ -28,7 +28,7 @@ const Hard = () => {
             render={(props) => <Link {...props} to="/hard/play" />}
           >
             <h3 className="font-bold">セット名を当てる</h3>
-            <p className="text-muted text-sm">表示されたアイコンのセット名を 4 択から選ぶ</p>
+            <p className="text-muted text-sm">表示されたアイコンのセット名を4択から選ぶ</p>
             <span className="mt-auto inline-flex items-center gap-0.5 self-end text-sm font-medium">
               プレイする
               <IconChevronRight
@@ -42,7 +42,7 @@ const Hard = () => {
             render={(props) => <Link {...props} to="/hard/pick" />}
           >
             <h3 className="font-bold">アイコンを当てる</h3>
-            <p className="text-muted text-sm">セット名に合うアイコンを 4 つから選ぶ</p>
+            <p className="text-muted text-sm">セット名に合うアイコンを4つから選ぶ</p>
             <span className="mt-auto inline-flex items-center gap-0.5 self-end text-sm font-medium">
               プレイする
               <IconChevronRight
@@ -69,7 +69,7 @@ export const Route = createFileRoute("/hard/")({
   head: () =>
     createPageHeadObject({
       description:
-        "マイナーなアイコンセットも含めて全 10 問出題されるHardモード。セット名当てとアイコン当ての 2 つの遊び方から選べます。",
+        "マイナーなアイコンセットも含めて全10問出題されるHardモード。セット名当てとアイコン当ての2つの遊び方から選べます。",
       path: "/hard",
       title: "Hardモード",
     }),

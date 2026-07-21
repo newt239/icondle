@@ -38,7 +38,7 @@ export const Footer = () => (
       </Link>
     </nav>
     <div className="flex flex-col items-start gap-2">
-      <p>&copy; newt239</p>
+      <p>&copy; {new Date().getFullYear()} newt239</p>
     </div>
   </footer>
 );

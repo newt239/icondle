@@ -36,7 +36,7 @@ const Home = () => {
             render={(props) => <Link {...props} to="/play" />}
           >
             <h2 className="font-bold">セット名を当てる</h2>
-            <p className="text-muted text-sm">表示されたアイコンのセット名を 4 択から選ぶ</p>
+            <p className="text-muted text-sm">表示されたアイコンのセット名を4択から選ぶ</p>
             <span className="mt-auto inline-flex items-center gap-0.5 self-end text-sm font-medium">
               プレイする
               <IconChevronRight
@@ -50,7 +50,7 @@ const Home = () => {
             render={(props) => <Link {...props} to="/pick" />}
           >
             <h2 className="font-bold">アイコンを当てる</h2>
-            <p className="text-muted text-sm">セット名に合うアイコンを 4 つから選ぶ</p>
+            <p className="text-muted text-sm">セット名に合うアイコンを4つから選ぶ</p>
             <span className="mt-auto inline-flex items-center gap-0.5 self-end text-sm font-medium">
               プレイする
               <IconChevronRight

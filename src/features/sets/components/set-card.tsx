@@ -19,7 +19,7 @@ export const SetCard = ({ set }: SetCardProps) => (
       </a>
     </h2>
     <p className="text-muted text-sm">
-      {set.grid}px グリッド・{set.iconCount.toLocaleString("ja-JP")} アイコン・
+      {set.grid}pxグリッド・{set.iconCount.toLocaleString("ja-JP")}アイコン・
       {set.license.url === "" ? (
         set.license.title
       ) : (
