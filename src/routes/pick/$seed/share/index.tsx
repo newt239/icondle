@@ -1,7 +1,29 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 
-import { buildShareRoute } from "#/routes/-share-route";
+import { ShareRedirectPage } from "#/features/result/components/share-redirect-page";
+import { createShareHead, loadShareResult } from "#/features/result/lib/share-result";
+import { isSeedPlayable } from "#/lib/quiz";
+import { quizSearchSchema } from "#/schemas";
 
-export const Route = createFileRoute("/pick/$seed/share/")(
-  buildShareRoute("pick", "easy", "/pick/$seed/share/"),
-);
+const RouteComponent = () => {
+  const { result, seed } = Route.useLoaderData();
+  return <ShareRedirectPage game="pick" mode="easy" result={result} seed={seed} />;
+};
+
+export const Route = createFileRoute("/pick/$seed/share/")({
+  component: RouteComponent,
+  head: createShareHead,
+  loader: async ({ deps, params }) => {
+    if (!isSeedPlayable("pick", "easy", params.seed)) {
+      throw notFound();
+    }
+    return await loadShareResult({
+      answers: deps.a,
+      game: "pick",
+      mode: "easy",
+      seed: params.seed,
+    });
+  },
+  loaderDeps: ({ search }: { search: { a?: string } }) => ({ a: search.a ?? "" }),
+  validateSearch: quizSearchSchema,
+});

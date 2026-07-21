@@ -27,6 +27,18 @@
   }
 }
 
+@utility bg-hero-icons {
+  background-color: var(--accent);
+  mask-image: url("/bg-icons.svg");
+  mask-repeat: repeat;
+  mask-size: 30rem 30rem;
+  mask-position: -120px -80px;
+
+  @media (prefers-contrast: more) {
+    display: none;
+  }
+}
+
 :where(:any-link) {
   text-decoration-color: color-mix(in srgb, currentcolor, transparent 40%);
   text-underline-offset: 0.25em;

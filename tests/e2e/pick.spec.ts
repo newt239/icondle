@@ -72,38 +72,38 @@ test.describe("ピックモード", () => {
 });
 
 test.describe("ピックモード（難しい）", () => {
-  test("/pick/hard からシード付きの第1問へリダイレクトされる", async ({ page }) => {
-    await page.goto("/pick/hard");
-    await expect(page).toHaveURL(/\/pick\/hard\/[0-9a-f]{6}\/1$/);
+  test("/hard/pick からシード付きの第1問へリダイレクトされる", async ({ page }) => {
+    await page.goto("/hard/pick");
+    await expect(page).toHaveURL(/\/hard\/pick\/[0-9a-f]{6}\/1$/);
   });
 
   test("回答すると解説が表示され次の問題へ進める", async ({ page }) => {
-    await page.goto("/pick/hard/e2etest/1");
+    await page.goto("/hard/pick/e2etest/1");
     await waitForHydration(page);
     const buttons = page.getByRole("group", { name: "選択肢" }).getByRole("button");
     await expect(buttons).toHaveCount(4);
     await buttons.first().click();
     await expect(page.getByRole("status")).toBeVisible();
     await page.getByRole("link", { name: "次の問題へ" }).click();
-    await expect(page).toHaveURL(/\/pick\/hard\/e2etest\/2\?a=[0-3]$/);
+    await expect(page).toHaveURL(/\/hard\/pick\/e2etest\/2\?a=[0-3]$/);
   });
 
   test("全問回答済みの結果ページが表示される", async ({ page }) => {
-    await page.goto("/pick/hard/e2etest/result?a=0000000000");
+    await page.goto("/hard/pick/e2etest/result?a=0000000000");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("pt");
     await expect(page.getByRole("link", { name: "もっとプレイする" })).toHaveAttribute(
       "href",
-      "/pick/hard",
+      "/hard/pick",
     );
   });
 
   test("日付シードの出題ページは 404 になる", async ({ page }) => {
-    const response = await page.goto(`/pick/hard/${jstToday()}/1`);
+    const response = await page.goto(`/hard/pick/${jstToday()}/1`);
     expect(response?.status()).toBe(404);
   });
 
   test("日付シードの結果ページは 404 になる", async ({ page }) => {
-    const response = await page.goto(`/pick/hard/${jstToday()}/result?a=00000`);
+    const response = await page.goto(`/hard/pick/${jstToday()}/result?a=00000`);
     expect(response?.status()).toBe(404);
   });
 });

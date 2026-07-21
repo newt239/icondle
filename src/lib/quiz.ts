@@ -11,7 +11,7 @@ export const quizConfig: Record<
   {
     games: Record<
       QuizGame,
-      { basePath: "/play" | "/play/hard" | "/pick" | "/pick/hard"; label: string }
+      { basePath: "/hard/pick" | "/hard/play" | "/pick" | "/play"; label: string }
     >;
     questionCount: number;
   }
@@ -25,8 +25,8 @@ export const quizConfig: Record<
   },
   hard: {
     games: {
-      pick: { basePath: "/pick/hard", label: "Icondle Pick Hard" },
-      play: { basePath: "/play/hard", label: "Icondle Hard" },
+      pick: { basePath: "/hard/pick", label: "Icondle Pick Hard" },
+      play: { basePath: "/hard/play", label: "Icondle Hard" },
     },
     questionCount: 10,
   },

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
+import { GA_MEASUREMENT_ID, isProductionRequest } from "#/lib/analytics";
 import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_NAME } from "#/lib/meta";
 import appCss from "#/styles.css?url";
 
@@ -26,7 +27,7 @@ const RootDocument = ({ children }: { children: ReactNode }) => (
 );
 
 export const Route = createRootRoute({
-  head: () => ({
+  head: ({ loaderData }) => ({
     links: [
       { href: appCss, rel: "stylesheet" },
       { href: "/favicon.ico", rel: "icon" },
@@ -50,18 +51,21 @@ export const Route = createRootRoute({
       { content: SITE_DESCRIPTION, name: "twitter:description" },
       { content: DEFAULT_OG_IMAGE, name: "twitter:image" },
     ],
-    scripts: [
-      {
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=G-210FRX6S6M",
-      },
-      {
-        children: `window.dataLayer = window.dataLayer || [];
+    scripts: loaderData?.isProductionRequest
+      ? [
+          {
+            async: true,
+            src: `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`,
+          },
+          {
+            children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-210FRX6S6M');`,
-      },
-    ],
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+          },
+        ]
+      : [],
   }),
+  loader: () => ({ isProductionRequest: isProductionRequest() }),
   shellComponent: RootDocument,
 });

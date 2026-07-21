@@ -1,7 +1,44 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
+import { z } from "zod";
 
-import { buildQuestionRoute } from "#/routes/-question-route";
+import { QuestionPage } from "#/features/question/components/question-page";
+import { getQuestion } from "#/features/question/lib/question";
+import { isSeedPlayable, quizConfig } from "#/lib/quiz";
+import { quizSearchSchema } from "#/schemas";
 
-export const Route = createFileRoute("/play/$seed/$n")(
-  buildQuestionRoute("play", "easy", "/play/$seed/$n"),
-);
+const RouteComponent = () => {
+  const { n, seed } = Route.useParams();
+  const { a } = Route.useSearch();
+  const question = Route.useLoaderData();
+  return (
+    <QuestionPage
+      answers={a ?? ""}
+      key={`play:easy:${seed}:${n}`}
+      mode="easy"
+      n={Number(n)}
+      question={question}
+      seed={seed}
+      total={quizConfig.easy.questionCount}
+    />
+  );
+};
+
+export const Route = createFileRoute("/play/$seed/$n")({
+  component: RouteComponent,
+  headers: () => ({ "cache-control": "private, no-store" }),
+  loader: async ({ params }) => {
+    const parsed = z.coerce
+      .number()
+      .int()
+      .min(1)
+      .max(quizConfig.easy.questionCount)
+      .safeParse(params.n);
+    if (!parsed.success || !isSeedPlayable("play", "easy", params.seed)) {
+      throw notFound();
+    }
+    return await getQuestion({
+      data: { game: "play", mode: "easy", n: parsed.data, seed: params.seed },
+    });
+  },
+  validateSearch: quizSearchSchema,
+});
