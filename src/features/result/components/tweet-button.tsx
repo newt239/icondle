@@ -7,16 +7,13 @@ type TweetButtonProps = {
   path: string;
 };
 
-export const TweetButton = ({ text, path }: TweetButtonProps) => {
-  const fullText = `${text}\n\n${SITE_URL}${path}`;
-  return (
-    <a
-      className={buttonVariants({ variant: "secondary" })}
-      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(fullText)}`}
-      rel="noreferrer"
-      target="_blank"
-    >
-      Xでポストする
-    </a>
-  );
-};
+export const TweetButton = ({ text, path }: TweetButtonProps) => (
+  <a
+    className={buttonVariants({ variant: "secondary" })}
+    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${text}\n`)}&url=${encodeURIComponent(`${SITE_URL}${path}`)}`}
+    rel="noreferrer"
+    target="_blank"
+  >
+    Xでポストする
+  </a>
+);
