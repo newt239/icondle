@@ -43,6 +43,8 @@ jobs:
           key: playwright-chromium-${{ steps.version-checker.outputs.playwright-version }}
       - name: ビルド
         run: pnpm run build
+      - name: e2e用の.dev.varsを作成
+        run: cp .dev.vars.example .dev.vars
       - name: Playwrightのテストを実行
         run: pnpm exec playwright test --workers=2
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
