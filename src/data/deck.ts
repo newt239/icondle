@@ -1,5 +1,5 @@
 // 自動生成ファイル。編集禁止。再生成は pnpm run build-deck を実行する。
-export type SetId = "tabler" | "hugeicons" | "icon-park-outline" | "material-symbols" | "fluent" | "carbon" | "lucide" | "boxicons" | "iconoir" | "ri" | "mingcute" | "ph" | "bi" | "uil" | "heroicons";
+export type SetId = "tabler" | "material-symbols" | "hugeicons" | "icon-park-outline" | "fluent" | "carbon" | "lucide" | "boxicons" | "iconoir" | "ri" | "mingcute" | "ph" | "bi" | "uil" | "heroicons";
 
 export type SetMeta = {
   id: SetId;
@@ -38,16 +38,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "4k",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M2 12c0-3.75 0-5.625.955-6.939A5 5 0 0 1 4.06 3.955C5.375 3 7.251 3 11 3h2c3.75 0 5.625 0 6.939.955a5 5 0 0 1 1.106 1.106C22 6.375 22 8.251 22 12s0 5.625-.955 6.939a5 5 0 0 1-1.106 1.106C18.625 21 16.749 21 13 21h-2c-3.75 0-5.625 0-6.939-.955a5 5 0 0 1-1.106-1.106C2 17.625 2 15.749 2 12Z\"/><path d=\"M10.636 9v3m0 0v3m0-3H8.818c-.857 0-1.285 0-1.552-.293C7 11.414 7 10.943 7 10V9m6.364 6v-3m0 0V9m0 3L17 9m-3.636 3L17 15\"/></g>",
-     "height": 24,
-     "name": "4k",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M13 15h1.5v-2.25L16.25 15h1.825l-2.325-3l2.325-3H16.25l-1.75 2.25V9H13zm-3.5 0H11v-1.5h1V12h-1V9H9.5v3H8V9H6.5v4.5h3zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z\"/>",
      "height": 24,
      "name": "4k-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M2 12c0-3.75 0-5.625.955-6.939A5 5 0 0 1 4.06 3.955C5.375 3 7.251 3 11 3h2c3.75 0 5.625 0 6.939.955a5 5 0 0 1 1.106 1.106C22 6.375 22 8.251 22 12s0 5.625-.955 6.939a5 5 0 0 1-1.106 1.106C18.625 21 16.749 21 13 21h-2c-3.75 0-5.625 0-6.939-.955a5 5 0 0 1-1.106-1.106C2 17.625 2 15.749 2 12Z\"/><path d=\"M10.636 9v3m0 0v3m0-3H8.818c-.857 0-1.285 0-1.552-.293C7 11.414 7 10.943 7 10V9m6.364 6v-3m0 0V9m0 3L17 9m-3.636 3L17 15\"/></g>",
+     "height": 24,
+     "name": "4k",
      "width": 24
     },
     "carbon": {
@@ -68,6 +68,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "accessibility",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10.588 5.413Q10 4.825 10 4t.588-1.412T12 2t1.413.588T14 4t-.587 1.413T12 6t-1.412-.587M9 22V9H3V7h18v2h-6v13h-2v-6h-2v6z\"/>",
+     "height": 24,
+     "name": "accessibility-outline",
+     "width": 24
+    },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.5 5a1.5 1.5 0 0 0 .968 1.403c.35.085.714.085 1.063 0A1.5 1.5 0 1 0 10.5 5m-1.474.399a3 3 0 1 1 5.947 0l2.877-1.221a2.266 2.266 0 0 1 2.962 1.184a2.24 2.24 0 0 1-1.181 2.954l-3.628 1.54v3.717l1.874 5.444a2.25 2.25 0 1 1-4.255 1.465L12 15.772l-1.622 4.71a2.25 2.25 0 1 1-4.255-1.465l1.88-5.457V9.858L4.37 8.316a2.24 2.24 0 0 1-1.182-2.954A2.266 2.266 0 0 1 6.15 4.178zm1.996 2.438a4 4 0 0 1-.487-.168l-4.971-2.11a.766.766 0 0 0-1 .399a.74.74 0 0 0 .392.977L8.74 8.542c.462.196.761.649.761 1.15v3.91q0 .208-.068.406l-1.892 5.497a.75.75 0 1 0 1.418.488l2.108-6.123c.306-.888 1.56-.884 1.864 0l2.108 6.123a.75.75 0 1 0 1.419-.488l-1.888-5.483a1.3 1.3 0 0 1-.069-.407V9.691c0-.502.3-.955.762-1.151l3.78-1.605a.74.74 0 0 0 .391-.977a.766.766 0 0 0-.999-.4l-4.97 2.11q-.24.102-.489.17a3 3 0 0 1-1.955-.001\"/>",
      "height": 24,
@@ -150,8 +156,44 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "ad",
+   "variants": {
+    "tabler": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><path d=\"M7 15v-4a2 2 0 0 1 4 0v4m-4-2h4m6-4v6h-1.5a1.5 1.5 0 1 1 1.5-1.5\"/></g>",
+     "height": 24,
+     "name": "ad",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V8H5z\"/>",
+     "height": 24,
+     "name": "ad-outline",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><circle cx=\"24\" cy=\"24\" r=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m38 38l-3-3M10 10l3 3\"/><path d=\"M21.143 28L18 17l-3.143 11z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m14 31l.857-3M22 31l-.857-3m0 0L18 17l-3.143 11m6.286 0h-6.286M35 24c0 5-3.582 7-8 7V17c4.418 0 8 2 8 7\"/></g>",
+     "height": 48,
+     "name": "ad",
+     "width": 48
+    },
+    "lucide": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 13H6m4 2v-4a2 2 0 0 0-4 0v4m8-.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z\"/><rect width=\"20\" height=\"14\" x=\"2\" y=\"5\" rx=\"2\"/></g>",
+     "height": 24,
+     "name": "ad",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "add",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z\"/>",
+     "height": 24,
+     "name": "add-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12.001 5v14.002m7.001-7H5\"/>",
      "height": 24,
@@ -194,16 +236,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "add-circle",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10M12 8v8m4-4H8\"/>",
-     "height": 24,
-     "name": "add-circle",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 17h2v-4h4v-2h-4V7h-2v4H7v2h4zm1 5q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "add-circle-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10M12 8v8m4-4H8\"/>",
+     "height": 24,
+     "name": "add-circle",
      "width": 24
     },
     "fluent": {
@@ -380,17 +422,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "airplay",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path stroke-linecap=\"round\" d=\"M12 35.014H4V8.013a2 2 0 0 1 2-2h36a2 2 0 0 1 2 2v27h-8\"/><path d=\"M24 32L14 42h20z\"/></g>",
-     "height": 48,
-     "name": "airplay",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m6 21l6-6l6 6zm-4-4V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v12q0 .825-.587 1.413T20 19h-3v-2h3V5H4v12h3v2H4q-.825 0-1.412-.587T2 17m10-5\"/>",
      "height": 24,
      "name": "airplay-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path stroke-linecap=\"round\" d=\"M12 35.014H4V8.013a2 2 0 0 1 2-2h36a2 2 0 0 1 2 2v27h-8\"/><path d=\"M24 32L14 42h20z\"/></g>",
+     "height": 48,
+     "name": "airplay",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M22.996 30H9.004a1.002 1.002 0 0 1-.821-1.577l6.998-9.996a1 1 0 0 1 1.638 0l6.998 9.996a1.002 1.002 0 0 1-.82 1.577M10.92 28h10.16L16 20.744Z\"/><path fill=\"currentColor\" d=\"M28 24h-4v-2h4V6H4v16h4v2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2\"/>",
@@ -452,17 +494,17 @@ export const deck: Deck = {
      "name": "alarm",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M14 25c0-5.523 4.477-10 10-10s10 4.477 10 10v16H14z\"/><path stroke-linecap=\"round\" d=\"M24 5v3m11.892 1.328l-1.929 2.298m8.256 8.661l-2.955.521m-33.483-.521l2.955.521m3.373-11.48l1.928 2.298M6 41h37\"/></g>",
-     "height": 48,
-     "name": "alarm",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8.488 21.288q-1.638-.713-2.85-1.925t-1.925-2.85T3 13t.713-3.512t1.924-2.85t2.85-1.925T12 4t3.513.713t2.85 1.925t1.925 2.85T21 13t-.712 3.513t-1.925 2.85t-2.85 1.925T12 22t-3.512-.712M14.8 17.2l1.4-1.4l-3.2-3.2V8h-2v5.4zM5.6 2.35L7 3.75L2.75 8l-1.4-1.4zm12.8 0l4.25 4.25l-1.4 1.4L17 3.75zM12 20q2.925 0 4.963-2.037T19 13t-2.037-4.962T12 6T7.038 8.038T5 13t2.038 4.963T12 20\"/>",
      "height": 24,
      "name": "alarm-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M14 25c0-5.523 4.477-10 10-10s10 4.477 10 10v16H14z\"/><path stroke-linecap=\"round\" d=\"M24 5v3m11.892 1.328l-1.929 2.298m8.256 8.661l-2.955.521m-33.483-.521l2.955.521m3.373-11.48l1.928 2.298M6 41h37\"/></g>",
+     "height": 48,
+     "name": "alarm",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M16 28a11 11 0 1 1 11-11a11 11 0 0 1-11 11m0-20a9 9 0 1 0 9 9a9 9 0 0 0-9-9\"/><path fill=\"currentColor\" d=\"M18.59 21L15 17.41V11h2v5.58l3 3.01zM4 7.592l3.582-3.589l1.416 1.413l-3.582 3.589zm19-2.184l1.415-1.413l3.581 3.589l-1.415 1.413z\"/>",
@@ -512,16 +554,16 @@ export const deck: Deck = {
      "name": "album",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 21c4.243 0 6.364 0 7.682-1.318S21 16.242 21 12v0c0-4.243 0-6.364-1.318-7.682S16.242 3 12 3S5.636 3 4.318 4.318S3 7.758 3 12s0 6.364 1.318 7.682S7.758 21 12 21\"/><path d=\"M11 3v4.738c0 2.001 0 3.002.483 3.224c.484.221 1.035-.527 2.138-2.022a.47.47 0 0 1 .758 0c1.103 1.495 1.654 2.243 2.138 2.022C17 10.74 17 9.739 17 7.738V3.5\"/></g>",
-     "height": 24,
-     "name": "album",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12 16.5q1.875 0 3.188-1.312T16.5 12t-1.312-3.187T12 7.5T8.813 8.813T7.5 12t1.313 3.188T12 16.5m-.712-3.787Q11 12.425 11 12t.288-.712T12 11t.713.288T13 12t-.288.713T12 13t-.712-.288M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "album-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 21c4.243 0 6.364 0 7.682-1.318S21 16.242 21 12v0c0-4.243 0-6.364-1.318-7.682S16.242 3 12 3S5.636 3 4.318 4.318S3 7.758 3 12s0 6.364 1.318 7.682S7.758 21 12 21\"/><path d=\"M11 3v4.738c0 2.001 0 3.002.483 3.224c.484.221 1.035-.527 2.138-2.022a.47.47 0 0 1 .758 0c1.103 1.495 1.654 2.243 2.138 2.022C17 10.74 17 9.739 17 7.738V3.5\"/></g>",
+     "height": 24,
+     "name": "album",
      "width": 24
     },
     "fluent": {
@@ -734,6 +776,12 @@ export const deck: Deck = {
      "name": "align-center",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M2 13v-2h20v2zm5-3V7h10v3zm0 7v-3h10v3z\"/>",
+     "height": 24,
+     "name": "align-center-outline",
+     "width": 24
+    },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M6 7h12v2H6zM3 3h18v2H3zm0 8h18v2H3zm3 4h12v2H6zm-3 4h18v2H3z\"/>",
      "height": 24,
@@ -768,6 +816,36 @@ export const deck: Deck = {
      "body": "<path fill=\"currentColor\" d=\"M3 7h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2m4 2a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm14 4H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2m-4 4H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2\"/>",
      "height": 24,
      "name": "align-center",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "align-horizontal-center",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 22v-5H6v-3h5v-4H3V7h8V2h2v5h8v3h-8v4h5v3h-5v5z\"/>",
+     "height": 24,
+     "name": "align-horizontal-center-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 19v3m0-12v4m0-12v3M8 7.5c0-.844-.083-1.818.75-2.299C9.098 5 9.566 5 10.5 5h3c.935 0 1.402 0 1.75.201c.834.481.75 1.455.75 2.299s.084 1.818-.75 2.299c-.348.201-.815.201-1.75.201h-3c-.934 0-1.402 0-1.75-.201C7.917 9.318 8 8.344 8 7.5m-4 9c0-.844-.083-1.818.75-2.299C5.098 14 5.566 14 6.5 14h11c.935 0 1.402 0 1.75.201c.834.481.75 1.455.75 2.299s.084 1.818-.75 2.299c-.348.201-.815.201-1.75.201h-11c-.934 0-1.402 0-1.75-.201C3.917 18.318 4 17.344 4 16.5\"/>",
+     "height": 24,
+     "name": "align-horizontal-center",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M24 18h-7v-4h3a2.003 2.003 0 0 0 2-2V8a2.003 2.003 0 0 0-2-2h-3V2h-2v4h-3a2.003 2.003 0 0 0-2 2v4a2.003 2.003 0 0 0 2 2h3v4H8a2.003 2.003 0 0 0-2 2v4a2.003 2.003 0 0 0 2 2h7v4h2v-4h7a2.003 2.003 0 0 0 2-2v-4a2.003 2.003 0 0 0-2-2M12 8h8v4h-8Zm12 16H8v-4h16Z\"/>",
+     "height": 32,
+     "name": "align-horizontal-center",
+     "width": 32
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M7 3a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 2h10v4H7zm-2 8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zm0 2h14v4H5z\"/></g>",
+     "height": 24,
+     "name": "align-horizontal-center-line",
      "width": 24
     }
    }
@@ -990,6 +1068,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "align-vertical-center",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 21v-8H2v-2h5V3h3v8h4V6h3v5h5v2h-5v5h-3v-5h-4v8z\"/>",
+     "height": 24,
+     "name": "align-vertical-center-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.5 8.002c.844 0 1.818-.083 2.299.75c.201.348.201.816.201 1.75v3c0 .935 0 1.402-.201 1.75c-.481.834-1.455.75-2.299.75s-1.818.084-2.299-.75C14 14.904 14 14.437 14 13.502v-3c0-.934 0-1.402.201-1.75c.481-.833 1.455-.75 2.299-.75m-9-4c.844 0 1.818-.083 2.299.75c.201.348.201.816.201 1.75v11c0 .935 0 1.402-.201 1.75c-.481.834-1.455.75-2.299.75s-1.818.084-2.299-.75C5 18.904 5 18.437 5 17.502v-11c0-.934 0-1.402.201-1.75c.481-.833 1.455-.75 2.299-.75M5 12H2m12 0h-4m12 0h-3\"/>",
+     "height": 24,
+     "name": "align-vertical-center",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M30 15h-4v-3a2.003 2.003 0 0 0-2-2h-4a2.003 2.003 0 0 0-2 2v3h-4V8a2.003 2.003 0 0 0-2-2H8a2.003 2.003 0 0 0-2 2v7H2v2h4v7a2.003 2.003 0 0 0 2 2h4a2.003 2.003 0 0 0 2-2v-7h4v3a2.003 2.003 0 0 0 2 2h4a2.003 2.003 0 0 0 2-2v-3h4ZM8 24V8h4l.001 16Zm12-4v-8h4l.001 8Z\"/>",
+     "height": 32,
+     "name": "align-vertical-center",
+     "width": 32
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 2h4v14H5zm10 0a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 2h4v10h-4z\"/></g>",
+     "height": 24,
+     "name": "align-vertical-center-line",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "alipay",
    "variants": {
     "icon-park-outline": {
@@ -1058,6 +1166,12 @@ export const deck: Deck = {
      "name": "ambulance",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 4V0h2v4zM6.575 5.425l-3-3L5 1l3 3zM4 23q-.425 0-.712-.288T3 22v-8l2.1-6q.15-.45.538-.725T6.5 7H9V5h3.275q-.6.85-.937 1.863T11 9H6.85l-1.475 4h6.9q.425.6.95 1.113T14.4 15H5v4h14v-3.075q.525-.075 1.025-.225t.975-.375V22q0 .425-.288.713T20 23h-1q-.425 0-.712-.288T18 22v-1H6v1q0 .425-.288.713T5 23zm2-5h3q.425 0 .713-.288T10 17t-.288-.712T9 16H6zm12 0v-2h-3q-.425 0-.712.288T14 17t.288.713T15 18zM5 15v4zm12.275-3.75L20.75 7.8L19.7 6.75l-2.425 2.375l-.975-.975l-1.05 1.075zm4.263-5.788Q23 6.926 23 9t-1.463 3.538T18 14t-3.537-1.463T13 9t1.463-3.537T18 4t3.538 1.463\"/>",
+     "height": 24,
+     "name": "ambulance-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11 18h4M13.5 8h.943c1.31 0 1.966 0 2.521.315c.556.314.926.895 1.667 2.056c.52.814 1.064 1.406 1.831 1.931c.772.53 1.14.789 1.343 1.204c.195.398.195.869.195 1.811c0 1.243 0 1.864-.349 2.259l-.046.049c-.367.375-.946.375-2.102.375H19M5 18c-1.414 0-2.121 0-2.56-.44C2 17.122 2 16.415 2 15V8c0-1.414 0-2.121.44-2.56C2.878 5 3.585 5 5 5h5.5c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v10H9m13-3h-1M8 9v4m2-2H6\"/><circle cx=\"17\" cy=\"18\" r=\"2\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/></g>",
      "height": 24,
@@ -1069,12 +1183,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "ambulance",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M11 4V0h2v4zM6.575 5.425l-3-3L5 1l3 3zM4 23q-.425 0-.712-.288T3 22v-8l2.1-6q.15-.45.538-.725T6.5 7H9V5h3.275q-.6.85-.937 1.863T11 9H6.85l-1.475 4h6.9q.425.6.95 1.113T14.4 15H5v4h14v-3.075q.525-.075 1.025-.225t.975-.375V22q0 .425-.288.713T20 23h-1q-.425 0-.712-.288T18 22v-1H6v1q0 .425-.288.713T5 23zm2-5h3q.425 0 .713-.288T10 17t-.288-.712T9 16H6zm12 0v-2h-3q-.425 0-.712.288T14 17t.288.713T15 18zM5 15v4zm12.275-3.75L20.75 7.8L19.7 6.75l-2.425 2.375l-.975-.975l-1.05 1.075zm4.263-5.788Q23 6.926 23 9t-1.463 3.538T18 14t-3.537-1.463T13 9t1.463-3.537T18 4t3.538 1.463\"/>",
-     "height": 24,
-     "name": "ambulance-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 10H6m8 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2m14 0h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14M8 8v4m1 6h6\"/><circle cx=\"17\" cy=\"18\" r=\"2\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/></g>",
@@ -1106,16 +1214,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "analytics",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M7 17v-4m5 4V7m5 10v-6\"/><path stroke-linejoin=\"round\" d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z\"/></g>",
-     "height": 24,
-     "name": "analytics-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 17h2v-5H7zm8 0h2V7h-2zm-4 0h2v-3h-2zm0-5h2v-2h-2zm-6 9q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z\"/>",
      "height": 24,
      "name": "analytics-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M7 17v-4m5 4V7m5 10v-6\"/><path stroke-linejoin=\"round\" d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z\"/></g>",
+     "height": 24,
+     "name": "analytics-01",
      "width": 24
     },
     "carbon": {
@@ -1140,6 +1248,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 9v12m-8-8a8 8 0 0 0 16 0m1 0h-2M5 13H3m6-7a3 3 0 1 0 6 0a3 3 0 1 0-6 0\"/>",
      "height": 24,
      "name": "anchor",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.875 21.45q-1.6-.55-2.9-1.5t-2.137-2.225T3 15v-3l4 3l-1.55 1.55q.725 1.275 2.3 2.2T11 19.925V11H8V9h3V7.825q-.875-.325-1.437-1.088T9 5q0-1.25.875-2.125T12 2t2.125.875T15 5q0 .975-.562 1.738T13 7.825V9h3v2h-3v8.925q1.675-.25 3.25-1.175t2.3-2.2L17 15l4-3v3q0 1.45-.837 2.725t-2.138 2.225t-2.9 1.5T12 22t-3.125-.55M12 6q.425 0 .713-.287T13 5t-.288-.712T12 4t-.712.288T11 5t.288.713T12 6\"/>",
+     "height": 24,
+     "name": "anchor-outline",
      "width": 24
     },
     "hugeicons": {
@@ -1202,6 +1316,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "android",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 18q.25-2.625 1.6-4.775t3.475-3.5L4.15 6.5q-.225-.35-.112-.75t.462-.6q.35-.225.75-.125t.6.45l2 3.325q.95-.4 1.988-.6T12 8t2.163.2t1.987.6l2-3.325q.2-.35.6-.45t.75.125q.35.2.45.6t-.1.75l-1.925 3.225q2.125 1.35 3.475 3.5T23 18zm17.013-3.787q.037-.438-.238-.863t-.675-.55t-.725.1t-.375.65t.225.85t.688.563t.737-.088t.363-.663M7.1 14.95q.4-.125.675-.55t.238-.862t-.363-.663t-.737-.088t-.688.563T6 14.2t.375.65t.725.1\"/>",
+     "height": 24,
+     "name": "android-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M6.5 9.5a5.5 5.5 0 1 1 11 0V16c0 1.414 0 2.121-.44 2.56c-.439.44-1.146.44-2.56.44h-5c-1.414 0-2.121 0-2.56-.44c-.44-.439-.44-1.146-.44-2.56z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M20 11v6m-5 2v3m-6-3v3M4 11v6m6-13L8.5 2M14 4l1.5-2m-9 8h11\"/></g>",
      "height": 24,
@@ -1344,6 +1464,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 13h5m3 3V8h3a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-3m8-5v8M9 16v-5.5a2.5 2.5 0 0 0-5 0V16\"/>",
      "height": 24,
      "name": "api",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m12 14l-2-2l2-2l2 2zM9.875 8.125l-2.5-2.5L12 1l4.625 4.625l-2.5 2.5L12 6zm-4.25 8.5L1 12l4.625-4.625l2.5 2.5L6 12l2.125 2.125zm12.75 0l-2.5-2.5L18 12l-2.125-2.125l2.5-2.5L23 12zM12 23l-4.625-4.625l2.5-2.5L12 18l2.125-2.125l2.5 2.5z\"/>",
+     "height": 24,
+     "name": "api-outline",
      "width": 24
     },
     "hugeicons": {
@@ -1508,6 +1634,12 @@ export const deck: Deck = {
      "name": "apps",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4.588 19.413Q4 18.825 4 18t.588-1.412T6 16t1.413.588T8 18t-.587 1.413T6 20t-1.412-.587m6 0Q10 18.825 10 18t.588-1.412T12 16t1.413.588T14 18t-.587 1.413T12 20t-1.412-.587m6 0Q16 18.825 16 18t.588-1.412T18 16t1.413.588T20 18t-.587 1.413T18 20t-1.412-.587m-12-6Q4 12.825 4 12t.588-1.412T6 10t1.413.588T8 12t-.587 1.413T6 14t-1.412-.587m6 0Q10 12.825 10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14t-1.412-.587m6 0Q16 12.825 16 12t.588-1.412T18 10t1.413.588T20 12t-.587 1.413T18 14t-1.412-.587m-12-6Q4 6.825 4 6t.588-1.412T6 4t1.413.588T8 6t-.587 1.413T6 8t-1.412-.587m6 0Q10 6.825 10 6t.588-1.412T12 4t1.413.588T14 6t-.587 1.413T12 8t-1.412-.587m6 0Q16 6.825 16 6t.588-1.412T18 4t1.413.588T20 6t-.587 1.413T18 8t-1.412-.587\"/>",
+     "height": 24,
+     "name": "apps-outline",
+     "width": 24
+    },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"m18.492 2.33l3.179 3.18a2.25 2.25 0 0 1 0 3.182l-2.584 2.584A2.25 2.25 0 0 1 21 13.5v5.25A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V5.25A2.25 2.25 0 0 1 5.25 3h5.25a2.25 2.25 0 0 1 2.225 1.915L15.31 2.33a2.25 2.25 0 0 1 3.182 0M4.5 18.75c0 .415.336.75.75.75h5.999l.001-6.75H4.5zm8.249.75h6.001a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75h-6.001zM10.5 4.5H5.25a.75.75 0 0 0-.75.75v6h6.75v-6a.75.75 0 0 0-.75-.75m2.25 4.81v1.94h1.94zm3.62-5.918L13.193 6.57a.75.75 0 0 0 0 1.061l3.179 3.179a.75.75 0 0 0 1.06 0l3.18-3.179a.75.75 0 0 0 0-1.06l-3.18-3.18a.75.75 0 0 0-1.06 0\"/>",
      "height": 24,
@@ -1550,16 +1682,16 @@ export const deck: Deck = {
      "name": "archive",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M13 2h-2C7.229 2 5.343 2 4.172 3.172S3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828S16.771 2 13 2Zm8 10H3m12-5H9m6 10H9\"/>",
-     "height": 24,
-     "name": "archive",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m12 18l4-4l-1.4-1.4l-1.6 1.6V10h-2v4.2l-1.6-1.6L8 14zM5 8v11h14V8zm0 13q-.825 0-1.412-.587T3 19V6.525q0-.35.113-.675t.337-.6L4.7 3.725q.275-.35.687-.538T6.25 3h11.5q.45 0 .863.188t.687.537l1.25 1.525q.225.275.338.6t.112.675V19q0 .825-.587 1.413T19 21zm.4-15h13.2l-.85-1H6.25zm6.6 7.5\"/>",
      "height": 24,
      "name": "archive-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M13 2h-2C7.229 2 5.343 2 4.172 3.172S3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828S16.771 2 13 2Zm8 10H3m12-5H9m6 10H9\"/>",
+     "height": 24,
+     "name": "archive",
      "width": 24
     },
     "fluent": {
@@ -1658,17 +1790,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "arrow-circle-down",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M24 15v18m9-9l-9 9l-9-9\"/></g>",
-     "height": 48,
-     "name": "arrow-circle-down",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m12 16l4-4l-1.4-1.4l-1.6 1.6V8h-2v4.2l-1.6-1.6L8 12zm0 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "arrow-circle-down-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M24 15v18m9-9l-9 9l-9-9\"/></g>",
+     "height": 48,
+     "name": "arrow-circle-down",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"m16.53 11.72l-.084-.073a.75.75 0 0 0-.977.073l-2.72 2.72V7.75l-.007-.102A.75.75 0 0 0 12 7l-.101.006a.75.75 0 0 0-.649.744v6.691L8.53 11.72l-.084-.072a.75.75 0 0 0-.977 1.133l4 4.001l.084.073a.75.75 0 0 0 .977-.073l4-4l.073-.085a.75.75 0 0 0-.072-.976M1.999 12c0 5.523 4.477 10 10 10s10-4.477 10-10s-4.477-10-10-10s-10 4.477-10 10m18.5 0a8.5 8.5 0 1 1-17 0a8.5 8.5 0 0 1 17 0\"/>",
@@ -1694,17 +1826,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "arrow-circle-left",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M32.492 24.5h-18m9-9l-9 9l9 9\"/></g>",
-     "height": 48,
-     "name": "arrow-circle-left",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m12 16l1.4-1.4l-1.6-1.6H16v-2h-4.2l1.6-1.6L12 8l-4 4zm0 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "arrow-circle-left-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M32.492 24.5h-18m9-9l-9 9l9 9\"/></g>",
+     "height": 48,
+     "name": "arrow-circle-left",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"m12.28 16.53l.073-.083a.75.75 0 0 0-.073-.977l-2.72-2.72h6.69l.102-.007A.75.75 0 0 0 17 12l-.006-.101a.75.75 0 0 0-.744-.649H9.56l2.722-2.72l.072-.084a.75.75 0 0 0-1.133-.977l-4.001 4l-.073.084a.75.75 0 0 0 .073.977l4 4l.085.073a.75.75 0 0 0 .976-.072M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2m0 18.5a8.5 8.5 0 1 1 0-17a8.5 8.5 0 0 1 0 17\"/>",
@@ -1730,17 +1862,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "arrow-circle-right",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M14.492 24.5h18m-9-9l9 9l-9 9\"/></g>",
-     "height": 48,
-     "name": "arrow-circle-right",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m12 16l4-4l-4-4l-1.4 1.4l1.6 1.6H8v2h4.2l-1.6 1.6zm0 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "arrow-circle-right-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M14.492 24.5h18m-9-9l9 9l-9 9\"/></g>",
+     "height": 48,
+     "name": "arrow-circle-right",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12.001 2c5.523 0 10 4.477 10 10s-4.477 10-10 10s-10-4.477-10-10s4.477-10 10-10m0 1.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17m-.353 4.053l.073-.084a.75.75 0 0 1 .976-.073l.084.073l4.001 4a.75.75 0 0 1 .073.977l-.073.085l-4.001 4a.75.75 0 0 1-1.134-.977l.073-.084l2.722-2.721H7.75a.75.75 0 0 1-.743-.648L7 12a.75.75 0 0 1 .649-.743l.101-.007h6.69l-2.72-2.72a.75.75 0 0 1-.072-.976l.073-.084z\"/>",
@@ -1766,17 +1898,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "arrow-circle-up",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M24 33.5v-18m9 9l-9-9l-9 9\"/></g>",
-     "height": 48,
-     "name": "arrow-circle-up",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 16h2v-4.2l1.6 1.6L16 12l-4-4l-4 4l1.4 1.4l1.6-1.6zm1 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "arrow-circle-up-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linecap=\"round\" d=\"M24 33.5v-18m9 9l-9-9l-9 9\"/></g>",
+     "height": 48,
+     "name": "arrow-circle-up",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"m7.47 12.28l.084.073a.75.75 0 0 0 .977-.073l2.72-2.72v6.69l.007.102A.75.75 0 0 0 12 17l.101-.006a.75.75 0 0 0 .649-.744V9.56l2.72 2.722l.084.072a.75.75 0 0 0 .977-1.133l-4-4.001l-.084-.073a.75.75 0 0 0-.977.073l-4 4l-.073.085a.75.75 0 0 0 .072.976M22.001 12c0-5.523-4.477-10-10-10s-10 4.477-10 10s4.477 10 10 10s10-4.477 10-10m-18.5 0a8.5 8.5 0 1 1 17 0a8.5 8.5 0 0 1-17 0\"/>",
@@ -2252,6 +2384,12 @@ export const deck: Deck = {
      "name": "arrow-left",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m14 17l-5-5l5-5z\"/>",
+     "height": 24,
+     "name": "arrow-left-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15 6s-6 4.419-6 6s6 6 6 6\"/>",
      "height": 24,
@@ -2466,6 +2604,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 12h14m-6 6l6-6m-6-6l6 6\"/>",
      "height": 24,
      "name": "arrow-right",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10 17V7l5 5z\"/>",
+     "height": 24,
+     "name": "arrow-right-outline",
      "width": 24
     },
     "hugeicons": {
@@ -3218,16 +3362,16 @@ export const deck: Deck = {
      "name": "aspect-ratio",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M2 12c0-4.243 0-6.364 1.172-7.682S6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.318S22 7.758 22 12s0 6.364-1.172 7.682S17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.318S2 16.242 2 12Z\"/><path d=\"M2 9h8c2.828 0 4.243 0 5.121.879C16 10.757 16 12.172 16 15v6m-6 0V9\"/></g>",
-     "height": 24,
-     "name": "aspect-ratio",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M14 17h5v-5h-2v3h-3zm-9-5h2V9h3V7H5zm-1 8q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm0-2h16V6H4zm0 0V6z\"/>",
      "height": 24,
      "name": "aspect-ratio-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M2 12c0-4.243 0-6.364 1.172-7.682S6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.318S22 7.758 22 12s0 6.364-1.172 7.682S17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.318S2 16.242 2 12Z\"/><path d=\"M2 9h8c2.828 0 4.243 0 5.121.879C16 10.757 16 12.172 16 15v6m-6 0V9\"/></g>",
+     "height": 24,
+     "name": "aspect-ratio",
      "width": 24
     },
     "ri": {
@@ -3258,6 +3402,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m12 12l8-4.5M12 12v9m0-9L4 7.5m8 4.5l8 4.5M12 3v9m0 0l-8 4.5\"/>",
      "height": 24,
      "name": "asterisk",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 21v-6.6l-4.65 4.675l-1.425-1.425L9.6 13H3v-2h6.6L4.925 6.35L6.35 4.925L11 9.6V3h2v6.6l4.65-4.675l1.425 1.425L14.4 11H21v2h-6.6l4.675 4.65l-1.425 1.425L13 14.4V21z\"/>",
+     "height": 24,
+     "name": "asterisk-outline",
      "width": 24
     },
     "hugeicons": {
@@ -3446,6 +3596,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "attachment",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.25 18q-2.6 0-4.425-1.825T2 11.75t1.825-4.425T8.25 5.5h9.25q1.875 0 3.188 1.313T22 10t-1.312 3.188T17.5 14.5H8.75q-1.15 0-1.95-.8T6 11.75t.8-1.95T8.75 9H18v2H8.75q-.325 0-.537.213T8 11.75t.213.538t.537.212h8.75q1.05-.025 1.775-.737T20 10t-.725-1.775T17.5 7.5H8.25q-1.775-.025-3.012 1.225T4 11.75q0 1.75 1.238 2.975T8.25 16H18v2z\"/>",
+     "height": 24,
+     "name": "attachment-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.5 12v1.5a7.5 7.5 0 0 1-15 0V8a5 5 0 0 1 10 0v5.5a2.5 2.5 0 0 1-5 0v-4\"/>",
      "height": 24,
@@ -3710,6 +3866,12 @@ export const deck: Deck = {
      "name": "backpack",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V8q0-1.4.85-2.45T7 4.15V2h3v2h4V2h3v2.15q1.3.35 2.15 1.4T20 8v12q0 .825-.587 1.413T18 22zm0-2h12V8q0-.825-.587-1.412T16 6H8q-.825 0-1.412.588T6 8zm8.5-4h2v-4h-9v2h7zM12 13\"/>",
+     "height": 24,
+     "name": "backpack-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M5 12a7 7 0 0 1 14 0v4.333c0 1.552 0 2.327-.212 2.953a4 4 0 0 1-2.502 2.502C15.66 22 14.885 22 13.333 22h-2.666c-1.552 0-2.327 0-2.953-.212a4 4 0 0 1-2.502-2.502C5 18.66 5 17.885 5 16.333z\"/><path stroke-linejoin=\"round\" d=\"M5 17c1.65-1.83 4.173-3 7-3s5.35 1.17 7 3\"/><path stroke-linecap=\"round\" d=\"M11 10h2\"/><path d=\"M9 6V5c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C10.602 2 11.068 2 12 2s1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C15 3.602 15 4.068 15 5v1M5 19H3.714A1.714 1.714 0 0 1 2 17.286V16a3 3 0 0 1 3-3m14 6h1.286c.947 0 1.714-.767 1.714-1.714V16a3 3 0 0 0-3-3\"/></g>",
      "height": 24,
@@ -3721,12 +3883,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "backpack",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V8q0-1.4.85-2.45T7 4.15V2h3v2h4V2h3v2.15q1.3.35 2.15 1.4T20 8v12q0 .825-.587 1.413T18 22zm0-2h12V8q0-.825-.587-1.412T16 6H8q-.825 0-1.412.588T6 8zm8.5-4h2v-4h-9v2h7zM12 13\"/>",
-     "height": 24,
-     "name": "backpack-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.417 8A2.417 2.417 0 0 0 8 10.417C8 11.29 8.709 12 9.583 12h4.834C15.29 12 16 11.291 16 10.417A2.417 2.417 0 0 0 13.583 8zM9.5 10.417c0-.507.41-.917.917-.917h3.166c.507 0 .917.41.917.917a.083.083 0 0 1-.083.083H9.583a.083.083 0 0 1-.083-.083M12 2a3.75 3.75 0 0 0-3.736 3.424A8 8 0 0 0 4 12.5v6.25A3.25 3.25 0 0 0 7.25 22h9.5A3.25 3.25 0 0 0 20 18.75V12.5a8 8 0 0 0-4.264-7.076A3.75 3.75 0 0 0 12 2m6.5 12h-13v-1.5a6.5 6.5 0 0 1 13 0zM8 17.25a.75.75 0 0 0 1.5 0v-1.536h9v3.036a1.75 1.75 0 0 1-1.75 1.75h-9.5a1.75 1.75 0 0 1-1.75-1.75v-3.036H8zM12 4.5c-.698 0-1.374.09-2.02.257a2.25 2.25 0 0 1 4.04 0A8 8 0 0 0 12 4.5\"/>",
@@ -3866,6 +4022,12 @@ export const deck: Deck = {
      "name": "badge",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V9q0-.825.588-1.412T4 7h5V4q0-.825.588-1.412T11 2h2q.825 0 1.413.588T15 4v3h5q.825 0 1.413.588T22 9v11q0 .825-.587 1.413T20 22zm0-2h16V9h-5q0 .825-.587 1.413T13 11h-2q-.825 0-1.412-.587T9 9H4zm2-2h6v-.45q0-.425-.238-.788T11.1 16.2q-.5-.225-1.012-.337T9 15.75t-1.088.113T6.9 16.2q-.425.2-.663.563T6 17.55zm8-1.5h4V15h-4zm-3.937-1.937q.437-.438.437-1.063t-.437-1.062T9 12t-1.062.438T7.5 13.5t.438 1.063T9 15t1.063-.437M14 13.5h4V12h-4zM11 9h2V4h-2zm1 5.5\"/>",
+     "height": 24,
+     "name": "badge-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m14.394 3l-.246-.209a3.31 3.31 0 0 0-4.296 0l-.246.21a4 4 0 0 1-2.276.943l-.323.025A3.31 3.31 0 0 0 3.97 7.007l-.025.323A4 4 0 0 1 3 9.606l-.21.246a3.31 3.31 0 0 0 0 4.296l.21.246a4 4 0 0 1 .943 2.276l.025.323a3.31 3.31 0 0 0 3.038 3.038l.323.025A4 4 0 0 1 9.606 21l.246.21a3.31 3.31 0 0 0 4.296 0l.246-.21a4 4 0 0 1 2.276-.943l.323-.025a3.31 3.31 0 0 0 3.038-3.038l.025-.323A4 4 0 0 1 21 14.394l.21-.246a3.31 3.31 0 0 0 0-4.296L21 9.606a4 4 0 0 1-.943-2.276l-.025-.323a3.31 3.31 0 0 0-3.038-3.038l-.323-.025A4 4 0 0 1 14.394 3Z\"/>",
      "height": 24,
@@ -3877,12 +4039,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "badge",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V9q0-.825.588-1.412T4 7h5V4q0-.825.588-1.412T11 2h2q.825 0 1.413.588T15 4v3h5q.825 0 1.413.588T22 9v11q0 .825-.587 1.413T20 22zm0-2h16V9h-5q0 .825-.587 1.413T13 11h-2q-.825 0-1.412-.587T9 9H4zm2-2h6v-.45q0-.425-.238-.788T11.1 16.2q-.5-.225-1.012-.337T9 15.75t-1.088.113T6.9 16.2q-.425.2-.663.563T6 17.55zm8-1.5h4V15h-4zm-3.937-1.937q.437-.438.437-1.063t-.437-1.062T9 12t-1.062.438T7.5 13.5t.438 1.063T9 15t1.063-.437M14 13.5h4V12h-4zM11 9h2V4h-2zm1 5.5\"/>",
-     "height": 24,
-     "name": "badge-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M16.338 3A3.5 3.5 0 0 0 16 4.5H5.75c-.69 0-1.25.56-1.25 1.25v12.5c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V8.002c.537 0 1.046-.121 1.501-.337L21 18.25A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75A2.75 2.75 0 0 1 5.75 3zm3.162-.998a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5\"/>",
@@ -3920,6 +4076,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "badminton",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.425 13.75q1.375.025 2.35-.937t.975-2.363q0-.725-.337-1.362T10.55 7.95Q9.6 7 8.263 6.5T5.575 6Q4.8 6 4.4 6.388T4 7.5q0 1.325.413 2.588t1.312 2.237q.55.575 1.225 1t1.475.425m8.675-5.7l-3.175-3.175L20.3 1.85l.45 4.4zm2.213 1.913q-.463-.088-.763-.438l-.35-.375l2.725-1.3l.05.5q.075.475-.137.888t-.638.612t-.887.113M2 7.5q0-1.65.938-2.575T5.575 4q1.775 0 3.475.675t2.975 1.95q.775.775 1.238 1.75t.462 2.075q0 .8-.237 1.55t-.738 1.375l7.225 7.225l-1.4 1.4l-7.225-7.225q-.65.475-1.387.737t-1.538.238q-1.2-.025-2.262-.575T4.3 13.7q-1.125-1.275-1.713-2.875T2 7.5m5.875 2.375\"/>",
+     "height": 24,
+     "name": "badminton-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M2.391 21.639a1.278 1.278 0 0 1 .149-1.964l3.631-2.578a.526.526 0 0 1 .683.064a.52.52 0 0 1 .05.662L4.34 21.456a1.29 1.29 0 0 1-1.948.183M11.5 12.5L7 17m12.43-4.423c-1.896 1.896-5.561 1.976-7.772-.235c-2.21-2.211-2.13-5.876-.235-7.771c2.489-2.49 7.175-3.59 9.385-1.38c2.211 2.212 1.11 6.897-1.379 9.386\"/>",
      "height": 24,
@@ -3931,12 +4093,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "badminton",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M8.425 13.75q1.375.025 2.35-.937t.975-2.363q0-.725-.337-1.362T10.55 7.95Q9.6 7 8.263 6.5T5.575 6Q4.8 6 4.4 6.388T4 7.5q0 1.325.413 2.588t1.312 2.237q.55.575 1.225 1t1.475.425m8.675-5.7l-3.175-3.175L20.3 1.85l.45 4.4zm2.213 1.913q-.463-.088-.763-.438l-.35-.375l2.725-1.3l.05.5q.075.475-.137.888t-.638.612t-.887.113M2 7.5q0-1.65.938-2.575T5.575 4q1.775 0 3.475.675t2.975 1.95q.775.775 1.238 1.75t.462 2.075q0 .8-.237 1.55t-.738 1.375l7.225 7.225l-1.4 1.4l-7.225-7.225q-.65.475-1.387.737t-1.538.238q-1.2-.025-2.262-.575T4.3 13.7q-1.125-1.275-1.713-2.875T2 7.5m5.875 2.375\"/>",
-     "height": 24,
-     "name": "badminton-outline",
-     "width": 24
     },
     "mingcute": {
      "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M3.905 5.707a2.774 2.774 0 0 1 4.434-3.025A2.8 2.8 0 0 1 10.179 2c.694 0 1.33.25 1.821.667A2.8 2.8 0 0 1 13.822 2c.71 0 1.35.26 1.84.682a2.774 2.774 0 0 1 4.434 3.025L16 17.173V18a4 4 0 0 1-8 0v-.827zM10 17.023V17h4v1a2 2 0 1 1-4 0zM14.653 15H9.348l-3.56-9.966a.774.774 0 1 1 1.49-.397l1.538 8.54a1 1 0 0 0 1.968-.354L9.37 4.967A.822.822 0 1 1 11 4.82V13a1 1 0 1 0 2 0V4.821a.821.821 0 1 1 1.632.137l-1.416 7.865a1 1 0 1 0 1.968.354l1.414-7.856l.003-.016l.12-.668a.774.774 0 1 1 1.49.397z\"/></g>",
@@ -4136,6 +4292,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "bar-chart",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M16 20v-7h4v7zm-6 0V4h4v16zm-6 0V9h4v11z\"/>",
+     "height": 24,
+     "name": "bar-chart-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14 18V6c0-.465 0-.697-.051-.888a1.5 1.5 0 0 0-1.06-1.06C12.697 4 12.464 4 12 4s-.697 0-.888.051a1.5 1.5 0 0 0-1.06 1.06C10 5.304 10 5.536 10 6v12c0 .465 0 .698.051.888a1.5 1.5 0 0 0 1.06 1.06c.191.052.424.052.889.052s.697 0 .888-.051a1.5 1.5 0 0 0 1.06-1.06C14 18.697 14 18.464 14 18m7-10V6c0-.465 0-.697-.051-.888a1.5 1.5 0 0 0-1.06-1.06C19.697 4 19.464 4 19 4s-.698 0-.888.051a1.5 1.5 0 0 0-1.06 1.06C17 5.304 17 5.536 17 6v2c0 .465 0 .697.051.888a1.5 1.5 0 0 0 1.06 1.06c.191.052.424.052.889.052s.698 0 .888-.051a1.5 1.5 0 0 0 1.06-1.06C21 8.696 21 8.464 21 8M7 12V6c0-.465 0-.697-.051-.888a1.5 1.5 0 0 0-1.06-1.06C5.696 4 5.464 4 5 4s-.697 0-.888.051a1.5 1.5 0 0 0-1.06 1.06C3 5.304 3 5.536 3 6v6c0 .465 0 .697.051.888a1.5 1.5 0 0 0 1.06 1.06C4.304 14 4.536 14 5 14s.697 0 .888-.051a1.5 1.5 0 0 0 1.06-1.06C7 12.697 7 12.464 7 12\"/>",
      "height": 24,
@@ -4176,6 +4338,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 7V6a2 2 0 0 1 2-2h2M4 17v1a2 2 0 0 0 2 2h2m8-16h2a2 2 0 0 1 2 2v1m-4 13h2a2 2 0 0 0 2-2v-1M5 11h1v2H5zm5 0v2m4-2h1v2h-1zm5 0v2\"/>",
      "height": 24,
      "name": "barcode",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 19V5h2v14zm3 0V5h2v14zm3 0V5h1v14zm3 0V5h2v14zm3 0V5h3v14zm4 0V5h1v14zm3 0V5h3v14z\"/>",
+     "height": 24,
+     "name": "barcode-outline",
      "width": 24
     },
     "carbon": {
@@ -4634,6 +4802,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "battery-full",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8 22q-.425 0-.712-.288T7 21V5q0-.425.288-.712T8 4h2V2h4v2h2q.425 0 .713.288T17 5v16q0 .425-.288.713T16 22z\"/>",
+     "height": 24,
+     "name": "battery-full-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M2 12c0-2.828 0-4.243.879-5.121C3.757 6 5.172 6 8 6h5c2.828 0 4.243 0 5.121.879C19 7.757 19 9.172 19 12s0 4.243-.879 5.121C17.243 18 15.828 18 13 18H8c-2.828 0-4.243 0-5.121-.879C2 16.243 2 14.828 2 12Zm17-2.5l1.027.171c.681.114 1.022.17 1.28.336a1.5 1.5 0 0 1 .573.675c.12.282.12.627.12 1.318c0 .69 0 1.036-.12 1.318a1.5 1.5 0 0 1-.572.675c-.259.165-.6.222-1.28.336L19 14.5M6 10v4m3-4v4m3-4v4m3-4v4\"/>",
      "height": 24,
@@ -4688,6 +4862,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "battery-low",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 17q-.425 0-.712-.288T4 16v-2H2v-4h2V8q0-.425.288-.712T5 7h16q.425 0 .713.288T22 8v8q0 .425-.288.713T21 17zm1-2h11V9H6z\"/>",
+     "height": 24,
+     "name": "battery-low-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M2 12c0-2.828 0-4.243.879-5.121C3.757 6 5.172 6 8 6h5c2.828 0 4.243 0 5.121.879C19 7.757 19 9.172 19 12s0 4.243-.879 5.121C17.243 18 15.828 18 13 18H8c-2.828 0-4.243 0-5.121-.879C2 16.243 2 14.828 2 12Zm17-2.5l1.027.171c.681.114 1.022.17 1.28.336a1.5 1.5 0 0 1 .573.675c.12.282.12.627.12 1.318c0 .69 0 1.036-.12 1.318a1.5 1.5 0 0 1-.572.675c-.259.165-.6.222-1.28.336L19 14.5M6 10v4\"/>",
      "height": 24,
@@ -4736,16 +4916,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "battery-plus",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M7 6.002c-2.175.012-3.353.108-4.121.877C2 7.757 2 9.172 2 12s0 4.243.879 5.121c.768.769 1.946.865 4.121.877m7 0c2.175-.012 3.353-.108 4.121-.877C19 16.243 19 14.828 19 12s0-4.243-.879-5.121c-.768-.769-1.946-.865-4.121-.877M19 9.5l1.027.171c.681.114 1.022.17 1.28.335a1.5 1.5 0 0 1 .573.676c.12.282.12.627.12 1.318c0 .69 0 1.036-.12 1.318a1.5 1.5 0 0 1-.572.675c-.259.165-.6.222-1.28.336l-1.028.17M10.5 9v6m3.005-3.005h-6\"/>",
-     "height": 24,
-     "name": "battery-plus",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 22q-.425 0-.712-.288T7 21V5q0-.425.288-.712T8 4h2V2h4v2h2q.425 0 .713.288T17 5v7q-.525 0-1.025.088T15 12.35V6H9v14h2.35q.2.575.488 1.075t.687.925zm8 0v-3h-3v-2h3v-3h2v3h3v2h-3v3z\"/>",
      "height": 24,
      "name": "battery-plus-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M7 6.002c-2.175.012-3.353.108-4.121.877C2 7.757 2 9.172 2 12s0 4.243.879 5.121c.768.769 1.946.865 4.121.877m7 0c2.175-.012 3.353-.108 4.121-.877C19 16.243 19 14.828 19 12s0-4.243-.879-5.121c-.768-.769-1.946-.865-4.121-.877M19 9.5l1.027.171c.681.114 1.022.17 1.28.335a1.5 1.5 0 0 1 .573.676c.12.282.12.627.12 1.318c0 .69 0 1.036-.12 1.318a1.5 1.5 0 0 1-.572.675c-.259.165-.6.222-1.28.336l-1.028.17M10.5 9v6m3.005-3.005h-6\"/>",
+     "height": 24,
+     "name": "battery-plus",
      "width": 24
     },
     "lucide": {
@@ -4880,16 +5060,16 @@ export const deck: Deck = {
      "name": "bed",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M2 3.5v17m20-12v12M2 8.5l4 2h16m-20 5h4m16 0h-3m-13-5v6c0 1.655.345 2 2 2h9c1.655 0 2-.345 2-2v-6\"/><path d=\"M6.814 10.5c.08-.424.206-.868.182-1.303a2.06 2.06 0 0 0-.87-1.583c-.201-.14-.646-.282-1.113-.403c-.682-.177-1.023-.266-1.422-.175c-.283.065-.528.216-.88.485c-.039.03-.058.044-.088.07A2.1 2.1 0 0 0 2 8.5\"/></g>",
-     "height": 24,
-     "name": "bed",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 19v-6q0-.675.275-1.225T3 10.8V8q0-1.25.875-2.125T6 5h4q.575 0 1.075.213T12 5.8q.425-.375.925-.587T14 5h4q1.25 0 2.125.875T21 8v2.8q.45.425.725.975T22 13v6h-2v-2H4v2zm11-9h6V8q0-.425-.288-.712T18 7h-4q-.425 0-.712.288T13 8zm-8 0h6V8q0-.425-.288-.712T10 7H6q-.425 0-.712.288T5 8zm-1 5h16v-2q0-.425-.288-.712T19 12H5q-.425 0-.712.288T4 13zm16 0H4z\"/>",
      "height": 24,
      "name": "bed-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M2 3.5v17m20-12v12M2 8.5l4 2h16m-20 5h4m16 0h-3m-13-5v6c0 1.655.345 2 2 2h9c1.655 0 2-.345 2-2v-6\"/><path d=\"M6.814 10.5c.08-.424.206-.868.182-1.303a2.06 2.06 0 0 0-.87-1.583c-.201-.14-.646-.282-1.113-.403c-.682-.177-1.023-.266-1.422-.175c-.283.065-.528.216-.88.485c-.039.03-.058.044-.088.07A2.1 2.1 0 0 0 2 8.5\"/></g>",
+     "height": 24,
+     "name": "bed",
      "width": 24
     },
     "fluent": {
@@ -5414,16 +5594,16 @@ export const deck: Deck = {
      "name": "blender",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.463 4H8.213m10.25 0l-1.025 13H9l-.274-6m9.737-7H20M8.213 4H6.356c-1.261 0-1.892 0-2.2.403c-.307.403-.126.993.237 2.172l.275.894c.232.756.348 1.134.594 1.435c.245.302.596.497 1.299.889L8.726 11m-.513-7l.513 7M15 2h-3m5.467 15H9.053c-.293 1-1.597 3.708-.797 4.634c.315.366.91.366 2.097.366h6.18c1.295 0 1.942 0 2.258-.403c.792-1.012-.894-3.632-1.324-4.597M18 8h-2.5m2 3h-2m2 3h-2\"/>",
-     "height": 24,
-     "name": "blender",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 22q-.825 0-1.412-.587T6 20v-1q0-1.175.513-2.175T7.85 15.15L7.225 11H5q-.825 0-1.412-.588T3 9V5q0-.825.588-1.412T5 3h5V2h4v1h3.975L16.15 15.15q.825.675 1.338 1.675T18 19v1q0 .825-.587 1.413T16 22zM6.925 9l-.6-4H5v4zm5.788 9.713Q13 18.425 13 18t-.288-.712T12 17t-.712.288T11 18t.288.713T12 19t.713-.288M9.7 14h4.6l1.35-9h-7.3zM8 20h8v-1q0-1.25-.875-2.125T13 16h-2q-1.25 0-2.125.875T8 19zm4-2\"/>",
      "height": 24,
      "name": "blender-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.463 4H8.213m10.25 0l-1.025 13H9l-.274-6m9.737-7H20M8.213 4H6.356c-1.261 0-1.892 0-2.2.403c-.307.403-.126.993.237 2.172l.275.894c.232.756.348 1.134.594 1.435c.245.302.596.497 1.299.889L8.726 11m-.513-7l.513 7M15 2h-3m5.467 15H9.053c-.293 1-1.597 3.708-.797 4.634c.315.366.91.366 2.097.366h6.18c1.295 0 1.942 0 2.258-.403c.792-1.012-.894-3.632-1.324-4.597M18 8h-2.5m2 3h-2m2 3h-2\"/>",
+     "height": 24,
+     "name": "blender",
      "width": 24
     },
     "lucide": {
@@ -5448,6 +5628,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 8l10 8l-5 4V4l5 4l-10 8\"/>",
      "height": 24,
      "name": "bluetooth",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 22v-7.6L6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5L11 9.6V2h1l5.7 5.7l-4.3 4.3l4.3 4.3L12 22zm2-12.4l1.9-1.9L13 5.85zm0 8.55l1.9-1.85l-1.9-1.9z\"/>",
+     "height": 24,
+     "name": "bluetooth-outline",
      "width": 24
     },
     "hugeicons": {
@@ -5526,6 +5712,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 8l10 8l-5 4V4l5 4l-10 8m-3-4h1m13 0h1\"/>",
      "height": 24,
      "name": "bluetooth-connected",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 22v-7.6L6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5L11 9.6V2h1l5.7 5.7l-4.3 4.3l4.3 4.3L12 22zm2-12.4l1.9-1.9L13 5.85zm0 8.55l1.9-1.85l-1.9-1.9zm-9.062-5.087Q3.5 12.625 3.5 12t.438-1.062T5 10.5t1.063.438T6.5 12t-.437 1.063T5 13.5t-1.062-.437m14 0Q17.5 12.625 17.5 12t.438-1.062T19 10.5t1.063.438T20.5 12t-.437 1.063T19 13.5t-1.062-.437\"/>",
+     "height": 24,
+     "name": "bluetooth-connected-outline",
      "width": 24
     },
     "fluent": {
@@ -5714,16 +5906,16 @@ export const deck: Deck = {
      "name": "bomb",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M16 15a7 7 0 1 1-14 0a7 7 0 0 1 14 0Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m12 8.5l-.531-1.329c-.16-.397-.24-.596-.346-.761a2 2 0 0 0-1.288-.872C9.643 5.5 9.428 5.5 9 5.5s-.643 0-.835.038a2 2 0 0 0-1.288.872c-.107.165-.186.364-.345.761L6 8.5\"/><path stroke-linecap=\"round\" d=\"M22 7.5L20.5 6m0 0L19 4.5M20.5 6L19 7.5M20.5 6L22 4.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M17 6c-3 0-2.59-2.56-5.14-3.733C9.62 1.237 8.77 3.407 9.052 5\"/></g>",
-     "height": 24,
-     "name": "bomb",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8.65 22.8q-3.125 0-5.312-2.212T1.15 15.25t2.163-5.288T8.6 7.8h.325L9.6 6.625q.3-.55.9-.712t1.15.162l.75.425l.125-.2q.575-1.075 1.8-1.4t2.3.3l.875.5l-1 1.725l-.875-.5q-.35-.2-.763-.088t-.612.463l-.125.2l1 .575q.525.3.688.9t-.138 1.125L15 11.3q.575.9.863 1.913t.287 2.087q0 3.125-2.187 5.313T8.65 22.8m0-2q2.275 0 3.888-1.612T14.15 15.3q0-.775-.213-1.525T13.3 12.35l-.65-1.025l1.05-1.8l-2.6-1.5l-1.05 1.8h-1.1q-2.35 0-4.087 1.5T3.125 15.25q0 2.3 1.613 3.925T8.65 20.8M20 8.8v-2h3v2zm-5.5-5.5v-3h2v3zm4.875 2.025l-1.4-1.4L20.1 1.8l1.4 1.4zM8.65 15.3\"/>",
      "height": 24,
      "name": "bomb-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M16 15a7 7 0 1 1-14 0a7 7 0 0 1 14 0Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m12 8.5l-.531-1.329c-.16-.397-.24-.596-.346-.761a2 2 0 0 0-1.288-.872C9.643 5.5 9.428 5.5 9 5.5s-.643 0-.835.038a2 2 0 0 0-1.288.872c-.107.165-.186.364-.345.761L6 8.5\"/><path stroke-linecap=\"round\" d=\"M22 7.5L20.5 6m0 0L19 4.5M20.5 6L19 7.5M20.5 6L22 4.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M17 6c-3 0-2.59-2.56-5.14-3.733C9.62 1.237 8.77 3.407 9.052 5\"/></g>",
+     "height": 24,
+     "name": "bomb",
      "width": 24
     },
     "lucide": {
@@ -5810,6 +6002,12 @@ export const deck: Deck = {
      "name": "book",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h12q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm0-2h12V4h-2v7l-2.5-1.5L11 11V4H6zm0 0V4zm5-9l2.5-1.5L16 11l-2.5-1.5z\"/>",
+     "height": 24,
+     "name": "book-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M20 22H6a2 2 0 0 1-2-2m0 0a2 2 0 0 1 2-2h12a2 2 0 0 0 2-2V2a2 2 0 0 1-2 2h-8c-2.828 0-4.243 0-5.121.879C4 5.757 4 7.172 4 10z\"/><path d=\"M18.5 18s-1 .763-1 2s1 2 1 2M9 4v4\"/></g>",
      "height": 24,
@@ -5821,12 +6019,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "book",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h12q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm0-2h12V4h-2v7l-2.5-1.5L11 11V4H6zm0 0V4zm5-9l2.5-1.5L16 11l-2.5-1.5z\"/>",
-     "height": 24,
-     "name": "book-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M7 6a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zm1.5 1.5h7v-1h-7zM4 4.5A2.5 2.5 0 0 1 6.5 2H18a2.5 2.5 0 0 1 2.5 2.5v14.25a.75.75 0 0 1-.75.75H5.5a1 1 0 0 0 1 1h13.25a.75.75 0 0 1 0 1.5H6.5A2.5 2.5 0 0 1 4 19.5zM5.5 18H19V4.5a1 1 0 0 0-1-1H6.5a1 1 0 0 0-1 1z\"/>",
@@ -5943,7 +6135,7 @@ export const deck: Deck = {
      "width": 24
     },
     "lucide": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 7v14m-9-3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4a4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3a3 3 0 0 0-3-3z\"/>",
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 5v16m8.001-2A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2a5 5 0 0 1 4-2z\"/>",
      "height": 24,
      "name": "book-open",
      "width": 24
@@ -5990,6 +6182,12 @@ export const deck: Deck = {
      "name": "bookmark",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z\"/>",
+     "height": 24,
+     "name": "bookmark-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 17.98V9.709c0-3.634 0-5.45 1.172-6.58S8.229 2 12 2s5.657 0 6.828 1.129C20 4.257 20 6.074 20 9.708v8.273c0 2.306 0 3.459-.773 3.871c-1.497.8-4.304-1.867-5.637-2.67c-.773-.465-1.16-.698-1.59-.698s-.817.233-1.59.698c-1.333.803-4.14 3.47-5.637 2.67C4 21.44 4 20.287 4 17.981\"/><path d=\"M4 7h16\"/></g>",
      "height": 24,
@@ -6001,12 +6199,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "bookmark",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z\"/>",
-     "height": 24,
-     "name": "bookmark-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M6.19 21.855a.75.75 0 0 1-1.187-.61V6.25A3.25 3.25 0 0 1 8.253 3h7.498a3.25 3.25 0 0 1 3.25 3.25v14.996a.75.75 0 0 1-1.188.609l-5.81-4.181zM17.502 6.25a1.75 1.75 0 0 0-1.75-1.75H8.253a1.75 1.75 0 0 0-1.75 1.75v13.532l5.061-3.641a.75.75 0 0 1 .876 0l5.061 3.641z\"/>",
@@ -6080,16 +6272,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "bookmark-add",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M11 2C7.229 2 5.343 2 4.172 3.129C3 4.257 3 6.074 3 9.708v8.273c0 2.306 0 3.459.773 3.871c1.496.8 4.304-1.867 5.637-2.67c.773-.465 1.16-.698 1.59-.698s.817.233 1.59.698c1.333.803 4.14 3.47 5.637 2.67c.773-.412.773-1.565.773-3.871V12.5\"/><path d=\"M3.5 7H10m7 3V2m-4 4h8\"/></g>",
-     "height": 24,
-     "name": "bookmark-add-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 21V5q0-.825.588-1.412T7 3h6v2H7v12.95l5-2.15l5 2.15V11h2v10l-7-3zM7 5h6zm10 4V7h-2V5h2V3h2v2h2v2h-2v2z\"/>",
      "height": 24,
      "name": "bookmark-add-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M11 2C7.229 2 5.343 2 4.172 3.129C3 4.257 3 6.074 3 9.708v8.273c0 2.306 0 3.459.773 3.871c1.496.8 4.304-1.867 5.637-2.67c.773-.465 1.16-.698 1.59-.698s.817.233 1.59.698c1.333.803 4.14 3.47 5.637 2.67c.773-.412.773-1.565.773-3.871V12.5\"/><path d=\"M3.5 7H10m7 3V2m-4 4h8\"/></g>",
+     "height": 24,
+     "name": "bookmark-add-01",
      "width": 24
     },
     "fluent": {
@@ -6116,16 +6308,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "bookmark-check",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 17.98V9.709c0-3.634 0-5.45 1.172-6.58S8.229 2 12 2s5.657 0 6.828 1.129C20 4.257 20 6.074 20 9.708v8.273c0 2.306 0 3.459-.773 3.871c-1.497.8-4.304-1.867-5.637-2.67c-.773-.465-1.16-.698-1.59-.698s-.817.233-1.59.698c-1.333.803-4.14 3.47-5.637 2.67C4 21.44 4 20.287 4 17.981\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M10 13.714s1 .522 1.5 1.286c0 0 1.5-3 3.5-4\"/><path d=\"M4 7h16\"/></g>",
-     "height": 24,
-     "name": "bookmark-check-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m10.95 14l4.95-4.95l-1.425-1.4l-3.525 3.525L9.525 9.75L8.1 11.175zM5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z\"/>",
      "height": 24,
      "name": "bookmark-check-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 17.98V9.709c0-3.634 0-5.45 1.172-6.58S8.229 2 12 2s5.657 0 6.828 1.129C20 4.257 20 6.074 20 9.708v8.273c0 2.306 0 3.459-.773 3.871c-1.497.8-4.304-1.867-5.637-2.67c-.773-.465-1.16-.698-1.59-.698s-.817.233-1.59.698c-1.333.803-4.14 3.47-5.637 2.67C4 21.44 4 20.287 4 17.981\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M10 13.714s1 .522 1.5 1.286c0 0 1.5-3 3.5-4\"/><path d=\"M4 7h16\"/></g>",
+     "height": 24,
+     "name": "bookmark-check-01",
      "width": 24
     },
     "lucide": {
@@ -6314,16 +6506,16 @@ export const deck: Deck = {
      "name": "border-all",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3.891 3.891C5.282 2.5 7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12c0-4.478 0-6.718 1.391-8.109M12 2.5v1.9m0 15.2v1.9M9.15 12h5.7m4.75 0h1.9m-19 0h1.9M12 9.15v5.7\"/>",
-     "height": 24,
-     "name": "border-all-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M3 21V3h18v18zm16-2v-6h-6v6zm0-14h-6v6h6zM5 5v6h6V5zm0 14h6v-6H5z\"/>",
      "height": 24,
      "name": "border-all-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3.891 3.891C5.282 2.5 7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12c0-4.478 0-6.718 1.391-8.109M12 2.5v1.9m0 15.2v1.9M9.15 12h5.7m4.75 0h1.9m-19 0h1.9M12 9.15v5.7\"/>",
+     "height": 24,
+     "name": "border-all-01",
      "width": 24
     },
     "fluent": {
@@ -6354,6 +6546,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 20H4M4 4v.01M8 4v.01M12 4v.01M16 4v.01M20 4v.01M4 8v.01M12 8v.01M20 8v.01M4 12v.01M8 12v.01m4-.01v.01m4-.01v.01m4-.01v.01M4 16v.01m8-.01v.01m8-.01v.01\"/>",
      "height": 24,
      "name": "border-bottom",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-2h18v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 8v-2h2v2zm0-8V3h2v2zm4 12v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 8v-2h2v2zm0-8V3h2v2zm4 12v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2z\"/>",
+     "height": 24,
+     "name": "border-bottom-outline",
      "width": 24
     },
     "hugeicons": {
@@ -6416,6 +6614,12 @@ export const deck: Deck = {
      "name": "border-horizontal",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-2h2v2zm0-4v-2h2v2zm0-4v-2h18v2zm0-4V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zM7 5V3h2v2zm4 16v-2h2v2zm0-4v-2h2v2zm0-8V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zm0-16V3h2v2zm4 16v-2h2v2zm0-4v-2h2v2zm0-8V7h2v2zm0-4V3h2v2z\"/>",
+     "height": 24,
+     "name": "border-horizontal-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M6.3 2.751c-1.04.194-1.804.536-2.409 1.14c-.604.605-.946 1.37-1.14 2.409M17.7 2.751c1.04.194 1.804.536 2.409 1.14c.604.605.946 1.37 1.14 2.409M13.9 2.505q-.875-.006-1.9-.005q-1.025-.001-1.9.005M21.495 10.1q.006.875.005 1.9q.001 1.025-.005 1.9m-18.99-3.8q-.006.875-.005 1.9q-.001 1.025.005 1.9m.246 3.8c.194 1.04.536 1.804 1.14 2.409c.605.604 1.37.946 2.409 1.14M21.249 17.7c-.194 1.04-.536 1.804-1.14 2.409c-.605.604-1.37.946-2.409 1.14m-3.8.246q-.875.006-1.9.005q-1.024.001-1.9-.005M2.5 12h19M12 2.5v1.9m0 15.2v1.9m0-12.35v5.7\"/>",
      "height": 24,
@@ -6444,6 +6648,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 12h16m-8-8v16M4 4v.01M8 4v.01M16 4v.01M20 4v.01M4 8v.01M20 8v.01M4 16v.01M20 16v.01M4 20v.01M8 20v.01m8-.01v.01m4-.01v.01\"/>",
      "height": 24,
      "name": "border-inner",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-2h2v2zm0-4v-2h2v2zm0-8V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zM7 5V3h2v2zm8 16v-2h2v2zm4 0v-2h2v2zm0-4v-2h2v2zm0-8V7h2v2zm0-4V3h2v2zm-4 0V3h2v2zm-4 16v-8H3v-2h8V3h2v8h8v2h-8v8z\"/>",
+     "height": 24,
+     "name": "border-inner-outline",
      "width": 24
     },
     "hugeicons": {
@@ -6492,6 +6702,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 20V4m4 0v.01M12 4v.01M16 4v.01M20 4v.01M12 8v.01M20 8v.01M8 12v.01m4-.01v.01m4-.01v.01m4-.01v.01M12 16v.01m8-.01v.01M8 20v.01m4-.01v.01m4-.01v.01m4-.01v.01\"/>",
      "height": 24,
      "name": "border-left",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21V3h2v18zm4 0v-2h2v2zm0-8v-2h2v2zm0-8V3h2v2zm4 16v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zm0-8v-2h2v2zm0-8V3h2v2zm4 16v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2z\"/>",
+     "height": 24,
+     "name": "border-left-outline",
      "width": 24
     },
     "hugeicons": {
@@ -6590,6 +6806,12 @@ export const deck: Deck = {
      "name": "border-outer",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 19h14V5H5zm-2 2V3h18v18zm4-8v-2h2v2zm4 4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm4 4v-2h2v2z\"/>",
+     "height": 24,
+     "name": "border-outer-outline",
+     "width": 24
+    },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M11 7h2v2h-2zm0 8h2v2h-2zm-4-4h2v2H7zm8 0h2v2h-2zm-4 0h2v2h-2z\"/><path fill=\"currentColor\" d=\"M17 3H3v18h18V3zm2 4v12H5V5h14z\"/>",
      "height": 24,
@@ -6618,6 +6840,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 4v16M4 4v.01M8 4v.01M12 4v.01M16 4v.01M4 8v.01M12 8v.01M4 12v.01M8 12v.01m4-.01v.01m4-.01v.01M4 16v.01m8-.01v.01M4 20v.01M8 20v.01m4-.01v.01m4-.01v.01\"/>",
      "height": 24,
      "name": "border-right",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zm0-8v-2h2v2zm0-8V3h2v2zm4 16v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zm0-8v-2h2v2zm0-8V3h2v2zm4 16V3h2v18z\"/>",
+     "height": 24,
+     "name": "border-right-outline",
      "width": 24
     },
     "hugeicons": {
@@ -6680,6 +6908,12 @@ export const deck: Deck = {
      "name": "border-top",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h18v2zm4 16v-2h2v2zm0-8v-2h2v2zm4 8v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm4 12v-2h2v2zm0-8v-2h2v2zm4 8v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2z\"/>",
+     "height": 24,
+     "name": "border-top-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21.5 6.5c-.198-1.094-.55-1.899-1.17-2.535C18.9 2.5 16.6 2.5 12 2.5s-6.9 0-8.33 1.465C3.05 4.6 2.7 5.406 2.5 6.5m18.749 11.19c-.194 1.042-.535 1.809-1.14 2.415s-1.37.95-2.409 1.143M21.495 10c.005.586.005 1.288.005 1.974s0 1.45-.005 2.037M13.9 21.495q-.875.006-1.9.005q-1.025.001-1.9-.005m-3.8-.247c-1.04-.194-1.804-.537-2.409-1.143s-.946-1.373-1.14-2.415M2.505 10c-.005.586-.005 1.288-.005 1.974s0 1.451.005 2.037M21.5 12H20M4 12H2.5M12 9v6m0 4.531v1.47m3-9H9\"/>",
      "height": 24,
@@ -6738,6 +6972,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16M4 4v.01M8 4v.01M16 4v.01M20 4v.01M4 8v.01M20 8v.01M4 12v.01M8 12v.01m8-.01v.01m4-.01v.01M4 16v.01M20 16v.01M4 20v.01M8 20v.01m8-.01v.01m4-.01v.01\"/>",
      "height": 24,
      "name": "border-vertical",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 16v-2h2v2zm0-8v-2h2v2zm0-8V3h2v2zm4 16V3h2v18zm4 0v-2h2v2zm0-8v-2h2v2zm0-8V3h2v2zm4 16v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3h2v2z\"/>",
+     "height": 24,
+     "name": "border-vertical-outline",
      "width": 24
     },
     "hugeicons": {
@@ -6866,17 +7106,17 @@ export const deck: Deck = {
      "name": "box",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><rect width=\"36\" height=\"30\" x=\"6\" y=\"12\" rx=\"2\"/><path stroke-linecap=\"round\" d=\"M17.95 24.008h12M6 13l7-8h22l7 8\"/></g>",
-     "height": 48,
-     "name": "box",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 8v11h14V8h-3v8l-4-2l-4 2V8zm0 13q-.825 0-1.412-.587T3 19V6.525q0-.35.113-.675t.337-.6L4.7 3.725q.275-.35.687-.538T6.25 3h11.5q.45 0 .863.188t.687.537l1.25 1.525q.225.275.338.6t.112.675V19q0 .825-.587 1.413T19 21zm.4-15h13.2l-.85-1H6.25zM10 8v4.75l2-1l2 1V8zM5 8h14z\"/>",
      "height": 24,
      "name": "box-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><rect width=\"36\" height=\"30\" x=\"6\" y=\"12\" rx=\"2\"/><path stroke-linecap=\"round\" d=\"M17.95 24.008h12M6 13l7-8h22l7 8\"/></g>",
+     "height": 48,
+     "name": "box",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.591 2.513a3.75 3.75 0 0 1 2.818 0l7.498 3.04A1.75 1.75 0 0 1 22 7.175v9.653a1.75 1.75 0 0 1-1.093 1.621l-7.498 3.04a3.75 3.75 0 0 1-2.818 0l-7.498-3.04A1.75 1.75 0 0 1 2 16.827V7.176a1.75 1.75 0 0 1 1.093-1.622zm2.254 1.39a2.25 2.25 0 0 0-1.69 0L9.24 4.68l7.527 2.927l2.669-1.03zm1.846 4.505L7.215 5.5L4.59 6.564l7.411 2.882zM3.5 16.828a.25.25 0 0 0 .156.231l7.499 3.04q.047.02.095.036v-9.371L3.5 7.75zm9.345 3.271l7.499-3.04a.25.25 0 0 0 .156-.232V7.774l-7.75 2.992v9.37z\"/>",
@@ -7430,16 +7670,16 @@ export const deck: Deck = {
      "name": "brush",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M7.495 13.753c3.088-3.589 10.084-10.598 13.044-10.749c1.83-.175-1.817 6.321-10.46 13.43m1.38-6.39l2.257 2.28M3 20.855c.71-2.507.262-1.275.504-4.162c.13-.428.389-1.754 2.01-2.415c1.842-.752 3.193.384 3.542.918c1.029 1.115 1.148 2.5 0 4.082S4.504 21.253 3 20.855\"/>",
-     "height": 24,
-     "name": "brush",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 21q-1.125 0-2.225-.55T2 19q.65 0 1.325-.513T4 17q0-1.25.875-2.125T7 14t2.125.875T10 17q0 1.65-1.175 2.825T6 21m0-2q.825 0 1.412-.587T8 17q0-.425-.288-.712T7 16t-.712.288T6 17q0 .575-.137 1.05t-.363.9q.125.05.25.05zm5.75-4L9 12.25l8.95-8.95q.275-.275.688-.288t.712.288l1.35 1.35q.3.3.3.7t-.3.7zM7 17\"/>",
      "height": 24,
      "name": "brush-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M7.495 13.753c3.088-3.589 10.084-10.598 13.044-10.749c1.83-.175-1.817 6.321-10.46 13.43m1.38-6.39l2.257 2.28M3 20.855c.71-2.507.262-1.275.504-4.162c.13-.428.389-1.754 2.01-2.415c1.842-.752 3.193.384 3.542.918c1.029 1.115 1.148 2.5 0 4.082S4.504 21.253 3 20.855\"/>",
+     "height": 24,
+     "name": "brush",
      "width": 24
     },
     "lucide": {
@@ -7796,6 +8036,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "cable-car",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 21v-1H3v-2h1V6H3V4h3.325L7 2h10l.675 2H21v2h-1v12h1v2h-4v1zm-1-3h12v-5H6zm7.063-1.437q.437-.438.437-1.063t-.437-1.062T12 14t-1.062.438T10.5 15.5t.438 1.063T12 17t1.063-.437M6 11h3V7.5q0-.625-.437-1.062T7.5 6t-1.062.438T6 7.5zm4.5 0h3V7.5q0-.625-.437-1.062T12 6t-1.062.438T10.5 7.5zm4.5 0h3V7.5q0-.625-.437-1.062T16.5 6t-1.062.438T15 7.5zm-9 2h12z\"/>",
+     "height": 24,
+     "name": "cable-car-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4.413 11.624a17.8 17.8 0 0 0-.215 6.462c.246 1.64.37 2.461 1.213 3.188C6.255 22 7.277 22 9.322 22h5.356c2.045 0 3.067 0 3.91-.726c.845-.727.968-1.547 1.215-3.188a17.8 17.8 0 0 0-.216-6.462c-.337-1.533-.506-2.3-1.329-2.962S16.468 8 14.533 8H9.468c-1.935 0-2.903 0-3.726.662s-.992 1.428-1.33 2.962Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 2h10m6 0h-6m0 0l-2 3.5m-3 0h6\"/><path stroke-linecap=\"round\" d=\"M4.5 16h15M12 9v7\"/></g>",
      "height": 24,
@@ -7807,12 +8053,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "cable-car",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M7 21v-1H3v-2h1V6H3V4h3.325L7 2h10l.675 2H21v2h-1v12h1v2h-4v1zm-1-3h12v-5H6zm7.063-1.437q.437-.438.437-1.063t-.437-1.062T12 14t-1.062.438T10.5 15.5t.438 1.063T12 17t1.063-.437M6 11h3V7.5q0-.625-.437-1.062T7.5 6t-1.062.438T6 7.5zm4.5 0h3V7.5q0-.625-.437-1.062T12 6t-1.062.438T10.5 7.5zm4.5 0h3V7.5q0-.625-.437-1.062T16.5 6t-1.062.438T15 7.5zm-9 2h12z\"/>",
-     "height": 24,
-     "name": "cable-car-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 3h.01M14 2h.01M2 9l20-5m-10 8V6.5\"/><rect width=\"16\" height=\"10\" x=\"4\" y=\"12\" rx=\"3\"/><path d=\"M9 12v5m6-5v5M4 17h16\"/></g>",
@@ -7886,17 +8126,17 @@ export const deck: Deck = {
      "name": "cake",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M24 12v5M8 27v13a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V27M4 21.97A4.97 4.97 0 0 1 8.97 17h30.06A4.97 4.97 0 0 1 44 21.97v.278a4.56 4.56 0 0 1-2.864 4.231a3.04 3.04 0 0 1-2.544-.132l-.342-.18a3.4 3.4 0 0 0-3.167 0a3.4 3.4 0 0 1-3.166 0a3.4 3.4 0 0 0-3.167 0a3.4 3.4 0 0 1-3.167 0a3.4 3.4 0 0 0-3.166 0a3.4 3.4 0 0 1-3.167 0a3.4 3.4 0 0 0-3.167 0a3.4 3.4 0 0 1-3.166 0a3.4 3.4 0 0 0-3.167 0l-.342.18a3.04 3.04 0 0 1-2.543.132A4.56 4.56 0 0 1 4 22.25z\"/><path d=\"M27 8c-.8-4-3-4-3-4s-2.2 0-3 4c-1 5 7 5 6 0Z\"/></g>",
-     "height": 48,
-     "name": "cake",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 22q-.425 0-.712-.288T3 21v-5q0-.825.588-1.412T5 14v-4q0-.825.588-1.412T7 8h4V6.55q-.45-.3-.725-.725T10 4.8q0-.375.15-.738t.45-.662L12 2l1.4 1.4q.3.3.45.662T14 4.8q0 .6-.275 1.025T13 6.55V8h4q.825 0 1.413.587T19 10v4q.825 0 1.413.588T21 16v5q0 .425-.288.713T20 22zm3-8h10v-4H7zm-2 6h14v-4H5zm2-6h10zm-2 6h14zm14-6H5z\"/>",
      "height": 24,
      "name": "cake-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M24 12v5M8 27v13a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V27M4 21.97A4.97 4.97 0 0 1 8.97 17h30.06A4.97 4.97 0 0 1 44 21.97v.278a4.56 4.56 0 0 1-2.864 4.231a3.04 3.04 0 0 1-2.544-.132l-.342-.18a3.4 3.4 0 0 0-3.167 0a3.4 3.4 0 0 1-3.166 0a3.4 3.4 0 0 0-3.167 0a3.4 3.4 0 0 1-3.167 0a3.4 3.4 0 0 0-3.166 0a3.4 3.4 0 0 1-3.167 0a3.4 3.4 0 0 0-3.167 0a3.4 3.4 0 0 1-3.166 0a3.4 3.4 0 0 0-3.167 0l-.342.18a3.04 3.04 0 0 1-2.543.132A4.56 4.56 0 0 1 4 22.25z\"/><path d=\"M27 8c-.8-4-3-4-3-4s-2.2 0-3 4c-1 5 7 5 6 0Z\"/></g>",
+     "height": 48,
+     "name": "cake",
+     "width": 48
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8\"/><path d=\"M4 16s.5-1 2-1s2.5 2 4 2s2.5-2 4-2s2.5 2 4 2s2-1 2-1M2 21h20M7 8v3m5-3v3m5-3v3M7 4h.01M12 4h.01M17 4h.01\"/></g>",
@@ -8528,6 +8768,12 @@ export const deck: Deck = {
      "name": "camera",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11.4 9h8q-.675-1.725-2.062-2.963T14.15 4.3zm-2.3 2l4-6.9q-.275-.05-.55-.075T12 4q-1.65 0-3.075.625T6.4 6.3zm-4.85 3H9.7l-4-6.9q-.8 1.025-1.25 2.263T4 12q0 .525.063 1.013T4.25 14m5.6 5.7l2.7-4.7H4.6q.675 1.725 2.063 2.963T9.85 19.7M12 20q1.65 0 3.075-.625T17.6 17.7L14.9 13l-4 6.9q.275.05.538.075T12 20m6.3-3.1q.8-1.025 1.25-2.262T20 12q0-.525-.062-1.012T19.75 10H14.3zM12 22q-2.05 0-3.875-.788t-3.187-2.15t-2.15-3.187T2 12q0-2.075.788-3.887t2.15-3.175t3.187-2.15T12 2q2.075 0 3.888.788t3.174 2.15t2.15 3.175T22 12q0 2.05-.788 3.875t-2.15 3.188t-3.175 2.15T12 22\"/>",
+     "height": 24,
+     "name": "camera-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M12.697 3.5h-1.394c-.715 0-1.072 0-1.392.112a2 2 0 0 0-.545.292c-.271.204-.47.501-.866 1.096h0c-.203.305-.502.753-.621.879a2 2 0 0 1-1.106.591c-.17.03-.353.03-.72.03c-.98 0-1.47 0-1.87.113a3 3 0 0 0-2.07 2.07C2 9.083 2 9.573 2 10.553V14.5c0 2.828 0 4.243.879 5.121S5.172 20.5 8 20.5h8c2.829 0 4.243 0 5.122-.879C22 18.743 22 17.328 22 14.5v-3.946c0-.98 0-1.47-.113-1.871a3 3 0 0 0-2.07-2.07c-.4-.113-.89-.113-1.87-.113c-.366 0-.55 0-.72-.03a2 2 0 0 1-1.105-.591c-.12-.126-.419-.574-.622-.879c-.396-.595-.594-.892-.865-1.096a2 2 0 0 0-.545-.292c-.32-.112-.678-.112-1.393-.112\"/><path stroke-linejoin=\"round\" d=\"M16 13a4 4 0 1 1-8 0a4 4 0 0 1 8 0\"/><path d=\"M19.125 9.5H19m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0Z\"/></g>",
      "height": 24,
@@ -8539,12 +8785,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "camera",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M11.4 9h8q-.675-1.725-2.062-2.963T14.15 4.3zm-2.3 2l4-6.9q-.275-.05-.55-.075T12 4q-1.65 0-3.075.625T6.4 6.3zm-4.85 3H9.7l-4-6.9q-.8 1.025-1.25 2.263T4 12q0 .525.063 1.013T4.25 14m5.6 5.7l2.7-4.7H4.6q.675 1.725 2.063 2.963T9.85 19.7M12 20q1.65 0 3.075-.625T17.6 17.7L14.9 13l-4 6.9q.275.05.538.075T12 20m6.3-3.1q.8-1.025 1.25-2.262T20 12q0-.525-.062-1.012T19.75 10H14.3zM12 22q-2.05 0-3.875-.788t-3.187-2.15t-2.15-3.187T2 12q0-2.075.788-3.887t2.15-3.175t3.187-2.15T12 2q2.075 0 3.888.788t3.174 2.15t2.15 3.175T22 12q0 2.05-.788 3.875t-2.15 3.188t-3.175 2.15T12 22\"/>",
-     "height": 24,
-     "name": "camera-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M13.925 2.504a2.25 2.25 0 0 1 1.94 1.11l.814 1.387h2.071A3.25 3.25 0 0 1 22 8.25v9.5A3.25 3.25 0 0 1 18.75 21H5.25A3.25 3.25 0 0 1 2 17.75v-9.5A3.25 3.25 0 0 1 5.25 5h2.08l.875-1.424a2.25 2.25 0 0 1 1.917-1.073zm0 1.5h-3.803a.75.75 0 0 0-.574.268l-.065.09l-1.093 1.78a.75.75 0 0 1-.639.358h-2.5A1.75 1.75 0 0 0 3.5 8.25v9.5c0 .966.784 1.75 1.75 1.75h13.5a1.75 1.75 0 0 0 1.75-1.75v-9.5a1.75 1.75 0 0 0-1.75-1.75h-2.5a.75.75 0 0 1-.647-.37l-1.032-1.757a.75.75 0 0 0-.646-.37M12 8a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9m0 1.5a3 3 0 1 0 0 6a3 3 0 0 0 0-6\"/>",
@@ -8726,16 +8966,16 @@ export const deck: Deck = {
      "name": "cancel",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18 6L6 18m12 0L6 6\"/>",
-     "height": 24,
-     "name": "cancel-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m8.4 17l3.6-3.6l3.6 3.6l1.4-1.4l-3.6-3.6L17 8.4L15.6 7L12 10.6L8.4 7L7 8.4l3.6 3.6L7 15.6zm3.6 5q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "cancel-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18 6L6 18m12 0L6 6\"/>",
+     "height": 24,
+     "name": "cancel-01",
      "width": 24
     },
     "iconoir": {
@@ -8828,16 +9068,16 @@ export const deck: Deck = {
      "name": "cannabis",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.138 18.95c-1.661-.497-3.04-1.707-4.138-2.822c-1.097 1.115-2.477 2.325-4.138 2.821c-.835.25-1.573-.46-1.354-1.277c.277-1.036.851-2.107 1.8-3.07c0 0-1.847.319-4.49-.524c-.762-.243-1.1-1.063-.537-1.613c1.073-1.049 2.915-1.935 3.972-1.935c-1.083-.734-2.656-2.476-3.346-4.118c-.328-.78.369-1.49 1.227-1.329c1.859.348 3.645 1.265 4.756 2.394c0-1.675.331-3.285 1.01-4.758a1.2 1.2 0 0 1 2.2 0c.679 1.473 1.01 3.083 1.01 4.758c1.111-1.129 2.897-2.046 4.756-2.394c.858-.16 1.555.548 1.227 1.33c-.69 1.64-2.262 3.383-3.346 4.117c1.057 0 2.9.886 3.972 1.935c.564.55.225 1.37-.537 1.613c-2.643.843-4.49.524-4.49.524c.949.963 1.523 2.034 1.8 3.07c.22.816-.52 1.527-1.354 1.277M12 16.5V22\"/>",
-     "height": 24,
-     "name": "cannabis",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 22v-4.175Q9.95 18.5 8.838 19t-2.338.5q-1.575 0-2.963-.712T1 17q.925-.85 1.988-1.487t2.287-.888q-1.7-1.375-2.5-3.4T1.975 7q1.8.025 3.475.575T8.5 9.2V9q0-2.275 1.013-4.275T12 1q1.45 1.725 2.475 3.725T15.5 9q0 .05-.012.1t-.013.1q1.4-1.075 3.075-1.612T22.025 7q0 2.2-.812 4.225t-2.513 3.4q1.225.25 2.288.888T22.975 17q-1.15 1.075-2.525 1.788t-2.95.712q-1.25 0-2.363-.5T13 17.825V22zm-1.4-7.4q-.275-.95-.712-1.812T7.75 11.25q-.7-.7-1.562-1.137T4.375 9.4q.275.95.713 1.813t1.137 1.562q.675.7 1.55 1.138T9.6 14.6m-3.1 2.9q.525 0 1.025-.137T8.5 17q-.475-.2-.975-.35T6.5 16.5t-1.025.15t-1 .35q.475.225.988.363T6.5 17.5m5.5-3.8q.65-1.1 1.075-2.262T13.5 9t-.425-2.437T12 4.325q-.65 1.075-1.075 2.237T10.5 9t.425 2.45T12 13.7m2.4.9q.95-.25 1.813-.687t1.537-1.138q.7-.7 1.138-1.562T19.6 9.4q-.95.275-1.812.713t-1.563 1.137q-.7.675-1.137 1.538T14.4 14.6m3.1 2.9q.525 0 1.025-.137T19.5 17q-.475-.2-.975-.35T17.5 16.5t-1.025.15t-1 .35q.475.225.988.363t1.037.137m-2.025-.5\"/>",
      "height": 24,
      "name": "cannabis-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.138 18.95c-1.661-.497-3.04-1.707-4.138-2.822c-1.097 1.115-2.477 2.325-4.138 2.821c-.835.25-1.573-.46-1.354-1.277c.277-1.036.851-2.107 1.8-3.07c0 0-1.847.319-4.49-.524c-.762-.243-1.1-1.063-.537-1.613c1.073-1.049 2.915-1.935 3.972-1.935c-1.083-.734-2.656-2.476-3.346-4.118c-.328-.78.369-1.49 1.227-1.329c1.859.348 3.645 1.265 4.756 2.394c0-1.675.331-3.285 1.01-4.758a1.2 1.2 0 0 1 2.2 0c.679 1.473 1.01 3.083 1.01 4.758c1.111-1.129 2.897-2.046 4.756-2.394c.858-.16 1.555.548 1.227 1.33c-.69 1.64-2.262 3.383-3.346 4.117c1.057 0 2.9.886 3.972 1.935c.564.55.225 1.37-.537 1.613c-2.643.843-4.49.524-4.49.524c.949.963 1.523 2.034 1.8 3.07c.22.816-.52 1.527-1.354 1.277M12 16.5V22\"/>",
+     "height": 24,
+     "name": "cannabis",
      "width": 24
     },
     "lucide": {
@@ -9038,16 +9278,16 @@ export const deck: Deck = {
      "name": "cards",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 11c0-2.828 0-4.243.879-5.121C4.757 5 6.172 5 9 5h2c2.828 0 4.243 0 5.121.879C17 6.757 17 8.172 17 11v5c0 2.828 0 4.243-.879 5.121C15.243 22 13.828 22 11 22H9c-2.828 0-4.243 0-5.121-.879C3 20.243 3 18.828 3 16z\"/><path d=\"m8.044 11.762l.383-.457C9.157 10.435 9.521 10 10 10c.48 0 .844.435 1.573 1.305l.383.457C12.652 12.593 13 13.009 13 13.5s-.348.907-1.044 1.738l-.383.457C10.843 16.565 10.479 17 10 17c-.48 0-.844-.435-1.573-1.305l-.383-.457C7.348 14.407 7 13.991 7 13.5s.348-.907 1.044-1.738Z\"/><path d=\"M16.924 19c1.096-.613 1.469-1.96 2.214-4.653l1.054-3.81c.746-2.693 1.119-4.04.486-5.101s-2.024-1.422-4.806-2.144l-1.967-.51c-2.782-.722-4.173-1.083-5.269-.47c-.78.436-1.193 1.244-1.636 2.646\"/></g>",
-     "height": 24,
-     "name": "cards-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 11.5V6h5.5v5.5zM6 18v-5.5h5.5V18zm6.5-6.5V6H18v5.5zm0 6.5v-5.5H18V18zM8 9.5h1.5V8H8zm6.5 0H16V8h-1.5zM8 16h1.5v-1.5H8zm6.5 0H16v-1.5h-1.5zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5z\"/>",
      "height": 24,
      "name": "cards-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 11c0-2.828 0-4.243.879-5.121C4.757 5 6.172 5 9 5h2c2.828 0 4.243 0 5.121.879C17 6.757 17 8.172 17 11v5c0 2.828 0 4.243-.879 5.121C15.243 22 13.828 22 11 22H9c-2.828 0-4.243 0-5.121-.879C3 20.243 3 18.828 3 16z\"/><path d=\"m8.044 11.762l.383-.457C9.157 10.435 9.521 10 10 10c.48 0 .844.435 1.573 1.305l.383.457C12.652 12.593 13 13.009 13 13.5s-.348.907-1.044 1.738l-.383.457C10.843 16.565 10.479 17 10 17c-.48 0-.844-.435-1.573-1.305l-.383-.457C7.348 14.407 7 13.991 7 13.5s.348-.907 1.044-1.738Z\"/><path d=\"M16.924 19c1.096-.613 1.469-1.96 2.214-4.653l1.054-3.81c.746-2.693 1.119-4.04.486-5.101s-2.024-1.422-4.806-2.144l-1.967-.51c-2.782-.722-4.173-1.083-5.269-.47c-.78.436-1.193 1.244-1.636 2.646\"/></g>",
+     "height": 24,
+     "name": "cards-01",
      "width": 24
     },
     "ph": {
@@ -9440,6 +9680,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "castle",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 21V9h2v2h2V3h2v2h2V3h2v2h2V3h2v2h2V3h2v8h2V9h2v12h-9v-3q0-.825-.587-1.412T12 16t-1.412.588T10 18v3zm2-2h5v-1q0-1.65 1.175-2.825T12 14t2.825 1.175T16 18v1h5v-6h-4V7H7v6H3zm6-7h2V9H9zm4 0h2V9h-2zm-1 1\"/>",
+     "height": 24,
+     "name": "castle-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M15.75 4h-7.5c-.702 0-1.053 0-1.306.169a1 1 0 0 0-.275.275C6.5 4.697 6.5 5.048 6.5 5.75s0 1.053.169 1.306a1 1 0 0 0 .275.275c.253.169.604.169 1.306.169h7.5c.702 0 1.053 0 1.306-.169a1 1 0 0 0 .275-.275c.169-.253.169-.604.169-1.306s0-1.053-.169-1.306a1 1 0 0 0-.275-.275C16.803 4 16.452 4 15.75 4ZM15 22l-.671-4.027c-.114-.681-.17-1.022-.336-1.28a1.5 1.5 0 0 0-.675-.573C13.036 16 12.691 16 12 16c-.69 0-1.036 0-1.318.12a1.5 1.5 0 0 0-.675.572c-.165.259-.222.6-.336 1.28L9 22\"/><path d=\"M16 7.5H8L6 22h12z\"/><path d=\"M17.794 22c2.127 0 3.19 0 3.788-.683c.598-.682.457-1.737.176-3.846l-.266-2C21.066 12.276 20.092 12 17 12M6.207 22c-2.128 0-3.192 0-3.79-.683c-.597-.682-.456-1.737-.175-3.846l.266-2C2.933 12.285 3.898 12 7 12m1-8V2m4 2V2m4 2V2\"/></g>",
      "height": 24,
@@ -9451,12 +9697,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "castle",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M1 21V9h2v2h2V3h2v2h2V3h2v2h2V3h2v2h2V3h2v8h2V9h2v12h-9v-3q0-.825-.587-1.412T12 16t-1.412.588T10 18v3zm2-2h5v-1q0-1.65 1.175-2.825T12 14t2.825 1.175T16 18v1h5v-6h-4V7H7v6H3zm6-7h2V9H9zm4 0h2V9h-2zm-1 1\"/>",
-     "height": 24,
-     "name": "castle-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 5V3m4 2V3m1 18v-3a3 3 0 0 0-6 0v3m9-18v8m0-6H6m16 6H2\"/><path d=\"M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9m4-6v8\"/></g>",
@@ -9596,6 +9836,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "chair",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.425 0-.712-.288T4 20v-1q-1.25 0-2.125-.875T1 16v-5q0-1.25.875-2.125T4 8V6q0-1.25.875-2.125T7 3h10q1.25 0 2.125.875T20 6v2q1.25 0 2.125.875T23 11v5q0 1.25-.875 2.125T20 19v1q0 .425-.288.713T19 21t-.712-.288T18 20v-1H6v1q0 .425-.288.713T5 21m-1-4h16q.425 0 .713-.288T21 16v-5q0-.425-.288-.712T20 10t-.712.288T19 11v4H5v-4q0-.425-.288-.712T4 10t-.712.288T3 11v5q0 .425.288.713T4 17m3-4h10v-2q0-.675.275-1.225T18 8.8V6q0-.425-.288-.712T17 5H7q-.425 0-.712.288T6 6v2.8q.45.425.725.975T7 11zm5 2\"/>",
+     "height": 24,
+     "name": "chair-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"m8 15l-2 7m10-7l2 7\"/><path d=\"M12 11c-1.522 0-3.13.293-4.392.684c-.95.294-1.714 1.638-1.596 2.729c.044.404.357.587.686.587h10.604c.33 0 .642-.183.686-.587c.118-1.091-.646-2.435-1.596-2.73C15.131 11.294 13.522 11 12 11Z\"/><path stroke-linejoin=\"round\" d=\"m7 12l.64-6.398c.171-1.712.257-2.568.828-3.085S9.9 2 11.62 2h.76c1.72 0 2.58 0 3.152.517c.571.517.657 1.373.828 3.085L17 12\"/></g>",
      "height": 24,
@@ -9607,12 +9853,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "chair",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21q-.425 0-.712-.288T4 20v-1q-1.25 0-2.125-.875T1 16v-5q0-1.25.875-2.125T4 8V6q0-1.25.875-2.125T7 3h10q1.25 0 2.125.875T20 6v2q1.25 0 2.125.875T23 11v5q0 1.25-.875 2.125T20 19v1q0 .425-.288.713T19 21t-.712-.288T18 20v-1H6v1q0 .425-.288.713T5 21m-1-4h16q.425 0 .713-.288T21 16v-5q0-.425-.288-.712T20 10t-.712.288T19 11v4H5v-4q0-.425-.288-.712T4 10t-.712.288T3 11v5q0 .425.288.713T4 17m3-4h10v-2q0-.675.275-1.225T18 8.8V6q0-.425-.288-.712T17 5H7q-.425 0-.712.288T6 6v2.8q.45.425.725.975T7 11zm5 2\"/>",
-     "height": 24,
-     "name": "chair-outline",
-     "width": 24
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M19 12h-1V3c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v9H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h1v4h2v-4h8v4h2v-4h1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1M8 4h8v8H8zm10 12H6v-2h12z\" class=\"b\"/>",
@@ -9962,16 +10202,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "chat",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M2 10.5c0-.77.013-1.523.04-2.25c.083-2.373.125-3.56 1.09-4.533c.965-.972 2.186-1.024 4.626-1.129A100 100 0 0 1 12 2.5c1.48 0 2.905.03 4.244.088c2.44.105 3.66.157 4.626 1.13c.965.972 1.007 2.159 1.09 4.532a64 64 0 0 1 0 4.5c-.083 2.373-.125 3.56-1.09 4.533c-.965.972-2.186 1.024-4.626 1.129q-1.102.047-2.275.07c-.74.014-1.111.02-1.437.145s-.6.358-1.148.828l-2.179 1.87A.73.73 0 0 1 8 20.77v-2.348l-.244-.01c-2.44-.105-3.66-.157-4.626-1.13c-.965-.972-1.007-2.159-1.09-4.532A64 64 0 0 1 2 10.5\"/><path d=\"M12.126 10.5H12m-3.876 0H8m8.125 0H16m-3.75 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m-4 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m8 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
-     "height": 24,
-     "name": "chat",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 14h8v-2H6zm0-3h12V9H6zm0-3h12V6H6zM2 22V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18H6zm3.15-6H20V4H4v13.125zM4 16V4z\"/>",
      "height": 24,
      "name": "chat-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M2 10.5c0-.77.013-1.523.04-2.25c.083-2.373.125-3.56 1.09-4.533c.965-.972 2.186-1.024 4.626-1.129A100 100 0 0 1 12 2.5c1.48 0 2.905.03 4.244.088c2.44.105 3.66.157 4.626 1.13c.965.972 1.007 2.159 1.09 4.532a64 64 0 0 1 0 4.5c-.083 2.373-.125 3.56-1.09 4.533c-.965.972-2.186 1.024-4.626 1.129q-1.102.047-2.275.07c-.74.014-1.111.02-1.437.145s-.6.358-1.148.828l-2.179 1.87A.73.73 0 0 1 8 20.77v-2.348l-.244-.01c-2.44-.105-3.66-.157-4.626-1.13c-.965-.972-1.007-2.159-1.09-4.532A64 64 0 0 1 2 10.5\"/><path d=\"M12.126 10.5H12m-3.876 0H8m8.125 0H16m-3.75 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m-4 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m8 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
+     "height": 24,
+     "name": "chat",
      "width": 24
     },
     "fluent": {
@@ -10014,6 +10254,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m5 12l5 5L20 7\"/>",
      "height": 24,
      "name": "check",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z\"/>",
+     "height": 24,
+     "name": "check-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -10230,6 +10476,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "checklist",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9.615 20H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8m-3 5l2 2l4-4M9 8h4m-4 4h2\"/>",
+     "height": 24,
+     "name": "checklist",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5.55 19L2 15.45l1.4-1.4l2.125 2.125l4.25-4.25l1.4 1.425zm0-8L2 7.45l1.4-1.4l2.125 2.125l4.25-4.25l1.4 1.425zM13 17v-2h9v2zm0-8V7h9v2z\"/>",
+     "height": 24,
+     "name": "checklist-outline",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m34 10l8 8m0-8l-8 8m10 12l-7 8l-4-4m-7-24H4v8h22zm0 20H4v8h22z\"/>",
+     "height": 48,
+     "name": "checklist",
+     "width": 48
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"m4 8.09l-1.29-1.3l-1.42 1.42L4 10.91l4.71-4.7l-1.42-1.42zm0 8l-1.29-1.3l-1.42 1.42L4 18.91l4.71-4.7l-1.42-1.42zM10 15h12v2H10zm0-8h12v2H10z\"/>",
+     "height": 24,
+     "name": "checklist",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "checks",
    "variants": {
     "tabler": {
@@ -10304,6 +10580,12 @@ export const deck: Deck = {
      "name": "chef-hat",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 14h2V9H9zm-4-1.5q-1.15-.575-1.825-1.662T2.5 8.475Q2.5 6.6 3.788 5.3T6.95 4q.3 0 .613.05t.612.125Q8.8 3.15 9.8 2.575T12 2t2.2.575t1.625 1.6q.3-.075.6-.125T17.05 4q1.875 0 3.163 1.3T21.5 8.475q0 1.275-.675 2.363T19 12.5V18H5zm8 1.5h2V9h-2zm-6 2h10v-4.725l1.1-.55q.65-.325 1.025-.913T19.5 8.5q0-1.05-.712-1.775T17.05 6q-.275 0-.5.05t-.475.125L14.9 6.5l-.775-1.3q-.35-.575-.913-.888T12 4t-1.213.313t-.912.887L9.1 6.5l-1.2-.325q-.25-.05-.488-.112T6.926 6Q5.9 6 5.2 6.725T4.5 8.5q0 .725.375 1.313t1.025.912l1.1.55zm-2 2h2v2h10v-2h2v4H5zm7-2\"/>",
+     "height": 24,
+     "name": "chef-hat-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M18 13a4 4 0 1 0-2.225-7.325M6 13a4 4 0 1 1 2.225-7.325m7.55 0a4.002 4.002 0 0 0-7.55 0m7.55 0A4 4 0 0 1 15.874 8m-6.41-1a4 4 0 0 0-1.24-1.325\"/><path d=\"M6 17.5c1.599-.622 3.7-1 6-1s4.401.378 6 1M5 21c1.866-.622 4.316-1 7-1s5.134.378 7 1m-1-9v8M6 12v8\"/></g>",
      "height": 24,
@@ -10315,12 +10597,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "chef-hat",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M9 14h2V9H9zm-4-1.5q-1.15-.575-1.825-1.662T2.5 8.475Q2.5 6.6 3.788 5.3T6.95 4q.3 0 .613.05t.612.125Q8.8 3.15 9.8 2.575T12 2t2.2.575t1.625 1.6q.3-.075.6-.125T17.05 4q1.875 0 3.163 1.3T21.5 8.475q0 1.275-.675 2.363T19 12.5V18H5zm8 1.5h2V9h-2zm-6 2h10v-4.725l1.1-.55q.65-.325 1.025-.913T19.5 8.5q0-1.05-.712-1.775T17.05 6q-.275 0-.5.05t-.475.125L14.9 6.5l-.775-1.3q-.35-.575-.913-.888T12 4t-1.213.313t-.912.887L9.1 6.5l-1.2-.325q-.25-.05-.488-.112T6.926 6Q5.9 6 5.2 6.725T4.5 8.5q0 .725.375 1.313t1.025.912l1.1.55zm-2 2h2v2h10v-2h2v4H5zm7-2\"/>",
-     "height": 24,
-     "name": "chef-hat-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589a5 5 0 0 0-9.186 0a4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1ZM6 17h12\"/>",
@@ -10394,6 +10670,12 @@ export const deck: Deck = {
      "name": "chess",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 20h14v-2H5zm3.3-4h7.4l-.575-4h-6.25zM3 22v-4q0-.825.588-1.412T5 16h1.3l.55-4H4v-2h16v2h-2.85l.55 4H19q.825 0 1.413.588T21 18v4zm3.775-12L5 2q.825.625 1.7 1.175t1.925.55q1 0 1.838-.513T12 2q.7.7 1.538 1.213t1.837.512q1.05 0 1.925-.55T19 2l-1.775 8h-2.05l.975-4.325l-.187.025q-.188.025-.588.025q-.9 0-1.762-.275T12 4.675q-.725.5-1.562.775t-1.713.275q-.45 0-.663-.025l-.212-.025L8.825 10zM12 20\"/>",
+     "height": 24,
+     "name": "chess-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.99 22H7.01c-1.266 0-1.16-1.758-.664-2.504c.849-1.275 2.486-2.869 2.727-4.433L10.003 9h3.993l.931 6.063c.24 1.564 1.878 3.158 2.727 4.433c.496.747.602 2.504-.663 2.504M7.5 5.151V2.207c0-.175.198-.27.328-.159l2.394 2.062a.98.98 0 0 0 .64.24h2.276a.98.98 0 0 0 .64-.24l2.394-2.062c.13-.112.328-.016.328.16V5.15c0 .484-.164.952-.464 1.324L14.3 8.628a.99.99 0 0 1-.768.372h-3.064a.99.99 0 0 1-.768-.372L7.964 6.475A2.1 2.1 0 0 1 7.5 5.15M6 18h12\"/>",
      "height": 24,
@@ -10405,12 +10687,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "chess",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 20h14v-2H5zm3.3-4h7.4l-.575-4h-6.25zM3 22v-4q0-.825.588-1.412T5 16h1.3l.55-4H4v-2h16v2h-2.85l.55 4H19q.825 0 1.413.588T21 18v4zm3.775-12L5 2q.825.625 1.7 1.175t1.925.55q1 0 1.838-.513T12 2q.7.7 1.538 1.213t1.837.512q1.05 0 1.925-.55T19 2l-1.775 8h-2.05l.975-4.325l-.187.025q-.188.025-.588.025q-.9 0-1.762-.275T12 4.675q-.725.5-1.562.775t-1.713.275q-.45 0-.663-.025l-.212-.025L8.825 10zM12 20\"/>",
-     "height": 24,
-     "name": "chess-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M7.5 6A3.5 3.5 0 0 1 11 9.5c0 .376-.064.737-.174 1.077A2.249 2.249 0 0 1 10.25 15h-.121c.379 1.79 1.5 2.997 2.139 3.558c.417.366.732.918.732 1.552l-.01.194a1.89 1.89 0 0 1-1.686 1.686l-.194.01H3.89a1.89 1.89 0 0 1-1.88-1.696L2 20.11c0-.634.315-1.186.732-1.552c.64-.561 1.76-1.768 2.14-3.558H4.75a2.25 2.25 0 0 1-.577-4.423A3.5 3.5 0 0 1 4 9.5A3.5 3.5 0 0 1 7.5 6m6.23-4a2.24 2.24 0 0 1 1.432.517a1.99 1.99 0 0 1 2.675 0A2.24 2.24 0 0 1 19.27 2h.23l.153.008A1.5 1.5 0 0 1 21 3.5v3.25a2.75 2.75 0 0 1-2.194 2.693c.338 5.188 2.155 8.31 2.8 9.269c.236.35.394.78.394 1.247l-.01.209a2.04 2.04 0 0 1-1.822 1.821l-.209.011h-6.666c.359-.414.6-.93.678-1.5h5.988l.108-.01a.54.54 0 0 0 .422-.423l.011-.108a.74.74 0 0 0-.138-.41c-.794-1.18-2.872-4.813-3.091-10.772A.75.75 0 0 1 18.02 8h.23c.69 0 1.25-.56 1.25-1.25V3.5h-.23a.75.75 0 0 0-.75.734l-.02 1.03A.75.75 0 0 1 17 5.25V4a.5.5 0 0 0-1 0v1.25l-.004.076a.75.75 0 0 1-1.496-.061l-.02-1.03a.75.75 0 0 0-.75-.735h-.23v3.25c0 .69.56 1.25 1.25 1.25h.23a.75.75 0 0 1 .75.777c-.168 4.543-1.417 7.734-2.352 9.517a3.3 3.3 0 0 0-.451-.487a6 6 0 0 1-.648-.666c.765-1.586 1.684-4.162 1.914-7.698A2.75 2.75 0 0 1 12 6.75V3.5A1.5 1.5 0 0 1 13.5 2zM7.5 7.5a2 2 0 0 0-1.543 3.273A.75.75 0 0 1 5.379 12H4.75a.75.75 0 0 0 0 1.5h.982a.75.75 0 0 1 .748.804c-.203 2.805-1.897 4.626-2.757 5.38c-.155.137-.223.299-.223.426l.008.079a.39.39 0 0 0 .382.311h7.22l.079-.008a.39.39 0 0 0 .303-.303l.008-.079c0-.127-.068-.29-.223-.425c-.86-.755-2.554-2.576-2.757-5.381a.75.75 0 0 1 .748-.804h.982l.077-.004A.75.75 0 0 0 10.25 12h-.629a.75.75 0 0 1-.578-1.227A2 2 0 0 0 7.5 7.5\"/>",
@@ -10448,16 +10724,16 @@ export const deck: Deck = {
      "name": "chess-bishop",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M17 22H7c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C5 20.697 5 20.464 5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2c0 .465 0 .698-.051.888a1.5 1.5 0 0 1-1.06 1.06C17.697 22 17.464 22 17 22\"/><circle cx=\"12\" cy=\"4\" r=\"2\"/><path d=\"M15 18c1.5-.538 3-2.153 3-4.308c0-3.003-2.222-6.006-4.39-8.192M9 18c-1.5-.538-3-2.153-3-4.308C6 10.69 8.222 7.686 10.39 5.5M16 9l-2 2\"/></g>",
-     "height": 24,
-     "name": "chess-bishop",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 22v-5q1.375-.95 2.488-2.2T8.25 12H6v-2h1.8l-1-1.65q-.35-.575-.275-1.263T7.1 5.9L12 1l4.9 4.9q.5.5.575 1.188T17.2 8.35l-1 1.65H18v2h-2.25q.65 1.55 1.763 2.8T20 17v5zm2-2h12v-2q-1.5-1.2-2.613-2.7T13.625 12H10.4q-.65 1.8-1.775 3.3T6 18zm4.125-10h3.75l1.6-2.7L12 3.825L8.525 7.3zm2.588-2.287Q13 7.425 13 7t-.288-.712T12 6t-.712.288T11 7t.288.713T12 8t.713-.288M12 3.826\"/>",
      "height": 24,
      "name": "chess-bishop-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M17 22H7c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C5 20.697 5 20.464 5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2c0 .465 0 .698-.051.888a1.5 1.5 0 0 1-1.06 1.06C17.697 22 17.464 22 17 22\"/><circle cx=\"12\" cy=\"4\" r=\"2\"/><path d=\"M15 18c1.5-.538 3-2.153 3-4.308c0-3.003-2.222-6.006-4.39-8.192M9 18c-1.5-.538-3-2.153-3-4.308C6 10.69 8.222 7.686 10.39 5.5M16 9l-2 2\"/></g>",
+     "height": 24,
+     "name": "chess-bishop",
      "width": 24
     },
     "lucide": {
@@ -10484,16 +10760,16 @@ export const deck: Deck = {
      "name": "chess-king",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17 22H7c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C5 20.697 5 20.464 5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2c0 .465 0 .698-.051.888a1.5 1.5 0 0 1-1.06 1.06C17.697 22 17.464 22 17 22M4 11.583C4 9.052 5.684 7 8 7c1.2 0 2.4.441 4 2.206C13.6 7.44 14.8 7 16 7c2.316 0 4 2.052 4 4.583c0 2.263-1.56 4.559-3.303 6.417H7.303C5.56 16.142 4 13.846 4 11.583M12 2v6m-2-4h4\"/>",
-     "height": 24,
-     "name": "chess-king",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m12 6.85l-1.35-1.2q-.35-.3-.763-.475T9 5q-1.05 0-1.775.725T6.5 7.5t.725 1.775T9 10H5.25q-.35-.55-.55-1.175T4.5 7.5q0-1.875 1.313-3.188T9 3q.525 0 1.025.113t.975.362V1h2v2.475q.475-.225.975-.35T15 3q1.875 0 3.188 1.313T19.5 7.5q0 .7-.2 1.325T18.75 10H15q1.05 0 1.775-.725T17.5 7.5t-.725-1.775T15 5q-.475 0-.888.163t-.762.487zM3 22v-4q0-.825.588-1.412T5 16h1.25l.5-4H3v-2h18v2h-3.75l.5 4H19q.825 0 1.413.588T21 18v4zm2-2h14v-2H5zm3.25-4h7.475l-.5-4H8.75zM12 12\"/>",
      "height": 24,
      "name": "chess-king-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17 22H7c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C5 20.697 5 20.464 5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2c0 .465 0 .698-.051.888a1.5 1.5 0 0 1-1.06 1.06C17.697 22 17.464 22 17 22M4 11.583C4 9.052 5.684 7 8 7c1.2 0 2.4.441 4 2.206C13.6 7.44 14.8 7 16 7c2.316 0 4 2.052 4 4.583c0 2.263-1.56 4.559-3.303 6.417H7.303C5.56 16.142 4 13.846 4 11.583M12 2v6m-2-4h4\"/>",
+     "height": 24,
+     "name": "chess-king",
      "width": 24
     },
     "lucide": {
@@ -10544,16 +10820,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "chess-pawn",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.5 10c0 2.667-.5 5.333-2.5 8m7.5-8c0 2.667.5 5.333 2.5 8M15.5 5.429a3.37 3.37 0 0 1-.678 2.028c-.344.46-.688.543-1.252.543h-3.14c-.564 0-.908-.084-1.252-.543A3.37 3.37 0 0 1 8.5 5.429C8.5 3.535 10.067 2 12 2s3.5 1.535 3.5 3.429M8 10h8M4.205 20.649l.02-.053C5.068 18.44 5.728 18 8.123 18h7.756c2.395 0 3.055.44 3.896 2.596l.021.053c.424 1.086.233 1.351-.974 1.351H5.18c-1.207 0-1.398-.265-.974-1.351\"/>",
-     "height": 24,
-     "name": "chess-pawn",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 22v-5q2.2-1.5 3.225-3.125T8.625 11H6V9h2.25q-.35-.55-.55-1.175T7.5 6.5q0-1.875 1.313-3.187T12 2t3.188 1.313T16.5 6.5q0 .7-.2 1.325T15.75 9H18v2h-2.625q.375 1.25 1.4 2.875T20 17v5zm2-2h12v-2q-2.3-1.8-3.325-3.713T13.3 11h-2.6q-.35 1.375-1.375 3.288T6 18zm6-11q1.05 0 1.775-.725T14.5 6.5t-.725-1.775T12 4t-1.775.725T9.5 6.5t.725 1.775T12 9m0-2.5\"/>",
      "height": 24,
      "name": "chess-pawn-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.5 10c0 2.667-.5 5.333-2.5 8m7.5-8c0 2.667.5 5.333 2.5 8M15.5 5.429a3.37 3.37 0 0 1-.678 2.028c-.344.46-.688.543-1.252.543h-3.14c-.564 0-.908-.084-1.252-.543A3.37 3.37 0 0 1 8.5 5.429C8.5 3.535 10.067 2 12 2s3.5 1.535 3.5 3.429M8 10h8M4.205 20.649l.02-.053C5.068 18.44 5.728 18 8.123 18h7.756c2.395 0 3.055.44 3.896 2.596l.021.053c.424 1.086.233 1.351-.974 1.351H5.18c-1.207 0-1.398-.265-.974-1.351\"/>",
+     "height": 24,
+     "name": "chess-pawn",
      "width": 24
     },
     "lucide": {
@@ -10693,6 +10969,12 @@ export const deck: Deck = {
      "name": "chevron-left",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z\"/>",
+     "height": 24,
+     "name": "chevron-left-outline",
+     "width": 24
+    },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M15.53 4.22a.75.75 0 0 1 0 1.06L8.81 12l6.72 6.72a.75.75 0 1 1-1.06 1.06l-7.25-7.25a.75.75 0 0 1 0-1.06l7.25-7.25a.75.75 0 0 1 1.06 0\"/>",
      "height": 24,
@@ -10739,6 +11021,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m9 6l6 6l-6 6\"/>",
      "height": 24,
      "name": "chevron-right",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z\"/>",
+     "height": 24,
+     "name": "chevron-right-outline",
      "width": 24
     },
     "fluent": {
@@ -10867,16 +11155,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "church",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M18.789 14.394L17 13.5V22c1.886 0 2.828 0 3.414-.586S21 19.88 21 17.983c0-1.21 0-1.815-.299-2.298c-.298-.484-.836-.753-1.912-1.29m-13.578-.001L7 13.5V22c-1.886 0-2.828 0-3.414-.586S3 19.88 3 17.983c0-1.21 0-1.815.299-2.298c.298-.484.836-.753 1.912-1.29m3.57-5.582l2.303-1.536a1.65 1.65 0 0 1 1.832 0l2.303 1.536c.872.58 1.308.871 1.544 1.314c.237.442.237.966.237 2.014V22H7v-9.86c0-1.047 0-1.571.237-2.013c.236-.443.672-.733 1.544-1.314\"/><path d=\"M10 22v-3a2 2 0 1 1 4 0v3M12 7V2m-2 2h4m-1.875 8.25H12m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
-     "height": 24,
-     "name": "church",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 22v-8l4-1.775V9l5-2.5V5H9V3h2V1h2v2h2v2h-2v1.5L18 9v3.225L22 14v8h-9v-4q0-.425-.288-.712T12 17t-.712.288T11 18v4zm2-2h5v-2.05q0-1.275.875-2.162T12 14.9t2.125.888T15 17.95V20h5v-4.8l-4-1.8v-3.35L12 8l-4 2.05v3.35l-4 1.8zm9.063-6.937q.437-.438.437-1.063t-.437-1.062T12 10.5t-1.062.438T10.5 12t.438 1.063T12 13.5t1.063-.437M12 14\"/>",
      "height": 24,
      "name": "church-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M18.789 14.394L17 13.5V22c1.886 0 2.828 0 3.414-.586S21 19.88 21 17.983c0-1.21 0-1.815-.299-2.298c-.298-.484-.836-.753-1.912-1.29m-13.578-.001L7 13.5V22c-1.886 0-2.828 0-3.414-.586S3 19.88 3 17.983c0-1.21 0-1.815.299-2.298c.298-.484.836-.753 1.912-1.29m3.57-5.582l2.303-1.536a1.65 1.65 0 0 1 1.832 0l2.303 1.536c.872.58 1.308.871 1.544 1.314c.237.442.237.966.237 2.014V22H7v-9.86c0-1.047 0-1.571.237-2.013c.236-.443.672-.733 1.544-1.314\"/><path d=\"M10 22v-3a2 2 0 1 1 4 0v3M12 7V2m-2 2h4m-1.875 8.25H12m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
+     "height": 24,
+     "name": "church",
      "width": 24
     },
     "lucide": {
@@ -10951,16 +11239,16 @@ export const deck: Deck = {
      "name": "circle",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"/>",
-     "height": 24,
-     "name": "circle",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "circle-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"/>",
+     "height": 24,
+     "name": "circle",
      "width": 24
     },
     "fluent": {
@@ -11455,6 +11743,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "close",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z\"/>",
+     "height": 24,
+     "name": "close-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m8 8l32 32M8 40L40 8\"/>",
      "height": 48,
@@ -11485,16 +11779,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "closed-caption",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M2 12c0-3.98 0-5.97 1.053-7.298q.253-.319.554-.587C4.862 3 6.741 3 10.5 3h3c3.759 0 5.638 0 6.892 1.115q.302.268.555.587C22 6.03 22 8.02 22 12s0 5.97-1.053 7.298a4.6 4.6 0 0 1-.555.587C19.138 21 17.26 21 13.5 21h-3c-3.759 0-5.638 0-6.893-1.115a4.6 4.6 0 0 1-.554-.587C2 17.97 2 15.98 2 12Z\"/><path d=\"M10.5 9H10c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083C7 10.602 7 11.068 7 12s0 1.398.152 1.765a2 2 0 0 0 1.083 1.083C8.602 15 9.068 15 10 15h.5M17 9h-.5c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.152.367-.152.833-.152 1.765s0 1.398.152 1.765a2 2 0 0 0 1.083 1.083c.367.152.833.152 1.765.152h.5\"/></g>",
-     "height": 24,
-     "name": "closed-caption",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 20q-.825 0-1.412-.587T3 18V6q0-.825.588-1.412T5 4h14q.825 0 1.413.588T21 6v12q0 .825-.587 1.413T19 20zm0-2h14V6H5zm2-3h3q.425 0 .713-.288T11 14v-1H9.5v.5h-2v-3h2v.5H11v-1q0-.425-.288-.712T10 9H7q-.425 0-.712.288T6 10v4q0 .425.288.713T7 15m7 0h3q.425 0 .713-.288T18 14v-1h-1.5v.5h-2v-3h2v.5H18v-1q0-.425-.288-.712T17 9h-3q-.425 0-.712.288T13 10v4q0 .425.288.713T14 15m-9 3V6z\"/>",
      "height": 24,
      "name": "closed-caption-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M2 12c0-3.98 0-5.97 1.053-7.298q.253-.319.554-.587C4.862 3 6.741 3 10.5 3h3c3.759 0 5.638 0 6.892 1.115q.302.268.555.587C22 6.03 22 8.02 22 12s0 5.97-1.053 7.298a4.6 4.6 0 0 1-.555.587C19.138 21 17.26 21 13.5 21h-3c-3.759 0-5.638 0-6.893-1.115a4.6 4.6 0 0 1-.554-.587C2 17.97 2 15.98 2 12Z\"/><path d=\"M10.5 9H10c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083C7 10.602 7 11.068 7 12s0 1.398.152 1.765a2 2 0 0 0 1.083 1.083C8.602 15 9.068 15 10 15h.5M17 9h-.5c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.152.367-.152.833-.152 1.765s0 1.398.152 1.765a2 2 0 0 0 1.083 1.083c.367.152.833.152 1.765.152h.5\"/></g>",
+     "height": 24,
+     "name": "closed-caption",
      "width": 24
     },
     "fluent": {
@@ -11527,16 +11821,16 @@ export const deck: Deck = {
      "name": "cloud",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 10h.022a4.5 4.5 0 1 1 0 9H7a5 5 0 0 1-.48-9.977M17.478 10q.021-.247.022-.5a5.5 5.5 0 0 0-10.98-.477M17.478 10a5.5 5.5 0 0 1-1.235 3M6.52 9.023Q6.757 9 7 9c1.126 0 2.165.372 3 1\"/>",
-     "height": 24,
-     "name": "cloud",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6.5 20q-2.275 0-3.887-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.312 3.188T18.5 20zm0-2h12q1.05 0 1.775-.725T21 15.5t-.725-1.775T18.5 13H17v-2q0-2.075-1.463-3.538T12 6T8.463 7.463T7 11h-.5q-1.45 0-2.475 1.025T3 14.5t1.025 2.475T6.5 18m5.5-6\"/>",
      "height": 24,
      "name": "cloud-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 10h.022a4.5 4.5 0 1 1 0 9H7a5 5 0 0 1-.48-9.977M17.478 10q.021-.247.022-.5a5.5 5.5 0 0 0-10.98-.477M17.478 10a5.5 5.5 0 0 1-1.235 3M6.52 9.023Q6.757 9 7 9c1.126 0 2.165.372 3 1\"/>",
+     "height": 24,
+     "name": "cloud",
      "width": 24
     },
     "fluent": {
@@ -11719,16 +12013,16 @@ export const deck: Deck = {
      "name": "cloud-download",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 9.011h.022c2.485 0 4.5 2.018 4.5 4.508c0 2.32-1.75 4.232-4 4.481m-.522-8.989q.021-.248.022-.5A5.505 5.505 0 0 0 12 3a5.505 5.505 0 0 0-5.48 5.032m10.958.98a5.5 5.5 0 0 1-1.235 3.005M6.52 8.032A5.006 5.006 0 0 0 2 13.018a5.01 5.01 0 0 0 4 4.91m.52-9.896q.237-.023.48-.023c1.126 0 2.165.373 3 1.002M12 21v-8m0 8c-.7 0-2.008-1.994-2.5-2.5M12 21c.7 0 2.008-1.994 2.5-2.5\"/>",
-     "height": 24,
-     "name": "cloud-download",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6.5 20q-2.275 0-3.887-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.425-1.8 2.125-3.425T11 4.1q.825 0 1.413.588T13 6.1v6.05l1.6-1.55L16 12l-4 4l-4-4l1.4-1.4l1.6 1.55V6.1q-1.9.35-2.95 1.838T7 11h-.5q-1.45 0-2.475 1.025T3 14.5t1.025 2.475T6.5 18h12q1.05 0 1.775-.725T21 15.5t-.725-1.775T18.5 13H17v-2q0-1.2-.55-2.238T15 7V4.675q1.85.875 2.925 2.588T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.312 3.188T18.5 20zm5.5-8.95\"/>",
      "height": 24,
      "name": "cloud-download-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 9.011h.022c2.485 0 4.5 2.018 4.5 4.508c0 2.32-1.75 4.232-4 4.481m-.522-8.989q.021-.248.022-.5A5.505 5.505 0 0 0 12 3a5.505 5.505 0 0 0-5.48 5.032m10.958.98a5.5 5.5 0 0 1-1.235 3.005M6.52 8.032A5.006 5.006 0 0 0 2 13.018a5.01 5.01 0 0 0 4 4.91m.52-9.896q.237-.023.48-.023c1.126 0 2.165.373 3 1.002M12 21v-8m0 8c-.7 0-2.008-1.994-2.5-2.5M12 21c.7 0 2.008-1.994 2.5-2.5\"/>",
+     "height": 24,
+     "name": "cloud-download",
      "width": 24
     },
     "fluent": {
@@ -11923,16 +12217,16 @@ export const deck: Deck = {
      "name": "cloud-off",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 10.5h.022a4.5 4.5 0 0 1 3.843 6.843M17.478 10.5q.021-.247.022-.5a5.5 5.5 0 0 0-8.259-4.759m8.237 5.26a5.5 5.5 0 0 1-.719 2.258M6.52 9.523A5 5 0 0 0 7 19.5h10.5a4.5 4.5 0 0 0 1.677-.323M6.52 9.523Q6.757 9.5 7 9.5c1.126 0 2.165.372 3 1m-3.48-.977c.071-.827.325-1.6.721-2.282M2 2l20 20\"/>",
-     "height": 24,
-     "name": "cloud-off",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M19.8 22.6L17.15 20H6.5q-2.3 0-3.9-1.6T1 14.5q0-1.925 1.188-3.425T5.25 9.15q.075-.2.15-.387t.15-.413L1.4 4.2l1.4-1.4l18.4 18.4zM6.5 18h8.65L7.1 9.95q-.05.275-.075.525T7 11h-.5q-1.45 0-2.475 1.025T3 14.5t1.025 2.475T6.5 18m15.1.75l-1.45-1.4q.425-.35.638-.812T21 15.5q0-1.05-.725-1.775T18.5 13H17v-2q0-2.075-1.463-3.537T12 6q-.675 0-1.3.163t-1.2.512l-1.45-1.45q.875-.6 1.863-.912T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 .975-.375 1.813T21.6 18.75m-6.775-6.725\"/>",
      "height": 24,
      "name": "cloud-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 10.5h.022a4.5 4.5 0 0 1 3.843 6.843M17.478 10.5q.021-.247.022-.5a5.5 5.5 0 0 0-8.259-4.759m8.237 5.26a5.5 5.5 0 0 1-.719 2.258M6.52 9.523A5 5 0 0 0 7 19.5h10.5a4.5 4.5 0 0 0 1.677-.323M6.52 9.523Q6.757 9.5 7 9.5c1.126 0 2.165.372 3 1m-3.48-.977c.071-.827.325-1.6.721-2.282M2 2l20 20\"/>",
+     "height": 24,
+     "name": "cloud-off",
      "width": 24
     },
     "fluent": {
@@ -12097,16 +12391,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "cloud-sync",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 9h.022a4.5 4.5 0 0 1 2.5 8.242M17.478 9q.021-.247.022-.5a5.5 5.5 0 0 0-10.98-.477M17.478 9a5.5 5.5 0 0 1-.185 1M6.52 8.023a5 5 0 0 0-2.168 9.22m2.168-9.22Q6.757 8 7 8c.711 0 1.388.148 2 .416m6.464 6.084a4 4 0 0 0-6.994.115m.065 3.885a4 4 0 0 0 6.987-.103\"/><path fill=\"currentColor\" d=\"M8.907 12.113a.75.75 0 1 0-1.483-.226l.742.113zm2.206 3.463a.75.75 0 1 0-.226-1.484l.113.742zm-2.947-.742l.53-.53c.101.1.107.186.09.12a1.4 1.4 0 0 1-.029-.237a7 7 0 0 1 .017-.857a17 17 0 0 1 .133-1.212v-.005L8.166 12l-.742-.112v.009q-.003.008-.004.022a14 14 0 0 0-.05.38c-.031.244-.068.577-.092.925a8 8 0 0 0-.018 1.056c.01.165.03.341.07.505c.036.141.111.385.306.58zm2.834 0l-.112-.742h-.001l-.005.001l-.018.003l-.074.01a19 19 0 0 1-1.12.12a7 7 0 0 1-.857.017a1.4 1.4 0 0 1-.238-.03c-.065-.016.02-.01.121.09l-.53.531l-.53.53c.194.195.438.27.579.305c.164.04.34.061.505.071c.332.02.712.006 1.056-.018a18 18 0 0 0 1.221-.13l.084-.012l.022-.003l.007-.001h.002zm4.093 6.054a.75.75 0 0 0 1.483.224L15.834 21zm-2.206-3.464a.75.75 0 1 0 .226 1.483l-.113-.74zm2.947.742l-.53.53c-.101-.1-.107-.186-.09-.12q.017.06.029.237c.014.234.005.539-.017.857a17 17 0 0 1-.12 1.12l-.01.074l-.003.023l.741.113l.742.112v-.009q.003-.008.004-.022a12 12 0 0 0 .05-.38c.031-.244.068-.577.092-.925c.024-.343.039-.724.018-1.056a3 3 0 0 0-.07-.505a1.23 1.23 0 0 0-.306-.58zm-2.834 0l.112.741h.006l.092-.014a19 19 0 0 1 1.12-.119c.318-.022.623-.032.857-.017c.119.007.196.02.238.03c.065.016-.02.01-.121-.09l.53-.531l.53-.53a1.23 1.23 0 0 0-.579-.305a3 3 0 0 0-.505-.071a8 8 0 0 0-1.056.018a18 18 0 0 0-1.221.13l-.084.012l-.022.003l-.007.001h-.002z\"/></g>",
-     "height": 24,
-     "name": "cloud-sync",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 20v-2h2.725q-1.275-1.1-2-2.65T4 12q0-2.8 1.7-4.937T10 4.25v2.1q-1.75.625-2.875 2.163T6 12q0 1.35.538 2.488T8 16.45V14h2v6zm11 0q-1.25 0-2.125-.875T12 17q0-1.2.825-2.062t2.025-.913q.425-.9 1.263-1.463T18 12q1.325 0 2.288.863T21.45 15q1.05 0 1.8.725t.75 1.75q0 1.05-.725 1.788T21.5 20zm2.9-9q-.175-1.025-.675-1.9T16 7.55V10h-2V4h6v2h-2.725q1.075.95 1.763 2.225T19.925 11zM15 18h6.5q.2 0 .35-.15t.15-.35t-.15-.35t-.35-.15h-1.75v-1.25q0-.725-.513-1.237T18 14t-1.237.513t-.513 1.237V16H15q-.425 0-.712.288T14 17t.288.713T15 18m3-2\"/>",
      "height": 24,
      "name": "cloud-sync-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.478 9h.022a4.5 4.5 0 0 1 2.5 8.242M17.478 9q.021-.247.022-.5a5.5 5.5 0 0 0-10.98-.477M17.478 9a5.5 5.5 0 0 1-.185 1M6.52 8.023a5 5 0 0 0-2.168 9.22m2.168-9.22Q6.757 8 7 8c.711 0 1.388.148 2 .416m6.464 6.084a4 4 0 0 0-6.994.115m.065 3.885a4 4 0 0 0 6.987-.103\"/><path fill=\"currentColor\" d=\"M8.907 12.113a.75.75 0 1 0-1.483-.226l.742.113zm2.206 3.463a.75.75 0 1 0-.226-1.484l.113.742zm-2.947-.742l.53-.53c.101.1.107.186.09.12a1.4 1.4 0 0 1-.029-.237a7 7 0 0 1 .017-.857a17 17 0 0 1 .133-1.212v-.005L8.166 12l-.742-.112v.009q-.003.008-.004.022a14 14 0 0 0-.05.38c-.031.244-.068.577-.092.925a8 8 0 0 0-.018 1.056c.01.165.03.341.07.505c.036.141.111.385.306.58zm2.834 0l-.112-.742h-.001l-.005.001l-.018.003l-.074.01a19 19 0 0 1-1.12.12a7 7 0 0 1-.857.017a1.4 1.4 0 0 1-.238-.03c-.065-.016.02-.01.121.09l-.53.531l-.53.53c.194.195.438.27.579.305c.164.04.34.061.505.071c.332.02.712.006 1.056-.018a18 18 0 0 0 1.221-.13l.084-.012l.022-.003l.007-.001h.002zm4.093 6.054a.75.75 0 0 0 1.483.224L15.834 21zm-2.206-3.464a.75.75 0 1 0 .226 1.483l-.113-.74zm2.947.742l-.53.53c-.101-.1-.107-.186-.09-.12q.017.06.029.237c.014.234.005.539-.017.857a17 17 0 0 1-.12 1.12l-.01.074l-.003.023l.741.113l.742.112v-.009q.003-.008.004-.022a12 12 0 0 0 .05-.38c.031-.244.068-.577.092-.925c.024-.343.039-.724.018-1.056a3 3 0 0 0-.07-.505a1.23 1.23 0 0 0-.306-.58zm-2.834 0l.112.741h.006l.092-.014a19 19 0 0 1 1.12-.119c.318-.022.623-.032.857-.017c.119.007.196.02.238.03c.065.016-.02.01-.121-.09l.53-.531l.53-.53a1.23 1.23 0 0 0-.579-.305a3 3 0 0 0-.505-.071a8 8 0 0 0-1.056.018a18 18 0 0 0-1.221.13l-.084.012l-.022.003l-.007.001h-.002z\"/></g>",
+     "height": 24,
+     "name": "cloud-sync",
      "width": 24
     },
     "fluent": {
@@ -12137,6 +12431,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M7 18a4.6 4.4 0 0 1 0-9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1\"/><path d=\"m9 15l3-3l3 3m-3-3v9\"/></g>",
      "height": 24,
      "name": "cloud-upload",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6.5 20q-2.275 0-3.887-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.312 3.188T18.5 20H13q-.825 0-1.412-.587T11 18v-5.15L9.4 14.4L8 13l4-4l4 4l-1.4 1.4l-1.6-1.55V18h5.5q1.05 0 1.775-.725T21 15.5t-.725-1.775T18.5 13H17v-2q0-2.075-1.463-3.538T12 6T8.463 7.463T7 11h-.5q-1.45 0-2.475 1.025T3 14.5t1.025 2.475T6.5 18H9v2zm5.5-7\"/>",
+     "height": 24,
+     "name": "cloud-upload-outline",
      "width": 24
     },
     "hugeicons": {
@@ -12289,6 +12589,12 @@ export const deck: Deck = {
      "name": "code",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m8 18l-6-6l6-6l1.425 1.425l-4.6 4.6L9.4 16.6zm8 0l-1.425-1.425l4.6-4.6L14.6 7.4L16 6l6 6z\"/>",
+     "height": 24,
+     "name": "code-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m16 7l3.066 2.643C20.356 10.754 21 11.31 21 12s-.645 1.246-1.934 2.357L16 17M8 7L4.934 9.643C3.644 10.754 3 11.31 3 12s.645 1.246 1.934 2.357L8 17\"/>",
      "height": 24,
@@ -12433,16 +12739,16 @@ export const deck: Deck = {
      "name": "coffee",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"m5 7l1.76 10.405c.306 1.808.46 2.713 1 3.337c1.454 1.677 7.026 1.677 8.48 0c.54-.624.694-1.529 1-3.337L19 7M5 7l.743-1.712c.609-1.404.913-2.106 1.548-2.502c1.59-.993 7.654-1.102 9.418 0c.635.396.94 1.098 1.548 2.502L19 7M4 7h16\"/><ellipse cx=\"12\" cy=\"14.5\" rx=\"2\" ry=\"2.5\"/></g>",
-     "height": 24,
-     "name": "coffee-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 18q-2.925 0-4.962-2.037T4 11V5q0-.825.588-1.412T6 3h12.5q1.45 0 2.475 1.025T22 6.5t-1.025 2.475T18.5 10H18v1q0 2.925-2.037 4.963T11 18M6 8h10V5H6zm5 8q2.075 0 3.538-1.463T16 11v-1H6v1q0 2.075 1.463 3.538T11 16m7-8h.5q.625 0 1.063-.437T20 6.5t-.437-1.062T18.5 5H18zM4 21v-2h16v2zm7-11\"/>",
      "height": 24,
      "name": "coffee-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"m5 7l1.76 10.405c.306 1.808.46 2.713 1 3.337c1.454 1.677 7.026 1.677 8.48 0c.54-.624.694-1.529 1-3.337L19 7M5 7l.743-1.712c.609-1.404.913-2.106 1.548-2.502c1.59-.993 7.654-1.102 9.418 0c.635.396.94 1.098 1.548 2.502L19 7M4 7h16\"/><ellipse cx=\"12\" cy=\"14.5\" rx=\"2\" ry=\"2.5\"/></g>",
+     "height": 24,
+     "name": "coffee-01",
      "width": 24
     },
     "lucide": {
@@ -12877,6 +13183,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "comment",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 14h12v-2H6zm0-3h12V9H6zm0-3h12V6H6zm16 14l-4-4H4q-.825 0-1.412-.587T2 16V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4zM4 16h14.85L20 17.125V4H4zm0 0V4z\"/>",
+     "height": 24,
+     "name": "comment-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M8 13.5h8m-8-5h4\"/><path d=\"M6.099 19q-1.949-.192-2.927-1.172C2 16.657 2 14.771 2 11v-.5c0-3.771 0-5.657 1.172-6.828S6.229 2.5 10 2.5h4c3.771 0 5.657 0 6.828 1.172S22 6.729 22 10.5v.5c0 3.771 0 5.657-1.172 6.828S17.771 19 14 19c-.56.012-1.007.055-1.445.155c-1.199.276-2.309.89-3.405 1.424c-1.563.762-2.344 1.143-2.834.786c-.938-.698-.021-2.863.184-3.865\"/></g>",
      "height": 24,
@@ -12888,12 +13200,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "comment",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 14h12v-2H6zm0-3h12V9H6zm0-3h12V6H6zm16 14l-4-4H4q-.825 0-1.412-.587T2 16V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4zM4 16h14.85L20 17.125V4H4zm0 0V4z\"/>",
-     "height": 24,
-     "name": "comment-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M5.25 18A3.25 3.25 0 0 1 2 14.75v-8.5A3.25 3.25 0 0 1 5.25 3h13.5A3.25 3.25 0 0 1 22 6.25v8.5A3.25 3.25 0 0 1 18.75 18h-5.738L8 21.75a1.25 1.25 0 0 1-1.999-1V18zm7.264-1.5h6.236a1.75 1.75 0 0 0 1.75-1.75v-8.5a1.75 1.75 0 0 0-1.75-1.75H5.25A1.75 1.75 0 0 0 3.5 6.25v8.5c0 .966.784 1.75 1.75 1.75h2.249v3.75z\"/>",
@@ -13027,6 +13333,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "computer",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 21v-2h22v2zm3-3q-.825 0-1.412-.587T2 16V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v11q0 .825-.587 1.413T20 18zm0-2h16V5H4zm0 0V5z\"/>",
+     "height": 24,
+     "name": "computer-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14 21h2m-2 0a1.5 1.5 0 0 1-1.5-1.5V17H12m2 4h-4m0 0H8m2 0a1.5 1.5 0 0 0 1.5-1.5V17h.5m0 0v4m4-18H8c-2.828 0-4.243 0-5.121.879C2 4.757 2 6.172 2 9v2c0 2.828 0 4.243.879 5.121C3.757 17 5.172 17 8 17h8c2.828 0 4.243 0 5.121-.879C22 15.243 22 13.828 22 11V9c0-2.828 0-4.243-.879-5.121C20.243 3 18.828 3 16 3\"/>",
      "height": 24,
@@ -13038,12 +13350,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "computer",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M1 21v-2h22v2zm3-3q-.825 0-1.412-.587T2 16V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v11q0 .825-.587 1.413T20 18zm0-2h16V5H4zm0 0V5z\"/>",
-     "height": 24,
-     "name": "computer-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"14\" height=\"8\" x=\"5\" y=\"2\" rx=\"2\"/><rect width=\"20\" height=\"8\" x=\"2\" y=\"14\" rx=\"2\"/><path d=\"M6 18h2m4 0h6\"/></g>",
@@ -13153,6 +13459,12 @@ export const deck: Deck = {
      "name": "contrast",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.1 21.213q-1.825-.788-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22t-3.9-.788m4.9-1.287q2.975-.375 4.988-2.613T20 12t-2.013-5.312T13 4.075z\"/>",
+     "height": 24,
+     "name": "contrast-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path d=\"M24 36V12c-6.627 0-12 5.373-12 12s5.373 12 12 12Z\"/></g>",
      "height": 48,
@@ -13195,16 +13507,16 @@ export const deck: Deck = {
      "name": "cookie",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\"><path stroke-width=\"1.5\" d=\"M12.058 22c4.915 0 9.006-3.506 9.884-8.141c.258-1.362-.349-1.29-1.632-1.515c-.91-.16-1.76-.777-2.077-1.756c-.215-.666-.295-.693-.998-.722c-1.449-.06-2.61-1.597-2.032-2.84c.216-.464.209-.517-.195-.832c-.707-.55-1.037-1.577-.91-2.568c.137-1.067.217-1.451-.913-1.571C7.457 1.445 2 6.02 2 11.995C2 17.52 6.503 22 12.058 22Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12.008 18h-.01\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M10 6L9 7m8 7l-1 1m-9 0l1 1\"/><path stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M11.125 12H11m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0Zm-5.125-2H6m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0Z\"/></g>",
-     "height": 24,
-     "name": "cookie",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12q0-1.875.725-3.675T4.75 5.112t3.125-2.275t4-.862q.525 0 1.075.05t1.125.175q-.225 1.125.15 2.125t1.125 1.662t1.788.913t2.137-.125q-.65 1.475.188 2.825T21.95 11q.025.275.038.512t.012.513q0 2.05-.788 3.862t-2.137 3.175t-3.175 2.15T12 22m-1.5-12q.625 0 1.063-.437T12 8.5t-.437-1.062T10.5 7t-1.062.438T9 8.5t.438 1.063T10.5 10m-2 5q.625 0 1.063-.437T10 13.5t-.437-1.062T8.5 12t-1.062.438T7 13.5t.438 1.063T8.5 15m6.5 1q.425 0 .713-.288T16 15t-.288-.712T15 14t-.712.288T14 15t.288.713T15 16m-3 4q3.05 0 5.413-2.1T20 12.55q-1.25-.55-1.963-1.5t-.962-2.125q-1.925-.275-3.3-1.65t-1.7-3.3q-2-.05-3.512.725T6.037 6.688T4.512 9.325T4 12q0 3.325 2.338 5.663T12 20m0-8.1\"/>",
      "height": 24,
      "name": "cookie-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\"><path stroke-width=\"1.5\" d=\"M12.058 22c4.915 0 9.006-3.506 9.884-8.141c.258-1.362-.349-1.29-1.632-1.515c-.91-.16-1.76-.777-2.077-1.756c-.215-.666-.295-.693-.998-.722c-1.449-.06-2.61-1.597-2.032-2.84c.216-.464.209-.517-.195-.832c-.707-.55-1.037-1.577-.91-2.568c.137-1.067.217-1.451-.913-1.571C7.457 1.445 2 6.02 2 11.995C2 17.52 6.503 22 12.058 22Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12.008 18h-.01\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M10 6L9 7m8 7l-1 1m-9 0l1 1\"/><path stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M11.125 12H11m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0Zm-5.125-2H6m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0Z\"/></g>",
+     "height": 24,
+     "name": "cookie",
      "width": 24
     },
     "carbon": {
@@ -13465,6 +13777,12 @@ export const deck: Deck = {
      "name": "copyright",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10 16h4q.425 0 .713-.288T15 15v-2h-2v1h-2v-4h2v1h2V9q0-.425-.288-.712T14 8h-4q-.425 0-.712.288T9 9v6q0 .425.288.713T10 16m2 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
+     "height": 24,
+     "name": "copyright-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10Z\"/><path stroke-linecap=\"round\" d=\"M15 14a2 2 0 0 1-2 2h-1c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C9 14.398 9 13.932 9 13v-2c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C10.602 8 11.068 8 12 8h1a2 2 0 0 1 2 2\"/></g>",
      "height": 24,
@@ -13476,12 +13794,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "copyright",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M10 16h4q.425 0 .713-.288T15 15v-2h-2v1h-2v-4h2v1h2V9q0-.425-.288-.712T14 8h-4q-.425 0-.712.288T9 9v6q0 .425.288.713T10 16m2 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
-     "height": 24,
-     "name": "copyright-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M14.83 14.83a4 4 0 1 1 0-5.66\"/></g>",
@@ -13831,17 +14143,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "coronavirus",
    "variants": {
-    "icon-park-outline": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M7.635 35.5A20.1 20.1 0 0 0 13 40.706m14.868 2.92A20 20 0 0 1 24 44c-1.324 0-2.617-.129-3.869-.374M43.55 28.243a20.2 20.2 0 0 0 .017-8.4M40.365 12.5A20.1 20.1 0 0 0 35 7.294M20.155 4.37A20 20 0 0 1 24 4c1.315 0 2.6.127 3.845.37M7.635 12.5A20.1 20.1 0 0 1 13 7.294m27.5 28a20.1 20.1 0 0 1-5.365 5.206M16 24H4m6 14l8.343-8.343M24 32v12m14-6l-8.343-8.343M32 24h12m-6-14l-8.343 8.343M24 16V4m-14 6l8.343 8.343m-13.91 1.5A20 20 0 0 0 4 24c0 1.425.15 2.816.433 4.157M24 32a8 8 0 1 0 0-16a8 8 0 0 0 0 16\"/>",
-     "height": 48,
-     "name": "coronavirus",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11.25 22q-.3 0-.525-.225t-.225-.525t.225-.525t.525-.225v-1.55q-1.05-.125-1.975-.5t-1.675-1l-1.075 1.1q.225.225.225.525t-.225.525t-.525.225t-.525-.225L4.4 18.55q-.225-.225-.225-.538t.225-.537t.525-.213t.525.213l1.1-1.1q-.625-.775-1-1.675t-.5-1.95H3.5q0 .3-.225.525t-.525.225t-.525-.225T2 12.75v-1.5q0-.3.225-.525t.525-.225t.525.225t.225.525h1.55q.125-1.05.513-1.95t.987-1.675l-1.1-1.1q-.225.2-.525.212T4.4 6.525t-.225-.538t.225-.537L5.45 4.4q.225-.225.538-.225t.537.225t.225.537t-.225.538L7.6 6.55q.775-.625 1.675-1t1.95-.5V3.5q-.3 0-.512-.225T10.5 2.75t.225-.525T11.25 2h1.5q.3 0 .525.225t.225.525t-.225.525t-.525.225v1.55q1.05.125 1.95.5t1.675 1l1.1-1.1q-.225-.225-.225-.525t.225-.525t.538-.225t.537.225l1.05 1.075q.225.225.225.525t-.225.525t-.537.225t-.538-.225L17.45 7.6q.625.775 1 1.687t.5 1.963h1.55q0-.3.225-.525t.525-.225t.525.225t.225.525v1.5q0 .3-.225.525t-.525.225t-.525-.225t-.225-.525h-1.55q-.125 1.05-.5 1.962t-1 1.688l1.075 1.075q.225-.225.538-.225t.537.225t.225.538t-.225.537l-1.05 1.05q-.225.225-.537.225t-.538-.225t-.213-.525t.213-.525l-1.1-1.1q-.775.625-1.675 1.013t-1.95.512V20.5q.3 0 .525.225t.225.525t-.225.525t-.525.225zm.75-5q2.075 0 3.538-1.463T17 12t-1.463-3.537T12 7T8.463 8.463T7 12t1.463 3.538T12 17m-1.037-1.287q.287-.288.287-.713t-.288-.712T10.25 14t-.712.288T9.25 15t.288.713t.712.287t.713-.288M13.75 16q.425 0 .713-.288T14.75 15t-.288-.712T13.75 14t-.712.288t-.288.712t.288.713t.712.287M8.5 13q.425 0 .713-.288T9.5 12t-.288-.712T8.5 11t-.712.288T7.5 12t.288.713T8.5 13m4.213-.288Q13 12.426 13 12t-.288-.712T12 11t-.712.288T11 12t.288.713T12 13t.713-.288M15.5 13q.425 0 .713-.288T16.5 12t-.288-.712T15.5 11t-.712.288T14.5 12t.288.713t.712.287m-4.537-3.287q.287-.288.287-.713t-.288-.712T10.25 8t-.712.288T9.25 9t.288.713t.712.287t.713-.288M13.75 10q.425 0 .713-.288T14.75 9t-.288-.712T13.75 8t-.712.288T12.75 9t.288.713t.712.287M12 12\"/>",
      "height": 24,
      "name": "coronavirus-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M7.635 35.5A20.1 20.1 0 0 0 13 40.706m14.868 2.92A20 20 0 0 1 24 44c-1.324 0-2.617-.129-3.869-.374M43.55 28.243a20.2 20.2 0 0 0 .017-8.4M40.365 12.5A20.1 20.1 0 0 0 35 7.294M20.155 4.37A20 20 0 0 1 24 4c1.315 0 2.6.127 3.845.37M7.635 12.5A20.1 20.1 0 0 1 13 7.294m27.5 28a20.1 20.1 0 0 1-5.365 5.206M16 24H4m6 14l8.343-8.343M24 32v12m14-6l-8.343-8.343M32 24h12m-6-14l-8.343 8.343M24 16V4m-14 6l8.343 8.343m-13.91 1.5A20 20 0 0 0 4 24c0 1.425.15 2.816.433 4.157M24 32a8 8 0 1 0 0-16a8 8 0 0 0 0 16\"/>",
+     "height": 48,
+     "name": "coronavirus",
+     "width": 48
     },
     "carbon": {
      "body": "<circle cx=\"15.5\" cy=\"11.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"20.5\" cy=\"15.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"16\" cy=\"16\" r=\"1\" fill=\"currentColor\"/><circle cx=\"16.5\" cy=\"20.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"11.5\" cy=\"16.5\" r=\"1.5\" fill=\"currentColor\"/><path fill=\"currentColor\" d=\"M28 13v2h-2.05a9.95 9.95 0 0 0-2.215-5.321l1.437-1.437l1.414 1.415L28 8.243L23.758 4l-1.414 1.414l1.414 1.414l-1.437 1.437A9.95 9.95 0 0 0 17 6.05V4h2V2h-6v2h2v2.05a9.95 9.95 0 0 0-5.32 2.215L8.241 6.828l1.414-1.414L8.242 4L4 8.243l1.414 1.414l1.414-1.415L8.265 9.68A9.95 9.95 0 0 0 6.051 15H4v-2H2v6h2v-2h2.05a9.95 9.95 0 0 0 2.215 5.321l-1.437 1.437l-1.414-1.415L4 23.757L8.242 28l1.414-1.414l-1.414-1.414l1.437-1.437A9.95 9.95 0 0 0 15 25.95V28h-2v2h6v-2h-2v-2.05a9.95 9.95 0 0 0 5.32-2.215l1.438 1.437l-1.414 1.414L23.758 28L28 23.757l-1.414-1.414l-1.414 1.415l-1.437-1.437A9.95 9.95 0 0 0 25.949 17H28v2h2v-6ZM16 24a8 8 0 1 1 8-8a8.01 8.01 0 0 1-8 8\"/>",
@@ -13987,16 +14299,16 @@ export const deck: Deck = {
      "name": "credit-card",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M2 12c0-3.537 0-5.306 1.053-6.487q.253-.284.554-.522C4.862 4 6.741 4 10.5 4h3c3.759 0 5.638 0 6.892.99q.302.24.555.523C22 6.693 22 8.463 22 12s0 5.306-1.053 6.487a4.4 4.4 0 0 1-.555.522C19.138 20 17.26 20 13.5 20h-3c-3.759 0-5.638 0-6.893-.99a4.4 4.4 0 0 1-.554-.523C2 17.307 2 15.537 2 12\"/><path stroke-linecap=\"round\" stroke-miterlimit=\"10\" d=\"M10 16h1.5m3 0H18\"/><path d=\"M2 9h20\"/></g>",
-     "height": 24,
-     "name": "credit-card",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M22 6v12q0 .825-.587 1.413T20 20H4q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6M4 8h16V6H4zm0 4v6h16v-6zm0 6V6z\"/>",
      "height": 24,
      "name": "credit-card-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M2 12c0-3.537 0-5.306 1.053-6.487q.253-.284.554-.522C4.862 4 6.741 4 10.5 4h3c3.759 0 5.638 0 6.892.99q.302.24.555.523C22 6.693 22 8.463 22 12s0 5.306-1.053 6.487a4.4 4.4 0 0 1-.555.522C19.138 20 17.26 20 13.5 20h-3c-3.759 0-5.638 0-6.893-.99a4.4 4.4 0 0 1-.554-.523C2 17.307 2 15.537 2 12\"/><path stroke-linecap=\"round\" stroke-miterlimit=\"10\" d=\"M10 16h1.5m3 0H18\"/><path d=\"M2 9h20\"/></g>",
+     "height": 24,
+     "name": "credit-card",
      "width": 24
     },
     "lucide": {
@@ -14051,6 +14363,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M8 5v10a1 1 0 0 0 1 1h10\"/><path d=\"M5 8h10a1 1 0 0 1 1 1v10\"/></g>",
      "height": 24,
      "name": "crop",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M17 23v-4H7q-.825 0-1.412-.587T5 17V7H1V5h4V1h2v16h16v2h-4v4zm0-8V7H9V5h8q.825 0 1.413.588T19 7v8z\"/>",
+     "height": 24,
+     "name": "crop-outline",
      "width": 24
     },
     "hugeicons": {
@@ -14203,6 +14521,12 @@ export const deck: Deck = {
      "name": "crown",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 20v-2h14v2zm0-3.5L3.725 8.475q-.05 0-.113.013T3.5 8.5q-.625 0-1.062-.438T2 7t.438-1.062T3.5 5.5t1.063.438T5 7q0 .175-.038.325t-.087.275L8 9l3.125-4.275q-.275-.2-.45-.525t-.175-.7q0-.625.438-1.063T12 2t1.063.438T13.5 3.5q0 .375-.175.7t-.45.525L16 9l3.125-1.4q-.05-.125-.088-.275T19 7q0-.625.438-1.063T20.5 5.5t1.063.438T22 7t-.437 1.063T20.5 8.5q-.05 0-.112-.012t-.113-.013L19 16.5zm1.7-2h10.6l.65-4.175l-2.625 1.15L12 6.9l-3.325 4.575l-2.625-1.15zm5.3 0\"/>",
+     "height": 24,
+     "name": "crown-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M5 21h14m-6.875-8.25H12m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/><path d=\"m14.915 7.61l-1.107-2.228C13.019 3.794 12.625 3 12 3s-1.019.794-1.808 2.382L9.085 7.61C8.58 8.625 8.329 9.132 7.88 9.246a1 1 0 0 1-.095.02c-.458.07-.886-.3-1.741-1.037C4.012 6.476 2.997 5.6 2.38 5.949a1 1 0 0 0-.114.076c-.564.43-.17 1.716.616 4.29l1.166 3.813c.423 1.384.635 2.076 1.17 2.474S6.473 17 7.91 17h8.178c1.438 0 2.158 0 2.693-.398s.747-1.09 1.17-2.474l1.166-3.813c.787-2.574 1.18-3.86.616-4.29a1 1 0 0 0-.114-.076c-.617-.349-1.632.527-3.664 2.28c-.855.738-1.283 1.107-1.741 1.036a1 1 0 0 1-.095-.019c-.45-.114-.701-.621-1.205-1.635\"/></g>",
      "height": 24,
@@ -14214,12 +14538,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "crown",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 20v-2h14v2zm0-3.5L3.725 8.475q-.05 0-.113.013T3.5 8.5q-.625 0-1.062-.438T2 7t.438-1.062T3.5 5.5t1.063.438T5 7q0 .175-.038.325t-.087.275L8 9l3.125-4.275q-.275-.2-.45-.525t-.175-.7q0-.625.438-1.063T12 2t1.063.438T13.5 3.5q0 .375-.175.7t-.45.525L16 9l3.125-1.4q-.05-.125-.088-.275T19 7q0-.625.438-1.063T20.5 5.5t1.063.438T22 7t-.437 1.063T20.5 8.5q-.05 0-.112-.012t-.113-.013L19 16.5zm1.7-2h10.6l.65-4.175l-2.625 1.15L12 6.9l-3.325 4.575l-2.625-1.15zm5.3 0\"/>",
-     "height": 24,
-     "name": "crown-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12 17a2 2 0 1 0 0-4a2 2 0 0 0 0 4m2-12c0 .53-.206 1.012-.543 1.37l2.624 3.28a.25.25 0 0 0 .307.068l2.65-1.326A2.004 2.004 0 0 1 21 6a2 2 0 0 1 .444 3.95l-1.804 9.623A1.75 1.75 0 0 1 17.92 21H6.08a1.75 1.75 0 0 1-1.72-1.427L2.556 9.95a2 2 0 1 1 2.406-1.558l2.65 1.326a.25.25 0 0 0 .307-.068l2.624-3.28A2 2 0 1 1 14 5m-2 2h-.04l-2.87 3.587a1.75 1.75 0 0 1-2.148.472L4.127 9.652l-.09.059l1.797 9.585a.25.25 0 0 0 .246.204h11.84a.25.25 0 0 0 .246-.204l1.797-9.585l-.09-.059l-2.815 1.407a1.75 1.75 0 0 1-2.149-.472L12.04 7z\"/>",
@@ -14263,16 +14581,16 @@ export const deck: Deck = {
      "name": "csv",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M7.5 17.22C7.445 16.03 6.622 16 5.505 16c-1.72 0-2.005.406-2.005 2v2c0 1.594.285 2 2.005 2c1.117 0 1.94-.03 1.995-1.22m13-4.78l-1.777 4.695c-.33.87-.494 1.305-.755 1.305c-.26 0-.426-.435-.755-1.305L15.436 16m-2.56 0h-1.18c-.473 0-.709 0-.895.076c-.634.26-.625.869-.625 1.424s-.009 1.165.625 1.424c.186.076.422.076.894.076s.708 0 .894.076c.634.26.625.869.625 1.424s.009 1.165-.625 1.424c-.186.076-.422.076-.894.076H10.41\"/><path stroke-linejoin=\"round\" d=\"M20 13v-2.343c0-.818 0-1.226-.152-1.594c-.152-.367-.441-.657-1.02-1.235l-4.736-4.736c-.499-.499-.748-.748-1.058-.896a2 2 0 0 0-.197-.082C12.514 2 12.161 2 11.456 2c-3.245 0-4.868 0-5.967.886a4 4 0 0 0-.603.603C4 4.59 4 6.211 4 9.456V13m9-10.5V3c0 2.828 0 4.243.879 5.121C14.757 9 16.172 9 19 9h.5\"/></g>",
-     "height": 24,
-     "name": "csv-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5.75 15h3v-1.5h-2.5v-3h2.5V9h-3q-.425 0-.712.288T4.75 10v4q0 .425.288.713T5.75 15m3.9 0h3q.425 0 .713-.288T13.65 14v-1.5q0-.425-.288-.788t-.712-.362h-1.5v-.85h2.5V9h-3q-.425 0-.712.288T9.65 10v1.5q0 .425.288.763t.712.337h1.5v.9h-2.5zm6.6 0h1.5l1.75-6H18l-1 3.45L16 9h-1.5zM4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm0-2h16V6H4zm0 0V6z\"/>",
      "height": 24,
      "name": "csv-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M7.5 17.22C7.445 16.03 6.622 16 5.505 16c-1.72 0-2.005.406-2.005 2v2c0 1.594.285 2 2.005 2c1.117 0 1.94-.03 1.995-1.22m13-4.78l-1.777 4.695c-.33.87-.494 1.305-.755 1.305c-.26 0-.426-.435-.755-1.305L15.436 16m-2.56 0h-1.18c-.473 0-.709 0-.895.076c-.634.26-.625.869-.625 1.424s-.009 1.165.625 1.424c.186.076.422.076.894.076s.708 0 .894.076c.634.26.625.869.625 1.424s.009 1.165-.625 1.424c-.186.076-.422.076-.894.076H10.41\"/><path stroke-linejoin=\"round\" d=\"M20 13v-2.343c0-.818 0-1.226-.152-1.594c-.152-.367-.441-.657-1.02-1.235l-4.736-4.736c-.499-.499-.748-.748-1.058-.896a2 2 0 0 0-.197-.082C12.514 2 12.161 2 11.456 2c-3.245 0-4.868 0-5.967.886a4 4 0 0 0-.603.603C4 4.59 4 6.211 4 9.456V13m9-10.5V3c0 2.828 0 4.243.879 5.121C14.757 9 16.172 9 19 9h.5\"/></g>",
+     "height": 24,
+     "name": "csv-01",
      "width": 24
     },
     "carbon": {
@@ -14435,6 +14753,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "currency-bitcoin",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 6h8a3 3 0 0 1 0 6a3 3 0 0 1 0 6H6M8 6v12m0-6h6M9 3v3m4-3v3M9 18v3m4-3v3\"/>",
+     "height": 24,
+     "name": "currency-bitcoin",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 21v-2H6v-2h2V7H6V5h3V3h2v2h2V3h2v2.125q1.3.35 2.15 1.413T18 9q0 .725-.25 1.388t-.7 1.187q.875.525 1.413 1.425T19 15q0 1.65-1.175 2.825T15 19v2h-2v-2h-2v2zm1-10h4q.825 0 1.413-.587T16 9t-.587-1.412T14 7h-4zm0 6h5q.825 0 1.413-.587T17 15t-.587-1.412T15 13h-5z\"/>",
+     "height": 24,
+     "name": "currency-bitcoin-outline",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m1 2a1 1 0 0 1 .993.883L14 7v1h.5a2.5 2.5 0 0 1 2 4a2.5 2.5 0 0 1-1.836 3.995L14.5 16H14v1a1 1 0 0 1-1.993.117L12 17v-1h-1v1a1 1 0 0 1-1.993.117L9 17v-1H8a1 1 0 0 1-.117-1.993L8 14v-4a1 1 0 0 1-.117-1.993L8 8h1V7a1 1 0 0 1 1.993-.117L11 7v1h1V7a1 1 0 0 1 1-1m1.5 7H10v1h4.5a.5.5 0 0 0 .09-.992zm0-3H10v1h4.5a.5.5 0 0 0 0-1\"/></g>",
+     "height": 24,
+     "name": "currency-bitcoin-line",
+     "width": 24
+    },
+    "bi": {
+     "body": "<path fill=\"currentColor\" d=\"M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82c0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312c0 .871-.575 1.362-1.877 1.362h-1.28zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524c0 .953-.626 1.45-2.158 1.45H6.927z\"/>",
+     "height": 16,
+     "name": "currency-bitcoin",
+     "width": 16
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "currency-dollar",
    "variants": {
     "tabler": {
@@ -14513,12 +14861,48 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "currency-lira",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 5v15a7 7 0 0 0 7-7M6 15l8-4m0-4l-8 4\"/>",
+     "height": 24,
+     "name": "currency-lira",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 21v-5.15l-3 1.875V15.35l3-1.875v-2.35L6 13v-2.35l3-1.9V3h2v4.5L15 5v2.35l-4 2.525v2.35l4-2.5v2.35L11 14.6V19q2.075 0 3.538-1.463T16 14h2q0 2.925-2.037 4.963T11 21z\"/>",
+     "height": 24,
+     "name": "currency-lira-outline",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M23 19a6.007 6.007 0 0 1-6 6h-4v-6.892L21.214 15v-2L13 16.108v-3L21.214 10V8L13 11.108V5h-2v6.865L8 13v2l3-1.135v3L8 18v2l3-1.135V27h6a8.01 8.01 0 0 0 8-8Z\"/>",
+     "height": 32,
+     "name": "currency-lira",
+     "width": 32
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m-1 2a1 1 0 0 1 .993.883L12 7v1.132l1.053-.526a1 1 0 0 1 .996 1.73l-.102.058l-1.947.974v.764l1.053-.526a1 1 0 0 1 .996 1.73l-.102.058l-1.947.974v2.377a6 6 0 0 0 .754-.363c.766-.438 1.468-1.061 1.852-1.83a1 1 0 1 1 1.788.895c-.615 1.232-1.664 2.11-2.648 2.671c-.96.55-2.01.882-2.746.882a1 1 0 0 1-.993-.883L10 17v-2.632l-1.053.526a1 1 0 0 1-.996-1.73l.102-.058L10 12.132v-.764l-1.053.526a1 1 0 0 1-.996-1.73l.102-.058L10 9.132V7a1 1 0 0 1 1-1\"/></g>",
+     "height": 24,
+     "name": "currency-lira-line",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "currency-pound",
    "variants": {
     "tabler": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 18.5a6 6 0 0 1-5 0a6 6 0 0 0-5 .5a3 3 0 0 0 2-2.5V9a4 4 0 0 1 7.45-2m-2.55 6h-7\"/>",
      "height": 24,
      "name": "currency-pound",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 21v-2l.413-.25q.412-.25.9-.737t.887-1.25T8.6 15q0-.275-.038-.525T8.476 14H6v-2h1.5q-.525-.825-1.012-1.737T6 8q0-2.3 1.6-3.9t3.9-1.6q1.775 0 3.15.975T16.625 6l-1.85.775q-.375-1-1.263-1.638T11.5 4.5q-1.45 0-2.475 1.025T8 8q0 1.2.6 2t1.225 2H14v2h-3.475q.05.225.063.475T10.6 15q0 1.25-.437 2.25T9.1 19H14q1 0 1.525-.525t.725-1.35L18 18q-.275 1.375-1.412 2.188T14 21z\"/>",
+     "height": 24,
+     "name": "currency-pound-outline",
      "width": 24
     },
     "carbon": {
@@ -14557,6 +14941,12 @@ export const deck: Deck = {
      "name": "currency-rupee",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M13.725 21L7 14v-2h3.5q1.325 0 2.288-.862T13.95 9H6V7h7.65q-.425-.875-1.263-1.437T10.5 5H6V3h12v2h-3.25q.35.425.625.925T15.8 7H18v2h-2.025q-.2 2.125-1.75 3.563T10.5 14h-.725l6.725 7z\"/>",
+     "height": 24,
+     "name": "currency-rupee-outline",
+     "width": 24
+    },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M24 7V5H8v2h5.5a4.49 4.49 0 0 1 4.45 4H8v2h9.95a4.49 4.49 0 0 1-4.45 4H8v2.345L17.617 28l1.338-1.486L10.606 19H13.5a6.504 6.504 0 0 0 6.475-6H24v-2h-4.025a6.47 6.47 0 0 0-1.795-4Z\"/>",
      "height": 32,
@@ -14591,6 +14981,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 19v-7L7 5m10 0l-5 7m-4 5h8m-8-4h8\"/>",
      "height": 24,
      "name": "currency-yen",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 21v-4H6v-2h5v-2H6v-2h4.075L5 3h2.375L12 10.3L16.625 3H19l-5.075 8H18v2h-5v2h5v2h-5v4z\"/>",
+     "height": 24,
+     "name": "currency-yen-outline",
      "width": 24
     },
     "carbon": {
@@ -14797,17 +15193,17 @@ export const deck: Deck = {
      "name": "dashboard",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\"><path stroke-linejoin=\"round\" d=\"M8.444 41.556A21.93 21.93 0 0 1 2 26C2 13.85 11.85 4 24 4s22 9.85 22 22a21.93 21.93 0 0 1-6.444 15.556\"/><path d=\"M14.1 35.9A13.96 13.96 0 0 1 10 26c0-7.732 6.268-14 14-14\"/><path stroke-linejoin=\"round\" d=\"M24 26v-8\"/></g>",
-     "height": 48,
-     "name": "dashboard",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6zm2-10h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2\"/>",
      "height": 24,
      "name": "dashboard-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\"><path stroke-linejoin=\"round\" d=\"M8.444 41.556A21.93 21.93 0 0 1 2 26C2 13.85 11.85 4 24 4s22 9.85 22 22a21.93 21.93 0 0 1-6.444 15.556\"/><path d=\"M14.1 35.9A13.96 13.96 0 0 1 10 26c0-7.732 6.268-14 14-14\"/><path stroke-linejoin=\"round\" d=\"M24 26v-8\"/></g>",
+     "height": 48,
+     "name": "dashboard",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M24 21h2v5h-2zm-4-5h2v10h-2zm-9 10a5.006 5.006 0 0 1-5-5h2a3 3 0 1 0 3-3v-2a5 5 0 0 1 0 10\"/><path fill=\"currentColor\" d=\"M28 2H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h24a2.003 2.003 0 0 0 2-2V4a2 2 0 0 0-2-2m0 9H14V4h14ZM12 4v7H4V4ZM4 28V13h24l.002 15Z\"/>",
@@ -14857,16 +15253,16 @@ export const deck: Deck = {
      "name": "database",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><ellipse cx=\"12\" cy=\"5\" rx=\"8\" ry=\"3\"/><path stroke-linecap=\"round\" d=\"M7 10.842c.602.18 1.274.33 2 .44\"/><path d=\"M20 12c0 1.657-3.582 3-8 3s-8-1.343-8-3\"/><path stroke-linecap=\"round\" d=\"M7 17.842c.602.18 1.274.33 2 .44\"/><path d=\"M20 5v14c0 1.657-3.582 3-8 3s-8-1.343-8-3V5\"/></g>",
-     "height": 24,
-     "name": "database",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19\"/>",
      "height": 24,
      "name": "database-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><ellipse cx=\"12\" cy=\"5\" rx=\"8\" ry=\"3\"/><path stroke-linecap=\"round\" d=\"M7 10.842c.602.18 1.274.33 2 .44\"/><path d=\"M20 12c0 1.657-3.582 3-8 3s-8-1.343-8-3\"/><path stroke-linecap=\"round\" d=\"M7 17.842c.602.18 1.274.33 2 .44\"/><path d=\"M20 5v14c0 1.657-3.582 3-8 3s-8-1.343-8-3V5\"/></g>",
+     "height": 24,
+     "name": "database",
      "width": 24
     },
     "fluent": {
@@ -14929,17 +15325,17 @@ export const deck: Deck = {
      "name": "database-search",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M34 12v9a9.98 9.98 0 0 0-7.442 3.32A9.96 9.96 0 0 0 24 31q.002.87.144 1.698a10.01 10.01 0 0 0 4.93 7.007C26.412 40.51 22.878 41 19 41c-8.284 0-15-2.239-15-5V12\"/><path d=\"M44 31c0 5.523-4.477 10-10 10c-1.79 0-3.472-.47-4.926-1.295A10.01 10.01 0 0 1 24 31c0-2.568.968-4.91 2.558-6.68A9.98 9.98 0 0 1 34 21c5.523 0 10 4.477 10 10M34 12c0 2.761-6.716 5-15 5S4 14.761 4 12s6.716-5 15-5s15 2.239 15 5\"/><path d=\"M4 28c0 2.761 6.716 5 15 5c1.807 0 3.54-.106 5.144-.302M4 20c0 2.761 6.716 5 15 5c2.756 0 5.339-.248 7.558-.68m10.27 9.508L41 38m-3-7a4 4 0 0 1-1.172 2.828A4 4 0 1 1 38 31m6 0c0 5.523-4.477 10-10 10\"/></g>",
-     "height": 48,
-     "name": "database-search",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11.8 21q-1.825-.025-3.437-.337t-2.8-.85t-1.875-1.263T3 17q0 .825.688 1.55t1.874 1.263t2.8.85T11.8 21m-1.775-5.1q-.75-.075-1.45-.2t-1.338-.3t-1.2-.388T5 14.526q.475.275 1.038.488t1.2.387t1.337.3t1.45.2M12 9.025q2.15 0 4.437-.65T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.375.725 2.613 1.363T12 9.025m-1.525 9.9q.25.575.575 1.1t.75.975q-1.825-.025-3.438-.337t-2.8-.85t-1.875-1.263T3 17V7q0-.825.713-1.55T5.65 4.175t2.863-.862T12 3t3.488.313t2.862.862t1.938 1.275T21 7t-.712 1.55t-1.938 1.275t-2.863.863T12 11q-2.125 0-3.925-.375T5 9.525v2.525q1 .925 2.5 1.35t3.025.55q-.2.375-.325.863t-.175 1.087q-1.5-.175-2.788-.5T5 14.525V17q.35.625 1.925 1.175t3.55.75M21.6 23l-2.7-2.7q-.55.325-1.15.513T16.5 21q-1.875 0-3.187-1.312T12 16.5t1.313-3.187T16.5 12t3.188 1.313T21 16.5q0 .65-.187 1.25T20.3 18.9l2.7 2.7zm-3.325-4.725Q19 17.55 19 16.5t-.725-1.775T16.5 14t-1.775.725T14 16.5t.725 1.775T16.5 19t1.775-.725\"/>",
      "height": 24,
      "name": "database-search-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M34 12v9a9.98 9.98 0 0 0-7.442 3.32A9.96 9.96 0 0 0 24 31q.002.87.144 1.698a10.01 10.01 0 0 0 4.93 7.007C26.412 40.51 22.878 41 19 41c-8.284 0-15-2.239-15-5V12\"/><path d=\"M44 31c0 5.523-4.477 10-10 10c-1.79 0-3.472-.47-4.926-1.295A10.01 10.01 0 0 1 24 31c0-2.568.968-4.91 2.558-6.68A9.98 9.98 0 0 1 34 21c5.523 0 10 4.477 10 10M34 12c0 2.761-6.716 5-15 5S4 14.761 4 12s6.716-5 15-5s15 2.239 15 5\"/><path d=\"M4 28c0 2.761 6.716 5 15 5c1.807 0 3.54-.106 5.144-.302M4 20c0 2.761 6.716 5 15 5c2.756 0 5.339-.248 7.558-.68m10.27 9.508L41 38m-3-7a4 4 0 0 1-1.172 2.828A4 4 0 1 1 38 31m6 0c0 5.523-4.477 10-10 10\"/></g>",
+     "height": 48,
+     "name": "database-search",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M4 6c0-.69.315-1.293.774-1.78c.455-.482 1.079-.883 1.793-1.202C7.996 2.377 9.917 2 12 2s4.004.377 5.433 1.018c.714.32 1.338.72 1.793 1.202c.459.487.774 1.09.774 1.78v6.257a5.5 5.5 0 0 0-1.5-.882V8.392c-.32.22-.68.417-1.067.59C16.004 9.623 14.083 10 12 10s-4.004-.377-5.433-1.018a7 7 0 0 1-1.067-.59V18c0 .207.09.46.365.75c.279.296.717.596 1.315.864c1.195.535 2.899.886 4.82.886q.36 0 .708-.016a5.5 5.5 0 0 0 2.15 1.267c-.89.162-1.856.249-2.858.249c-2.083 0-4.004-.377-5.433-1.017c-.714-.32-1.338-.72-1.793-1.203C4.315 19.293 4 18.69 4 18zm1.5 0c0 .207.09.46.365.75c.279.296.717.596 1.315.864c1.195.535 2.899.886 4.82.886s3.625-.35 4.82-.886c.598-.268 1.036-.568 1.315-.864c.275-.29.365-.543.365-.75s-.09-.46-.365-.75c-.279-.296-.717-.596-1.315-.864c-1.195-.535-2.9-.886-4.82-.886s-3.625.35-4.82.886c-.598.268-1.036.568-1.315.864c-.275.29-.365.543-.365.75m11 15a4.5 4.5 0 0 0 2.607-.832l2.613 2.612a.75.75 0 1 0 1.06-1.06l-2.612-2.613A4.5 4.5 0 1 0 16.5 21m0-1.5a3 3 0 1 1 0-6a3 3 0 0 1 0 6\"/>",
@@ -14965,6 +15361,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "delete",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM9 17h2V8H9zm4 0h2V8h-2zM7 6v13z\"/>",
+     "height": 24,
+     "name": "delete-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"m19.5 5.5l-.62 10.025c-.158 2.561-.237 3.842-.88 4.763a4 4 0 0 1-1.2 1.128c-.957.584-2.24.584-4.806.584c-2.57 0-3.855 0-4.814-.585a4 4 0 0 1-1.2-1.13c-.642-.922-.72-2.205-.874-4.77L4.5 5.5M3 5.5h18m-4.944 0l-.683-1.408c-.453-.936-.68-1.403-1.071-1.695a2 2 0 0 0-.275-.172C13.594 2 13.074 2 12.035 2c-1.066 0-1.599 0-2.04.234a2 2 0 0 0-.278.18c-.395.303-.616.788-1.058 1.757L8.053 5.5\"/>",
      "height": 24,
@@ -14976,12 +15378,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "delete",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM9 17h2V8H9zm4 0h2V8h-2zM7 6v13z\"/>",
-     "height": 24,
-     "name": "delete-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10 5h4a2 2 0 1 0-4 0M8.5 5a3.5 3.5 0 1 1 7 0h5.75a.75.75 0 0 1 0 1.5h-1.32l-1.17 12.111A3.75 3.75 0 0 1 15.026 22H8.974a3.75 3.75 0 0 1-3.733-3.389L4.07 6.5H2.75a.75.75 0 0 1 0-1.5zm2 4.75a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0zM14.25 9a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-1.5 0v-7.5a.75.75 0 0 1 .75-.75m-7.516 9.467a2.25 2.25 0 0 0 2.24 2.033h6.052a2.25 2.25 0 0 0 2.24-2.033L18.424 6.5H5.576z\"/>",
@@ -15017,6 +15413,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 6h18M4 6v13m16 0V6M4 10h16m-5-4v8a2 2 0 0 0 2 2h3\"/>",
      "height": 24,
      "name": "desk",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M2 18V6h20v12h-2v-2h-4v2h-2V8H4v10zm14-8h4V8h-4zm0 4h4v-2h-4z\"/>",
+     "height": 24,
+     "name": "desk-outline",
      "width": 24
     },
     "hugeicons": {
@@ -15097,17 +15499,17 @@ export const deck: Deck = {
      "name": "devices",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M23 43h20V5H14v10\"/><path d=\"M5 15h18v28H5z\"/><path stroke-linecap=\"round\" d=\"M13 37h2m13 0h2\"/></g>",
-     "height": 48,
-     "name": "devices",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 20v-2h10v2zm3-3q-.825 0-1.412-.587T3 15V6q0-.825.588-1.412T5 4h14q.825 0 1.413.588T21 6H5v9h7v2zm15 1v-8h-4v8zm-4.5 2q-.625 0-1.062-.437T14 18.5v-9q0-.625.438-1.062T15.5 8h5q.625 0 1.063.438T22 9.5v9q0 .625-.437 1.063T20.5 20zm2.5-7.5q.325 0 .538-.225t.212-.525q0-.325-.213-.537T18 11q-.3 0-.525.213t-.225.537q0 .3.225.525T18 12.5m0 1.5\"/>",
      "height": 24,
      "name": "devices-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M23 43h20V5H14v10\"/><path d=\"M5 15h18v28H5z\"/><path stroke-linecap=\"round\" d=\"M13 37h2m13 0h2\"/></g>",
+     "height": 48,
+     "name": "devices",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M10 30H4a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2M4 16v12h6V16Z\"/><path fill=\"currentColor\" d=\"M28 4H6a2 2 0 0 0-2 2v6h2V6h22v14H14v2h2v4h-2v2h9v-2h-5v-4h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2\"/>",
@@ -15137,6 +15539,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 3h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m14 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m-7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m-7 7h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m14 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m-7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m0 7h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1\"/>",
      "height": 24,
      "name": "dialpad",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 23q-.825 0-1.412-.587T10 21t.588-1.412T12 19t1.413.588T14 21t-.587 1.413T12 23M6 5q-.825 0-1.412-.587T4 3t.588-1.412T6 1t1.413.588T8 3t-.587 1.413T6 5m0 6q-.825 0-1.412-.587T4 9t.588-1.412T6 7t1.413.588T8 9t-.587 1.413T6 11m0 6q-.825 0-1.412-.587T4 15t.588-1.412T6 13t1.413.588T8 15t-.587 1.413T6 17M18 5q-.825 0-1.412-.587T16 3t.588-1.412T18 1t1.413.588T20 3t-.587 1.413T18 5m-6 12q-.825 0-1.412-.587T10 15t.588-1.412T12 13t1.413.588T14 15t-.587 1.413T12 17m6 0q-.825 0-1.412-.587T16 15t.588-1.412T18 13t1.413.588T20 15t-.587 1.413T18 17m0-6q-.825 0-1.412-.587T16 9t.588-1.412T18 7t1.413.588T20 9t-.587 1.413T18 11m-6 0q-.825 0-1.412-.587T10 9t.588-1.412T12 7t1.413.588T14 9t-.587 1.413T12 11m0-6q-.825 0-1.412-.587T10 3t.588-1.412T12 1t1.413.588T14 3t-.587 1.413T12 5\"/>",
+     "height": 24,
+     "name": "dialpad-outline",
      "width": 24
     },
     "fluent": {
@@ -15205,6 +15613,12 @@ export const deck: Deck = {
      "name": "diamond",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 21L2 9l3-6h14l3 6zM9.625 8h4.75l-1.5-3h-1.75zM11 16.675V10H5.45zm2 0L18.55 10H13zM16.6 8h2.65l-1.5-3H15.1zM4.75 8H7.4l1.5-3H6.25z\"/>",
+     "height": 24,
+     "name": "diamond-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.92 5.92c2.238-2.237 3.357-3.355 4.666-3.724a5.2 5.2 0 0 1 2.828 0c1.309.369 2.428 1.487 4.665 3.725s3.356 3.356 3.725 4.665a5.2 5.2 0 0 1 0 2.828c-.369 1.309-1.487 2.428-3.725 4.665s-3.356 3.356-4.665 3.725a5.2 5.2 0 0 1-2.828 0c-1.309-.369-2.428-1.487-4.665-3.725s-3.356-3.356-3.725-4.665a5.2 5.2 0 0 1 0-2.828C2.565 9.277 3.683 8.158 5.92 5.92Z\"/>",
      "height": 24,
@@ -15216,12 +15630,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "diamond",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M12 21L2 9l3-6h14l3 6zM9.625 8h4.75l-1.5-3h-1.75zM11 16.675V10H5.45zm2 0L18.55 10H13zM16.6 8h2.65l-1.5-3H15.1zM4.75 8H7.4l1.5-3H6.25z\"/>",
-     "height": 24,
-     "name": "diamond-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M9.714 1.962a3.25 3.25 0 0 1 4.596 0l7.75 7.75a3.25 3.25 0 0 1 0 4.596l-7.75 7.75a3.25 3.25 0 0 1-4.596 0l-7.75-7.75a3.25 3.25 0 0 1 0-4.596zm3.535 1.06a1.75 1.75 0 0 0-2.475 0l-7.75 7.75a1.75 1.75 0 0 0 0 2.475l7.75 7.75a1.75 1.75 0 0 0 2.475 0l7.75-7.75a1.75 1.75 0 0 0 0-2.474z\"/>",
@@ -15529,16 +15937,16 @@ export const deck: Deck = {
      "name": "directions",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4.919 4.44c.542-.708.813-1.062 1.184-1.251C6.473 3 6.898 3 7.745 3h2.416c.867 0 1.3 0 1.57.293C12 3.586 12 4.057 12 5v4H7.745c-.847 0-1.271 0-1.642-.189c-.37-.189-.642-.543-1.184-1.25l-.215-.28C4.234 6.667 4 6.361 4 6s.235-.668.704-1.28zm14.162 5c-.542-.708-.813-1.062-1.184-1.251C17.527 8 17.102 8 16.255 8H12v6h4.255c.847 0 1.271 0 1.642-.189c.37-.189.642-.543 1.184-1.25l.215-.28c.47-.613.704-.919.704-1.281s-.235-.668-.704-1.28zM12 21V4M9 21h6\"/>",
-     "height": 24,
-     "name": "directions-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 15h2v-3h3.5v2.5L17 11l-3.5-3.5V10H9q-.425 0-.712.288T8 11zm4 7q-.375 0-.737-.15t-.663-.45l-8-8q-.3-.3-.45-.663T2 12t.15-.737t.45-.663l8-8q.3-.3.663-.45T12 2t.738.15t.662.45l8 8q.3.3.45.663T22 12t-.15.738t-.45.662l-8 8q-.3.3-.663.45T12 22m-4-6l4 4l8-8l-8-8l-8 8zm4-4\"/>",
      "height": 24,
      "name": "directions-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4.919 4.44c.542-.708.813-1.062 1.184-1.251C6.473 3 6.898 3 7.745 3h2.416c.867 0 1.3 0 1.57.293C12 3.586 12 4.057 12 5v4H7.745c-.847 0-1.271 0-1.642-.189c-.37-.189-.642-.543-1.184-1.25l-.215-.28C4.234 6.667 4 6.361 4 6s.235-.668.704-1.28zm14.162 5c-.542-.708-.813-1.062-1.184-1.251C17.527 8 17.102 8 16.255 8H12v6h4.255c.847 0 1.271 0 1.642-.189c.37-.189.642-.543 1.184-1.25l.215-.28c.47-.613.704-.919.704-1.281s-.235-.668-.704-1.28zM12 21V4M9 21h6\"/>",
+     "height": 24,
+     "name": "directions-01",
      "width": 24
     },
     "fluent": {
@@ -15949,16 +16357,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "door-open",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 16.158V7.84c0-1.847 0-2.77.518-3.444c.517-.674 1.41-.912 3.194-1.387l3.508-.936A2.21 2.21 0 0 1 14 4.21v15.58a2.21 2.21 0 0 1-2.78 2.136l-3.508-.936c-1.785-.476-2.677-.714-3.194-1.387C4 18.928 4 18.005 4 16.158M11 11v2m6.5 7c.465 0 .697 0 .89-.04a2 2 0 0 0 1.572-1.57c.038-.194.038-.426.038-.89v-11c0-.465 0-.698-.038-.89a2 2 0 0 0-1.572-1.572c-.193-.039-.425-.039-.89-.039\"/>",
-     "height": 24,
-     "name": "door-open",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 13q.425 0 .713-.288T12 12t-.288-.712T11 11t-.712.288T10 12t.288.713T11 13m-4 8v-2l6-1V6.875q0-.375-.225-.675t-.575-.35L7 5V3l5.5.9q1.1.2 1.8 1.025T15 6.85v12.8zm-4 0v-2h2V5q0-.85.588-1.425T7 3h10q.85 0 1.425.575T19 5v14h2v2zm4-2h10V5H7z\"/>",
      "height": 24,
      "name": "door-open-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 16.158V7.84c0-1.847 0-2.77.518-3.444c.517-.674 1.41-.912 3.194-1.387l3.508-.936A2.21 2.21 0 0 1 14 4.21v15.58a2.21 2.21 0 0 1-2.78 2.136l-3.508-.936c-1.785-.476-2.677-.714-3.194-1.387C4 18.928 4 18.005 4 16.158M11 11v2m6.5 7c.465 0 .697 0 .89-.04a2 2 0 0 0 1.572-1.57c.038-.194.038-.426.038-.89v-11c0-.465 0-.698-.038-.89a2 2 0 0 0-1.572-1.572c-.193-.039-.425-.039-.89-.039\"/>",
+     "height": 24,
+     "name": "door-open",
      "width": 24
     },
     "lucide": {
@@ -16031,6 +16439,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5l5-5m-5-7v12\"/>",
      "height": 24,
      "name": "download",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z\"/>",
+     "height": 24,
+     "name": "download-outline",
      "width": 24
     },
     "hugeicons": {
@@ -16201,6 +16615,12 @@ export const deck: Deck = {
      "name": "drone",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q0-1.875 1.025-3.363t2.65-2.162L7.425 12H4V6H1V4h8v2H6v4h1.2L7 8h10l-.2 2H18V6h-3V4h8.025v2h-3v6H16.6l-.25 2.475q1.625.675 2.638 2.163T20 20h-2q0-1.65-1.175-2.825T14 16h-4q-1.65 0-2.825 1.175T6 20zm5.625-6h4.725l.425-4H9.2zm0 0h4.725z\"/>",
+     "height": 24,
+     "name": "drone-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14 6.015A3.519 3.519 0 1 1 17.985 10M10 6.015A3.519 3.519 0 1 0 6.015 10M14 17.985A3.519 3.519 0 1 0 17.985 14M10 17.985A3.519 3.519 0 1 1 6.015 14m4.22.848C10.602 15 11.068 15 12 15s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083C15 13.398 15 12.932 15 12s0-1.398-.152-1.765a2 2 0 0 0-1.083-1.083C13.398 9 12.932 9 12 9s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083C9 10.602 9 11.068 9 12s0 1.398.152 1.765a2 2 0 0 0 1.083 1.083M14.5 14.5L17 17m-7.5-2.5L7 17m7.5-7.5L17 7M9.5 9.5L7 7\"/>",
      "height": 24,
@@ -16212,12 +16632,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "drone",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 20q0-1.875 1.025-3.363t2.65-2.162L7.425 12H4V6H1V4h8v2H6v4h1.2L7 8h10l-.2 2H18V6h-3V4h8.025v2h-3v6H16.6l-.25 2.475q1.625.675 2.638 2.163T20 20h-2q0-1.65-1.175-2.825T14 16h-4q-1.65 0-2.825 1.175T6 20zm5.625-6h4.725l.425-4H9.2zm0 0h4.725z\"/>",
-     "height": 24,
-     "name": "drone-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M7 12a5 5 0 1 1 5-5h-2a3 3 0 1 0-3 3Zm18 0v-2a3 3 0 1 0-3-3h-2a5 5 0 1 1 5 5M7 30a5 5 0 0 1 0-10v2a3 3 0 1 0 3 3h2a5.006 5.006 0 0 1-5 5m18 0a5.006 5.006 0 0 1-5-5h2a3 3 0 1 0 3-3v-2a5 5 0 0 1 0 10\"/><path fill=\"currentColor\" d=\"M20 18.586v-5.172l5.707-5.707a1 1 0 1 0-1.414-1.414l-4.5 4.5a3.973 3.973 0 0 0-7.587 0l-4.499-4.5a1 1 0 0 0-1.414 0a1 1 0 0 0 0 1.414L12 13.414v5.172l-5.707 5.707a1 1 0 0 0 0 1.414a1 1 0 0 0 1.414 0l4.5-4.5a3.973 3.973 0 0 0 7.587 0l4.5 4.5a1 1 0 0 0 1.414-1.414ZM18 20a2 2 0 0 1-4 0v-8a2 2 0 0 1 4 0Z\"/>",
@@ -16687,6 +17101,12 @@ export const deck: Deck = {
      "name": "edit",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 19h1.425L16.2 9.225L14.775 7.8L5 17.575zm-2 2v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM19 6.4L17.6 5zm-3.525 2.125l-.7-.725L16.2 9.225z\"/>",
+     "height": 24,
+     "name": "edit-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M16.946 3.173c.587-.587.88-.88 1.206-1.021c.469-.203 1-.203 1.469 0c.325.14.619.434 1.206 1.021s.88.881 1.021 1.206c.203.469.203 1 0 1.469c-.14.325-.434.619-1.021 1.206l-5.022 5.022c-1.237 1.237-1.855 1.855-2.63 2.222s-1.646.452-3.387.624L9 15l.078-.788c.172-1.741.257-2.612.624-3.387s.985-1.393 2.222-2.63z\"/><path stroke-linecap=\"round\" d=\"M6 15H3.75a1.75 1.75 0 1 0 0 3.5h9.5a1.75 1.75 0 1 1 0 3.5H11\"/></g>",
      "height": 24,
@@ -16698,12 +17118,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "edit",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 19h1.425L16.2 9.225L14.775 7.8L5 17.575zm-2 2v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM19 6.4L17.6 5zm-3.525 2.125l-.7-.725L16.2 9.225z\"/>",
-     "height": 24,
-     "name": "edit-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M20.952 3.048a3.58 3.58 0 0 0-5.06 0L3.94 15a3.1 3.1 0 0 0-.825 1.476L2.02 21.078a.75.75 0 0 0 .904.903l4.601-1.096a3.1 3.1 0 0 0 1.477-.825l11.95-11.95a3.58 3.58 0 0 0 0-5.06m-4 1.06a2.078 2.078 0 1 1 2.94 2.94L19 7.939L16.06 5zM15 6.062L17.94 9l-10 10c-.21.21-.474.357-.763.426l-3.416.814l.813-3.416c.069-.29.217-.554.427-.764z\"/>",
@@ -16765,16 +17179,16 @@ export const deck: Deck = {
      "name": "edit-off",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"m15 15l-4.25 4.068c-1.497 1.486-2.246 2.23-3.182 2.606c-.936.377-1.965.35-4.023.294l-.28-.008c-.626-.017-.94-.025-1.121-.238c-.183-.213-.158-.542-.108-1.2l.027-.356c.14-1.85.21-2.776.56-3.608S3.58 15.051 4.79 13.7L9 9m2.5-2.326l2.574-2.789c.745-.807 1.117-1.21 1.513-1.446a3.1 3.1 0 0 1 3.103-.047c.403.224.787.616 1.555 1.4c.768.785 1.152 1.178 1.37 1.589a3.29 3.29 0 0 1-.045 3.17c-.23.404-.625.785-1.416 1.546L17.5 12.5\"/><path d=\"m13 4l7 7\"/><path stroke-linecap=\"round\" d=\"m2 2l20 20\"/></g>",
-     "height": 24,
-     "name": "edit-off",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m15.55 12.675l-1.4-1.4l2.05-2.05L14.775 7.8l-2.05 2.05l-1.4-1.4L16.2 3.575q.3-.3.662-.438T17.626 3t.775.15t.65.45L20.425 5q.3.275.437.65T21 6.4q0 .4-.138.763t-.437.662zM5 19h1.425l4.875-4.875l-.7-.725l-.725-.7L5 17.575zm14.8 3.6l-7.075-7.05L7.25 21H3v-4.225L8.475 11.3L1.4 4.2l1.425-1.425l18.4 18.4zM19 6.4L17.6 5zm-4.225 1.4L16.2 9.225zM10.6 13.4l-.725-.7l1.425 1.425z\"/>",
      "height": 24,
      "name": "edit-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"m15 15l-4.25 4.068c-1.497 1.486-2.246 2.23-3.182 2.606c-.936.377-1.965.35-4.023.294l-.28-.008c-.626-.017-.94-.025-1.121-.238c-.183-.213-.158-.542-.108-1.2l.027-.356c.14-1.85.21-2.776.56-3.608S3.58 15.051 4.79 13.7L9 9m2.5-2.326l2.574-2.789c.745-.807 1.117-1.21 1.513-1.446a3.1 3.1 0 0 1 3.103-.047c.403.224.787.616 1.555 1.4c.768.785 1.152 1.178 1.37 1.589a3.29 3.29 0 0 1-.045 3.17c-.23.404-.625.785-1.416 1.546L17.5 12.5\"/><path d=\"m13 4l7 7\"/><path stroke-linecap=\"round\" d=\"m2 2l20 20\"/></g>",
+     "height": 24,
+     "name": "edit-off",
      "width": 24
     },
     "fluent": {
@@ -16801,6 +17215,12 @@ export const deck: Deck = {
      "name": "egg",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7.038 18.963Q5 16.925 5 14q0-1.925.638-3.875t1.65-3.537T9.55 4T12 3q1.225 0 2.463 1t2.25 2.588t1.65 3.537T19 14q0 2.925-2.037 4.963T12 21t-4.962-2.037m8.5-1.426Q17 16.075 17 14q0-1.425-.488-3t-1.225-2.912t-1.612-2.213T12.013 5t-1.675.875t-1.625 2.213T7.488 11T7 14q0 2.075 1.463 3.538T12 19t3.538-1.463M13 18q.425 0 .713-.288T14 17t-.288-.712T13 16q-1.25 0-2.125-.875T10 13q0-.425-.288-.712T9 12t-.712.288T8 13q0 2.075 1.463 3.538T13 18m-1-6\"/>",
+     "height": 24,
+     "name": "egg-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 22c4.418 0 8-3 8-8S16.418 2 12 2S4 9 4 14s3.582 8 8 8\"/>",
      "height": 24,
@@ -16812,12 +17232,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "egg",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M7.038 18.963Q5 16.925 5 14q0-1.925.638-3.875t1.65-3.537T9.55 4T12 3q1.225 0 2.463 1t2.25 2.588t1.65 3.537T19 14q0 2.925-2.037 4.963T12 21t-4.962-2.037m8.5-1.426Q17 16.075 17 14q0-1.425-.488-3t-1.225-2.912t-1.612-2.213T12.013 5t-1.675.875t-1.625 2.213T7.488 11T7 14q0 2.075 1.463 3.538T12 19t3.538-1.463M13 18q.425 0 .713-.288T14 17t-.288-.712T13 16q-1.25 0-2.125-.875T10 13q0-.425-.288-.712T9 12t-.712.288T8 13q0 2.075 1.463 3.538T13 18m-1-6\"/>",
-     "height": 24,
-     "name": "egg-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 2C8 2 4 8 4 14a8 8 0 0 0 16 0c0-6-4-12-8-12\"/>",
@@ -16945,17 +17359,17 @@ export const deck: Deck = {
      "name": "elevator",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><path d=\"M42 41V7H6v34z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M42 7v34m0-34H4h2v34M42 7h2m-2 34h2m-2 0H6m0 0H4M24 7v34m9-21v8m-3-5l3-3l3 3m-21 5v-8\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m12 25l3 3l3-3\"/></g>",
-     "height": 48,
-     "name": "elevator",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 18h3v-4h1v-2.5q0-.825-.587-1.412T9 9.5H8q-.825 0-1.412.588T6 11.5V14h1zm2.388-9.862q.362-.363.362-.888t-.363-.888T8.5 6t-.888.363t-.362.887t.363.888t.887.362t.888-.363M13 11h5l-2.5-4zm2.5 6l2.5-4h-5zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zm0 0V5z\"/>",
      "height": 24,
      "name": "elevator-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><path d=\"M42 41V7H6v34z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M42 7v34m0-34H4h2v34M42 7h2m-2 34h2m-2 0H6m0 0H4M24 7v34m9-21v8m-3-5l3-3l3 3m-21 5v-8\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m12 25l3 3l3-3\"/></g>",
+     "height": 48,
+     "name": "elevator",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M8.03 8.97a.75.75 0 0 0-1.06 0l-1.75 1.75a.75.75 0 1 0 1.06 1.06l.47-.47v2.94a.75.75 0 0 0 1.5 0v-2.94l.47.47a.75.75 0 0 0 1.06-1.06zm6.19 4.06l1.75 1.75a.75.75 0 0 0 1.06 0l1.75-1.75a.75.75 0 1 0-1.06-1.06l-.47.47V9.5a.75.75 0 0 0-1.5 0v2.94l-.47-.47a.75.75 0 1 0-1.06 1.06M5.25 4A3.25 3.25 0 0 0 2 7.25v9.5A3.25 3.25 0 0 0 5.25 20h13.5A3.25 3.25 0 0 0 22 16.75v-9.5A3.25 3.25 0 0 0 18.75 4zM3.5 7.25c0-.966.784-1.75 1.75-1.75h6v13h-6a1.75 1.75 0 0 1-1.75-1.75zm9.25-1.75h6c.966 0 1.75.784 1.75 1.75v9.5a1.75 1.75 0 0 1-1.75 1.75h-6z\"/>",
@@ -17131,6 +17545,12 @@ export const deck: Deck = {
      "name": "equal",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 17v-3h16v3zm0-7V7h16v3z\"/>",
+     "height": 24,
+     "name": "equal-outline",
+     "width": 24
+    },
     "lucide": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 9h14M5 15h14\"/>",
      "height": 24,
@@ -17155,6 +17575,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "equalizer",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20v-8h4v8zm6 0V4h4v16zm6 0V9h4v11z\"/>",
+     "height": 24,
+     "name": "equalizer-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path stroke-linecap=\"round\" d=\"M11 16v26m13-13v13m0-23V6m13 0v26\"/><path d=\"M11 16a5 5 0 1 0 0-10a5 5 0 0 0 0 10Zm13 13a5 5 0 1 0 0-10a5 5 0 0 0 0 10Zm13 13a5 5 0 1 0 0-10a5 5 0 0 0 0 10Z\"/></g>",
      "height": 48,
@@ -17251,6 +17677,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "euro",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M15 21q-2.95 0-5.25-1.675T6.5 15H3v-2h3.05q-.075-.6-.062-1.112T6.05 11H3V9h3.5q.95-2.65 3.25-4.325T15 3q1.725 0 3.263.613T21 5.3l-1.425 1.4q-.925-.8-2.087-1.25T15 5q-2.125 0-3.8 1.113T8.675 9H15v2H8.075q-.1.675-.075 1.188t.075.812H15v2H8.675q.85 1.775 2.525 2.888T15 19q1.325 0 2.488-.45t2.087-1.25L21 18.7q-1.2 1.075-2.738 1.688T15 21\"/>",
+     "height": 24,
+     "name": "euro-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M5 10h8m-8 4h8\"/><path d=\"M19 17.608C17.87 19.64 15.812 21 13.461 21C9.894 21 7 17.866 7 14v-4c0-3.866 2.893-7 6.461-7C15.813 3 17.87 4.36 19 6.392\"/></g>",
      "height": 24,
@@ -17417,6 +17849,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "expand",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 22v-2h16v2zm8-3l-4-4l1.4-1.4l1.6 1.55v-6.3L9.4 10.4L8 9l4-4l4 4l-1.4 1.4L13 8.85v6.3l1.6-1.55L16 15zM4 4V2h16v2z\"/>",
+     "height": 24,
+     "name": "expand-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"16\" stroke-width=\"1.5\" d=\"M19 12V9c0-1.886 0-2.828-.586-3.414S16.886 5 15 5h-3m-7 7v3c0 1.886 0 2.828.586 3.414S7.114 19 9 19h3\"/>",
+     "height": 24,
+     "name": "expand",
+     "width": 24
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m15 15l6 6M15 9l6-6m0 13v5h-5m5-13V3h-5M3 16v5h5m-5 0l6-6M3 8V3h5m1 6L3 3\"/>",
+     "height": 24,
+     "name": "expand",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 9L4 4m0 0v4m0-4h4m7 5l5-5m0 0v4m0-4h-4M9 15l-5 5m0 0v-4m0 4h4m7-5l5 5m0 0v-4m0 4h-4\"/>",
+     "height": 24,
+     "name": "expand",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "expand-left",
    "variants": {
     "icon-park-outline": {
@@ -17519,6 +17981,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3.6 20.4L20.4 3.6M6 8h4M8 6v4m6 6h4M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
      "height": 24,
      "name": "exposure",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5zm9.5-1v-2h-2v-1.5h2v-2H16v2h2V16h-2v2zM6 8.5h5V7H6z\"/>",
+     "height": 24,
+     "name": "exposure-outline",
      "width": 24
     },
     "boxicons": {
@@ -17875,16 +18343,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "factory",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 13.5V9c0-.943 0-1.414-.293-1.707S7.943 7 7 7H5c-.943 0-1.414 0-1.707.293S3 8.057 3 9v9c0 1.886 0 2.828.586 3.414S5.114 22 7 22h2m0-8.5l3.317-1.658c1.1-.55 1.65-.826 2.077-.643a1 1 0 0 1 .252.155c.354.3.354.915.354 2.146l3.106-1.553c1.297-.648 1.945-.973 2.42-.68s.474 1.019.474 2.47V18c0 1.886 0 2.828-.586 3.414S18.886 22 17 22H9m0-8.5V22M3 10h6m4-8H8c-.943 0-1.414 0-1.707.293S6 3.057 6 4m10-2h1m-6 3h6\"/>",
-     "height": 24,
-     "name": "factory",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 22V9.975L9 7v2l5-2v3h8v12zm2-2h16v-8h-8V9.95l-5 2V10l-3 1.325zm7-2h2v-4h-2zm-4 0h2v-4H7zm8 0h2v-4h-2zm7-8h-5l1-8h3zM4 20h16z\"/>",
      "height": 24,
      "name": "factory-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 13.5V9c0-.943 0-1.414-.293-1.707S7.943 7 7 7H5c-.943 0-1.414 0-1.707.293S3 8.057 3 9v9c0 1.886 0 2.828.586 3.414S5.114 22 7 22h2m0-8.5l3.317-1.658c1.1-.55 1.65-.826 2.077-.643a1 1 0 0 1 .252.155c.354.3.354.915.354 2.146l3.106-1.553c1.297-.648 1.945-.973 2.42-.68s.474 1.019.474 2.47V18c0 1.886 0 2.828-.586 3.414S18.886 22 17 22H9m0-8.5V22M3 10h6m4-8H8c-.943 0-1.414 0-1.707.293S6 3.057 6 4m10-2h1m-6 3h6\"/>",
+     "height": 24,
+     "name": "factory",
      "width": 24
     },
     "lucide": {
@@ -18056,7 +18524,7 @@ export const deck: Deck = {
      "width": 24
     },
     "lucide": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1zM16 8L2 22m15.5-7H9\"/>",
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14.086 18.412A2 2 0 0 1 12.67 19H5v-7.672a2 2 0 0 1 .586-1.414L11.75 3.75a6 6 0 1 1 8.49 8.49zM16 8L2 22m15.488-7H9\"/>",
      "height": 24,
      "name": "feather",
      "width": 24
@@ -18085,6 +18553,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "female",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 21v-2H9v-2h2v-2.1q-1.975-.35-3.238-1.888T6.5 9.45q0-2.275 1.613-3.862T12 4t3.888 1.588T17.5 9.45q0 2.025-1.263 3.563T13 14.9V17h2v2h-2v2zm3.475-9.025Q15.5 10.95 15.5 9.5t-1.025-2.475T12 6T9.525 7.025T8.5 9.5t1.025 2.475T12 13t2.475-1.025\"/>",
+     "height": 24,
+     "name": "female-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m14.5 16.5l3.716 1.118a4.07 4.07 0 0 1 2.76 2.892c.136.536-.327.99-.882.99H3.906c-.555 0-1.018-.454-.882-.99a4.07 4.07 0 0 1 2.76-2.892L9.5 16.5v-2.155c-1.285-.163-2.47-.448-3.5-.829c.5-.984 1-2.46 1-5.903c0-5.904 5.5-5.904 7-3.936c3-.492 3 1.968 3 4.92c0 2.36.667 4.263 1 4.92c-1.03.38-2.215.665-3.5.828z\"/>",
      "height": 24,
@@ -18113,6 +18587,36 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M7 9.5a7.5 7.5 0 1 1 2.942 5.957l-1.788 1.787L9.58 18.67a1 1 0 1 1-1.414 1.414L6.74 18.659l-2.12 2.12a1 1 0 0 1-1.414-1.415l2.12-2.12l-1.403-1.403a1 1 0 1 1 1.414-1.414L6.74 15.83l1.79-1.79A7.47 7.47 0 0 1 7 9.5M14.5 4a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11\"/></g>",
      "height": 24,
      "name": "female-line",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "fence",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 12v4h16v-4zm2 4v4h4v-4m0-4V6L8 4L6 6v6m8 4v4h4v-4m0-4V6l-2-2l-2 2v6\"/>",
+     "height": 24,
+     "name": "fence",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 20v-4H3v-2h2v-2H3v-2h2V7l3-3l2 2l2.025-2l2 2l2-2l3 3v3H21v2h-1.975v2H21v2h-1.975v4zm2-10h2V7.825l-1-1l-1 1zm4 0h2V7.825l-1-1l-1 1zm4.025 0H17V7.825l-1-1l-.975.975zM7 14h2v-2H7zm4 0h2v-2h-2zm4.025 0H17v-2h-1.975zM7 18h2v-2H7zm4 0h2v-2h-2zm4.025 0H17v-2h-1.975z\"/>",
+     "height": 24,
+     "name": "fence-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"square\" d=\"m21.4 4.2l-.6-.8a1 1 0 0 0-1.6 0l-.6.8c-.297.396-.446.595-.523.826S18 5.504 18 6v13c0 .465 0 .698.051.888a1.5 1.5 0 0 0 1.06 1.06c.191.052.424.052.889.052s.698 0 .888-.051a1.5 1.5 0 0 0 1.06-1.06C22 19.697 22 19.464 22 19V6c0-.496 0-.743-.077-.974s-.226-.43-.523-.826Zm-8 0l-.6-.8a1 1 0 0 0-1.6 0l-.6.8c-.297.396-.446.595-.523.826S10 5.504 10 6v13c0 .465 0 .698.051.888a1.5 1.5 0 0 0 1.06 1.06c.191.052.424.052.889.052s.697 0 .888-.051a1.5 1.5 0 0 0 1.06-1.06C14 19.697 14 19.464 14 19V6c0-.496 0-.743-.077-.974s-.226-.43-.523-.826Zm-8 0l-.6-.8a1 1 0 0 0-1.6 0l-.6.8c-.297.396-.446.595-.523.826S2 5.504 2 6v13c0 .465 0 .698.051.888a1.5 1.5 0 0 0 1.06 1.06C3.304 21 3.536 21 4 21s.697 0 .888-.051a1.5 1.5 0 0 0 1.06-1.06C6 19.697 6 19.464 6 19V6c0-.496 0-.743-.077-.974s-.226-.43-.523-.826Z\"/><path stroke-linecap=\"round\" d=\"M10 8H6v10h4zm8 0h-4v10h4z\"/></g>",
+     "height": 24,
+     "name": "fence",
+     "width": 24
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 3L2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Zm2 5h4M6 18h4m2-15l-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Zm2 5h4m-4 10h4m2-15l-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z\"/>",
+     "height": 24,
+     "name": "fence",
      "width": 24
     }
    }
@@ -18457,16 +18961,16 @@ export const deck: Deck = {
      "name": "file-export",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M20 14v-3.343c0-.818 0-1.226-.152-1.594c-.152-.367-.441-.657-1.02-1.235l-4.736-4.736c-.499-.499-.748-.748-1.058-.896a2 2 0 0 0-.197-.082C12.514 2 12.161 2 11.456 2c-3.245 0-4.868 0-5.967.886a4 4 0 0 0-.603.603C4 4.59 4 6.211 4 9.456V14c0 3.771 0 5.657 1.172 6.828S8.229 22 12 22m1-19.5V3c0 2.828 0 4.243.879 5.121C14.757 9 16.172 9 19 9h.5\"/><path d=\"M17 22c.607-.59 3-2.16 3-3s-2.393-2.41-3-3m2 3h-7\"/></g>",
-     "height": 24,
-     "name": "file-export",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m5.05 22.375l-1.4-1.425L6.6 18H4.35v-2H10v5.65H8v-2.225zM12 22v-2h6V9h-5V4H6v10H4V4q0-.825.588-1.412T6 2h8l6 6v12q0 .825-.587 1.413T18 22z\"/>",
      "height": 24,
      "name": "file-export-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M20 14v-3.343c0-.818 0-1.226-.152-1.594c-.152-.367-.441-.657-1.02-1.235l-4.736-4.736c-.499-.499-.748-.748-1.058-.896a2 2 0 0 0-.197-.082C12.514 2 12.161 2 11.456 2c-3.245 0-4.868 0-5.967.886a4 4 0 0 0-.603.603C4 4.59 4 6.211 4 9.456V14c0 3.771 0 5.657 1.172 6.828S8.229 22 12 22m1-19.5V3c0 2.828 0 4.243.879 5.121C14.757 9 16.172 9 19 9h.5\"/><path d=\"M17 22c.607-.59 3-2.16 3-3s-2.393-2.41-3-3m2 3h-7\"/></g>",
+     "height": 24,
+     "name": "file-export",
      "width": 24
     },
     "mingcute": {
@@ -19177,16 +19681,16 @@ export const deck: Deck = {
      "name": "files",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M14.5 19h-2c-2.829 0-4.243 0-5.121-.879c-.88-.878-.88-2.293-.88-5.121V8c0-2.828 0-4.243.88-5.121C8.256 2 9.67 2 12.499 2h1.344c.818 0 1.226 0 1.594.152c.367.152.656.442 1.234 1.02l2.657 2.656c.578.578.867.868 1.02 1.235c.152.368.152.776.152 1.594V13c0 2.828 0 4.243-.879 5.121C18.743 19 17.328 19 14.5 19\"/><path d=\"M15 2.5v1c0 1.886 0 2.828.586 3.414c.585.586 1.528.586 3.414.586h1M6.5 5a3 3 0 0 0-3 3v8c0 2.828 0 4.243.878 5.121C5.257 22 6.671 22 9.5 22h5a3 3 0 0 0 3-3M10 11h4m-4 4h7\"/></g>",
-     "height": 24,
-     "name": "files-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V8q0-.825.588-1.412T4 6h6l2-2h8q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm1.825-7H11V7.825zM4 12l4-4H4zm0 3v3h16V6h-7v7q0 .825-.587 1.413T11 15zm7-4\"/>",
      "height": 24,
      "name": "files-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M14.5 19h-2c-2.829 0-4.243 0-5.121-.879c-.88-.878-.88-2.293-.88-5.121V8c0-2.828 0-4.243.88-5.121C8.256 2 9.67 2 12.499 2h1.344c.818 0 1.226 0 1.594.152c.367.152.656.442 1.234 1.02l2.657 2.656c.578.578.867.868 1.02 1.235c.152.368.152.776.152 1.594V13c0 2.828 0 4.243-.879 5.121C18.743 19 17.328 19 14.5 19\"/><path d=\"M15 2.5v1c0 1.886 0 2.828.586 3.414c.585.586 1.528.586 3.414.586h1M6.5 5a3 3 0 0 0-3 3v8c0 2.828 0 4.243.878 5.121C5.257 22 6.671 22 9.5 22h5a3 3 0 0 0 3-3M10 11h4m-4 4h7\"/></g>",
+     "height": 24,
+     "name": "files-01",
      "width": 24
     },
     "lucide": {
@@ -19279,6 +19783,12 @@ export const deck: Deck = {
      "name": "filter",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 14h10l-3.45-4.5l-2.3 3l-1.55-2zm-1 4q-.825 0-1.412-.587T6 16V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm0-2h12V4H8zm-4 6q-.825 0-1.412-.587T2 20V6h2v14h14v2zM8 4v12z\"/>",
+     "height": 24,
+     "name": "filter-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M8.857 12.506C6.37 10.646 4.596 8.6 3.627 7.45c-.3-.356-.398-.617-.457-1.076c-.202-1.572-.303-2.358.158-2.866S4.604 3 6.234 3h11.532c1.63 0 2.445 0 2.906.507c.461.508.36 1.294.158 2.866c-.06.459-.158.72-.457 1.076c-.97 1.152-2.747 3.202-5.24 5.065a1.05 1.05 0 0 0-.402.747c-.247 2.731-.475 4.227-.617 4.983c-.229 1.222-1.96 1.957-2.888 2.612c-.552.39-1.222-.074-1.293-.678a196 196 0 0 1-.674-6.917a1.05 1.05 0 0 0-.402-.755\"/>",
      "height": 24,
@@ -19290,12 +19800,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "filter",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M9 14h10l-3.45-4.5l-2.3 3l-1.55-2zm-1 4q-.825 0-1.412-.587T6 16V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm0-2h12V4H8zm-4 6q-.825 0-1.412-.587T2 20V6h2v14h14v2zM8 4v12z\"/>",
-     "height": 24,
-     "name": "filter-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M13.5 16a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5zm3-5a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1 0-1.5zm3-5a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1 0-1.5z\"/>",
@@ -19385,6 +19889,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M18.9 7a8 8 0 0 1 1.1 5v1a6 6 0 0 0 .8 3M8 11a4 4 0 0 1 8 0v1a10 10 0 0 0 2 6\"/><path d=\"M12 11v2a14 14 0 0 0 2.5 8M8 15a18 18 0 0 0 1.8 6m-4.9-2a22 22 0 0 1-.9-7v-1a8 8 0 0 1 12-6.95\"/></g>",
      "height": 24,
      "name": "fingerprint",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12.025 4.475q2.65 0 5 1.138T20.95 8.9q.175.225.113.4t-.213.3t-.35.113t-.35-.213q-1.375-1.95-3.537-2.987t-4.588-1.038t-4.55 1.038T3.95 9.5q-.15.225-.35.25t-.35-.1q-.175-.125-.213-.312t.113-.388q1.55-2.125 3.888-3.3t4.987-1.175m0 2.35q3.375 0 5.8 2.25t2.425 5.575q0 1.25-.887 2.088t-2.163.837t-2.187-.837t-.913-2.088q0-.825-.612-1.388t-1.463-.562t-1.463.563t-.612 1.387q0 2.425 1.438 4.05t3.712 2.275q.225.075.3.25t.025.375q-.05.175-.2.3t-.375.075q-2.6-.65-4.25-2.588T8.95 14.65q0-1.25.9-2.1t2.175-.85t2.175.85t.9 2.1q0 .825.625 1.388t1.475.562t1.45-.562t.6-1.388q0-2.9-2.125-4.875T12.05 7.8T6.975 9.775t-2.125 4.85q0 .6.113 1.5t.537 2.1q.075.225-.012.4t-.288.25t-.387-.012t-.263-.288q-.375-.975-.537-1.937T3.85 14.65q0-3.325 2.413-5.575t5.762-2.25m0-4.8q1.6 0 3.125.387t2.95 1.113q.225.125.263.3t-.038.35t-.25.275t-.425-.025q-1.325-.675-2.738-1.037t-2.887-.363q-1.45 0-2.85.338T6.5 4.425q-.2.125-.4.063t-.3-.263t-.05-.362t.25-.288q1.4-.75 2.925-1.15t3.1-.4m0 7.225q2.325 0 4 1.563T17.7 14.65q0 .225-.137.363t-.363.137q-.2 0-.35-.137t-.15-.363q0-1.875-1.388-3.137t-3.287-1.263t-3.262 1.263T7.4 14.65q0 2.025.7 3.438t2.05 2.837q.15.15.15.35t-.15.35t-.35.15t-.35-.15q-1.475-1.55-2.262-3.162T6.4 14.65q0-2.275 1.65-3.838t3.975-1.562M12 14.15q.225 0 .363.15t.137.35q0 1.875 1.35 3.075t3.15 1.2q.15 0 .425-.025t.575-.075q.225-.05.388.063t.212.337q.05.2-.075.35t-.325.2q-.45.125-.787.138t-.413.012q-2.225 0-3.863-1.5T11.5 14.65q0-.2.138-.35t.362-.15\"/>",
+     "height": 24,
+     "name": "fingerprint-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -19525,6 +20035,12 @@ export const deck: Deck = {
      "name": "fire-extinguisher",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6.975 18v-6.025l.25-.975h9.5l.25.975V18zM9 13v3h6v-3zm3.688-7.312q.287-.288.287-.713t-.287-.712t-.713-.288t-.712.288t-.288.712t.288.713t.712.287t.713-.287M16 5.55V4.4l-1.05.2q.025.1.025.188v.375q0 .087-.025.187zm-9.025 6.425q0-1.575.875-2.825t2.275-1.8q-.275-.2-.487-.462T9.275 6.3L5 5.475v-1l4.275-.825q.375-.75 1.088-1.225t1.612-.475q.575 0 1.1.225T14 2.75l4-.775v6L14 7.2q-.05.05-.088.075t-.087.075q1.4.55 2.275 1.8t.875 2.825H15q0-1.25-.875-2.112T12 9t-2.125.863T9 11.975zm2 10.025q-.825 0-1.412-.587T6.975 20v-2H9v2h6v-2h1.975v2q0 .825-.587 1.413T14.975 22z\"/>",
+     "height": 24,
+     "name": "fire-extinguisher-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M10 18v-8a4 4 0 0 1 8 0v8c0 1.886 0 2.828-.586 3.414S15.886 22 14 22s-2.828 0-3.414-.586S10 19.886 10 18Zm0-5h8\"/><path d=\"M12 6V4c0-.748 0-1.122.16-1.4a1.2 1.2 0 0 1 .44-.44C12.879 2 13.252 2 14 2s1.121 0 1.4.16a1.2 1.2 0 0 1 .44.44c.16.278.16.652.16 1.4v2m-4-3h-1a5 5 0 0 0-5 5v6a2 2 0 0 1-2 2M16 3h4\"/></g>",
      "height": 24,
@@ -19536,12 +20052,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "fire-extinguisher",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6.975 18v-6.025l.25-.975h9.5l.25.975V18zM9 13v3h6v-3zm3.688-7.312q.287-.288.287-.713t-.287-.712t-.713-.288t-.712.288t-.288.712t.288.713t.712.287t.713-.287M16 5.55V4.4l-1.05.2q.025.1.025.188v.375q0 .087-.025.187zm-9.025 6.425q0-1.575.875-2.825t2.275-1.8q-.275-.2-.487-.462T9.275 6.3L5 5.475v-1l4.275-.825q.375-.75 1.088-1.225t1.612-.475q.575 0 1.1.225T14 2.75l4-.775v6L14 7.2q-.05.05-.088.075t-.087.075q1.4.55 2.275 1.8t.875 2.825H15q0-1.25-.875-2.112T12 9t-2.125.863T9 11.975zm2 10.025q-.825 0-1.412-.587T6.975 20v-2H9v2h6v-2h1.975v2q0 .825-.587 1.413T14.975 22z\"/>",
-     "height": 24,
-     "name": "fire-extinguisher-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5M9 18h8m1-15h-3\"/><path d=\"M11 3a6 6 0 0 0-6 6v11m0-7h4m8-3a4 4 0 0 0-8 0v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2Z\"/></g>",
@@ -19669,6 +20179,12 @@ export const deck: Deck = {
      "name": "flag",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21V4h9l.4 2H20v10h-7l-.4-2H7v7zm9.65-7H18V8h-5.25l-.4-2H7v6h7.25z\"/>",
+     "height": 24,
+     "name": "flag-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.025 21c.019-1.736.019-3.446.012-5.08m0 0c-.024-5.459-.124-10.058.158-11.877c.366-2.364 4.198-.213 8.775 1.555l2.063.89c1.518.653 3.686 1.816 2.733 3.173c-.392.559-1.206 1.199-2.708 1.906z\"/>",
      "height": 24,
@@ -19680,12 +20196,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "flag",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21V4h9l.4 2H20v10h-7l-.4-2H7v7zm9.65-7H18V8h-5.25l-.4-2H7v6h7.25z\"/>",
-     "height": 24,
-     "name": "flag-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3 3.748a.75.75 0 0 1 .75-.75h16.504a.75.75 0 0 1 .6 1.2L16.69 9.75l4.164 5.551a.75.75 0 0 1-.6 1.2H4.5v4.75a.75.75 0 0 1-.648.743L3.75 22a.75.75 0 0 1-.743-.648L3 21.25zm15.754.75H4.5v10.503h14.254l-3.602-4.802a.75.75 0 0 1 0-.9z\"/>",
@@ -19873,16 +20383,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "flash-off",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"m16 16l-4.333 5.654c-.539.702-1.548.265-1.548-.671V14.03c0-.56-.396-1.015-.884-1.015h-3.35c-.76 0-1.165-1.03-.663-1.686L7.774 8M10 5.727l2.497-3.377c.525-.71 1.51-.268 1.51.678v7.031c0 .567.386 1.026.862 1.026h3.267c.742 0 1.138 1.042.647 1.705L17.888 14\"/><path d=\"m2 2l20 20\"/></g>",
-     "height": 24,
-     "name": "flash-off",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 2h10l-2 7h4l-2.925 4.225L14.65 11.8l.55-.8h-1.35l-1.175-1.175L14.35 4H9v2.15l-2-2zm3 20v-8H7V9.85L1.375 4.225L2.8 2.8l18.4 18.4l-1.425 1.425L13.75 16.6zm1.825-13.025\"/>",
      "height": 24,
      "name": "flash-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"m16 16l-4.333 5.654c-.539.702-1.548.265-1.548-.671V14.03c0-.56-.396-1.015-.884-1.015h-3.35c-.76 0-1.165-1.03-.663-1.686L7.774 8M10 5.727l2.497-3.377c.525-.71 1.51-.268 1.51.678v7.031c0 .567.386 1.026.862 1.026h3.267c.742 0 1.138 1.042.647 1.705L17.888 14\"/><path d=\"m2 2l20 20\"/></g>",
+     "height": 24,
+     "name": "flash-off",
      "width": 24
     },
     "fluent": {
@@ -20012,7 +20522,7 @@ export const deck: Deck = {
    "name": "flip-horizontal",
    "variants": {
     "tabler": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12h18M7 16h10L7 21zm0-8h10L7 3z\"/>",
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3v18m4-14v10h5zM8 7v10H3z\"/>",
      "height": 24,
      "name": "flip-horizontal",
      "width": 24
@@ -20060,7 +20570,7 @@ export const deck: Deck = {
    "name": "flip-vertical",
    "variants": {
     "tabler": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3v18m4-14v10h5zM8 7v10H3z\"/>",
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12h18M7 16h10L7 21zm0-8h10L7 3z\"/>",
      "height": 24,
      "name": "flip-vertical",
      "width": 24
@@ -20269,6 +20779,12 @@ export const deck: Deck = {
      "name": "folder",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20zm0-2h16V8h-8.825l-2-2H4zm0 0V6z\"/>",
+     "height": 24,
+     "name": "folder-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M8 7h8.75c2.107 0 3.16 0 3.917.506a3 3 0 0 1 .827.827C22 9.09 22 10.143 22 12.25c0 3.511 0 5.267-.843 6.528a5 5 0 0 1-1.38 1.38C18.518 21 16.762 21 13.25 21H12c-4.714 0-7.071 0-8.536-1.465C2 18.072 2 15.715 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.538 3.38C4.22 3 5.128 3 6.944 3C8.108 3 8.69 3 9.2 3.191c1.163.436 1.643 1.493 2.168 2.542L12 7\"/>",
      "height": 24,
@@ -20280,12 +20796,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "folder",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20zm0-2h16V8h-8.825l-2-2H4zm0 0V6z\"/>",
-     "height": 24,
-     "name": "folder-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3.5 6.25V8h4.629a.75.75 0 0 0 .53-.22l1.53-1.53l-1.53-1.53a.75.75 0 0 0-.53-.22H5.25A1.75 1.75 0 0 0 3.5 6.25m-1.5 0A3.25 3.25 0 0 1 5.25 3h2.879a2.25 2.25 0 0 1 1.59.659L11.562 5.5h7.189A3.25 3.25 0 0 1 22 8.75v9A3.25 3.25 0 0 1 18.75 21H5.25A3.25 3.25 0 0 1 2 17.75zM3.5 9.5v8.25c0 .966.784 1.75 1.75 1.75h13.5a1.75 1.75 0 0 0 1.75-1.75v-9A1.75 1.75 0 0 0 18.75 7h-7.19L9.72 8.841a2.25 2.25 0 0 1-1.591.659z\"/>",
@@ -20395,16 +20905,16 @@ export const deck: Deck = {
      "name": "folder-check",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M12 21c-4.714 0-7.071 0-8.536-1.465C2 18.072 2 15.715 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.538 3.38C4.22 3 5.128 3 6.944 3C8.108 3 8.69 3 9.2 3.191c1.163.436 1.643 1.493 2.168 2.542L12 7M8 7h8.75c2.107 0 3.16 0 3.917.506a3 3 0 0 1 .827.827C21.98 9.06 22 10.06 22 12\"/><path stroke-linejoin=\"round\" d=\"M14 19s1 0 2 2c0 0 3.177-5 6-6\"/></g>",
-     "height": 24,
-     "name": "folder-check",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M10.85 16.575L16.5 10.9l-1.4-1.4l-4.25 4.25l-2.125-2.125L7.3 13.05zM4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20zm0-2h16V8h-8.825l-2-2H4zm0 0V6z\"/>",
      "height": 24,
      "name": "folder-check-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M12 21c-4.714 0-7.071 0-8.536-1.465C2 18.072 2 15.715 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.538 3.38C4.22 3 5.128 3 6.944 3C8.108 3 8.69 3 9.2 3.191c1.163.436 1.643 1.493 2.168 2.542L12 7M8 7h8.75c2.107 0 3.16 0 3.917.506a3 3 0 0 1 .827.827C21.98 9.06 22 10.06 22 12\"/><path stroke-linejoin=\"round\" d=\"M14 19s1 0 2 2c0 0 3.177-5 6-6\"/></g>",
+     "height": 24,
+     "name": "folder-check",
      "width": 24
     },
     "lucide": {
@@ -20455,17 +20965,17 @@ export const deck: Deck = {
      "name": "folder-code",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M5 8a2 2 0 0 1 2-2h12l5 6h17a2 2 0 0 1 2 2v26a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z\"/><path stroke-linecap=\"round\" d=\"m28 22l5 5l-5 5m-8-10l-5 5l5 5\"/></g>",
-     "height": 48,
-     "name": "folder-code",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 18V6v13zm0 2q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v5h-2V8h-8.825l-2-2H4v12h5v2zm10.6 2.6L11 19l3.6-3.6l1.4 1.425L13.825 19L16 21.175zm4.8 0L18 21.175L20.175 19L18 16.825l1.4-1.425L23 19z\"/>",
      "height": 24,
      "name": "folder-code-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M5 8a2 2 0 0 1 2-2h12l5 6h17a2 2 0 0 1 2 2v26a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z\"/><path stroke-linecap=\"round\" d=\"m28 22l5 5l-5 5m-8-10l-5 5l5 5\"/></g>",
+     "height": 48,
+     "name": "folder-code",
+     "width": 48
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 10.5L8 13l2 2.5m4-5l2 2.5l-2 2.5\"/><path d=\"M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z\"/></g>",
@@ -20695,16 +21205,16 @@ export const deck: Deck = {
      "name": "folder-off",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M20 20a5 5 0 0 1-.222.157C18.517 21 16.76 21 13.25 21H12c-4.714 0-7.071 0-8.536-1.464C2 18.07 2 15.714 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.342 3.5M11 6.999h5.75c2.107 0 3.16 0 3.917.506a3 3 0 0 1 .827.827C22 9.09 22 10.142 22 12.25c0 2.14 0 3.629-.19 4.75M12 7l-.633-1.267c-.525-1.05-1.005-2.106-2.168-2.542c-.42-.158-.891-.185-1.699-.19H7M2 2l20 20\"/>",
-     "height": 24,
-     "name": "folder-off",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M21.775 18.95L20 17.175V8h-9.15l-2-2l-2-2H9.7l2 2H20q.825 0 1.413.588T22 8v10q0 .275-.05.513t-.175.437m-1.3 4.35l-3.3-3.3H4q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4l2 2H4v12h11.175L.7 3.5l1.4-1.4l19.8 19.8zm-6.05-11.725\"/>",
      "height": 24,
      "name": "folder-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M20 20a5 5 0 0 1-.222.157C18.517 21 16.76 21 13.25 21H12c-4.714 0-7.071 0-8.536-1.464C2 18.07 2 15.714 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.342 3.5M11 6.999h5.75c2.107 0 3.16 0 3.917.506a3 3 0 0 1 .827.827C22 9.09 22 10.142 22 12.25c0 2.14 0 3.629-.19 4.75M12 7l-.633-1.267c-.525-1.05-1.005-2.106-2.168-2.542c-.42-.158-.891-.185-1.699-.19H7M2 2l20 20\"/>",
+     "height": 24,
+     "name": "folder-off",
      "width": 24
     },
     "carbon": {
@@ -20725,6 +21235,12 @@ export const deck: Deck = {
      "name": "folder-open",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8H11.175l-2-2H4v12l2.4-8h17.1l-2.575 8.575q-.2.65-.737 1.038T19 20zm2.1-2H19l1.8-6H7.9zm0 0l1.8-6zM4 8V6z\"/>",
+     "height": 24,
+     "name": "folder-open-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.5 20V8.877c0-1.288 0-1.931.285-2.407a2 2 0 0 1 .685-.685C3.946 5.5 4.594 5.5 5.892 5.5c.631 0 .947 0 1.234.088a2 2 0 0 1 .539.26c.248.168.444.413.835.902s.587.734.835.903a2 2 0 0 0 .539.259C10.16 8 10.474 8 11.1 8H15c1.404 0 2.107 0 2.611.337a2 2 0 0 1 .552.552c.337.504.337 1.207.337 2.611\"/><path d=\"m4.42 14.014l-.786 2c-.978 2.486-1.467 3.729-.882 4.607s1.901.879 4.533.879h7.905c1.235 0 1.852 0 2.34-.32c.487-.321.74-.893 1.247-2.038l.885-2c1.125-2.543 1.687-3.814 1.106-4.728s-1.952-.914-4.693-.914H8.072c-1.29 0-1.934 0-2.434.344s-.739.953-1.218 2.17Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11.5 4.515c.915-1.23 2.166-1.96 4.012-2.013a4.1 4.1 0 0 1 1.756.353c1.307.571 2.15 1.301 2.732 2.645L21.5 3\"/></g>",
      "height": 24,
@@ -20736,12 +21252,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "folder-open",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8H11.175l-2-2H4v12l2.4-8h17.1l-2.575 8.575q-.2.65-.737 1.038T19 20zm2.1-2H19l1.8-6H7.9zm0 0l1.8-6zM4 8V6z\"/>",
-     "height": 24,
-     "name": "folder-open-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3.5 6.25c0-.966.784-1.75 1.75-1.75h2.88a.75.75 0 0 1 .53.22l2.06 2.06c.142.141.332.22.531.22h5.5c.967 0 1.75.784 1.75 1.75q.001.13.041.246H8.72a3.75 3.75 0 0 0-3.25 1.874L3.5 14.283zM2 17.788A3.25 3.25 0 0 0 5.25 21H11q.044 0 .086-.005h5.195a3.75 3.75 0 0 0 3.248-1.875l3.03-5.25c1.216-2.104-.225-4.72-2.602-4.868A.8.8 0 0 0 20 8.75a3.25 3.25 0 0 0-3.25-3.25h-5.19L9.72 3.659A2.25 2.25 0 0 0 8.129 3H5.25A3.25 3.25 0 0 0 2 6.25zm6.719-7.292h11.026c1.347 0 2.19 1.458 1.515 2.625l-3.03 5.25a2.25 2.25 0 0 1-1.949 1.124H5.255c-1.347 0-2.19-1.458-1.516-2.625l3.031-5.25a2.25 2.25 0 0 1 1.949-1.124\"/>",
@@ -20905,16 +21415,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "folder-shared",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M16.361 21h4.278c.885 0 1.633-.601 1.265-1.247C21.314 18.719 20.01 18 18.5 18s-2.813.719-3.404 1.753c-.368.646.38 1.247 1.265 1.247Z\"/><path d=\"M18.497 15.5a1.75 1.75 0 1 0 0-3.5a1.75 1.75 0 0 0 0 3.5Z\"/><path stroke-linecap=\"round\" d=\"M12.003 21c-4.716 0-7.073 0-8.538-1.465C2 18.072 2 15.715 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.538 3.38C4.22 3 5.128 3 6.946 3C8.11 3 8.692 3 9.2 3.191c1.163.436 1.643 1.493 2.168 2.542L12.003 7M8.002 7h8.752c2.107 0 3.16 0 3.918.506a3 3 0 0 1 .828.827c.394.59.48 1.36.5 2.667\"/></g>",
-     "height": 24,
-     "name": "folder-shared-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 17h8v-.55q0-1.125-1.1-1.787T15 14t-2.9.663T11 16.45zm5.413-4.587Q17 11.825 17 11t-.587-1.412T15 9t-1.412.588T13 11t.588 1.413T15 13t1.413-.587M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20zm0-2h16V8h-8.825l-2-2H4zm0 0V6z\"/>",
      "height": 24,
      "name": "folder-shared-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M16.361 21h4.278c.885 0 1.633-.601 1.265-1.247C21.314 18.719 20.01 18 18.5 18s-2.813.719-3.404 1.753c-.368.646.38 1.247 1.265 1.247Z\"/><path d=\"M18.497 15.5a1.75 1.75 0 1 0 0-3.5a1.75 1.75 0 0 0 0 3.5Z\"/><path stroke-linecap=\"round\" d=\"M12.003 21c-4.716 0-7.073 0-8.538-1.465C2 18.072 2 15.715 2 11V7.944c0-1.816 0-2.724.38-3.406A3 3 0 0 1 3.538 3.38C4.22 3 5.128 3 6.946 3C8.11 3 8.692 3 9.2 3.191c1.163.436 1.643 1.493 2.168 2.542L12.003 7M8.002 7h8.752c2.107 0 3.16 0 3.918.506a3 3 0 0 1 .828.827c.394.59.48 1.36.5 2.667\"/></g>",
+     "height": 24,
+     "name": "folder-shared-01",
      "width": 24
     },
     "carbon": {
@@ -21031,16 +21541,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "folder-zip",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M15 15h-2m2 0h2m-2 0v-4.003m0-4.003v4.003m0 0h-2m2 0h2\"/><path d=\"M8 7h7m-3 0l-.633-1.267c-.525-1.05-1.005-2.106-2.168-2.542C8.69 3 8.108 3 6.944 3c-1.816 0-2.724 0-3.406.38A3 3 0 0 0 2.38 4.538C2 5.22 2 6.128 2 7.944V11c0 4.714 0 7.071 1.464 8.535C4.93 21 7.286 21 12 21h1.25c3.511 0 5.267 0 6.528-.843a5 5 0 0 0 1.38-1.38C22 17.518 22 15.762 22 12.25c0-2.107 0-3.16-.506-3.917a3 3 0 0 0-.827-.827c-.59-.394-1.36-.481-2.667-.5\"/></g>",
-     "height": 24,
-     "name": "folder-zip",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M16 12v-2h2v2zm0 2h-2v-2h2zm0 2v-2h2v2zm-4.825-8l-2-2H4v12h10v-2h2v2h4V8h-4v2h-2V8zM4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8v10q0 .825-.587 1.413T20 20zm0-2V6z\"/>",
      "height": 24,
      "name": "folder-zip-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M15 15h-2m2 0h2m-2 0v-4.003m0-4.003v4.003m0 0h-2m2 0h2\"/><path d=\"M8 7h7m-3 0l-.633-1.267c-.525-1.05-1.005-2.106-2.168-2.542C8.69 3 8.108 3 6.944 3c-1.816 0-2.724 0-3.406.38A3 3 0 0 0 2.38 4.538C2 5.22 2 6.128 2 7.944V11c0 4.714 0 7.071 1.464 8.535C4.93 21 7.286 21 12 21h1.25c3.511 0 5.267 0 6.528-.843a5 5 0 0 0 1.38-1.38C22 17.518 22 15.762 22 12.25c0-2.107 0-3.16-.506-3.917a3 3 0 0 0-.827-.827c-.59-.394-1.36-.481-2.667-.5\"/></g>",
+     "height": 24,
+     "name": "folder-zip",
      "width": 24
     },
     "fluent": {
@@ -21275,6 +21785,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "fork-spoon",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22v-9.15q-1.35-.35-2.175-1.425T3 9V2h2v6h1V2h2v6h1V2h2v7q0 1.35-.825 2.425T8 12.85V22zm10 0v-9.525q-1.35-.45-2.175-1.887T13 7.325Q13 5.1 14.175 3.55T17 2t2.825 1.562T21 7.35q0 1.825-.825 3.25T18 12.475V22z\"/>",
+     "height": 24,
+     "name": "fork-spoon-outline",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M14 4v40M8 5v10c0 5 6 5 6 5s6 0 6-5V5m14 15v24m6-32c0 4.418-2.686 8-6 8s-6-3.582-6-8s2.686-8 6-8s6 3.582 6 8\"/>",
+     "height": 48,
+     "name": "fork-spoon",
+     "width": 48
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M10 9H8V2H6v7H4V2H2v8c0 1.65 1.35 3 3 3h1v9h2v-9h1c1.65 0 3-1.35 3-3V2h-2zm8-7c-2.4 0-4 3.76-4 6.25c0 2.21 1.28 4.05 3 4.58V22h2v-9.17c1.72-.53 3-2.37 3-4.58C22 5.76 20.4 2 18 2\"/>",
+     "height": 24,
+     "name": "fork-spoon",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M18.41 3.287a1 1 0 0 1-.233 1.395l-2.101 1.501a1.965 1.965 0 0 0-.762 2.089l3.343-3.343a1 1 0 1 1 1.414 1.414l-3.343 3.343a1.965 1.965 0 0 0 2.089-.762l1.501-2.101a1 1 0 0 1 1.627 1.162l-1.5 2.102a3.967 3.967 0 0 1-5.234 1.116L12.914 13.5l4.157 4.157a1 1 0 0 1-1.414 1.414L11.5 14.914l-4.157 4.157a1 1 0 1 1-1.414-1.414l4.157-4.157l-1.61-1.61c-.463.25-1.017.44-1.606.509a3.89 3.89 0 0 1-3.278-1.15C2.663 10.319 2.132 9.15 2 8.027c-.13-1.105.12-2.289.93-3.098c.809-.81 1.992-1.06 3.097-.93c1.123.133 2.293.664 3.222 1.593a3.89 3.89 0 0 1 1.15 3.278a4.5 4.5 0 0 1-.51 1.605l1.611 1.61l2.297-2.296a3.967 3.967 0 0 1 1.116-5.233l2.102-1.501a1 1 0 0 1 1.395.232M3.986 7.793c.08.68.411 1.433 1.02 2.041c.522.522 1.099.64 1.631.578c.58-.068 1.056-.348 1.242-.533s.465-.662.533-1.242c.063-.533-.055-1.11-.577-1.631c-.61-.609-1.362-.94-2.042-1.02c-.698-.082-1.199.106-1.45.357s-.439.751-.357 1.45\"/></g>",
+     "height": 24,
+     "name": "fork-spoon-line",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "form",
    "variants": {
     "icon-park-outline": {
@@ -21307,6 +21847,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "forward",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m16 17l-1.425-1.4l4.6-4.6l-4.6-4.6L16 5l6 6zM2 19v-4q0-2.075 1.463-3.537T7 10h6.175l-3.6-3.6L11 5l6 6l-6 6l-1.425-1.4l3.6-3.6H7q-1.25 0-2.125.875T4 15v4z\"/>",
+     "height": 24,
+     "name": "forward-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M19.935 12.626c-.254 1.211-1.608 2.082-4.315 3.822c-2.945 1.893-4.417 2.84-5.61 2.475a2.8 2.8 0 0 1-1.088-.635C8 17.418 8 15.612 8 12s0-5.418.922-6.288a2.8 2.8 0 0 1 1.088-.635c1.193-.365 2.665.582 5.61 2.475c2.707 1.74 4.06 2.61 4.315 3.822c.087.412.087.84 0 1.252Z\"/><path stroke-linecap=\"round\" d=\"M4 5v14\"/></g>",
      "height": 24,
@@ -21451,6 +21997,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "fullscreen",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21v-5h2v3h3v2zm13 0v-2h3v-3h2v5zM3 8V3h5v2H5v3zm16 0V5h-3V3h5v5z\"/>",
+     "height": 24,
+     "name": "fullscreen-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17 3c.464 0 .697 0 .892.022a3.5 3.5 0 0 1 3.086 3.086C21 6.303 21 6.536 21 7m-4 14c.464 0 .697 0 .892-.022a3.5 3.5 0 0 0 3.086-3.086C21 17.697 21 17.464 21 17M7 3c-.464 0-.697 0-.892.022a3.5 3.5 0 0 0-3.086 3.086C3 6.303 3 6.536 3 7m4 14c-.464 0-.697 0-.892-.022a3.5 3.5 0 0 1-3.086-3.086C3 17.697 3 17.464 3 17\"/>",
      "height": 24,
@@ -21493,6 +22045,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "fullscreen-exit",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 21v-3H3v-2h5v5zm10 0v-5h5v2h-3v3zM3 8V6h3V3h2v5zm13 0V3h2v3h3v2z\"/>",
+     "height": 24,
+     "name": "fullscreen-exit-outline",
+     "width": 24
+    },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M10 4H8v4H4v2h6zm0 16v-6H4v2h4v4zm6-4h4v-2h-6v6h2zm4-8h-4V4h-2v6h6z\"/>",
      "height": 24,
@@ -21527,6 +22085,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M4 6.667A2.667 2.667 0 0 1 6.667 4h10.666A2.667 2.667 0 0 1 20 6.667v10.666A2.667 2.667 0 0 1 17.333 20H6.667A2.667 2.667 0 0 1 4 17.333z\"/><path d=\"M9 15.5v.25c0 .69.56 1.25 1.25 1.25a1.38 1.38 0 0 0 1.374-1.244l.752-7.512A1.38 1.38 0 0 1 13.75 7c.69 0 1.25.56 1.25 1.25v.25M9 12h6\"/></g>",
      "height": 24,
      "name": "function",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10 18v-2h1.55l2.625-3l-2.625-3H9.9l-1.6 8.6q-.2 1.125-.925 1.763T5.525 21T3.7 20.4T3 18.8q0-.8.425-1.288t1.075-.487q.625 0 1.063.425T6 18.475q0 .125-.012.225t-.038.225q.125-.025.213-.138t.137-.312L7.85 10H5V8h3.225l.525-2.85q.175-.95.938-1.55T11.5 3q1.1 0 1.8.65t.7 1.625q0 .75-.425 1.238T12.5 7q-.625 0-1.062-.425T11 5.525q0-.125.013-.225t.037-.225q-.15.05-.225.15t-.125.3L10.275 8H15v2h-.8l1.3 1.475L16.8 10H16V8h5v2h-1.55l-2.625 3l2.625 3H21v2h-5v-2h.8l-1.3-1.5l-1.3 1.5h.8v2z\"/>",
+     "height": 24,
+     "name": "function-outline",
      "width": 24
     },
     "hugeicons": {
@@ -21625,17 +22189,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "gamepad",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><rect width=\"40\" height=\"28\" x=\"4\" y=\"13\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" rx=\"14\"/><circle cx=\"31\" cy=\"22\" r=\"2\" fill=\"currentColor\"/><circle cx=\"35\" cy=\"27\" r=\"2\" fill=\"currentColor\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M12 27h10m-10 0h10m2-20v6m0-6v6m-7 9v10\"/></g>",
-     "height": 48,
-     "name": "gamepad",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m12 10.5l-3-3V2h6v5.5zm4.5 4.5l-3-3l3-3H22v6zM2 15V9h5.5l3 3l-3 3zm7 7v-5.5l3-3l3 3V22zm3-14.35l1-1V4h-2v2.65zM4 13h2.65l1-1l-1-1H4zm7 7h2v-2.65l-1-1l-1 1zm6.35-7H20v-2h-2.65l-1 1z\"/>",
      "height": 24,
      "name": "gamepad-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><rect width=\"40\" height=\"28\" x=\"4\" y=\"13\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" rx=\"14\"/><circle cx=\"31\" cy=\"22\" r=\"2\" fill=\"currentColor\"/><circle cx=\"35\" cy=\"27\" r=\"2\" fill=\"currentColor\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M12 27h10m-10 0h10m2-20v6m0-6v6m-7 9v10\"/></g>",
+     "height": 48,
+     "name": "gamepad",
+     "width": 48
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M6 12h4m-2-2v4m7-1h.01M18 11h.01\"/><rect width=\"20\" height=\"12\" x=\"2\" y=\"6\" rx=\"2\"/></g>",
@@ -21661,6 +22225,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "garage",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4v16q0 .825-.587 1.413T20 22zm0-2h16V4H4zm4.288-6.288Q8 13.425 8 13t.288-.712T9 12t.713.288T10 13t-.288.713T9 14t-.712-.288m6 0Q14 13.426 14 13t.288-.712T15 12t.713.288T16 13t-.288.713T15 14t-.712-.288M5 11.1v6.6q0 .35.225.575t.575.225h.4q.35 0 .575-.225T7 17.7v-1.2h10v1.2q0 .35.225.575t.575.225h.4q.35 0 .575-.225T19 17.7v-6.6l-1.65-4.8q-.125-.35-.413-.575T16.3 5.5H7.7q-.35 0-.638.225T6.65 6.3zm2.65-1.6l.7-2h7.3l.7 2zM4 4v16zm3 10.5v-3h10v3z\"/>",
+     "height": 24,
+     "name": "garage-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"m9.781 3.098l-4.11 2.796c-1.307.89-1.961 1.335-2.316 2.011S3 9.385 3 10.99v6.929c0 1.924 0 2.886.586 3.484S5.114 22 7 22h10c1.886 0 2.828 0 3.414-.598s.586-1.56.586-3.484v-6.93c0-1.603 0-2.406-.355-3.083c-.355-.676-1.009-1.121-2.317-2.011l-4.11-2.796C13.144 2.366 12.607 2 12 2s-1.143.366-2.219 1.098\"/><path stroke-linejoin=\"round\" d=\"M7 22v-5c0-1.886 0-2.828.586-3.414S9.114 13 11 13h2c1.886 0 2.828 0 3.414.586S17 15.114 17 17v5M7 16h10M7 19h10\"/><path d=\"M12.125 7H12m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0Z\"/></g>",
      "height": 24,
@@ -21672,12 +22242,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "garage",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4v16q0 .825-.587 1.413T20 22zm0-2h16V4H4zm4.288-6.288Q8 13.425 8 13t.288-.712T9 12t.713.288T10 13t-.288.713T9 14t-.712-.288m6 0Q14 13.426 14 13t.288-.712T15 12t.713.288T16 13t-.288.713T15 14t-.712-.288M5 11.1v6.6q0 .35.225.575t.575.225h.4q.35 0 .575-.225T7 17.7v-1.2h10v1.2q0 .35.225.575t.575.225h.4q.35 0 .575-.225T19 17.7v-6.6l-1.65-4.8q-.125-.35-.413-.575T16.3 5.5H7.7q-.35 0-.638.225T6.65 6.3zm2.65-1.6l.7-2h7.3l.7 2zM4 4v16zm3 10.5v-3h10v3z\"/>",
-     "height": 24,
-     "name": "garage-outline",
-     "width": 24
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"m21.55 8.17l-9-6c-.34-.22-.77-.22-1.11 0l-8.99 6c-.28.19-.45.5-.45.83v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-.33-.17-.65-.45-.83M16 16H8v-2h8zm-8 4v-2h8v2zm10 0v-6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v6H4V9.54l8-5.33l8 5.33V20z\"/>",
@@ -21767,6 +22331,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m13 10l7.383 7.418c.823.82.823 2.148 0 2.967a2.11 2.11 0 0 1-2.976 0L10 13M6 9l4 4m3-3L9 6M3 21h7\"/><path d=\"m6.793 15.793l-3.586-3.586a1 1 0 0 1 0-1.414L5.5 8.5L6 9l3-3l-.5-.5l2.293-2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414L13.5 10.5L13 10l-3 3l.5.5l-2.293 2.293a1 1 0 0 1-1.414 0\"/></g>",
      "height": 24,
      "name": "gavel",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 21v-2h12v2zm5.65-4.85L4 10.5l2.1-2.15L11.8 14zM16 9.8l-5.65-5.7L12.5 2l5.65 5.65zM20.6 20L7.55 6.95l1.4-1.4L22 18.6z\"/>",
+     "height": 24,
+     "name": "gavel-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -21953,6 +22523,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 8H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v-4H7m5-4v8m4-4h3m1-4h-4v8\"/>",
      "height": 24,
      "name": "gif",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11.5 15V9H13v6zM6 15q-.45 0-.725-.312T5 14v-4q0-.375.275-.687T6 9h3q.45 0 .725.313T10 10v.5H6.5v3h2V12H10v2q0 .375-.275.688T9 15zm8.5 0V9H19v1.5h-3v1h2V13h-2v2z\"/>",
+     "height": 24,
+     "name": "gif-outline",
      "width": 24
     },
     "hugeicons": {
@@ -22615,6 +23191,12 @@ export const deck: Deck = {
      "name": "globe",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-.175-.012-.363t-.013-.312q-.125.725-.675 1.2T18 13h-2q-.825 0-1.412-.587T14 11v-1h-4V8q0-.825.588-1.412T12 6h1q0-.575.313-1.012t.762-.713q-.5-.125-1.012-.2T12 4Q8.65 4 6.325 6.325T4 12h5q1.65 0 2.825 1.175T13 16v1h-3v2.75q.5.125.988.188T12 20\"/>",
+     "height": 24,
+     "name": "globe-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12.5 19v3m-2 0h4\"/><circle cx=\"7\" cy=\"7\" r=\"7\" stroke-linecap=\"round\" transform=\"matrix(-1 0 0 1 20.5 2)\"/><path stroke-linejoin=\"round\" d=\"M8.5 4c.654.038.992.359 1.573.973c1.05 1.11 2.1 1.202 2.8.832c1.049-.555.167-1.453 1.399-1.94c.803-.32.915-1.185.468-1.865M20 10c-1.5 0-1.766 1.247-3 1c-2.5-.5-3.208.059-3.208 1.251s0 1.192-.52 2.086c-.338.582-.457 1.163.217 1.663\"/><path stroke-linecap=\"round\" d=\"M6.5 2a9.85 9.85 0 0 0-3 7.083C3.5 14.56 7.977 19 13.5 19a10 10 0 0 0 7-2.835\"/></g>",
      "height": 24,
@@ -22973,8 +23555,44 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "grid-3x3",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 8h18M3 16h18M8 3v18m8-18v18\"/>",
+     "height": 24,
+     "name": "grid-3x3",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8 20v-4H4v-2h4v-4H4V8h4V4h2v4h4V4h2v4h4v2h-4v4h4v2h-4v4h-2v-4h-4v4zm2-6h4v-4h-4z\"/>",
+     "height": 24,
+     "name": "grid-3x3-outline",
+     "width": 24
+    },
+    "lucide": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/><path d=\"M3 9h18M3 15h18M9 3v18m6-18v18\"/></g>",
+     "height": 24,
+     "name": "grid-3x3",
+     "width": 24
+    },
+    "bi": {
+     "body": "<path fill=\"currentColor\" d=\"M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5zM1.5 1a.5.5 0 0 0-.5.5V5h4V1zM5 6H1v4h4zm1 4h4V6H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5zm1 0v4h4v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11zm0-1h4V6h-4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11zm-1 0V1H6v4z\"/>",
+     "height": 16,
+     "name": "grid-3x3",
+     "width": 16
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "group",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 20v-2.8q0-.85.438-1.562T2.6 14.55q1.55-.775 3.15-1.162T9 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T17 17.2V20zm18 0v-3q0-1.1-.612-2.113T16.65 13.15q1.275.15 2.4.513t2.1.887q.9.5 1.375 1.112T23 17v3zM6.175 10.825Q5 9.65 5 8t1.175-2.825T9 4t2.825 1.175T13 8t-1.175 2.825T9 12t-2.825-1.175m11.65 0Q16.65 12 15 12q-.275 0-.7-.062t-.7-.138q.675-.8 1.038-1.775T15 8t-.362-2.025T13.6 4.2q.35-.125.7-.163T15 4q1.65 0 2.825 1.175T19 8t-1.175 2.825M3 18h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T9 15t-2.775.338T3.5 16.35q-.225.125-.363.35T3 17.2zm7.413-8.587Q11 8.825 11 8t-.587-1.412T9 6t-1.412.588T7 8t.588 1.413T9 10t1.413-.587M9 8\"/>",
+     "height": 24,
+     "name": "group-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15 18h-2c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C10 16.398 10 15.932 10 15s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C11.602 12 12.068 12 13 12h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C18 13.602 18 14.068 18 15s0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C16.398 18 15.932 18 15 18\"/><path d=\"M10 13c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C7 11.398 7 10.932 7 10s0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C8.602 7 9.068 7 10 7h2c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C15 8.602 15 9.068 15 10s0 1.398-.152 1.765M16.5 21.5c.93 0 1.394 0 1.78-.077a4 4 0 0 0 3.143-3.143c.077-.386.077-.85.077-1.78m-14-14c-.93 0-1.394 0-1.78.077A4 4 0 0 0 2.577 5.72C2.5 6.106 2.5 6.57 2.5 7.5m5 14c-.93 0-1.394 0-1.78-.077a4 4 0 0 1-3.143-3.143c-.077-.386-.077-.85-.077-1.78m14-14c.93 0 1.394 0 1.78.077a4 4 0 0 1 3.143 3.143c.077.386.077.85.077 1.78\"/></g>",
      "height": 24,
@@ -22986,12 +23604,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "group",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M1 20v-2.8q0-.85.438-1.562T2.6 14.55q1.55-.775 3.15-1.162T9 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T17 17.2V20zm18 0v-3q0-1.1-.612-2.113T16.65 13.15q1.275.15 2.4.513t2.1.887q.9.5 1.375 1.112T23 17v3zM6.175 10.825Q5 9.65 5 8t1.175-2.825T9 4t2.825 1.175T13 8t-1.175 2.825T9 12t-2.825-1.175m11.65 0Q16.65 12 15 12q-.275 0-.7-.062t-.7-.138q.675-.8 1.038-1.775T15 8t-.362-2.025T13.6 4.2q.35-.125.7-.163T15 4q1.65 0 2.825 1.175T19 8t-1.175 2.825M3 18h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T9 15t-2.775.338T3.5 16.35q-.225.125-.363.35T3 17.2zm7.413-8.587Q11 8.825 11 8t-.587-1.412T9 6t-1.412.588T7 8t.588 1.413T9 10t1.413-.587M9 8\"/>",
-     "height": 24,
-     "name": "group-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M5 7a2 2 0 1 0 0-4a2 2 0 0 0 0 4m14 0a2 2 0 1 0 0-4a2 2 0 0 0 0 4m2 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0M5 21a2 2 0 1 0 0-4a2 2 0 0 0 0 4M7.959 5.5a3 3 0 0 0-.13-1.5H12.5A2.5 2.5 0 0 1 15 6.5V9h2.5a2.5 2.5 0 0 1 2.5 2.5v4.67a3 3 0 0 0-1.5-.129V11.5a1 1 0 0 0-1-1H15v2a2.5 2.5 0 0 1-2.5 2.5h-2v2.5a1 1 0 0 0 1 1h4.541a3 3 0 0 0 .13 1.5H11.5A2.5 2.5 0 0 1 9 17.5V15H6.5A2.5 2.5 0 0 1 4 12.5V7.83a3 3 0 0 0 1.5.129V12.5a1 1 0 0 0 1 1H9v-2A2.5 2.5 0 0 1 11.5 9h2V6.5a1 1 0 0 0-1-1zm4.541 8a1 1 0 0 0 1-1v-2h-2a1 1 0 0 0-1 1v2z\"/>",
@@ -23071,6 +23683,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "hail",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 22v-6h3v6zm5 0V10.1q-1.25.425-1.625 1.563T7 14H5q0-3.2 1.875-5.1T12 7q2.5 0 3.75-1.238T17 2h2q0 2.2-.937 3.938T15 8.4V22h-2v-6h-2v6zm3-16q-.825 0-1.412-.587T10 4t.588-1.412T12 2t1.413.588T14 4t-.587 1.413T12 6\"/>",
+     "height": 24,
+     "name": "hail-outline",
+     "width": 24
+    },
     "carbon": {
      "body": "<circle cx=\"21.5\" cy=\"29.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"24.5\" cy=\"25.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"7.5\" cy=\"25.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"4.5\" cy=\"29.5\" r=\"1.5\" fill=\"currentColor\"/><circle cx=\"10.499\" cy=\"29.5\" r=\"1.5\" fill=\"currentColor\"/><path fill=\"currentColor\" d=\"m15.868 30.496l-1.736-.992L17.276 24h-5.999l4.855-8.496l1.736.992L14.723 22h6.001z\"/><path fill=\"currentColor\" d=\"M23.5 22H23v-2h.5a4.498 4.498 0 0 0 .356-8.981l-.815-.064l-.099-.812a6.994 6.994 0 0 0-13.883 0l-.1.812l-.815.064A4.498 4.498 0 0 0 8.5 20H9v2h-.5A6.497 6.497 0 0 1 7.2 9.136a8.994 8.994 0 0 1 17.6 0A6.497 6.497 0 0 1 23.5 22\"/>",
      "height": 32,
@@ -23389,16 +24007,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "hard-drive",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"m20.71 8.701l1.209 4.028c.039.13.058.195.069.262l.003.02c.009.068.009.136.009.272c0 3.497 0 5.245-1.019 6.384q-.149.165-.314.314C19.528 21 17.78 21 14.283 21H9.717c-3.497 0-5.245 0-6.384-1.019a4 4 0 0 1-.314-.314C2 18.528 2 16.78 2 13.283c0-.136 0-.204.01-.271l.002-.02c.01-.068.03-.133.07-.263L3.29 8.7c.824-2.746 1.236-4.12 2.298-4.91S8.085 3 10.952 3h2.096c2.867 0 4.3 0 5.364.79c1.063.792 1.475 2.165 2.298 4.911M2 13h20\"/><path d=\"M18.125 17H18m-3.875 0H14m4.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m-4 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
-     "height": 24,
-     "name": "hard-drive",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 17h16v-6H4zm14.063-1.937q.437-.438.437-1.063t-.437-1.062T17 12.5t-1.062.438T15.5 14t.438 1.063T17 15.5t1.063-.437M22 9h-2.825l-2-2H6.825l-2 2H2l3.425-3.425q.275-.275.638-.425T6.825 5h10.35q.4 0 .763.15t.637.425zM4 19q-.825 0-1.412-.587T2 17V9h20v8q0 .825-.587 1.413T20 19z\"/>",
      "height": 24,
      "name": "hard-drive-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"m20.71 8.701l1.209 4.028c.039.13.058.195.069.262l.003.02c.009.068.009.136.009.272c0 3.497 0 5.245-1.019 6.384q-.149.165-.314.314C19.528 21 17.78 21 14.283 21H9.717c-3.497 0-5.245 0-6.384-1.019a4 4 0 0 1-.314-.314C2 18.528 2 16.78 2 13.283c0-.136 0-.204.01-.271l.002-.02c.01-.068.03-.133.07-.263L3.29 8.7c.824-2.746 1.236-4.12 2.298-4.91S8.085 3 10.952 3h2.096c2.867 0 4.3 0 5.364.79c1.063.792 1.475 2.165 2.298 4.911M2 13h20\"/><path d=\"M18.125 17H18m-3.875 0H14m4.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m-4 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
+     "height": 24,
+     "name": "hard-drive",
      "width": 24
     },
     "fluent": {
@@ -23803,16 +24421,16 @@ export const deck: Deck = {
      "name": "headphones",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M20.085 17c.5-1.5.915-3.563.915-5a9 9 0 1 0-18 0c0 1.437.415 3.5.915 5\"/><path d=\"m8.977 19.604l-1.738-4.991c-.186-.466-.777-.7-1.264-.583a2.9 2.9 0 0 0-1.828 3.66l.438 1.326a2.88 2.88 0 0 0 3.643 1.836c.461-.196.876-.762.749-1.248m6.047 0l1.737-4.991c.186-.466.777-.7 1.264-.583a2.9 2.9 0 0 1 1.828 3.66l-.438 1.326a2.88 2.88 0 0 1-3.643 1.836c-.461-.196-.876-.762-.748-1.248\"/></g>",
-     "height": 24,
-     "name": "headphones",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9 21H5q-.825 0-1.412-.587T3 19v-7q0-1.875.713-3.512t1.924-2.85t2.85-1.925T12 3t3.513.713t2.85 1.924t1.925 2.85T21 12v7q0 .825-.587 1.413T19 21h-4v-8h4v-1q0-2.925-2.037-4.962T12 5T7.038 7.038T5 12v1h4zm-2-6H5v4h2zm10 0v4h2v-4zM7 15H5zm10 0h2z\"/>",
      "height": 24,
      "name": "headphones-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M20.085 17c.5-1.5.915-3.563.915-5a9 9 0 1 0-18 0c0 1.437.415 3.5.915 5\"/><path d=\"m8.977 19.604l-1.738-4.991c-.186-.466-.777-.7-1.264-.583a2.9 2.9 0 0 0-1.828 3.66l.438 1.326a2.88 2.88 0 0 0 3.643 1.836c.461-.196.876-.762.749-1.248m6.047 0l1.737-4.991c.186-.466.777-.7 1.264-.583a2.9 2.9 0 0 1 1.828 3.66l-.438 1.326a2.88 2.88 0 0 1-3.643 1.836c-.461-.196-.876-.762-.748-1.248\"/></g>",
+     "height": 24,
+     "name": "headphones",
      "width": 24
     },
     "fluent": {
@@ -24031,16 +24649,16 @@ export const deck: Deck = {
      "name": "heart-minus",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14 16h7m-.198-3.5C21.534 11.242 22 9.948 22 8.694C22 5.826 19.895 3.5 17 3.5c-1.5 0-3 .5-5 2.5c-2-2-3.5-2.5-5-2.5c-2.895 0-5 2.326-5 5.194c0 4.34 5.59 9.164 8.41 11.274c.95.71 2.23.71 3.18 0q.288-.216.611-.468\"/>",
-     "height": 24,
-     "name": "heart-minus",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m11 21l-3.175-2.85q-1.8-1.625-3.088-2.9t-2.125-2.4t-1.225-2.175T1 8.475q0-2.35 1.575-3.912T6.5 3q1.3 0 2.475.55T11 5.1q.85-1 2.025-1.55T15.5 3q2.1 0 3.825 1.475t1.725 4q0 .35-.05.738t-.15.787h-2.125q.125-.45.2-.85T19 8.4q0-1.875-1.25-2.637T15.5 5q-1.275 0-2.2.688T11.575 7.5h-1.15Q9.65 6.375 8.662 5.688T6.5 5q-1.425 0-2.463.988T3 8.474q0 .825.35 1.675t1.25 1.963t2.45 2.6T11 18.3q.65-.575 1.525-1.325t1.4-1.25l.225.225l.488.488l.487.487l.225.225q-.55.5-1.4 1.238t-1.5 1.312zm4-7v-2h8v2z\"/>",
      "height": 24,
      "name": "heart-minus-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14 16h7m-.198-3.5C21.534 11.242 22 9.948 22 8.694C22 5.826 19.895 3.5 17 3.5c-1.5 0-3 .5-5 2.5c-2-2-3.5-2.5-5-2.5c-2.895 0-5 2.326-5 5.194c0 4.34 5.59 9.164 8.41 11.274c.95.71 2.23.71 3.18 0q.288-.216.611-.468\"/>",
+     "height": 24,
+     "name": "heart-minus",
      "width": 24
     },
     "lucide": {
@@ -24157,16 +24775,16 @@ export const deck: Deck = {
      "name": "helicopter",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14 4v4\"/><path stroke-linejoin=\"round\" d=\"m14.184 7.822l-7.132.224c-.716.023-1.073.034-1.38-.102c-.588-.261-.827-.882-1.09-1.428c-.293-.609-.852-.51-1.431-.51c-.614 0-.92 0-1.072.208c-.151.208-.067.514.101 1.127l.057.205c.287 1.04.43 1.561.776 1.935c.345.375.84.546 1.83.888l4.325 1.496c.916.316 1.383.72 1.851 1.594c.722 1.346 1.082 2.02 1.606 2.498c.384.35.829.622 1.31.8c.658.243 1.4.243 2.886.243h3.915c.87 0 1.264-.516 1.264-1.312c0-1.516 0-2.274-.123-2.898c-.5-2.53-2.443-4.485-4.897-4.928c-.605-.109-1.336-.086-2.796-.04Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21.5 13.5H19a5 5 0 0 1-5-5M12 20h2m7 0h-2m0 0l1-3m-1 3h-5m0 0l1-3\"/><path stroke-linecap=\"round\" d=\"M11 4h6\"/></g>",
-     "height": 24,
-     "name": "helicopter",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9 13V7Q6.5 7 4.75 8.75T3 13zm4 4V7h-2v8H3v2zm2-3.2l6-.6V12h-6zM13 22H3v-2h10zm2-3H3q-.825 0-1.412-.587T1 17v-4q0-3.35 2.325-5.675T9 5h6v5h5l1-2h2v7l-8 .8zm4-15H3V2h16zm-4 9.8V12zM13 17\"/>",
      "height": 24,
      "name": "helicopter-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14 4v4\"/><path stroke-linejoin=\"round\" d=\"m14.184 7.822l-7.132.224c-.716.023-1.073.034-1.38-.102c-.588-.261-.827-.882-1.09-1.428c-.293-.609-.852-.51-1.431-.51c-.614 0-.92 0-1.072.208c-.151.208-.067.514.101 1.127l.057.205c.287 1.04.43 1.561.776 1.935c.345.375.84.546 1.83.888l4.325 1.496c.916.316 1.383.72 1.851 1.594c.722 1.346 1.082 2.02 1.606 2.498c.384.35.829.622 1.31.8c.658.243 1.4.243 2.886.243h3.915c.87 0 1.264-.516 1.264-1.312c0-1.516 0-2.274-.123-2.898c-.5-2.53-2.443-4.485-4.897-4.928c-.605-.109-1.336-.086-2.796-.04Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21.5 13.5H19a5 5 0 0 1-5-5M12 20h2m7 0h-2m0 0l1-3m-1 3h-5m0 0l1-3\"/><path stroke-linecap=\"round\" d=\"M11 4h6\"/></g>",
+     "height": 24,
+     "name": "helicopter",
      "width": 24
     },
     "carbon": {
@@ -24223,17 +24841,17 @@ export const deck: Deck = {
      "name": "help",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 28.625v-4a6 6 0 1 0-6-6\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M24 37.625a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5\" clip-rule=\"evenodd\"/></g>",
-     "height": 48,
-     "name": "help",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12.838 17.638q.362-.363.362-.888t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362t.888-.363M11.05 14.15h1.85q0-.825.188-1.3t1.062-1.3q.65-.65 1.025-1.238T15.55 8.9q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75T8.55 8.55l1.65.65q.125-.45.563-.975T12.1 7.7q.8 0 1.2.438t.4.962q0 .5-.3.938t-.75.812q-1.1.975-1.35 1.475t-.25 1.825M12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "help-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 28.625v-4a6 6 0 1 0-6-6\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M24 37.625a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5\" clip-rule=\"evenodd\"/></g>",
+     "height": 48,
+     "name": "help",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 26a12 12 0 1 1 12-12a12 12 0 0 1-12 12\"/><circle cx=\"16\" cy=\"23.5\" r=\"1.5\" fill=\"currentColor\"/><path fill=\"currentColor\" d=\"M17 8h-1.5a4.49 4.49 0 0 0-4.5 4.5v.5h2v-.5a2.5 2.5 0 0 1 2.5-2.5H17a2.5 2.5 0 0 1 0 5h-2v4.5h2V17a4.5 4.5 0 0 0 0-9\"/>",
@@ -24289,16 +24907,16 @@ export const deck: Deck = {
      "name": "hexagon",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M7.843 3.802C9.872 2.601 10.886 2 12 2s2.128.6 4.157 1.802l.686.406c2.029 1.202 3.043 1.803 3.6 2.792c.557.99.557 2.19.557 4.594v.812c0 2.403 0 3.605-.557 4.594s-1.571 1.59-3.6 2.791l-.686.407C14.128 21.399 13.114 22 12 22s-2.128-.6-4.157-1.802l-.686-.407c-2.029-1.2-3.043-1.802-3.6-2.791C3 16.01 3 14.81 3 12.406v-.812C3 9.19 3 7.989 3.557 7s1.571-1.59 3.6-2.792z\"/>",
-     "height": 24,
-     "name": "hexagon",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m6.8 21l-5.2-9l5.2-9h10.4l5.2 9l-5.2 9zm1.15-2h8.1l4.025-7l-4.025-7h-8.1L3.9 12zM12 12\"/>",
      "height": 24,
      "name": "hexagon-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M7.843 3.802C9.872 2.601 10.886 2 12 2s2.128.6 4.157 1.802l.686.406c2.029 1.202 3.043 1.803 3.6 2.792c.557.99.557 2.19.557 4.594v.812c0 2.403 0 3.605-.557 4.594s-1.571 1.59-3.6 2.791l-.686.407C14.128 21.399 13.114 22 12 22s-2.128-.6-4.157-1.802l-.686-.407c-2.029-1.2-3.043-1.802-3.6-2.791C3 16.01 3 14.81 3 12.406v-.812C3 9.19 3 7.989 3.557 7s1.571-1.59 3.6-2.792z\"/>",
+     "height": 24,
+     "name": "hexagon",
      "width": 24
     },
     "fluent": {
@@ -24421,6 +25039,12 @@ export const deck: Deck = {
      "name": "history",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 21q-3.45 0-6.012-2.287T3.05 13H5.1q.35 2.6 2.313 4.3T12 19q2.925 0 4.963-2.037T19 12t-2.037-4.962T12 5q-1.725 0-3.225.8T6.25 8H9v2H3V4h2v2.35q1.275-1.6 3.113-2.475T12 3q1.875 0 3.513.713t2.85 1.924t1.925 2.85T21 12t-.712 3.513t-1.925 2.85t-2.85 1.925T12 21m2.8-4.8L11 12.4V7h2v4.6l3.2 3.2z\"/>",
+     "height": 24,
+     "name": "history-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M5.818 6.727V14h7.273\"/><path d=\"M4 24c0 11.046 8.954 20 20 20v0c11.046 0 20-8.954 20-20S35.046 4 24 4c-7.402 0-13.865 4.021-17.323 9.998\"/><path d=\"m24.005 12l-.001 12.009l8.48 8.48\"/></g>",
      "height": 48,
@@ -24481,6 +25105,12 @@ export const deck: Deck = {
      "name": "home",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 19h3v-6h6v6h3v-9l-6-4.5L6 10zm-2 2V9l8-6l8 6v12h-7v-6h-2v6zm8-8.75\"/>",
+     "height": 24,
+     "name": "home-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3 11.99v2.51c0 3.3 0 4.95 1.025 5.975S6.7 21.5 10 21.5h4c3.3 0 4.95 0 5.975-1.025S21 17.8 21 14.5v-2.51c0-1.682 0-2.522-.356-3.25s-1.02-1.244-2.346-2.276l-2-1.555C14.233 3.303 13.2 2.5 12 2.5s-2.233.803-4.298 2.409l-2 1.555C4.375 7.496 3.712 8.012 3.356 8.74S3 10.308 3 11.99\"/><path d=\"M15 17c-.8.622-1.85 1-3 1s-2.2-.378-3-1\"/></g>",
      "height": 24,
@@ -24492,12 +25122,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "home",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 19h3v-6h6v6h3v-9l-6-4.5L6 10zm-2 2V9l8-6l8 6v12h-7v-6h-2v6zm8-8.75\"/>",
-     "height": 24,
-     "name": "home-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.55 2.532a2.25 2.25 0 0 1 2.9 0l6.75 5.692c.507.428.8 1.057.8 1.72v9.31a1.75 1.75 0 0 1-1.75 1.75h-3.5a1.75 1.75 0 0 1-1.75-1.75v-5.007a.25.25 0 0 0-.25-.25h-3.5a.25.25 0 0 0-.25.25v5.007a1.75 1.75 0 0 1-1.75 1.75h-3.5A1.75 1.75 0 0 1 3 19.254v-9.31c0-.663.293-1.292.8-1.72zm1.933 1.147a.75.75 0 0 0-.966 0L4.767 9.37a.75.75 0 0 0-.267.573v9.31c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-5.007c0-.967.784-1.75 1.75-1.75h3.5c.966 0 1.75.783 1.75 1.75v5.007c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-9.31a.75.75 0 0 0-.267-.573z\"/>",
@@ -24661,6 +25285,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "hotel",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 19V4h2v10h8V6h8q1.65 0 2.825 1.175T23 10v9h-2v-3H3v3zm3.875-6.875Q4 11.25 4 10t.875-2.125T7 7t2.125.875T10 10t-.875 2.125T7 13t-2.125-.875M13 14h8v-4q0-.825-.587-1.412T19 8h-6zm-5.287-3.287Q8 10.425 8 10t-.288-.712T7 9t-.712.288T6 10t.288.713T7 11t.713-.288M13 8v6z\"/>",
+     "height": 24,
+     "name": "hotel-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3 4v16c0 .943 0 1.414.293 1.707S4.057 22 5 22h14c.943 0 1.414 0 1.707-.293S21 20.943 21 20V4M10.5 8v1.5m0 1.5V9.5m3-1.5v1.5m0 1.5V9.5m-3 0h3\"/><path d=\"M14 22v-4a2 2 0 0 0-4 0v4M2 4h6c.64-1.173 2.19-2 4-2s3.36.827 4 2h6M6 8h1m-1 4h1m-1 4h1m10-8h1m-1 4h1m-1 4h1\"/></g>",
      "height": 24,
@@ -24672,12 +25302,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "hotel",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M1 19V4h2v10h8V6h8q1.65 0 2.825 1.175T23 10v9h-2v-3H3v3zm3.875-6.875Q4 11.25 4 10t.875-2.125T7 7t2.125.875T10 10t-.875 2.125T7 13t-2.125-.875M13 14h8v-4q0-.825-.587-1.412T19 8h-6zm-5.287-3.287Q8 10.425 8 10t-.288-.712T7 9t-.712.288T6 10t.288.713T7 11t.713-.288M13 8v6z\"/>",
-     "height": 24,
-     "name": "hotel-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M9.5 15A1.5 1.5 0 1 1 8 16.5A1.5 1.5 0 0 1 9.5 15m0-2a3.5 3.5 0 1 0 3.5 3.5A3.5 3.5 0 0 0 9.5 13\"/><path fill=\"currentColor\" d=\"M25 14h-8a2 2 0 0 0-2 2v6H4V10.6l12-6.46l12.53 6.74l.94-1.76l-13-7a1 1 0 0 0-.94 0l-13 7A1 1 0 0 0 2 10v20h2v-6h24v6h2V19a5 5 0 0 0-5-5m-8 8v-6h8a3 3 0 0 1 3 3v3Z\"/>",
@@ -24715,6 +25339,12 @@ export const deck: Deck = {
      "name": "hourglass",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8 20h8v-3q0-1.65-1.175-2.825T12 13t-2.825 1.175T8 17zm6.825-10.175Q16 8.65 16 7V4H8v3q0 1.65 1.175 2.825T12 11t2.825-1.175M4 22v-2h2v-3q0-1.525.713-2.863T8.7 12q-1.275-.8-1.987-2.137T6 7V4H4V2h16v2h-2v3q0 1.525-.712 2.863T15.3 12q1.275.8 1.988 2.138T18 17v3h2v2zm8-18\"/>",
+     "height": 24,
+     "name": "hourglass-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 3h16M5.5 3v2.03A4 4 0 0 0 7.061 8.2L12 12l4.939-3.8A4 4 0 0 0 18.5 5.03V3m-13 18v-2.03a4 4 0 0 1 1.561-3.17L12 12l4.939 3.8a4 4 0 0 1 1.561 3.17V21M4 21h16\"/>",
      "height": 24,
@@ -24726,12 +25356,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "hourglass",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M8 20h8v-3q0-1.65-1.175-2.825T12 13t-2.825 1.175T8 17zm6.825-10.175Q16 8.65 16 7V4H8v3q0 1.65 1.175 2.825T12 11t2.825-1.175M4 22v-2h2v-3q0-1.525.713-2.863T8.7 12q-1.275-.8-1.987-2.137T6 7V4H4V2h16v2h-2v3q0 1.525-.712 2.863T15.3 12q1.275.8 1.988 2.138T18 17v3h2v2zm8-18\"/>",
-     "height": 24,
-     "name": "hourglass-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M4 4.75A2.75 2.75 0 0 1 6.75 2h10.5A2.75 2.75 0 0 1 20 4.75v.42a5.75 5.75 0 0 1-2.792 4.93l-1.81 1.086a.75.75 0 0 0-.036 1.263l2.121 1.443A5.75 5.75 0 0 1 20 18.647v.603A2.75 2.75 0 0 1 17.25 22H6.75A2.75 2.75 0 0 1 4 19.25v-.604a5.75 5.75 0 0 1 2.517-4.754l2.121-1.443a.75.75 0 0 0-.036-1.263L6.792 10.1A5.75 5.75 0 0 1 4 5.17zM6.75 3.5c-.69 0-1.25.56-1.25 1.25v.42a4.25 4.25 0 0 0 2.063 3.643L9.373 9.9c1.41.845 1.467 2.866.108 3.79l-2.12 1.442A4.25 4.25 0 0 0 5.5 18.647v.603c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-.604a4.25 4.25 0 0 0-1.86-3.514l-2.121-1.442c-1.359-.924-1.302-2.945.107-3.79l1.81-1.087A4.25 4.25 0 0 0 18.5 5.17v-.42c0-.69-.56-1.25-1.25-1.25z\"/>",
@@ -24793,16 +25417,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "house",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M13 2L2 7m10-4v19H7c-1.886 0-2.828 0-3.414-.586S3 19.886 3 18V7m9 0l10 5\"/><path d=\"M10 22h7c1.886 0 2.828 0 3.414-.586S21 19.885 21 18v-6.5M18 10V7M7 11h1m-1 4h1m8-1h1m-.5 8v-4\"/></g>",
-     "height": 24,
-     "name": "house-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 20v-9.15L2.2 13L1 11.4L12 3l4 3.05V4h3v4.35l4 3.05l-1.2 1.6l-2.8-2.15V20h-6v-6h-2v6zm2-2h2v-6h6v6h2V9.325l-5-3.8l-5 3.8zm3-7.975h4q0-.8-.6-1.313T12 8.2t-1.4.513t-.6 1.312M9 18v-6h6v6v-6H9z\"/>",
      "height": 24,
      "name": "house-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M13 2L2 7m10-4v19H7c-1.886 0-2.828 0-3.414-.586S3 19.886 3 18V7m9 0l10 5\"/><path d=\"M10 22h7c1.886 0 2.828 0 3.414-.586S21 19.885 21 18v-6.5M18 10V7M7 11h1m-1 4h1m8-1h1m-.5 8v-4\"/></g>",
+     "height": 24,
+     "name": "house-01",
      "width": 24
     },
     "lucide": {
@@ -24907,17 +25531,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "id-card",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M42 8H6a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h36a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z\"/><path d=\"M36 16h-8v8h8z\"/><path stroke-linecap=\"round\" d=\"M12 32h24M12 16h6m-6 8h6\"/></g>",
-     "height": 48,
-     "name": "id-card",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M14 13h5v-2h-5zm0-3h5V8h-5zm-9 6h8v-.55q0-1.125-1.1-1.787T9 13t-2.9.663T5 15.45zm5.413-4.587Q11 10.825 11 10t-.587-1.412T9 8t-1.412.588T7 10t.588 1.413T9 12t1.413-.587M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm0-2h16V6H4zm0 0V6z\"/>",
      "height": 24,
      "name": "id-card-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M42 8H6a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h36a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z\"/><path d=\"M36 16h-8v8h8z\"/><path stroke-linecap=\"round\" d=\"M12 32h24M12 16h6m-6 8h6\"/></g>",
+     "height": 48,
+     "name": "id-card",
+     "width": 48
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 10h2m-2 4h2M6.17 15a3 3 0 0 1 5.66 0\"/><circle cx=\"9\" cy=\"11\" r=\"2\"/><rect width=\"20\" height=\"14\" x=\"2\" y=\"5\" rx=\"2\"/></g>",
@@ -24937,16 +25561,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "image",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"7.5\" cy=\"7.5\" r=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z\"/><path d=\"M5 21c4.372-5.225 9.274-12.116 16.498-7.458\"/></g>",
-     "height": 24,
-     "name": "image-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zm1-2h12l-3.75-5l-3 4L9 13zm-1 2V5z\"/>",
      "height": 24,
      "name": "image-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"7.5\" cy=\"7.5\" r=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z\"/><path d=\"M5 21c4.372-5.225 9.274-12.116 16.498-7.458\"/></g>",
+     "height": 24,
+     "name": "image-01",
      "width": 24
     },
     "fluent": {
@@ -25105,6 +25729,12 @@ export const deck: Deck = {
      "name": "inbox",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14v-3h-3q-.75.95-1.787 1.475T12 18t-2.212-.525T8 16H5zm8.725-3.55Q14.5 14.9 14.8 14H19V5H5v9h4.2q.3.9 1.075 1.45T12 16t1.725-.55M5 19h14z\"/>",
+     "height": 24,
+     "name": "inbox-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12\"/><path d=\"M21.5 13.5h-4.926c-.842 0-1.503.704-1.875 1.447c-.403.808-1.21 1.553-2.699 1.553s-2.296-.745-2.7-1.553c-.37-.743-1.032-1.447-1.874-1.447H2.5\"/></g>",
      "height": 24,
@@ -25116,12 +25746,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "inbox",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14v-3h-3q-.75.95-1.787 1.475T12 18t-2.212-.525T8 16H5zm8.725-3.55Q14.5 14.9 14.8 14H19V5H5v9h4.2q.3.9 1.075 1.45T12 16t1.725-.55M5 19h14z\"/>",
-     "height": 24,
-     "name": "inbox-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M22 12h-6l-2 3h-4l-2-3H2\"/><path d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11\"/></g>",
@@ -25249,17 +25873,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "info",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M24 11a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5\" clip-rule=\"evenodd\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24.5 34V20h-2M21 34h7\"/></g>",
-     "height": 48,
-     "name": "info",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11 17h2v-6h-2zm1.713-8.287Q13 8.425 13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9t.713-.288M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "info-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z\"/><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M24 11a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5\" clip-rule=\"evenodd\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24.5 34V20h-2M21 34h7\"/></g>",
+     "height": 48,
+     "name": "info",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12.002 1.999c5.523 0 10.001 4.478 10.001 10.002c0 5.523-4.478 10.001-10.001 10.001C6.478 22.002 2 17.524 2 12.001C2 6.477 6.478 1.999 12.002 1.999m0 1.5a8.502 8.502 0 1 0 0 17.003a8.502 8.502 0 0 0 0-17.003M12 10.5a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0v-5a.75.75 0 0 1 .75-.75M12 9a1 1 0 1 0 0-2a1 1 0 0 0 0 2\"/>",
@@ -25499,8 +26123,44 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "javascript",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7.5 15q-.625 0-1.062-.437T6 13.5v-1h1.5v1H9V9h1.5v4.5q0 .625-.437 1.063T9 15zm5.5 0q-.425 0-.712-.288T12 14v-1h1.5v.5h2v-1H13q-.425 0-.712-.288T12 11.5V10q0-.425.288-.712T13 9h3q.425 0 .713.288T17 10v1h-1.5v-.5h-2v1H16q.425 0 .713.288T17 12.5V14q0 .425-.288.713T16 15z\"/>",
+     "height": 24,
+     "name": "javascript-outline",
+     "width": 24
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M14 11.25c0-.966.784-1.75 1.75-1.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v1.5c0 .138.112.25.25.25h.5c.966 0 1.75.784 1.75 1.75v1.5A1.75 1.75 0 0 1 16.25 18h-1.5a.75.75 0 0 1 0-1.5h1.5a.25.25 0 0 0 .25-.25v-1.5a.25.25 0 0 0-.25-.25h-.5A1.75 1.75 0 0 1 14 12.75zm-1.25-1a.75.75 0 0 0-1.5 0v6a.25.25 0 0 1-.25.25H9.75a.75.75 0 0 0 0 1.5H11a1.75 1.75 0 0 0 1.75-1.75zM3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3H6.25A3.25 3.25 0 0 0 3 6.25M6.25 4.5h11.5c.966 0 1.75.784 1.75 1.75v11.5a1.75 1.75 0 0 1-1.75 1.75H6.25a1.75 1.75 0 0 1-1.75-1.75V6.25c0-.966.784-1.75 1.75-1.75\"/>",
+     "height": 24,
+     "name": "javascript-24-regular",
+     "width": 24
+    },
+    "ri": {
+     "body": "<path fill=\"currentColor\" d=\"m13.334 16.055l-.858 1.188q1.221 1.089 3.036 1.089q1.386-.033 2.112-.715q.737-.693.737-1.65q0-.935-.517-1.54t-1.738-.968q-1.01-.307-1.43-.561q-.418-.264-.418-.638q0-.34.341-.55q.342-.21.913-.209q.419 0 .946.165q.528.143.935.462l.77-1.199q-1.011-.814-2.684-.814q-1.198 0-1.969.616q-.792.615-.792 1.529q.011.968.638 1.507q.638.54 1.815.88q.98.307 1.331.616a.97.97 0 0 1 .341.748a.75.75 0 0 1-.34.66q-.353.242-1.013.242q-1.077.01-2.156-.858m-5.53.638a2.2 2.2 0 0 1-.616-.583l-1.034.847q.463.78 1.144 1.089q.638.285 1.463.286q.45 0 .935-.143t.891-.484q.715-.572.748-1.87v-5.588H9.85v5.302q0 .76-.34 1.067q-.342.297-.859.297q-.495 0-.847-.22M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z\"/>",
+     "height": 24,
+     "name": "javascript-line",
+     "width": 24
+    },
+    "bi": {
+     "body": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234q-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113q.255.45.703.674q.44.225 1.016.225q.88 0 1.406-.498q.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674a2.1 2.1 0 0 0-.225.996q0 .753.293 1.182q.303.42.967.732l.469.215q.438.186.625.43q.185.244.185.635q0 .478-.166.703q-.156.224-.527.224q-.361.001-.547-.244q-.186-.243-.205-.752h-1.162q.02.996.498 1.524q.479.527 1.386.527q.909 0 1.417-.518q.507-.517.507-1.484q0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381q-.166-.214-.166-.576q0-.4.165-.596q.177-.195.508-.195q.361 0 .508.234q.156.234.176.703h1.123q-.03-.976-.498-1.484q-.47-.518-1.309-.518\"/>",
+     "height": 16,
+     "name": "javascript",
+     "width": 16
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "joystick",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m6.8 13l5.2 3l5.2-3l-4.2-2.425V14h-2v-3.425zM11 8.275V7.85q-1.1-.325-1.8-1.238T8.5 4.5q0-1.45 1.025-2.475T12 1t2.475 1.025T15.5 4.5q0 1.2-.7 2.113T13 7.85v.425l7 4.025q.475.275.738.738T21 14.05v1.9q0 .55-.262 1.013T20 17.7l-7 4.025Q12.525 22 12 22t-1-.275L4 17.7q-.475-.275-.737-.737T3 15.95v-1.9q0-.55.263-1.012T4 12.3zm0 9.45l-6-3.45v1.675L12 20l7-4.05v-1.675l-6 3.45Q12.525 18 12 18t-1-.275m2.063-12.163q.437-.437.437-1.062t-.437-1.062T12 3t-1.062.438T10.5 4.5t.438 1.063T12 6t1.063-.437M12 20\"/>",
+     "height": 24,
+     "name": "joystick-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.475 22h-6.95c-1.211 0-1.817 0-2.142-.249a.98.98 0 0 1-.371-.572c-.078-.37.234-.823.857-1.728c.666-.968 1-1.452 1.476-1.787a3.6 3.6 0 0 1 .975-.48C9.894 17 10.542 17 11.838 17h.324c1.296 0 1.944 0 2.518.184c.353.113.682.275.975.48c.476.335.81.82 1.476 1.787c.623.905.935 1.358.857 1.729a.98.98 0 0 1-.371.571c-.325.249-.93.249-2.142.249M8.5 12h7M12 13v4m-1.994-5s1.032-5.862-.836-8.581c-.545-.794.35-1.119.86-1.262c1.924-.542 3.087.35 3.528 2.234a.92.92 0 0 1-.067.594l-.256.56a1 1 0 0 0 .033.894l.488.887a1 1 0 0 1-.02.993l-.374.623c-.204.34-.184.766-.014 1.123C13.756 10.924 14 12 14 12\"/>",
      "height": 24,
@@ -25512,12 +26172,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "joystick",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"m6.8 13l5.2 3l5.2-3l-4.2-2.425V14h-2v-3.425zM11 8.275V7.85q-1.1-.325-1.8-1.238T8.5 4.5q0-1.45 1.025-2.475T12 1t2.475 1.025T15.5 4.5q0 1.2-.7 2.113T13 7.85v.425l7 4.025q.475.275.738.738T21 14.05v1.9q0 .55-.262 1.013T20 17.7l-7 4.025Q12.525 22 12 22t-1-.275L4 17.7q-.475-.275-.737-.737T3 15.95v-1.9q0-.55.263-1.012T4 12.3zm0 9.45l-6-3.45v1.675L12 20l7-4.05v-1.675l-6 3.45Q12.525 18 12 18t-1-.275m2.063-12.163q.437-.437.437-1.062t-.437-1.062T12 3t-1.062.438T10.5 4.5t.438 1.063T12 6t1.063-.437M12 20\"/>",
-     "height": 24,
-     "name": "joystick-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M21 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM6 15v-2m6 2V9\"/><circle cx=\"12\" cy=\"6\" r=\"3\"/></g>",
@@ -25615,6 +26269,12 @@ export const deck: Deck = {
      "name": "key",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5.588 13.413Q5 12.825 5 12t.588-1.412T7 10t1.413.588T9 12t-.587 1.413T7 14t-1.412-.587M7 18q-2.5 0-4.25-1.75T1 12t1.75-4.25T7 6q1.675 0 3.038.825T12.2 9H21l3 3l-4.5 4.5l-2-1.5l-2 1.5l-2.125-1.5H12.2q-.8 1.35-2.162 2.175T7 18m0-2q1.4 0 2.463-.85T10.875 13H14l1.45 1.025L17.5 12.5l1.775 1.375L21.15 12l-1-1h-9.275q-.35-1.3-1.412-2.15T7 8Q5.35 8 4.175 9.175T3 12t1.175 2.825T7 16\"/>",
+     "height": 24,
+     "name": "key-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.5 14.5a6 6 0 1 0-5.47-3.53L2.5 18.5v3h3v-2h2v-2h2l3.53-3.53c.754.34 1.59.53 2.47.53m2-8l-1 1\"/>",
      "height": 24,
@@ -25626,12 +26286,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "key",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5.588 13.413Q5 12.825 5 12t.588-1.412T7 10t1.413.588T9 12t-.587 1.413T7 14t-1.412-.587M7 18q-2.5 0-4.25-1.75T1 12t1.75-4.25T7 6q1.675 0 3.038.825T12.2 9H21l3 3l-4.5 4.5l-2-1.5l-2 1.5l-2.125-1.5H12.2q-.8 1.35-2.162 2.175T7 18m0-2q1.4 0 2.463-.85T10.875 13H14l1.45 1.025L17.5 12.5l1.775 1.375L21.15 12l-1-1h-9.275q-.35-1.3-1.412-2.15T7 8Q5.35 8 4.175 9.175T3 12t1.175 2.825T7 16\"/>",
-     "height": 24,
-     "name": "key-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M18.25 7a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0M15.5 2.05A6.554 6.554 0 0 0 8.95 8.6c0 .387.05.76.11 1.104a.28.28 0 0 1-.07.244l-6.235 6.236a2.75 2.75 0 0 0-.806 1.944V20.3c0 .966.784 1.75 1.75 1.75h2.5a1.75 1.75 0 0 0 1.75-1.75v-1.25H9.7c.69 0 1.25-.56 1.25-1.25v-1.75h1.75a1.25 1.25 0 0 0 1.25-1.204c.496.128 1.02.204 1.55.204a6.554 6.554 0 0 0 6.55-6.55c0-3.631-2.953-6.45-6.55-6.45M10.45 8.6a5.054 5.054 0 0 1 5.05-5.05c2.802 0 5.05 2.181 5.05 4.95a5.054 5.054 0 0 1-5.05 5.05c-.68 0-1.38-.171-2.005-.44a.75.75 0 0 0-1.046.69v.75H10.7c-.69 0-1.25.56-1.25 1.25v1.75H7.7c-.69 0-1.25.56-1.25 1.25v1.5a.25.25 0 0 1-.25.25H3.7a.25.25 0 0 1-.25-.25v-2.172c0-.331.132-.65.366-.884l6.236-6.235a1.77 1.77 0 0 0 .486-1.564a5 5 0 0 1-.088-.845\"/>",
@@ -25699,6 +26353,12 @@ export const deck: Deck = {
      "name": "keyboard",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 19q-.825 0-1.412-.587T2 17V7q0-.825.588-1.412T4 5h16q.825 0 1.413.588T22 7v10q0 .825-.587 1.413T20 19zm0-2h16V7H4zm4-1h8v-2H8zm-3-3h2v-2H5zm3 0h2v-2H8zm3 0h2v-2h-2zm3 0h2v-2h-2zm3 0h2v-2h-2zM5 10h2V8H5zm3 0h2V8H8zm3 0h2V8h-2zm3 0h2V8h-2zm3 0h2V8h-2zM4 17V7z\"/>",
+     "height": 24,
+     "name": "keyboard-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M14.5 7h-5c-3.287 0-4.931 0-6.038.908a4 4 0 0 0-.554.554C2 9.57 2 11.212 2 14.5s0 4.931.908 6.038a4 4 0 0 0 .554.554C4.57 22 6.212 22 9.5 22h5c3.288 0 4.931 0 6.038-.908q.304-.25.554-.554C22 19.43 22 17.788 22 14.5c0-3.287 0-4.931-.908-6.038a4 4 0 0 0-.554-.554C19.43 7 17.788 7 14.5 7Z\"/><path stroke-linejoin=\"round\" d=\"M12 7V5a1 1 0 0 1 1-1a1 1 0 0 0 1-1V2M7 12h1m3.5 0h1m3.5 0h1M7 17h10\"/></g>",
      "height": 24,
@@ -25710,12 +26370,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "keyboard",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 19q-.825 0-1.412-.587T2 17V7q0-.825.588-1.412T4 5h16q.825 0 1.413.588T22 7v10q0 .825-.587 1.413T20 19zm0-2h16V7H4zm4-1h8v-2H8zm-3-3h2v-2H5zm3 0h2v-2H8zm3 0h2v-2h-2zm3 0h2v-2h-2zm3 0h2v-2h-2zM5 10h2V8H5zm3 0h2V8H8zm3 0h2V8h-2zm3 0h2V8h-2zm3 0h2V8h-2zM4 17V7z\"/>",
-     "height": 24,
-     "name": "keyboard-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M19.745 5a2.25 2.25 0 0 1 2.25 2.25v9.505a2.25 2.25 0 0 1-2.25 2.25H4.25A2.25 2.25 0 0 1 2 16.755V7.25A2.25 2.25 0 0 1 4.25 5zm0 1.5H4.25a.75.75 0 0 0-.75.75v9.505c0 .414.336.75.75.75h15.495a.75.75 0 0 0 .75-.75V7.25a.75.75 0 0 0-.75-.75m-12.995 8h10.5a.75.75 0 0 1 .102 1.493L17.25 16H6.75a.75.75 0 0 1-.102-1.493zh10.5zM16.5 11a1 1 0 1 1 0 2a1 1 0 0 1 0-2m-5.995 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2m-3 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2m6 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2M6 8a1 1 0 1 1 0 2a1 1 0 0 1 0-2m2.995 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2m3 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2m3 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2m3 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2\"/>",
@@ -25885,6 +26539,12 @@ export const deck: Deck = {
      "name": "label",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h11q.475 0 .9.213t.7.587L22 12l-5.4 7.2q-.275.375-.7.588T15 20zm0-2h11l4.5-6L15 6H4zm5.5-6\"/>",
+     "height": 24,
+     "name": "label-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M2 12c0-3.771 0-5.657 1.172-6.828S6.229 4 10 4h3c1.963 0 2.944 0 3.789.422c.844.423 1.433 1.208 2.611 2.778C21.133 9.511 22 10.667 22 12s-.867 2.489-2.6 4.8c-1.178 1.57-1.767 2.355-2.611 2.778C15.944 20 14.963 20 13 20h-3c-3.771 0-5.657 0-6.828-1.172S2 15.771 2 12Z\"/>",
      "height": 24,
@@ -25896,12 +26556,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "label",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h11q.475 0 .9.213t.7.587L22 12l-5.4 7.2q-.275.375-.7.588T15 20zm0-2h11l4.5-6L15 6H4zm5.5-6\"/>",
-     "height": 24,
-     "name": "label-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M23 13h-5v2h5v2h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h6v-8a2 2 0 0 0-2-2m0 8h-4v-2h4ZM13 9H9a2 2 0 0 0-2 2v12h2v-5h4v5h2V11a2 2 0 0 0-2-2m-4 7v-5h4v5Z\"/><path fill=\"currentColor\" d=\"M28 28H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2M4 6v20h24V6Z\"/>",
@@ -26021,6 +26675,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M9 6.371C9 10.789 6.761 13 4 13m0-6.629h7\"/><path d=\"M5 9c0 2.144 2.252 3.908 6 4m1 7l4-9l4 9m-.9-2h-6.2M6.694 3l.793.582\"/></g>",
      "height": 24,
      "name": "language",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.125 21.213q-1.825-.788-3.187-2.15t-2.15-3.188T2 11.988t.788-3.875t2.15-3.175t3.187-2.15T12.013 2t3.875.788t3.175 2.15t2.15 3.175t.787 3.875t-.787 3.887t-2.15 3.188t-3.175 2.15t-3.875.787t-3.888-.787M12 19.95q.65-.9 1.125-1.875T13.9 16h-3.8q.3 1.1.775 2.075T12 19.95m-2.6-.4q-.45-.825-.787-1.713T8.05 16H5.1q.725 1.25 1.813 2.175T9.4 19.55m5.2 0q1.4-.45 2.488-1.375T18.9 16h-2.95q-.225.95-.562 1.838T14.6 19.55M4.25 14h3.4q-.075-.5-.112-.987T7.5 12t.038-1.012T7.65 10h-3.4q-.125.5-.187.988T4 12t.063 1.013t.187.987m5.4 0h4.7q.075-.5.113-.987T14.5 12t-.038-1.012T14.35 10h-4.7q-.075.5-.112.988T9.5 12t.038 1.013t.112.987m6.7 0h3.4q.125-.5.188-.987T20 12t-.062-1.012T19.75 10h-3.4q.075.5.113.988T16.5 12t-.038 1.013t-.112.987m-.4-6h2.95q-.725-1.25-1.812-2.175T14.6 4.45q.45.825.788 1.713T15.95 8M10.1 8h3.8q-.3-1.1-.775-2.075T12 4.05q-.65.9-1.125 1.875T10.1 8m-5 0h2.95q.225-.95.563-1.838T9.4 4.45Q8 4.9 6.912 5.825T5.1 8\"/>",
+     "height": 24,
+     "name": "language-outline",
      "width": 24
     },
     "carbon": {
@@ -26197,6 +26857,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "layers",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m12 21.05l-9-7l1.65-1.25L12 18.5l7.35-5.7L21 14.05zM12 16L3 9l9-7l9 7zm0-2.55L17.75 9L12 4.55L6.25 9z\"/>",
+     "height": 24,
+     "name": "layers-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"m8.643 3.146l-1.705.788C4.313 5.147 3 5.754 3 6.75s1.313 1.603 3.938 2.816l1.705.788c1.652.764 2.478 1.146 3.357 1.146s1.705-.382 3.357-1.146l1.705-.788C19.687 8.353 21 7.746 21 6.75s-1.313-1.603-3.938-2.816l-1.705-.788C13.705 2.382 12.879 2 12 2s-1.705.382-3.357 1.146\"/><path d=\"M20.788 11.097c.141.199.212.406.212.634c0 .982-1.313 1.58-3.938 2.776l-1.705.777c-1.652.753-2.478 1.13-3.357 1.13s-1.705-.377-3.357-1.13l-1.705-.777C4.313 13.311 3 12.713 3 11.731c0-.228.07-.435.212-.634\"/><path d=\"M20.377 16.266c.415.331.623.661.623 1.052c0 .981-1.313 1.58-3.938 2.776l-1.705.777C13.705 21.624 12.879 22 12 22s-1.705-.376-3.357-1.13l-1.705-.776C4.313 18.898 3 18.299 3 17.318c0-.391.208-.72.623-1.052\"/></g>",
      "height": 24,
@@ -26208,12 +26874,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "layers",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"m12 21.05l-9-7l1.65-1.25L12 18.5l7.35-5.7L21 14.05zM12 16L3 9l9-7l9 7zm0-2.55L17.75 9L12 4.55L6.25 9z\"/>",
-     "height": 24,
-     "name": "layers-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M16 24a1 1 0 0 1-.474-.12l-13-7l.948-1.76L16 21.864l12.526-6.744l.948 1.76l-13 7A1 1 0 0 1 16 24\"/><path fill=\"currentColor\" d=\"M16 30a1 1 0 0 1-.474-.12l-13-7l.948-1.76L16 27.864l12.526-6.744l.948 1.76l-13 7A1 1 0 0 1 16 30m0-12a1 1 0 0 1-.474-.12l-13-7a1 1 0 0 1 0-1.76l13-7a1 1 0 0 1 .948 0l13 7a1 1 0 0 1 0 1.76l-13 7A1 1 0 0 1 16 18M5.11 10L16 15.864L26.89 10L16 4.136Z\"/>",
@@ -26533,16 +27193,16 @@ export const deck: Deck = {
      "name": "license",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.5 14v-4c0-3.771 0-5.657-1.172-6.828S16.271 2 12.5 2h-1C7.729 2 5.843 2 4.672 3.172S3.5 6.229 3.5 10v4c0 3.771 0 5.657 1.172 6.828S7.729 22 11.5 22h1c3.771 0 5.657 0 6.828-1.172S20.5 17.771 20.5 14M8 7h8m-8 5h8m-8 5h4\"/>",
-     "height": 24,
-     "name": "license",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9.875 12.125Q9 11.25 9 10t.875-2.125T12 7t2.125.875T15 10t-.875 2.125T12 13t-2.125-.875M6 23v-7.725q-.95-1.05-1.475-2.4T4 10q0-3.35 2.325-5.675T12 2t5.675 2.325T20 10q0 1.525-.525 2.875T18 15.275V23l-6-2zm10.25-8.75Q18 12.5 18 10t-1.75-4.25T12 4T7.75 5.75T6 10t1.75 4.25T12 16t4.25-1.75M8 20.025L12 19l4 1.025v-3.1q-.875.5-1.888.788T12 18t-2.113-.288T8 16.926zm4-1.55\"/>",
      "height": 24,
      "name": "license-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.5 14v-4c0-3.771 0-5.657-1.172-6.828S16.271 2 12.5 2h-1C7.729 2 5.843 2 4.672 3.172S3.5 6.229 3.5 10v4c0 3.771 0 5.657 1.172 6.828S7.729 22 11.5 22h1c3.771 0 5.657 0 6.828-1.172S20.5 17.771 20.5 14M8 7h8m-8 5h8m-8 5h4\"/>",
+     "height": 24,
+     "name": "license",
      "width": 24
     },
     "carbon": {
@@ -26605,17 +27265,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "light",
    "variants": {
-    "icon-park-outline": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 16v6m14.142-.142L33.9 26.1M44 36h-6M4 36h6m-.142-14.142L14.1 26.1M18 36h12\"/>",
-     "height": 48,
-     "name": "light",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9.175 19.825Q8 18.65 8 17H5q-.825 0-1.412-.587T3 15q0-3.5 2.3-6.038T11 6.05V3h2v3.05q3.4.375 5.7 2.913T21 15q0 .825-.587 1.413T19 17h-3q0 1.65-1.175 2.825T12 21t-2.825-1.175M5 15h14q0-2.9-2.05-4.95T12 8t-4.95 2.05T5 15m8.413 3.413Q14 17.825 14 17h-4q0 .825.588 1.413T12 19t1.413-.587M12 17\"/>",
      "height": 24,
      "name": "light-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M24 16v6m14.142-.142L33.9 26.1M44 36h-6M4 36h6m-.142-14.142L14.1 26.1M18 36h12\"/>",
+     "height": 48,
+     "name": "light",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M15 2h2v5h-2zm6.688 6.9l3.506-3.506l1.414 1.414l-3.506 3.506zM25 15h5v2h-5zm-3.312 8.1l1.414-1.413l3.506 3.506l-1.414 1.414zM15 25h2v5h-2zm-9.606.192L8.9 21.686l1.414 1.414l-3.505 3.506zM2 15h5v2H2zm3.395-8.192l1.414-1.414L10.315 8.9L8.9 10.314zM16 12a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6\"/>",
@@ -26771,6 +27431,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m9 15l6-6m-4-3l.463-.536a5 5 0 0 1 7.071 7.072L18 13m-5 5l-.397.534a5.07 5.07 0 0 1-7.127 0a4.97 4.97 0 0 1 0-7.071L6 11\"/>",
      "height": 24,
      "name": "link",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z\"/>",
+     "height": 24,
+     "name": "link-outline",
      "width": 24
     },
     "hugeicons": {
@@ -26933,6 +27599,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01\"/>",
      "height": 24,
      "name": "list",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 9V7h14v2zm0 4v-2h14v2zm0 4v-2h14v2zM4 9q-.425 0-.712-.288T3 8t.288-.712T4 7t.713.288T5 8t-.288.713T4 9m0 4q-.425 0-.712-.288T3 12t.288-.712T4 11t.713.288T5 12t-.288.713T4 13m0 4q-.425 0-.712-.288T3 16t.288-.712T4 15t.713.288T5 16t-.288.713T4 17\"/>",
+     "height": 24,
+     "name": "list-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -27139,6 +27811,12 @@ export const deck: Deck = {
      "name": "lock",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm0-2h12V10H6zm7.413-3.588Q14 15.826 14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17t1.413-.587M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6zM6 20V10z\"/>",
+     "height": 24,
+     "name": "lock-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10Z\"/><path stroke-linecap=\"round\" d=\"M12 13a2 2 0 1 0 0-4a2 2 0 0 0 0 4Zm0 0v3\"/></g>",
      "height": 24,
@@ -27150,12 +27828,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "lock",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm0-2h12V10H6zm7.413-3.588Q14 15.826 14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17t1.413-.587M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6zM6 20V10z\"/>",
-     "height": 24,
-     "name": "lock-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/></g>",
@@ -27265,6 +27937,12 @@ export const deck: Deck = {
      "name": "login",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 21v-2h7V5h-7V3h7q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm-2-4l-1.375-1.45l2.55-2.55H3v-2h8.175l-2.55-2.55L10 7l5 5z\"/>",
+     "height": 24,
+     "name": "login-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8 8c0-.575 0-.822.045-1.075A2.98 2.98 0 0 1 9.833 4.7c.24-.1.523-.165 1.09-.294l2.728-.623c3.39-.774 5.084-1.161 6.217-.27C21 4.405 21 6.126 21 9.568v4.864c0 3.442 0 5.164-1.132 6.055c-1.133.891-2.827.504-6.217-.27l-2.728-.623c-.567-.13-.85-.194-1.09-.294a2.98 2.98 0 0 1-1.788-2.225C8 16.822 8 16.575 8 16\"/><path d=\"M13 9s3 2.21 3 3s-3 3-3 3m2.5-3H3\"/></g>",
      "height": 24,
@@ -27293,6 +27971,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2\"/><path d=\"M9 12h12l-3-3m0 6l3-3\"/></g>",
      "height": 24,
      "name": "logout",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z\"/>",
+     "height": 24,
+     "name": "logout-outline",
      "width": 24
     },
     "hugeicons": {
@@ -27361,6 +28045,12 @@ export const deck: Deck = {
      "name": "luggage",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 21q-.825 0-1.412-.587T5 19V8q0-.825.588-1.412T7 6h2V4q0-.825.588-1.412T11 2h2q.825 0 1.413.588T15 4v2h2q.825 0 1.413.588T19 8v11q0 .825-.587 1.413T17 21q0 .425-.288.713T16 22t-.712-.288T15 21H9q0 .425-.288.713T8 22t-.712-.288T7 21m0-2h10V8H7zm2-1h2V9H9zm4 0h2V9h-2zM11 6h2V4h-2zm1 7.5\"/>",
+     "height": 24,
+     "name": "luggage-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15 6.5H9c-2.828 0-4.243 0-5.121.879C3 8.257 3 9.672 3 12.5V15c0 2.828 0 4.243.879 5.121C4.757 21 6.172 21 9 21h6c2.828 0 4.243 0 5.121-.879C21 19.243 21 17.828 21 15v-2.5c0-2.828 0-4.243-.879-5.121C19.243 6.5 17.828 6.5 15 6.5m-6 0V6c0-1.414 0-2.121.44-2.56C9.878 3 10.585 3 12 3s2.121 0 2.56.44C15 3.878 15 4.585 15 6v.5m-8 0V21M17 6.5V21\"/>",
      "height": 24,
@@ -27372,12 +28062,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "luggage",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M7 21q-.825 0-1.412-.587T5 19V8q0-.825.588-1.412T7 6h2V4q0-.825.588-1.412T11 2h2q.825 0 1.413.588T15 4v2h2q.825 0 1.413.588T19 8v11q0 .825-.587 1.413T17 21q0 .425-.288.713T16 22t-.712-.288T15 21H9q0 .425-.288.713T8 22t-.712-.288T7 21m0-2h10V8H7zm2-1h2V9H9zm4 0h2V9h-2zM11 6h2V4h-2zm1 7.5\"/>",
-     "height": 24,
-     "name": "luggage-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M8.75 2a.75.75 0 0 0 0 1.5H9V5h-.75A3.25 3.25 0 0 0 5 8.25v9a3.25 3.25 0 0 0 2 3v1a.75.75 0 0 0 1.5 0v-.75h7v.75a.75.75 0 0 0 1.5 0v-1a3.25 3.25 0 0 0 2-3v-9A3.25 3.25 0 0 0 15.75 5H15V3.5h.25a.75.75 0 0 0 0-1.5zm4.75 1.5V5h-3V3.5zm-5.25 3h7.5c.966 0 1.75.784 1.75 1.75v9A1.75 1.75 0 0 1 15.75 19h-7.5a1.75 1.75 0 0 1-1.75-1.75v-9c0-.966.784-1.75 1.75-1.75M8 9.75A.75.75 0 0 1 8.75 9h6.5a.75.75 0 0 1 0 1.5h-6.5A.75.75 0 0 1 8 9.75\"/>",
@@ -27571,6 +28255,12 @@ export const deck: Deck = {
      "name": "mail",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z\"/>",
+     "height": 24,
+     "name": "mail-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"m2 6l6.913 3.917c2.549 1.444 3.625 1.444 6.174 0L22 6\"/><path d=\"M2.016 13.476c.065 3.065.098 4.598 1.229 5.733c1.131 1.136 2.705 1.175 5.854 1.254c1.94.05 3.862.05 5.802 0c3.149-.079 4.723-.118 5.854-1.254c1.131-1.135 1.164-2.668 1.23-5.733c.02-.986.02-1.966 0-2.952c-.066-3.065-.099-4.598-1.23-5.733c-1.131-1.136-2.705-1.175-5.854-1.254a115 115 0 0 0-5.802 0c-3.149.079-4.723.118-5.854 1.254c-1.131 1.135-1.164 2.668-1.23 5.733a69 69 0 0 0 0 2.952Z\"/></g>",
      "height": 24,
@@ -27582,12 +28272,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "mail",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z\"/>",
-     "height": 24,
-     "name": "mail-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M5.25 4h13.5a3.25 3.25 0 0 1 3.245 3.066L22 7.25v9.5a3.25 3.25 0 0 1-3.066 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75v-9.5a3.25 3.25 0 0 1 3.066-3.245zh13.5zM20.5 9.373l-8.15 4.29a.75.75 0 0 1-.603.043l-.096-.042L3.5 9.374v7.376a1.75 1.75 0 0 0 1.606 1.744l.144.006h13.5a1.75 1.75 0 0 0 1.744-1.607l.006-.143zM18.75 5.5H5.25a1.75 1.75 0 0 0-1.744 1.606L3.5 7.25v.429l8.5 4.474l8.5-4.475V7.25a1.75 1.75 0 0 0-1.607-1.744z\"/>",
@@ -27721,6 +28405,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "male",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M20 4v6h-2V7.425l-3.975 3.95q.475.7.725 1.488T15 14.5q0 2.3-1.6 3.9T9.5 20t-3.9-1.6T4 14.5t1.6-3.9T9.5 9q.825 0 1.625.237t1.475.738L16.575 6H14V4zM7.025 12.025Q6 13.05 6 14.5t1.025 2.475T9.5 18t2.475-1.025T13 14.5t-1.025-2.475T9.5 11t-2.475 1.025\"/>",
+     "height": 24,
+     "name": "male-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m14.5 16.5l3.716 1.118a4.07 4.07 0 0 1 2.76 2.892c.136.536-.327.99-.882.99H3.906c-.555 0-1.018-.454-.882-.99a4.07 4.07 0 0 1 2.76-2.892L9.5 16.5v-1.938c-1.78-1.393-3-3.062-3-6.645c0-3.59 1.955-5.417 4.992-5.417c2.151 0 3.047 1 3.047 1c2.538 0 2.961 2.097 2.961 4.417c0 3.583-1.22 5.252-3 6.645z\"/>",
      "height": 24,
@@ -27749,6 +28439,36 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" fill-rule=\"evenodd\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M21 9a1 1 0 1 1-2 0V6.414l-3.537 3.537a7.5 7.5 0 1 1-1.414-1.414L17.586 5H15a1 1 0 1 1 0-2h4.75c.69 0 1.25.56 1.25 1.25zM9.5 9a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11\"/></g>",
      "height": 24,
      "name": "male-line",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "man",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 16v5m4-5v5M9 9h6l-1 7h-4zm-4 2q2-2 4-2m10 2q-2-2-4-2m-5-5a2 2 0 1 0 4 0a2 2 0 1 0-4 0\"/>",
+     "height": 24,
+     "name": "man",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10 22v-7H8V9q0-.825.588-1.412T10 7h4q.825 0 1.413.588T16 9v6h-2v7zm2-16q-.825 0-1.412-.587T10 4t.588-1.412T12 2t1.413.588T14 4t-.587 1.413T12 6\"/>",
+     "height": 24,
+     "name": "man-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M14 4a2 2 0 1 1-4 0a2 2 0 0 1 4 0\"/><path d=\"M16 12.5c0-1.886 0-2.828-.586-3.414S13.886 8.5 12 8.5s-2.828 0-3.414.586S8 10.614 8 12.5V14c0 .943 0 1.414.293 1.707S9.057 16 10 16v4c0 .943 0 1.414.293 1.707S11.057 22 12 22s1.414 0 1.707-.293S14 20.943 14 20v-4c.943 0 1.414 0 1.707-.293S16 14.943 16 14z\"/></g>",
+     "height": 24,
+     "name": "man",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M12 2a2 2 0 1 0 0 4a2 2 0 1 0 0-4m-2 20h4v-7h2V8c0-.55-.45-1-1-1H9c-.55 0-1 .45-1 1v7h2z\"/>",
+     "height": 24,
+     "name": "man",
      "width": 24
     }
    }
@@ -28045,6 +28765,12 @@ export const deck: Deck = {
      "name": "maximize",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 5V3h16v2z\"/>",
+     "height": 24,
+     "name": "maximize-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.926 22.252V20.69c0-.403.127-.794.338-1.138c1.494-2.428 1.964-5.033 1.636-6.048c-1.043-2.163-4.524-3.014-6.14-3.217l1.037-5.165c.174-.82-.446-1.644-1.383-1.842s-1.84.306-2.013 1.125l-2.055 9.676l-2.571-1.64s-1.295-1.036-2.335 0c-1.039 1.037 0 2.328 0 2.328l3.909 5.008c.251.322.398.713.42 1.12l.071 1.32M7.33 1.852s2.219-.264 2.537.05c.245.241 0 2.46 0 2.46m0-2.46L6.898 4.84m-2.25 4.757s-2.22.264-2.538-.05c-.245-.241 0-2.46 0-2.46m0 2.46L5.08 6.61\"/>",
      "height": 24,
@@ -28291,17 +29017,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "memory",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path d=\"M8 6v36a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V13.61a2 2 0 0 0-.605-1.433l-7.813-7.61A2 2 0 0 0 30.187 4H10a2 2 0 0 0-2 2Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M40 21H8m32 8H30m10 7H30m0 8V21M18 44V21m0 12H8\"/></g>",
-     "height": 48,
-     "name": "memory",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9 15V9h6v6zm2-2h2v-2h-2zm-2 8v-2H7q-.825 0-1.412-.587T5 17v-2H3v-2h2v-2H3V9h2V7q0-.825.588-1.412T7 5h2V3h2v2h2V3h2v2h2q.825 0 1.413.588T19 7v2h2v2h-2v2h2v2h-2v2q0 .825-.587 1.413T17 19h-2v2h-2v-2h-2v2zm8-4V7H7v10zm-5-5\"/>",
      "height": 24,
      "name": "memory-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path d=\"M8 6v36a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V13.61a2 2 0 0 0-.605-1.433l-7.813-7.61A2 2 0 0 0 30.187 4H10a2 2 0 0 0-2 2Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M40 21H8m32 8H30m10 7H30m0 8V21M18 44V21m0 12H8\"/></g>",
+     "height": 48,
+     "name": "memory",
+     "width": 48
     },
     "ph": {
      "body": "<path fill=\"currentColor\" d=\"M232 56H24A16 16 0 0 0 8 72v128a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0v-16h16v16a8 8 0 0 0 16 0V72a16 16 0 0 0-16-16M24 72h208v96H24Zm88 80a8 8 0 0 0 8-8V96a8 8 0 0 0-8-8H48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8Zm-56-48h48v32H56Zm88 48h64a8 8 0 0 0 8-8V96a8 8 0 0 0-8-8h-64a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8m8-48h48v32h-48Z\"/>",
@@ -28325,6 +29051,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 8h16M4 16h16\"/>",
      "height": 24,
      "name": "menu",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z\"/>",
+     "height": 24,
+     "name": "menu-outline",
      "width": 24
     },
     "hugeicons": {
@@ -28375,6 +29107,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "merge",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6.4 21L5 19.6l4.825-4.85q.575-.575.875-1.3t.3-1.525v-5.1L9.4 8.4L8 7l4-4l4 4l-1.4 1.4L13 6.825v5.1q0 .8.3 1.525t.875 1.3L19 19.6L17.6 21L12 15.4z\"/>",
+     "height": 24,
+     "name": "merge-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><rect width=\"20\" height=\"22\" x=\"4\" y=\"24\" rx=\"2\" transform=\"rotate(-45 4 24)\"/><rect width=\"20\" height=\"20\" x=\"16\" y=\"24\" rx=\"2\" transform=\"rotate(-45 16 24)\"/></g>",
      "height": 48,
@@ -28577,18 +29315,48 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
-   "name": "mic",
+   "name": "metro",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M17 7v4a5 5 0 0 1-10 0V7a5 5 0 0 1 10 0Z\"/><path stroke-linecap=\"round\" d=\"M17 7h-3m3 4h-3m6 0a8 8 0 0 1-8 8m0 0a8 8 0 0 1-8-8m8 8v3m0 0h3m-3 0H9\"/></g>",
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21V3h4.05L12 16.05L16.9 3H21v18h-3V8.75L13.275 21h-2.55L6 8.825V21z\"/>",
      "height": 24,
-     "name": "mic-01",
+     "name": "metro-outline",
      "width": 24
     },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"m6 19l-2 2m14-2l2 2M5 9c4 4 10.5 4 14 0\"/><path d=\"M5.273 7.894C6.094 3.716 7.23 3 11.455 3h1.09c4.225 0 5.36.716 6.182 4.894l.553 2.816c.755 3.84 1.132 5.76.032 7.025S16.142 19 12 19c-4.141 0-6.212 0-7.312-1.265s-.723-3.185.032-7.025z\"/><path d=\"M15.125 15H15m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m-6.125 0H9m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
+     "height": 24,
+     "name": "metro",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"m14 16.01l.01-.011M10 16.01l.01-.011M22 12v3a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5v-3C2 6.477 6.477 2 12 2s10 4.477 10 10\"/><path stroke-linejoin=\"round\" d=\"M18 12v3a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5v-3a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5\"/><path d=\"m10.5 20l-2 2.5m5-2.5l2 2.5m1-2.5l2 2.5M7.5 20l-2 2.5\"/><path stroke-linejoin=\"round\" d=\"M11.786 10h.428C13.2 10 14 10.8 14 11.786a.214.214 0 0 1-.214.214h-3.572a.214.214 0 0 1-.214-.214C10 10.8 10.8 10 11.786 10\"/></g>",
+     "height": 24,
+     "name": "metro",
+     "width": 24
+    },
+    "uil": {
+     "body": "<path fill=\"currentColor\" d=\"M8.71 14.29a1 1 0 0 0-1.09-.21a.9.9 0 0 0-.54.54a1 1 0 1 0 1.84 0a1.2 1.2 0 0 0-.21-.33m8 0a1.047 1.047 0 0 0-1.42 0a1.2 1.2 0 0 0-.21.33a.99.99 0 0 0 .21 1.09a1.2 1.2 0 0 0 .33.21a.94.94 0 0 0 .76 0a1.2 1.2 0 0 0 .33-.21a.99.99 0 0 0 .21-1.09a1.2 1.2 0 0 0-.21-.33m2.6 4.605a4.97 4.97 0 0 0 1.784-4.817l-1.5-8A5 5 0 0 0 14.68 2H9.319a5 5 0 0 0-4.913 4.078l-1.5 8a4.97 4.97 0 0 0 1.785 4.817l-1.398 1.398a1 1 0 1 0 1.414 1.414l1.87-1.87A5 5 0 0 0 7.818 20h8.362a5 5 0 0 0 1.243-.162l1.869 1.869a1 1 0 0 0 1.414-1.414ZM6.37 6.447A3 3 0 0 1 9.32 4h5.362a3 3 0 0 1 2.948 2.447l.347 1.85a7.955 7.955 0 0 1-11.952 0Zm12.117 10.469A2.99 2.99 0 0 1 16.181 18H7.819a3 3 0 0 1-2.948-3.553l.711-3.792a9.954 9.954 0 0 0 12.836 0l.71 3.792a2.99 2.99 0 0 1-.64 2.469\"/>",
+     "height": 24,
+     "name": "metro",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "mic",
+   "variants": {
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9.875 13.125Q9 12.25 9 11V5q0-1.25.875-2.125T12 2t2.125.875T15 5v6q0 1.25-.875 2.125T12 14t-2.125-.875M11 21v-3.075q-2.6-.35-4.3-2.325T5 11h2q0 2.075 1.463 3.538T12 16t3.538-1.463T17 11h2q0 2.625-1.7 4.6T13 17.925V21zm1.713-9.287Q13 11.425 13 11V5q0-.425-.288-.712T12 4t-.712.288T11 5v6q0 .425.288.713T12 12t.713-.288\"/>",
      "height": 24,
      "name": "mic-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M17 7v4a5 5 0 0 1-10 0V7a5 5 0 0 1 10 0Z\"/><path stroke-linecap=\"round\" d=\"M17 7h-3m3 4h-3m6 0a8 8 0 0 1-8 8m0 0a8 8 0 0 1-8-8m8 8v3m0 0h3m-3 0H9\"/></g>",
+     "height": 24,
+     "name": "mic-01",
      "width": 24
     },
     "fluent": {
@@ -28633,16 +29401,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "mic-off",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"m2 2l20 20M4 11a8 8 0 0 0 8 8m0 0c1.954 0 3.745-.7 5.135-1.865M12 19v3m0 0h3m-3 0H9m11-11c0 1.651-.5 3.186-1.358 4.46m-1.634-8.464c0-2.761-2.239-4.98-5-4.98c-1.869 0-3.47.965-4.328 2.484m9.328 2.496l-3.028.012m3.028-.012v4.008m-10-4.008v4.02a5 5 0 0 0 5 5c1.135 0 2.165-.39 3.004-1.028m1.435-1.728c.358-.69.56-1.413.56-2.244v-.012m-2.824 0h2.825\"/>",
-     "height": 24,
-     "name": "mic-off-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M17.75 14.95L16.3 13.5q.35-.575.525-1.2T17 11h2q0 1.1-.325 2.088t-.925 1.862m-2.95-3l-1.8-1.8V5q0-.425-.288-.712T12 4t-.712.288T11 5v3.15l-2-2V5q0-1.25.875-2.125T12 2t2.125.875T15 5v6q0 .275-.062.5t-.138.45M11 21v-3.075q-2.6-.35-4.3-2.325T5 11h2q0 2.075 1.438 3.538T12 16q.85 0 1.613-.262T15 15l1.425 1.425q-.725.575-1.588.975T13 17.925V21zm8.8 1.6L1.4 4.2l1.4-1.4l18.4 18.4z\"/>",
      "height": 24,
      "name": "mic-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"m2 2l20 20M4 11a8 8 0 0 0 8 8m0 0c1.954 0 3.745-.7 5.135-1.865M12 19v3m0 0h3m-3 0H9m11-11c0 1.651-.5 3.186-1.358 4.46m-1.634-8.464c0-2.761-2.239-4.98-5-4.98c-1.869 0-3.47.965-4.328 2.484m9.328 2.496l-3.028.012m3.028-.012v4.008m-10-4.008v4.02a5 5 0 0 0 5 5c1.135 0 2.165-.39 3.004-1.028m1.435-1.728c.358-.69.56-1.413.56-2.244v-.012m-2.824 0h2.825\"/>",
+     "height": 24,
+     "name": "mic-off-01",
      "width": 24
     },
     "fluent": {
@@ -28849,16 +29617,16 @@ export const deck: Deck = {
      "name": "microwave",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M16 3.5H8c-2.828 0-4.243 0-5.121.879C2 5.257 2 6.672 2 9.5v3c0 2.828 0 4.243.879 5.121c.878.879 2.293.879 5.121.879h8c2.828 0 4.243 0 5.121-.879C22 16.743 22 15.328 22 12.5v-3c0-2.828 0-4.243-.879-5.121C20.243 3.5 18.828 3.5 16 3.5\"/><path d=\"M13 6.5H8c-1.414 0-2.121 0-2.56.44C5 7.378 5 8.085 5 9.5v3c0 1.414 0 2.121.44 2.56c.439.44 1.146.44 2.56.44h5c1.414 0 2.121 0 2.56-.44c.44-.439.44-1.146.44-2.56v-3c0-1.414 0-2.121-.44-2.56c-.439-.44-1.146-.44-2.56-.44m-8 12v2m14-2v2m.05-12.998H19m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0m-.05 4H19m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0\"/></g>",
-     "height": 24,
-     "name": "microwave",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm0-2h10V6H4zm12 0h4V6h-4zm1-9h2V7h-2zm1 4q.425 0 .713-.288T19 12t-.288-.712T18 11t-.712.288T17 12t.288.713T18 13m0 4q.425 0 .713-.288T19 16t-.288-.712T18 15t-.712.288T17 16t.288.713T18 17m-7.75-1q-.6 0-1.037-.225t-.763-.425q-.25-.175-.4-.262T7.75 15q-.275 0-.55.225t-.4.375l-1.425-1.4q.275-.3.888-.75T7.75 13q.6 0 1.038.238t.762.437q.225.15.4.238t.3.087q.275 0 .55-.225t.4-.375l1.425 1.4q-.275.3-.887.75T10.25 16m0-5q-.6 0-1.037-.225t-.763-.425q-.25-.175-.4-.262T7.75 10q-.275 0-.55.225t-.4.375L5.375 9.2q.275-.3.888-.75T7.75 8q.6 0 1.038.238t.762.437q.225.15.4.238t.3.087q.275 0 .55-.225t.4-.375l1.425 1.4q-.275.3-.887.75T10.25 11M16 18V6z\"/>",
      "height": 24,
      "name": "microwave-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M16 3.5H8c-2.828 0-4.243 0-5.121.879C2 5.257 2 6.672 2 9.5v3c0 2.828 0 4.243.879 5.121c.878.879 2.293.879 5.121.879h8c2.828 0 4.243 0 5.121-.879C22 16.743 22 15.328 22 12.5v-3c0-2.828 0-4.243-.879-5.121C20.243 3.5 18.828 3.5 16 3.5\"/><path d=\"M13 6.5H8c-1.414 0-2.121 0-2.56.44C5 7.378 5 8.085 5 9.5v3c0 1.414 0 2.121.44 2.56c.439.44 1.146.44 2.56.44h5c1.414 0 2.121 0 2.56-.44c.44-.439.44-1.146.44-2.56v-3c0-1.414 0-2.121-.44-2.56c-.439-.44-1.146-.44-2.56-.44m-8 12v2m14-2v2m.05-12.998H19m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0m-.05 4H19m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0\"/></g>",
+     "height": 24,
+     "name": "microwave",
      "width": 24
     },
     "lucide": {
@@ -28877,6 +29645,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 19v-2a2 2 0 0 1 2-2h2M15 5v2a2 2 0 0 0 2 2h2M5 15h2a2 2 0 0 1 2 2v2M5 9h2a2 2 0 0 0 2-2V5\"/>",
      "height": 24,
      "name": "minimize",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 21v-2h12v2z\"/>",
+     "height": 24,
+     "name": "minimize-outline",
      "width": 24
     },
     "hugeicons": {
@@ -29094,16 +29868,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "money",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M2.017 15C4.217 15 6 16.783 6 18.983m12 0v-.092A3.89 3.89 0 0 1 21.89 15M6 5.017C6 7.217 4.217 9 2.017 9M18 5.017C18 7.197 19.769 8.97 21.942 9\"/><path d=\"M16 5H8c-2.828 0-4.243 0-5.121.879C2 6.757 2 8.172 2 11v2c0 2.828 0 4.243.879 5.121C3.757 19 5.172 19 8 19h8c2.828 0 4.243 0 5.121-.879C22 17.243 22 15.828 22 13v-2c0-2.828 0-4.243-.879-5.121C20.243 5 18.828 5 16 5\"/><path d=\"M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0\"/></g>",
-     "height": 24,
-     "name": "money-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M15 16h3q.425 0 .713-.288T19 15V9q0-.425-.288-.712T18 8h-3q-.425 0-.712.288T14 9v6q0 .425.288.713T15 16m1-2v-4h1v4zm-7 2h3q.425 0 .713-.288T13 15V9q0-.425-.288-.712T12 8H9q-.425 0-.712.288T8 9v6q0 .425.288.713T9 16m1-2v-4h1v4zm-5 2h2V8H5zm-3 4V4h20v16zM4 6v12zm0 12h16V6H4z\"/>",
      "height": 24,
      "name": "money-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M2.017 15C4.217 15 6 16.783 6 18.983m12 0v-.092A3.89 3.89 0 0 1 21.89 15M6 5.017C6 7.217 4.217 9 2.017 9M18 5.017C18 7.197 19.769 8.97 21.942 9\"/><path d=\"M16 5H8c-2.828 0-4.243 0-5.121.879C2 6.757 2 8.172 2 11v2c0 2.828 0 4.243.879 5.121C3.757 19 5.172 19 8 19h8c2.828 0 4.243 0 5.121-.879C22 17.243 22 15.828 22 13v-2c0-2.828 0-4.243-.879-5.121C20.243 5 18.828 5 16 5\"/><path d=\"M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0\"/></g>",
+     "height": 24,
+     "name": "money-01",
      "width": 24
     },
     "fluent": {
@@ -29130,17 +29904,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "monitor",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M4 10h32v28H4z\"/><path stroke-linecap=\"round\" d=\"m44 14l-8 6.75v6.5L44 34z\" clip-rule=\"evenodd\"/><path stroke-linecap=\"round\" d=\"m17 19l6 5l-6 5\"/></g>",
-     "height": 48,
-     "name": "monitor",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 21v-2l1-1H4q-.825 0-1.412-.587T2 16V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v11q0 .825-.587 1.413T20 18h-3l1 1v2zm-2-5h16V5H4zm0 0V5z\"/>",
      "height": 24,
      "name": "monitor-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M4 10h32v28H4z\"/><path stroke-linecap=\"round\" d=\"m44 14l-8 6.75v6.5L44 34z\" clip-rule=\"evenodd\"/><path stroke-linecap=\"round\" d=\"m17 19l6 5l-6 5\"/></g>",
+     "height": 48,
+     "name": "monitor",
+     "width": 48
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\"/><path d=\"M8 21h8m-4-4v4\"/></g>",
@@ -29298,6 +30072,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "more",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 20q-.475 0-.9-.213t-.7-.587L2 12l5.4-7.2q.275-.375.7-.587T9 4h11q.825 0 1.413.587T22 6v12q0 .825-.587 1.413T20 20zm-4.5-8L9 18h11V6H9zm6.213.713Q11 12.425 11 12t-.288-.712T10 11t-.712.288T9 12t.288.713T10 13t.713-.288m3.5 0q.287-.287.287-.712t-.288-.712T13.5 11t-.712.288T12.5 12t.288.713t.712.287t.713-.288m3.5 0Q18 12.426 18 12t-.288-.712T17 11t-.712.288T16 12t.288.713T17 13t.713-.288M14.5 12\"/>",
+     "height": 24,
+     "name": "more-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.5 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Zm6.5 11a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Zm-13 0a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Z\"/>",
      "height": 24,
@@ -29309,12 +30089,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "more",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M9 20q-.475 0-.9-.213t-.7-.587L2 12l5.4-7.2q.275-.375.7-.587T9 4h11q.825 0 1.413.587T22 6v12q0 .825-.587 1.413T20 20zm-4.5-8L9 18h11V6H9zm6.213.713Q11 12.425 11 12t-.288-.712T10 11t-.712.288T9 12t.288.713T10 13t.713-.288m3.5 0q.287-.287.287-.712t-.288-.712T13.5 11t-.712.288T12.5 12t.288.713t.712.287t.713-.288m3.5 0Q18 12.426 18 12t-.288-.712T17 11t-.712.288T16 12t.288.713T17 13t.713-.288M14.5 12\"/>",
-     "height": 24,
-     "name": "more-outline",
-     "width": 24
     },
     "ri": {
      "body": "<path fill=\"currentColor\" d=\"M4.5 10.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5S6 12.825 6 12s-.675-1.5-1.5-1.5m15 0c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5S21 12.825 21 12s-.675-1.5-1.5-1.5m-7.5 0c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5s1.5-.675 1.5-1.5s-.675-1.5-1.5-1.5\"/>",
@@ -29334,16 +30108,22 @@ export const deck: Deck = {
      "name": "mosque",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M1 21V8.725Q.55 8.45.275 8.013T0 7t.6-1.4T2 4q.8.775 1.4 1.6T4 7t-.275 1.013T3 8.724V13h2v-2q0-.625.4-1.2t1.15-.75q-.275-.425-.412-.925T6 7.1q0-1 .475-1.85t1.275-1.4L12 1l4.25 2.85q.8.55 1.275 1.4T18 7.1q0 .525-.137 1.025t-.413.925q.75.175 1.15.75T19 11v2h2V8.725q-.45-.275-.725-.712T20 7t.6-1.4T22 4q.8.775 1.4 1.6T24 7t-.275 1.013t-.725.712V21H13v-4q0-.425-.288-.712T12 16t-.712.288T11 17v4zM9.9 9h4.2q.8 0 1.35-.55T16 7.1q0-.5-.225-.913T15.15 5.5L12 3.4L8.85 5.5q-.4.275-.625.688T8 7.1q0 .8.55 1.35T9.9 9M3 19h6v-2q0-1.25.875-2.125T12 14t2.125.875T15 17v2h6v-4h-4v-4H7v4H3zm9-9.95\"/>",
+     "height": 24,
+     "name": "mosque-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8.653 9C5.183 5.5 10.513 3.75 12 2c1.488 1.75 6.818 3.5 3.347 7zM18 12v-1c0-.943 0-1.414-.293-1.707S16.943 9 16 9H8c-.943 0-1.414 0-1.707.293S6 10.057 6 11v1m11 0H7c-1.414 0-2.121 0-2.56.44C4 12.878 4 13.585 4 15v4c0 1.414 0 2.121.44 2.56C4.878 22 5.585 22 7 22h10c1.414 0 2.121 0 2.56-.44c.44-.439.44-1.146.44-2.56v-4c0-1.414 0-2.121-.44-2.56C19.122 12 18.415 12 17 12\"/><path d=\"M9.5 22v-3c-.017-3 2.5-4 2.5-4s2.517 1 2.5 4v3\"/></g>",
      "height": 24,
      "name": "mosque-01",
      "width": 24
     },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M1 21V8.725Q.55 8.45.275 8.013T0 7t.6-1.4T2 4q.8.775 1.4 1.6T4 7t-.275 1.013T3 8.724V13h2v-2q0-.625.4-1.2t1.15-.75q-.275-.425-.412-.925T6 7.1q0-1 .475-1.85t1.275-1.4L12 1l4.25 2.85q.8.55 1.275 1.4T18 7.1q0 .525-.137 1.025t-.413.925q.75.175 1.15.75T19 11v2h2V8.725q-.45-.275-.725-.712T20 7t.6-1.4T22 4q.8.775 1.4 1.6T24 7t-.275 1.013t-.725.712V21H13v-4q0-.425-.288-.712T12 16t-.712.288T11 17v4zM9.9 9h4.2q.8 0 1.35-.55T16 7.1q0-.5-.225-.913T15.15 5.5L12 3.4L8.85 5.5q-.4.275-.625.688T8 7.1q0 .8.55 1.35T9.9 9M3 19h6v-2q0-1.25.875-2.125T12 14t2.125.875T15 17v2h6v-4h-4v-4H7v4H3zm9-9.95\"/>",
+    "lucide": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12.268 2a2 2 0 0 0 3.465 2M14 5v3m2 14v-3a2 2 0 0 0-4 0v3m9-9c-.662-1.497-1.666-2.753-2.9-3.63C16.825 8.47 15.422 8 14 8s-2.826.47-4.1 1.37C8.668 10.248 7.663 11.504 7 13zM3 9h4\"/><path d=\"M7 22V6a5 5 0 0 0-2-4a5 5 0 0 0-2 4v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7\"/></g>",
      "height": 24,
-     "name": "mosque-outline",
+     "name": "mosque",
      "width": 24
     },
     "boxicons": {
@@ -29478,6 +30258,12 @@ export const deck: Deck = {
      "name": "mouse",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 22q-2.9 0-4.95-2.05T5 15V9q0-2.9 2.05-4.95T12 2t4.95 2.05T19 9v6q0 2.9-2.05 4.95T12 22m1-13h4q0-1.8-1.137-3.175T13 4.1zM7 9h4V4.1q-1.725.35-2.863 1.725T7 9m5 11q2.075 0 3.538-1.463T17 15v-4H7v4q0 2.075 1.463 3.538T12 20m0-9\"/>",
+     "height": 24,
+     "name": "mouse-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4.74 17.089c.19 2.391 2.084 4.422 4.525 4.723c.898.11 1.81.188 2.735.188s1.837-.078 2.735-.188c2.44-.301 4.334-2.332 4.524-4.723c.132-1.657.241-3.357.241-5.089s-.11-3.432-.24-5.089c-.19-2.391-2.084-4.422-4.525-4.723C13.837 2.078 12.925 2 12 2s-1.837.078-2.735.188c-2.44.3-4.335 2.332-4.524 4.723C4.609 8.568 4.5 10.268 4.5 12s.109 3.432.24 5.089Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 6v3\"/></g>",
      "height": 24,
@@ -29489,12 +30275,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "mouse",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M12 22q-2.9 0-4.95-2.05T5 15V9q0-2.9 2.05-4.95T12 2t4.95 2.05T19 9v6q0 2.9-2.05 4.95T12 22m1-13h4q0-1.8-1.137-3.175T13 4.1zM7 9h4V4.1q-1.725.35-2.863 1.725T7 9m5 11q2.075 0 3.538-1.463T17 15v-4H7v4q0 2.075 1.463 3.538T12 20m0-9\"/>",
-     "height": 24,
-     "name": "mouse-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"7\"/><path d=\"M12 6v4\"/></g>",
@@ -29544,6 +30324,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "move",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10.7 16.9q-.125-.1-.175-.25q-.35-1.05-.85-1.75t-1-1.35t-.837-1.35t-.338-1.7q0-1.45 1.025-2.475T11 7t2.475 1.025T14.5 10.5q0 1-.337 1.7t-.838 1.35t-1 1.35t-.85 1.75q-.05.15-.175.25t-.3.1t-.3-.1m.3-2.7q.225-.35.45-.65t.425-.575q.575-.75.85-1.25T13 10.5q0-.825-.587-1.412T11 8.5t-1.412.588T9 10.5q0 .725.275 1.225t.85 1.25q.2.275.425.575t.45.65m.888-2.812q.362-.363.362-.888t-.363-.888T11 9.25t-.888.363t-.362.887t.363.888t.887.362t.888-.363M11 21q-3.75 0-6.375-2.625T2 12q0-1.875.713-3.512t1.924-2.85t2.85-1.925T11 3t3.513.713t2.85 1.924t1.925 2.85T20 12v.2l1.325-1.35l1.425 1.4L19 16l-3.75-3.75l1.425-1.4L18 12.175V12q0-2.9-2.05-4.95T11 5T6.05 7.05T4 12q.025 2.9 2.062 4.95T11 19q1.425 0 2.675-.537t2.2-1.463l1.425 1.425q-1.225 1.2-2.838 1.888T11 21m0-10.5\"/>",
+     "height": 24,
+     "name": "move-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 3v6m-9 3h6m12 0h-6m-3 9v-6.5M9 6l1.705-1.952C11.315 3.35 11.621 3 12 3c.38 0 .684.35 1.295 1.048L15 6m0 12l-1.705 1.952C12.685 20.65 12.379 21 12 21c-.38 0-.684-.35-1.295-1.048L9 18m9-9l1.952 1.705C20.65 11.315 21 11.621 21 12c0 .38-.35.684-1.048 1.295L18 15M6 15l-1.952-1.705C3.35 12.685 3 12.379 3 12c0-.38.35-.684 1.048-1.295L6 9\"/>",
      "height": 24,
@@ -29555,12 +30341,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "move",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M10.7 16.9q-.125-.1-.175-.25q-.35-1.05-.85-1.75t-1-1.35t-.837-1.35t-.338-1.7q0-1.45 1.025-2.475T11 7t2.475 1.025T14.5 10.5q0 1-.337 1.7t-.838 1.35t-1 1.35t-.85 1.75q-.05.15-.175.25t-.3.1t-.3-.1m.3-2.7q.225-.35.45-.65t.425-.575q.575-.75.85-1.25T13 10.5q0-.825-.587-1.412T11 8.5t-1.412.588T9 10.5q0 .725.275 1.225t.85 1.25q.2.275.425.575t.45.65m.888-2.812q.362-.363.362-.888t-.363-.888T11 9.25t-.888.363t-.362.887t.363.888t.887.362t.888-.363M11 21q-3.75 0-6.375-2.625T2 12q0-1.875.713-3.512t1.924-2.85t2.85-1.925T11 3t3.513.713t2.85 1.924t1.925 2.85T20 12v.2l1.325-1.35l1.425 1.4L19 16l-3.75-3.75l1.425-1.4L18 12.175V12q0-2.9-2.05-4.95T11 5T6.05 7.05T4 12q.025 2.9 2.062 4.95T11 19q1.425 0 2.675-.537t2.2-1.463l1.425 1.425q-1.225 1.2-2.838 1.888T11 21m0-10.5\"/>",
-     "height": 24,
-     "name": "move-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"m25 11l-1.41 1.41L26.17 15H17V5.83l2.59 2.58L21 7l-5-5l-5 5l1.41 1.41L15 5.83V15H5.83l2.58-2.59L7 11l-5 5l5 5l1.41-1.41L5.83 17H15v9.17l-2.59-2.58L11 25l5 5l5-5l-1.41-1.41L17 26.17V17h9.17l-2.58 2.59L25 21l5-5z\"/>",
@@ -29598,17 +30378,17 @@ export const deck: Deck = {
      "name": "movie",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path stroke-linejoin=\"round\" d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linejoin=\"round\" d=\"M24 18a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm0 18a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm-9-9a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm18 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z\"/><path stroke-linecap=\"round\" d=\"M24 44h20\"/></g>",
-     "height": 48,
-     "name": "movie",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m4 4l2 4h3L7 4h2l2 4h3l-2-4h2l2 4h3l-2-4h3q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20H4q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4m0 6v8h16v-8zm0 0v8z\"/>",
      "height": 24,
      "name": "movie-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"><path stroke-linejoin=\"round\" d=\"M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z\"/><path stroke-linejoin=\"round\" d=\"M24 18a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm0 18a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm-9-9a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm18 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z\"/><path stroke-linecap=\"round\" d=\"M24 44h20\"/></g>",
+     "height": 48,
+     "name": "movie",
+     "width": 48
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9.54 9L6.87 5h2.6l2.67 4zm5 0l-2.67-4h2.6l2.67 4zM4 5h.46l2.67 4H4zm0 14v-8h16V9h-.46l-2.67-4H20v14z\"/>",
@@ -29724,6 +30504,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "music-note",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7.175 19.825Q6 18.65 6 17t1.175-2.825T10 13q.575 0 1.063.138t.937.412V3h6v4h-4v10q0 1.65-1.175 2.825T10 21t-2.825-1.175\"/>",
+     "height": 24,
+     "name": "music-note-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7 9.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m0 0V2c.333.5.6 2.6 3 3\"/><circle cx=\"10.5\" cy=\"19.5\" r=\"2.5\"/><circle cx=\"20\" cy=\"18\" r=\"2\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13 19.5V11c0-.91 0-1.365.247-1.648c.246-.282.747-.35 1.748-.487c3.014-.411 5.206-1.667 6.375-2.436c.28-.184.42-.276.525-.22s.105.223.105.554v11.163\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13 13c4.8 0 8-2.333 9-3\"/></g>",
      "height": 24,
@@ -29772,6 +30558,12 @@ export const deck: Deck = {
      "name": "navigation",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m5 21l-1-1l8-18l8 18l-1 1l-7-3zm2.1-3.1l4.9-2.1l4.9 2.1l-4.9-11zm4.9-2.1\"/>",
+     "height": 24,
+     "name": "navigation-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.835 4.293L8.345 7.32C4.793 8.757 3.017 9.475 3 10.46q-.003.189.041.373c.23.957 2.12 1.272 5.9 1.902c.91.152 1.367.228 1.687.511q.066.06.127.128c.283.32.36.775.511 1.687c.63 3.779.945 5.669 1.902 5.899q.184.045.373.04c.985-.016 1.702-1.792 3.139-5.344l3.027-7.49c1.122-2.775 1.683-4.163.987-4.859s-2.084-.135-4.859.987Z\"/>",
      "height": 24,
@@ -29783,12 +30575,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "navigation",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"m5 21l-1-1l8-18l8 18l-1 1l-7-3zm2.1-3.1l4.9-2.1l4.9 2.1l-4.9-11zm4.9-2.1\"/>",
-     "height": 24,
-     "name": "navigation-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M2.753 18h18.5a.75.75 0 0 1 .101 1.493l-.101.007h-18.5a.75.75 0 0 1-.102-1.494zh18.5zm0-6.497h18.5a.75.75 0 0 1 .101 1.493l-.101.007h-18.5a.75.75 0 0 1-.102-1.494zh18.5zm-.001-6.5h18.5a.75.75 0 0 1 .102 1.493l-.102.007h-18.5A.75.75 0 0 1 2.65 5.01zh18.5z\"/>",
@@ -29862,16 +30648,16 @@ export const deck: Deck = {
      "name": "news",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M18 15V9c0-2.828 0-4.243-.879-5.121C16.243 3 14.828 3 12 3H8c-2.828 0-4.243 0-5.121.879C2 4.757 2 6.172 2 9v6c0 2.828 0 4.243.879 5.121C3.757 21 5.172 21 8 21h12M6 8h8m-8 4h8m-8 4h4\"/><path d=\"M18 8h1c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v8a2 2 0 1 1-4 0z\"/></g>",
-     "height": 24,
-     "name": "news",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h11l5 5v11q0 .825-.587 1.413T19 21zm0-2h14V9h-4V5H5zm2-2h10v-2H7zm0-8h5V7H7zm0 4h10v-2H7zM5 5v4zv14z\"/>",
      "height": 24,
      "name": "news-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M18 15V9c0-2.828 0-4.243-.879-5.121C16.243 3 14.828 3 12 3H8c-2.828 0-4.243 0-5.121.879C2 4.757 2 6.172 2 9v6c0 2.828 0 4.243.879 5.121C3.757 21 5.172 21 8 21h12M6 8h8m-8 4h8m-8 4h4\"/><path d=\"M18 8h1c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v8a2 2 0 1 1-4 0z\"/></g>",
+     "height": 24,
+     "name": "news",
      "width": 24
     },
     "fluent": {
@@ -29904,6 +30690,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "newspaper",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 21q-.825 0-1.412-.587T2 19V3l1.675 1.675L5.325 3L7 4.675L8.675 3l1.65 1.675L12 3l1.675 1.675L15.325 3L17 4.675L18.675 3l1.65 1.675L22 3v16q0 .825-.587 1.413T20 21zm0-2h7v-6H4zm9 0h7v-2h-7zm0-4h7v-2h-7zm-9-4h16V8H4z\"/>",
+     "height": 24,
+     "name": "newspaper-outline",
+     "width": 24
+    },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15 18h-5m8-4h-8m-6 8h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2\"/><rect width=\"8\" height=\"4\" x=\"10\" y=\"6\" rx=\"1\"/></g>",
      "height": 24,
@@ -30024,16 +30816,16 @@ export const deck: Deck = {
      "name": "note",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"m12.88 7.017l4.774 1.271m-5.796 2.525l2.386.636m-2.267 6.517l.954.255c2.7.72 4.05 1.079 5.114.468c1.063-.61 1.425-1.953 2.148-4.637l1.023-3.797c.724-2.685 1.085-4.027.471-5.085s-1.963-1.417-4.664-2.136l-.954-.255c-2.7-.72-4.05-1.079-5.113-.468c-1.064.61-1.426 1.953-2.15 4.637l-1.022 3.797c-.724 2.685-1.086 4.027-.471 5.085c.614 1.057 1.964 1.417 4.664 2.136Z\"/><path d=\"m12 20.946l-.952.26c-2.694.733-4.04 1.1-5.102.477c-1.06-.622-1.422-1.991-2.143-4.728l-1.021-3.872c-.722-2.737-1.083-4.106-.47-5.184C2.842 6.966 4 7 5.5 7\"/></g>",
-     "height": 24,
-     "name": "note",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h8l6 6v12q0 .825-.587 1.413T18 22zm7-13V4H6v16h12V9zM6 4v5zv16z\"/>",
      "height": 24,
      "name": "note-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"m12.88 7.017l4.774 1.271m-5.796 2.525l2.386.636m-2.267 6.517l.954.255c2.7.72 4.05 1.079 5.114.468c1.063-.61 1.425-1.953 2.148-4.637l1.023-3.797c.724-2.685 1.085-4.027.471-5.085s-1.963-1.417-4.664-2.136l-.954-.255c-2.7-.72-4.05-1.079-5.113-.468c-1.064.61-1.426 1.953-2.15 4.637l-1.022 3.797c-.724 2.685-1.086 4.027-.471 5.085c.614 1.057 1.964 1.417 4.664 2.136Z\"/><path d=\"m12 20.946l-.952.26c-2.694.733-4.04 1.1-5.102.477c-1.06-.622-1.422-1.991-2.143-4.728l-1.021-3.872c-.722-2.737-1.083-4.106-.47-5.184C2.842 6.966 4 7 5.5 7\"/></g>",
+     "height": 24,
+     "name": "note",
      "width": 24
     },
     "fluent": {
@@ -30118,6 +30910,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zm4 2h6m-6 4h6m-6 4h4\"/>",
      "height": 24,
      "name": "notes",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 18v-2h12v2zm0-5v-2h18v2zm0-5V6h18v2z\"/>",
+     "height": 24,
+     "name": "notes-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -30486,6 +31284,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "oven",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M16.713 6.713Q17 6.425 17 6t-.288-.712T16 5t-.712.288T15 6t.288.713T16 7t.713-.288m-4 0Q13 6.426 13 6t-.288-.712T12 5t-.712.288T11 6t.288.713T12 7t.713-.288m-4 0Q9 6.426 9 6t-.288-.712T8 5t-.712.288T7 6t.288.713T8 7t.713-.288M5 10v9h14v-9zm5 4h4v-2h-4zm-5 7q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm7-11\"/>",
+     "height": 24,
+     "name": "oven-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3 16V8c0-2.828 0-4.243.879-5.121C4.757 2 6.172 2 9 2h6c2.828 0 4.243 0 5.121.879C21 3.757 21 5.172 21 8v8c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22H9c-2.828 0-4.243 0-5.121-.879C3 20.243 3 18.828 3 16\"/><path d=\"M6 16v-5c0-1.414 0-2.121.44-2.56C6.878 8 7.585 8 9 8h6c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v5c0 1.414 0 2.121-.44 2.56c-.439.44-1.146.44-2.56.44H9c-1.414 0-2.121 0-2.56-.44C6 18.122 6 17.415 6 16m3-5h6m-2.95-5.998H12m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0m3.95 0H16m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0m-8.05 0H8m.1 0a.1.1 0 1 1-.2 0a.1.1 0 0 1 .2 0\"/></g>",
      "height": 24,
@@ -30497,12 +31301,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "oven",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M16.713 6.713Q17 6.425 17 6t-.288-.712T16 5t-.712.288T15 6t.288.713T16 7t.713-.288m-4 0Q13 6.426 13 6t-.288-.712T12 5t-.712.288T11 6t.288.713T12 7t.713-.288m-4 0Q9 6.426 9 6t-.288-.712T8 5t-.712.288T7 6t.288.713T8 7t.713-.288M5 10v9h14v-9zm5 4h4v-2h-4zm-5 7q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm7-11\"/>",
-     "height": 24,
-     "name": "oven-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3 6.25A3.25 3.25 0 0 1 6.25 3h11.5A3.25 3.25 0 0 1 21 6.25v11.5A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75zm16.5 0a1.75 1.75 0 0 0-1.75-1.75H6.25A1.75 1.75 0 0 0 4.5 6.25V8h15zm0 11.5V9.5h-15v8.25c0 .966.784 1.75 1.75 1.75h11.5a1.75 1.75 0 0 0 1.75-1.75M8 7.25a1 1 0 1 0 0-2a1 1 0 0 0 0 2m5-1a1 1 0 1 1-2 0a1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2a1 1 0 0 0 0 2M7.5 16.5v-4h9v4zM7.25 11C6.56 11 6 11.56 6 12.25v4.5c0 .69.56 1.25 1.25 1.25h9.5c.69 0 1.25-.56 1.25-1.25v-4.5c0-.69-.56-1.25-1.25-1.25z\"/>",
@@ -30534,16 +31332,16 @@ export const deck: Deck = {
      "name": "package",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 22c-.818 0-1.6-.33-3.163-.99C4.946 19.366 3 18.543 3 17.16V7m9 15c.818 0 1.6-.33 3.163-.99C19.054 19.366 21 18.543 21 17.16V7m-9 15V11.355M8.326 9.691L5.405 8.278C3.802 7.502 3 7.114 3 6.5s.802-1.002 2.405-1.778l2.92-1.413C10.13 2.436 11.03 2 12 2s1.871.436 3.674 1.309l2.921 1.413C20.198 5.498 21 5.886 21 6.5s-.802 1.002-2.405 1.778l-2.92 1.413C13.87 10.564 12.97 11 12 11s-1.871-.436-3.674-1.309M6 12l2 1m9-9L7 9\"/>",
-     "height": 24,
-     "name": "package",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m10 9.75l2-1l2 1V5h-4zM7 17v-2h5v2zm-2 4q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zM5 5v14zm0 14h14V5h-3v8l-4-2l-4 2V5H5z\"/>",
      "height": 24,
      "name": "package-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 22c-.818 0-1.6-.33-3.163-.99C4.946 19.366 3 18.543 3 17.16V7m9 15c.818 0 1.6-.33 3.163-.99C19.054 19.366 21 18.543 21 17.16V7m-9 15V11.355M8.326 9.691L5.405 8.278C3.802 7.502 3 7.114 3 6.5s.802-1.002 2.405-1.778l2.92-1.413C10.13 2.436 11.03 2 12 2s1.871.436 3.674 1.309l2.921 1.413C20.198 5.498 21 5.886 21 6.5s-.802 1.002-2.405 1.778l-2.92 1.413C13.87 10.564 12.97 11 12 11s-1.871-.436-3.674-1.309M6 12l2 1m9-9L7 9\"/>",
+     "height": 24,
+     "name": "package",
      "width": 24
     },
     "carbon": {
@@ -31014,16 +31812,16 @@ export const deck: Deck = {
      "name": "parking-meter",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 2a7 7 0 0 0-5.7 11.064c.259.362.388.544.44.635c.17.3.213.435.25.778c.01.104.01.24.01.513c0 .94 0 1.409.104 1.794a3 3 0 0 0 2.112 2.112c.385.104.855.104 1.794.104h1.98c.94 0 1.409 0 1.794-.104a3 3 0 0 0 2.112-2.112c.104-.385.104-.855.104-1.794c0-.273 0-.41.01-.513c.037-.343.08-.478.25-.778c.052-.091.181-.272.44-.636A7 7 0 0 0 12 2m-1 13h2m-1 0v-3m0 7v3\"/><path d=\"M15 9a3 3 0 1 0-6 0\"/></g>",
-     "height": 24,
-     "name": "parking-meter",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 21q-.425 0-.712-.288T7 20v-1H2v-2h6v-5H2v-2h5.2L6.15 7H2V5h4.5q.475 0 .863.275T7.9 6l2.1 6v8q0 .425-.288.713T9 21zm-2.5-5q.625 0 1.063-.437T7 14.5t-.437-1.062T5.5 13t-1.062.438T4 14.5t.438 1.063T5.5 16m9.05-4h4.9l.9-3.7q.05-.2.088-.413t.037-.412q0-1.4-1-2.437T17 4t-2.475 1.025t-1 2.425q0 .2.038.425t.087.425zm.2-4.5h1.5q0-.3.225-.525T17 6.75t.525.225t.225.525h1.5q0-.95-.65-1.6T17 5.25t-1.6.65t-.65 1.6m.25 3h4V9h-4zM16 21v-7h-3l-1.3-5.2q-.075-.35-.125-.675t-.05-.675q0-2.2 1.562-3.825T17 2t3.913 1.625t1.562 3.825q0 .35-.05.675T22.3 8.8L21 14h-3v7zm1-13\"/>",
      "height": 24,
      "name": "parking-meter-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 2a7 7 0 0 0-5.7 11.064c.259.362.388.544.44.635c.17.3.213.435.25.778c.01.104.01.24.01.513c0 .94 0 1.409.104 1.794a3 3 0 0 0 2.112 2.112c.385.104.855.104 1.794.104h1.98c.94 0 1.409 0 1.794-.104a3 3 0 0 0 2.112-2.112c.104-.385.104-.855.104-1.794c0-.273 0-.41.01-.513c.037-.343.08-.478.25-.778c.052-.091.181-.272.44-.636A7 7 0 0 0 12 2m-1 13h2m-1 0v-3m0 7v3\"/><path d=\"M15 9a3 3 0 1 0-6 0\"/></g>",
+     "height": 24,
+     "name": "parking-meter",
      "width": 24
     },
     "lucide": {
@@ -31038,6 +31836,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "passport",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.5 18.5h7V17h-7zm3.5-3q2.075 0 3.538-1.463T17 10.5t-1.463-3.537T12 5.5T8.463 6.963T7 10.5t1.463 3.538T12 15.5m0-1.675q-.2-.275-.425-.913t-.3-1.662h1.45q-.075 1.025-.3 1.663t-.425.912m-1.8-.325q-.6-.375-1.025-.95t-.575-1.3h1.175q.05.625.15 1.188T10.2 13.5m3.6 0q.175-.5.275-1.062t.15-1.188H15.4q-.15.725-.575 1.3t-1.025.95M8.6 9.75q.15-.725.575-1.3T10.2 7.5q-.175.5-.275 1.062t-.15 1.188zm2.675 0q.075-1.025.3-1.662T12 7.175q.2.275.425.913t.3 1.662zm2.95 0q-.05-.625-.15-1.187T13.8 7.5q.6.375 1.025.95t.575 1.3zM4 22V2h14q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm2-2h12V4H6zm0 0V4z\"/>",
+     "height": 24,
+     "name": "passport-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M2 12c0-4.243 0-6.364 1.464-7.682C4.93 3 7.286 3 12 3s7.071 0 8.535 1.318S22 7.758 22 12s0 6.364-1.465 7.682C19.072 21 16.714 21 12 21s-7.071 0-8.536-1.318S2 16.242 2 12\"/><path d=\"M5 16.5c1.208-2.581 5.712-2.75 7 0m-1.5-7a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z\"/><path stroke-linejoin=\"round\" d=\"M15 10h4m-4 4h4\"/></g>",
      "height": 24,
@@ -31049,12 +31853,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "passport",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M8.5 18.5h7V17h-7zm3.5-3q2.075 0 3.538-1.463T17 10.5t-1.463-3.537T12 5.5T8.463 6.963T7 10.5t1.463 3.538T12 15.5m0-1.675q-.2-.275-.425-.913t-.3-1.662h1.45q-.075 1.025-.3 1.663t-.425.912m-1.8-.325q-.6-.375-1.025-.95t-.575-1.3h1.175q.05.625.15 1.188T10.2 13.5m3.6 0q.175-.5.275-1.062t.15-1.188H15.4q-.15.725-.575 1.3t-1.025.95M8.6 9.75q.15-.725.575-1.3T10.2 7.5q-.175.5-.275 1.062t-.15 1.188zm2.675 0q.075-1.025.3-1.662T12 7.175q.2.275.425.913t.3 1.662zm2.95 0q-.05-.625-.15-1.187T13.8 7.5q.6.375 1.025.95t.575 1.3zM4 22V2h14q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm2-2h12V4H6zm0 0V4z\"/>",
-     "height": 24,
-     "name": "passport-outline",
-     "width": 24
     },
     "ri": {
      "body": "<path fill=\"currentColor\" d=\"M20 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm-1 2H5v16h14zm-3 12v2H8v-2zM12 6a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4\"/>",
@@ -31086,6 +31884,12 @@ export const deck: Deck = {
      "name": "password",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M2 19v-2h20v2zm1.15-6.05l-1.3-.75l.85-1.5H1V9.2h1.7l-.85-1.45L3.15 7L4 8.45L4.85 7l1.3.75L5.3 9.2H7v1.5H5.3l.85 1.5l-1.3.75l-.85-1.5zm8 0l-1.3-.75l.85-1.5H9V9.2h1.7l-.85-1.45l1.3-.75l.85 1.45l.85-1.45l1.3.75l-.85 1.45H15v1.5h-1.7l.85 1.5l-1.3.75l-.85-1.5zm8 0l-1.3-.75l.85-1.5H17V9.2h1.7l-.85-1.45l1.3-.75l.85 1.45l.85-1.45l1.3.75l-.85 1.45H23v1.5h-1.7l.85 1.5l-1.3.75l-.85-1.5z\"/>",
+     "height": 24,
+     "name": "password-outline",
+     "width": 24
+    },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M11.78 10.22a.75.75 0 0 0-1.06 1.06l.72.72l-.72.72a.75.75 0 1 0 1.06 1.06l.72-.72l.72.72a.75.75 0 0 0 1.06-1.062L13.561 12l.72-.72a.75.75 0 1 0-1.061-1.06l-.72.72zm-6.56 0a.75.75 0 0 1 1.06 0l.72.72l.72-.72a.75.75 0 1 1 1.06 1.06l-.719.72l.72.718A.75.75 0 1 1 7.72 13.78L7 13.06l-.72.72a.75.75 0 0 1-1.06-1.06l.72-.72l-.72-.72a.75.75 0 0 1 0-1.06M16.5 12.5a.75.75 0 0 0 0 1.5h1.75a.75.75 0 0 0 0-1.5zM5.25 5A3.25 3.25 0 0 0 2 8.25v7.5A3.25 3.25 0 0 0 5.25 19h13.5A3.25 3.25 0 0 0 22 15.75v-7.5A3.25 3.25 0 0 0 18.75 5zM3.5 8.25c0-.967.783-1.75 1.75-1.75h13.5c.967 0 1.75.783 1.75 1.75v7.5a1.75 1.75 0 0 1-1.75 1.75H5.25a1.75 1.75 0 0 1-1.75-1.75z\"/>",
      "height": 24,
@@ -31110,6 +31914,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "pause",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M13 19V5h6v14zm-8 0V5h6v14zm10-2h2V7h-2zm-8 0h2V7H7zM7 7v10zm8 0v10z\"/>",
+     "height": 24,
+     "name": "pause-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M4 7c0-1.414 0-2.121.44-2.56C4.878 4 5.585 4 7 4s2.121 0 2.56.44C10 4.878 10 5.585 10 7v10c0 1.414 0 2.121-.44 2.56C9.122 20 8.415 20 7 20s-2.121 0-2.56-.44C4 19.122 4 18.415 4 17zm10 0c0-1.414 0-2.121.44-2.56C14.878 4 15.585 4 17 4s2.121 0 2.56.44C20 4.878 20 5.585 20 7v10c0 1.414 0 2.121-.44 2.56c-.439.44-1.146.44-2.56.44s-2.121 0-2.56-.44C14 19.122 14 18.415 14 17z\"/>",
      "height": 24,
@@ -31121,12 +31931,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "pause",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M13 19V5h6v14zm-8 0V5h6v14zm10-2h2V7h-2zm-8 0h2V7H7zM7 7v10zm8 0v10z\"/>",
-     "height": 24,
-     "name": "pause-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M6.25 3A2.25 2.25 0 0 0 4 5.25v13.5A2.25 2.25 0 0 0 6.25 21h2.5A2.25 2.25 0 0 0 11 18.75V5.25A2.25 2.25 0 0 0 8.75 3zM5.5 5.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1-.75-.75zM15.25 3A2.25 2.25 0 0 0 13 5.25v13.5A2.25 2.25 0 0 0 15.25 21h2.5A2.25 2.25 0 0 0 20 18.75V5.25A2.25 2.25 0 0 0 17.75 3zm-.75 2.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1-.75-.75z\"/>",
@@ -31200,16 +32004,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "pause-circle",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.5 9v6m5-6v6\"/></g>",
-     "height": 24,
-     "name": "pause-circle",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M9 16h2V8H9zm4 0h2V8h-2zm-1 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "pause-circle-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.5 9v6m5-6v6\"/></g>",
+     "height": 24,
+     "name": "pause-circle",
      "width": 24
     },
     "fluent": {
@@ -31518,16 +32322,16 @@ export const deck: Deck = {
      "name": "pentagon",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M6.208 5.405C8.978 3.135 10.363 2 12 2s3.022 1.135 5.792 3.405l.256.21c2.286 1.874 3.429 2.81 3.815 4.126s-.073 2.71-.992 5.495l-.183.554c-.98 2.975-1.471 4.463-2.662 5.315c-1.65 1.182-4.126.853-6.026.853c-3.175 0-4.836 0-6.026-.853c-1.19-.852-1.681-2.34-2.662-5.315l-.183-.554c-.919-2.786-1.378-4.179-.992-5.495S3.666 7.49 5.952 5.616z\"/>",
-     "height": 24,
-     "name": "pentagon",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7.45 19h9.1l3.075-9.225L12 4.45L4.375 9.775zM6 21L2 9l10-7l10 7l-4 12zm6-9.275\"/>",
      "height": 24,
      "name": "pentagon-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M6.208 5.405C8.978 3.135 10.363 2 12 2s3.022 1.135 5.792 3.405l.256.21c2.286 1.874 3.429 2.81 3.815 4.126s-.073 2.71-.992 5.495l-.183.554c-.98 2.975-1.471 4.463-2.662 5.315c-1.65 1.182-4.126.853-6.026.853c-3.175 0-4.836 0-6.026-.853c-1.19-.852-1.681-2.34-2.662-5.315l-.183-.554c-.919-2.786-1.378-4.179-.992-5.495S3.666 7.49 5.952 5.616z\"/>",
+     "height": 24,
+     "name": "pentagon",
      "width": 24
     },
     "lucide": {
@@ -31584,6 +32388,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "percent",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7.5 11q-1.45 0-2.475-1.025T4 7.5t1.025-2.475T7.5 4t2.475 1.025T11 7.5T9.975 9.975T7.5 11m0-2q.625 0 1.063-.437T9 7.5t-.437-1.062T7.5 6t-1.062.438T6 7.5t.438 1.063T7.5 9m9 11q-1.45 0-2.475-1.025T13 16.5t1.025-2.475T16.5 13t2.475 1.025T20 16.5t-1.025 2.475T16.5 20m1.063-2.437Q18 17.125 18 16.5t-.437-1.062T16.5 15t-1.062.438T15 16.5t.438 1.063T16.5 18t1.063-.437M5.4 20L4 18.6L18.6 4L20 5.4z\"/>",
+     "height": 24,
+     "name": "percent-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M4 20L20 4\"/><path d=\"M8.268 4.732a2.5 2.5 0 1 1-3.536 3.536a2.5 2.5 0 0 1 3.536-3.536Zm11 11a2.5 2.5 0 1 1-3.536 3.536a2.5 2.5 0 0 1 3.536-3.536Z\"/></g>",
      "height": 24,
@@ -32070,6 +32880,12 @@ export const deck: Deck = {
      "name": "piano",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h3.25v-4.5H8q-.425 0-.712-.288T7 13.5V5H5zm10.75 0H19V5h-2v8.5q0 .425-.288.713T16 14.5h-.25zm-6 0h4.5v-4.5H14q-.425 0-.712-.288T13 13.5V5h-2v8.5q0 .425-.288.713T10 14.5h-.25z\"/>",
+     "height": 24,
+     "name": "piano-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M4 8h40v16H4zm0 16h40v16H4zm6 0v8m6-8v8m10-8v8m6-8v8m6-8v8\"/>",
      "height": 48,
@@ -32148,16 +32964,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "pie-chart",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M20.5 15.828c-2.501 5.928-10.636 7.656-15.299 3.036C.63 14.334 2.045 6.13 8.057 3.5\"/><path d=\"M17.683 12.5c1.888 0 2.832 0 3.441-.845c.023-.032.06-.088.081-.121c.548-.887.266-1.568-.299-2.93a10.18 10.18 0 0 0-5.51-5.51c-1.362-.565-2.043-.847-2.93-.3c-.033.021-.09.06-.121.082c-.845.61-.845 1.553-.845 3.44v2.111c0 1.92 0 2.88.596 3.477c.597.596 1.557.596 3.476.596z\"/></g>",
-     "height": 24,
-     "name": "pie-chart",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M13 11h6.95q-.375-2.75-2.287-4.663T13 4.05zm-2 8.95V4.05q-3.025.375-5.012 2.638T4 12t1.988 5.313T11 19.95m2 0q2.75-.35 4.675-2.275T19.95 13H13zM12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.888.788t3.174 2.15t2.15 3.175T22 12q0 2.05-.788 3.875t-2.137 3.188t-3.175 2.15T12 22\"/>",
      "height": 24,
      "name": "pie-chart-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M20.5 15.828c-2.501 5.928-10.636 7.656-15.299 3.036C.63 14.334 2.045 6.13 8.057 3.5\"/><path d=\"M17.683 12.5c1.888 0 2.832 0 3.441-.845c.023-.032.06-.088.081-.121c.548-.887.266-1.568-.299-2.93a10.18 10.18 0 0 0-5.51-5.51c-1.362-.565-2.043-.847-2.93-.3c-.033.021-.09.06-.121.082c-.845.61-.845 1.553-.845 3.44v2.111c0 1.92 0 2.88.596 3.477c.597.596 1.557.596 3.476.596z\"/></g>",
+     "height": 24,
+     "name": "pie-chart",
      "width": 24
     },
     "boxicons": {
@@ -32238,6 +33054,12 @@ export const deck: Deck = {
      "name": "pill",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.625 21q-2.35 0-3.988-1.638T3 15.376q0-1.125.425-2.15T4.65 11.4l6.75-6.75q.8-.8 1.825-1.225T15.375 3q2.35 0 3.988 1.637T21 8.625q0 1.125-.425 2.15T19.35 12.6l-6.75 6.75q-.8.8-1.825 1.225T8.625 21m6.65-7.15l2.675-2.65q.5-.5.775-1.175t.275-1.4q0-1.5-1.062-2.562T15.375 5q-.725 0-1.4.275T12.8 6.05l-2.65 2.675zM8.625 19q.725 0 1.4-.275t1.175-.775l2.65-2.675l-5.125-5.125L6.05 12.8q-.5.5-.775 1.175T5 15.375q0 1.5 1.063 2.563T8.625 19\"/>",
+     "height": 24,
+     "name": "pill-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m11.45 19.55l8.1-8.1a4.95 4.95 0 0 0-7-7l-8.1 8.1a4.95 4.95 0 1 0 7 7M8.5 8.5l7 7\"/>",
      "height": 24,
@@ -32249,12 +33071,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "pill",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M8.625 21q-2.35 0-3.988-1.638T3 15.376q0-1.125.425-2.15T4.65 11.4l6.75-6.75q.8-.8 1.825-1.225T15.375 3q2.35 0 3.988 1.637T21 8.625q0 1.125-.425 2.15T19.35 12.6l-6.75 6.75q-.8.8-1.825 1.225T8.625 21m6.65-7.15l2.675-2.65q.5-.5.775-1.175t.275-1.4q0-1.5-1.062-2.562T15.375 5q-.725 0-1.4.275T12.8 6.05l-2.65 2.675zM8.625 19q.725 0 1.4-.275t1.175-.775l2.65-2.675l-5.125-5.125L6.05 12.8q-.5.5-.775 1.175T5 15.375q0 1.5 1.063 2.563T8.625 19\"/>",
-     "height": 24,
-     "name": "pill-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.53 15.47a.75.75 0 0 1 0 1.06l-2 2a2.164 2.164 0 0 1-3.054.007a.75.75 0 1 1 1.054-1.067c.259.26.68.26.939 0l2-2a.75.75 0 0 1 1.06 0m2.772-11.945a5.071 5.071 0 1 1 7.172 7.172l-9.778 9.778a5.071 5.071 0 0 1-7.172-7.172zm6.111 1.061a3.57 3.57 0 0 0-5.05 0l-4.359 4.359l5.05 5.05l4.36-4.359a3.57 3.57 0 0 0 0-5.05m-5.419 10.47l-5.05-5.05l-4.359 4.358a3.571 3.571 0 1 0 5.05 5.05z\"/>",
@@ -32292,6 +33108,12 @@ export const deck: Deck = {
      "name": "pin",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm2.5-5h1.15V9h-.9L5 10.25l.6.9l.9-.65zm3.1 0h3.9v-1h-2.35l-.05-.05q.525-.5.863-.85t.537-.55q.45-.45.675-.9t.225-.95q0-.725-.55-1.213T11.45 9q-.65 0-1.175.375t-.725.975l1 .4q.125-.325.363-.513t.537-.187q.375 0 .613.2t.237.5q0 .275-.1.513t-.45.587l-.8.8L9.6 14zm7.4 0q.9 0 1.45-.5t.55-1.3q0-.45-.25-.8t-.7-.55v-.05q.35-.2.55-.513t.2-.737q0-.675-.525-1.113T16.95 9q-.625 0-1.162.363t-.688.887l1 .4q.1-.3.325-.475T16.95 10q.325 0 .538.188t.212.462q0 .35-.25.55t-.65.2h-.45v1h.5q.5 0 .775.2t.275.55q0 .325-.275.563T17 13.95q-.425 0-.65-.187t-.4-.663l-1 .4q.175.725.713 1.113T17 15M4 18h16V6H4zm0 0V6z\"/>",
+     "height": 24,
+     "name": "pin-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m3 21l5-5m5.259 2.871c-3.744-.85-7.28-4.386-8.13-8.13c-.135-.592-.202-.888-.007-1.369c.194-.48.433-.63.909-.927c1.076-.672 2.242-.886 3.451-.78c1.697.151 2.546.226 2.97.005c.423-.22.71-.736 1.286-1.767l.728-1.307c.48-.86.72-1.291 1.285-1.494s.905-.08 1.585.166a5.63 5.63 0 0 1 3.396 3.396c.246.68.369 1.02.166 1.585c-.203.564-.633.804-1.494 1.285l-1.337.745c-1.03.574-1.544.862-1.765 1.289c-.22.428-.14 1.258.02 2.918c.118 1.22-.085 2.394-.766 3.484c-.298.476-.447.714-.928.909c-.48.194-.777.127-1.37-.008\"/>",
      "height": 24,
@@ -32303,12 +33125,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "pin",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm2.5-5h1.15V9h-.9L5 10.25l.6.9l.9-.65zm3.1 0h3.9v-1h-2.35l-.05-.05q.525-.5.863-.85t.537-.55q.45-.45.675-.9t.225-.95q0-.725-.55-1.213T11.45 9q-.65 0-1.175.375t-.725.975l1 .4q.125-.325.363-.513t.537-.187q.375 0 .613.2t.237.5q0 .275-.1.513t-.45.587l-.8.8L9.6 14zm7.4 0q.9 0 1.45-.5t.55-1.3q0-.45-.25-.8t-.7-.55v-.05q.35-.2.55-.513t.2-.737q0-.675-.525-1.113T16.95 9q-.625 0-1.162.363t-.688.887l1 .4q.1-.3.325-.475T16.95 10q.325 0 .538.188t.212.462q0 .35-.25.55t-.65.2h-.45v1h.5q.5 0 .775.2t.275.55q0 .325-.275.563T17 13.95q-.425 0-.65-.187t-.4-.663l-1 .4q.175.725.713 1.113T17 15M4 18h16V6H4zm0 0V6z\"/>",
-     "height": 24,
-     "name": "pin-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"m16.243 2.932l4.825 4.826a2.75 2.75 0 0 1-.715 4.404l-4.87 2.435a.75.75 0 0 0-.374.426l-1.44 4.166a1.25 1.25 0 0 1-2.065.476L8.5 16.561L4.06 21H3v-1.062L7.44 15.5l-3.105-3.104a1.25 1.25 0 0 1 .476-2.066l4.166-1.439a.75.75 0 0 0 .426-.374l2.435-4.87a2.75 2.75 0 0 1 4.405-.715m3.765 5.886l-4.826-4.825a1.25 1.25 0 0 0-2.002.324l-2.435 4.871a2.25 2.25 0 0 1-1.278 1.12l-3.789 1.31l6.705 6.704l1.308-3.788a2.25 2.25 0 0 1 1.12-1.278l4.872-2.436a1.25 1.25 0 0 0 .325-2.002\"/>",
@@ -32490,17 +33306,17 @@ export const deck: Deck = {
      "name": "planet",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 40c8.837 0 16-7.163 16-16S32.837 8 24 8S8 15.163 8 24s7.163 16 16 16Z\"/><path stroke-linecap=\"round\" d=\"M37.564 15.51c4.22.368 7.115 1.662 7.686 3.796c1.144 4.268-7.443 10.277-19.18 13.421S3.893 34.962 2.75 30.694c-.6-2.236 1.472-4.95 5.269-7.48\"/></g>",
-     "height": 48,
-     "name": "planet",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12.113 10.163q.362-.363.362-.888t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362t.888-.363M20.55 22q-1.05 0-2.825-.875t-3.8-2.375q-.475.125-.962.188t-.988.062q-2.925 0-4.95-2.025T5 12.025q0-.5.075-1t.2-.975Q3.8 8.025 2.913 6.263T2.025 3.45q0-.675.375-1.062T3.425 2t1.688.45t2.862 1.525Q7.45 4.25 7 4.55t-.875.65q-.475-.275-.925-.475T4.25 4.3q.45.95.963 1.85T6.3 7.925q.95-1.35 2.425-2.125t3.25-.775q2.925 0 4.963 2.038t2.037 4.962q0 1.775-.788 3.25T16.05 17.7q.875.575 1.788 1.1t1.862.95q-.2-.475-.412-.925T18.8 17.9q.375-.425.675-.9t.55-.975q1.15 1.95 1.563 2.913T22 20.55q0 .725-.4 1.088T20.55 22m-6.113-7.262q.288-.288.288-.713t-.287-.712t-.713-.288t-.712.288t-.288.712t.288.713t.712.287t.713-.288m1.075-3.424q.212-.213.212-.538t-.212-.537t-.538-.213t-.537.213t-.213.537t.213.538t.537.212t.538-.213M11.7 16.976q-1.275-1.1-2.45-2.275T7 12.25q.05.95.425 1.788t1.025 1.487t1.475 1.025t1.775.425m2.575-.525q1.2-.625 1.95-1.812t.75-2.638q0-2.075-1.463-3.525t-3.537-1.45q-1.45 0-2.625.75t-1.8 1.95q1.425 1.9 3.125 3.6t3.6 3.125m-2-4.725\"/>",
      "height": 24,
      "name": "planet-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 40c8.837 0 16-7.163 16-16S32.837 8 24 8S8 15.163 8 24s7.163 16 16 16Z\"/><path stroke-linecap=\"round\" d=\"M37.564 15.51c4.22.368 7.115 1.662 7.686 3.796c1.144 4.268-7.443 10.277-19.18 13.421S3.893 34.962 2.75 30.694c-.6-2.236 1.472-4.95 5.269-7.48\"/></g>",
+     "height": 48,
+     "name": "planet",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12 4.5a7.5 7.5 0 0 0-7.461 8.268c-.72.065-1.202.007-1.513-.075a9 9 0 0 1 .002-1.41c-.691.106-1.119.438-1.318.76c-.233.377-.205.792.115 1.122c.209.214.588.437 1.2.551c.426.08.964.107 1.636.045c1.622-.152 3.915-.828 6.989-2.427c3.174-1.651 5.66-2.413 7.542-2.589q1.134-.103 2.023.059l.04.007c.851.16 1.523.496 1.992.979c.835.857.886 2.036.317 2.956c-.532.861-1.554 1.441-2.846 1.5a9.004 9.004 0 0 1-16.63 2.048q.395-.005.805-.044q.411-.038.852-.11a7.5 7.5 0 0 0 13.716-4.908c.723-.065 1.204-.006 1.513.077a9 9 0 0 1-.002 1.406c.69-.105 1.116-.437 1.314-.758c.233-.377.205-.792-.116-1.122c-.209-.215-.589-.437-1.201-.552l-.137-.023a5.4 5.4 0 0 0-.848-.056a8 8 0 0 0-.65.035c-1.624.152-3.917.827-6.99 2.426c-3.174 1.652-5.66 2.413-7.541 2.59a9 9 0 0 1-1.184.033a6 6 0 0 1-.876-.1c-.853-.159-1.525-.495-1.995-.978c-.834-.858-.885-2.037-.316-2.957c.533-.86 1.557-1.442 2.85-1.499a9.004 9.004 0 0 1 16.63-2.048q-.4.005-.814.044q-.408.037-.844.11A7.5 7.5 0 0 0 12 4.5\"/>",
@@ -32658,16 +33474,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "play-circle",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path stroke-linejoin=\"round\" d=\"M15.945 12.395c-.176.627-1.012 1.07-2.682 1.955c-1.615.856-2.422 1.285-3.073 1.113a1.66 1.66 0 0 1-.712-.393C9 14.62 9 13.746 9 12s0-2.62.478-3.07c.198-.186.443-.321.712-.392c.65-.173 1.458.256 3.073 1.112c1.67.886 2.506 1.329 2.682 1.955c.073.259.073.531 0 .79Z\"/></g>",
-     "height": 24,
-     "name": "play-circle",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m9.5 16.5l7-4.5l-7-4.5zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "play-circle-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path stroke-linejoin=\"round\" d=\"M15.945 12.395c-.176.627-1.012 1.07-2.682 1.955c-1.615.856-2.422 1.285-3.073 1.113a1.66 1.66 0 0 1-.712-.393C9 14.62 9 13.746 9 12s0-2.62.478-3.07c.198-.186.443-.321.712-.392c.65-.173 1.458.256 3.073 1.112c1.67.886 2.506 1.329 2.682 1.955c.073.259.073.531 0 .79Z\"/></g>",
+     "height": 24,
+     "name": "play-circle",
      "width": 24
     },
     "fluent": {
@@ -33016,36 +33832,6 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
-   "name": "podcast",
-   "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M4.516 17a9 9 0 1 1 14.969 0\"/><path d=\"M9 11a3 3 0 1 1 6 0v2a3 3 0 1 1-6 0zm3 5v4m-2 1l2-2l2 2z\"/></g>",
-     "height": 24,
-     "name": "podcast",
-     "width": 24
-    },
-    "lucide": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"currentColor\" d=\"M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 0 0 1 0z\"/><path d=\"M16.85 18.58a9 9 0 1 0-9.7 0\"/><path d=\"M8 14a5 5 0 1 1 8 0\"/><circle cx=\"12\" cy=\"11\" r=\"1\" fill=\"currentColor\"/></g>",
-     "height": 24,
-     "name": "podcast",
-     "width": 24
-    },
-    "boxicons": {
-     "body": "<path fill=\"currentColor\" d=\"M12 10a2 2 0 1 0 0 4a2 2 0 1 0 0-4m-1.5 5l.12 1.63l.08 1.23l.15 2.05l.15 2.04V22h2v-.05l.15-2.04l.15-2.05l.08-1.23l.12-1.63z\"/><path fill=\"currentColor\" d=\"M12 2C6.49 2 2 6.49 2 12c0 4.45 2.93 8.23 6.96 9.52l-.16-2.2C5.98 18.08 4 15.27 4 11.99c0-4.41 3.59-8 8-8s8 3.59 8 8c0 3.27-1.98 6.09-4.8 7.33l-.16 2.2C19.07 20.23 22 16.45 22 12c0-5.51-4.49-10-10-10\"/><path fill=\"currentColor\" d=\"m15.6 13.72l-.1 1.42l-.13 1.82A6 6 0 0 0 18.01 12c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 2.06 1.05 3.88 2.64 4.96l-.13-1.82l-.1-1.42c-.25-.52-.4-1.1-.4-1.72c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .62-.15 1.2-.4 1.72Z\"/>",
-     "height": 24,
-     "name": "podcast",
-     "width": 24
-    },
-    "iconoir": {
-     "body": "<defs><path id=\"SVGeNSNdbqp\" d=\"M6 19a9.99 9.99 0 0 1-4-8C2 5.477 6.477 1 12 1s10 4.477 10 10a9.99 9.99 0 0 1-4 8\"/></defs><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><use href=\"#SVGeNSNdbqp\"/><use href=\"#SVGeNSNdbqp\"/><path d=\"M7.528 15a6 6 0 1 1 8.944 0\"/><path d=\"M12 13a2 2 0 1 0 0-4a2 2 0 0 0 0 4m-1.924 3.283l.815-.543a2 2 0 0 1 2.218 0l.815.543a2 2 0 0 1 .863 1.993l-.509 3.053A2 2 0 0 1 12.307 23h-.612a2 2 0 0 1-1.973-1.671l-.508-3.053a2 2 0 0 1 .863-1.993\"/></g>",
-     "height": 24,
-     "name": "podcast",
-     "width": 24
-    }
-   }
-  },
-  {
-   "collisions": [],
    "name": "podium",
    "variants": {
     "tabler": {
@@ -33054,16 +33840,16 @@ export const deck: Deck = {
      "name": "podium",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M9.294 14c-1.374 0-2.062 0-2.637-.236a3.35 3.35 0 0 1-1.551-1.315c-.343-.543-.494-1.254-.796-2.675c-.258-1.216-.387-1.823-.262-2.305a1.98 1.98 0 0 1 .931-1.233C5.395 6 5.983 6 7.159 6h9.683c1.175 0 1.763 0 2.179.236c.457.258.793.704.93 1.233c.126.482-.003 1.09-.26 2.305c-.303 1.421-.454 2.132-.797 2.675a3.34 3.34 0 0 1-1.551 1.315C16.768 14 16.08 14 14.706 14\"/><path stroke-linecap=\"round\" d=\"m6 6l.515-2.06A2.56 2.56 0 0 1 9 2m9 4l-.515-2.06A2.56 2.56 0 0 0 15 2\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m9.284 12l.776 5.573c.045.322.068.484.023.61c-.206.582-.995.204-1.422.38a.9.9 0 0 0-.341.248c-.112.13-.181.308-.32.665c-.261.674-.85 1.623-.217 2.262c.26.262.72.262 1.64.262h5.153c.921 0 1.382 0 1.641-.262c.633-.64.044-1.588-.217-2.262c-.139-.357-.208-.535-.32-.665a.9.9 0 0 0-.34-.248c-.428-.176-1.217.202-1.423-.38c-.045-.126-.022-.288.023-.61L14.716 12\"/></g>",
-     "height": 24,
-     "name": "podium",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11.913 5.913q-.588.587-1.413.587q-.325 0-.6-.088t-.55-.287q-.6.2-.962.725T8.025 8H21l-1 7h-4.9v-2h3.175q.125-.75.213-1.5T18.7 10H5.3q.125.75.213 1.5t.212 1.5H8.9v2H4L3 8h3q0-1.225.675-2.225T8.5 4.3q.075-.775.65-1.287T10.5 2.5q.825 0 1.413.588T12.5 4.5t-.587 1.413M9.775 19h4.45l.575-6H9.2zM8 21l-.75-7.8q-.1-.875.5-1.537T9.225 11h5.55q.875 0 1.475.663t.5 1.537L16 21z\"/>",
      "height": 24,
      "name": "podium-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M9.294 14c-1.374 0-2.062 0-2.637-.236a3.35 3.35 0 0 1-1.551-1.315c-.343-.543-.494-1.254-.796-2.675c-.258-1.216-.387-1.823-.262-2.305a1.98 1.98 0 0 1 .931-1.233C5.395 6 5.983 6 7.159 6h9.683c1.175 0 1.763 0 2.179.236c.457.258.793.704.93 1.233c.126.482-.003 1.09-.26 2.305c-.303 1.421-.454 2.132-.797 2.675a3.34 3.34 0 0 1-1.551 1.315C16.768 14 16.08 14 14.706 14\"/><path stroke-linecap=\"round\" d=\"m6 6l.515-2.06A2.56 2.56 0 0 1 9 2m9 4l-.515-2.06A2.56 2.56 0 0 0 15 2\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m9.284 12l.776 5.573c.045.322.068.484.023.61c-.206.582-.995.204-1.422.38a.9.9 0 0 0-.341.248c-.112.13-.181.308-.32.665c-.261.674-.85 1.623-.217 2.262c.26.262.72.262 1.64.262h5.153c.921 0 1.382 0 1.641-.262c.633-.64.044-1.588-.217-2.262c-.139-.357-.208-.535-.32-.665a.9.9 0 0 0-.34-.248c-.428-.176-1.217.202-1.423-.38c-.045-.126-.022-.288.023-.61L14.716 12\"/></g>",
+     "height": 24,
+     "name": "podium",
      "width": 24
     },
     "lucide": {
@@ -33234,6 +34020,12 @@ export const deck: Deck = {
      "name": "power",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11.5 19h1v-1.85l3.5-3.5V9H8v4.65l3.5 3.5zm-2 2v-3L6 14.5V9q0-.825.588-1.412T8 7h1L8 8V3h2v4h4V3h2v5l-1-1h1q.825 0 1.413.588T18 9v5.5L14.5 18v3zm2.5-7\"/>",
+     "height": 24,
+     "name": "power-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.708 6A9 9 0 1 1 3 12c0-2.305.867-4.408 2.292-6M12 3v9\"/>",
      "height": 24,
@@ -33245,12 +34037,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "power",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M11.5 19h1v-1.85l3.5-3.5V9H8v4.65l3.5 3.5zm-2 2v-3L6 14.5V9q0-.825.588-1.412T8 7h1L8 8V3h2v4h4V3h2v5l-1-1h1q.825 0 1.413.588T18 9v5.5L14.5 18v3zm2.5-7\"/>",
-     "height": 24,
-     "name": "power-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M8.204 4.82a.75.75 0 0 1 .634 1.36A7.51 7.51 0 0 0 4.5 12.991c0 4.148 3.358 7.51 7.499 7.51s7.499-3.362 7.499-7.51a7.51 7.51 0 0 0-4.323-6.804a.75.75 0 1 1 .637-1.358a9.01 9.01 0 0 1 5.186 8.162c0 4.976-4.029 9.01-9 9.01C7.029 22 3 17.966 3 12.99a9.01 9.01 0 0 1 5.204-8.17M12 2.496a.75.75 0 0 1 .743.648l.007.102v7.5a.75.75 0 0 1-1.493.102l-.007-.102v-7.5a.75.75 0 0 1 .75-.75\"/>",
@@ -33732,6 +34518,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "qr-code",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 11V3h8v8zm2-2h4V5H5zM3 21v-8h8v8zm2-2h4v-4H5zm8-8V3h8v8zm2-2h4V5h-4zm4 12v-2h2v2zm-6-6v-2h2v2zm2 2v-2h2v2zm-2 2v-2h2v2zm2 2v-2h2v2zm2-2v-2h2v2zm0-4v-2h2v2zm2 2v-2h2v2z\"/>",
+     "height": 24,
+     "name": "qr-code-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 6c0-1.414 0-2.121.44-2.56C3.878 3 4.585 3 6 3s2.121 0 2.56.44C9 3.878 9 4.585 9 6s0 2.121-.44 2.56C8.122 9 7.415 9 6 9s-2.121 0-2.56-.44C3 8.122 3 7.415 3 6Zm0 12c0-1.414 0-2.121.44-2.56C3.878 15 4.585 15 6 15s2.121 0 2.56.44C9 15.878 9 16.585 9 18s0 2.121-.44 2.56C8.122 21 7.415 21 6 21s-2.121 0-2.56-.44C3 20.122 3 19.415 3 18Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 12h6m3-9v5\"/><path d=\"M15 6c0-1.414 0-2.121.44-2.56C15.878 3 16.585 3 18 3s2.121 0 2.56.44C21 3.878 21 4.585 21 6s0 2.121-.44 2.56C20.122 9 19.415 9 18 9s-2.121 0-2.56-.44C15 8.122 15 7.415 15 6Z\"/><path stroke-linecap=\"round\" d=\"M21 12h-6c-1.414 0-2.121 0-2.56.44C12 12.878 12 13.585 12 15m0 2.77v2.768M15 15v1.5c0 1.446.784 1.5 2 1.5a1 1 0 0 1 1 1m-2 2h-1m3-6c1.414 0 2.121 0 2.56.44s.44 1.148.44 2.564s0 2.125-.44 2.565c-.32.32-.783.408-1.56.431\"/></g>",
      "height": 24,
@@ -33844,6 +34636,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 8a3.5 3 0 0 1 3.5-3h1A3.5 3 0 0 1 16 8a3 3 0 0 1-2 3a3 4 0 0 0-2 4m0 4v.01\"/>",
      "height": 24,
      "name": "question-mark",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10.6 16q0-2.025.363-2.912T12.5 11.15q1.025-.9 1.563-1.562t.537-1.513q0-1.025-.687-1.7T12 5.7q-1.275 0-1.937.775T9.125 8.05L6.55 6.95q.525-1.6 1.925-2.775T12 3q2.625 0 4.038 1.463t1.412 3.512q0 1.25-.537 2.138t-1.688 2.012Q14 13.3 13.738 13.913T13.475 16zm1.4 6q-.825 0-1.412-.587T10 20t.588-1.412T12 18t1.413.588T14 20t-.587 1.413T12 22\"/>",
+     "height": 24,
+     "name": "question-mark-outline",
      "width": 24
     },
     "iconoir": {
@@ -33972,6 +34770,12 @@ export const deck: Deck = {
      "name": "radar",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.1 21.213q-1.825-.788-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22t-3.9-.788M12 20q1.4 0 2.638-.437t2.262-1.238L15.475 16.9q-.725.525-1.612.813T12 18q-2.5 0-4.25-1.75T6 12t1.75-4.25T12 6t4.25 1.75T18 12q0 .975-.3 1.875t-.825 1.625l1.425 1.425q.8-1.025 1.25-2.275T20 12q0-3.35-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-4q.55 0 1.063-.137t.962-.413L12.5 13.925q-.125.05-.25.063T12 14q-.825 0-1.412-.587T10 12t.588-1.412T12 10t1.413.588T14 12q0 .15-.012.288t-.063.262l1.5 1.5q.275-.45.425-.962T16 12q0-1.65-1.175-2.825T12 8T9.175 9.175T8 12t1.175 2.825T12 16\"/>",
+     "height": 24,
+     "name": "radar-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M16.596 16.596A6.5 6.5 0 1 1 13 5.576\"/><path d=\"m12 12l4.95-4.95c1.033-1.033 1.55-1.55 1.437-2.298c-.113-.749-.649-1.032-1.72-1.599A9.96 9.96 0 0 0 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10a10 10 0 0 0-.832-4\"/></g>",
      "height": 24,
@@ -34068,6 +34872,12 @@ export const deck: Deck = {
      "name": "radio",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V8q0-.625.338-1.125t.912-.725L15.9 1l.65 1.65L8.3 6H20q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm0-2h16v-7H4zm5.775-1.725q.725-.725.725-1.775t-.725-1.775T8 14t-1.775.725T5.5 16.5t.725 1.775T8 19t1.775-.725M4 11h12V9h2v2h2V8H4zm0 9v-7z\"/>",
+     "height": 24,
+     "name": "radio-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"14.5\" cy=\"13.5\" r=\"3.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2 13.5c0-3.759 0-5.638 1.053-6.893a4.5 4.5 0 0 1 .554-.554C4.862 5 6.741 5 10.5 5h3c3.759 0 5.638 0 6.892 1.053q.302.253.555.554C22 7.862 22 9.741 22 13.5s0 5.638-1.053 6.892a4.5 4.5 0 0 1-.555.555C19.138 22 17.26 22 13.5 22h-3c-3.759 0-5.638 0-6.893-1.053a4.5 4.5 0 0 1-.554-.555C2 19.138 2 17.26 2 13.5\"/><path stroke-linecap=\"round\" d=\"m10 5l4-3M6 12h1m-1 3h1\"/></g>",
      "height": 24,
@@ -34079,12 +34889,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "radio",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V8q0-.625.338-1.125t.912-.725L15.9 1l.65 1.65L8.3 6H20q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm0-2h16v-7H4zm5.775-1.725q.725-.725.725-1.775t-.725-1.775T8 14t-1.775.725T5.5 16.5t.725 1.775T8 19t1.775-.725M4 11h12V9h2v2h2V8H4zm0 9v-7z\"/>",
-     "height": 24,
-     "name": "radio-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M28 10h-4V2h-2v8h-9V8h-2v2H8V8H6v2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V12a2 2 0 0 0-2-2M4 28V12h24v16Z\"/><path fill=\"currentColor\" d=\"M10 26a4 4 0 1 1 4-4a4 4 0 0 1-4 4m0-6a2 2 0 1 0 2 2a2 2 0 0 0-2-2m-3-6h6v2H7zm10 2h9v2h-9zm0 4h9v2h-9zm0 4h9v2h-9z\"/>",
@@ -34368,17 +35172,17 @@ export const deck: Deck = {
      "name": "rectangle",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" d=\"M38 4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z\"/>",
-     "height": 48,
-     "name": "rectangle",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 20V4h20v16zm2-2h16V6H4zm0 0V6z\"/>",
      "height": 24,
      "name": "rectangle-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" d=\"M38 4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z\"/>",
+     "height": 48,
+     "name": "rectangle",
+     "width": 48
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2M4 18V6h16v12z\"/>",
@@ -34530,6 +35334,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "redo",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9.9 19q-2.425 0-4.163-1.575T4 13.5t1.738-3.925T9.9 8h6.3l-2.6-2.6L15 4l5 5l-5 5l-1.4-1.4l2.6-2.6H9.9q-1.575 0-2.738 1T6 13.5T7.163 16T9.9 17H17v2z\"/>",
+     "height": 24,
+     "name": "redo-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 1 1-1.383-4.797m1.09-4.202l-.173 2.054c-.124 1.479-.186 2.218-.668 2.634s-1.193.343-2.615.197l-2.044-.21\"/>",
      "height": 24,
@@ -34582,6 +35392,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4m-4 4a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4\"/>",
      "height": 24,
      "name": "refresh",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 20q-3.35 0-5.675-2.325T4 12t2.325-5.675T12 4q1.725 0 3.3.712T18 6.75V4h2v7h-7V9h4.2q-.8-1.4-2.187-2.2T12 6Q9.5 6 7.75 7.75T6 12t1.75 4.25T12 18q1.925 0 3.475-1.1T17.65 14h2.1q-.7 2.65-2.85 4.325T12 20\"/>",
+     "height": 24,
+     "name": "refresh-outline",
      "width": 24
     },
     "hugeicons": {
@@ -34728,6 +35544,12 @@ export const deck: Deck = {
      "name": "repeat",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m7 22l-4-4l4-4l1.4 1.45L6.85 17H17v-4h2v6H6.85l1.55 1.55zM5 11V5h12.15L15.6 3.45L17 2l4 4l-4 4l-1.4-1.45L17.15 7H7v4z\"/>",
+     "height": 24,
+     "name": "repeat-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m16.388 3l1.003.976c.448.436.672.654.593.839C17.906 5 17.59 5 16.955 5h-7.76C5.22 5 2 8.134 2 12c0 1.487.477 2.866 1.29 4m4.322 5l-1.003-.976c-.448-.436-.672-.654-.593-.839C6.094 19 6.41 19 7.045 19h7.76C18.78 19 22 15.866 22 12a6.84 6.84 0 0 0-1.29-4\"/>",
      "height": 24,
@@ -34794,6 +35616,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "repeat-one",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11.5 15v-4.5H10V9h3v6zM7 22l-4-4l4-4l1.4 1.45L6.85 17H17v-4h2v6H6.85l1.55 1.55zM5 11V5h12.15L15.6 3.45L17 2l4 4l-4 4l-1.4-1.45L17.15 7H7v4z\"/>",
+     "height": 24,
+     "name": "repeat-one-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"m16.388 3l1.003.976c.448.436.672.654.593.839C17.906 5 17.59 5 16.955 5h-7.76C5.22 5 2 8.134 2 12c0 1.487.477 2.866 1.29 4m4.322 5l-1.003-.976c-.448-.436-.672-.654-.593-.839C6.094 19 6.41 19 7.045 19h7.76C18.78 19 22 15.866 22 12a6.84 6.84 0 0 0-1.29-4\"/><path d=\"M13 15V9.316c0-.26-.282-.408-.48-.252l-1.52 1.2\"/></g>",
      "height": 24,
@@ -34824,6 +35652,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "reply",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M19 19v-4q0-1.25-.875-2.125T16 12H6.825l3.6 3.6L9 17l-6-6l6-6l1.425 1.4l-3.6 3.6H16q2.075 0 3.538 1.463T21 15v4z\"/>",
+     "height": 24,
+     "name": "reply-outline",
+     "width": 24
+    },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M28.88 30a1 1 0 0 1-.88-.5A15.19 15.19 0 0 0 15 22v6a1 1 0 0 1-.62.92a1 1 0 0 1-1.09-.21l-12-12a1 1 0 0 1 0-1.42l12-12a1 1 0 0 1 1.09-.21A1 1 0 0 1 15 4v6.11a17.19 17.19 0 0 1 15 17a16 16 0 0 1-.13 2a1 1 0 0 1-.79.86ZM14.5 20A17.62 17.62 0 0 1 28 26a15.31 15.31 0 0 0-14.09-14a1 1 0 0 1-.91-1V6.41L3.41 16L13 25.59V21a1 1 0 0 1 1-1h.54Z\"/>",
      "height": 32,
@@ -34866,6 +35700,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "reply-all",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m8 17l-6-6l6-6l1.425 1.4l-4.6 4.6l4.6 4.6zm12 2v-4q0-1.25-.875-2.125T17 12h-6.175l3.6 3.6L13 17l-6-6l6-6l1.425 1.4l-3.6 3.6H17q2.075 0 3.538 1.463T22 15v4z\"/>",
+     "height": 24,
+     "name": "reply-all-outline",
+     "width": 24
+    },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M19 29a1 1 0 0 1-.768-.36l-10-12a1 1 0 0 1 0-1.28l10-12A1 1 0 0 1 20 4v7.033c7.007.462 11 5.86 11 14.967a1 1 0 0 1-1.8.6c-2.822-3.762-5.391-5.346-9.2-5.571V28a1 1 0 0 1-1 1m-8.698-13L18 25.238V20a1 1 0 0 1 1-1a12.71 12.71 0 0 1 9.841 4.09C28.086 16.556 24.66 13 19 13a1 1 0 0 1-1-1V6.762Z\"/><path fill=\"currentColor\" d=\"M11.464 28.918L1.232 16.64a1 1 0 0 1 0-1.28L11.464 3.08L13 4.36L3.302 16L13 27.638Z\"/>",
      "height": 32,
@@ -34902,17 +35742,17 @@ export const deck: Deck = {
      "name": "report",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M36 35H12V21c0-6.627 5.373-12 12-12s12 5.373 12 12z\"/><path stroke-linecap=\"round\" d=\"M8 42h32M4 13l3 1m6-10l1 3m-4 3L7 7\"/></g>",
-     "height": 48,
-     "name": "report",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M12 17q.425 0 .713-.288T13 16t-.288-.712T12 15t-.712.288T11 16t.288.713T12 17m-1-4h2V7h-2zm-2.75 8L3 15.75v-7.5L8.25 3h7.5L21 8.25v7.5L15.75 21zm.85-2h5.8l4.1-4.1V9.1L14.9 5H9.1L5 9.1v5.8zm2.9-7\"/>",
      "height": 24,
      "name": "report-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M36 35H12V21c0-6.627 5.373-12 12-12s12 5.373 12 12z\"/><path stroke-linecap=\"round\" d=\"M8 42h32M4 13l3 1m6-10l1 3m-4 3L7 7\"/></g>",
+     "height": 48,
+     "name": "report",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M10 18h8v2h-8zm0-5h12v2H10zm0 10h5v2h-5z\"/><path fill=\"currentColor\" d=\"M25 5h-3V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v1H7a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M12 4h8v4h-8Zm13 24H7V7h3v3h12V7h3Z\"/>",
@@ -34944,6 +35784,12 @@ export const deck: Deck = {
      "name": "resize",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M19 9V5h-4V3h6v6zM3 21v-6h2v4h4v2zm0-8v-2h2v2zm0-4V7h2v2zm0-4V3h2v2zm4 0V3h2v2zm4 16v-2h2v2zm0-16V3h2v2zm4 16v-2h2v2zm4 0v-2h2v2zm0-4v-2h2v2zm0-4v-2h2v2z\"/>",
+     "height": 24,
+     "name": "resize-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17 4h4m-4 0c0 .56 1.494 1.607 2 2m-2-2c0-.56 1.494-1.607 2-2M7 4H3m4 0c0-.56-1.494-1.607-2-2m2 2c0 .56-1.494 1.607-2 2m4.835 16v-.949c0-.645-.209-1.273-.595-1.791l-3.658-4.903c-.422-.566-.759-1.267-.48-1.915c.45-1.049 1.723-1.73 3.28-.158l1.597 1.71V3.57c.056-2.044 3.344-2.145 3.485 0v5.94c1.48-.192 8.452.852 7.435 5.272l-.143.633c-.206.92-.814 2.557-1.484 3.514c-.698.997-.452 1.99-.452 3.07\"/>",
      "height": 24,
@@ -34968,6 +35814,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "restaurant",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 22v-9.15q-1.275-.35-2.137-1.4T4 9V2h2v7h1V2h2v7h1V2h2v7q0 1.4-.862 2.45T9 12.85V22zm10 0v-8h-3V7q0-2.075 1.463-3.537T19 2v20z\"/>",
+     "height": 24,
+     "name": "restaurant-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3 12v5m0 0h2c1.414 0 2.121 0 2.56.44C8 17.878 8 18.585 8 20v1m-5-4v4M4 7l5.317-2.917C10.633 3.361 11.292 3 12 3s1.367.361 2.683 1.083L20 7m-2-1v4M6 6v4m15 2v5m0 0h-2c-1.414 0-2.121 0-2.56.44C16 17.878 16 18.585 16 20v1m5-4v4M7 14h5m5 0h-5m0 0v7m0 0h-1m1 0h1\"/>",
      "height": 24,
@@ -35052,6 +35904,12 @@ export const deck: Deck = {
      "name": "road",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20V4h2v16zm7 0v-4h2v4zm7 0V4h2v16zm-7-6v-4h2v4zm0-6V4h2v4z\"/>",
+     "height": 24,
+     "name": "road-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M2 21.998V11.995m20 10.003V11.995M12 21.997v-1m0-3.001v-1\"/><path d=\"m5.725 5.654l.83.76m0 0c.16-.269.435-.74.527-1.033c.799-2.57.87-3.278 2.103-3.38h5.627c1.234.102 1.304.81 2.103 3.38c.091.294.318.764.477 1.032m-10.837 0C5.951 7.433 5.15 8.1 5.03 8.98c-.02.144 0 1.752 0 2.918c0 .876.844.85 1.666.918c.523.043 1.046.138 1.57.143c2.906.03 4.828.033 7.702.002c.556-.007 1.116-.111 1.67-.158c.625-.053 1.28-.124 1.33-.905c.077-1.165.02-2.774 0-2.918c-.12-.88-.97-1.547-1.575-2.567m-10.837 0h10.837m0 0l.972-.759M5.204 8.43l1.208.92m4.146 1.162h2.939m4.123-1.185l1.335-.425M7.082 12.855l-.078 1.644m9.978-1.623v1.623\"/></g>",
      "height": 24,
@@ -35106,6 +35964,12 @@ export const deck: Deck = {
      "name": "robot",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V9q0-2.5 1.75-4.25T9 3h6q2.5 0 4.25 1.75T21 9v10q0 .825-.587 1.413T19 21zm0-2h14V9q0-1.65-1.175-2.825T15 5H9Q7.35 5 6.175 6.175T5 9zm2.588-7.587Q7 10.825 7 10t.588-1.412T9 8t1.413.588T11 10t-.587 1.413T9 12t-1.412-.587m6 0Q13 10.825 13 10t.588-1.412T15 8t1.413.588T17 10t-.587 1.413T15 12t-1.412-.587M7 19v-2q0-.825.588-1.412T9 15h6q.825 0 1.413.588T17 17v2h-2v-2h-2v2h-2v-2H9v2zm-2 0h14z\"/>",
+     "height": 24,
+     "name": "robot-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 4V2m8 20a8 8 0 1 0-16 0M9.375 8.25H9.25m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m5.375 0h-.125m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/><path d=\"M15.154 4H8.846c-1.255 0-1.883 0-2.372.22A2.5 2.5 0 0 0 5.22 5.474C5 5.964 5 6.591 5 7.846c0 2.008 0 3.013.352 3.796a4 4 0 0 0 2.006 2.006C8.141 14 9.146 14 11.154 14h1.692c2.008 0 3.013 0 3.796-.352a4 4 0 0 0 2.006-2.006C19 10.859 19 9.854 19 7.846c0-1.255 0-1.883-.22-2.372a2.5 2.5 0 0 0-1.254-1.254C17.036 4 16.409 4 15.154 4\"/></g>",
      "height": 24,
@@ -35117,12 +35981,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "robot",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V9q0-2.5 1.75-4.25T9 3h6q2.5 0 4.25 1.75T21 9v10q0 .825-.587 1.413T19 21zm0-2h14V9q0-1.65-1.175-2.825T15 5H9Q7.35 5 6.175 6.175T5 9zm2.588-7.587Q7 10.825 7 10t.588-1.412T9 8t1.413.588T11 10t-.587 1.413T9 12t-1.412-.587m6 0Q13 10.825 13 10t.588-1.412T15 8t1.413.588T17 10t-.587 1.413T15 12t-1.412-.587M7 19v-2q0-.825.588-1.412T9 15h6q.825 0 1.413.588T17 17v2h-2v-2h-2v2h-2v-2H9v2zm-2 0h14z\"/>",
-     "height": 24,
-     "name": "robot-outline",
-     "width": 24
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M8.5 10a1.5 2 0 1 0 0 4a1.5 2 0 1 0 0-4m7 0a1.5 2 0 1 0 0 4a1.5 2 0 1 0 0-4M8 16h8v2H8z\"/><path fill=\"currentColor\" d=\"M21 11V8c0-1.1-.9-2-2-2h-6V4.61c.3-.27.5-.67.5-1.11c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5c0 .44.2.84.5 1.11V6H5c-1.1 0-2 .9-2 2v3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1v3c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-3c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1M5 20V8h14v12z\"/>",
@@ -35172,6 +36030,12 @@ export const deck: Deck = {
      "name": "rocket",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m6 19.05l1.975-.8q-.25-.725-.462-1.475t-.338-1.5l-1.175.8zM10 18h4q.45-1 .725-2.437T15 12.625q0-2.475-.825-4.687T12 4.525q-1.35 1.2-2.175 3.413T9 12.625q0 1.5.275 2.938T10 18m.588-5.587Q10 11.825 10 11t.588-1.412T12 9t1.413.588T14 11t-.587 1.413T12 13t-1.412-.587M18 19.05v-2.975l-1.175-.8q-.125.75-.337 1.5t-.463 1.475zM12 1.975q2.475 1.8 3.738 4.575T17 13l2.1 1.4q.425.275.663.725t.237.95V22l-4.975-2h-6.05L4 22v-5.925q0-.5.238-.95T4.9 14.4L7 13q0-3.675 1.263-6.45T12 1.975\"/>",
+     "height": 24,
+     "name": "rocket-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m8 10.167l4.123-4.124c1.125-1.124 1.688-1.687 2.308-2.14A9.9 9.9 0 0 1 18.74 2.12C19.499 2 20.293 2 21.885 2c.083 0 .115.038.115.115c0 1.59 0 2.386-.119 3.145a9.9 9.9 0 0 1-1.784 4.309c-.453.62-1.016 1.183-2.14 2.308L13.833 16\"/><path stroke-linejoin=\"round\" d=\"M10.341 8.098c-1.703 0-3.843-.36-5.437.3C3.737 8.88 2.878 10 2 10.878l3.306 1.418c.876.375.34 1.48.195 2.206c-.161.808-.152.838.43 1.42l2.147 2.146c.582.583.612.592 1.42.43c.725-.145 1.831-.68 2.206.196L13.121 22c.878-.878 1.998-1.737 2.481-2.904c.66-1.594.3-3.734.3-5.437\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m12 20l-1 1m-7-9l-1 1\"/><path stroke-linecap=\"square\" d=\"M15 4.08c1.2.18 2.46.66 3.161 1.38c.897.792 1.519 1.86 1.759 3.54\"/><path stroke-linecap=\"round\" d=\"M17.94 6.06L16.5 7.5\"/></g>",
      "height": 24,
@@ -35183,12 +36047,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "rocket",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"m6 19.05l1.975-.8q-.25-.725-.462-1.475t-.338-1.5l-1.175.8zM10 18h4q.45-1 .725-2.437T15 12.625q0-2.475-.825-4.687T12 4.525q-1.35 1.2-2.175 3.413T9 12.625q0 1.5.275 2.938T10 18m.588-5.587Q10 11.825 10 11t.588-1.412T12 9t1.413.588T14 11t-.587 1.413T12 13t-1.412-.587M18 19.05v-2.975l-1.175-.8q-.125.75-.337 1.5t-.463 1.475zM12 1.975q2.475 1.8 3.738 4.575T17 13l2.1 1.4q.425.275.663.725t.237.95V22l-4.975-2h-6.05L4 22v-5.925q0-.5.238-.95T4.9 14.4L7 13q0-3.675 1.263-6.45T12 1.975\"/>",
-     "height": 24,
-     "name": "rocket-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M13.057 7.43a2.5 2.5 0 1 1 3.536 3.536a2.5 2.5 0 0 1-3.536-3.535m2.475 1.061a1 1 0 1 0-1.414 1.415a1 1 0 0 0 1.414-1.415m5.977-4.169a2.75 2.75 0 0 0-1.811-1.81l-.663-.206a6.75 6.75 0 0 0-6.773 1.674l-.996.996a3.5 3.5 0 0 0-4.57.327L5.455 6.545a.75.75 0 0 0 0 1.06l1.591 1.592l-.18.18a1.75 1.75 0 0 0 0 2.474l.496.496l-1.396.796a.75.75 0 0 0-.158 1.181l3.889 3.89a.75.75 0 0 0 1.181-.158l.798-1.395l.497.497a1.75 1.75 0 0 0 2.475 0l.177-.177l1.59 1.59a.75.75 0 0 0 1.06 0l1.242-1.243a3.5 3.5 0 0 0 .328-4.567l.998-.998a6.75 6.75 0 0 0 1.673-6.777zm-2.256-.378c.393.122.701.43.823.823l.207.665a5.25 5.25 0 0 1-1.302 5.27l-5.395 5.395a.25.25 0 0 1-.353 0l-5.307-5.306a.25.25 0 0 1 0-.354l5.397-5.396a5.25 5.25 0 0 1 5.268-1.302zm-1.289 9.897c.453.766.35 1.769-.308 2.427l-.712.712l-1.06-1.06zM7.758 6.363a2 2 0 0 1 2.428-.307l-2.08 2.08l-1.06-1.06zm2.818 9.199l-.514.897l-2.5-2.5l.898-.513zM6.69 18.394a.75.75 0 0 0-1.06-1.06l-2.476 2.474a.75.75 0 0 0 1.061 1.061zM4.745 15.39a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 0 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0m3.887 4.952a.75.75 0 1 0-1.06-1.06L6.513 20.34a.75.75 0 0 0 1.06 1.06z\"/>",
@@ -35292,16 +36150,16 @@ export const deck: Deck = {
      "name": "route",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><circle cx=\"18\" cy=\"5\" r=\"3\"/><circle cx=\"6\" cy=\"19\" r=\"3\"/><path d=\"M12 5H8.5a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 1 0 7H12\"/></g>",
-     "height": 24,
-     "name": "route-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6.175 19.825Q5 18.65 5 17V8.825Q4.125 8.5 3.563 7.738T3 6q0-1.25.875-2.125T6 3t2.125.875T9 6q0 .975-.562 1.738T7 8.825V17q0 .825.588 1.413T9 19t1.413-.587T11 17V7q0-1.65 1.175-2.825T15 3t2.825 1.175T19 7v8.175q.875.325 1.438 1.088T21 18q0 1.25-.875 2.125T18 21t-2.125-.875T15 18q0-.975.563-1.75T17 15.175V7q0-.825-.587-1.412T15 5t-1.412.588T13 7v10q0 1.65-1.175 2.825T9 21t-2.825-1.175M6 7q.425 0 .713-.288T7 6t-.288-.712T6 5t-.712.288T5 6t.288.713T6 7m12 12q.425 0 .713-.288T19 18t-.288-.712T18 17t-.712.288T17 18t.288.713T18 19m0-1\"/>",
      "height": 24,
      "name": "route-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><circle cx=\"18\" cy=\"5\" r=\"3\"/><circle cx=\"6\" cy=\"19\" r=\"3\"/><path d=\"M12 5H8.5a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 1 0 7H12\"/></g>",
+     "height": 24,
+     "name": "route-01",
      "width": 24
     },
     "lucide": {
@@ -35340,6 +36198,12 @@ export const deck: Deck = {
      "name": "router",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19v-4q0-.825.588-1.412T5 13h10V9h2v4h2q.825 0 1.413.588T21 15v4q0 .825-.587 1.413T19 21zm0-2h14v-4H5zm2.713-1.287Q8 17.425 8 17t-.288-.712T7 16t-.712.288T6 17t.288.713T7 18t.713-.288m3.5 0q.287-.287.287-.712t-.288-.712T10.5 16t-.712.288T9.5 17t.288.713t.712.287t.713-.288m3.5 0Q15 17.426 15 17t-.288-.712T14 16t-.712.288T13 17t.288.713T14 18t.713-.288M14.25 8.25L12.8 6.8q.65-.6 1.45-.95T16 5.5t1.75.35t1.45.95l-1.45 1.45q-.35-.35-.788-.55T16 7.5t-.963.2t-.787.55m-2.5-2.5l-1.4-1.4q1.1-1.1 2.55-1.725T16 2t3.1.625t2.55 1.725l-1.4 1.4q-.825-.825-1.912-1.287T16 4t-2.337.463T11.75 5.75M5 19v-4z\"/>",
+     "height": 24,
+     "name": "router-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.5 22h-11c-1.875 0-2.812 0-3.47-.53a2.7 2.7 0 0 1-.553-.615C2 20.125 2 19.083 2 17s0-3.125.477-3.855q.233-.356.554-.614C3.688 12 4.625 12 6.5 12h11c1.875 0 2.812 0 3.47.53c.212.172.398.38.553.615C22 13.875 22 14.917 22 17s0 3.125-.477 3.855q-.234.356-.553.614C20.312 22 19.375 22 17.5 22\"/><path fill=\"currentColor\" d=\"M16.458 4.47a.75.75 0 0 0 1.084-1.036L17 3.952zm-6.75 1.32a.75.75 0 1 0 1.084 1.036l-.542-.518zm-2.25-2.356A.75.75 0 1 0 8.542 4.47L8 3.952zm6.75 3.392a.75.75 0 0 0 1.084-1.036l-.542.518zM12.55 9.75a.75.75 0 0 0 0-1.5zm-.05-1.5a.75.75 0 0 0 0 1.5zM17 3.952l.542-.518C16.26 2.09 14.476 1.25 12.5 1.25v1.5c1.539 0 2.938.652 3.958 1.72zm-4.5 1.38v-.75A3.85 3.85 0 0 0 9.708 5.79l.542.518l.542.518a2.35 2.35 0 0 1 1.708-.744zM12.5 2v-.75c-1.976 0-3.759.84-5.042 2.184L8 3.952l.542.518c1.02-1.068 2.42-1.72 3.958-1.72zm2.25 4.308l.542-.518A3.85 3.85 0 0 0 12.5 4.582v1.5c.66 0 1.264.279 1.708.744zM12.6 9h-.75a.65.65 0 0 1 .65-.65v1.5a.85.85 0 0 0 .85-.85zm-.1.1v-.75a.65.65 0 0 1 .65.65h-1.5c0 .47.38.85.85.85zm-.1-.1h.75a.65.65 0 0 1-.65.65v-1.5a.85.85 0 0 0-.85.85zm.1-.1v.75a.65.65 0 0 1-.65-.65h1.5a.85.85 0 0 0-.85-.85zm.05.1v-.75h-.05v1.5h.05z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.125 17H18m-3.875 0H14m4.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m-4 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0M6 17h4\"/></g>",
      "height": 24,
@@ -35351,12 +36215,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "router",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19v-4q0-.825.588-1.412T5 13h10V9h2v4h2q.825 0 1.413.588T21 15v4q0 .825-.587 1.413T19 21zm0-2h14v-4H5zm2.713-1.287Q8 17.425 8 17t-.288-.712T7 16t-.712.288T6 17t.288.713T7 18t.713-.288m3.5 0q.287-.287.287-.712t-.288-.712T10.5 16t-.712.288T9.5 17t.288.713t.712.287t.713-.288m3.5 0Q15 17.426 15 17t-.288-.712T14 16t-.712.288T13 17t.288.713T14 18t.713-.288M14.25 8.25L12.8 6.8q.65-.6 1.45-.95T16 5.5t1.75.35t1.45.95l-1.45 1.45q-.35-.35-.788-.55T16 7.5t-.963.2t-.787.55m-2.5-2.5l-1.4-1.4q1.1-1.1 2.55-1.725T16 2t3.1.625t2.55 1.725l-1.4 1.4q-.825-.825-1.912-1.287T16 4t-2.337.463T11.75 5.75M5 19v-4z\"/>",
-     "height": 24,
-     "name": "router-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12 3.5A7.5 7.5 0 0 0 4.5 11v.25a.75.75 0 0 1-1.5 0V11a9 9 0 0 1 18 0v.25a.75.75 0 0 1-1.5 0V11A7.5 7.5 0 0 0 12 3.5m0 3A4.5 4.5 0 0 0 7.5 11v.25a.75.75 0 0 1-1.5 0V11a6 6 0 1 1 12 0v.25a.75.75 0 0 1-1.5 0V11A4.5 4.5 0 0 0 12 6.5M12 8a3 3 0 0 0-.75 5.906V16H6a3 3 0 1 0 0 6h12a3 3 0 1 0 0-6h-5.25v-2.094A3.001 3.001 0 0 0 12 8m-1.5 3a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0M6 17.5h12a1.5 1.5 0 0 1 0 3H6a1.5 1.5 0 0 1 0-3\"/>",
@@ -35736,16 +36594,16 @@ export const deck: Deck = {
      "name": "satellite",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m9 22l-3-7l-3 7z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.192 13.335c1.293 1.293 1.94 1.94 1.786 2.938a3 3 0 0 1-.034.172c-.24.98-.9 1.254-2.216 1.8A9.928 9.928 0 0 1 4.756 5.271c.545-1.317.818-1.975 1.8-2.216c.045-.01.125-.027.17-.034c1-.153 1.646.493 2.939 1.786z\"/><circle cx=\"19\" cy=\"4\" r=\"2\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m12.5 7.133l5.213-1.604l-1.836 5\"/></g>",
-     "height": 24,
-     "name": "satellite",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 17h12l-3.75-5l-3 4L9 13zm0-5q2.5 0 4.25-1.75T12 6h-1.7q0 1.8-1.25 3.05T6 10.3zm0-3.4q1.075 0 1.813-.763T8.55 6H6zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zm0 0V5z\"/>",
      "height": 24,
      "name": "satellite-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m9 22l-3-7l-3 7z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.192 13.335c1.293 1.293 1.94 1.94 1.786 2.938a3 3 0 0 1-.034.172c-.24.98-.9 1.254-2.216 1.8A9.928 9.928 0 0 1 4.756 5.271c.545-1.317.818-1.975 1.8-2.216c.045-.01.125-.027.17-.034c1-.153 1.646.493 2.939 1.786z\"/><circle cx=\"19\" cy=\"4\" r=\"2\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m12.5 7.133l5.213-1.604l-1.836 5\"/></g>",
+     "height": 24,
+     "name": "satellite",
      "width": 24
     },
     "carbon": {
@@ -35766,6 +36624,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "save",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M21 7v12q0 .825-.587 1.413T19 21H5q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h12zm-2 .85L16.15 5H5v14h14zm-4.875 9.275Q15 16.25 15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18t2.125-.875M6 10h9V6H6zM5 7.85V19V5z\"/>",
+     "height": 24,
+     "name": "save-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15.879 3H11C7.229 3 5.343 3 4.172 4.172S3 7.229 3 11v2c0 3.771 0 5.657 1.172 6.828S7.229 21 11 21h2c3.771 0 5.657 0 6.828-1.172S21 16.771 21 13V8.121c0-.456 0-.685-.024-.904a4 4 0 0 0-.854-2.06c-.138-.173-.3-.334-.622-.657c-.323-.323-.484-.484-.656-.622a4 4 0 0 0-2.061-.854C16.563 3 16.335 3 15.879 3\"/><path d=\"M17 3.5V4c0 1.886 0 2.828-.586 3.414S14.886 8 13 8h-2c-1.886 0-2.828 0-3.414-.586S7 5.886 7 4v-.5m10 17V17c0-1.886 0-2.828-.586-3.414S14.886 13 13 13h-2c-1.886 0-2.828 0-3.414.586S7 15.114 7 17v3.5\"/></g>",
      "height": 24,
@@ -35777,12 +36641,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "save",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M21 7v12q0 .825-.587 1.413T19 21H5q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h12zm-2 .85L16.15 5H5v14h14zm-4.875 9.275Q15 16.25 15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18t2.125-.875M6 10h9V6H6zM5 7.85V19V5z\"/>",
-     "height": 24,
-     "name": "save-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3 5.75A2.75 2.75 0 0 1 5.75 3h9.965a3.25 3.25 0 0 1 2.298.952l2.035 2.035c.61.61.952 1.437.952 2.299v9.964A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25zM5.75 4.5c-.69 0-1.25.56-1.25 1.25v12.5c0 .69.56 1.25 1.25 1.25H6v-5.25A2.25 2.25 0 0 1 8.25 12h7.5A2.25 2.25 0 0 1 18 14.25v5.25h.25c.69 0 1.25-.56 1.25-1.25V8.286c0-.465-.184-.91-.513-1.238l-2.035-2.035a1.75 1.75 0 0 0-.952-.49V7.25a2.25 2.25 0 0 1-2.25 2.25h-4.5A2.25 2.25 0 0 1 7 7.25V4.5zm10.75 15v-5.25a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0-.75.75v5.25zm-8-15v2.75c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75V4.5z\"/>",
@@ -35844,17 +36702,17 @@ export const deck: Deck = {
      "name": "scale",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M30 6h12v12M31 29H19V17M42 6L19 29\"/><path d=\"M22 6H8a2 2 0 0 0-2 2v32a2 2 0 0 0 2 2h32a2 2 0 0 0 2-2V26\"/></g>",
-     "height": 48,
-     "name": "scale",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 22q0-2.775.738-4.737T4.624 14T7.2 11.987T10 11V8q-3.425-.425-5.712-2.113T2 2h20q0 2.2-2.287 3.888T14 8v3q1.375.275 2.8.988T19.375 14t1.888 3.263T22 22h-6v-2h3.875q-.45-3.8-2.838-5.5T12 12.8t-5.038 1.7T4.125 20H8v2zM16.05 5.513Q17.825 4.9 18.875 4H5.125q1.05.9 2.825 1.513t4.05.612t4.05-.612M12 22q-.825 0-1.412-.587T10 20q0-.425.163-.775t.437-.625q.6-.6 2.025-1.263T16 16q-.7 1.95-1.35 3.375T13.4 21.4q-.275.275-.625.438T12 22m0-15.875\"/>",
      "height": 24,
      "name": "scale-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M30 6h12v12M31 29H19V17M42 6L19 29\"/><path d=\"M22 6H8a2 2 0 0 0-2 2v32a2 2 0 0 0 2 2h32a2 2 0 0 0 2-2V26\"/></g>",
+     "height": 48,
+     "name": "scale",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M13 17H7a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2m-6 8v-6h6v6Z\"/><path fill=\"currentColor\" d=\"M19 21v2h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2v6h2V7h14v14\"/>",
@@ -35928,6 +36786,12 @@ export const deck: Deck = {
      "name": "scan",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 22zM4 11V4q0-.825.588-1.412T6 2h8l6 6v3h-2V9h-5V4H6v7zm-3 4v-2h22v2zm11 2\"/>",
+     "height": 24,
+     "name": "scan-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.004 2.5c1.993.113 3.254.434 4.158 1.338s1.225 2.165 1.338 4.158M7.996 2.5c-1.993.113-3.254.434-4.158 1.338S2.613 6.003 2.5 7.996m19 8.008c-.113 1.993-.434 3.254-1.338 4.158s-2.165 1.225-4.158 1.338M2.5 16.004c.113 1.993.434 3.254 1.338 4.158s2.165 1.225 4.158 1.338M5 12h14\"/>",
      "height": 24,
@@ -35939,12 +36803,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "scan",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 22zM4 11V4q0-.825.588-1.412T6 2h8l6 6v3h-2V9h-5V4H6v7zm-3 4v-2h22v2zm11 2\"/>",
-     "height": 24,
-     "name": "scan-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m3.25 12.332l-.039.072l-.063.091l-4.757 5.853q.783.151 1.609.152a8.47 8.47 0 0 0 5.654-2.153l-2.084-4.54q-.14.275-.32.525M4.49 15.985a8.53 8.53 0 0 0 4.34 3.904L11.991 16l-.19-.005l-.132-.008zm15.64-6.473h-4.998q.123.155.23.32a1 1 0 0 1 .067.089l.049.09l.039.082q.13.238.226.493l3.016 6.57A8.46 8.46 0 0 0 20.5 12a8.5 8.5 0 0 0-.37-2.488M3.5 12c0 .865.13 1.7.37 2.486h4.996a4 4 0 0 1-.23-.32l-.135-.223l-3.614-6.598A8.46 8.46 0 0 0 3.5 12m6.52-1.526l-.044.071a1 1 0 0 1-.073.096a2.5 2.5 0 0 0 1.84 3.846h.513a2.5 2.5 0 0 0-.021-4.976l-.373.002l-.058-.005a2.5 2.5 0 0 0-1.784.966M12 3.5a8.48 8.48 0 0 0-6.097 2.577l2.402 4.387q.191-.458.485-.851l3.904-6.085A9 9 0 0 0 12 3.5m-.406 4.52a4 4 0 0 1 .711-.009l7.204.002A8.52 8.52 0 0 0 14.585 3.9l-.292-.087z\"/>",
@@ -35994,17 +36852,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "schedule",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\"><rect width=\"40\" height=\"30\" x=\"4\" y=\"10\" stroke-linejoin=\"round\" rx=\"2\"/><path d=\"M14 6v8m11 9H14m20 8H14M34 6v8\"/></g>",
-     "height": 48,
-     "name": "schedule",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m15.3 16.7l1.4-1.4l-3.7-3.7V7h-2v5.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.325 0 5.663-2.337T20 12t-2.337-5.663T12 4T6.337 6.338T4 12t2.338 5.663T12 20\"/>",
      "height": 24,
      "name": "schedule-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\"><rect width=\"40\" height=\"30\" x=\"4\" y=\"10\" stroke-linejoin=\"round\" rx=\"2\"/><path d=\"M14 6v8m11 9H14m20 8H14M34 6v8\"/></g>",
+     "height": 48,
+     "name": "schedule",
+     "width": 48
     },
     "mingcute": {
      "body": "<g fill=\"none\"><path d=\"m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M16 3a1 1 0 0 1 1 1v1h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2V4a1 1 0 1 1 2 0v1h6V4a1 1 0 0 1 1-1m3 4H5v12h14zm-4.176 2.379a1 1 0 0 1 1.414 1.414l-4.942 4.943a1.01 1.01 0 0 1-1.429 0L7.753 13.62a1 1 0 0 1 1.414-1.414l1.415 1.414Z\"/></g>",
@@ -36030,6 +36888,12 @@ export const deck: Deck = {
      "name": "school",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775\"/>",
+     "height": 24,
+     "name": "school-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M22 11v5c0 2.357 0 3.535-.732 4.268C20.535 21 19.357 21 17 21H7c-2.357 0-3.536 0-4.268-.732C2 19.535 2 18.357 2 16v-5c0-1.4 0-2.1.272-2.635a2.5 2.5 0 0 1 1.093-1.093C3.9 7 4.6 7 6 7l3.6-2.7C10.756 3.433 11.333 3 12 3s1.244.433 2.4 1.3L18 7c1.4 0 2.1 0 2.635.272a2.5 2.5 0 0 1 1.092 1.093C22 8.9 22 9.6 22 11\"/><path d=\"M10 21v-3a2 2 0 1 1 4 0v3M6.5 11h-1v1h1zm0 4.5h-1v1h1zm12-4.5h-1v1h1zm0 4.5h-1v1h1zM12 12a2 2 0 1 0 0-4a2 2 0 0 0 0 4\"/></g>",
      "height": 24,
@@ -36041,12 +36905,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "school",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775\"/>",
-     "height": 24,
-     "name": "school-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M14 21v-3a2 2 0 0 0-4 0v3m8-16.067V21M4 6l7.106-3.79a2 2 0 0 1 1.788 0L20 6\"/><path d=\"m6 11l-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11M6 4.933V21\"/><circle cx=\"12\" cy=\"9\" r=\"2\"/></g>",
@@ -36166,6 +37024,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 17a2 2 0 1 0 4 0a2 2 0 1 0-4 0M4 17a2 2 0 1 0 4 0a2 2 0 1 0-4 0\"/><path d=\"M8 17h5a6 6 0 0 1 5-5V7a2 2 0 0 0-2-2h-1\"/></g>",
      "height": 24,
      "name": "scooter",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M19.713 17.713Q20 17.425 20 17t-.288-.712T19 16t-.712.288T18 17t.288.713T19 18t.713-.288M19 20q-1.25 0-2.125-.875T16 17t.875-2.125T19 14t2.125.875T22 17t-.875 2.125T19 20M5.712 17.713Q6 17.425 6 17t-.288-.712T5 16t-.712.288T4 17t.288.713T5 18t.713-.288M5 20q-1.25 0-2.125-.875T2 17t.875-2.125T5 14q.95 0 1.725.55t1.1 1.45H13.1q.275-1.725 1.413-2.988T17.3 11.25L15.9 5H12V3h3.9q.7 0 1.25.425t.7 1.125l1.9 8.45H19q-1.65 0-2.825 1.175T15 17v1H7.825q-.325.9-1.1 1.45T5 20\"/>",
+     "height": 24,
+     "name": "scooter-outline",
      "width": 24
     },
     "hugeicons": {
@@ -36360,6 +37224,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "sd-card",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 11h2V7H9zm3 0h2V7h-2zm3 0h2V7h-2zM6 22q-.825 0-1.412-.587T4 20V8l6-6h8q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm0-2h12V4h-7.15L6 8.85zm0 0h12z\"/>",
+     "height": 24,
+     "name": "sd-card-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\" d=\"M5.5 8.9V8c0-2.828 0-4.243.879-5.121C7.257 2 8.672 2 11.5 2h3c2.828 0 4.243 0 5.121.879c.879.878.879 2.293.879 5.121v6c0 3.771 0 5.657-1.172 6.828S16.271 22 12.5 22h-1.875c-2.928 0-4.392 0-5.428-.73a4 4 0 0 1-.967-.966c-.73-1.037-.73-2.5-.73-5.43v-.273c0-.542 0-.813.046-1.073a3 3 0 0 1 .32-.911c.126-.232.295-.444.634-.867s.508-.635.634-.867a3 3 0 0 0 .32-.91c.046-.26.046-.532.046-1.074Zm11-2.9v3M13 6v3M9.5 6v3\"/>",
      "height": 24,
@@ -36371,12 +37241,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "sd-card",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M9 11h2V7H9zm3 0h2V7h-2zm3 0h2V7h-2zM6 22q-.825 0-1.412-.587T4 20V8l6-6h8q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm0-2h12V4h-7.15L6 8.85zm0 0h12z\"/>",
-     "height": 24,
-     "name": "sd-card-outline",
-     "width": 24
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M6 22h12c1.1 0 2-.9 2-2V6c0-.27-.11-.52-.29-.71l-3-3A1 1 0 0 0 16 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2M6 4h9.59L18 6.41V20H6z\"/><path fill=\"currentColor\" d=\"M7 5h2v4H7zm3 0h2v4h-2zm3 0h2v4h-2z\"/>",
@@ -36442,6 +37306,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6\"/>",
      "height": 24,
      "name": "search",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14\"/>",
+     "height": 24,
+     "name": "search-outline",
      "width": 24
     },
     "hugeicons": {
@@ -36544,6 +37414,66 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "security",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22m0-2.1q2.425-.75 4.05-2.963T17.95 12H12V4.125l-6 2.25v5.175q0 .175.05.45H12z\"/>",
+     "height": 24,
+     "name": "security-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M18.709 3.495C16.817 2.554 14.5 2 12 2s-4.816.554-6.709 1.495c-.928.462-1.392.693-1.841 1.419S3 6.343 3 7.748v3.49c0 5.683 4.542 8.843 7.173 10.196c.734.377 1.1.566 1.827.566s1.093-.189 1.827-.566C16.457 20.08 21 16.92 21 11.237V7.748c0-1.405 0-2.108-.45-2.834s-.913-.957-1.841-1.419\"/><path d=\"M12 9v1m-1-.5a1 1 0 1 0 2 0a1 1 0 0 0-2 0\"/><path d=\"M12.75 14h-1.5l.75-3.5z\"/></g>",
+     "height": 24,
+     "name": "security",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M42 26v-4c0-9.941-8.059-18-18-18v0C14.059 4 6 12.059 6 22v4\"/><path d=\"M32 27V12a8 8 0 0 0-8-8v0a8 8 0 0 0-8 8v15\"/><path d=\"M24 24v14a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-2.889M12 24h30\"/></g>",
+     "height": 48,
+     "name": "security",
+     "width": 48
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M14 16.59L11.41 14L10 15.41l4 4l8-8L20.59 10z\"/><path fill=\"currentColor\" d=\"m16 30l-6.176-3.293A10.98 10.98 0 0 1 4 17V4a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v13a10.98 10.98 0 0 1-5.824 9.707ZM6 4v13a8.99 8.99 0 0 0 4.766 7.942L16 27.733l5.234-2.79A8.99 8.99 0 0 0 26 17V4Z\"/>",
+     "height": 32,
+     "name": "security",
+     "width": 32
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "select",
+   "variants": {
+    "tabler": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><path d=\"m9 11l3 3l3-3\"/></g>",
+     "height": 24,
+     "name": "select",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 19v2q-.825 0-1.412-.587T3 19zm-2-2v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm2-4H3q0-.825.588-1.412T5 3zm2 16v-2h2v2zM7 5V3h2v2zm4 16v-2h2v2zm0-16V3h2v2zm4 16v-2h2v2zm0-16V3h2v2zm4 14h2q0 .825-.587 1.413T19 21zm0-2v-2h2v2zm0-4v-2h2v2zm0-4V7h2v2zm0-4V3q.825 0 1.413.588T21 5z\"/>",
+     "height": 24,
+     "name": "select-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M5 2v6M2 5h6\"/><path d=\"M12 5h3m-3 17h3m3-17h.5A3.5 3.5 0 0 1 22 8.5V9m0 9v.5a3.5 3.5 0 0 1-3.5 3.5H18m-9 0h-.5A3.5 3.5 0 0 1 5 18.5V18m17-6v3M5 12v3\"/></g>",
+     "height": 24,
+     "name": "select-01",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M3 3h2v2H3zm0 4h2v2H3zm0 4h2v2H3zm0 4h2v2H3zm0 4h2v2H3zM7 3h2v2H7zm0 16h2v2H7zm4-16h2v2h-2zm0 16h2v2h-2zm4-16h2v2h-2zm0 16h2v2h-2zm4-16h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2z\"/>",
+     "height": 24,
+     "name": "select",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "send",
    "variants": {
     "tabler": {
@@ -36552,17 +37482,17 @@ export const deck: Deck = {
      "name": "send",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M43 5L29.7 43l-7.6-17.1L5 18.3z\"/><path stroke-linecap=\"round\" d=\"M43 5L22.1 25.9\"/></g>",
-     "height": 48,
-     "name": "send",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M3 20V4l19 8zm2-3l11.85-5L5 7v3.5l6 1.5l-6 1.5zm0 0V7z\"/>",
      "height": 24,
      "name": "send-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M43 5L29.7 43l-7.6-17.1L5 18.3z\"/><path stroke-linecap=\"round\" d=\"M43 5L22.1 25.9\"/></g>",
+     "height": 48,
+     "name": "send",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M5.694 12L2.299 3.272a.75.75 0 0 1 .942-.982l.093.039l18 9a.75.75 0 0 1 .097 1.284l-.097.058l-18 9c-.583.291-1.217-.245-1.065-.848l.03-.095zL2.299 3.272zM4.402 4.54l2.61 6.71h6.627a.75.75 0 0 1 .743.648l.007.102a.75.75 0 0 1-.649.743l-.101.007H7.01l-2.609 6.71L19.322 12z\"/>",
@@ -36685,7 +37615,7 @@ export const deck: Deck = {
    "name": "server",
    "variants": {
     "tabler": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3m0 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm4-7v.01M7 16v.01\"/>",
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm0 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm4-7v.01M7 16v.01\"/>",
      "height": 24,
      "name": "server",
      "width": 24
@@ -36762,16 +37692,16 @@ export const deck: Deck = {
      "name": "settings",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"m21.318 7.141l-.494-.856c-.373-.648-.56-.972-.878-1.101c-.317-.13-.676-.027-1.395.176l-1.22.344c-.459.106-.94.046-1.358-.17l-.337-.194a2 2 0 0 1-.788-.967l-.334-.998c-.22-.66-.33-.99-.591-1.178c-.261-.19-.609-.19-1.303-.19h-1.115c-.694 0-1.041 0-1.303.19c-.261.188-.37.518-.59 1.178l-.334.998a2 2 0 0 1-.789.967l-.337.195c-.418.215-.9.275-1.358.17l-1.22-.345c-.719-.203-1.078-.305-1.395-.176c-.318.129-.505.453-.878 1.1l-.493.857c-.35.608-.525.911-.491 1.234c.034.324.268.584.736 1.105l1.031 1.153c.252.319.431.875.431 1.375s-.179 1.056-.43 1.375l-1.032 1.152c-.468.521-.702.782-.736 1.105s.14.627.49 1.234l.494.857c.373.647.56.971.878 1.1s.676.028 1.395-.176l1.22-.344a2 2 0 0 1 1.359.17l.336.194c.36.23.636.57.788.968l.334.997c.22.66.33.99.591 1.18c.262.188.609.188 1.303.188h1.115c.694 0 1.042 0 1.303-.189s.371-.519.59-1.179l.335-.997c.152-.399.428-.738.788-.968l.336-.194c.42-.215.9-.276 1.36-.17l1.22.344c.718.204 1.077.306 1.394.177c.318-.13.505-.454.878-1.101l.493-.857c.35-.607.525-.91.491-1.234s-.268-.584-.736-1.105l-1.031-1.152c-.252-.32-.431-.875-.431-1.375s.179-1.056.43-1.375l1.032-1.153c.468-.52.702-.781.736-1.105s-.14-.626-.49-1.234Z\"/><path d=\"M15.52 12a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Z\"/></g>",
-     "height": 24,
-     "name": "settings-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m9.25 22l-.4-3.2q-.325-.125-.612-.3t-.563-.375L4.7 19.375l-2.75-4.75l2.575-1.95Q4.5 12.5 4.5 12.338v-.675q0-.163.025-.338L1.95 9.375l2.75-4.75l2.975 1.25q.275-.2.575-.375t.6-.3l.4-3.2h5.5l.4 3.2q.325.125.613.3t.562.375l2.975-1.25l2.75 4.75l-2.575 1.95q.025.175.025.338v.674q0 .163-.05.338l2.575 1.95l-2.75 4.75l-2.95-1.25q-.275.2-.575.375t-.6.3l-.4 3.2zM11 20h1.975l.35-2.65q.775-.2 1.438-.587t1.212-.938l2.475 1.025l.975-1.7l-2.15-1.625q.125-.35.175-.737T17.5 12t-.05-.787t-.175-.738l2.15-1.625l-.975-1.7l-2.475 1.05q-.55-.575-1.212-.962t-1.438-.588L13 4h-1.975l-.35 2.65q-.775.2-1.437.588t-1.213.937L5.55 7.15l-.975 1.7l2.15 1.6q-.125.375-.175.75t-.05.8q0 .4.05.775t.175.75l-2.15 1.625l.975 1.7l2.475-1.05q.55.575 1.213.963t1.437.587zm1.05-4.5q1.45 0 2.475-1.025T15.55 12t-1.025-2.475T12.05 8.5q-1.475 0-2.488 1.025T8.55 12t1.013 2.475T12.05 15.5M12 12\"/>",
      "height": 24,
      "name": "settings-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"m21.318 7.141l-.494-.856c-.373-.648-.56-.972-.878-1.101c-.317-.13-.676-.027-1.395.176l-1.22.344c-.459.106-.94.046-1.358-.17l-.337-.194a2 2 0 0 1-.788-.967l-.334-.998c-.22-.66-.33-.99-.591-1.178c-.261-.19-.609-.19-1.303-.19h-1.115c-.694 0-1.041 0-1.303.19c-.261.188-.37.518-.59 1.178l-.334.998a2 2 0 0 1-.789.967l-.337.195c-.418.215-.9.275-1.358.17l-1.22-.345c-.719-.203-1.078-.305-1.395-.176c-.318.129-.505.453-.878 1.1l-.493.857c-.35.608-.525.911-.491 1.234c.034.324.268.584.736 1.105l1.031 1.153c.252.319.431.875.431 1.375s-.179 1.056-.43 1.375l-1.032 1.152c-.468.521-.702.782-.736 1.105s.14.627.49 1.234l.494.857c.373.647.56.971.878 1.1s.676.028 1.395-.176l1.22-.344a2 2 0 0 1 1.359.17l.336.194c.36.23.636.57.788.968l.334.997c.22.66.33.99.591 1.18c.262.188.609.188 1.303.188h1.115c.694 0 1.042 0 1.303-.189s.371-.519.59-1.179l.335-.997c.152-.399.428-.738.788-.968l.336-.194c.42-.215.9-.276 1.36-.17l1.22.344c.718.204 1.077.306 1.394.177c.318-.13.505-.454.878-1.101l.493-.857c.35-.607.525-.91.491-1.234s-.268-.584-.736-1.105l-1.031-1.152c-.252-.32-.431-.875-.431-1.375s.179-1.056.43-1.375l1.032-1.153c.468-.52.702-.781.736-1.105s-.14-.626-.49-1.234Z\"/><path d=\"M15.52 12a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Z\"/></g>",
+     "height": 24,
+     "name": "settings-01",
      "width": 24
     },
     "fluent": {
@@ -36846,6 +37776,12 @@ export const deck: Deck = {
      "name": "shadow",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h2V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18h-2v2q0 .825-.587 1.413T16 22zm4-6h12V4H8z\"/>",
+     "height": 24,
+     "name": "shadow-outline",
+     "width": 24
+    },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M19 5a11 11 0 0 0-3.005.425A11 11 0 0 0 13 5C6.935 5 2 9.935 2 16s4.935 11 11 11c1.04 0 2.042-.154 2.995-.425c.974.277 1.982.425 3.005.425c6.065 0 11-4.935 11-11S25.065 5 19 5m4.95 11.997l3.986.035a8.9 8.9 0 0 1-.903 3.004l-3.798-.034c.372-.947.62-1.953.715-3.005m0-2A11 11 0 0 0 23.235 12l3.833.038a8.9 8.9 0 0 1 .877 2.994zm1.761-4.973l-3.51-.034a11.1 11.1 0 0 0-2.874-2.973a8.97 8.97 0 0 1 6.384 3.007M4 16c0-4.962 4.037-9 9-9s9 4.038 9 9s-4.037 9-9 9s-9-4.038-9-9m15.327 8.983a11.1 11.1 0 0 0 2.885-2.99l3.456.03a8.97 8.97 0 0 1-6.341 2.96\"/>",
      "height": 32,
@@ -36870,16 +37806,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "shapes",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 8a4 4 0 0 0 4-4c0-.728 0-1.092.024-1.199c.109-.49.257-.64.745-.756c.107-.025.318-.028.74-.034C10.256 2 11.083 2 12 2c1.371 0 2.543 0 3.552.036c.408.015.612.022.735.059c.423.126.57.278.68.705C17 2.925 17 3.283 17 4a4 4 0 0 0 4 4c.493 0 .963.343.976.836C22 9.754 22 10.801 22 12c0 .916 0 1.743-.01 2.492c-.007.421-.01.632-.035.74c-.116.487-.267.635-.756.744C21.092 16 20.728 16 20 16a4 4 0 0 0-4 4c0 .728 0 1.092-.024 1.199c-.109.49-.257.64-.745.756c-.107.025-.318.028-.74.034C13.744 22 12.917 22 12 22s-1.743 0-2.492-.01c-.421-.007-.632-.01-.74-.035c-.487-.116-.635-.267-.744-.756C8 21.092 8 20.728 8 20a4 4 0 0 0-4-4c-.728 0-1.092 0-1.199-.024c-.49-.109-.64-.257-.756-.745c-.025-.107-.028-.318-.034-.74C2 13.744 2 12.917 2 12s0-1.743.01-2.492c.007-.421.01-.632.035-.74c.116-.487.267-.635.756-.744C2.908 8 3.272 8 4 8Z\"/>",
-     "height": 24,
-     "name": "shapes",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 17.95q.25.025.488.038T9 18t.513-.012t.487-.038V20h10V10h-2.05q.025-.25.038-.488T18 9t-.012-.513T17.95 8H20q.825 0 1.413.588T22 10v10q0 .825-.587 1.413T20 22H10q-.825 0-1.412-.587T8 20zm-3.962-3.987Q2 11.925 2 9t2.038-4.962T9 2t4.963 2.038T16 9t-2.037 4.963T9 16t-4.962-2.037m8.5-1.425Q14 11.075 14 9t-1.463-3.537T9 4T5.463 5.463T4 9t1.463 3.538T9 14t3.538-1.463M9 9\"/>",
      "height": 24,
      "name": "shapes-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 8a4 4 0 0 0 4-4c0-.728 0-1.092.024-1.199c.109-.49.257-.64.745-.756c.107-.025.318-.028.74-.034C10.256 2 11.083 2 12 2c1.371 0 2.543 0 3.552.036c.408.015.612.022.735.059c.423.126.57.278.68.705C17 2.925 17 3.283 17 4a4 4 0 0 0 4 4c.493 0 .963.343.976.836C22 9.754 22 10.801 22 12c0 .916 0 1.743-.01 2.492c-.007.421-.01.632-.035.74c-.116.487-.267.635-.756.744C21.092 16 20.728 16 20 16a4 4 0 0 0-4 4c0 .728 0 1.092-.024 1.199c-.109.49-.257.64-.745.756c-.107.025-.318.028-.74.034C13.744 22 12.917 22 12 22s-1.743 0-2.492-.01c-.421-.007-.632-.01-.74-.035c-.487-.116-.635-.267-.744-.756C8 21.092 8 20.728 8 20a4 4 0 0 0-4-4c-.728 0-1.092 0-1.199-.024c-.49-.109-.64-.257-.756-.745c-.025-.107-.028-.318-.034-.74C2 13.744 2 12.917 2 12s0-1.743.01-2.492c.007-.421.01-.632.035-.74c.116-.487.267-.635.756-.744C2.908 8 3.272 8 4 8Z\"/>",
+     "height": 24,
+     "name": "shapes",
      "width": 24
     },
     "fluent": {
@@ -36930,6 +37866,12 @@ export const deck: Deck = {
      "name": "share",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M17 22q-1.25 0-2.125-.875T14 19q0-.15.075-.7L7.05 14.2q-.4.375-.925.588T5 15q-1.25 0-2.125-.875T2 12t.875-2.125T5 9q.6 0 1.125.213t.925.587l7.025-4.1q-.05-.175-.062-.337T14 5q0-1.25.875-2.125T17 2t2.125.875T20 5t-.875 2.125T17 8q-.6 0-1.125-.213T14.95 7.2l-7.025 4.1q.05.175.063.338T8 12t-.012.363t-.063.337l7.025 4.1q.4-.375.925-.587T17 16q1.25 0 2.125.875T20 19t-.875 2.125T17 22m0-2q.425 0 .713-.287T18 19t-.288-.712T17 18t-.712.288T16 19t.288.713T17 20M5 13q.425 0 .713-.288T6 12t-.288-.712T5 11t-.712.288T4 12t.288.713T5 13m12.713-7.288Q18 5.426 18 5t-.288-.712T17 4t-.712.288T16 5t.288.713T17 6t.713-.288M17 5\"/>",
+     "height": 24,
+     "name": "share-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M9.396 4.5H8.354c-2.946 0-4.42 0-5.335.879c-.915.878-.915 2.293-.915 5.121v4c0 2.828 0 4.243.915 5.121c.916.879 2.389.879 5.335.879h4.207c2.946 0 4.42 0 5.334-.879c.593-.569.802-1.363.876-2.621\"/><path d=\"M16.167 7V3.854c0-.196.165-.354.368-.354c.098 0 .191.037.26.104l4.732 4.542c.236.227.369.534.369.854s-.133.627-.369.854l-4.732 4.542a.38.38 0 0 1-.26.104a.36.36 0 0 1-.368-.354V11h-3.051c-4.241 0-5.803 3.5-5.803 3.5V12c0-2.761 2.331-5 5.208-5z\"/></g>",
      "height": 24,
@@ -36941,12 +37883,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "share",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M17 22q-1.25 0-2.125-.875T14 19q0-.15.075-.7L7.05 14.2q-.4.375-.925.588T5 15q-1.25 0-2.125-.875T2 12t.875-2.125T5 9q.6 0 1.125.213t.925.587l7.025-4.1q-.05-.175-.062-.337T14 5q0-1.25.875-2.125T17 2t2.125.875T20 5t-.875 2.125T17 8q-.6 0-1.125-.213T14.95 7.2l-7.025 4.1q.05.175.063.338T8 12t-.012.363t-.063.337l7.025 4.1q.4-.375.925-.587T17 16q1.25 0 2.125.875T20 19t-.875 2.125T17 22m0-2q.425 0 .713-.287T18 19t-.288-.712T17 18t-.712.288T16 19t.288.713T17 20M5 13q.425 0 .713-.288T6 12t-.288-.712T5 11t-.712.288T4 12t.288.713T5 13m12.713-7.288Q18 5.426 18 5t-.288-.712T17 4t-.712.288T16 5t.288.713T17 6t.713-.288M17 5\"/>",
-     "height": 24,
-     "name": "share-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.25 3a.75.75 0 0 1 0 1.5h-3.5A2.25 2.25 0 0 0 4.5 6.75v10.5l.012.23A2.25 2.25 0 0 0 6.75 19.5h10.5a2.25 2.25 0 0 0 2.25-2.25v-2a.75.75 0 0 1 1.5 0v2A3.75 3.75 0 0 1 17.25 21H6.75a3.75 3.75 0 0 1-3.745-3.557L3 17.25V6.75A3.75 3.75 0 0 1 6.75 3zm4.687-.932a.75.75 0 0 1 .801.113l7 6a.75.75 0 0 1 .032 1.109l-7 6.75a.75.75 0 0 1-1.27-.54v-2.976c-1.014.064-1.97.273-2.94.769c-1.136.581-2.344 1.581-3.689 3.303l-.271.354a.75.75 0 0 1-1.35-.45c0-2.857.687-5.59 2.168-7.628c1.376-1.893 3.41-3.147 6.082-3.344V2.75l.008-.109a.75.75 0 0 1 .429-.573M16 6.25a.75.75 0 0 1-.75.75c-2.557 0-4.395 1.07-5.618 2.753c-.878 1.208-1.454 2.757-1.717 4.493c1-1.048 1.977-1.785 2.962-2.29C12.36 11.199 13.8 11 15.25 11a.75.75 0 0 1 .75.75v1.984l5.135-4.952L16 4.38z\"/>",
@@ -37044,6 +37980,12 @@ export const deck: Deck = {
      "name": "shield",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22m0-2.1q2.6-.825 4.3-3.3t1.7-5.5V6.375l-6-2.25l-6 2.25V11.1q0 3.025 1.7 5.5t4.3 3.3m0-7.9\"/>",
+     "height": 24,
+     "name": "shield-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.709 3.495C16.817 2.554 14.5 2 12 2s-4.816.554-6.709 1.495c-.928.462-1.392.693-1.841 1.419S3 6.342 3 7.748v3.49c0 5.683 4.542 8.842 7.173 10.196c.734.377 1.1.566 1.827.566s1.093-.189 1.827-.566C16.457 20.08 21 16.92 21 11.237V7.748c0-1.406 0-2.108-.45-2.834s-.913-.957-1.841-1.419\"/>",
      "height": 24,
@@ -37055,12 +37997,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "shield",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M12 22q-3.475-.875-5.738-3.988T4 11.1V5l8-3l8 3v6.1q0 3.8-2.262 6.913T12 22m0-2.1q2.6-.825 4.3-3.3t1.7-5.5V6.375l-6-2.25l-6 2.25V11.1q0 3.025 1.7 5.5t4.3 3.3m0-7.9\"/>",
-     "height": 24,
-     "name": "shield-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3 5.75A.75.75 0 0 1 3.75 5c2.663 0 5.258-.943 7.8-2.85a.75.75 0 0 1 .9 0C14.992 4.057 17.587 5 20.25 5a.75.75 0 0 1 .75.75V11c0 5.001-2.958 8.676-8.725 10.948a.75.75 0 0 1-.55 0C5.958 19.676 3 16 3 11zm1.5.728V11c0 4.256 2.453 7.379 7.5 9.442c5.047-2.063 7.5-5.186 7.5-9.442V6.478c-2.577-.152-5.08-1.09-7.5-2.8c-2.42 1.71-4.923 2.648-7.5 2.8\"/>",
@@ -37476,17 +38412,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "shop",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M4 12h40v8l-1.398.84a7 7 0 0 1-7.203 0L34 20l-1.398.84a7 7 0 0 1-7.203 0L24 20l-1.398.84a7 7 0 0 1-7.203 0L14 20l-1.399.84a7 7 0 0 1-7.202 0L4 20z\"/><path d=\"M8 22.489V44h32V22M8 11.822V4h32v8\"/><path d=\"M19 32h10v12H19z\"/></g>",
-     "height": 48,
-     "name": "shop",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m9.5 18l7-4.5l-7-4.5zM4 21q-.825 0-1.412-.587T2 19V6h6V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h6v13q0 .825-.587 1.413T20 21zm0-2h16V8H4zm6-13h4V4h-4zM4 19V8z\"/>",
      "height": 24,
      "name": "shop-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M4 12h40v8l-1.398.84a7 7 0 0 1-7.203 0L34 20l-1.398.84a7 7 0 0 1-7.203 0L24 20l-1.398.84a7 7 0 0 1-7.203 0L14 20l-1.399.84a7 7 0 0 1-7.202 0L4 20z\"/><path d=\"M8 22.489V44h32V22M8 11.822V4h32v8\"/><path d=\"M19 32h10v12H19z\"/></g>",
+     "height": 48,
+     "name": "shop",
+     "width": 48
     },
     "iconoir": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9\"/><path stroke-miterlimit=\"16\" d=\"M14.833 21v-6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6\"/><path d=\"m21.818 9.364l-1.694-5.929A.6.6 0 0 0 19.547 3H15.5l.475 5.704a.58.58 0 0 0 .278.45c.39.233 1.152.663 1.747.846c1.016.313 2.5.2 3.346.096a.57.57 0 0 0 .472-.732Z\"/><path d=\"M14 10c.568-.175 1.288-.574 1.69-.812a.58.58 0 0 0 .28-.549L15.5 3h-7l-.47 5.639a.58.58 0 0 0 .28.55c.402.237 1.122.636 1.69.811c1.493.46 2.507.46 4 0Z\"/><path d=\"m3.876 3.435l-1.694 5.93a.57.57 0 0 0 .472.73c.845.105 2.33.217 3.346-.095c.595-.183 1.358-.613 1.747-.845a.58.58 0 0 0 .278-.451L8.5 3H4.453a.6.6 0 0 0-.577.435Z\"/></g>",
@@ -37524,6 +38460,12 @@ export const deck: Deck = {
      "name": "shopping-bag",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V8q0-.825.588-1.412T6 6h2q0-1.65 1.175-2.825T12 2t2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.587 1.413T18 22zm0-2h12V8h-2v2q0 .425-.288.713T15 11t-.712-.288T14 10V8h-4v2q0 .425-.288.713T9 11t-.712-.288T8 10V8H6zm4-14h4q0-.825-.587-1.412T12 4t-1.412.588T10 6M6 20V8z\"/>",
+     "height": 24,
+     "name": "shopping-bag-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3.324 13.011c.35-3.002.862-5.253 1.337-6.852c.389-1.312.584-1.968 1.382-2.563S7.657 3 9.289 3h5.422c1.632 0 2.448 0 3.246.596c.798.595.993 1.251 1.382 2.563c.475 1.599.987 3.85 1.338 6.852c.413 3.539.619 5.308-.574 6.648C18.909 21 16.976 21 13.108 21h-2.216c-3.868 0-5.801 0-6.995-1.34s-.986-3.11-.573-6.649\"/><path d=\"M9 7a3 3 0 1 0 6 0\"/></g>",
      "height": 24,
@@ -37535,12 +38477,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "shopping-bag",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V8q0-.825.588-1.412T6 6h2q0-1.65 1.175-2.825T12 2t2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.587 1.413T18 22zm0-2h12V8h-2v2q0 .425-.288.713T15 11t-.712-.288T14 10V8h-4v2q0 .425-.288.713T9 11t-.712-.288T8 10V8H6zm4-14h4q0-.825-.587-1.412T12 4t-1.412.588T10 6M6 20V8z\"/>",
-     "height": 24,
-     "name": "shopping-bag-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M7 7V5a3 3 0 0 1 5-2.236A3 3 0 0 1 17 5v2h1.5A1.5 1.5 0 0 1 20 8.5v10.005A3.495 3.495 0 0 1 16.505 22H8a4 4 0 0 1-4-4V8.5A1.5 1.5 0 0 1 5.5 7zm6.635 13.5a3.5 3.5 0 0 1-.625-1.995V8.5H5.5V18A2.5 2.5 0 0 0 8 20.5zM11.5 7V5a1.5 1.5 0 0 0-3 0v2zM13 7h2.5V5a1.5 1.5 0 0 0-2.656-.956c.101.3.156.622.156.956zm1.51 11.505a1.995 1.995 0 0 0 3.99 0V8.5h-3.99z\"/>",
@@ -37602,16 +38538,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "shopping-basket",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8 7h8c1.886 0 2.828 0 3.414.586S20 9.114 20 11v4c0 3.3 0 4.95-1.025 5.975S16.3 22 13 22h-2c-3.3 0-4.95 0-5.975-1.025S4 18.3 4 15v-4c0-1.886 0-2.828.586-3.414S6.114 7 8 7\"/><path d=\"M16 9.5C16 5.634 14.21 2 12 2S8 5.634 8 9.5\"/></g>",
-     "height": 24,
-     "name": "shopping-basket-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5.525 21q-.675 0-1.2-.413T3.6 19.525l-2.55-9.25Q.925 9.8 1.213 9.4T2 9h4.75l4.4-6.55q.125-.2.35-.325T11.975 2t.475.125t.35.325L17.2 9H22q.5 0 .788.4t.162.875l-2.55 9.25q-.2.65-.725 1.063t-1.2.412zM5.5 19h13l2.2-8H3.3zm7.913-2.588Q14 15.826 14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17t1.413-.587M9.174 9H14.8l-2.825-4.2zM12 15\"/>",
      "height": 24,
      "name": "shopping-basket-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8 7h8c1.886 0 2.828 0 3.414.586S20 9.114 20 11v4c0 3.3 0 4.95-1.025 5.975S16.3 22 13 22h-2c-3.3 0-4.95 0-5.975-1.025S4 18.3 4 15v-4c0-1.886 0-2.828.586-3.414S6.114 7 8 7\"/><path d=\"M16 9.5C16 5.634 14.21 2 12 2S8 5.634 8 9.5\"/></g>",
+     "height": 24,
+     "name": "shopping-basket-01",
      "width": 24
     },
     "lucide": {
@@ -37644,6 +38580,12 @@ export const deck: Deck = {
      "name": "shopping-cart",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M6.15 6l2.4 5h7l2.75-5zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H1V2h3.25zm3.35 7h7z\"/>",
+     "height": 24,
+     "name": "shopping-cart-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M10.5 20.25a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0m8.5 0a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0M2 3h.207c1.324 0 1.987 0 2.419.402s.479 1.063.573 2.384l.251 3.519c.142 1.989.213 2.983.515 3.791a6 6 0 0 0 3.931 3.661c.828.243 1.83.243 3.836.243c2.105 0 3.158 0 4.01-.258a6 6 0 0 0 4-4C22 11.89 22 10.843 22 8.75c0-.698 0-1.047-.086-1.33a2 2 0 0 0-1.333-1.334C20.297 6 19.948 6 19.25 6H5.5M16 10v3m-5-3v3\"/>",
      "height": 24,
@@ -37655,12 +38597,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "shopping-cart",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M6.15 6l2.4 5h7l2.75-5zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H1V2h3.25zm3.35 7h7z\"/>",
-     "height": 24,
-     "name": "shopping-cart-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<circle cx=\"10\" cy=\"28\" r=\"2\" fill=\"currentColor\"/><circle cx=\"24\" cy=\"28\" r=\"2\" fill=\"currentColor\"/><path fill=\"currentColor\" d=\"M28 7H5.82L5 2.8A1 1 0 0 0 4 2H0v2h3.18L7 23.2a1 1 0 0 0 1 .8h18v-2H8.82L8 18h18a1 1 0 0 0 1-.78l2-9A1 1 0 0 0 28 7m-2.8 9H7.62l-1.4-7h20.53Z\"/>",
@@ -37782,6 +38718,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "shuffle",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z\"/>",
+     "height": 24,
+     "name": "shuffle-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m19.558 4l.897.976c.401.436.602.654.531.839S20.632 6 20.065 6c-1.27 0-2.788-.205-3.954.473c-.72.42-1.223 1.152-2.072 2.527M3 18h1.58c1.929 0 2.893 0 3.706-.473c.721-.42 1.223-1.152 2.072-2.527m9.2 5l.897-.976c.401-.436.602-.654.531-.839S20.632 18 20.065 18c-1.27 0-2.788.205-3.954-.473c-.813-.474-1.348-1.346-2.418-3.09l-2.99-4.875C9.635 7.82 9.1 6.947 8.287 6.473S6.51 6 4.581 6H3\"/>",
      "height": 24,
@@ -37793,12 +38735,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "shuffle",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z\"/>",
-     "height": 24,
-     "name": "shuffle-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M22.59 19.41L26.17 23h-6.62l-4.37-7l4.37-7h6.62l-3.58 3.59L24 14l6-6l-6-6l-1.41 1.41L26.17 7h-6.62a2 2 0 0 0-1.69.94L14 14.11l-3.86-6.17A2 2 0 0 0 8.45 7H2v2h6.45l4.37 7l-4.37 7H2v2h6.45a2 2 0 0 0 1.69-.94L14 17.89l3.86 6.17a2 2 0 0 0 1.69.94h6.62l-3.58 3.59L24 30l6-6l-6-6Z\"/>",
@@ -37950,6 +38886,12 @@ export const deck: Deck = {
      "name": "signature",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M14.075 11.725q1.825-1.35 2.85-2.962T17.95 5.55q0-.8-.262-1.175T16.975 4Q15.8 4 14.9 5.988t-.9 4.487q0 .35.013.663t.062.587M3 21v-2h2v2zm4 0v-2h2v2zm4 0v-2h2v2zm4 0v-2h2v2zm4 0v-2h2v2zM3.4 17L2 15.6L3.6 14L2 12.4L3.4 11L5 12.6L6.6 11L8 12.4L6.4 14L8 15.6L6.6 17L5 15.4zm12.05-1q-.75 0-1.375-.288T13 14.776q-.625.35-1.287.625t-1.363.55l-.7-1.875q.7-.25 1.338-.537t1.237-.613q-.125-.55-.187-1.2t-.063-1.4q0-3.6 1.425-5.962T16.975 2q1.3 0 2.125.963t.825 2.687q0 2.15-1.362 4.25t-3.788 3.775q.175.175.363.263t.387.087q.65 0 1.513-.825t1.562-2.175l1.825.85q-.175.425-.275 1.025t.025 1.05q.25-.125.588-.425t.687-.75L23.025 14q-.65.9-1.5 1.45T19.95 16q-.525 0-.937-.312t-.688-.963q-.7.625-1.425.95T15.45 16\"/>",
+     "height": 24,
+     "name": "signature-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M22 12.634c-4 3.512-4.572-2.013-6.65-1.617c-2.35.447-3.85 5.428-2.35 5.428s-.5-5.945-2.5-3.89s-2.64 4.74-4.265 2.748C-1.5 5.813 5-1.15 8.163 3.457C10.165 6.373 6.5 16.977 2 22m7-1h10\"/>",
      "height": 24,
@@ -38028,17 +38970,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "sim-card",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"4\" d=\"M10 44h28a2 2 0 0 0 2-2V14.885a2 2 0 0 0-.655-1.48L29.572 4.52A2 2 0 0 0 28.227 4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2Z\"/><circle cx=\"17\" cy=\"14\" r=\"3\" fill=\"currentColor\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M16 23h16v14H16z\"/></g>",
-     "height": 48,
-     "name": "sim-card",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 19h2v-2H7zm0-4h2v-4H7zm4 4h2v-4h-2zm0-6h2v-2h-2zm4 6h2v-2h-2zm0-4h2v-4h-2zm-9 7q-.825 0-1.412-.587T4 20V8l6-6h8q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm0-2h12V4h-7.15L6 8.85zm0 0h12z\"/>",
      "height": 24,
      "name": "sim-card-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"4\" d=\"M10 44h28a2 2 0 0 0 2-2V14.885a2 2 0 0 0-.655-1.48L29.572 4.52A2 2 0 0 0 28.227 4H10a2 2 0 0 0-2 2v36a2 2 0 0 0 2 2Z\"/><circle cx=\"17\" cy=\"14\" r=\"3\" fill=\"currentColor\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M16 23h16v14H16z\"/></g>",
+     "height": 48,
+     "name": "sim-card",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M21 9H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2m0 4h-3v-2h3Zm-3 2h3v2h-3Zm-2-4v10h-3v-7a1 1 0 0 0-1-1H8v-2Zm-5 6H8v-2h3Zm-3 2h3v2H8Zm10 2v-2h3v2Z\"/><path fill=\"currentColor\" d=\"M23.532 27H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v12.638a2 2 0 0 1-.464 1.28l-4.468 5.362a2 2 0 0 1-1.536.72M4 7v18h19.532L28 19.638V7Z\"/>",
@@ -38158,6 +39100,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "skateboarding",
+   "variants": {
+    "tabler": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M5.5 15H9l.75-1.5M14 19v-5l-2.5-3L14 7\"/><path d=\"m8 8l3-1h4l1 3h3m-1.5 11a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1M3 18c0 .552.895 1 2 1h14c1.105 0 2-.448 2-1M6.5 21a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1m7.507-17a2 2 0 1 0 4 0a2 2 0 1 0-4 0\"/></g>",
+     "height": 24,
+     "name": "skateboarding",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6.725 23.775Q6.5 23.55 6.5 23.25t.225-.525t.525-.225t.525.225t.225.525t-.225.525T7.25 24t-.525-.225m8.5 0Q15 23.55 15 23.25t.225-.525t.525-.225t.525.225t.225.525t-.225.525t-.525.225t-.525-.225M6.75 22q-1.125 0-2.075-.487T3.1 20.2q-.075-.125-.112-.225t-.038-.225q0-.3.2-.525T3.7 19q.2 0 .338.075t.262.225q.3.425.763.713t.987.412l3.125-3.775L7.85 12.5q-.125-.425-.075-.85t.275-.8L10.45 7H8.1l-1.9 3.05L4.5 9L7 5h5.7q.675 0 1.088.375t.562.7l.525 1.2q.5 1.2 1.613 1.962T19 10v2q-1.75 0-3.2-.837T13.475 8.95l-1.8 2.875L16 14.5v6h.3q.725 0 1.35-.325t1.05-.875q.125-.15.263-.225T19.3 19q.325 0 .538.225t.212.525q0 .125-.038.225t-.112.225q-.625.825-1.55 1.313T16.3 22zm1.85-1.5H14v-4.6l-3.5-2.2l1 3.3zM15 5q-.825 0-1.412-.587T13 3t.588-1.412T15 1t1.413.588T17 3t-.587 1.413T15 5\"/>",
+     "height": 24,
+     "name": "skateboarding-outline",
+     "width": 24
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m5 19l2.333 1h9.334L19 19M8 22.01l.01-.011m7.99.011l.01-.011M7 7.834l3-1.5c2-1 4.27.567 4.27.567l-4.308 3.135L14 13.334v4m-4.451-3.989l-1.24.827H5M15.165 9.21h2.722M17 6a2 2 0 1 0 0-4a2 2 0 0 0 0 4\"/>",
+     "height": 24,
+     "name": "skateboarding",
+     "width": 24
+    },
+    "mingcute": {
+     "body": "<g fill=\"none\"><path d=\"m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z\"/><path fill=\"currentColor\" d=\"M10.713 6c.375 0 .743.105 1.06.304l7.757 4.848a1 1 0 0 1-1.06 1.696l-3.955-2.472q-.094.167-.22.315L13.175 12h1.891c1.198 0 1.913 1.335 1.248 2.332l-1.481 2.223a1 1 0 0 1-1.664-1.11L14.13 14h-2.596l-1.703 2.555a1 1 0 1 1-1.664-1.11L9.23 13.85c-1.141-.47-1.652-1.954-.83-3.05l1.977-2.636q.065-.085.134-.163H7a1 1 0 0 1 0-2zm2.057 3.396a.48.48 0 0 0-.793-.033L10 12h.08c.292 0 .57-.128.76-.35zM17 5a1 1 0 1 0-2 0a1 1 0 0 0 2 0m2 15.5a1.5 1.5 0 1 1-2.913-.5H7.913A1.495 1.495 0 0 1 6.5 22a1.5 1.5 0 0 1-1.35-2.153c-.723-.206-1.33-.613-1.857-1.14a1 1 0 1 1 1.414-1.414c.42.42.922.707 1.535.707h11.516c.613 0 1.114-.286 1.535-.707a1 1 0 1 1 1.414 1.414c-.527.527-1.134.934-1.858 1.14c.096.197.15.418.15.653M19 5a3 3 0 1 1-6 0a3 3 0 0 1 6 0\"/></g>",
+     "height": 24,
+     "name": "skateboarding-line",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "skip-back",
    "variants": {
     "carbon": {
@@ -38244,6 +39216,12 @@ export const deck: Deck = {
      "name": "skull",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 22v-4.25q-.975-.425-1.713-1.137T3.037 15t-.775-1.925T2 11q0-3.95 2.8-6.475T12 2t7.2 2.525T22 11q0 1.05-.262 2.075T20.963 15t-1.25 1.613T18 17.75V22zm2-2h1v-2h2v2h2v-2h2v2h1v-3.55q.95-.225 1.688-.75t1.25-1.25t.787-1.6T20 11q0-3.125-2.212-5.062T12 4T6.212 5.938T4 11q0 .975.275 1.85t.788 1.6t1.262 1.25T8 16.45zm2.5-5h3L12 12zm-2-2q.825 0 1.413-.587T10.5 11t-.587-1.412T8.5 9t-1.412.588T6.5 11t.588 1.413T8.5 13m7 0q.825 0 1.413-.587T17.5 11t-.587-1.412T15.5 9t-1.412.588T13.5 11t.588 1.413T15.5 13M12 20\"/>",
+     "height": 24,
+     "name": "skull-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 3c-4.97 0-9 3.582-9 8c0 2.37 1.16 4.5 3.002 5.964l.29.232c.5.423.687.811.707 1.467l.001.203c0 .124 0 .187.003.239a2 2 0 0 0 1.892 1.892c.052.003.115.003.239.003h5.732c.124 0 .187 0 .239-.003a2 2 0 0 0 1.892-1.892c.003-.052.003-.115.003-.239v-.203c.02-.656.208-1.044.709-1.467c.023-.02.111-.09.29-.232C19.84 15.5 21 13.37 21 11c0-4.418-4.03-8-9-8m-2 18v-2m4 2v-2\"/><path d=\"M8 11v-.5m1 .5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m7 0v-.5m1 .5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-4.5 4l-.5-1l-.5 1z\"/></g>",
      "height": 24,
@@ -38255,12 +39233,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "skull",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M6 22v-4.25q-.975-.425-1.713-1.137T3.037 15t-.775-1.925T2 11q0-3.95 2.8-6.475T12 2t7.2 2.525T22 11q0 1.05-.262 2.075T20.963 15t-1.25 1.613T18 17.75V22zm2-2h1v-2h2v2h2v-2h2v2h1v-3.55q.95-.225 1.688-.75t1.25-1.25t.787-1.6T20 11q0-3.125-2.212-5.062T12 4T6.212 5.938T4 11q0 .975.275 1.85t.788 1.6t1.262 1.25T8 16.45zm2.5-5h3L12 12zm-2-2q.825 0 1.413-.587T10.5 11t-.587-1.412T8.5 9t-1.412.588T6.5 11t.588 1.413T8.5 13m7 0q.825 0 1.413-.587T17.5 11t-.587-1.412T15.5 9t-1.412.588T13.5 11t.588 1.413T15.5 13M12 20\"/>",
-     "height": 24,
-     "name": "skull-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m12.5 17l-.5-1l-.5 1z\"/><path d=\"M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25a8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z\"/><circle cx=\"15\" cy=\"12\" r=\"1\"/><circle cx=\"9\" cy=\"12\" r=\"1\"/></g>",
@@ -38452,6 +39424,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "sliders",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 15q-1.25 0-2.125-.875T2 12t.875-2.125T5 9h14q1.25 0 2.125.875T22 12t-.875 2.125T19 15zm9-2h5q.425 0 .713-.288T20 12t-.288-.712T19 11h-5z\"/>",
+     "height": 24,
+     "name": "sliders-outline",
+     "width": 24
+    },
+    "lucide": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 8h4m-2 13v-9m0-4V3m5 13h4m-2-4V3m0 18v-5M3 14h4m-2-4V3m0 18v-7\"/>",
+     "height": 24,
+     "name": "sliders",
+     "width": 24
+    },
+    "ph": {
+     "body": "<path fill=\"currentColor\" d=\"M64 105V40a8 8 0 0 0-16 0v65a32 32 0 0 0 0 62v49a8 8 0 0 0 16 0v-49a32 32 0 0 0 0-62m-8 47a16 16 0 1 1 16-16a16 16 0 0 1-16 16m80-95V40a8 8 0 0 0-16 0v17a32 32 0 0 0 0 62v97a8 8 0 0 0 16 0v-97a32 32 0 0 0 0-62m-8 47a16 16 0 1 1 16-16a16 16 0 0 1-16 16m104 64a32.06 32.06 0 0 0-24-31V40a8 8 0 0 0-16 0v97a32 32 0 0 0 0 62v17a8 8 0 0 0 16 0v-17a32.06 32.06 0 0 0 24-31m-32 16a16 16 0 1 1 16-16a16 16 0 0 1-16 16\"/>",
+     "height": 256,
+     "name": "sliders",
+     "width": 256
+    },
+    "bi": {
+     "body": "<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M11.5 2a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z\"/>",
+     "height": 16,
+     "name": "sliders",
+     "width": 16
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "slideshow",
    "variants": {
     "tabler": {
@@ -38602,6 +39604,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m10 4l2 1l2-1\"/><path d=\"M12 2v6.5l3 1.72m2.928-3.952l.134 2.232l1.866 1.232\"/><path d=\"m20.66 7l-5.629 3.25l.01 3.458m4.887.56L18.062 15.5l-.134 2.232\"/><path d=\"m20.66 17l-5.629-3.25l-2.99 1.738M14 20l-2-1l-2 1\"/><path d=\"M12 22v-6.5l-3-1.72m-2.928 3.952L5.938 15.5l-1.866-1.232\"/><path d=\"m3.34 17l5.629-3.25l-.01-3.458m-4.887-.56L5.938 8.5l.134-2.232\"/><path d=\"m3.34 7l5.629 3.25l2.99-1.738\"/></g>",
      "height": 24,
      "name": "snowflake",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 22v-1.825l-1.6 1.35L8.1 20l2.9-2.45v-3.8l-3.3 1.9l-.675 3.725l-1.975-.35l.375-2.075l-1.6.925l-1-1.725l1.6-.925L2.45 14.5l.675-1.875L6.7 13.9L10 12l-3.3-1.9l-3.575 1.3l-.675-1.9l1.975-.7l-1.6-.925l1-1.725l1.6.925L5.05 5l1.975-.35l.675 3.725l3.3 1.9v-3.8l-2.9-2.45L9.4 2.5L11 3.85V2h2v1.85l1.6-1.35l1.3 1.525l-2.9 2.45v3.8l3.275-1.9l.675-3.725l1.975.35l-.375 2.075l1.6-.925l1 1.725l-1.6.925l1.975.7l-.675 1.9l-3.575-1.3L14 12l3.275 1.9l3.575-1.275l.675 1.875l-1.975.725l1.6.925l-1 1.725l-1.6-.925l.375 2.075l-1.975.35l-.675-3.725L13 13.75v3.8L15.9 20l-1.3 1.525l-1.6-1.35V22z\"/>",
+     "height": 24,
+     "name": "snowflake-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -38777,6 +39785,36 @@ export const deck: Deck = {
      "height": 256,
      "name": "solar-panel",
      "width": 256
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "sort",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 18v-2h6v2zm0-5v-2h12v2zm0-5V6h18v2z\"/>",
+     "height": 24,
+     "name": "sort-outline",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m24 42l-9-13h18zm0-36l-9 13h18z\"/>",
+     "height": 48,
+     "name": "sort",
+     "width": 48
+    },
+    "iconoir": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M10 14H2m6-4H2m4-4H2m10 12H2m17 2V4m0 16l3-3m-3 3l-3-3m3-13l3 3m-3-3l-3 3\"/>",
+     "height": 24,
+     "name": "sort",
+     "width": 24
+    },
+    "uil": {
+     "body": "<path fill=\"currentColor\" d=\"M16.29 14.29L12 18.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l5 5a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0-1.42-1.42M7.71 9.71L12 5.41l4.29 4.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42l-5-5a1 1 0 0 0-1.42 0l-5 5a1 1 0 0 0 1.42 1.42\"/>",
+     "height": 24,
+     "name": "sort",
+     "width": 24
     }
    }
   },
@@ -39000,6 +40038,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "speaker",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M17 22H7q-.825 0-1.412-.587T5 20V4q0-.825.588-1.412T7 2h10q.825 0 1.413.588T19 4v16q0 .825-.587 1.413T17 22m0-2V4H7v16zM13.413 8.413Q14 7.825 14 7t-.587-1.412T12 5t-1.412.588T10 7t.588 1.413T12 9t1.413-.587m1.412 9.412Q16 16.65 16 15t-1.175-2.825T12 11t-2.825 1.175T8 15t1.175 2.825T12 19t2.825-1.175m-4.237-1.412Q10 15.824 10 15t.588-1.412T12 13t1.413.588T14 15t-.587 1.413T12 17t-1.412-.587M7 4v16z\"/>",
+     "height": 24,
+     "name": "speaker-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M20.5 13.5v-3c0-3.759 0-5.638-1.053-6.893a4.5 4.5 0 0 0-.555-.554C17.638 2 15.76 2 12 2S6.362 2 5.107 3.053a4.5 4.5 0 0 0-.554.554C3.5 4.862 3.5 6.741 3.5 10.5v3c0 3.759 0 5.638 1.053 6.892q.253.302.554.555C6.362 22 8.241 22 12 22s5.638 0 6.892-1.053a4.5 4.5 0 0 0 .555-.555C20.5 19.138 20.5 17.26 20.5 13.5Z\"/><path d=\"M15.5 15a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Zm-2-8a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0Z\"/></g>",
      "height": 24,
@@ -39011,12 +40055,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "speaker",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M17 22H7q-.825 0-1.412-.587T5 20V4q0-.825.588-1.412T7 2h10q.825 0 1.413.588T19 4v16q0 .825-.587 1.413T17 22m0-2V4H7v16zM13.413 8.413Q14 7.825 14 7t-.587-1.412T12 5t-1.412.588T10 7t.588 1.413T12 9t1.413-.587m1.412 9.412Q16 16.65 16 15t-1.175-2.825T12 11t-2.825 1.175T8 15t1.175 2.825T12 19t2.825-1.175m-4.237-1.412Q10 15.824 10 15t.588-1.412T12 13t1.413.588T14 15t-.587 1.413T12 17t-1.412-.587M7 4v16z\"/>",
-     "height": 24,
-     "name": "speaker-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><path d=\"M12 6h.01\"/><circle cx=\"12\" cy=\"14\" r=\"4\"/><path d=\"M12 14h.01\"/></g>",
@@ -39196,12 +40234,48 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "sql",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8a2 2 0 0 1 2 2v4a2 2 0 1 1-4 0v-4a2 2 0 0 1 2-2m5 0v8h4m-8-1l1 1M3 15a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1\"/>",
+     "height": 24,
+     "name": "sql",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 15q-.425 0-.712-.288T3 14v-1h1.5v.5h2v-1H4q-.425 0-.712-.288T3 11.5V10q0-.425.288-.712T4 9h3q.425 0 .713.288T8 10v1H6.5v-.5h-2v1H7q.425 0 .713.288T8 12.5V14q0 .425-.288.713T7 15zm7.75 1.5V15H11q-.425 0-.712-.288T10 14v-4q0-.425.288-.712T11 9h3q.425 0 .713.288T15 10v4q0 .425-.288.713T14 15h-.75v1.5zm-.25-3h2v-3h-2zM17 9h1.5v4.5H21V15h-4z\"/>",
+     "height": 24,
+     "name": "sql-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z\"/><path stroke-linecap=\"round\" d=\"M8.415 10A1.5 1.5 0 1 0 7 12a1.5 1.5 0 1 1-1.415 2m6.915 1a1.5 1.5 0 0 1-1.5-1.5v-3a1.5 1.5 0 0 1 3 0v3a1.5 1.5 0 0 1-1.5 1.5Zm0 0l1.5 1.5M16.5 9v4c0 .943 0 1.414.293 1.707S17.557 15 18.5 15\"/></g>",
+     "height": 24,
+     "name": "sql",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M24 21V9h-2v14h8v-2zM18 9h-4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1v2a2 2 0 0 0 2 2h2v-2h-2v-2h1a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2m-4 12V11h4v10Zm-6 2H2v-2h6v-4H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h6v2H4v4h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2\"/>",
+     "height": 32,
+     "name": "sql",
+     "width": 32
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "square",
    "variants": {
     "tabler": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>",
      "height": 24,
      "name": "square",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 21V3h18v18zm2-2h14V5H5zm0 0V5z\"/>",
+     "height": 24,
+     "name": "square-outline",
      "width": 24
     },
     "hugeicons": {
@@ -39215,12 +40289,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "square",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M3 21V3h18v18zm2-2h14V5H5zm0 0V5z\"/>",
-     "height": 24,
-     "name": "square-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3 6.25A3.25 3.25 0 0 1 6.25 3h11.5A3.25 3.25 0 0 1 21 6.25v11.5A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75zM6.25 4.5A1.75 1.75 0 0 0 4.5 6.25v11.5c0 .966.784 1.75 1.75 1.75h11.5a1.75 1.75 0 0 0 1.75-1.75V6.25a1.75 1.75 0 0 0-1.75-1.75z\"/>",
@@ -39480,16 +40548,16 @@ export const deck: Deck = {
      "name": "stairs",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.5 3.5h1c.943 0 1.414 0 1.707.293s.293.764.293 1.707v11c0 1.886 0 2.828-.586 3.414s-1.528.586-3.414.586h-11c-.943 0-1.414 0-1.707-.293S3.5 19.443 3.5 18.5v-1c0-.943 0-1.414.293-1.707S4.557 15.5 5.5 15.5h2v-2c0-.943 0-1.414.293-1.707S8.557 11.5 9.5 11.5h2v-2c0-.943 0-1.414.293-1.707S12.557 7.5 13.5 7.5h2v-2c0-.943 0-1.414.293-1.707S16.557 3.5 17.5 3.5Z\"/>",
-     "height": 24,
-     "name": "stairs-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 18h4.425v-3.325H13V11.35h2.575V8H18V6h-4.425v3.325H11v3.325H8.425V16H6zm-1 3q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zM5 5v14z\"/>",
      "height": 24,
      "name": "stairs-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M17.5 3.5h1c.943 0 1.414 0 1.707.293s.293.764.293 1.707v11c0 1.886 0 2.828-.586 3.414s-1.528.586-3.414.586h-11c-.943 0-1.414 0-1.707-.293S3.5 19.443 3.5 18.5v-1c0-.943 0-1.414.293-1.707S4.557 15.5 5.5 15.5h2v-2c0-.943 0-1.414.293-1.707S8.557 11.5 9.5 11.5h2v-2c0-.943 0-1.414.293-1.707S12.557 7.5 13.5 7.5h2v-2c0-.943 0-1.414.293-1.707S16.557 3.5 17.5 3.5Z\"/>",
+     "height": 24,
+     "name": "stairs-01",
      "width": 24
     },
     "ri": {
@@ -39558,6 +40626,12 @@ export const deck: Deck = {
      "name": "star",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25\"/>",
+     "height": 24,
+     "name": "star-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m13.728 3.444l1.76 3.549c.24.494.88.968 1.42 1.058l3.189.535c2.04.343 2.52 1.835 1.05 3.307l-2.48 2.5c-.42.423-.65 1.24-.52 1.825l.71 3.095c.56 2.45-.73 3.397-2.88 2.117l-2.99-1.785c-.54-.322-1.43-.322-1.98 0L8.019 21.43c-2.14 1.28-3.44.322-2.88-2.117l.71-3.095c.13-.585-.1-1.402-.52-1.825l-2.48-2.5C1.39 10.42 1.86 8.929 3.899 8.586l3.19-.535c.53-.09 1.17-.564 1.41-1.058l1.76-3.549c.96-1.925 2.52-1.925 3.47 0\"/>",
      "height": 24,
@@ -39569,12 +40643,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "star",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25\"/>",
-     "height": 24,
-     "name": "star-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.788 3.102c.495-1.003 1.926-1.003 2.421 0l2.358 4.778l5.273.766c1.107.16 1.549 1.522.748 2.303l-3.816 3.719l.901 5.25c.19 1.104-.968 1.945-1.959 1.424l-4.716-2.48l-4.715 2.48c-.99.52-2.148-.32-1.96-1.423l.901-5.251l-3.815-3.72c-.801-.78-.359-2.141.748-2.302L8.43 7.88zm1.21.937L9.74 8.614a1.35 1.35 0 0 1-1.016.739l-5.05.734l3.654 3.562c.318.31.463.757.388 1.195l-.862 5.029l4.516-2.375a1.35 1.35 0 0 1 1.257 0l4.516 2.375l-.862-5.03a1.35 1.35 0 0 1 .388-1.194l3.654-3.562l-5.05-.734a1.35 1.35 0 0 1-1.016-.739z\"/>",
@@ -39652,6 +40720,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m12 17.75l-6.172 3.245l1.179-6.873l-5-4.867l6.9-1l3.086-6.253z\"/>",
      "height": 24,
      "name": "star-half",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m15.15 16.85l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4v7.8zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z\"/>",
+     "height": 24,
+     "name": "star-half-outline",
      "width": 24
     },
     "hugeicons": {
@@ -39756,16 +40830,16 @@ export const deck: Deck = {
      "name": "stars",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3 12c4.5 0 9-4.5 9-9c0 4.5 4.5 9 9 9c-4.5 0-9 4.5-9 9c0-4.5-4.5-9-9-9Zm-1 7.5c.833 0 2.5-1.667 2.5-2.5c0 .833 1.667 2.5 2.5 2.5c-.833 0-2.5 1.667-2.5 2.5c0-.833-1.667-2.5-2.5-2.5ZM16 5c1 0 3-2 3-3c0 1 2 3 3 3c-1 0-3 2-3 3c0-1-2-3-3-3Z\"/>",
-     "height": 24,
-     "name": "stars",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m8 18l4-3.05L16 18l-1.5-4.95l4-2.85h-4.9L12 5l-1.6 5.2H5.5l4 2.85zm4 4q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "stars-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3 12c4.5 0 9-4.5 9-9c0 4.5 4.5 9 9 9c-4.5 0-9 4.5-9 9c0-4.5-4.5-9-9-9Zm-1 7.5c.833 0 2.5-1.667 2.5-2.5c0 .833 1.667 2.5 2.5 2.5c-.833 0-2.5 1.667-2.5 2.5c0-.833-1.667-2.5-2.5-2.5ZM16 5c1 0 3-2 3-3c0 1 2 3 3 3c-1 0-3 2-3 3c0-1-2-3-3-3Z\"/>",
+     "height": 24,
+     "name": "stars",
      "width": 24
     },
     "lucide": {
@@ -39858,6 +40932,12 @@ export const deck: Deck = {
      "name": "stethoscope",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M13.5 22q-2.7 0-4.6-1.9T7 15.5v-.575q-2.15-.35-3.575-2.013T2 9V3h3V2h2v4H5V5H4v4q0 1.65 1.175 2.825T8 13t2.825-1.175T12 9V5h-1v1H9V2h2v1h3v6q0 2.25-1.425 3.913T9 14.925v.575q0 1.875 1.313 3.188T13.5 20t3.188-1.312T18 15.5v-1.675q-.875-.3-1.437-1.075T16 11q0-1.25.875-2.125T19 8t2.125.875T22 11q0 .975-.562 1.75T20 13.825V15.5q0 2.7-1.9 4.6T13.5 22m6.213-10.288Q20 11.425 20 11t-.288-.712T19 10t-.712.288T18 11t.288.713T19 12t.713-.288M19 11\"/>",
+     "height": 24,
+     "name": "stethoscope-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13.001 2c1.104 0 2 .931 2 2.08c0 .95.035 1.794-.732 2.492C11.76 8.857 10.503 10 9 10S6.242 8.857 3.731 6.572c-.767-.698-.73-1.543-.73-2.492C3 2.93 3.894 2 4.998 2M9 14v3.5a4.5 4.5 0 0 0 9 0V16\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m14 7l-1.302 3.256c-.346.865-.52 1.298-.81 1.653c-.29.356-.678.612-1.456 1.126L8.97 14l-1.437-.968c-.76-.512-1.141-.768-1.425-1.12c-.283-.35-.454-.776-.794-1.628L4 7\"/><path d=\"M21 13a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.125 13H18m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
      "height": 24,
@@ -39869,12 +40949,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "stethoscope",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M13.5 22q-2.7 0-4.6-1.9T7 15.5v-.575q-2.15-.35-3.575-2.013T2 9V3h3V2h2v4H5V5H4v4q0 1.65 1.175 2.825T8 13t2.825-1.175T12 9V5h-1v1H9V2h2v1h3v6q0 2.25-1.425 3.913T9 14.925v.575q0 1.875 1.313 3.188T13.5 20t3.188-1.312T18 15.5v-1.675q-.875-.3-1.437-1.075T16 11q0-1.25.875-2.125T19 8t2.125.875T22 11q0 .975-.562 1.75T20 13.825V15.5q0 2.7-1.9 4.6T13.5 22m6.213-10.288Q20 11.425 20 11t-.288-.712T19 10t-.712.288T18 11t.288.713T19 12t.713-.288M19 11\"/>",
-     "height": 24,
-     "name": "stethoscope-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M2.75 2.5a.75.75 0 0 0-.75.75V9c0 3.06 2.29 5.585 5.25 5.954v.796a6 6 0 0 0 12 0v-.844A3.001 3.001 0 0 0 18.5 9a3 3 0 0 0-.75 5.906v.844a4.5 4.5 0 0 1-9 0v-.796A6 6 0 0 0 14 9V3.25a.75.75 0 0 0-.75-.75h-2.5a.75.75 0 0 0 0 1.5h1.75v5a4.5 4.5 0 1 1-9 0V4h1.75a.75.75 0 0 0 0-1.5zm15.75 8a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3\"/>",
@@ -39930,16 +41004,16 @@ export const deck: Deck = {
      "name": "sticker",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3 13v-2c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h1.686c1.635 0 2.453 0 3.188.304c.735.305 1.313.883 2.47 2.04l.313.313c1.156 1.156 1.734 1.734 2.038 2.47C21 8.86 21 9.678 21 11.313V13c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13\"/><path d=\"M15 3.5c0 2.346 0 3.518.62 4.326a3 3 0 0 0 .554.554c.808.62 1.98.62 4.326.62m-6 7c-.685.626-1.554 1-2.5 1s-1.815-.374-2.5-1m-1.25-3.875v.125m7.5-.124v.125M8.5 12.25a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m7.5 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
-     "height": 24,
-     "name": "sticker",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11.5 15q1.725 0 3-1.125T16 11.05L8 13.3q.65.8 1.55 1.25t1.95.45m-4.15-3.75L10 10.5q.1-.7-.35-1.225T8.5 8.75q-.625 0-1.062.438T7 10.25q0 .275.1.525t.25.475m6-1.75L16 8.75q.125-.7-.337-1.225T14.5 7q-.625 0-1.062.438T13 8.5q0 .275.1.525t.25.475M16 21H5q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v11zm-1-2v-2q0-.825.588-1.412T17 15h2V5H5v14zM5 19V5z\"/>",
      "height": 24,
      "name": "sticker-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3 13v-2c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h1.686c1.635 0 2.453 0 3.188.304c.735.305 1.313.883 2.47 2.04l.313.313c1.156 1.156 1.734 1.734 2.038 2.47C21 8.86 21 9.678 21 11.313V13c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13\"/><path d=\"M15 3.5c0 2.346 0 3.518.62 4.326a3 3 0 0 0 .554.554c.808.62 1.98.62 4.326.62m-6 7c-.685.626-1.554 1-2.5 1s-1.815-.374-2.5-1m-1.25-3.875v.125m7.5-.124v.125M8.5 12.25a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0m7.5 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
+     "height": 24,
+     "name": "sticker",
      "width": 24
     },
     "fluent": {
@@ -39978,16 +41052,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "sticky-note",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12.5 5h-1C7.729 5 5.843 5 4.672 6.172S3.5 9.229 3.5 13v1c0 3.771 0 5.657 1.172 6.828S7.729 22 11.5 22h1c3.771 0 5.657 0 6.828-1.172S20.5 17.771 20.5 14v-1c0-3.771 0-5.657-1.172-6.828S16.271 5 12.5 5\"/><path d=\"M11 7.5a1.5 1.5 0 0 0 3 0V4a2 2 0 1 0-4 0v1M7.5 17.5h5m-5-4h9\"/></g>",
-     "height": 24,
-     "name": "sticky-note-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M16 21H5q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v11zm-1-2v-2q0-.825.588-1.412T17 15h2V5H5v14zm-4-3h2v-6h3V8H8v2h3zm-6 3V5z\"/>",
      "height": 24,
      "name": "sticky-note-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12.5 5h-1C7.729 5 5.843 5 4.672 6.172S3.5 9.229 3.5 13v1c0 3.771 0 5.657 1.172 6.828S7.729 22 11.5 22h1c3.771 0 5.657 0 6.828-1.172S20.5 17.771 20.5 14v-1c0-3.771 0-5.657-1.172-6.828S16.271 5 12.5 5\"/><path d=\"M11 7.5a1.5 1.5 0 0 0 3 0V4a2 2 0 1 0-4 0v1M7.5 17.5h5m-5-4h9\"/></g>",
+     "height": 24,
+     "name": "sticky-note-01",
      "width": 24
     },
     "lucide": {
@@ -40008,16 +41082,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "stop",
    "variants": {
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M4 12c0-3.28 0-4.919.814-6.081a4.5 4.5 0 0 1 1.105-1.105C7.08 4 8.72 4 12 4s4.919 0 6.081.814a4.5 4.5 0 0 1 1.105 1.105C20 7.08 20 8.72 20 12s0 4.919-.814 6.081a4.5 4.5 0 0 1-1.105 1.105C16.92 20 15.28 20 12 20s-4.919 0-6.081-.814a4.5 4.5 0 0 1-1.105-1.105C4 16.92 4 15.28 4 12Z\"/>",
-     "height": 24,
-     "name": "stop",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 8v8zM6 18V6h12v12zm2-2h8V8H8z\"/>",
      "height": 24,
      "name": "stop-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M4 12c0-3.28 0-4.919.814-6.081a4.5 4.5 0 0 1 1.105-1.105C7.08 4 8.72 4 12 4s4.919 0 6.081.814a4.5 4.5 0 0 1 1.105 1.105C20 7.08 20 8.72 20 12s0 4.919-.814 6.081a4.5 4.5 0 0 1-1.105 1.105C16.92 20 15.28 20 12 20s-4.919 0-6.081-.814a4.5 4.5 0 0 1-1.105-1.105C4 16.92 4 15.28 4 12Z\"/>",
+     "height": 24,
+     "name": "stop",
      "width": 24
     },
     "fluent": {
@@ -40074,16 +41148,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "stop-circle",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.389 15.163c.504.337 1.207.337 2.611.337s2.107 0 2.611-.337c.218-.146.406-.334.552-.552c.337-.504.337-1.207.337-2.611s0-2.107-.337-2.611a2 2 0 0 0-.552-.552C14.107 8.5 13.404 8.5 12 8.5s-2.107 0-2.611.337a2 2 0 0 0-.552.552C8.5 9.893 8.5 10.596 8.5 12s0 2.107.337 2.611a2 2 0 0 0 .552.552\"/></g>",
-     "height": 24,
-     "name": "stop-circle",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M8 16h8V8H8zm4 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8\"/>",
      "height": 24,
      "name": "stop-circle-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.389 15.163c.504.337 1.207.337 2.611.337s2.107 0 2.611-.337c.218-.146.406-.334.552-.552c.337-.504.337-1.207.337-2.611s0-2.107-.337-2.611a2 2 0 0 0-.552-.552C14.107 8.5 13.404 8.5 12 8.5s-2.107 0-2.611.337a2 2 0 0 0-.552.552C8.5 9.893 8.5 10.596 8.5 12s0 2.107.337 2.611a2 2 0 0 0 .552.552\"/></g>",
+     "height": 24,
+     "name": "stop-circle",
      "width": 24
     },
     "lucide": {
@@ -40182,16 +41256,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "store",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3.5 10v5c0 2.828 0 4.243.879 5.121C5.257 21 6.672 21 9.5 21h5c2.828 0 4.243 0 5.121-.879c.879-.878.879-2.293.879-5.121v-5\"/><path d=\"M17 7.502a2.5 2.5 0 0 1-5-.002a2.5 2.5 0 0 1-5 0C7 8.88 5.827 10 4.379 10c-.78 0-1.479-.324-1.959-.84c-.825-.884-.294-2.186.394-3.172l.388-.53c.882-1.205 1.323-1.808 1.963-2.133S6.552 3 8.045 3l7.91.001c1.493 0 2.24 0 2.88.326c.64.324 1.08.927 1.962 2.133l.389.53c.688.986 1.22 2.288.394 3.173a2.67 2.67 0 0 1-1.959.839c-1.448 0-2.621-1.12-2.621-2.5M14.997 17c-.684.607-1.772 1-2.998 1S9.684 17.607 9 17\"/></g>",
-     "height": 24,
-     "name": "store-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 6V4h16v2zm0 14v-6H3v-2l1-5h16l1 5v2h-1v6h-2v-6h-4v6zm2-2h6v-4H6zm-.95-6h13.9zm0 0h13.9l-.6-3H5.65z\"/>",
      "height": 24,
      "name": "store-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3.5 10v5c0 2.828 0 4.243.879 5.121C5.257 21 6.672 21 9.5 21h5c2.828 0 4.243 0 5.121-.879c.879-.878.879-2.293.879-5.121v-5\"/><path d=\"M17 7.502a2.5 2.5 0 0 1-5-.002a2.5 2.5 0 0 1-5 0C7 8.88 5.827 10 4.379 10c-.78 0-1.479-.324-1.959-.84c-.825-.884-.294-2.186.394-3.172l.388-.53c.882-1.205 1.323-1.808 1.963-2.133S6.552 3 8.045 3l7.91.001c1.493 0 2.24 0 2.88.326c.64.324 1.08.927 1.962 2.133l.389.53c.688.986 1.22 2.288.394 3.173a2.67 2.67 0 0 1-1.959.839c-1.448 0-2.621-1.12-2.621-2.5M14.997 17c-.684.607-1.772 1-2.998 1S9.684 17.607 9 17\"/></g>",
+     "height": 24,
+     "name": "store-01",
      "width": 24
     },
     "carbon": {
@@ -40236,16 +41310,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "strategy",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m18 11l2.346-2.151c.436-.4.654-.6.654-.849m-3-3l2.346 2.151c.436.4.654.6.654.849m0 0C3 8 3 21 3 21\"/><circle cx=\"5.5\" cy=\"5.5\" r=\"2.5\"/><path stroke-linecap=\"round\" d=\"m13 21l5-5m0 5l-5-5\"/></g>",
-     "height": 24,
-     "name": "strategy",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5.5 11L2 9V5l3.5-2L9 5v4zm0-2.3L7 7.85v-1.7L5.5 5.3L4 6.15v1.7zm11 3.075V9.45L20 11.5v7L14 22l-6-3.5v-7l3.5-2.05v2.325l-1.5.875v4.7l4 2.325l4-2.325v-4.7zM13 14V2h9l-2 3l2 3h-7v6zM5.5 7\"/>",
      "height": 24,
      "name": "strategy-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m18 11l2.346-2.151c.436-.4.654-.6.654-.849m-3-3l2.346 2.151c.436.4.654.6.654.849m0 0C3 8 3 21 3 21\"/><circle cx=\"5.5\" cy=\"5.5\" r=\"2.5\"/><path stroke-linecap=\"round\" d=\"m13 21l5-5m0 5l-5-5\"/></g>",
+     "height": 24,
+     "name": "strategy",
      "width": 24
     },
     "boxicons": {
@@ -40330,6 +41404,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m5 7l8 10m-8 0l8-10m8 13h-4l3.5-4a1.73 1.73 0 0 0-3.5-2\"/>",
      "height": 24,
      "name": "subscript",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M19 20v-2q0-.425.288-.712T20 17h2v-1h-3v-1h3q.425 0 .713.288T23 16v1q0 .425-.288.713T22 18h-2v1h3v1zM5.875 18l4.625-7.275L6.2 4h2.65l3.1 5h.1l3.075-5H17.8l-4.325 6.725L18.125 18H15.45l-3.4-5.425h-.1L8.55 18z\"/>",
+     "height": 24,
+     "name": "subscript-outline",
      "width": 24
     },
     "lucide": {
@@ -40440,17 +41520,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "subway",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><rect width=\"32\" height=\"26\" x=\"8\" y=\"6\" stroke=\"currentColor\" stroke-width=\"4\" rx=\"2\"/><circle cx=\"14\" cy=\"27\" r=\"2\" fill=\"currentColor\"/><circle cx=\"34\" cy=\"27\" r=\"2\" fill=\"currentColor\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M14 12h20v10H14zm18 20l8 9m-23-9l-9 9\"/></g>",
-     "height": 48,
-     "name": "subway",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 22V8.85q0-2.125 1.1-3.687T6.2 2.8q1.35-.525 2.875-.662T12 2t2.925.138T17.8 2.8q2 .8 3.1 2.363T22 8.85V22zm7.1-2h5.75l-1.5-1.5H10.6zm-1.6-7h9V9h-9zm8.713 3.213q.287-.288.287-.713t-.288-.712t-.712-.288t-.712.288t-.288.712t.288.713t.712.287t.713-.288m-7 0q.287-.287.287-.712t-.288-.712T8.5 14.5t-.712.288t-.288.712t.288.713t.712.287t.713-.288M4 20h3.5v-.5l1.05-1.05q-1.1-.15-1.825-.987T6 15.5V9q0-1.95 1.863-2.475T12 6q2.5 0 4.25.525T18 9v6.5q0 1.125-.725 1.963t-1.825.987l1.05 1.05v.5H20V8.85q0-1.5-.737-2.562T17.05 4.65q-1.1-.425-2.437-.537T12 4t-2.613.113t-2.437.537q-1.475.575-2.212 1.638T4 8.85zm0 0h16z\"/>",
      "height": 24,
      "name": "subway-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><rect width=\"32\" height=\"26\" x=\"8\" y=\"6\" stroke=\"currentColor\" stroke-width=\"4\" rx=\"2\"/><circle cx=\"14\" cy=\"27\" r=\"2\" fill=\"currentColor\"/><circle cx=\"34\" cy=\"27\" r=\"2\" fill=\"currentColor\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M14 12h20v10H14zm18 20l8 9m-23-9l-9 9\"/></g>",
+     "height": 48,
+     "name": "subway",
+     "width": 48
     },
     "boxicons": {
      "body": "<path fill=\"currentColor\" d=\"M15 6H9C7.35 6 6 7.35 6 9v8c0 1.1.9 2 2 2l-2 3h2.25L9 21h6l.75 1H18l-2-3c1.1 0 2-.9 2-2V9c0-1.65-1.35-3-3-3M9 8h6c.55 0 1 .45 1 1v3H8V9c0-.55.45-1 1-1m-1 7c0-.55.45-1 1-1s1 .45 1 1s-.45 1-1 1s-1-.45-1-1m7 1c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1\"/><path fill=\"currentColor\" d=\"M15 2H9C5.14 2 2 5.14 2 9v13h2V9c0-2.76 2.24-5 5-5h6c2.76 0 5 2.24 5 5v13h2V9c0-3.86-3.14-7-7-7\"/>",
@@ -40740,6 +41820,12 @@ export const deck: Deck = {
      "name": "superscript",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M19 9V7q0-.425.288-.712T20 6h2V5h-3V4h3q.425 0 .713.288T23 5v1q0 .425-.288.713T22 7h-2v1h3v1zM5.875 20l4.625-7.275L6.2 6h2.65l3.1 5h.1l3.075-5H17.8l-4.325 6.725L18.125 20H15.45l-3.4-5.425h-.1L8.55 20z\"/>",
+     "height": 24,
+     "name": "superscript-outline",
+     "width": 24
+    },
     "lucide": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m4 19l8-8m0 8l-8-8m16 1h-4c0-1.5.442-2 1.5-2.5S20 8.334 20 7.002c0-.472-.17-.93-.484-1.29a2.105 2.105 0 0 0-2.617-.436c-.42.239-.738.614-.899 1.06\"/>",
      "height": 24,
@@ -40848,16 +41934,16 @@ export const deck: Deck = {
      "name": "swipe-down",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.5 8V2m0 6c-.7 0-2.009-1.994-2.5-2.5M18.5 8c.7 0 2.009-1.994 2.5-2.5M7.835 22v-.949c0-.645-.209-1.273-.595-1.791l-3.658-4.903c-.422-.566-.759-1.267-.48-1.915c.45-1.049 1.723-1.73 3.28-.158l1.597 1.71V3.57c.056-2.044 3.344-2.145 3.484 0v5.94c1.48-.192 8.453.852 7.436 5.272l-.143.633c-.206.92-.814 2.557-1.484 3.514c-.698.997-.452 1.99-.452 3.07\"/>",
-     "height": 24,
-     "name": "swipe-down-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4.5 15L1 11.5l1.05-1.05L3.8 12.2q-.15-.675-.225-1.35T3.5 9.5q0-2.05.675-3.975T6.125 2L7.2 3.075q-1.075 1.4-1.638 3.038T5 9.5q0 .65.075 1.288t.25 1.262l1.625-1.6L8 11.5zm11.95 5.825q-.575.2-1.162.188t-1.138-.288l-6.55-3.05l.45-1q.25-.5.7-.812t1-.363l1.7-.125L8.65 7.7q-.15-.4.025-.763t.575-.512t.762.025t.513.575l3.7 10.175l-2.5.175L15 18.9q.175.075.375.088t.375-.038l3.925-1.425q.775-.275 1.125-1.038t.075-1.537L19.5 11.2q-.15-.4.025-.763t.575-.512t.762.025t.513.575l1.375 3.75q.575 1.575-.113 3.062T20.375 19.4zM14.2 14.2l-1.35-3.775q-.15-.4.025-.763t.575-.512t.763.025t.512.575L16.1 13.5zm2.825-1.025L16 10.35q-.15-.4.025-.763t.575-.512t.763.025t.512.575l1.025 2.8zm.2 1.95\"/>",
      "height": 24,
      "name": "swipe-down-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.5 8V2m0 6c-.7 0-2.009-1.994-2.5-2.5M18.5 8c.7 0 2.009-1.994 2.5-2.5M7.835 22v-.949c0-.645-.209-1.273-.595-1.791l-3.658-4.903c-.422-.566-.759-1.267-.48-1.915c.45-1.049 1.723-1.73 3.28-.158l1.597 1.71V3.57c.056-2.044 3.344-2.145 3.484 0v5.94c1.48-.192 8.453.852 7.436 5.272l-.143.633c-.206.92-.814 2.557-1.484 3.514c-.698.997-.452 1.99-.452 3.07\"/>",
+     "height": 24,
+     "name": "swipe-down-01",
      "width": 24
     },
     "fluent": {
@@ -40878,16 +41964,16 @@ export const deck: Deck = {
      "name": "swipe-right",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21.001 4.5h-6m6 0c0-.7-1.994-2.009-2.5-2.5m2.5 2.5c0 .699-1.994 2.007-2.5 2.498m-1.607 14.99c-.052-1.913.077-2.143.214-2.569c.137-.425 1.093-1.96 1.431-3.057c1.095-3.548.075-4.302-1.285-5.309c-1.509-1.115-4.354-1.68-5.765-1.558V3.744a1.744 1.744 0 0 0-3.489 0v10.26l-2.06-2.18c-.64-.694-1.668-.764-2.37-.133a1.72 1.72 0 0 0-.223 2.318l1.293 1.713M7.87 22l-.019-1.05c.043-1.232-.853-2.035-2.021-3.641l-.246-.336m0 0c-.354-.48-.666-.89-.944-1.251m.944 1.251l1.17 1.55m-1.17-1.55l-.944-1.251m0 0c-.572-.742-1.003-1.28-1.375-1.816\"/>",
-     "height": 24,
-     "name": "swipe-right-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M11.825 22q-.6 0-1.15-.225t-.975-.65L4.6 16l.75-.775q.4-.4.938-.537t1.062.012l1.65.475V7q0-.425.288-.712T10 6t.713.288T11 7v10.825l-2.425-.675l2.55 2.55q.125.125.313.213t.387.087H16q.825 0 1.413-.587T18 18v-4q0-.425.288-.712T19 13t.713.288T20 14v4q0 1.65-1.175 2.825T16 22zM12 15v-4q0-.425.288-.712T13 10t.713.288T14 11v4zm3 0v-3q0-.425.288-.712T16 11t.713.288T17 12v3zM2 7q.75-2.65 3.55-4.325T12 1q2.35 0 4.525.775t3.975 2.25V2H22v5h-5V5.5h2.9q-1.65-1.45-3.675-2.225T12 2.5q-2.95 0-5.213 1.2T3.575 7zm12.5 10\"/>",
      "height": 24,
      "name": "swipe-right-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21.001 4.5h-6m6 0c0-.7-1.994-2.009-2.5-2.5m2.5 2.5c0 .699-1.994 2.007-2.5 2.498m-1.607 14.99c-.052-1.913.077-2.143.214-2.569c.137-.425 1.093-1.96 1.431-3.057c1.095-3.548.075-4.302-1.285-5.309c-1.509-1.115-4.354-1.68-5.765-1.558V3.744a1.744 1.744 0 0 0-3.489 0v10.26l-2.06-2.18c-.64-.694-1.668-.764-2.37-.133a1.72 1.72 0 0 0-.223 2.318l1.293 1.713M7.87 22l-.019-1.05c.043-1.232-.853-2.035-2.021-3.641l-.246-.336m0 0c-.354-.48-.666-.89-.944-1.251m.944 1.251l1.17 1.55m-1.17-1.55l-.944-1.251m0 0c-.572-.742-1.003-1.28-1.375-1.816\"/>",
+     "height": 24,
+     "name": "swipe-right-01",
      "width": 24
     },
     "fluent": {
@@ -40908,16 +41994,16 @@ export const deck: Deck = {
      "name": "swipe-up",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.5 2.004v5.998m0-5.998c-.7 0-2.009 1.993-2.5 2.499m2.5-2.5c.7 0 2.009 1.994 2.5 2.5m-4.107 17.485c-.052-1.913.077-2.143.214-2.569s1.093-1.96 1.431-3.057c1.095-3.548.075-4.303-1.285-5.309c-1.509-1.115-4.354-1.68-5.765-1.558V3.744a1.744 1.744 0 0 0-3.489 0v10.26l-2.06-2.18c-.64-.694-1.668-.764-2.37-.133a1.72 1.72 0 0 0-.222 2.318l1.292 1.713M7.869 22l-.019-1.05c.043-1.232-.853-2.035-2.021-3.641l-.246-.336m0 0a72 72 0 0 0-.944-1.251m.944 1.25l1.17 1.55m-1.17-1.55l-.944-1.25m0 0c-.572-.742-1.003-1.281-1.375-1.816\"/>",
-     "height": 24,
-     "name": "swipe-up-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6.125 14q-1.275-1.6-1.95-3.525T3.5 6.5q0-.675.075-1.35T3.8 3.8L2.05 5.55L1 4.5L4.5 1L8 4.5L6.95 5.55l-1.625-1.6q-.175.625-.25 1.262T5 6.5q0 1.75.563 3.388T7.2 12.924zm10.325 6.825q-.575.2-1.162.188t-1.138-.288l-6.55-3.05l.45-1q.25-.5.7-.812t1-.363l1.7-.125L8.65 7.7q-.15-.4.025-.763t.575-.512t.762.025t.513.575l3.7 10.175l-2.5.175L15 18.9q.175.075.375.088t.375-.038l3.925-1.425q.775-.275 1.125-1.038t.075-1.537L19.5 11.2q-.15-.4.025-.763t.575-.512t.762.025t.513.575l1.375 3.75q.575 1.575-.113 3.062T20.375 19.4zM14.2 14.2l-1.35-3.775q-.15-.4.025-.763t.575-.512t.763.025t.512.575L16.1 13.5zm2.825-1.025L16 10.35q-.15-.4.025-.763t.575-.512t.763.025t.512.575l1.025 2.8zm.2 1.95\"/>",
      "height": 24,
      "name": "swipe-up-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18.5 2.004v5.998m0-5.998c-.7 0-2.009 1.993-2.5 2.499m2.5-2.5c.7 0 2.009 1.994 2.5 2.5m-4.107 17.485c-.052-1.913.077-2.143.214-2.569s1.093-1.96 1.431-3.057c1.095-3.548.075-4.303-1.285-5.309c-1.509-1.115-4.354-1.68-5.765-1.558V3.744a1.744 1.744 0 0 0-3.489 0v10.26l-2.06-2.18c-.64-.694-1.668-.764-2.37-.133a1.72 1.72 0 0 0-.222 2.318l1.292 1.713M7.869 22l-.019-1.05c.043-1.232-.853-2.035-2.021-3.641l-.246-.336m0 0a72 72 0 0 0-.944-1.251m.944 1.25l1.17 1.55m-1.17-1.55l-.944-1.25m0 0c-.572-.742-1.003-1.281-1.375-1.816\"/>",
+     "height": 24,
+     "name": "swipe-up-01",
      "width": 24
     },
     "fluent": {
@@ -40938,17 +42024,17 @@ export const deck: Deck = {
      "name": "switch",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M42 19H6M30 7l12 12M6.799 29h36m-36 0l12 12\"/>",
-     "height": 48,
-     "name": "switch",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h12q.825 0 1.413.588T20 4v16q0 .825-.587 1.413T18 22zm0-2h12V4H6zm2-3h8V7H8zm2-2v-4h4v4zm2-8.75q.325 0 .538-.213t.212-.537t-.213-.537T12 4.75t-.537.213t-.213.537t.213.538t.537.212m0 13q.325 0 .538-.213t.212-.537t-.213-.537T12 17.75t-.537.213t-.213.537t.213.538t.537.212M12 12\"/>",
      "height": 24,
      "name": "switch-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M42 19H6M30 7l12 12M6.799 29h36m-36 0l12 12\"/>",
+     "height": 48,
+     "name": "switch",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M29.6 23.6L31 25l-5 5l-5-5l1.4-1.4l2.6 2.6V22H6v5H4V10.8C2.8 10.4 2 9.3 2 8s.8-2.4 2-2.8V2h2v3.2c.8.3 1.5 1 1.8 1.8H27v6.2l2.6-2.6L31 12l-5 5l-5-5l1.4-1.4l2.6 2.6V9H7.8c-.3.8-1 1.5-1.8 1.8V20h21v6.2z\"/>",
@@ -41124,6 +42210,12 @@ export const deck: Deck = {
      "name": "table",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm6-6H5v4h6zm2 0v4h6v-4zm-2-2V9H5v4zm2 0h6V9h-6zM5 7h14V5H5z\"/>",
+     "height": 24,
+     "name": "table-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.891 20.109C2.5 18.717 2.5 16.479 2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391\"/><path d=\"M2.5 9h19m-19 4h19m-19 4h19\"/><path stroke-linecap=\"round\" d=\"M12 21.5V9\"/></g>",
      "height": 24,
@@ -41135,12 +42227,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "table",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm6-6H5v4h6zm2 0v4h6v-4zm-2-2V9H5v4zm2 0h6V9h-6zM5 7h14V5H5z\"/>",
-     "height": 24,
-     "name": "table-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M3 6.25A3.25 3.25 0 0 1 6.25 3h11.5A3.25 3.25 0 0 1 21 6.25v11.5A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75zM6.25 4.5A1.75 1.75 0 0 0 4.5 6.25V8.5h4v-4zM4.5 10v4h4v-4zm5.5 0v4h4v-4zm5.5 0v4h4v-4zM14 15.5h-4v4h4zm1.5 4h2.25a1.75 1.75 0 0 0 1.75-1.75V15.5h-4zm0-11h4V6.25a1.75 1.75 0 0 0-1.75-1.75H15.5zm-1.5-4h-4v4h4zm-9.5 11v2.25c0 .966.784 1.75 1.75 1.75H8.5v-4z\"/>",
@@ -41208,16 +42294,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "tablet",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M14.5 2h-5c-2.828 0-4.243 0-5.121.879C3.5 3.757 3.5 5.172 3.5 8v8c0 2.828 0 4.243.879 5.121C5.257 22 6.672 22 9.5 22h5c2.828 0 4.243 0 5.121-.879c.879-.878.879-2.293.879-5.121V8c0-2.828 0-4.243-.879-5.121C18.743 2 17.328 2 14.5 2Z\"/><path stroke-linejoin=\"round\" d=\"M12.125 19H12m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
-     "height": 24,
-     "name": "tablet-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M3 20q-.825 0-1.412-.587T1 18V6q0-.825.588-1.412T3 4h18q.825 0 1.413.588T23 6v12q0 .825-.587 1.413T21 20zM4 6H3v12h1zm2 12h12V6H6zM20 6v12h1V6zm0 0h1zM4 6H3z\"/>",
      "height": 24,
      "name": "tablet-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M14.5 2h-5c-2.828 0-4.243 0-5.121.879C3.5 3.757 3.5 5.172 3.5 8v8c0 2.828 0 4.243.879 5.121C5.257 22 6.672 22 9.5 22h5c2.828 0 4.243 0 5.121-.879c.879-.878.879-2.293.879-5.121V8c0-2.828 0-4.243-.879-5.121C18.743 2 17.328 2 14.5 2Z\"/><path stroke-linejoin=\"round\" d=\"M12.125 19H12m.25 0a.25.25 0 1 1-.5 0a.25.25 0 0 1 .5 0\"/></g>",
+     "height": 24,
+     "name": "tablet-01",
      "width": 24
     },
     "fluent": {
@@ -41302,6 +42388,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M6.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0-2 0\"/><path d=\"M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592-5.592a2.41 2.41 0 0 0 0-3.408l-7.71-7.71A2 2 0 0 0 11.172 3H6a3 3 0 0 0-3 3\"/></g>",
      "height": 24,
      "name": "tag",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m6 20l1-4H3l.5-2h4l1-4h-4L5 8h4l1-4h2l-1 4h4l1-4h2l-1 4h4l-.5 2h-4l-1 4h4l-.5 2h-4l-1 4h-2l1-4H9l-1 4zm3.5-6h4l1-4h-4z\"/>",
+     "height": 24,
+     "name": "tag-outline",
      "width": 24
     },
     "hugeicons": {
@@ -41442,6 +42534,12 @@ export const deck: Deck = {
      "name": "target",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8.1 21.213q-1.825-.788-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22t-3.9-.788m9.575-3.537Q20 15.35 20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20t5.675-2.325M7.75 16.25Q6 14.5 6 12t1.75-4.25T12 6t4.25 1.75T18 12t-1.75 4.25T12 18t-4.25-1.75m7.075-1.425Q16 13.65 16 12t-1.175-2.825T12 8T9.175 9.175T8 12t1.175 2.825T12 16t2.825-1.175m-4.237-1.412Q10 12.825 10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14t-1.412-.587\"/>",
+     "height": 24,
+     "name": "target-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M15.131 2.5A10 10 0 0 0 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10a10 10 0 0 0-.458-3\"/><path stroke-linejoin=\"round\" d=\"M17 12a5 5 0 1 1-5-5\"/><path d=\"M19.5 4.5L12 12m7.5-7.5V2m0 2.5H22\"/></g>",
      "height": 24,
@@ -41502,16 +42600,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "task",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M14.496 2h-5a1.5 1.5 0 0 0 0 3h5a1.5 1.5 0 0 0 0-3m-6.5 13h3.429m-3.429-4h8\"/><path d=\"M15.996 3.5c1.554.047 2.48.22 3.121.862c.88.878.88 2.293.88 5.12V16c0 2.828 0 4.242-.88 5.121c-.878.879-2.293.879-5.12.879h-4c-2.83 0-4.244 0-5.122-.879S3.996 18.828 3.996 16V9.483c0-2.828 0-4.243.879-5.121c.641-.642 1.568-.815 3.121-.862\"/></g>",
-     "height": 24,
-     "name": "task-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m10.95 18l5.65-5.65l-1.45-1.45l-4.225 4.225l-2.1-2.1L7.4 14.45zM6 22q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h8l6 6v12q0 .825-.587 1.413T18 22zm7-13V4H6v16h12V9zM6 4v5zv16z\"/>",
      "height": 24,
      "name": "task-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M14.496 2h-5a1.5 1.5 0 0 0 0 3h5a1.5 1.5 0 0 0 0-3m-6.5 13h3.429m-3.429-4h8\"/><path d=\"M15.996 3.5c1.554.047 2.48.22 3.121.862c.88.878.88 2.293.88 5.12V16c0 2.828 0 4.242-.88 5.121c-.878.879-2.293.879-5.12.879h-4c-2.83 0-4.244 0-5.122-.879S3.996 18.828 3.996 16V9.483c0-2.828 0-4.243.879-5.121c.641-.642 1.568-.815 3.121-.862\"/></g>",
+     "height": 24,
+     "name": "task-01",
      "width": 24
     },
     "carbon": {
@@ -41824,6 +42922,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m5 7l5 5l-5 5m7 2h7\"/>",
      "height": 24,
      "name": "terminal",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm0-2h16V8H4zm3.5-1l-1.4-1.4L8.675 13l-2.6-2.6L7.5 9l4 4zm4.5 0v-2h6v2z\"/>",
+     "height": 24,
+     "name": "terminal-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -42400,6 +43504,36 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "texture",
+   "variants": {
+    "tabler": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 3L3 6m18 12l-3 3M11 3l-8 8m13-8L3 16M21 3L3 21M21 8L8 21m13-8l-8 8\"/>",
+     "height": 24,
+     "name": "texture",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4.4 21q-.475-.1-.888-.513T3 19.6L19.6 3q.525.125.9.513t.525.887zM3 14.7v-2.8L11.9 3h2.8zM3 7V5q0-.825.588-1.413T5 3h2zm14 14l4-4v2q0 .825-.587 1.413T19 21zm-7.7 0L21 9.3v2.8L12.1 21z\"/>",
+     "height": 24,
+     "name": "texture-outline",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"m12 6l-6 6m36 24l-6 6M22 6L6 22M32 6L6 32M42 6L6 42m36-26L16 42m26-16L26 42\"/>",
+     "height": 48,
+     "name": "texture",
+     "width": 48
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 9.59L12.59 19H9.42l9.59-9.59v3.17ZM5 11.42l6.41-6.41h3.17L5 14.59zm3.59-6.41L5 8.6V5.01zM5 17.42L17.41 5.01H19V6.6L6.59 19.01H5zm10.41 1.59L19 15.42v3.59z\" class=\"b\"/>",
+     "height": 24,
+     "name": "texture",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "theater",
    "variants": {
     "tabler": {
@@ -42444,6 +43578,12 @@ export const deck: Deck = {
      "name": "thermometer",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M12 21q-2.075 0-3.537-1.463T7 16q0-1.2.525-2.238T9 12V6q0-1.25.875-2.125T12 3t2.125.875T15 6v6q.95.725 1.475 1.763T17 16q0 2.075-1.463 3.538T12 21m0-2q1.25 0 2.125-.875T15 16q0-.725-.312-1.35T13.8 13.6L13 13V6q0-.425-.288-.712T12 5t-.712.288T11 6v7l-.8.6q-.575.425-.888 1.05T9 16q0 1.25.875 2.125T12 19m0-3\"/>",
+     "height": 24,
+     "name": "thermometer-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"m13.88 15.937l6.794-7.764c.748-.855 1.122-1.282 1.251-1.76a2.14 2.14 0 0 0-.042-1.258c-.16-.468-.562-.87-1.365-1.673s-1.205-1.204-1.673-1.365a2.14 2.14 0 0 0-1.258-.042c-.477.13-.905.503-1.76 1.251L8.063 10.12c-.956.836-1.433 1.254-1.715 1.806c-.28.551-.338 1.184-.453 2.448l-.023.258c-.061.668-.092 1.002-.22 1.307c-.127.304-.343.56-.777 1.072l-2.6 3.073a1.164 1.164 0 0 0 1.64 1.64l3.074-2.6c.512-.433.768-.65 1.072-.777s.639-.158 1.307-.219l.258-.023c1.264-.115 1.897-.172 2.448-.454c.552-.28.97-.758 1.806-1.714\"/><path d=\"m7.79 9.895l1.58.948a.787.787 0 0 1 .27 1.08l-.292.486a1.634 1.634 0 0 0 2.242 2.243l.487-.292a.787.787 0 0 1 1.08.27l.948 1.58\"/><path stroke-linecap=\"round\" d=\"m17.263 6.737l-3.158 3.158\"/></g>",
      "height": 24,
@@ -42455,12 +43595,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "thermometer",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M12 21q-2.075 0-3.537-1.463T7 16q0-1.2.525-2.238T9 12V6q0-1.25.875-2.125T12 3t2.125.875T15 6v6q.95.725 1.475 1.763T17 16q0 2.075-1.463 3.538T12 21m0-2q1.25 0 2.125-.875T15 16q0-.725-.312-1.35T13.8 13.6L13 13V6q0-.425-.288-.712T12 5t-.712.288T11 6v7l-.8.6q-.575.425-.888 1.05T9 16q0 1.25.875 2.125T12 19m0-3\"/>",
-     "height": 24,
-     "name": "thermometer-outline",
-     "width": 24
     },
     "lucide": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0\"/>",
@@ -42714,17 +43848,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "thunderstorm",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M9.455 30.994A13.95 13.95 0 0 1 4 19.885C4 12.217 10.105 6 17.636 6c6.297 0 11.598 4.346 13.166 10.253a8.9 8.9 0 0 1 4.107-.996c5.02 0 9.091 4.144 9.091 9.257c0 3.795-2.244 7.058-5.455 8.486M17.414 22.586l-2.828 2.828\"/><path d=\"m27 24l-8 8.001h10.004l-8.004 8m12.414-1.415l-2.828 2.828\"/></g>",
-     "height": 48,
-     "name": "thunderstorm",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m7.5 23l.9-2.5H6.5L7.75 17h2.5l-1.075 2.5h2.075L8.5 23zm6.75-1l.7-2H13l1.075-3h2.5l-.875 2h2.05l-2.5 3zM7.5 16q-2.275 0-3.887-1.612T2 10.5q0-2.075 1.375-3.625t3.4-1.825q.8-1.425 2.188-2.238T12 2q2.25 0 3.913 1.438t2.012 3.587q1.725.15 2.9 1.425T22 11.5q0 1.875-1.312 3.188T17.5 16zm0-2h10q1.05 0 1.775-.725T20 11.5t-.725-1.775T17.5 9H16V8q0-1.65-1.175-2.825T12 4q-1.2 0-2.187.65T8.325 6.4l-.25.6H7.45q-1.425.05-2.437 1.063T4 10.5q0 1.45 1.025 2.475T7.5 14M12 9\"/>",
      "height": 24,
      "name": "thunderstorm-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M9.455 30.994A13.95 13.95 0 0 1 4 19.885C4 12.217 10.105 6 17.636 6c6.297 0 11.598 4.346 13.166 10.253a8.9 8.9 0 0 1 4.107-.996c5.02 0 9.091 4.144 9.091 9.257c0 3.795-2.244 7.058-5.455 8.486M17.414 22.586l-2.828 2.828\"/><path d=\"m27 24l-8 8.001h10.004l-8.004 8m12.414-1.415l-2.828 2.828\"/></g>",
+     "height": 48,
+     "name": "thunderstorm",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M23.5 22H23v-2h.5a4.5 4.5 0 0 0 .36-9H23l-.1-.82a7 7 0 0 0-13.88 0L9 11h-.86a4.5 4.5 0 0 0 .36 9H9v2h-.5A6.5 6.5 0 0 1 7.2 9.14a9 9 0 0 1 17.6 0A6.5 6.5 0 0 1 23.5 22\"/><path fill=\"currentColor\" d=\"m15.87 30.5l-1.74-1l3.15-5.5h-6l4.85-8.5l1.74 1l-3.15 5.5h6z\"/>",
@@ -42918,6 +44052,12 @@ export const deck: Deck = {
      "name": "timeline",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3 18q-.825 0-1.412-.587T1 16t.588-1.412T3 14h.263q.112 0 .237.05L8.05 9.5Q8 9.375 8 9.262V9q0-.825.588-1.412T10 7t1.413.588T12 9q0 .05-.05.5l2.55 2.55q.125-.05.238-.05h.525q.112 0 .237.05l3.55-3.55Q19 8.375 19 8.262V8q0-.825.588-1.412T21 6t1.413.588T23 8t-.587 1.413T21 10h-.262q-.113 0-.238-.05l-3.55 3.55q.05.125.05.238V14q0 .825-.587 1.413T15 16t-1.412-.587T13 14v-.262q0-.113.05-.238l-2.55-2.55q-.125.05-.238.05H10q-.05 0-.5-.05L4.95 15.5q.05.125.05.238V16q0 .825-.587 1.413T3 18\"/>",
+     "height": 24,
+     "name": "timeline-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 22a2 2 0 1 0 0-4a2 2 0 0 0 0 4m0-20a5.5 5.5 0 0 0-1.5 10.793L12 15l1.5-2.207A5.5 5.5 0 0 0 12 2\"/><path d=\"M12 5v2.5l1.5 1M14 20h7m-11 0H3\"/></g>",
      "height": 24,
@@ -42966,6 +44106,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "timer",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M9 3V1h6v2zm2 11h2V8h-2zm-2.488 7.288q-1.637-.713-2.862-1.938t-1.937-2.863T3 13t.713-3.488T5.65 6.65t2.863-1.937T12 4q1.55 0 2.975.5t2.675 1.45l1.4-1.4l1.4 1.4l-1.4 1.4Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35t-2.863 1.938T12 22t-3.488-.712m8.438-3.338Q19 15.9 19 13t-2.05-4.95T12 6T7.05 8.05T5 13t2.05 4.95T12 20t4.95-2.05M12 13\"/>",
+     "height": 24,
+     "name": "timer-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M11.08 13.152L8 7l5.42 4.28c.77.608.774 1.767.008 2.38a1.547 1.547 0 0 1-2.347-.508\"/><path d=\"M5 4.82a10 10 0 0 0-3 7.158C2 17.513 6.477 22 12 22s10-4.487 10-10.022a10.02 10.02 0 0 0-8.013-9.825c-.836-.17-1.254-.254-1.62.047S12 2.987 12 3.96v1.002\"/></g>",
      "height": 24,
@@ -42977,12 +44123,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "timer",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M9 3V1h6v2zm2 11h2V8h-2zm-2.488 7.288q-1.637-.713-2.862-1.938t-1.937-2.863T3 13t.713-3.488T5.65 6.65t2.863-1.937T12 4q1.55 0 2.975.5t2.675 1.45l1.4-1.4l1.4 1.4l-1.4 1.4Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35t-2.863 1.938T12 22t-3.488-.712m8.438-3.338Q19 15.9 19 13t-2.05-4.95T12 6T7.05 8.05T5 13t2.05 4.95T12 20t4.95-2.05M12 13\"/>",
-     "height": 24,
-     "name": "timer-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M12 5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17m0 1.5a7 7 0 1 0 0 14a7 7 0 0 0 0-14M12 8a.75.75 0 0 1 .743.648l.007.102v4.5a.75.75 0 0 1-1.493.102l-.007-.102v-4.5A.75.75 0 0 1 12 8m7.147-2.886l.083.06l1.158.964a.75.75 0 0 1-.877 1.212l-.082-.06l-1.159-.964a.75.75 0 0 1 .877-1.212M14.25 2.5a.75.75 0 0 1 .102 1.493L14.25 4h-4.5a.75.75 0 0 1-.102-1.493L9.75 2.5z\"/>",
@@ -43104,16 +44244,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "toggle-off",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M11 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z\"/><path d=\"M16 6H8a6 6 0 1 0 0 12h8a6 6 0 0 0 0-12Z\"/></g>",
-     "height": 24,
-     "name": "toggle-off",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 18q-2.5 0-4.25-1.75T1 12t1.75-4.25T7 6h10q2.5 0 4.25 1.75T23 12t-1.75 4.25T17 18zm0-2h10q1.65 0 2.825-1.175T21 12t-1.175-2.825T17 8H7Q5.35 8 4.175 9.175T3 12t1.175 2.825T7 16m2.125-1.875Q10 13.25 10 12t-.875-2.125T7 9t-2.125.875T4 12t.875 2.125T7 15t2.125-.875M12 12\"/>",
      "height": 24,
      "name": "toggle-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M11 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z\"/><path d=\"M16 6H8a6 6 0 1 0 0 12h8a6 6 0 0 0 0-12Z\"/></g>",
+     "height": 24,
+     "name": "toggle-off",
      "width": 24
     },
     "carbon": {
@@ -43140,16 +44280,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "toggle-on",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M19 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z\"/><path d=\"M16 6H8a6 6 0 1 0 0 12h8a6 6 0 0 0 0-12Z\"/></g>",
-     "height": 24,
-     "name": "toggle-on",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 18q-2.5 0-4.25-1.75T1 12t1.75-4.25T7 6h10q2.5 0 4.25 1.75T23 12t-1.75 4.25T17 18zm0-2h10q1.65 0 2.825-1.175T21 12t-1.175-2.825T17 8H7Q5.35 8 4.175 9.175T3 12t1.175 2.825T7 16m12.125-1.875Q20 13.25 20 12t-.875-2.125T17 9t-2.125.875T14 12t.875 2.125T17 15t2.125-.875M12 12\"/>",
      "height": 24,
      "name": "toggle-on-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M19 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z\"/><path d=\"M16 6H8a6 6 0 1 0 0 12h8a6 6 0 0 0 0-12Z\"/></g>",
+     "height": 24,
+     "name": "toggle-on",
      "width": 24
     },
     "carbon": {
@@ -43291,7 +44431,7 @@ export const deck: Deck = {
      "width": 24
     },
     "lucide": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 12v4m0-10a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 22 12v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 .586-1.414l4-4A2 2 0 0 1 8 6zm0 0V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2m-6 8h20M8 12v4\"/>",
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 12v4m0-10V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2m9 0a2 2 0 0 1 1.414.586l3 3A2 2 0 0 1 22 11v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 .586-1.414l3-3A2 2 0 0 1 7 6zM2 14h20M8 12v4\"/>",
      "height": 24,
      "name": "toolbox",
      "width": 24
@@ -43356,16 +44496,16 @@ export const deck: Deck = {
      "name": "tornado",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 7c0 2.21-3.582 4-8 4S4 9.21 4 7s3.582-4 8-4s8 1.79 8 4Z\"/><path stroke-linecap=\"round\" d=\"M18 14c0 1.657-2.686 3-6 3s-6-1.343-6-3s2.686-3 6-3m4 8c0 1.105-1.79 2-4 2s-4-.895-4-2s1.79-2 4-2\"/></g>",
-     "height": 24,
-     "name": "tornado-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M1 3h22L12 22zm3.475 2L6.2 8h11.6l1.725-3zm2.9 5L9.1 13h5.8l1.725-3zm2.9 5L12 18l1.725-3z\"/>",
      "height": 24,
      "name": "tornado-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 7c0 2.21-3.582 4-8 4S4 9.21 4 7s3.582-4 8-4s8 1.79 8 4Z\"/><path stroke-linecap=\"round\" d=\"M18 14c0 1.657-2.686 3-6 3s-6-1.343-6-3s2.686-3 6-3m4 8c0 1.105-1.79 2-4 2s-4-.895-4-2s1.79-2 4-2\"/></g>",
+     "height": 24,
+     "name": "tornado-01",
      "width": 24
     },
     "carbon": {
@@ -43578,6 +44718,12 @@ export const deck: Deck = {
      "name": "train",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M4 15.5V6q0-1.325.688-2.113t1.812-1.2t2.563-.55T12 2q1.65 0 3.113.138t2.55.55t1.712 1.2T20 6v9.5q0 1.475-1.012 2.488T16.5 19l1.5 1.5v.5h-2l-2-2h-4l-2 2H6v-.5L7.5 19q-1.475 0-2.488-1.012T4 15.5M12 4q-2.65 0-3.875.313T6.45 5h11.2q-.375-.425-1.612-.712T12 4m-6 6h5V7H6zm10.5 2H6h12zM13 10h5V7h-5zm-3.425 5.575Q10 15.15 10 14.5t-.425-1.075T8.5 13t-1.075.425T7 14.5t.425 1.075T8.5 16t1.075-.425m7 0Q17 15.15 17 14.5t-.425-1.075T15.5 13t-1.075.425T14 14.5t.425 1.075T15.5 16t1.075-.425M7.5 17h9q.65 0 1.075-.425T18 15.5V12H6v3.5q0 .65.425 1.075T7.5 17M12 5h5.65h-11.2z\"/>",
+     "height": 24,
+     "name": "train-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M4 11v-1c0-3.771 0-5.657 1.172-6.828S8.229 2 12 2s5.657 0 6.828 1.172S20 6.229 20 10v1c0 3.771 0 5.657-1.172 6.828S15.771 19 12 19s-5.657 0-6.828-1.172S4 14.771 4 11Z\"/><path stroke-linejoin=\"round\" d=\"M4 12s3.733 1 8 1s8-1 8-1\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m7 19l-2 3m12-3l2 3\"/><path stroke-linecap=\"round\" d=\"M4.5 16h2m11 0h2M5 5h14\"/></g>",
      "height": 24,
@@ -43589,12 +44735,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "train",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M4 15.5V6q0-1.325.688-2.113t1.812-1.2t2.563-.55T12 2q1.65 0 3.113.138t2.55.55t1.712 1.2T20 6v9.5q0 1.475-1.012 2.488T16.5 19l1.5 1.5v.5h-2l-2-2h-4l-2 2H6v-.5L7.5 19q-1.475 0-2.488-1.012T4 15.5M12 4q-2.65 0-3.875.313T6.45 5h11.2q-.375-.425-1.612-.712T12 4m-6 6h5V7H6zm10.5 2H6h12zM13 10h5V7h-5zm-3.425 5.575Q10 15.15 10 14.5t-.425-1.075T8.5 13t-1.075.425T7 14.5t.425 1.075T8.5 16t1.075-.425m7 0Q17 15.15 17 14.5t-.425-1.075T15.5 13t-1.075.425T14 14.5t.425 1.075T15.5 16t1.075-.425M7.5 17h9q.65 0 1.075-.425T18 15.5V12H6v3.5q0 .65.425 1.075T7.5 17M12 5h5.65h-11.2z\"/>",
-     "height": 24,
-     "name": "train-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M21 3H11a5.006 5.006 0 0 0-5 5v12a4.99 4.99 0 0 0 3.582 4.77L7.769 29h2.176l1.714-4h8.682l1.714 4h2.176l-1.813-4.23A4.99 4.99 0 0 0 26 20V8a5.006 5.006 0 0 0-5-5M11 5h10a2.995 2.995 0 0 1 2.816 2H8.184A2.995 2.995 0 0 1 11 5m13 14h-3v2h2.816A2.995 2.995 0 0 1 21 23H11a2.995 2.995 0 0 1-2.816-2H11v-2H8v-2h16Zm0-4H8V9h16Z\"/>",
@@ -43644,16 +44784,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "tram",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 2h9m5 0h-5m0 0l-2 3M8 20l-1 2m9-2l1 2\"/><path stroke-linejoin=\"round\" d=\"M5 13v-1c0-3.3 0-4.95 1.025-5.975S8.7 5 12 5s4.95 0 5.975 1.025S19 8.7 19 12v1c0 3.3 0 4.95-1.025 5.975S15.3 20 12 20s-4.95 0-5.975-1.025S5 16.3 5 13Z\"/><path stroke-linejoin=\"round\" d=\"M5 14s3.267 1 7 1s7-1 7-1\"/><path stroke-linecap=\"round\" d=\"M16.5 17h2m-13-9h13m-13 9h2\"/></g>",
-     "height": 24,
-     "name": "tram",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 17.5V8q0-2.425 2.125-3.175T11 4l.75-1.5H7V1h10v1.5h-3.25L13 4q2.975.075 4.988.813T20 8v9.5q0 1.475-1.012 2.488T16.5 21l1.5 1.5v.5h-2l-2-2h-4l-2 2H6v-.5L7.5 21q-1.475 0-2.488-1.012T4 17.5M16.5 14H6h12zm-3.437 3.563q.437-.438.437-1.063t-.437-1.062T12 15t-1.062.438T10.5 16.5t.438 1.063T12 18t1.063-.437M11.95 7h5.7H6.4zM6 12h12V9H6zm1.5 7h9q.65 0 1.075-.425T18 17.5V14H6v3.5q0 .65.425 1.075T7.5 19m4.45-13q-3.35 0-4.3.363T6.4 7h11.25q-.3-.35-1.3-.675T11.95 6\"/>",
      "height": 24,
      "name": "tram-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 2h9m5 0h-5m0 0l-2 3M8 20l-1 2m9-2l1 2\"/><path stroke-linejoin=\"round\" d=\"M5 13v-1c0-3.3 0-4.95 1.025-5.975S8.7 5 12 5s4.95 0 5.975 1.025S19 8.7 19 12v1c0 3.3 0 4.95-1.025 5.975S15.3 20 12 20s-4.95 0-5.975-1.025S5 16.3 5 13Z\"/><path stroke-linejoin=\"round\" d=\"M5 14s3.267 1 7 1s7-1 7-1\"/><path stroke-linecap=\"round\" d=\"M16.5 17h2m-13-9h13m-13 9h2\"/></g>",
+     "height": 24,
+     "name": "tram",
      "width": 24
     },
     "carbon": {
@@ -43684,8 +44824,44 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
+   "name": "transgender",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M14.475 13.975Q15.5 12.95 15.5 11.5t-1.025-2.475T12 8T9.525 9.025T8.5 11.5t1.025 2.475T12 15t2.475-1.025M11 23v-2H9v-2h2v-2.1q-1.95-.35-3.225-1.875T6.5 11.5q0-.825.238-1.625T7.45 8.4l-.65-.65l-1.4 1.4L4 7.75l1.4-1.425l-1.9-1.9V7h-2V1h6v2H4.925l1.9 1.9L8.25 3.5l1.4 1.4l-1.4 1.425l.65.65q.675-.5 1.475-.737T12 6t1.625.238t1.475.737L19.075 3H16.5V1h6v6h-2V4.425l-3.975 3.95q.475.7.725 1.488t.25 1.637q0 2-1.275 3.525T13 16.9V19h2v2h-2v2z\"/>",
+     "height": 24,
+     "name": "transgender-outline",
+     "width": 24
+    },
+    "carbon": {
+     "body": "<path fill=\"currentColor\" d=\"M22 2v2h4.586l-6.402 6.401a6.95 6.95 0 0 0-8.368 0L10.414 9L13 6.414L11.586 5L9 7.586L5.414 4H10V2H2v8h2V5.414L7.586 9L5 11.585L6.414 13L9 10.414l1.401 1.401A6.98 6.98 0 0 0 15 22.92V25h-4v2h4v3h2v-3h4v-2h-4v-2.08a6.98 6.98 0 0 0 4.598-11.104L28 5.414V10h2V2Zm-6 19a5 5 0 1 1 5-5a5.006 5.006 0 0 1-5 5\"/>",
+     "height": 32,
+     "name": "transgender",
+     "width": 32
+    },
+    "lucide": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 16v6m2-2h-4m8-18h4v4M2 2l7.17 7.17M2 5.355V2h3.357M22 2l-7.17 7.17M8 5L5 8\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/></g>",
+     "height": 24,
+     "name": "transgender",
+     "width": 24
+    },
+    "boxicons": {
+     "body": "<path fill=\"currentColor\" d=\"m18.29 4.29l-4.27 4.27c-.59-.35-1.28-.57-2.02-.57s-1.42.22-2.02.57L8.41 6.99L9.7 5.7L8.29 4.29L7 5.58L5.71 4.29L8 2H2v6l2.29-2.29L5.58 7L4.29 8.29L5.7 9.7l1.29-1.29l1.57 1.57c-.35.59-.57 1.28-.57 2.02c0 1.86 1.28 3.41 3 3.86V18h-2v2h2v2h2v-2h2v-2h-2v-2.14c1.72-.45 3-2 3-3.86c0-.74-.22-1.42-.57-2.02l4.27-4.27L21.98 8V2h-6l2.29 2.29ZM12 14c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2\"/>",
+     "height": 24,
+     "name": "transgender",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
    "name": "translate",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m11.9 22l4.55-12h2.1l4.55 12H21l-1.075-3.05h-4.85L14 22zM4 19l-1.4-1.4l5.05-5.05q-.875-.875-1.588-2T4.75 8h2.1q.5.975 1 1.7t1.2 1.45q.825-.825 1.713-2.313T12.1 6H1V4h7V2h2v2h7v2h-2.9q-.525 1.8-1.575 3.7t-2.075 2.9l2.4 2.45l-.75 2.05l-3.05-3.125zm11.7-1.8h3.6l-1.8-5.1z\"/>",
+     "height": 24,
+     "name": "translate-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 5.828h2.7m3.3 0H9.5m-1.8 0h1.8m-1.8 0V5m1.8.828c-.316 1.131-.98 2.201-1.736 3.141M5.836 11a19 19 0 0 0 1.928-2.03m0 0c-.385-.453-.925-1.184-1.08-1.515m1.08 1.514l1.157 1.203M13.5 19l.833-2m4.167 2l-.833-2m-3.334 0L16 13l1.667 4m-3.334 0h3.334\"/><path stroke-linecap=\"round\" d=\"M14 10V8c0-2.828 0-4.243-.879-5.121C12.243 2 10.828 2 8 2s-4.243 0-5.121.879C2 3.757 2 5.172 2 8s0 4.243.879 5.121C3.757 14 5.172 14 8 14h2\"/><path d=\"M10 16c0-2.828 0-4.243.879-5.121C11.757 10 13.172 10 16 10s4.243 0 5.121.879C22 11.757 22 13.172 22 16s0 4.243-.879 5.121C20.243 22 18.828 22 16 22s-4.243 0-5.121-.879C10 20.243 10 18.828 10 16Z\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 16.5c0 1.404 0 2.107.337 2.611a2 2 0 0 0 .552.552C5.393 20 6.096 20 7.5 20M20 7.5c0-1.404 0-2.107-.337-2.611a2 2 0 0 0-.552-.552C18.607 4 17.904 4 16.5 4\"/></g>",
      "height": 24,
@@ -43974,6 +45150,12 @@ export const deck: Deck = {
      "name": "trending-down",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M16 18v-2h2.6l-5.2-5.15l-4 4L2 7.4L3.4 6l6 6l4-4l6.6 6.6V12h2v6z\"/>",
+     "height": 24,
+     "name": "trending-down-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M29 35h12V23\"/><path d=\"m6 13l10.339 12.5l9.846-6L41 35\"/></g>",
      "height": 48,
@@ -44008,6 +45190,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m3 17l6-6l4 4l8-8\"/><path d=\"M14 7h7v7\"/></g>",
      "height": 24,
      "name": "trending-up",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M3.4 18L2 16.6l7.4-7.45l4 4L18.6 8H16V6h6v6h-2V9.4L13.4 16l-4-4z\"/>",
+     "height": 24,
+     "name": "trending-up-outline",
      "width": 24
     },
     "icon-park-outline": {
@@ -44124,16 +45312,16 @@ export const deck: Deck = {
      "name": "trolley",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M2 2h1.301c1.186 0 1.779 0 2.18.371c.402.372.48.992.637 2.233l1.128 8.925c.209 1.654.313 2.48.849 2.976c.536.495 1.326.495 2.907.495H21\"/><circle cx=\"10.5\" cy=\"19.5\" r=\"1.5\"/><circle cx=\"17.5\" cy=\"19.5\" r=\"1.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M20 14h-6c-.943 0-1.414 0-1.707-.366S12 12.678 12 11.5s0-1.768.293-2.134S13.057 9 14 9h6c.943 0 1.414 0 1.707.366S22 10.322 22 11.5s0 1.768-.293 2.134S20.943 14 20 14m-2-5h-6c-.943 0-1.414 0-1.707-.366S10 7.679 10 6.5s0-1.768.293-2.134S11.057 4 12 4h6c.943 0 1.414 0 1.707.366S20 5.321 20 6.5s0 1.768-.293 2.134S18.943 9 18 9\"/></g>",
-     "height": 24,
-     "name": "trolley-01",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 17V5H2V3h4v12h15v2zm2 5q-.825 0-1.412-.587T4 20t.588-1.412T6 18t1.413.588T8 20t-.587 1.413T6 22m1-8V8h6v6zm2-2h2v-2H9zm5 2V8h6v6zm2-2h2v-2h-2zm1.588 9.413Q17 20.825 17 20t.588-1.412T19 18t1.413.588T21 20t-.587 1.413T19 22t-1.412-.587M9 12h2zm7 0h2z\"/>",
      "height": 24,
      "name": "trolley-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" d=\"M2 2h1.301c1.186 0 1.779 0 2.18.371c.402.372.48.992.637 2.233l1.128 8.925c.209 1.654.313 2.48.849 2.976c.536.495 1.326.495 2.907.495H21\"/><circle cx=\"10.5\" cy=\"19.5\" r=\"1.5\"/><circle cx=\"17.5\" cy=\"19.5\" r=\"1.5\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M20 14h-6c-.943 0-1.414 0-1.707-.366S12 12.678 12 11.5s0-1.768.293-2.134S13.057 9 14 9h6c.943 0 1.414 0 1.707.366S22 10.322 22 11.5s0 1.768-.293 2.134S20.943 14 20 14m-2-5h-6c-.943 0-1.414 0-1.707-.366S10 7.679 10 6.5s0-1.768.293-2.134S11.057 4 12 4h6c.943 0 1.414 0 1.707.366S20 5.321 20 6.5s0 1.768-.293 2.134S18.943 9 18 9\"/></g>",
+     "height": 24,
+     "name": "trolley-01",
      "width": 24
     },
     "ph": {
@@ -44154,17 +45342,17 @@ export const deck: Deck = {
      "name": "trophy",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 30c6.627 0 12-5.53 12-12.353V4H12v13.647C12 24.47 17.373 30 24 30Z\"/><path stroke-linecap=\"round\" d=\"M12 21V11H4c0 6.667 4 10 8 10m24 0V11h8c0 6.667-4 10-8 10\" clip-rule=\"evenodd\"/><path stroke-linecap=\"round\" d=\"M24 32v4\"/><path d=\"m15 42l3.69-6h10.353L33 42z\"/></g>",
-     "height": 48,
-     "name": "trophy",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M7 21v-2h4v-3.1q-1.225-.275-2.187-1.037T7.4 12.95q-1.875-.225-3.137-1.637T3 8V7q0-.825.588-1.412T5 5h2V3h10v2h2q.825 0 1.413.588T21 7v1q0 1.9-1.263 3.313T16.6 12.95q-.45 1.15-1.412 1.913T13 15.9V19h4v2zm0-10.2V7H5v1q0 .95.55 1.713T7 10.8m7.125 2.325Q15 12.25 15 11V5H9v6q0 1.25.875 2.125T12 14t2.125-.875M17 10.8q.9-.325 1.45-1.088T19 8V7h-2zm-5-1.3\"/>",
      "height": 24,
      "name": "trophy-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 30c6.627 0 12-5.53 12-12.353V4H12v13.647C12 24.47 17.373 30 24 30Z\"/><path stroke-linecap=\"round\" d=\"M12 21V11H4c0 6.667 4 10 8 10m24 0V11h8c0 6.667-4 10-8 10\" clip-rule=\"evenodd\"/><path stroke-linecap=\"round\" d=\"M24 32v4\"/><path d=\"m15 42l3.69-6h10.353L33 42z\"/></g>",
+     "height": 48,
+     "name": "trophy",
+     "width": 48
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M15.254 2a2.25 2.25 0 0 1 2.236 2h1.268a1.75 1.75 0 0 1 1.744 1.606l.006.144v3a3.25 3.25 0 0 1-3.066 3.245l-.21.006a5.76 5.76 0 0 1-4.731 3.95V17.5h1.753a3.25 3.25 0 0 1 3.244 3.066l.006.184v.5a.75.75 0 0 1-.649.743l-.101.007H6.75a.75.75 0 0 1-.744-.648L6 21.25v-.5a3.25 3.25 0 0 1 3.065-3.245l.185-.005H11v-1.549a5.76 5.76 0 0 1-4.729-3.95L6.246 12a3.25 3.25 0 0 1-3.25-3.25v-3c0-.966.784-1.75 1.75-1.75h1.268a2.25 2.25 0 0 1 2.237-2zm-1 17H9.25a1.75 1.75 0 0 0-1.705 1.352l-.028.148h8.468a1.75 1.75 0 0 0-1.578-1.493zm1-15.5H8.25a.75.75 0 0 0-.75.75v5.999a4.252 4.252 0 0 0 8.503 0V4.25a.75.75 0 0 0-.75-.75m3.504 2h-1.254v4.983A1.75 1.75 0 0 0 19 8.904l.007-.154v-3a.25.25 0 0 0-.193-.243zM6 5.5H4.746a.25.25 0 0 0-.25.25v3a1.75 1.75 0 0 0 1.505 1.733z\"/>",
@@ -44179,7 +45367,7 @@ export const deck: Deck = {
      "width": 32
     },
     "lucide": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978m7-7.318v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978M18 9h1.5a1 1 0 0 0 0-5H18M4 22h16\"/><path d=\"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm0 0H4.5a1 1 0 0 1 0-5H6\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 14.66V17a1 1 0 0 1-1 1a2 2 0 0 0-2 2v2m7-7.34V17a1 1 0 0 0 1 1a2 2 0 0 1 2 2v2m.916-12H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3M4 22h16\"/><path d=\"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z\"/><path d=\"M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3\"/></g>",
      "height": 24,
      "name": "trophy",
      "width": 24
@@ -44316,16 +45504,16 @@ export const deck: Deck = {
    "collisions": [],
    "name": "tsunami",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M7.066 12.002s0 3 2.934 4\"/><path d=\"M22 21.376a4.92 4.92 0 0 1-4.74 0a2.99 2.99 0 0 0-2.89 0s-.021 0-.021.018c-1.446.811-3.295.811-4.719 0c-.892-.498-2.019-.498-2.89 0m0-.018a4.92 4.92 0 0 1-4.74 0m9-14.374a9.5 9.5 0 0 0 9.5 9.5H22\"/><path d=\"M6.888 6.927c.372.216 1.092.756 2.292.54c1.44-.444 2.62-.816 3.54-.264c.9.54 1.5 1.02 1.86.78c.178.035.476-.647.414-1.62c-.042-.669-.273-1.475-.786-2.28c-.3-.42-.493-.568-.528-.6c-1.944-1.826-5.081-2.125-7.86 0c-3.12 2.52-3.54 5.7-3.72 7.26c-.3 3 .18 6.42.66 8.28\"/></g>",
-     "height": 24,
-     "name": "tsunami",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M2 21v-2q.95 0 1.7-.363t1.625-1.012q.75.625 1.638.988t1.712.362t1.725-.35t1.625-1q.8.7 1.65 1.025t1.7.325q.825 0 1.613-.325t1.737-1.025q.975.75 1.725 1.063T22 19v2q-.875 0-1.687-.238t-1.588-.687q-.8.5-1.662.713T15.375 21t-1.687-.213t-1.663-.712q-.725.475-1.6.7T8.675 21q-.85 0-1.7-.225t-1.65-.7q-.775.45-1.612.688T2 21m0-4.5v-2q0-2.425.938-4.525T5.5 6.325t3.813-2.437T14 3q.825 0 1.638.088t1.462.237q-.525.8-.812 1.688T16 6.675q0 1.375.975 2.35t2.35.975H22v2h-2.675q-2.225 0-3.775-1.55T14 6.675q0-.35.05-.738t.15-.762q-1.85.45-3.025 1.912T10 10.5q0 .9.288 1.713t.812 1.537q.2-.125.425-.288t.475-.337q.725.65 1.675 1t1.7.35t1.675-.363t1.675-.987q.8.6 1.588.987T22 14.5v2q-.875 0-1.687-.238t-1.588-.687q-.8.5-1.625.713t-1.725.212t-1.8-.25t-1.55-.675q-.775.475-1.625.688t-1.725.237t-1.725-.225t-1.625-.7q-.775.45-1.612.688T2 16.5m6.625-2.025h.25q.125 0 .25-.025q-.55-.875-.837-1.875T8 10.5q0-2.025.925-3.662T11.5 4.15v1.1q-1.55.4-2.863 1.213t-2.3 1.962t-1.587 2.563T4.025 14q.375-.225.65-.4t.65-.475Q6.25 13.8 7 14.138t1.625.337m-1.875-4.2\"/>",
      "height": 24,
      "name": "tsunami-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M7.066 12.002s0 3 2.934 4\"/><path d=\"M22 21.376a4.92 4.92 0 0 1-4.74 0a2.99 2.99 0 0 0-2.89 0s-.021 0-.021.018c-1.446.811-3.295.811-4.719 0c-.892-.498-2.019-.498-2.89 0m0-.018a4.92 4.92 0 0 1-4.74 0m9-14.374a9.5 9.5 0 0 0 9.5 9.5H22\"/><path d=\"M6.888 6.927c.372.216 1.092.756 2.292.54c1.44-.444 2.62-.816 3.54-.264c.9.54 1.5 1.02 1.86.78c.178.035.476-.647.414-1.62c-.042-.669-.273-1.475-.786-2.28c-.3-.42-.493-.568-.528-.6c-1.944-1.826-5.081-2.125-7.86 0c-3.12 2.52-3.54 5.7-3.72 7.26c-.3 3 .18 6.42.66 8.28\"/></g>",
+     "height": 24,
+     "name": "tsunami",
      "width": 24
     },
     "carbon": {
@@ -44376,6 +45564,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "tv",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M8 21v-2H4q-.825 0-1.412-.587T2 17V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v12q0 .825-.587 1.413T20 19h-4v2zm-4-4h16V5H4zm0 0V5z\"/>",
+     "height": 24,
+     "name": "tv-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path d=\"M2 14c0-3.771 0-5.657 1.172-6.828S6.229 6 10 6h4c3.771 0 5.657 0 6.828 1.172S22 10.229 22 14s0 5.657-1.172 6.828S17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172S2 17.771 2 14Z\"/><path stroke-linejoin=\"round\" d=\"m9 3l3 3l4-4\"/></g>",
      "height": 24,
@@ -44387,12 +45581,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "tv",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M8 21v-2H4q-.825 0-1.412-.587T2 17V5q0-.825.588-1.412T4 3h16q.825 0 1.413.588T22 5v12q0 .825-.587 1.413T20 19h-4v2zm-4-4h16V5H4zm0 0V5z\"/>",
-     "height": 24,
-     "name": "tv-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M4.75 4A2.75 2.75 0 0 0 2 6.75v8.5A2.75 2.75 0 0 0 4.75 18h14.5A2.75 2.75 0 0 0 22 15.25v-8.5A2.75 2.75 0 0 0 19.25 4zM3.5 6.75c0-.69.56-1.25 1.25-1.25h14.5c.69 0 1.25.56 1.25 1.25v8.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25zM5.75 19.5a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5z\"/>",
@@ -44556,6 +45744,12 @@ export const deck: Deck = {
      "name": "umbrella",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11.438 21.838q-.263-.163-.388-.513L6 6.075l3.5.85l1.5-1.15V3.4q0-1 .725-1.7T13.5 1t1.775.7T16 3.4V4h-2v-.6q0-.2-.15-.338t-.35-.137t-.35.137T13 3.4v2.375l1.5 1.15l3.5-.85L12.95 21.3q-.125.35-.387.525T12 22t-.562-.162M13 14.8l1.95-5.95l-.9.225L13 8.3zm-2 0V8.3l-1.05.8l-.925-.25z\"/>",
+     "height": 24,
+     "name": "umbrella-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M12 3.5V2m0 1.5c-.94 0-4.472 3.793-5.028 8.704M12 3.5c.94 0 4.472 3.793 5.028 8.704M12 3.5c4.937 0 9.055 3.436 10 8c-1.388 1.2-3.893.97-4.972.704M12 3.5c-4.937 0-9.055 3.436-10 8c1.388 1.2 3.893.97 4.972.704m0 0A10.3 10.3 0 0 0 12 13.5a10.3 10.3 0 0 0 5.028-1.296\"/><path d=\"M12 13.5v7a1.5 1.5 0 0 1-3 0V20\"/></g>",
      "height": 24,
@@ -44567,12 +45761,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "umbrella",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M12 21.5q-3.325 0-5.663-2.3T4 13.6q0-1.575.613-3.012T6.35 8.05l4.25-4.175q.3-.275.663-.425T12 3.3t.738.15t.662.425l4.25 4.175q1.125 1.1 1.738 2.538T20 13.6q0 3.3-2.337 5.6T12 21.5\"/>",
-     "height": 24,
-     "name": "umbrella-outline",
-     "width": 24
     },
     "fluent": {
      "body": "<path fill=\"currentColor\" d=\"M10.248 10.913c.473-.4 1.077-.734 1.752-.734s1.28.335 1.752.733a4.6 4.6 0 0 1 .675.71l.036.05a.748.748 0 0 0 1.241-.001a4.6 4.6 0 0 1 .71-.758c.473-.4 1.077-.734 1.753-.734s1.279.335 1.751.733c.231.195.414.391.538.538l.173.22A.75.75 0 0 0 22 11.25C22 6.575 17.953 2 12 2S2 6.575 2 11.25a.75.75 0 0 0 1.37.42l.174-.22c.124-.147.307-.343.538-.537c.472-.4 1.076-.734 1.751-.734c.676 0 1.28.335 1.752.733a4.6 4.6 0 0 1 .71.759a.752.752 0 0 0 1.242 0l.036-.05q.045-.06.138-.171a4.6 4.6 0 0 1 .537-.537M3.793 9.278C4.713 6.185 7.743 3.5 12 3.5s7.287 2.685 8.207 5.778c-.55-.332-1.24-.6-2.04-.6c-1.175 0-2.113.576-2.72 1.088a6 6 0 0 0-.364.335a6 6 0 0 0-.364-.335C14.113 9.254 13.175 8.68 12 8.68s-2.112.575-2.72 1.087a6 6 0 0 0-.363.335a6 6 0 0 0-.365-.335C7.946 9.254 7.008 8.68 5.833 8.68c-.8 0-1.49.267-2.04.599m8.207 1.9c-.236 0-.49.083-.75.24V19a1.5 1.5 0 1 1-3 0v-.25a.75.75 0 0 0-1.5 0V19a3 3 0 1 0 6 0v-7.582c-.26-.157-.514-.24-.75-.24\"/>",
@@ -44694,6 +45882,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "undo",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 19v-2h7.1q1.575 0 2.738-1T18 13.5T16.838 11T14.1 10H7.8l2.6 2.6L9 14L4 9l5-5l1.4 1.4L7.8 8h6.3q2.425 0 4.163 1.575T20 13.5t-1.737 3.925T14.1 19z\"/>",
+     "height": 24,
+     "name": "undo-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3 12a9 9 0 1 0 1.383-4.797m-1.09-4.202l.173 2.054c.124 1.479.186 2.218.668 2.634s1.193.343 2.615.197l2.044-.21\"/>",
      "height": 24,
@@ -44728,6 +45922,36 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M4.5 8H15q0 0 0 0s5 0 5 4.706C20 18 15 18 15 18H6.286\"/><path d=\"M7.5 11.5L4 8l3.5-3.5\"/></g>",
      "height": 24,
      "name": "undo",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "ungroup",
+   "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m8.7 16.7l-1.4-1.4l4.3-4.3H8V9h7v7h-2v-3.6zM19 12V5h-7V3h9v9zM5 21q-.825 0-1.412-.587T3 19V3h2v16h16v2z\"/>",
+     "height": 24,
+     "name": "ungroup-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M10.5 10h-3c-.93 0-1.396 0-1.773-.122a2.5 2.5 0 0 1-1.605-1.605C4 7.896 4 7.43 4 6.5s0-1.396.122-1.773a2.5 2.5 0 0 1 1.605-1.605C6.104 3 6.57 3 7.5 3h3c.93 0 1.396 0 1.773.122a2.5 2.5 0 0 1 1.605 1.605C14 5.104 14 5.57 14 6.5s0 1.396-.122 1.773a2.5 2.5 0 0 1-1.605 1.605C11.896 10 11.43 10 10.5 10m6 11h-3c-.93 0-1.396 0-1.773-.122a2.5 2.5 0 0 1-1.605-1.605C10 18.896 10 18.43 10 17.5s0-1.396.122-1.773a2.5 2.5 0 0 1 1.605-1.605C12.105 14 12.57 14 13.5 14h3c.93 0 1.396 0 1.773.122a2.5 2.5 0 0 1 1.605 1.605c.122.377.122.842.122 1.773s0 1.396-.122 1.773a2.5 2.5 0 0 1-1.605 1.605C17.896 21 17.43 21 16.5 21\"/>",
+     "height": 24,
+     "name": "ungroup",
+     "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M11.273 4H4v7.273h7.273zM44 36.727h-7.273V44H44zM11.273 24H4v7.273h7.273zM24 36.727h-7.273V44H24zM31.273 4H24v7.273h7.273zM44 16.727h-7.273V24H44z\"/><path stroke-linecap=\"round\" d=\"M11.273 7.636H24m0 32.728h12.727M11.273 27.637h16.364V11.273m1.191 9.09h7.899M20.363 36.727v-9.099zM7.637 11.273V24m32.726 0v12.727\"/></g>",
+     "height": 48,
+     "name": "ungroup",
+     "width": 48
+    },
+    "lucide": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"10\" height=\"7\" x=\"11\" y=\"14\" rx=\"2\"/><rect width=\"10\" height=\"7\" x=\"3\" y=\"3\" rx=\"2\"/></g>",
+     "height": 24,
+     "name": "ungroup",
      "width": 24
     }
    }
@@ -44856,6 +46080,12 @@ export const deck: Deck = {
      "name": "upload",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M11 16V7.85l-2.6 2.6L7 9l5-5l5 5l-1.4 1.45l-2.6-2.6V16zm-5 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z\"/>",
+     "height": 24,
+     "name": "upload-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M3 17c0 .93 0 1.395.102 1.776a3 3 0 0 0 2.121 2.122C5.605 21 6.07 21 7 21h10c.93 0 1.395 0 1.776-.102a3 3 0 0 0 2.122-2.122C21 18.396 21 17.93 21 17m-4.5-9.5S13.186 3 12 3S7.5 7.5 7.5 7.5M12 4v12\"/>",
      "height": 24,
@@ -44926,6 +46156,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M10 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2-2V5.5M7 10v3l5 3m0-1.5l5-2V10m-1 0h2V8h-2z\"/><path d=\"M6 9a1 1 0 1 0 2 0a1 1 0 1 0-2 0m4-3.5h4L12 3z\"/></g>",
      "height": 24,
      "name": "usb",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10.588 21.413Q10 20.825 10 20q0-.525.275-.975T11 18.3V16H8q-.825 0-1.412-.587T6 14v-2.3q-.45-.225-.725-.675T5 10q0-.825.588-1.413T7 8t1.413.588T9 10q0 .575-.275 1T8 11.7V14h3V6H9l3-4l3 4h-2v8h3v-2h-1V8h4v4h-1v2q0 .825-.587 1.413T16 16h-3v2.3q.475.25.738.7T14 20q0 .825-.587 1.413T12 22t-1.412-.587\"/>",
+     "height": 24,
+     "name": "usb-outline",
      "width": 24
     },
     "hugeicons": {
@@ -45007,7 +46243,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M17 8.5a5 5 0 1 0-10 0a5 5 0 0 0 10 0\"/><path d=\"M19 20.5a7 7 0 1 0-14 0\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M20 21a7.53 7.53 0 0 0-7.005-6.934L12 14q-.531.015-1 .038c-3.7.181-6.716 3.268-7 6.962\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></g>",
      "height": 24,
      "name": "user",
      "width": 24
@@ -45079,7 +46315,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15 8A5 5 0 1 0 5 8a5 5 0 0 0 10 0\"/><path d=\"M3 20a7 7 0 0 1 12-4.899M13 18.5s1.348.507 2 2.5c0 0 3.177-5 6-6\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M3 21c.284-3.694 3.3-6.78 7-6.962q.469-.023 1-.038l.995.066a7.5 7.5 0 0 1 3.005.849\"/><circle cx=\"11\" cy=\"7\" r=\"4\"/><path d=\"M14 19.333s.875 0 1.75 1.667c0 0 2.78-4.167 5.25-5\"/></g>",
      "height": 24,
      "name": "user-check-01",
      "width": 24
@@ -45121,7 +46357,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15.5 10.5a3.5 3.5 0 1 0-7 0a3.5 3.5 0 0 0 7 0\"/><path d=\"M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10\"/><path d=\"M18 20a6 6 0 0 0-12 0\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M18.498 19.151c-1.16-1.75-3.203-2.95-5.567-3.094L11.998 16q-.498.013-.936.032c-2.345.106-4.396 1.348-5.562 3.12M14.996 10a3 3 0 1 1-6 0a3 3 0 0 1 6 0\"/><path d=\"M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10\"/></g>",
      "height": 24,
      "name": "user-circle",
      "width": 24
@@ -45175,7 +46411,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15 8.5a5 5 0 1 0-10 0a5 5 0 0 0 10 0M14 19h7\"/><path d=\"M3 20.5a7 7 0 0 1 11-5.745\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M21 19h-6\"/><circle cx=\"11\" cy=\"7\" r=\"4\"/><path d=\"M3 21c.284-3.694 3.3-6.78 7-6.962q.469-.023 1-.038l.995.066a7.5 7.5 0 0 1 3.005.849\"/></g>",
      "height": 24,
      "name": "user-minus-01",
      "width": 24
@@ -45283,7 +46519,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15 7.5a5 5 0 1 0-10 0a5 5 0 0 0 10 0m6 14L19.5 20m.5-2.5a3 3 0 1 0-6 0a3 3 0 0 0 6 0\"/><path d=\"M3 19.5a7 7 0 0 1 10-6.326\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M11.5 13.5q-.531.015-1 .038c-3.7.181-6.716 3.268-7 6.962m17 1L19 20m.5-2.5a3 3 0 1 0-6 0a3 3 0 0 0 6 0\"/><circle cx=\"11.5\" cy=\"6.5\" r=\"4\"/></g>",
      "height": 24,
      "name": "user-search-01",
      "width": 24
@@ -45325,7 +46561,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M11.5 2.5h1c4.243 0 6.364 0 7.682 1.318S21.5 7.258 21.5 11.5v1c0 4.243 0 6.364-1.318 7.682S16.742 21.5 12.5 21.5h-1c-4.243 0-6.364 0-7.682-1.318S2.5 16.742 2.5 12.5v-1c0-4.243 0-6.364 1.318-7.682S7.258 2.5 11.5 2.5\"/><path d=\"M12 7.395a3.5 3.5 0 1 1 0 7a3.5 3.5 0 0 1 0-7\"/><path d=\"M18.982 20.895a7 7 0 0 0-13.965 0\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M4.691 20.707c.821-2.605 3.414-4.527 6.313-4.67q.467-.021.999-.037l.995.066c2.926.195 5.496 2.05 6.313 4.64\"/><path d=\"M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12\"/><path d=\"M14.996 10a3 3 0 1 1-6 0a3 3 0 0 1 6 0\"/></g>",
      "height": 24,
      "name": "user-square",
      "width": 24
@@ -45373,7 +46609,7 @@ export const deck: Deck = {
      "width": 24
     },
     "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M15 8A5 5 0 1 0 5 8a5 5 0 0 0 10 0\"/><path d=\"M3 20a7 7 0 0 1 10.5-6.063m4.605.569l.616 1.242a.76.76 0 0 0 .497.37l1.116.187c.714.12.882.642.367 1.157l-.867.875a.77.77 0 0 0-.183.64l.249 1.082c.196.858-.255 1.19-1.008.741l-1.046-.624a.75.75 0 0 0-.693 0l-1.047.624c-.749.448-1.204.113-1.008-.74l.249-1.084a.77.77 0 0 0-.182-.639l-.868-.875c-.51-.515-.346-1.037.368-1.157l1.116-.187a.76.76 0 0 0 .493-.37l.616-1.242c.336-.675.882-.675 1.215 0\"/></g>",
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M11.995 13.566L11 13.5q-.532.015-1 .038c-3.7.181-6.716 3.268-7 6.962\"/><circle cx=\"11\" cy=\"6.5\" r=\"4\"/><path d=\"m17.898 15.006l.66 1.241c.09.173.33.34.532.371l1.196.187c.765.12.945.642.394 1.157l-.93.875a.74.74 0 0 0-.195.64l.266 1.082c.21.858-.273 1.19-1.08.741l-1.12-.624a.86.86 0 0 0-.743 0l-1.121.624c-.803.448-1.29.113-1.08-.74l.266-1.084a.74.74 0 0 0-.195-.639l-.93-.875c-.547-.515-.37-1.037.394-1.157l1.196-.187a.8.8 0 0 0 .529-.37l.66-1.243c.36-.674.945-.674 1.3 0\"/></g>",
      "height": 24,
      "name": "user-star-01",
      "width": 24
@@ -45882,6 +47118,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "voicemail",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6.5 16q-1.875 0-3.187-1.312T2 11.5t1.313-3.187T6.5 7t3.188 1.313T11 11.5q0 .675-.2 1.3t-.55 1.2h3.5q-.35-.575-.55-1.2t-.2-1.3q0-1.875 1.313-3.187T17.5 7t3.188 1.313T22 11.5t-1.312 3.188T17.5 16zm0-2q1.05 0 1.775-.725T9 11.5t-.725-1.775T6.5 9t-1.775.725T4 11.5t.725 1.775T6.5 14m11 0q1.05 0 1.775-.725T20 11.5t-.725-1.775T17.5 9t-1.775.725T15 11.5t.725 1.775T17.5 14\"/>",
+     "height": 24,
+     "name": "voicemail-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M11 31a7 7 0 1 0 0-14a7 7 0 0 0 0 14Zm26 0a7 7 0 1 0 0-14a7 7 0 0 0 0 14Z\"/><path stroke-linecap=\"round\" d=\"M12 31h24\"/></g>",
      "height": 48,
@@ -46020,17 +47262,17 @@ export const deck: Deck = {
    "collisions": [],
    "name": "volume-down",
    "variants": {
-    "icon-park-outline": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z\"/><path stroke-linecap=\"round\" d=\"M32 24h12\"/></g>",
-     "height": 48,
-     "name": "volume-down",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M5 15V9h4l5-5v16l-5-5zm11 1V7.95q1.125.525 1.813 1.625T18.5 12t-.687 2.4T16 16m-4-7.15L9.85 11H7v2h2.85L12 15.15zM9.5 12\"/>",
      "height": 24,
      "name": "volume-down-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M24 6v36c-7 0-12.201-9.16-12.201-9.16H6a2 2 0 0 1-2-2V17.01a2 2 0 0 1 2-2h5.799S17 6 24 6Z\"/><path stroke-linecap=\"round\" d=\"M32 24h12\"/></g>",
+     "height": 48,
+     "name": "volume-down",
+     "width": 48
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M25.1 10.66L23.58 12a6 6 0 0 1-.18 7.94l1.47 1.36a8 8 0 0 0 .23-10.59ZM20 30a1 1 0 0 1-.71-.3L11.67 22H5a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h6.67l7.62-7.7a1 1 0 0 1 1.41 0a1 1 0 0 1 .3.7v26a1 1 0 0 1-1 1M6 20h6a1.17 1.17 0 0 1 .79.3L19 26.57V5.43l-6.21 6.27a1.17 1.17 0 0 1-.79.3H6Z\"/>",
@@ -46062,6 +47304,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "volume-mute",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 15V9h4l5-5v16l-5-5zm2-2h2.85L14 15.15v-6.3L11.85 11H9zm2.5-1\"/>",
+     "height": 24,
+     "name": "volume-mute-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M18 14.814V9.186c0-3.145 0-4.717-.926-5.109c-.926-.391-2.016.72-4.195 2.945c-1.13 1.152-1.773 1.407-3.379 1.407c-1.112 0-2.473-.148-3.163.907C6 9.85 6 10.566 6 12c0 1.433 0 2.15.337 2.664c.69 1.055 2.05.907 3.163.907c1.606 0 2.25.255 3.379 1.407c2.18 2.224 3.27 3.336 4.195 2.945c.926-.392.926-1.964.926-5.11\"/>",
      "height": 24,
@@ -46073,12 +47321,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "volume-mute",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M7 15V9h4l5-5v16l-5-5zm2-2h2.85L14 15.15v-6.3L11.85 11H9zm2.5-1\"/>",
-     "height": 24,
-     "name": "volume-mute-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M31 12.41L29.59 11L26 14.59L22.41 11L21 12.41L24.59 16L21 19.59L22.41 21L26 17.41L29.59 21L31 19.59L27.41 16zM18 30a1 1 0 0 1-.71-.3L9.67 22H3a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h6.67l7.62-7.7a1 1 0 0 1 1.41 0a1 1 0 0 1 .3.7v26a1 1 0 0 1-1 1M4 20h6a1.17 1.17 0 0 1 .79.3L17 26.57V5.43l-6.21 6.27a1.17 1.17 0 0 1-.79.3H4Z\"/>",
@@ -46128,16 +47370,16 @@ export const deck: Deck = {
      "name": "volume-off",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M22 22L2 2m15 8c.63.767 1 1.705 1 2.72c0 .444-.071.873-.204 1.28M20 8c1.25 1.23 2 2.795 2 4.5c0 1.416-.517 2.737-1.41 3.848M14 14c0 3.145 0 5.531-.926 5.923c-.926.391-2.016-.72-4.195-2.945c-1.13-1.152-1.773-1.407-3.379-1.407c-1.112 0-2.473.148-3.163-.907C2 14.15 2 13.434 2 12c0-1.433 0-2.15.337-2.664c.69-1.055 2.05-.907 3.163-.907c1.107 0 1.857.01 2.46-.469M14 9.5c0-3.145.026-5.031-.9-5.423c-.77-.326-1.568.39-3.1 1.923\"/>",
-     "height": 24,
-     "name": "volume-off",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m19.8 22.6l-3.025-3.025q-.625.4-1.325.688t-1.45.462v-2.05q.35-.125.688-.25t.637-.3L12 14.8V20l-5-5H3V9h3.2L1.4 4.2l1.4-1.4l18.4 18.4zm-.2-5.8l-1.45-1.45q.425-.775.638-1.625t.212-1.75q0-2.35-1.375-4.2T14 5.275v-2.05q3.1.7 5.05 3.138T21 11.975q0 1.325-.363 2.55T19.6 16.8m-3.35-3.35L14 11.2V7.95q1.175.55 1.838 1.65T16.5 12q0 .375-.062.738t-.188.712M12 9.2L9.4 6.6L12 4zm-2 5.95V12.8L8.2 11H5v2h2.85zm-.9-3.25\"/>",
      "height": 24,
      "name": "volume-off-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M22 22L2 2m15 8c.63.767 1 1.705 1 2.72c0 .444-.071.873-.204 1.28M20 8c1.25 1.23 2 2.795 2 4.5c0 1.416-.517 2.737-1.41 3.848M14 14c0 3.145 0 5.531-.926 5.923c-.926.391-2.016-.72-4.195-2.945c-1.13-1.152-1.773-1.407-3.379-1.407c-1.112 0-2.473.148-3.163-.907C2 14.15 2 13.434 2 12c0-1.433 0-2.15.337-2.664c.69-1.055 2.05-.907 3.163-.907c1.107 0 1.857.01 2.46-.469M14 9.5c0-3.145.026-5.031-.9-5.423c-.77-.326-1.568.39-3.1 1.923\"/>",
+     "height": 24,
+     "name": "volume-off",
      "width": 24
     },
     "lucide": {
@@ -46170,6 +47412,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "volume-up",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M14 20.725v-2.05q2.25-.65 3.625-2.5t1.375-4.2t-1.375-4.2T14 5.275v-2.05q3.1.7 5.05 3.138T21 11.975t-1.95 5.613T14 20.725M3 15V9h4l5-5v16l-5-5zm11 1V7.95q1.175.55 1.838 1.65T16.5 12q0 1.275-.663 2.363T14 16m-4-7.15L7.85 11H5v2h2.85L10 15.15zM7.5 12\"/>",
+     "height": 24,
+     "name": "volume-up-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"><path stroke-linejoin=\"round\" d=\"M14 14.814V9.186c0-3.145 0-4.717-.925-5.109c-.926-.391-2.015.72-4.193 2.945c-1.128 1.152-1.771 1.407-3.376 1.407c-1.403 0-2.105 0-2.61.344C1.85 9.487 2.01 10.882 2.01 12s-.159 2.513.888 3.227c.504.344 1.206.344 2.609.344c1.605 0 2.248.255 3.376 1.407c2.178 2.224 3.267 3.336 4.193 2.945c.925-.392.925-1.964.925-5.11\"/><path d=\"M17 12h5m-2.5 2.5v-5\"/></g>",
      "height": 24,
@@ -46181,12 +47429,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "volume-up",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M14 20.725v-2.05q2.25-.65 3.625-2.5t1.375-4.2t-1.375-4.2T14 5.275v-2.05q3.1.7 5.05 3.138T21 11.975t-1.95 5.613T14 20.725M3 15V9h4l5-5v16l-5-5zm11 1V7.95q1.175.55 1.838 1.65T16.5 12q0 1.275-.663 2.363T14 16m-4-7.15L7.85 11H5v2h2.85L10 15.15zM7.5 12\"/>",
-     "height": 24,
-     "name": "volume-up-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"m27.16 8.08l-1.53 1.29a10 10 0 0 1-.29 13.23l1.47 1.4a12 12 0 0 0 .35-15.88Z\"/><path fill=\"currentColor\" d=\"M21.58 12a6 6 0 0 1-.18 7.94l1.47 1.36a8 8 0 0 0 .23-10.59ZM18 30a1 1 0 0 1-.71-.3L9.67 22H3a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h6.67l7.62-7.7a1 1 0 0 1 1.41 0a1 1 0 0 1 .3.7v26a1 1 0 0 1-1 1M4 20h6.08a1 1 0 0 1 .71.3L17 26.57V5.43l-6.21 6.27a1 1 0 0 1-.71.3H4Z\"/>",
@@ -46252,6 +47494,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M17 8V5a1 1 0 0 0-1-1H6a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2V6\"/><path d=\"M20 12v4h-4a2 2 0 0 1 0-4z\"/></g>",
      "height": 24,
      "name": "wallet",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M6 20q-1.65 0-2.825-1.175T2 16V8q0-1.65 1.175-2.825T6 4h12q1.65 0 2.825 1.175T22 8v8q0 1.65-1.175 2.825T18 20zM6 8h12q.55 0 1.05.125t.95.4V8q0-.825-.587-1.412T18 6H6q-.825 0-1.412.588T4 8v.525q.45-.275.95-.4T6 8m-1.85 3.25l11.125 2.7q.225.05.45 0t.425-.2l3.475-2.9q-.275-.375-.7-.612T18 10H6q-.65 0-1.137.338t-.713.912\"/>",
+     "height": 24,
+     "name": "wallet-outline",
      "width": 24
     },
     "hugeicons": {
@@ -46336,18 +47584,48 @@ export const deck: Deck = {
   },
   {
    "collisions": [],
-   "name": "warehouse",
+   "name": "wallpaper",
    "variants": {
-    "hugeicons": {
-     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M7 22v-8c0-1.886 0-2.828.586-3.414S9.114 10 11 10h2c1.886 0 2.828 0 3.414.586S17 12.114 17 14v8zm0-8h10M7 18h10\"/><path d=\"m18.129 5.232l-3-1.835C13.606 2.466 12.844 2 12 2s-1.606.466-3.129 1.397l-3 1.835c-1.403.858-2.104 1.287-2.488 1.971S3 8.71 3 10.356v5.64c0 2.83 0 4.245.879 5.125C4.757 22 6.172 22 9 22h6c2.828 0 4.243 0 5.121-.88c.879-.879.879-2.294.879-5.125v-5.64c0-1.645 0-2.468-.383-3.152c-.384-.684-1.085-1.113-2.488-1.971\"/></g>",
+    "tabler": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M8 6h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6\"/><path d=\"M4 18a2 2 0 1 0 4 0a2 2 0 1 0-4 0\"/><path d=\"M8 18V6a2 2 0 1 0-4 0v12\"/></g>",
      "height": 24,
-     "name": "warehouse",
+     "name": "wallpaper",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M5 21q-.825 0-1.412-.587T3 19v-6h2v6h6v2zm8 0v-2h6v-6h2v6q0 .825-.587 1.413T19 21zm-7-4l3-4l2.25 3l3-4L18 17zm-3-6V5q0-.825.588-1.412T5 3h6v2H5v6zm16 0V5h-6V3h6q.825 0 1.413.588T21 5v6zm-4.575-1.425Q14 9.15 14 8.5t.425-1.075T15.5 7t1.075.425T17 8.5t-.425 1.075T15.5 10t-1.075-.425\"/>",
+     "height": 24,
+     "name": "wallpaper-outline",
+     "width": 24
+    },
+    "fluent": {
+     "body": "<path fill=\"currentColor\" d=\"M3 6.25A3.25 3.25 0 0 1 6.25 3h4a.75.75 0 0 1 0 1.5h-4A1.75 1.75 0 0 0 4.5 6.25v4a.75.75 0 0 1-1.5 0zm10-2.5a.75.75 0 0 1 .75-.75h4A3.25 3.25 0 0 1 21 6.25v4a.75.75 0 0 1-1.5 0v-4a1.75 1.75 0 0 0-1.75-1.75h-4a.75.75 0 0 1-.75-.75M3.75 13a.75.75 0 0 1 .75.75v4q.002.31.101.588l5.631-5.63a2.5 2.5 0 0 1 3.536 0l5.63 5.63q.1-.277.102-.588v-4a.75.75 0 0 1 1.5 0v4A3.25 3.25 0 0 1 17.75 21h-4a.75.75 0 0 1 0-1.5h4q.31-.002.588-.101l-5.63-5.631a1 1 0 0 0-1.415 0l-5.631 5.63q.277.1.588.102h4a.75.75 0 0 1 0 1.5h-4A3.25 3.25 0 0 1 3 17.75v-4a.75.75 0 0 1 .75-.75m11.5-5a.75.75 0 1 0 0 1.5a.75.75 0 0 0 0-1.5M13 8.75a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0\"/>",
+     "height": 24,
+     "name": "wallpaper-24-regular",
+     "width": 24
+    },
+    "lucide": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 17v4m-4 0h8m-7-4l6.1-6.1a2 2 0 0 1 2.81.01L22 15\"/><circle cx=\"8\" cy=\"9\" r=\"2\"/><rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\"/></g>",
+     "height": 24,
+     "name": "wallpaper",
+     "width": 24
+    }
+   }
+  },
+  {
+   "collisions": [],
+   "name": "warehouse",
+   "variants": {
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M4 19h2v-8h12v8h2V8.35l-8-3.2l-8 3.2zm-2 2V7l10-4l10 4v14h-6v-8H8v8zm7 0v-2h2v2zm2-3v-2h2v2zm2 3v-2h2v2zM6 11h12z\"/>",
      "height": 24,
      "name": "warehouse-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M7 22v-8c0-1.886 0-2.828.586-3.414S9.114 10 11 10h2c1.886 0 2.828 0 3.414.586S17 12.114 17 14v8zm0-8h10M7 18h10\"/><path d=\"m18.129 5.232l-3-1.835C13.606 2.466 12.844 2 12 2s-1.606.466-3.129 1.397l-3 1.835c-1.403.858-2.104 1.287-2.488 1.971S3 8.71 3 10.356v5.64c0 2.83 0 4.245.879 5.125C4.757 22 6.172 22 9 22h6c2.828 0 4.243 0 5.121-.88c.879-.879.879-2.294.879-5.125v-5.64c0-1.645 0-2.468-.383-3.152c-.384-.684-1.085-1.113-2.488-1.971\"/></g>",
+     "height": 24,
+     "name": "warehouse",
      "width": 24
     },
     "lucide": {
@@ -46446,6 +47724,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "watch",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10.5 4h3zm0 16h3zM9 22l-1.35-4.55q-1.2-.95-1.925-2.375T5 12t.725-3.075T7.65 6.55L9 2h6l1.35 4.55q1.2.95 1.925 2.375T19 12t-.725 3.075t-1.925 2.375L15 22zm6.538-6.462Q17 14.075 17 12t-1.463-3.537T12 7T8.463 8.463T7 12t1.463 3.538T12 17t3.538-1.463M10.1 5.25q.5-.125.963-.2T12 4.975t.938.075t.962.2L13.5 4h-3zM10.5 20h3l.4-1.25q-.5.125-.962.188T12 19t-.937-.062t-.963-.188z\"/>",
+     "height": 24,
+     "name": "watch-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"7\"/><path d=\"m16 6l-.272-1.09c-.335-1.338-.502-2.007-.978-2.42a2 2 0 0 0-.165-.129C14.07 2 13.38 2 12 2s-2.069 0-2.585.361q-.086.06-.165.129c-.476.413-.643 1.082-.978 2.42L8 6m0 12l.272 1.09c.335 1.338.502 2.007.978 2.42q.08.069.165.129C9.93 22 10.62 22 12 22s2.069 0 2.585-.361q.085-.06.165-.129c.476-.413.643-1.082.978-2.42L16 18\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 10v2.005L13 13\"/></g>",
      "height": 24,
@@ -46457,12 +47741,6 @@ export const deck: Deck = {
      "height": 48,
      "name": "watch",
      "width": 48
-    },
-    "material-symbols": {
-     "body": "<path fill=\"currentColor\" d=\"M10.5 4h3zm0 16h3zM9 22l-1.35-4.55q-1.2-.95-1.925-2.375T5 12t.725-3.075T7.65 6.55L9 2h6l1.35 4.55q1.2.95 1.925 2.375T19 12t-.725 3.075t-1.925 2.375L15 22zm6.538-6.462Q17 14.075 17 12t-1.463-3.537T12 7T8.463 8.463T7 12t1.463 3.538T12 17t3.538-1.463M10.1 5.25q.5-.125.963-.2T12 4.975t.938.075t.962.2L13.5 4h-3zM10.5 20h3l.4-1.25q-.5.125-.962.188T12 19t-.937-.062t-.963-.188z\"/>",
-     "height": 24,
-     "name": "watch-outline",
-     "width": 24
     },
     "carbon": {
      "body": "<path fill=\"currentColor\" d=\"M22 8h-1V2h-2v6h-6V2h-2v6h-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h1v6h2v-6h6v6h2v-6h1a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2M10 22V10h12v12Zm15-8h2v4h-2z\"/>",
@@ -46506,6 +47784,12 @@ export const deck: Deck = {
    "collisions": [],
    "name": "water",
    "variants": {
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M2 18v-2q.95 0 1.413-.5T5.35 15t1.938.5t1.362.5q.95 0 1.413-.5T12 15q1.425 0 1.938.5t1.412.5q.95 0 1.388-.5t1.912-.5t1.938.5T22 16v2q-1.425 0-1.937-.5T18.65 17t-1.362.5t-1.938.5q-1.425 0-1.937-.5T12 17q-.95 0-1.412.5T8.65 18t-1.912-.5T5.35 17t-1.412.5T2 18m0-4v-2q.95 0 1.413-.5T5.35 11q1.425 0 1.913.5t1.387.5q.95 0 1.412-.5T12 11q1.425 0 1.925.5t1.375.5q.95 0 1.412-.5t1.938-.5q1.425 0 1.938.5T22 12v2q-1.475 0-1.963-.5T18.65 13t-1.362.5t-1.938.5q-1.425 0-1.937-.5T12 13q-.95 0-1.388.5T8.7 14t-1.962-.5T5.35 13t-1.412.5T2 14m0-4V8q.95 0 1.413-.5T5.35 7q1.425 0 1.913.5T8.65 8q.95 0 1.412-.5T12 7q1.425 0 1.925.5T15.3 8q.95 0 1.412-.5T18.65 7q1.425 0 1.938.5T22 8v2q-1.475 0-1.963-.5T18.65 9t-1.362.5t-1.938.5q-1.425 0-1.937-.5T12 9q-.95 0-1.388.5T8.7 10t-1.962-.5T5.35 9t-1.412.5T2 10\"/>",
+     "height": 24,
+     "name": "water-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M9 29a5 5 0 0 0 5-5a5 5 0 0 0 10 0a5 5 0 0 0 10 0a5 5 0 0 0 10 0c0 11.046-8.954 20-20 20S4 35.046 4 24a5 5 0 0 0 5 5m19-16a4 4 0 0 1-8 0c0-2.21 4-9 4-9s4 6.79 4 9\"/>",
      "height": 48,
@@ -46596,6 +47880,12 @@ export const deck: Deck = {
      "name": "webhook",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M7 21q-2.075 0-3.537-1.463T2 16q0-1.825 1.138-3.187T6 11.1v2.075q-.875.3-1.437 1.075T4 16q0 1.25.875 2.125T7 19t2.125-.875T10 16v-1h5.875q.2-.225.488-.363T17 14.5q.625 0 1.063.438T18.5 16t-.437 1.063T17 17.5q-.35 0-.638-.137T15.876 17H11.9q-.35 1.725-1.713 2.863T7 21m10 0q-1.4 0-2.537-.687T12.675 18.5h2.675q.35.25.775.375T17 19q1.25 0 2.125-.875T20 16t-.875-2.125T17 13q-.5 0-.925.138t-.8.412l-3.05-5.075q-.525-.1-.875-.5T11 7q0-.625.438-1.062T12.5 5.5t1.063.438T14 7v.213q0 .087-.05.212l2.175 3.65q.2-.05.425-.062T17 11q2.075 0 3.538 1.463T22 16t-1.463 3.538T17 21M7 17.5q-.625 0-1.062-.437T5.5 16q0-.55.35-.95t.85-.525l2.35-3.9q-.725-.675-1.138-1.612T7.5 7q0-2.075 1.463-3.537T12.5 2t3.538 1.463T17.5 7h-2q0-1.25-.875-2.125T12.5 4t-2.125.875T9.5 7q0 1.075.65 1.888t1.65 1.037L8.425 15.55q.05.125.063.225T8.5 16q0 .625-.437 1.063T7 17.5\"/>",
+     "height": 24,
+     "name": "webhook-outline",
+     "width": 24
+    },
     "hugeicons": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5.062 13A4 4 0 1 0 11 16.5h6\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m12 7.5l3.057 5.503a4 4 0 1 1-.557 6.62\"/><path d=\"M12 8.5a1 1 0 1 0 0-2m0 2a1 1 0 1 1 0-2m0 2v-2m-5 11a1 1 0 1 0 0-2m0 2a1 1 0 1 1 0-2m0 2v-2m10 2a1 1 0 1 0 0-2m0 2a1 1 0 1 1 0-2m0 2v-2\"/><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M16 7.5a4 4 0 1 0-5.943 3.497L7 16.5\"/></g>",
      "height": 24,
@@ -46680,17 +47970,17 @@ export const deck: Deck = {
      "name": "weight",
      "width": 24
     },
-    "icon-park-outline": {
-     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M41 4H7a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h34a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\" d=\"M12 19.054q4.987-6 12-6q7.012 0 12 6\"/><path fill=\"currentColor\" d=\"M24 31a3 3 0 1 0 0-6a3 3 0 0 0 0 6\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\" d=\"m19 21l5.008 7\"/></g>",
-     "height": 48,
-     "name": "weight",
-     "width": 48
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"M6 19h12L16.575 9h-9.15zm6-12q.425 0 .713-.288T13 6t-.288-.712T12 5t-.712.288T11 6t.288.713T12 7m2.825 0h1.75q.75 0 1.3.5t.675 1.225l1.425 10q.125.9-.462 1.588T18 21H6q-.925 0-1.513-.687t-.462-1.588l1.425-10Q5.575 8 6.125 7.5t1.3-.5h1.75q-.075-.25-.125-.487T9 6q0-1.25.875-2.125T12 3t2.125.875T15 6q0 .275-.05.513T14.825 7M6 19h12z\"/>",
      "height": 24,
      "name": "weight-outline",
      "width": 24
+    },
+    "icon-park-outline": {
+     "body": "<g fill=\"none\"><path stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\" d=\"M41 4H7a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h34a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Z\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\" d=\"M12 19.054q4.987-6 12-6q7.012 0 12 6\"/><path fill=\"currentColor\" d=\"M24 31a3 3 0 1 0 0-6a3 3 0 0 0 0 6\"/><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"4\" d=\"m19 21l5.008 7\"/></g>",
+     "height": 48,
+     "name": "weight",
+     "width": 48
     },
     "lucide": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"5\" r=\"3\"/><path d=\"M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8Z\"/></g>",
@@ -46770,16 +48060,16 @@ export const deck: Deck = {
      "name": "wheat",
      "width": 24
     },
-    "hugeicons": {
-     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14.35 9.65L3 21M19.67 8.586c-2.128 2.128-5.32 1.064-5.32 1.064s-1.064-3.192 1.064-5.32c1.389-1.389 3.231-1.418 4.343-1.27a1.36 1.36 0 0 1 1.184 1.183c.147 1.112.118 2.954-1.271 4.343m-3.902 7.094c-2.837 0-4.256-2.837-4.256-2.837s1.419-2.837 4.256-2.837c1.82 0 3.056 1.166 3.709 2.003a1.34 1.34 0 0 1 0 1.668c-.653.837-1.89 2.003-3.709 2.003M8.32 8.232c0 2.838 2.838 4.256 2.838 4.256s2.837-1.418 2.837-4.256c0-1.819-1.166-3.055-2.004-3.708a1.34 1.34 0 0 0-1.667 0c-.837.653-2.004 1.89-2.004 3.708m2.838 12.058c-2.838 0-4.257-2.837-4.257-2.837s1.42-2.837 4.257-2.837c1.819 0 3.055 1.166 3.708 2.003a1.34 1.34 0 0 1 0 1.668c-.653.837-1.89 2.003-3.708 2.003m-7.449-7.447c0 2.837 2.838 4.255 2.838 4.255s2.837-1.418 2.837-4.255c0-1.82-1.166-3.056-2.004-3.709a1.34 1.34 0 0 0-1.667 0c-.837.653-2.004 1.89-2.004 3.708\"/>",
-     "height": 24,
-     "name": "wheat",
-     "width": 24
-    },
     "material-symbols": {
      "body": "<path fill=\"currentColor\" d=\"m3.45 22l-1.425-1.425L4.45 18.15q-.725-.725-1.087-1.65T3 14.575q0-1.025.375-1.925t1.075-1.6l1.425-1.4l.7.7q.125-.8.475-1.525t.925-1.3l1.425-1.4l.7.7q.125-.8.488-1.525t.937-1.3l2.85-2.825l1.4 1.4L14.375 4q.575.575.925 1.3t.475 1.525L20.6 2L22 3.425L17.2 8.25q.8.125 1.525.475t1.3.925l1.4-1.425L22.85 9.65l-2.8 2.825q-.575.6-1.325.963t-1.55.487l.7.675l-1.4 1.4q-.575.575-1.312.938t-1.538.487l.725.7l-1.425 1.425q-.725.725-1.638 1.088T9.375 21q-.85 0-1.713-.363T5.9 19.526zm2.425-5.3q.425-.425.65-.962T6.75 14.6q0-.575-.225-1.137t-.65-.988q-.425.425-.663.988T4.976 14.6q0 .6.238 1.138t.662.962M9.4 19.025q.6-.025 1.15-.25t.975-.65q-.425-.425-.987-.65T9.4 17.25t-1.137.238t-.988.662q.425.425.975.65t1.15.225m0-5.85q.425-.425.65-.975t.225-1.125q0-.6-.225-1.15T9.4 8.95q-.425.425-.663.975t-.237 1.15q0 .575.238 1.125t.662.975m3.55 2.325q.6 0 1.138-.238t.962-.662q-.425-.425-.962-.65t-1.138-.225t-1.15.238t-.975.662q.425.425.975.65t1.15.225m0-5.85q.425-.425.638-.975t.212-1.15q0-.575-.213-1.137T12.95 5.4q-.425.425-.662.988t-.238 1.137q0 .6.238 1.15t.662.975m3.525 2.3q.575 0 1.138-.237t.987-.663q-.45-.425-1.012-.65t-1.138-.225q-.575.025-1.125.25t-.975.65q.425.425.988.663t1.137.212\"/>",
      "height": 24,
      "name": "wheat-outline",
+     "width": 24
+    },
+    "hugeicons": {
+     "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14.35 9.65L3 21M19.67 8.586c-2.128 2.128-5.32 1.064-5.32 1.064s-1.064-3.192 1.064-5.32c1.389-1.389 3.231-1.418 4.343-1.27a1.36 1.36 0 0 1 1.184 1.183c.147 1.112.118 2.954-1.271 4.343m-3.902 7.094c-2.837 0-4.256-2.837-4.256-2.837s1.419-2.837 4.256-2.837c1.82 0 3.056 1.166 3.709 2.003a1.34 1.34 0 0 1 0 1.668c-.653.837-1.89 2.003-3.709 2.003M8.32 8.232c0 2.838 2.838 4.256 2.838 4.256s2.837-1.418 2.837-4.256c0-1.819-1.166-3.055-2.004-3.708a1.34 1.34 0 0 0-1.667 0c-.837.653-2.004 1.89-2.004 3.708m2.838 12.058c-2.838 0-4.257-2.837-4.257-2.837s1.42-2.837 4.257-2.837c1.819 0 3.055 1.166 3.708 2.003a1.34 1.34 0 0 1 0 1.668c-.653.837-1.89 2.003-3.708 2.003m-7.449-7.447c0 2.837 2.838 4.255 2.838 4.255s2.837-1.418 2.837-4.255c0-1.82-1.166-3.056-2.004-3.709a1.34 1.34 0 0 0-1.667 0c-.837.653-2.004 1.89-2.004 3.708\"/>",
+     "height": 24,
+     "name": "wheat",
      "width": 24
     },
     "carbon": {
@@ -46882,6 +48172,12 @@ export const deck: Deck = {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 18h.01m-2.838-2.828a4 4 0 0 1 5.656 0m-8.485-2.829a8 8 0 0 1 11.314 0\"/><path d=\"M3.515 9.515c4.686-4.687 12.284-4.687 17 0\"/></g>",
      "height": 24,
      "name": "wifi",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10.225 20.275Q9.5 19.55 9.5 18.5t.725-1.775T12 16t1.775.725t.725 1.775t-.725 1.775T12 21t-1.775-.725M6.35 15.35l-2.1-2.15q1.475-1.475 3.463-2.337T12 10t4.288.875t3.462 2.375l-2.1 2.1q-1.1-1.1-2.55-1.725T12 13t-3.1.625t-2.55 1.725M2.1 11.1L0 9q2.3-2.35 5.375-3.675T12 4t6.625 1.325T24 9l-2.1 2.1q-1.925-1.925-4.462-3.012T12 7T6.563 8.088T2.1 11.1\"/>",
+     "height": 24,
+     "name": "wifi-outline",
      "width": 24
     },
     "hugeicons": {
@@ -47020,6 +48316,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 18h.01m-2.838-2.828a4 4 0 0 1 5.656 0m-8.485-2.829a7.96 7.96 0 0 1 3.864-2.14m4.163.155a8 8 0 0 1 3.287 2M3.515 9.515A12 12 0 0 1 7.059 7.06m3.101-.92a12 12 0 0 1 10.325 3.374M3 3l18 18\"/>",
      "height": 24,
      "name": "wifi-off",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m19.75 22.6l-9.4-9.45q-1.175.275-2.187.825T6.35 15.35l-2.1-2.15q.8-.8 1.725-1.4t1.975-1.05L5.7 8.5q-1.025.525-1.913 1.163T2.1 11.1L0 8.95q.8-.8 1.663-1.437T3.5 6.3L1.4 4.2l1.4-1.4l18.4 18.4zm-9.525-2.337Q9.5 19.525 9.5 18.5q0-1.05.725-1.775T12 16t1.775.725t.725 1.775q0 1.025-.725 1.763T12 21t-1.775-.737M17.9 15.05l-.725-.725l-.725-.725l-3.6-3.6q2.025.2 3.788 1.025T19.75 13.2zm4-3.95q-1.925-1.925-4.462-3.012T12 7q-.525 0-1.012.038T10 7.15L7.45 4.6q1.1-.3 2.238-.45T12 4q3.55 0 6.625 1.325T24 8.95z\"/>",
+     "height": 24,
+     "name": "wifi-off-outline",
      "width": 24
     },
     "hugeicons": {
@@ -47272,6 +48574,12 @@ export const deck: Deck = {
      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 16v5m4-5v5m-6-5h8l-2-7h-4zm-3-5q2.5-2 5-2m9 2q-2.5-2-5-2m-4-5a2 2 0 1 0 4 0a2 2 0 1 0-4 0\"/>",
      "height": 24,
      "name": "woman",
+     "width": 24
+    },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"M10 22v-6H7l3.05-7.7q.25-.6.775-.95T12 7t1.175.35t.775.95L17 16h-3v6zm.588-16.588Q10 4.825 10 4t.588-1.412T12 2t1.413.588T14 4t-.587 1.413T12 6t-1.412-.587\"/>",
+     "height": 24,
+     "name": "woman-outline",
      "width": 24
     },
     "hugeicons": {
@@ -47699,6 +49007,12 @@ export const deck: Deck = {
      "name": "zoom-in",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14m-1-1.5v-2h-2v-2h2v-2h2v2h2v2h-2v2z\"/>",
+     "height": 24,
+     "name": "zoom-in-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M21 38c9.389 0 17-7.611 17-17S30.389 4 21 4S4 11.611 4 21s7.611 17 17 17Z\"/><path stroke-linecap=\"round\" d=\"M21 15v12m-5.984-5.984L27 21m6.222 12.222l8.485 8.485\"/></g>",
      "height": 48,
@@ -47759,6 +49073,12 @@ export const deck: Deck = {
      "name": "zoom-out",
      "width": 24
     },
+    "material-symbols": {
+     "body": "<path fill=\"currentColor\" d=\"m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14M7 10.5v-2h5v2z\"/>",
+     "height": 24,
+     "name": "zoom-out-outline",
+     "width": 24
+    },
     "icon-park-outline": {
      "body": "<g fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"4\"><path d=\"M21 38c9.389 0 17-7.611 17-17S30.389 4 21 4S4 11.611 4 21s7.611 17 17 17Z\"/><path stroke-linecap=\"round\" d=\"M15 21h12m6.222 12.222l8.485 8.485\"/></g>",
      "height": 48,
@@ -47810,15 +49130,15 @@ export const deck: Deck = {
    }
   }
  ],
- "generatedAt": "2026-07-17T05:05:21.902Z",
+ "generatedAt": "2026-07-28T23:10:44.831Z",
  "packages": {
-  "tabler": "1.2.35",
-  "hugeicons": "1.2.30",
+  "tabler": "1.2.37",
+  "material-symbols": "1.2.87",
+  "hugeicons": "1.2.31",
   "icon-park-outline": "1.2.4",
-  "material-symbols": "1.2.84",
-  "fluent": "1.2.53",
+  "fluent": "1.2.54",
   "carbon": "1.2.24",
-  "lucide": "1.2.117",
+  "lucide": "1.2.120",
   "boxicons": "1.2.0",
   "iconoir": "1.2.11",
   "ri": "1.2.10",
@@ -47832,7 +49152,7 @@ export const deck: Deck = {
   "tabler": {
    "cap": "round",
    "grid": 24,
-   "iconCount": 5275,
+   "iconCount": 5303,
    "id": "tabler",
    "label": "Tabler Icons",
    "license": {
@@ -47841,7 +49161,21 @@ export const deck: Deck = {
     "url": "https://github.com/tabler/tabler-icons/blob/master/LICENSE"
    },
    "strokeWidth": 2,
-   "version": "1.2.35"
+   "version": "1.2.37"
+  },
+  "material-symbols": {
+   "cap": null,
+   "grid": 24,
+   "iconCount": 3926,
+   "id": "material-symbols",
+   "label": "Material Symbols",
+   "license": {
+    "spdx": "Apache-2.0",
+    "title": "Apache 2.0",
+    "url": "https://github.com/google/material-design-icons/blob/master/LICENSE"
+   },
+   "strokeWidth": null,
+   "version": "1.2.87"
   },
   "hugeicons": {
    "cap": "round",
@@ -47855,7 +49189,7 @@ export const deck: Deck = {
     "url": ""
    },
    "strokeWidth": 1.5,
-   "version": "1.2.30"
+   "version": "1.2.31"
   },
   "icon-park-outline": {
    "cap": "round",
@@ -47871,24 +49205,10 @@ export const deck: Deck = {
    "strokeWidth": 4,
    "version": "1.2.4"
   },
-  "material-symbols": {
-   "cap": null,
-   "grid": 24,
-   "iconCount": 2578,
-   "id": "material-symbols",
-   "label": "Material Symbols",
-   "license": {
-    "spdx": "Apache-2.0",
-    "title": "Apache 2.0",
-    "url": "https://github.com/google/material-design-icons/blob/master/LICENSE"
-   },
-   "strokeWidth": null,
-   "version": "1.2.84"
-  },
   "fluent": {
    "cap": null,
    "grid": 24,
-   "iconCount": 2551,
+   "iconCount": 2553,
    "id": "fluent",
    "label": "Fluent UI System Icons",
    "license": {
@@ -47897,7 +49217,7 @@ export const deck: Deck = {
     "url": "https://github.com/microsoft/fluentui-system-icons/blob/main/LICENSE"
    },
    "strokeWidth": null,
-   "version": "1.2.53"
+   "version": "1.2.54"
   },
   "carbon": {
    "cap": null,
@@ -47916,7 +49236,7 @@ export const deck: Deck = {
   "lucide": {
    "cap": "round",
    "grid": 24,
-   "iconCount": 1961,
+   "iconCount": 1971,
    "id": "lucide",
    "label": "Lucide",
    "license": {
@@ -47925,7 +49245,7 @@ export const deck: Deck = {
     "url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE"
    },
    "strokeWidth": 2,
-   "version": "1.2.117"
+   "version": "1.2.120"
   },
   "boxicons": {
    "cap": null,
