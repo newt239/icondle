@@ -76,4 +76,4 @@ pnpm run deploy
 pnpm run codecheck
 ```
 
-typecheck / oxlint / oxfmt / ls-lint / knip を一括実行します。
+typecheck / oxlint / oxfmt / knip を一括実行します。
