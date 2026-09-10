@@ -47,6 +47,7 @@
     "no-ternary": "off",
     "no-undefined": "off",
     "no-void": ["warn", { "allowAsStatement": true }],
+    "one-var": "off",
     "require-unicode-regexp": "off",
     "sort-imports": "off",
     "sort-keys": "warn",
