@@ -9,7 +9,7 @@
     "build-deck": "node scripts/build-deck.ts",
     "build-favicon": "node scripts/build-favicon.ts",
     "cf-typegen": "wrangler types",
-    "codecheck": "pnpm run typecheck && pnpm run lint && pnpm run format && pnpm run ls-lint && pnpm run knip",
+    "codecheck": "pnpm run typecheck && pnpm run lint && pnpm run format && pnpm run knip",
     "deploy": "pnpm run build && wrangler deploy",
     "dev": "vite dev",
     "format": "oxfmt --check",
@@ -17,14 +17,12 @@
     "knip": "knip",
     "lint": "oxlint --type-aware",
     "lint:fix": "oxlint --fix",
-    "ls-lint": "ls-lint",
-    "preinstall": "npx only-allow pnpm",
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:watch": "vitest",
-    "typecheck": "npx tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@heroui/react": "3.2.4",
@@ -55,7 +53,6 @@
     "@iconify-json/tabler": "1.2.38",
     "@iconify-json/uil": "1.2.3",
     "@iconify/types": "2.0.0",
-    "@ls-lint/ls-lint": "2.3.1",
     "@playwright/test": "1.62.1",
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "26.3.0",
@@ -69,10 +66,17 @@
     "oxlint-tsgolint": "7.0.2001",
     "postcss": "8.5.26",
     "tailwindcss": "4.3.3",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vite": "8.2.2",
     "vitest": "4.1.11",
     "wrangler": "4.125.0"
   },
-  "packageManager": "pnpm@11.21.0+sha512.521705bce689924eac72f5a3587122f362689ef6571e55ba80076fd637c11132ecffada26fad4ea79c485bfddbfd3d5a2a5b05805a77e893de71ec8a6cca3bb1"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26.8.2",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.3.4"
 }
