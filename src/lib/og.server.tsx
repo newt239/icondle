@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 
 import { initWasm, Resvg } from "@resvg/resvg-wasm";
 import wasmModule from "@resvg/resvg-wasm/index_bg.wasm";
+import satoriLayoutWasm from "satori/layout.wasm";
 import satori, { init as initSatoriYoga } from "satori/standalone";
-import satoriYogaWasm from "satori/yoga.wasm";
 
 import ogFontDataUri from "#/assets/fonts/inter-bold.ttf?inline";
 import { SITE_URL } from "#/lib/meta";
@@ -59,7 +59,7 @@ const ensureResvgReady = async (): Promise<void> => {
 
 const ensureSatoriReady = async (): Promise<void> => {
   // Satori 本体がバンドルする yoga wasm は動的コンパイルに依存するため、standalone ビルド + 静的 import した Module で初期化する
-  satoriYogaReady ??= initSatoriYoga(satoriYogaWasm);
+  satoriYogaReady ??= initSatoriYoga(satoriLayoutWasm);
   await satoriYogaReady;
 };
 
